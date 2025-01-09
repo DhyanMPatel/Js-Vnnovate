@@ -96,3 +96,16 @@ function myPow(x,n){
     return (x ** n)
 }
 console.log(myPow(3,3.5));
+
+
+///
+function outerFun(a) {
+    function innerFun(b) {
+        console.log(`a: ${a}, b: ${b}`);
+        return a + b;
+    }
+    return innerFun;
+}
+
+const addTen = outerFun(10); // value of a
+console.log(addTen(5)); // Value of b
