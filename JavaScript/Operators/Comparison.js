@@ -30,6 +30,7 @@ console.log(null === undefined); // Return - false
 // console.log(null !== 0); // Return - true
 
 // !==
+//  -Returns true if the values are not equal or not of the same type; otherwise, it returns false
 // console.log(null);
 
 
