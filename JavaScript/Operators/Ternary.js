@@ -26,5 +26,5 @@ if(age<3){
 /// Experiment
 age = 13
 function checkAge(age){
-    (age > 18)? true: confirm("Did parents allow?")
+    return (age > 18)? true: confirm("Did parents allow?")
 }

@@ -52,7 +52,7 @@ function func2(){
 
 
 // /// Check age and give alert acording to that
-// function checkAge(age){
+// function checkAge(age){ // Aslo written using ? and || check it also. 
 //     if(age >= 18){
 //         return true
 //     } else {
@@ -80,4 +80,19 @@ function isPrime(i){
     }
     return true;
 }
-showPrimes(13)
+// showPrimes(13)
+
+
+/// Return list of 2 numbers
+function min(a,b){
+    return (a<b)? a : b;
+}
+// console.log(min(2,5));
+// console.log(min(2,-5));
+
+
+/// Return Pow()
+function myPow(x,n){
+    return (x ** n)
+}
+console.log(myPow(3,3.5));

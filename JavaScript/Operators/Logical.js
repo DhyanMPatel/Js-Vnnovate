@@ -15,8 +15,10 @@
 
 
 /// Experiment
-let = age
-function 
+let age = 40
+function checkAge(age){
+    return (age>18) || confirm("Parents allow you?");
+}
 
 
 
