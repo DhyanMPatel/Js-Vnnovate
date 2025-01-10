@@ -21,7 +21,7 @@ let numOdd = 13; // (1101)
 /// ^
 //      - Use to find Missing number in array of natural number
 //      - Return 1 if Both Bits are Different with Each other
-// console.log(numEven ^ numOdd); // Return - 1, (000,1)
+// console.log(numEven ^ numOdd); // Return - 1, (0001)
 
 function getMissingNo(a, n)
 {

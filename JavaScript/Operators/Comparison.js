@@ -3,7 +3,8 @@
 //  - NaN not equal to any one
 //  - null is loos-equal to itself and undefined
 //  - <,<=,>,>= convert operand to Number if possible otherwise to NaN
-//  - ==,===,!=,!== without convert operate
+//  - ==,===,!=,!== without convert operate 
+//  - Symbol always create unique identity whether value is same
 
 
 
@@ -22,7 +23,7 @@
 // console.log(NaN == NaN); // Return - false
 
 // ===
-console.log(null === undefined); // Return - false
+// console.log(null === undefined); // Return - false
 // console.log(null === null); // Return - true
 
 // !=
@@ -44,4 +45,9 @@ console.log(null === undefined); // Return - false
 // console.log("a" > "A"); // Return - true
 // console.log("A" > "A"); // Return - false
 
+// console.log(Symbol("foo") == Symbol("foo")); // Return - false
+// console.log(Symbol("foo") === Symbol("foo")); // Return - false
+
+// console.log( 0 == false ); // true
+// console.log( 0 == '' ); // true
 

@@ -44,6 +44,15 @@ let num = Number(str)
 /// Experiment
 let a = 0 // Falsy
 let b = "0" // Truthy
-console.log(Boolean(a)); // Return - false
-console.log(Boolean(b)); // Return - true
-console.log(a == b); // Return - true
+// console.log(Boolean(a)); // Return - false
+// console.log(Boolean(b)); // Return - true
+// console.log(a == b); // Return - true
+
+
+// SYMBOL
+let obj ={name:'Vnnovate'}
+console.log(Symbol(a)); // Return - Symbol (0)
+console.log(Symbol(obj));
+
+console.log(Symbol (obj.name));
+
