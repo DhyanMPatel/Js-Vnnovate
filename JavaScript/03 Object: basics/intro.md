@@ -1,6 +1,7 @@
 # Objects
 
 - Object is a complex data type in JS
+- Const Object can be modify there is no any const ability work.
 - Property keys must be strings or symbols (usually strings) and Unique.
 - Object Properties are automatically converted into String
 - Object Properties has not any limitation means there are no any reserve words
@@ -15,7 +16,24 @@
 2. Object litaral
    `let user = {}`
 
-   let user = {
-   name: "Vnnovate",
-   location: "Ahmedabad"
-   }
+### Note
+
+- In Nested Object, we use `Object.assign({},...source)` or for.in loop we pass inner obj which represent same Object
+
+  - To Solve that we can use `structureClone()`
+
+  ```
+  let Obj1={
+      name: "Vnnovate",
+      inner:{
+          age: 13
+      }
+  }
+  let copy = Object.assign({},Obj1)
+  console.log(copy.inner === Obj1.inner); // true, inner obj is same in both,
+
+  let properClone = structureClone(Obj1)
+  console.log(properClone.inner === Obj1.inner); // false
+  ```
+
+  - There is still problem with `structureClone()` which is Advance that should know after some year of experence which is known as Circular Reference.
