@@ -1,11 +1,4 @@
-// Function
-//  - If we need to perform similar action in many places.
-//  - Example - we need to show a nice-looking message when visitor log in, log out and may be somewhere else.
-//  - Function with no return or empty return always equal to undefined
-//  - Never add newline between return and value
-//  - call many times without repetition.
-//  - like
-//      - alert(message), prompt(message, default), confirm(question)
+
 
 
 let nameOut; // Global Variable

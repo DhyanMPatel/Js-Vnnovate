@@ -7,6 +7,7 @@
 - for
 - for...in
 - for...of
+- forEach
 
 # Statement
 - Label

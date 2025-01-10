@@ -1,7 +1,7 @@
 // While
 
 //  - While condition is Truthy then loop will Execute
-//  - In while loop cindition will converted into boolean or Evaluated.
+//  - In while loop condition will converted into boolean or Evaluated.
 
 let i = 3
 while(i){   // when i == 0 means falsy, it will not run
