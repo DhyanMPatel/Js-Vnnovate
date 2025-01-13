@@ -13,7 +13,10 @@ Day: friday
 
 Today's Work:
 
-1. Revision of Last work
-2. Learned JS Fundamentals - Complete
-3. Code Quality - Complete
-4. Object: the Basics - in progress
+1. Revision of last work
+2. Object: the Basics - in progress
+   - Array
+   - Array Methods
+   - Map & WeakMap
+   - Set & WeakSet
+   - Destructuring
