@@ -73,6 +73,15 @@ console.log([1] + 1); // Return - 11 ,   "1" + 1  ->  "11"
 console.log([1, 2] + 1); // Return - 1,21 ,  "1,2" + 1  ->  "1,21"
 */
 
+/*
+/// Array.from()
+//    - use to create arr from different object
+let arr = ["Hari", "Ram", "Ram", "ram", "Hari", "Hari"];
+let uniqueArr = Array.from(new Set(arr));
+console.log(uniqueArr);
+*/
+
+/*
 /// Experiment
 console.log(0 == []); // Return true,  0==[] -> 0=="" -> 0==0
 
@@ -97,3 +106,4 @@ function sumInput() {
 }
 
 console.log(sumInput());
+*/

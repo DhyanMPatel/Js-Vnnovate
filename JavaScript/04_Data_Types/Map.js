@@ -2,6 +2,7 @@
 //      - Map is a keyed data item, just like Object. But main Difference is Map allows keys of any type.
 //      - keys can be Object, in Object it will override
 //      - each map.set() return the map itself, so we can chain the calls.
+//      - map are iterable
 
 /*
 // Methods and Properties
@@ -96,3 +97,14 @@ let map = new Map([
 let obj = Object.fromEntries(map);
 console.log(obj);
 */
+
+let weakMap = new WeakMap();
+
+let obj = {};
+let john = { name: "John" };
+
+weakMap.set(obj, "ok"); // works fine (object key)
+weakMap.set(john, "...");
+john = null;
+
+console.log(weakMap.get(john));
