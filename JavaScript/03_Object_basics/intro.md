@@ -37,3 +37,13 @@
   ```
 
   - There is still problem with `structureClone()` which is Advance that should know after some year of experence which is known as Circular Reference.
+
+## Object.keys, Object.values, Object.entries
+
+- Get data from Object to Array
+- This methods ignore Symbolic Properties
+- If want symbolic properties too, then use Object.getOwnPropertySymbols(obj) & Reflect.ownKeys(obj)
+
+## Object.fromEntries
+
+- Use to get data from Array to Object
