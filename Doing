@@ -7,15 +7,16 @@ Today Learning:
 
 Work done:
 
-Date: 13 Jan 2025
-Day: Monday
+Date: 16 Jan 2025
+Day: Thursday
 
 Today's Work:
 
 1. Revision of last work
-2. Object: the Basics - in progress
-   - Array
-   - Array Methods
-   - Map & WeakMap
-   - Set & WeakSet
-   - Destructuring
+2. Object: the Basics - complete
+   - Json methods & Json
+   - Date & time
+3. Advance with Function
+   - Recursion & Stack - complete
+   - Rest & Spreed - complete
+   - Variable Scope & Closure - complete

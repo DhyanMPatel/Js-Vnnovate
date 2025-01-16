@@ -13,6 +13,7 @@ printall(1, 2, 3, 4);
 
 /*
 /// spread
+//      - occures in function call
 //      - use for exectly reverse of Rest perameter
 //      - can convert to arr from string
 //      - use for Array, String,
