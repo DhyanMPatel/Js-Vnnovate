@@ -81,4 +81,4 @@ alert(parseInt("2n9c", 36)); // 123456
 /// Experiment
 max = 0;
 min = -10;
-console.log(Math.floor(Math.random() * (max - min) + min));
+console.log(Math.floor(Math.random() * (max - min + 1) + min));
