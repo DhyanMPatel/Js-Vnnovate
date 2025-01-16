@@ -77,3 +77,8 @@ alert(parseInt("2n9c", 36)); // 123456
 //  - Math.Max(a,b,c,...)
 //  - Math.min(a,b,c,...)
 //  - Math.pow(n, power)
+
+/// Experiment
+max = 0;
+min = -10;
+console.log(Math.floor(Math.random() * (max - min) + min));
