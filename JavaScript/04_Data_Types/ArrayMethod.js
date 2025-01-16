@@ -160,3 +160,25 @@ let splitedArr = names.split(", "); // Convert String to Arr
 
 let glueStr = splitedArr.join(", "); // Convert Arr to String
 */
+
+/// Reduce/ReduceRight
+//    - when we need to iterate and return the data for each element - we use `Map`
+//    - Same as Map but with some difference is that they are used to calculate a single value based on array
+//    - Syntax -> arr.reduce(function(accumulator, item, index, arr){/* some code */},[initial])
+//      - accu initially is initial value then return value is stored in accumulator.
+//    - ReduceRight also do same but goes from right to left
+
+let sum = arr.reduce(function (sum, ele) {
+  return sum + ele;
+}, 0);
+console.log(sum);
+
+let RR = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+const result = RR.reduceRight((addition, ele) => {
+  return addition.concat(ele);
+});
+console.log(result);
