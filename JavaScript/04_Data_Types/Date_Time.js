@@ -1,6 +1,7 @@
 /// Date & Time
 //      - date can be substracted, the result is their difference in ms.
 //      - Use Date.now() to get the current timestamp fast.
+//      - while we use Date.parse() for read date from String then it will not any Zero-base.
 
 let now = new Date();
 let Jan01_1970 = new Date(0);
@@ -57,6 +58,7 @@ now.setHours(0, 0, 0, 0);
 console.log(now);
 */
 
+/*
 /// Date.parse() from String
 //      - can read date from String
 //      - Formate: `YYYY-MM-DDTHH:mm:ss.sssZ`
@@ -65,10 +67,11 @@ console.log(now);
 //      - return value in ms from jan 01 1970
 let parsing = new Date(Date.parse("2028-02-30T14:51:30.000"));
 console.log(parsing);
+*/
 
 /// Experiment
 let interesting = new Date("2026-02-31");
-console.log(interesting); // Return - 2026-03-03T00:00:00.000Z
+// console.log(interesting); // Return - 2026-03-03T00:00:00.000Z
 
 /*
 // // as time measurement
@@ -114,6 +117,27 @@ function banch(fun) {
 console.log(`Time of Difference: ${banch(diffSubtract)}ms`);
 console.log(`Time of Difference: ${banch(diffGetTime)}ms`);
 */
+
+/*
+/// Get European Weakend (mon - sun)
+let date = new Date(2025, 0, 6);
+console.log(`Final: ${getLocalDay(date)}`);
+function getLocalDay(date) {
+  let day = date.getDay();
+
+  if (day == 0) {
+    day = 7;
+  }
+  return day;
+}
+*/
+
+/// Get last Date of month
+function getLastDayOfMonth(year, month) {
+  let date = new Date(year, month + 1, 0); // date start from 1.
+  return date.getDate();
+}
+console.log(getLastDayOfMonth(2025, 1));
 
 /*
 //// Check it home
