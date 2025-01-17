@@ -1,7 +1,7 @@
 /// Recursion
 //  - when function called itself is called Recursion.
 //  - Recursion solution is shorter then an iterative one
-//  - max limit of JS engine for Recursion is 10,000.
+//  - max limit of JS engine for Recursion is 10,000-100,000.
 //  - loop-based algo is more memory-saving then Recursion.
 
 // - Recursion can give a shorter code, easier to understand and support. Optimizations are not required in every place, mostly we need a good code, that’s why it’s used
@@ -99,7 +99,7 @@ function sumTo(n) {
 
   return sum;
 }
-console.log(sumTo(5));
+// console.log(sumTo(5));
 
 // Fectorial Calculation
 function FectorialCal(n) {
@@ -108,7 +108,7 @@ function FectorialCal(n) {
   total = n * FectorialCal(n - 1);
   return total;
 }
-console.log(FectorialCal(5));
+// console.log(FectorialCal(5));
 
 // Fibonacci Number
 function fibonacci(n) {
@@ -118,7 +118,7 @@ function fibonacci(n) {
     return fibonacci(n - 1) + fibonacci(n - 2);
   }
 }
-console.log(fibonacci(10));
+// console.log(fibonacci(10));
 
 ///
 let list = {

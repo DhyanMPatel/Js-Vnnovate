@@ -70,8 +70,8 @@ console.log(parsing);
 */
 
 /// Experiment
-let interesting = new Date("2026-02-31");
-// console.log(interesting); // Return - 2026-03-03T00:00:00.000Z
+let interesting = new Date("2025-02-31");
+// console.log(interesting); // Return - 2025-03-03T00:00:00.000Z
 
 /*
 // // as time measurement

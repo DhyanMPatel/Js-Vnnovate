@@ -71,3 +71,20 @@ function f() {
 
 let g2 = f();
 g();
+
+/*
+/// home Work
+function makeCounter() {
+  let count = 0; 
+
+  return function () {
+    return count++; // so count made in global context
+  };
+}
+
+let counter = makeCounter();
+
+console.log(counter()); // 0
+console.log(counter()); // 1
+console.log(counter()); // 2
+*/
