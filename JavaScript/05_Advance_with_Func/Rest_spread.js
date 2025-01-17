@@ -3,7 +3,8 @@
 //      - we don't know that how many arguments are arive then we can use rest parameter to handle remaining arguments
 //      - Rest parameter must be at the end
 //      - In old times, rest parameters did not exist in the language, and using `arguments` was the only way to get all arguments of the function.
-//      - arguments is both array-like and iterable, but not array. So we can't use Array methods like .map(), .filter(),...
+//      - `arguments` is both array-like and iterable, but not array. So we can't use Array methods like .map(), .filter(),...
+//      - `arguments` is built-in JS Object which provide access to all the args passed to function at runtime that is old method of speed operator
 
 function printall(a, b, ...rest) {
   console.log(a, b, rest[0], rest[1]);
