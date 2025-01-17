@@ -41,6 +41,18 @@ console.log(counter()); // 2
 
 /// Closure
 //      - A closure is a function that remember its outer variables and can access them
+//      - But when a function is created using new Function, its [[Environment]] is set to reference not the current Lexical Environment, but the global one.
+function getFunc() {
+  let value = "Test";
+
+  // let func = function () {
+  // console.log(value);
+  // };
+
+  let func = new Function("console.log(value);"); // Error - value is not defined
+  return func;
+}
+getFunc()();
 
 /// Garbage Collection
 //      - usually, Laxical Environment is removed from the memory with all it's variable after function call finishes. because it is not reachable.
@@ -70,7 +82,7 @@ function f() {
 }
 
 let g2 = f();
-g();
+// g();
 
 /*
 /// home Work
