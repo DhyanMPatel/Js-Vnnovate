@@ -13,11 +13,9 @@ Day: Thursday
 
 Today's Work:
 
-1. Revision of last work
-2. Object: the Basics - complete
-   - Json methods & Json
-   - Date & time
-3. Advance with Function
-   - Recursion & Stack - complete
-   - Rest & Spreed - complete
-   - Variable Scope & Closure - complete
+1. Advance with Function
+   - Global Object - complete
+   - Function Object, NFE - complete
+   - "new Function" Syntax - complete
+   - Scheduling: setTimeout & setInterval - complete
+   - Decorators & Forwarding, call/apply - Start
