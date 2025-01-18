@@ -1,17 +1,22 @@
 // Symbol in Object
 
+//      - Represent unique identifier.
 //      - Symbol is use to make properties in Object
 //      - Symbols don’t auto-convert to a string
 //      - Symbol properties are skipped by for...in & Object.keys() loop in Object
-//      - Object.assign({},source) copy both String and Symbol properties.
+//      - Symbol Properties are work as "Hidden" properties, but Object.assign({},source) copy both String and Symbol properties.
 
-//      - using Symbol.for() we can create Global Symbol
-//      - to access that value use Symbol.keyfor()
+/// MEthods
+//    - Symbol() for create Symbol
+//    - SymbolName.description for get value inside Symbol
+//    - Symbol.for() to create Global Symbol
+//    - Symbol.keyFor() to get value inside Global Symbol
 
 let id = Symbol("_id");
 let id2 = Symbol("_id");
 
-// console.log(id.description); // Return - _id, value inside Symbole
+// console.log(id); // Error
+// console.log(id.description); // Return - _id
 
 // console.log(id == id2); // Return - false
 
@@ -33,6 +38,7 @@ console.log(Object.assign({}, obj));
 */
 
 // Global Symbols
+//    - sometimes we wants same-named symbol for different part of application to access
 let user1 = Symbol.for("user");
 let user2 = Symbol.for("user");
 

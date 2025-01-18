@@ -1,24 +1,30 @@
 /// Optional Chaining
-//      - use for safe way to access nested Object properties.
-//      - if Object will not define then it will give error.
+//      - use for safe way to access nested Object properties, even if intermidiate property doesn't exist.
+//      - if Object will not define then it will give error otherwise give undefined even if any properties will not defined.
+//      - Option chaining is not an Operator, it is special syntax cinstruct, that also works with function (`?.()`) and brackets (`?.[]?`)
+//      - we can't do 
 
-let obj = {
-  name: "Vnnovate",
-  age: 15,
-  address: {
-    city: "Ahmedabad",
-    area: "Escon",
-  },
-  admin() {
-    console.log("This is Admin call");
-  },
-};
-let object = {};
+let height = "height"
+let user = {
+    name: 'John Doe',
+    age: 19,
+    height: 5.8,
+    address: {
+        street: '123 Main St',
+        city: 'Anytown',
+        state: 'CA',
+    },
+    findAddr() {
+        return this.address;
+    },
+}
+let userGuest = {}
 
-/*
-console.log(obj?.address?.area); // Return - Escon
-console.log(obj?.addr?.area); // Return - undefined
-*/
+console.log(user?.addresses?.street); // Return - undefined
+console.log(user.findAddr?.());
+console.log(userGuest.findAddr?.()); // Return - undefined
+console.log(user?.[height]); // Return - 5.8
+console.log(user?.height); // Return - 5.8
 
 /*
 console.log(obj?.admin?.());
