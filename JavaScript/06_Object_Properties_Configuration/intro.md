@@ -1,0 +1,23 @@
+# Object Property Flag
+
+- Object Property are not just `Key-Value` pair. But an Obj Property is actually a more flexible and powerfull things.
+- Object have 3 special attributes
+  - Bydefault these all are `true`.
+  1. writable - if `true`, the value can be changed, otherwise it's read-only
+  2. enumirable - if `true`, then listed in loop, otherwise not listed
+  3. configurable - if `true`, then properties can be deleted and thes attributes can be modified, otherwise not
+- Display Flags
+
+  let descriptor = Object.getOwnPropertyDescriptor(obj, propertyName)
+
+- Change Flags
+
+  Object.defineProperty(obj, propertyNam, descriptor)
+
+- Object Methods that limit access to the whole Object
+  1. Object.preventExtensions(obj)
+  2. Object.seal(obj)
+  3. Object.freeze(obj)
+  4. Object.isExtensible(obj)
+  5. Object.isSealed(obj)
+  6. Object.isFrozen(obj)
