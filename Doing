@@ -1,10 +1,15 @@
-Date: 17 Jan 2025
-Day: Friday
+Date: 20 Jan 2025
+Day: Monday
 
 Today Learning:
 
 1. Revision of Last work
 2. Advanced working with functions in JS
+   - Function Binding
+   - Arrow Function
+3. Object Properties Configuration
+   - Property flags & descriptor
+   - Property getters & setters
 
 Work done:
 
