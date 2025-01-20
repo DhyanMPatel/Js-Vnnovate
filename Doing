@@ -4,12 +4,16 @@ Day: Monday
 Today Learning:
 
 1. Revision of Last work
-2. Advanced working with functions in JS
+2. Advanced working with functions in JS - complete
    - Function Binding
    - Arrow Function
-3. Object Properties Configuration
+3. Object Properties Configuration - complete
    - Property flags & descriptor
    - Property getters & setters
+4. Prototypes, Inheritance
+   - Prototypal inheritance
+   - F.prototype
+   - Native Prototypes
 
 Work done:
 

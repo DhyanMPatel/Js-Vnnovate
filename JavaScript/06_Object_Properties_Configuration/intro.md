@@ -21,3 +21,12 @@
   4. Object.isExtensible(obj)
   5. Object.isSealed(obj)
   6. Object.isFrozen(obj)
+
+# Getter & Setter
+
+- Accessor Properties are represent by `getter` & `setter` methods
+- Accessor Descriptor
+  1. get
+  2. set
+  3. enumerable
+  4. configurable
