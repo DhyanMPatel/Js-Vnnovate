@@ -79,7 +79,7 @@ function varFuncScope() {
 /// Exception in Number Datatype
 // console.log(NaN ** 0);  // Return - 1
 // console.log(null ** 0); // Return - 1
-// console.log(undefined ** 0);  // Return -1
+// console.log(undefined ** 0);  // Return - 1
 
 
 // Experement 
@@ -88,6 +88,6 @@ function varFuncScope() {
 // console.log(typeof undefined);
 // console.log(typeof (typeof Number));
 // console.log(typeof Number)
-console.log(typeof confirm);
+// console.log(typeof confirm);
 
 

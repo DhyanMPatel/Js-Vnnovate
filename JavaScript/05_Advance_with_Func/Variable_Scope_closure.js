@@ -1,8 +1,9 @@
 /// Variable Scope
 //      - There are multiple scope like, code block, nested function
 
-// Nested Function
 /*
+// Nested Function
+
 function sayHiBye(firstName, lastName) {
   // helper nested function to use below
   function getFullName() {
@@ -39,6 +40,7 @@ console.log(counter()); // 2
 //  - it only exist "Theoritically". we can't get this object in oue code and manipulate it directly.
 // - When code want to access the variable - the inner LE is searched first, then the outer one, then more outer one and so on.
 
+/*
 /// Closure
 //      - A closure is a function that remember its outer variables and can access them
 //      - But when a function is created using new Function, its [[Environment]] is set to reference not the current Lexical Environment, but the global one.
@@ -53,7 +55,9 @@ function getFunc() {
   return func;
 }
 getFunc()();
+*/
 
+/*
 /// Garbage Collection
 //      - usually, Laxical Environment is removed from the memory with all it's variable after function call finishes. because it is not reachable.
 //      - However, nested function is still reachable after  the end of funtion.
@@ -69,6 +73,7 @@ function f() {
 
 let g1 = f(); // g.[[Environment]] stores a reference to the Lexical Environment
 // of the corresponding f() call
+*/
 
 /// Real-life Example
 function f() {

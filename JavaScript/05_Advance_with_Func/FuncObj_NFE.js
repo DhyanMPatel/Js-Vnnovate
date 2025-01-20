@@ -39,7 +39,7 @@ console.log(arr1[0].name); // f
 
 // function created inside array
 let arr = [function () {}];
-alert(arr[0].name); // <empty string>
+console.log(arr[0].name); // <empty string>
 // the engine has no way to set up the right name, so there is none
 */
 
@@ -110,6 +110,7 @@ let copySayHiDefficult = sayHiDefficult;
 // sayHiDefficult = null; // Now Error - sayHiDefficult is not a function
 copySayHiDefficult();
 */
+
 
 /// Experiment
 // make function that set counter, decrease counter

@@ -9,7 +9,7 @@ let str = String(age)
 // console.log(typeof("10"/"5"))
 
 let num = Number(str)
-// console.log(typeof num)
+// console.log(typeof num) // Return - number
 
 
 // Experiment
@@ -50,9 +50,9 @@ let b = "0" // Truthy
 
 
 // SYMBOL
-let obj ={name:'Vnnovate'}
-console.log(Symbol(a)); // Return - Symbol (0)
-console.log(Symbol(obj));
+// let obj ={name:'Vnnovate'}
+// console.log(Symbol(a)); // Return - Symbol (0)
+// console.log(Symbol(obj));
 
-console.log(Symbol (obj.name));
+// console.log(Symbol (obj.name));
 
