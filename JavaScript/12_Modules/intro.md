@@ -7,7 +7,8 @@
   1. Export
   2. Import
 
-'''js
-export function sayHii(user){
-console.log(`Hello ${user}`)
+```js
+export function sayHii(user) {
+  console.log(`Hello ${user}`);
 }
+```
