@@ -1,5 +1,6 @@
 // Function Binding
 //      - When we passing Object methods as callback, there's a known problem: "Lossing This"
+//      - We loss `this` while we change any 
 
 let obj = {
   name: "Vnnovate",
@@ -18,14 +19,15 @@ setTimeout(f, 1200); // Return - "Hii, undefined"
 /// Solution - 1: a Wrapper
 //      - if obj method will change before setTimeout() then setTimeout display with changed data not previous data.
 setTimeout(function () {
-  obj.sayHii(); // Return - "Hello, Vnnovate changed.
+  obj.sayHii(); // Return - "Hello, undefined changed.
 }, 1400);
 setTimeout(() => {
-  obj.sayHii(); // Return - "Hello, Vnnovate changed.
+  obj.sayHii(); // Return - "Hello, undefined changed.
 }, 1600);
-obj = {
+
+obj = { // This will change data before setTimeout(), but we can't use object properties
   sayHii() {
-    console.log(`Hello, ${this.name} changed.`); // This will change data before setTimeout()
+    console.log(`Hello, ${this.name} changed.`);
   },
 };
 */
@@ -54,11 +56,13 @@ setTimeout(funcUser, 800); // Return - "Hii, Vnn. undefined Again."
 let objUser = user.sayBye.bind(user);
 objUser("!"); // Return - "Bye, Vnn!"
 setTimeout(objUser, 1000); // Return - "Bye, Vnnundefined"
-user = {
+user = { // this is reassign of user properties
+  name:"This is another", // name now changed to "This is another" otherwise "undefined" if we not define.
   sayBye() {
-    console.log("Again, Bye"); // This will not change value before setTimeout
+    console.log(`Again, Bye ${this.name}`); // This will not change value before setTimeout
   },
 };
+user.sayBye()
 
 // use to bind all methods in Object
 for (let key in user) {
@@ -87,6 +91,7 @@ triple(3); // Return - 9, == mul(3,3)
 triple(10); // Return - 30, == mul(3,10)
 */
 
+/*
 /// Experiment
 //      1)
 function f() {
@@ -101,9 +106,9 @@ user.g(); // Return - null, use "use strict" at top
 function f() {
   console.log(this.name);
 }
-f = f.bind({ name: "Vnnovate" }).bind({ name: "Vnn" }); // Can't change "This" by additional binding
+foo = f.bind({ name: "Vnnovate" }).bind({ name: "Vnn" }); // Can't change "This" by additional binding
 
-f(); // Return - Vnnovate
+foo(); // Return - Vnnovate
 
 //      3)
 function sayHi() {
@@ -115,6 +120,7 @@ let bound = sayHi.bind({
 });
 console.log(sayHi.test); // return - 5
 console.log(bound.test); // during binding with sayHi we not pass test only passed name
+*/
 
 /*
 /// HomeWork
