@@ -47,3 +47,10 @@
 - So a derived constructor must call super in order to execute its parent (base) constructor, otherwise the object for this won’t be created. And we’ll get an error.
 
   [Note] - We can override not only methods, but also class fields. parent class take their field first, not overriden. But in method chaild take their method and parent run their method
+
+## Static Methods / Static Properties
+
+- When we assign method to the class as whole, such methods are called `Static Methods`
+- They are prepended by `static` keyword
+- Static methods are also used in database-related classes to search/save/remove entries from the database
+- Static methods and Static Properties are inherited
