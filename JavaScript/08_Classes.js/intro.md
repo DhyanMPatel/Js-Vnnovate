@@ -54,3 +54,14 @@
 - They are prepended by `static` keyword
 - Static methods are also used in database-related classes to search/save/remove entries from the database
 - Static methods and Static Properties are inherited
+
+## Oop
+
+- In Oops, properties & methods are split into two groups:
+
+  1. Internal interface - accessible from other methods of class, but not from outside of Class
+  2. External interface - accessible also from outside the class.
+
+- In JavaScript, there are two types of object fields (properties and methods):
+  1. public - accessible from anywhere
+  2. private - accessible from inside the class
