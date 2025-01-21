@@ -1,4 +1,3 @@
-"use strict";
 /// F.prototype
 //      - F.prototype property is only use when `new F` is called
 //      - By default all functions have F.prototype = { constructor: F }, so we can get the constructor of an object by accessing its "constructor" property.
@@ -37,7 +36,7 @@ console.log(rabbit1.name); // Return - White Rabbit
 function Animal() {}
 Animal.prototype = {
   jump: true,
-  // constructor: Animal, // can create manualy, so it Return - true at line 39
+  // constructor: Animal, // can create manualy, so it Return - true at line 42
 };
 let animal = new Animal();
 console.log(animal.constructor == Animal); // Return - false
