@@ -36,7 +36,7 @@ Object.defineProperty(user, "name", {
 });
 Object.defineProperty(user, "age", {
   value: 14,
-  enumerable: true,
+  enumerable: false, // If true then can see
   configurable: true,
 });
 user.name = "Vnnovate"; // Error - not Writable
@@ -58,7 +58,7 @@ let user = {
     return this.name;
   },
 };
-for (let key in user) console.log(key);
+for (let key in user) console.log(`Key: ${key}`);
 
 Object.defineProperty(user, "toString", {
   enumerable: false,
@@ -89,12 +89,12 @@ delete obj.name; // No Effect
 
 for (let ele in obj) console.log(ele); // name, enumerable:true
 
-let another = Object.defineProperty(obj, "name", {
-  // not Possible Because configurable: false
-  enumerable: false,
-  writable: true,
-  configurable: true,
-});
+// let another = Object.defineProperty(obj, "name", {
+//   // not Possible Because configurable: false
+//   enumerable: false,
+//   writable: true,
+//   configurable: true,
+// });
 console.log(obj);
 */
 
@@ -120,11 +120,19 @@ console.log(Object.defineProperties({}, Object.getOwnPropertyDescriptors(obj)));
 
 /// Object Other Method
 //      - There are multiple Objects methods that limit access to the whole Object
-//          1.
+//          1. Object.preventExtensions(obj)
+//          2. Object.seal(obj)
+//          3. Object.freeze(obj)
+//          4. Object.isExtensible(obj)
+//          5. Object.isSeal(obj)
+//          6. Object.isFrozen(obj)
 
 /*
 /// Experiment
-Object.defineProperty(user, "name", { 
+let user = {
+  name: "vnn",
+};
+Object.defineProperty(user, "name", {
   value: "Vnnovate", // line - 6
 });
 let overriteNameDescriptor = Object.getOwnPropertyDescriptor(user, "name");

@@ -5,7 +5,7 @@
 
 /*
 /// Getter & Setter
-//      - useing `get` & `set` we create Property but look like function but we call as property
+//      - useing `get` & `set` we create accessor Property but look like function but we call as property
 //      - property can be either an accessor or data property, not both.
 
 let obj = {
