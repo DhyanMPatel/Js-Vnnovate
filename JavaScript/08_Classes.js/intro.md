@@ -53,7 +53,7 @@
 - When we assign method to the class as whole, such methods are called `Static Methods`
 - They are prepended by `static` keyword
 - Static methods are also used in database-related classes to search/save/remove entries from the database
-- Static methods and Static Properties are inherited
+- Static methods and Static Properties are inherited, but not of built-in classes like Array, Mep, Date, etc.
 
 ## Oop
 
