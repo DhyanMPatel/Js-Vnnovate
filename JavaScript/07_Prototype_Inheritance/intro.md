@@ -1,5 +1,6 @@
 # Prototype
 
+- Object Reference by [prototype] is called `Prototype`
 - use for Reading Operation only, write/delete work directly with object
 - when we made prototypal chain, and if we made some changes in function then that obj and their chaild obj only see the changes, remaining will not feel any changes
 - [[this]] is not affected by prototypes at all.
