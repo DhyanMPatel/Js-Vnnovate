@@ -24,3 +24,26 @@
 - solution of that is,
   1. Pass Wrapper-Func use `Arrow Function`, such as setTimeout(()=> button.click(), 1000)
   2. Bind the Method to Object, e.g. in the constructor
+
+## override method / constructor
+
+- We can make same name method in chield class, that is called 'override method'.
+- Using `super.Pmethod()` to call parent method from chield class
+- Bydefault chield class create constructor,
+
+  ```js
+  constructor(...args){
+      super(...args)
+  }
+  ```
+
+- we can do override constructor also,
+- Just remember that you should call super()
+- That label affects its behavior with new.
+
+  1. When a regular function is executed with new, it creates an empty object and assigns it to this.
+  2. But when a derived constructor runs, it doesn’t do this. It expects the parent constructor to do this job.
+
+- So a derived constructor must call super in order to execute its parent (base) constructor, otherwise the object for this won’t be created. And we’ll get an error.
+
+  [Note] - We can override not only methods, but also class fields. parent class take their field first, not overriden. But in method chaild take their method and parent run their method

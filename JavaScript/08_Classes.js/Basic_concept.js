@@ -149,9 +149,24 @@ class Clock {
     this.timmer = setInterval(() => this.render(), 1000);
   }
 }
+
+class ExtentedClock extends Clock {
+  /// Bydefault, no need to write constructor like bellow
+  constructor(...args) {
+    super(...args);
+  }
+}
+
 let clock = new Clock("h:m:s");
 
-clock.start();
+let exClock = new ExtentedClock("h-m-s");
+
+// clock.start();
+// setTimeout(() => {
+//   clock.stop();
+// }, 10000);
+
+exClock.start();
 setTimeout(() => {
-  clock.stop();
+  exClock.stop();
 }, 10000);
