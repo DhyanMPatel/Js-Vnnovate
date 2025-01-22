@@ -90,70 +90,73 @@ try{
 }
 */
 
+/*
 /// Wrapping Exceptionse
-class ReadError extends Error{
-    constructor(message, cause){
-        super(message)
-        this.cause = cause
-        this.name = "ReadError"
-    }
+//      - it also caught first Error that occur first same as above.
+//      - we just make new class `ReadError extends Error` and call when we need Error handler and pass message and cause.
+class ReadError extends Error {
+  constructor(message, cause) {
+    super(message);
+    this.cause = cause;
+    this.name = "ReadError";
+  }
 }
-class ValidationError extends Error{
-    constructor(message){
-        super(message)
-        this.name = "ValidationError"
-    }
+class ValidationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "ValidationError";
+  }
 }
-class PropertyRequiredError extends ValidationError{
-    constructor(property){
-        super(property)
-        this.name = "PropertyRequiredError"
-    }
-}
-
-function validateUser(user){
-    if(!user.name){
-        throw new PropertyRequiredError('No Field: Name')
-    }
-    if(!user.age){
-        throw new PropertyRequiredError("No Field: Age")
-    }
-}
-function readUser(json){
-    let user;
-
-    try{
-        user - JSON.parse(json)
-    } catch(err){
-        if(err instanceof SyntaxError){
-            throw new ReadError("Syntax Error", err)
-        } else {
-            throw err;
-        }
-    }
-
-    try{
-        validateUser(user)
-    } catch(err){
-        if(err instanceof ValidationError){
-            throw new ReadError('ValidationError', err)
-        } else {
-            throw err;
-        }
-    }
+class PropertyRequiredError extends ValidationError {
+  constructor(property) {
+    super(property);
+    this.name = "PropertyRequiredError";
+  }
 }
 
-try{
-    readUser('{"age": 30}')
-} catch(err){
-    if(err instanceof ReadError){
-        console.log(err)
-        console.log(`Original Error: ${err.cause}`)
+function validateUser(user) {
+  if (!user.name) {
+    throw new PropertyRequiredError("No Field: Name");
+  }
+  if (!user.age) {
+    throw new PropertyRequiredError("No Field: Age");
+  }
+}
+function readUser(json) {
+  let user;
+
+  try {
+    user = JSON.parse(json);
+  } catch (err) {
+    if (err instanceof SyntaxError) {
+      throw new ReadError("Syntax Error", err);
     } else {
-        throw err;
+      throw err;
     }
+  }
+
+  try {
+    validateUser(user);
+  } catch (err) {
+    if (err instanceof ValidationError) {
+      throw new ReadError("ValidationError", err);
+    } else {
+      throw err;
+    }
+  }
 }
 
+try {
+  readUser("{30}");
+} catch (err) {
+  if (err instanceof ReadError) {
+    console.log(err.name);
+    console.log(`Original Error: ${err.cause}`);
+  } else {
+    throw err;
+  }
+}
+*/
 
 /*
 /// Improved Further Extends
@@ -177,3 +180,22 @@ try{
     console.log(err.name); // Return - PropertyRequiredError
 }
 */
+
+/// Experiment
+class FormatError extends SyntaxError {
+  constructor(message) {
+    super(message);
+    this.name = this.constructor.name; // or this.name = "FormateError"
+  }
+}
+
+try {
+  let err = new FormatError("Formate Error");
+  throw err;
+} catch (err) {
+  console.log(err.name); // Return - FormateError
+  console.log(err.message); // Return - Formate Error
+
+  console.log(err instanceof FormatError); // Return - true
+  console.log(err instanceof SyntaxError); // Return - true
+}
