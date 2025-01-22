@@ -25,3 +25,12 @@ new Promise(function (resolve, reject) {
   }, 1000);
 }).catch(alert); // catch will not Trigger. Because Error generate leter, so promise can't handle
 ```
+
+## Static Method of Promise
+
+    1. Promise.all(iterable) - we want many promises to execute in parallel and wait until all of them are ready.
+    2. Promise.allSattled - print all promises even if there are any promise with Rejection. Result contain arr of State and value/reason of all Promises.
+    3. Promise.race(iterable) - wait for first served
+    4. Promise.any(iterable)
+    5. Promise.resolve(value)
+    6. Promise.reject(error)
