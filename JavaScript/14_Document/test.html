@@ -1,0 +1,16 @@
+<h1>Contents</h1>
+
+<div class="contents">
+  <ul class="book">
+    <li class="chapter">Chapter 1</li>
+    <li class="chapter">Chapter 2</li>
+  </ul>
+</div>
+<script>
+  let chapter = document.querySelector("chapter"); // li
+
+  alert(chapter.closest(".book")); //  ul
+  alert(chapter.closest(".contents")); //  div
+
+  alert(chapter.closest("h1")); // null (because h1 is not an ancestor)
+</script>
