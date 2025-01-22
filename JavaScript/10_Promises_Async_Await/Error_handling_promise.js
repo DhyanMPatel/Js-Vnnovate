@@ -26,6 +26,7 @@ new Promise((resolve, reject) => {
   }); // ReferenceError: blabla is not defined
 */
 
+/*
 /// Rethrowing with promises
 new Promise((res, rej) => {
   throw new Error("Whoops!");
@@ -47,6 +48,45 @@ new Promise((res, rej) => {
     }
     // don't return anything => execution goes the normal way
   });
+*/
+
+/*
+/// unhandled Rejection - only for browser
+//    - An “unhandled rejection” occurs when a promise error is not handled at the end of the microtask queue.
+//    - If there is not Microtask (.catch() for catch error) then `unhandled Rejection` run and
+//    - If catch will catch error after some time using setTimeout(fn) then `unhandled Rejection` run, then catch run
+//    - This is also Asynchronous.
+
+// handle error
+window.addEventListener("unhandledrejection", function (event) {
+  console.log(event.promise); // Return -[object Promise]
+  console.log(event.reason); // Return - Error: Whoops!
+});
+new Promise(() => {
+  throw new Error("Whoops!");
+});
+
+// If there are .catch()
+let promise = Promise.reject(new Error("Promise Failed!"));
+promise.catch((err) => alert("caught")); // Return - caught
+//      doesn't run: error handled
+window.addEventListener("unhandledrejection", (event) => alert(event.reason));
+
+// If there is no .catch()
+let promise1 = Promise.reject(new Error("Promise Failed!"));
+window.addEventListener("unhandledrejection", (event) => alert(event.reason)); // Return - // Promise Failed!
+
+// If .catch() is in setTimeout(fn)
+let promise2 = Promise.reject(new Error("Again Promise Failed!"));
+setTimeout(
+  () =>
+    promise2.catch((err) => {
+      alert("Caught Again"); // Return(after) - Caught Again
+    }),
+  1000 /// Must Required delay
+);
+window.addEventListener("unhandledrejection", (event) => alert(event.reason)); // Return(first) - Error: Again Promise Failed, untill catch occurs.
+*/
 
 /*
 /// Experiment
