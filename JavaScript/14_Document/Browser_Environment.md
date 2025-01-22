@@ -2,7 +2,7 @@
 
 - Web browsers give a means to control web pages. Node.js provides server-side features, and so on.
 
-  ![Root Object](./Screenshot%20from%202025-01-22%2016-37-30.png)
+  ![Root Object](./Root%20Object.png)
 
 - root `window` has 2 role:
 
