@@ -34,3 +34,12 @@ new Promise(function (resolve, reject) {
     4. Promise.any(iterable)
     5. Promise.resolve(value)
     6. Promise.reject(error)
+
+# Async/Await
+
+- `async` before a function means, `a function always return Promises`
+- `await` works only inside async functions.
+- Modern browsers allow top-level `await` in modules
+- `await` accepts “thenables”.
+- Async class methods
+- `async/await` works well with `Promise.all`
