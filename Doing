@@ -1,5 +1,5 @@
 Date: 22 Jan 2025
-Day: wednesday
+Day: Wednesday
 
 Today Learning:
 
@@ -7,6 +7,7 @@ Today Learning:
 2. Error handling
 3. Promises, Async/Await
 4. Generator, Advanced Iteration
+5. Document
 
 Work done:
 Date: 21 Jan 2025
@@ -16,19 +17,24 @@ Today, I am working on below list of task:
 
 1. Revision of Last work
 
-2. Prototypes, Inheritance - complete
+2. Error Handling - complete
 
-   - F.prototype
-   - Native Prototype
-   - Prototype Methods
+   - try...catch
+   - Custom Error, Extending Error
 
-3. Classes - complete
+3. Promise, Async/Await - complete
 
-   - class injeritance
-   - Static Methods and Properties
-   - Built-in classes
-   - Private and Protected Methods and Properties
-   - class with instanceOf (behind the scenes)
+   - Promise
+   - Promise Chain
+   - Promise Methods
+   - microtask
+   - Async/Await
 
-4. Error Handling
-   - try...catch - in progress
+4. Generator, Advanced Iteration - complete
+
+   - Generator
+
+5. Document
+
+   - Browser Environment, specs
+   - DOM Tree
