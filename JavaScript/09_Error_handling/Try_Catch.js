@@ -7,7 +7,8 @@
 //        2. err.message - Texual message
 //        3. err.stack - Current call Stack
 //      - throw - generate an error
-//      - Error standerd type - Error, SyntaxError, ReferenceError, TypeError
+//      - Error standerd type - Error, SyntaxError, ReferenceError, TypeError, HttpError, DbError, NotFoundError
+//      - Error can be inherite from above standerd type. 
 
 /*
 try {
