@@ -1,6 +1,6 @@
 # Browser Environment
 
-- Web browsers give a means to control web pages. Node.js provides server-side features, and so on.
+- Web browsers give an Environment to control web pages. Node.js provides server-side features, and so on.
 
   ![Root Object](./Root%20Object.png)
 

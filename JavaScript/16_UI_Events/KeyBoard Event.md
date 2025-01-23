@@ -9,6 +9,6 @@
 
   ![Keyboard .key and .code](./keyboard%20key%20&%20code.png)
 
-- Letter keys have codes "Key<letter>": "KeyA", "KeyB" etc.
-- Digit keys have codes: "Digit<number>": "Digit0", "Digit1" etc.
+- Letter keys have codes `"Key<letter>"`: "KeyA", "KeyB" etc.
+- Digit keys have codes: `"Digit<number>"`: "Digit0", "Digit1" etc.
 - Special keys are coded by their names: "Enter", "Backspace", "Tab" etc.

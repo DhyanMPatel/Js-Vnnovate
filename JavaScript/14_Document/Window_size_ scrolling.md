@@ -22,7 +22,7 @@
 ## Scrolling: scrollTo, scrollBy, scrollIntoView
 
 - To scroll the page with JavaScript, its DOM must be fully built.
-- For instance, if we try to scroll the page with a script in <head>, it won’t work.
+- For instance, if we try to scroll the page with a script in `<head>`, it won’t work.
 
 - The method `scrollBy(x,y)` scrolls the page relative to its current position. For instance, `window.scrollBy(0,10)` scrolls the page 10px down.
 - The method `scrollTo(pageX,pageY)` scrolls the page to absolute coordinates, so that the top-left corner of the visible part has coordinates (pageX, pageY) relative to the document’s top-left corner. It’s like setting scrollLeft/scrollTop.

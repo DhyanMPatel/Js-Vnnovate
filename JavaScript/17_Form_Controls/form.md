@@ -46,10 +46,10 @@
 
 ## select and option
 
-- A <select> element has 3 important properties:
-  - `select.options` – the collection of <option> subelements,
-  - `select.value` – the value of the currently selected <option>,
-  - `select.selectedIndex` – the number of the currently selected <option>.
+- A `<select>` element has 3 important properties:
+  - `select.options` – the collection of `<option>` subelements,
+  - `select.value` – the value of the currently selected `<option>`,
+  - `select.selectedIndex` – the number of the currently selected `<option>`.
 
 ```html
 <select id="select">

@@ -2,7 +2,7 @@
 
 - It gets properties and methods as a superposition of (listed in inheritance order):
 
-  - `HTMLInputElement` – this class provides input-specific properties, like <input>
+  - `HTMLInputElement` – this class provides input-specific properties, like `<input>`
   - `HTMLElement` – it provides common HTML element methods (and getters/setters). basic class for all HTML elements.
   - `Element` – provides generic element methods,
   - `Node` – provides common DOM node properties,
@@ -72,7 +72,7 @@
   </script>
   ```
 
-- The `textContent` provides access to the text inside the element: only text, minus all <tags>.
+- The `textContent` provides access to the text inside the element: only text, minus all `<tags>`.
 
   - Writing to textContent is much more useful, because it allows to write text the “safe way”.
 

@@ -1,14 +1,14 @@
 # DOM Tree
 
 - The backbone of an HTML document is tags.
-- `document.body` is the object representing the <body> tag.
+- `document.body` is the object representing the `<body>` tag.
 
   ![tags as Document](./tag%20as%20document.png)
 
 - The text inside elements forms text nodes, labelled as `#text`. A text node contains only a string. It may not have children and is always a leaf of the tree.
 - Spaces and newlines are totally valid characters
 - Spaces at string start/end and space-only text nodes are usually hidden in tools
-- Tables always have <tbody>
+- Tables always have `<tbody>`
 - In the DOM world `null` means “doesn’t exist”
 
   ```js
@@ -71,14 +71,14 @@
 
 ### Table
 
-- `table.rows` – the collection of <tr> elements of the table.
-- `table.caption/tHead/tFoot` – references to elements <caption>, <thead>, <tfoot>.
-- `table.tBodies` – the collection of <tbody> elements
+- `table.rows` – the collection of `<tr>` elements of the table.
+- `table.caption/tHead/tFoot` – references to elements `<caption>, <thead>, <tfoot>`.
+- `table.tBodies` – the collection of `<tbody>` elements
 
-- `tbody.rows` – the collection of <tr> inside
+- `tbody.rows` – the collection of `<tr>` inside
 
-- `tr.cells` – the collection of <td> and <th> cells inside the given <tr>.
-- `tr.sectionRowIndex` – the position (index) of the given <tr> inside the enclosing <thead>/<tbody>/<tfoot>.
-- `tr.rowIndex` – the number of the <tr> in the table as a whole
+- `tr.cells` – the collection of `<td>` and `<th>` cells inside the given `<tr>`.
+- `tr.sectionRowIndex` – the position (index) of the given `<tr>` inside the enclosing `<thead>/<tbody>/<tfoot>`.
+- `tr.rowIndex` – the number of the `<tr>` in the table as a whole
 
-- `td.cellIndex` – the number of the cell inside the enclosing <tr>.
+- `td.cellIndex` – the number of the cell inside the enclosing `<tr>`.

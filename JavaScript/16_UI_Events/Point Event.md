@@ -1,7 +1,7 @@
 # Pointer events
 
 - every `mouse<event>`, there’s a `pointer<event>` that plays a similar role.
-- We can replace mouse<event> events with pointer<event> in our code
+- We can replace `mouse<event>` events with `pointer<event>` in our code
 
 ## Pointer event properties
 

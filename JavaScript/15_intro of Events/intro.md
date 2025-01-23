@@ -12,8 +12,8 @@
 
 ### Form element events:
 
-- `submit` – when the visitor submits a <form>.
-- `focus` – when the visitor focuses on an element, e.g. on an <input>.
+- `submit` – when the visitor submits a `<form>`.
+- `focus` – when the visitor focuses on an element, e.g. on an `<input>`.
 
 ### Document events:
 
