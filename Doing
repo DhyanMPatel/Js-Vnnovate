@@ -13,26 +13,34 @@ Day: Tuesday
 
 Today, I am working on below list of task:
 
-1. Revision of Last work
+1. Document - complete
 
-2. Error Handling - complete
+   - getElemetBy, querySelector
+   - Node Properties: type, tag and contents
+   - Modifying the document
+   - Atributes & Properties
+   - Styles and Classes
+   - Element size and scrolling
+   - Window size and scrolling
+   - Coordinates
 
-   - try...catch
-   - Custom Error, Extending Error
+2. Intro of Events - complete
 
-3. Promise, Async/Await - complete
+   - Bubbling & Capturing
+   - Event Delegation
+   - Browser default action
+   - Dispatching custom Events
 
-   - Promise
-   - Promise Chain
-   - Promise Methods
-   - microtask
-   - Async/Await
+3. UI Events - complete
 
-4. Generator, Advanced Iteration - complete
+   - Mouse Events
+   - Pointer Events
+   - Keyboar: keydown & keyup
+   - Scrolling
 
-   - Generator
+4. forms, controls - complete
 
-5. Document - complete
-   - Browser Environment, specs
-   - DOM Tree
-   - getElement\*,querySelector\*
+   - form Properties & Methods
+   - Focusing
+   - Events: change, input, cut, paste, copy
+   - Form submit event and submit method
