@@ -82,3 +82,20 @@
 - `tr.rowIndex` – the number of the `<tr>` in the table as a whole
 
 - `td.cellIndex` – the number of the cell inside the enclosing `<tr>`.
+
+## Experiment
+
+- `elem.lastChild.nextSibling` is always `null`
+- `elem.children[0].previousSibling` is not always `null`. because some time it may be `text Node`
+
+- Select all Diagonal Cells
+
+```js
+let table = document.body.firstElementChild;
+
+for (let i = 0; i < table.rows.length; i++) {
+  let row = table.rows[i];
+
+  row.cells[i].style.backgroundColor = "red";
+}
+```

@@ -90,3 +90,21 @@
 
 - The “hidden” attribute and the DOM property specifies whether the element is visible or not.
   - `hidden` works the same as `style="display:none"`. But it’s shorter to write.
+
+# Experiment
+
+- count how many `li` inside that `li`
+
+```js
+for (let li of document.querySelectorAll("li")) {
+  // get the title from the text node
+  let title = li.firstChild.data;
+
+  title = title.trim(); // remove extra spaces from ends
+
+  // get the descendants count
+  let count = li.getElementsByTagName("li").length;
+
+  alert(title + ": " + count);
+}
+```
