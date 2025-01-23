@@ -84,7 +84,7 @@
 
 # getElementsBy
 
-- Don’t forget the "s" letter!
+- Don’t forget the "s" letter! except `getElementById()`
 - It returns a collection, not an element!
 
 ```js
@@ -95,7 +95,7 @@ document.getElementsByTagName("input").value = 5;
 document.getElementsByTagName("input")[0].value = 5;
 ```
 
-- `elem.getElementsByTagName(tag)` - looks for elements with the given tag and returns the collection of them. The tag parameter can also be a star "\*" for “any tags”.
+- `elem.getElementsByTagName(tag)` - looks for elements with the given tag and `returns the collection` of them. The tag parameter can also be a star "\*" for “any tags”.
 - `elem.getElementsByClassName(className)` - returns elements that have the given CSS class.
 - `document.getElementsByName(name)` - returns elements with the given name attribute, document-wide. Very rarely used.
 
@@ -178,3 +178,8 @@ document.getElementsByTagName("input")[0].value = 5;
   alert(divs.length); // 1
 </script>
 ```
+
+### Note
+
+- `document.getElementById("id")` and `document.querySelector("Css like Selector")` is identify Single Element
+- `document.getElementsByclassName('class')`, `document.getElementsBytagName('tag')` and `document.querySelectorAll("Css like Selector")` is identify list of Elements.
