@@ -13,34 +13,31 @@ Day: Thursday
 
 Today, I am working on below list of task:
 
-1. Document - complete
+1. Searching Methods learn, inside this i learn about
+   - like getElementById, getElementsByTagname, getElementsByName, getElementsByClassName
+   - querySelector & querySelectorAll
+   - elem.closest(css)
+   - elem.Matches(css)
+   - elem.contains(elem2)
+2. Node Properties
+   - nodeType, nodeName & tagName
+   - innerHTML & outerHTML
+   - node value/data
+   - textContent
+   - hidden property
+   - other properties like value, type, href, id
+3. Attributes & Properties
+   - dom Properties which is inside DOM Object
+   - HTML Attributes which is written in HTML
+   - learn Attributes methods like hasAttribute, getAttribute, setAttribute, removeAttribute
+   - Non-standard Attributes, dataset
+4. Modify the Document
+   - create Element/textNode using createElement() and createTextNode()
+   - insertion method like append(), prepend(), before(), after(), replaceWith()
+   - insertAdjecentHTML/Text/Element another method to create Element/Text
+   - Remove node using remove()
+   - clone node using clonNode()
+   - DocumentFragment() to cretate wrapper of list
+   - also there  are another olb method like appendChild(), insterBefore(), replaceChild(), removeChild() 
 
-   - getElemetBy, querySelector
-   - Node Properties: type, tag and contents
-   - Modifying the document
-   - Atributes & Properties
-   - Styles and Classes
-   - Element size and scrolling
-   - Window size and scrolling
-   - Coordinates
 
-2. Intro of Events - complete
-
-   - Bubbling & Capturing
-   - Event Delegation
-   - Browser default action
-   - Dispatching custom Events
-
-3. UI Events - complete
-
-   - Mouse Events
-   - Pointer Events
-   - Keyboar: keydown & keyup
-   - Scrolling
-
-4. forms, controls - complete
-
-   - form Properties & Methods
-   - Focusing
-   - Events: change, input, cut, paste, copy
-   - Form submit event and submit method

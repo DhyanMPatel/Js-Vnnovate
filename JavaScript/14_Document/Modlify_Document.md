@@ -78,6 +78,38 @@
   </script>
   ```
 
+## Old insert/Remove Methods
+
+- `parentElem.appendChild(node)` - append at last of parentElem
+- `parentElem.removeChild(node)` - remove that node
+- `parentElem.replaceChild(node,oldChild)` - replace that child with oldchild
+- `parentElem.insertBefore(node,nextSibling)` - insert that node before nextSibling.
+
+```html
+<ol id="list">
+  <li>0</li>
+  <li>1</li>
+  <li>2</li>
+</ol>
+<script>
+  let list = document.getElementById("list");
+  let appC = document.createElement("li");
+  appC.innerHTML = "From appendChild";
+  list.appendChild(appC);
+
+  let insert = document.createElement("li");
+  insert.innerHTML = "from insertBefore";
+  list.insertBefore(insert, list.children[2]);
+
+  let replace = document.createElement("li");
+  replace.innerHTML = "from replaceWith";
+  list.replaceWith(replace, list.children[2]);
+
+  let remove = list.children[1];
+  list.removeChild(remove);
+</script>
+```
+
 ## DocumentFragment
 
 - `DocumentFragment` is a special DOM node that serves as a wrapper to pass around lists of nodes.
@@ -223,51 +255,53 @@ for (let li of lis) {
 
 ```js
 function createCalendar(elem, year, month) {
+  let mon = month - 1; // months in JS are 0..11, not 1..12
+  let d = new Date(year, mon);
 
-      let mon = month - 1; // months in JS are 0..11, not 1..12
-      let d = new Date(year, mon);
+  let table =
+    "<table><tr><th>MO</th><th>TU</th><th>WE</th><th>TH</th><th>FR</th><th>SA</th><th>SU</th></tr><tr>";
 
-      let table = '<table><tr><th>MO</th><th>TU</th><th>WE</th><th>TH</th><th>FR</th><th>SA</th><th>SU</th></tr><tr>';
+  // spaces for the first row
+  // from Monday till the first day of the month
+  // * * * 1  2  3  4
+  for (let i = 0; i < getDay(d); i++) {
+    table += "<td></td>";
+  }
 
-      // spaces for the first row
-      // from Monday till the first day of the month
-      // * * * 1  2  3  4
-      for (let i = 0; i < getDay(d); i++) {
-        table += '<td></td>';
-      }
+  // <td> with actual dates
+  while (d.getMonth() == mon) {
+    table += "<td>" + d.getDate() + "</td>";
 
-      // <td> with actual dates
-      while (d.getMonth() == mon) {
-        table += '<td>' + d.getDate() + '</td>';
-
-        if (getDay(d) % 7 == 6) { // sunday, last day of week - newline
-          table += '</tr><tr>';
-        }
-
-        d.setDate(d.getDate() + 1);
-      }
-
-      // add spaces after last days of month for the last row
-      // 29 30 31 * * * *
-      // if (getDay(d) != 0) {
-      //   for (let i = getDay(d); i < 7; i++) {
-      //     table += '<td></td>';
-      //   }
-      // }
-
-      // close the table
-      table += '</tr></table>';
-
-      elem.innerHTML = table;
+    if (getDay(d) % 7 == 6) {
+      // sunday, last day of week - newline
+      table += "</tr><tr>";
     }
 
-    function getDay(date) { // get day number from 0 (monday) to 6 (sunday)
-      let day = date.getDay();
-      if (day == 0) day = 7; // make Sunday (0) the last day
-      return day - 1;
-    }
+    d.setDate(d.getDate() + 1);
+  }
 
-    createCalendar(calendar, 2012, 9);
+  // add spaces after last days of month for the last row
+  // 29 30 31 * * * *
+  // if (getDay(d) != 0) {
+  //   for (let i = getDay(d); i < 7; i++) {
+  //     table += '<td></td>';
+  //   }
+  // }
+
+  // close the table
+  table += "</tr></table>";
+
+  elem.innerHTML = table;
+}
+
+function getDay(date) {
+  // get day number from 0 (monday) to 6 (sunday)
+  let day = date.getDay();
+  if (day == 0) day = 7; // make Sunday (0) the last day
+  return day - 1;
+}
+
+createCalendar(calendar, 2012, 9);
 ```
 
 - insert HTML in list
@@ -287,38 +321,41 @@ document.body.append(ul);
 
 ```js
 let timerId;
-    function updateClock(){
-      const clock = document.getElementById('clock')
-      let date = new Date();
+function updateClock() {
+  const clock = document.getElementById("clock");
+  let date = new Date();
 
-      let hours = date.getHours();
-      let minutes = date.getMinutes();
-      let seconds = date.getSeconds();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
 
-      if(hours<10) hours += `0${hours}`
-      if(minutes<10) minutes += `0${minutes}`
-      if(seconds<10) seconds += `0${seconds}`
-      
-      clock.children[0].innerHTML = hours
-      clock.children[1].innerHTML = minutes
-      clock.children[2].innerHTML = seconds
-    }
+  if (hours < 10) hours += `0${hours}`;
+  if (minutes < 10) minutes += `0${minutes}`;
+  if (seconds < 10) seconds += `0${seconds}`;
 
-    function clockStart(){
-      if(!timerId){
-        timerId = setInterval(updateClock,1000)
-      }
-      updateClock();
-    }
-    function clockStop(){
-      clearInterval(timerId)
-      timerId = null;
-    }
+  clock.children[0].innerHTML = hours;
+  clock.children[1].innerHTML = minutes;
+  clock.children[2].innerHTML = seconds;
+}
+
+function clockStart() {
+  if (!timerId) {
+    timerId = setInterval(updateClock, 1000);
+  }
+  updateClock();
+}
+function clockStop() {
+  clearInterval(timerId);
+  timerId = null;
+}
 ```
 
 - Sort the table
-```js
-let sortedRows = Array.from(table.tBodies[0].rows).sort((rowA,rowB)=> rowA.cells[0].innerHTML.localeCompare(rowB.cells[0].innerHTML));
 
-table.tBodies[0].append(...sortedRows)
+```js
+let sortedRows = Array.from(table.tBodies[0].rows).sort((rowA, rowB) =>
+  rowA.cells[0].innerHTML.localeCompare(rowB.cells[0].innerHTML)
+);
+
+table.tBodies[0].append(...sortedRows);
 ```
