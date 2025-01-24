@@ -1,143 +1,107 @@
 <!-- <!DOCTYPE html>
-<html>
-  <body>
-    <ul>
-      <li>
-        Animals
-        <ul>
-          <li>
-            Mammals
-            <ul>
-              <li>Cows</li>
-              <li>Donkeys</li>
-              <li>Dogs</li>
-              <li>Tigers</li>
-            </ul>
-          </li>
-          <li>
-            Other
-            <ul>
-              <li>Snakes</li>
-              <li>Birds</li>
-              <li>Lizards</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        Fishes
-        <ul>
-          <li>
-            Aquarium
-            <ul>
-              <li>Guppy</li>
-              <li>Angelfish</li>
-            </ul>
-          </li>
-          <li>
-            Sea
-            <ul>
-              <li>Sea trout</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-
-    <script>
-      for (let li of document.querySelectorAll("li")) {
-        let title = li.firstChild.data;
-
-        title.trim();
-        let count = li.getElementsByTagName("li").length;
-
-        alert(title + ": " + count);
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassName</title>
+    <style>
+      .list {
+        background-color: blanchedalmond;
+        padding: 10px;
       }
+    </style>
+  </head>
+  <body class="Body">
+    <div class="list">Div</div>
+    <script>
+      // ClassName
+      let body = document.body;
+      console.log(body.className); // Return - Body
+
+      // ClassList
+      body.classList.add("List");
+      console.log(body.className); // Return - Body List
+
+      for (let name of body.classList) {
+        console.log(`name: ${name}`);
+      }
+
+      // getComputedStyle()
+      let list = document.getElementsByClassName("list")[0];
+      let computeStyle = getComputedStyle(list);
+
+      console.log(list.style.padding); // Empty
+
+      console.log(computeStyle.padding); // Return - 10px
+
+      /// Resetting Property
+      document.body.style.backgroundColor = "red"; //set background to red
+
+      setTimeout(
+        () => document.body.style.removeProperty("background-color"),
+        1000
+      );
     </script>
   </body>
 </html> -->
 
-<!-- <!DOCTYPE html>
-<html>
-<body>
-
-  <div data-widget-name="menu">Choose the genre</div>
-
-  <script>
-    /* your code */
-    let div = document.querySelector('[data-widget-name]')
-
-    alert(div.dataset.widgetName)
-    alert(div.getAttribute("data-widget-name"))
-  </script>
-</body>
-</html> -->
-
-<!-- <div id="elem">Hello <b>World</b></div>
-
-  <script>
-    alert(elem.outerHTML); // <div id="elem">Hello <b>World</b></div>
-
-    let div = document.querySelector("div");
-
-    // replace div.outerHTML with <p>...</p>
-    div.outerHTML = "<p>A new element</p>"; // (*)
-
-    // Wow! 'div' is still the same!
-    alert(div.outerHTML); // <div id="elem">Hello <b>World</b></div> (**)
-  </script> -->
-
-<!-- <!DOCTYPE html>
+<!-- Experiment -->
+<!DOCTYPE html>
 <html>
   <head>
     <style>
-      .hour{
-        color:red
-      }
-      .min{
-        color:green
-      }
-      .sec{
-        color: blue;
+      .welcome {
+        position: fixed;
+        background-color: red;
+        color: wheat;
+        padding: 10px;
       }
     </style>
   </head>
-<body>
-  <div id="clock">
-    <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
-  </div>
-  <script>
-    let timerId;
-    function updateClock(){
-      const clock = document.getElementById('clock')
-      let date = new Date();
 
-      let hours = date.getHours();
-      let minutes = date.getMinutes();
-      let seconds = date.getSeconds();
+  <body>
+    <h2>Notification is on the right</h2>
 
-      if(hours<10) hours += `0${hours}`
-      if(minutes<10) minutes += `0${minutes}`
-      if(seconds<10) seconds += `0${seconds}`
-      
-      clock.children[0].innerHTML = hours
-      clock.children[1].innerHTML = minutes
-      clock.children[2].innerHTML = seconds
-    }
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+      aspernatur quam ex eaque inventore quod voluptatem adipisci omnis nemo
+      nulla fugit iste numquam ducimus cumque minima porro ea quidem maxime
+      necessitatibus beatae labore soluta voluptatum magnam consequatur sit
+      laboriosam velit excepturi laborum sequi eos placeat et quia deleniti?
+      Corrupti velit impedit autem et obcaecati fuga debitis nemo ratione iste
+      veniam amet dicta hic ipsam unde cupiditate incidunt aut iure ipsum
+      officiis soluta temporibus. Tempore dicta ullam delectus numquam
+      consectetur quisquam explicabo culpa excepturi placeat quo sequi molestias
+      reprehenderit hic at nemo cumque voluptates quidem repellendus maiores
+      unde earum molestiae ad.
+    </p>
 
-    function clockStart(){
-      if(!timerId){
-        timerId = setInterval(updateClock,1000)
+    <script>
+      function showNotification({ top = 0, right = 0, className, html }) {
+        let notification = document.createElement("div");
+        notification.className = className;
+
+        notification.innerHTML = `${html}`;
+        notification.style.top = `${top}px`;
+        notification.style.right = `${right}px`;
+
+        document.body.append(notification);
+
+        setTimeout(() => {
+          notification.remove();
+        }, 1500);
       }
-      updateClock();
-    }
-    function clockStop(){
-      clearInterval(timerId)
-      timerId = null;
-    }
-  </script>
 
-  <input type="button" onclick="clockStart()", value="Start">
-  <input type="button" onclick="clockStop()", value="Stop">
-</body>
-</html> -->
+      // test it
+      let i = 1;
+      setInterval(() => {
+        showNotification({
+          top: 10,
+          right: 10,
+          html: "Hello " + i++,
+          className: "welcome",
+        });
+      }, 2000);
+    </script>
+  </body>
+</html>
