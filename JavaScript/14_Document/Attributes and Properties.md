@@ -71,7 +71,8 @@ document.body.sayHi(); // Hello, I'm BODY
 ```
 
 ## Non-standard attributes, dataset
-- Sometimes non-standard attributes are used to pass custom data from HTML to JavaScript, or to “mark” HTML-elements for JavaScript
+
+- Sometimes non-standard attributes are used to <b>pass custom data from HTML to JavaScript</b>, or to “mark” HTML-elements for JavaScript
 
 ```html
 <!-- mark the div to show "name" here -->
@@ -83,12 +84,12 @@ document.body.sayHi(); // Hello, I'm BODY
   // the code finds an element with the mark and shows what's requested
   let user = {
     name: "Pete",
-    age: 25
+    age: 25,
   };
 
-  for(let div of document.querySelectorAll('[show-info]')) {
+  for (let div of document.querySelectorAll("[show-info]")) {
     // insert the corresponding info into the field
-    let field = div.getAttribute('show-info');
+    let field = div.getAttribute("show-info");
     div.innerHTML = user[field]; // first Pete into "name", then 25 into "age"
   }
 </script>
@@ -99,9 +100,10 @@ document.body.sayHi(); // Hello, I'm BODY
 
 ```html
 <body data-about="Elephants">
-<script>
-  alert(document.body.dataset.about); // Elephants
-</script>
+  <script>
+    alert(document.body.dataset.about); // Elephants
+  </script>
+</body>
 ```
 
 # Experiment
@@ -110,29 +112,31 @@ document.body.sayHi(); // Hello, I'm BODY
 - Properties – is what’s in DOM objects.
 
 - get Attribute
+
 ```html
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
+    <div data-widget-name="menu">Choose the genre</div>
 
-  <div data-widget-name="menu">Choose the genre</div>
+    <script>
+      /* your code */
+      let div = document.querySelector("[data-widget-name]");
 
-  <script>
-    /* your code */
-    let div = document.querySelector('[data-widget-name]')
-
-    alert(div.getAttributes('data-widget-name'))
-  </script>
-</body>
+      alert(div.getAttributes("data-widget-name"));
+    </script>
+  </body>
 </html>
 ```
 
 - Make External link orange
+
 ```js
-let a = document.queryselectorAll('a')
-for(let link of a){
-  let href = a.getAttribute('href')
-  if(href.includes("://")) continue;
-  if(href.startsWith('http://internal.com')) continue;
-  link.style.color = 'orange';
+let a = document.queryselectorAll("a");
+for (let link of a) {
+  let href = a.getAttribute("href");
+  if (href.includes("://")) continue;
+  if (href.startsWith("http://internal.com")) continue;
+  link.style.color = "orange";
 }
+```

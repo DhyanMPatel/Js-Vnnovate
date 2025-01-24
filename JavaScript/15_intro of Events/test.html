@@ -57,7 +57,6 @@
   </body>
 </html> -->
 
-
 <!-- <!DOCTYPE html>
 <html>
 <body>
@@ -74,8 +73,7 @@
 </body>
 </html> -->
 
-
-<div id="elem">Hello <b>World</b></div>
+<!-- <div id="elem">Hello <b>World</b></div>
 
   <script>
     alert(elem.outerHTML); // <div id="elem">Hello <b>World</b></div>
@@ -87,4 +85,32 @@
 
     // Wow! 'div' is still the same!
     alert(div.outerHTML); // <div id="elem">Hello <b>World</b></div> (**)
+  </script> -->
+
+<!DOCTYPE html>
+<body>
+  <div id="calender"></div>
+  <script>
+    function createCalender(elem, year, month) {
+      let mon = month - 1;
+
+      let d = new Date(year, mon);
+
+      let table =
+        "<table><tr><th>MO</th><th>TU</th><th>WE</th><th>TH</th><th>FR</th><th>SA</th><th>SU</th></tr><tr>";
+
+      for (let i = 0; i < getDay(d); i++) {
+        table += `<td></td>`;
+      }
+
+      elem.innerHTML = table;
+    }
+    function getDay(date) {
+      let day = date.getDay();
+      if (day == 0) day = 7;
+      return day - 1;
+    }
+
+    createCalender(calender, 2025, 1);
   </script>
+</body>

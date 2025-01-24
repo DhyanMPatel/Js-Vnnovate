@@ -27,11 +27,25 @@
 ## insertAdjacentHTML/Text/Element
 
 - Syntax - `elem.insertAdjacentHTML(where, html)`.
+- When we need to insert a piece of HTML somewhere, `insertAdjacentHTML` is the best fit.
 - Where:
+
   - `"beforebegin"` – insert html immediately before elem,
   - `"afterbegin"` – insert html into elem, at the beginning,
   - `"beforeend"` – insert html into elem, at the end,
   - `"afterend"` – insert html immediately after elem.
+
+  ```html
+  <div id="div"></div>
+  <script>
+    div.insertAdjacentHTML("beforebegin", "<p>Hello</p>");
+    div.insertAdjacentHTML("afterending", "<p>Bye</p>");
+  </script>
+  ```
+
+- The method has two brothers:
+  - `elem.insertAdjacentText(where, text)` – the same syntax, but a string of text is inserted “as text” instead of HTML,
+  - `elem.insertAdjacentElement(where, elem)` – the same syntax, but inserts an element.
 
 ## Node Removal
 
@@ -66,6 +80,28 @@
 
 ## DocumentFragment
 
+- `DocumentFragment` is a special DOM node that serves as a wrapper to pass around lists of nodes.
+
+```html
+<ul id="ul"></ul>
+
+<script>
+  function getListContent() {
+    let fragment = new DocumentFragment();
+
+    for (let i = 1; i <= 3; i++) {
+      let li = document.createElement("li");
+      li.append(i);
+      fragment.append(li);
+    }
+
+    return fragment;
+  }
+
+  ul.append(getListContent()); // (*)
+</script>
+```
+
 ## document.write
 
 - The call to `document.write` only works while the page is loading.
@@ -80,49 +116,124 @@
 ```
 
 # Experiment
+
 - Remove all chaild nodes of Element that we touch
+
 ```js
-for(let i = 0;i<elem.childNodes.length;i++){
-  elem.childNodes[i].remove();
+function clear(elem) {
+  while (elem.firstChild) {
+    elem.firstChild.remove();
+  }
 }
+
+setTimeout(() => clear(elem), 10000);
 ```
 
 - create Dynamic List.
+
 ```js
-let ul = document.createElement('ul')
-document.body.append(ul)
+let ul = document.createElement("ul");
+document.body.append(ul);
 
-while(true){
-  let data = prompt("Enter data","");
+while (true) {
+  let data = prompt("Enter data", "");
 
-  if(!data){
+  if (!data) {
     break;
   } else {
-    let li = document.createElement('li')
-    li.textContent = data
-    ul.appendChild(li)
+    let li = document.createElement("li");
+    li.textContent = data;
+    ul.append(li);
   }
 }
 ```
 
-- 
+- create a list based on data Obj.
+
 ```js
 let data = {
-      "Fish": {
-        "trout": {},
-        "salmon": {}
-      },
+  Fish: {
+    trout: {},
+    salmon: {},
+  },
 
-      "Tree": {
-        "Huge": {
-          "sequoia": {},
-          "oak": {}
-        },
-        "Flowering": {
-          "apple tree": {},
-          "magnolia": {}
-        }
-      }
-    };
+  Tree: {
+    Huge: {
+      sequoia: {},
+      oak: {},
+    },
+    Flowering: {
+      "apple tree": {},
+      magnolia: {},
+    },
+  },
+};
 
+function createTree(container, data) {
+  // container.innerHTML = createTreeText(data);
+  container.append(createTreeText(data));
+}
+function createTreeText(data) {
+  /*
+  /// HTML like approach
+  let li = "";
+  let ul;
+
+  for (let key in data) {
+    li += `<li> ${key + createTreeText(data[key])} </li>`;
+  }
+  if (li) {
+    ul = `<ul> ${li} </ul>`;
+  }
+  return ul || "";
+  */
+
+  let ul = document.createElement("ul");
+
+  for (let key of data) {
+    let li = document.createElement("li");
+    li.innerHTML = key;
+
+    let childli = createTreeText(data[key]);
+    if (childli) {
+      li.append(childli);
+    }
+    ul.append(li);
+  }
+  return ul;
+}
+createTree(container, data);
+```
+
+- define list length inside list
+
+```js
+let lis = document.getElementsByTagName("li");
+
+for (let li of lis) {
+  let count = li.getElementsByTagName("li").length;
+
+  if (!count) continue;
+
+  li.firstChild.data += `[${count}]`;
+}
+```
+
+- Create a calender
+
+```js
+
+```
+
+- insert HTML in list
+
+```js
+let ul = document.createElement("ul");
+ul.id = "ul";
+
+ul.insertAdjacentHTML("beforeend", "<li>1</li> <li>2</li>");
+
+ul.insertAdjacentHTML("afterbegin", "<li>3</li>");
+
+document.body.append(ul);
 ```
