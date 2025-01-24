@@ -88,29 +88,56 @@
   </script> -->
 
 <!DOCTYPE html>
-<body>
-  <div id="calender"></div>
-  <script>
-    function createCalender(elem, year, month) {
-      let mon = month - 1;
-
-      let d = new Date(year, mon);
-
-      let table =
-        "<table><tr><th>MO</th><th>TU</th><th>WE</th><th>TH</th><th>FR</th><th>SA</th><th>SU</th></tr><tr>";
-
-      for (let i = 0; i < getDay(d); i++) {
-        table += `<td></td>`;
+<html>
+  <head>
+    <style>
+      .hour{
+        color:red
       }
+      .min{
+        color:green
+      }
+      .sec{
+        color: blue;
+      }
+    </style>
+  </head>
+<body>
+  <div id="clock">
+    <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
+  </div>
+  <script>
+    let timerId;
+    function updateClock(){
+      const clock = document.getElementById('clock')
+      let date = new Date();
 
-      elem.innerHTML = table;
-    }
-    function getDay(date) {
-      let day = date.getDay();
-      if (day == 0) day = 7;
-      return day - 1;
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      let seconds = date.getSeconds();
+
+      if(hours<10) hours += `0${hours}`
+      if(minutes<10) minutes += `0${minutes}`
+      if(seconds<10) seconds += `0${seconds}`
+      
+      clock.children[0].innerHTML = hours
+      clock.children[1].innerHTML = minutes
+      clock.children[2].innerHTML = seconds
     }
 
-    createCalender(calender, 2025, 1);
+    function clockStart(){
+      if(!timerId){
+        timerId = setInterval(updateClock,1000)
+      }
+      updateClock();
+    }
+    function clockStop(){
+      clearInterval(timerId)
+      timerId = null;
+    }
   </script>
+
+  <input type="button" onclick="clockStart()", value="Start">
+  <input type="button" onclick="clockStop()", value="Stop">
 </body>
+</html>
