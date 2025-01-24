@@ -30,5 +30,5 @@ let range = {
 };
 
 for (let num of range) {
-  alert(num); // 1, then 2, 3, 4, 5
+  console.log(num); // 1, then 2, 3, 4, 5
 }

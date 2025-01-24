@@ -67,3 +67,36 @@ document.body.sayHi(); // Hello, I'm BODY
   alert(input.getAttribute("id")); // newId (updated)
 </script>
 ```
+
+# Experiment
+
+- Attributes – is what’s written in HTML.
+- Properties – is what’s in DOM objects.
+
+- get Attribute
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div data-widget-name="menu">Choose the genre</div>
+
+  <script>
+    /* your code */
+    let div = document.querySelector('[data-widget-name]')
+
+    alert(div.getAttributes('data-widget-name'))
+  </script>
+</body>
+</html>
+```
+
+- Make External link orange
+```js
+let a = document.queryselectorAll('a')
+for(let link of a){
+  let href = a.getAttribute('href')
+  if(href.includes("://")) continue;
+  if(href.startsWith('http://internal.com')) continue;
+  link.style.color = 'orange';
+}

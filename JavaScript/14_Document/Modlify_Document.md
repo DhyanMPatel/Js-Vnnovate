@@ -78,3 +78,51 @@
   setTimeout(() => document.write("<b>...By this.</b>"), 1000);
 </script>
 ```
+
+# Experiment
+- Remove all chaild nodes of Element that we touch
+```js
+for(let i = 0;i<elem.childNodes.length;i++){
+  elem.childNodes[i].remove();
+}
+```
+
+- create Dynamic List.
+```js
+let ul = document.createElement('ul')
+document.body.append(ul)
+
+while(true){
+  let data = prompt("Enter data","");
+
+  if(!data){
+    break;
+  } else {
+    let li = document.createElement('li')
+    li.textContent = data
+    ul.appendChild(li)
+  }
+}
+```
+
+- 
+```js
+let data = {
+      "Fish": {
+        "trout": {},
+        "salmon": {}
+      },
+
+      "Tree": {
+        "Huge": {
+          "sequoia": {},
+          "oak": {}
+        },
+        "Flowering": {
+          "apple tree": {},
+          "magnolia": {}
+        }
+      }
+    };
+
+```

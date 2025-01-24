@@ -18,9 +18,12 @@
   - `elem.nodeType == 1` for element nodes,
   - `elem.nodeType == 3` for text nodes,
   - `elem.nodeType == 9` for the document object,
+  - `elem.nodetype == 8` for comment nodes
   - and many more...
+  - there are max 12 type of nodeType values
 - Difference between `elem.nodeName` and `elem.tagName`
-
+  - `nodeName` represent nodes which can be Element, text, comment.
+  - `tagName` represent only Elements
   ```html
   <body>
     <!-- comment -->
@@ -71,6 +74,13 @@
     alert(div.outerHTML); // <div id="elem">Hello <b>World</b></div> (**)
   </script>
   ```
+
+# nodeValue/data: text node content
+
+- the `innerHTML` property is limited to elements.
+- but there is more nodes, to get their values we use `nodeValue`/`data`.
+
+
 
 - The `textContent` provides access to the text inside the element: only text, minus all `<tags>`.
 

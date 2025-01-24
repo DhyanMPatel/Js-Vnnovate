@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <body>
     <ul>
@@ -55,4 +55,36 @@
       }
     </script>
   </body>
-</html>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+  <div data-widget-name="menu">Choose the genre</div>
+
+  <script>
+    /* your code */
+    let div = document.querySelector('[data-widget-name]')
+
+    alert(div.dataset.widgetName)
+    alert(div.getAttribute("data-widget-name"))
+  </script>
+</body>
+</html> -->
+
+
+<div id="elem">Hello <b>World</b></div>
+
+  <script>
+    alert(elem.outerHTML); // <div id="elem">Hello <b>World</b></div>
+
+    let div = document.querySelector("div");
+
+    // replace div.outerHTML with <p>...</p>
+    div.outerHTML = "<p>A new element</p>"; // (*)
+
+    // Wow! 'div' is still the same!
+    alert(div.outerHTML); // <div id="elem">Hello <b>World</b></div> (**)
+  </script>
