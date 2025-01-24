@@ -8,36 +8,37 @@ Today Learning:
 3. Learn more about Form and their controls
 
 Work done:
-Date: 23 Jan 2025
-Day: Thursday
+Date: 24 Jan 2025
+Day: Friday
 
 Today, I am working on below list of task:
 
-1. Searching Methods learn, inside this i learn about
-   - like getElementById, getElementsByTagname, getElementsByName, getElementsByClassName
-   - querySelector & querySelectorAll
-   - elem.closest(css)
-   - elem.Matches(css)
-   - elem.contains(elem2)
-2. Node Properties
-   - nodeType, nodeName & tagName
-   - innerHTML & outerHTML
-   - node value/data
-   - textContent
-   - hidden property
-   - other properties like value, type, href, id
-3. Attributes & Properties
-   - dom Properties which is inside DOM Object
-   - HTML Attributes which is written in HTML
-   - learn Attributes methods like hasAttribute, getAttribute, setAttribute, removeAttribute
-   - Non-standard Attributes, dataset
-4. Modify the Document
-   - create Element/textNode using createElement() and createTextNode()
-   - insertion method like append(), prepend(), before(), after(), replaceWith()
-   - insertAdjecentHTML/Text/Element another method to create Element/Text
-   - Remove node using remove()
-   - clone node using clonNode()
-   - DocumentFragment() to cretate wrapper of list
-   - also there  are another olb method like appendChild(), insterBefore(), replaceChild(), removeChild() 
+1. Searching Methods - Done
 
+   - From this topic i learn different Searching Methods like getElementById, getElementsByTagname, getElementsByName, getElementsByClassName, querySelector & querySelectorAll
+   - Also learn about closest(), Metches(), contains()
 
+2. Node Properties - Done
+
+   - From this topic i learn properties like nodeType, nodeName, TagName, innerHTML, outerHTML, textContent, nodeValue/data and other properties like value, type, href, id.
+
+3. Attributes & Properties - Done
+
+   - From this topic i learn what is property/attribute.
+   - Methods like hsaAttribute, getAttribute, setAttribute, removeAttribute also know about Non-standard Attributes and dataset
+
+4. Modify the Document - Done
+
+   - From this topic i learn about Modification of Document like create element, insert methods, remove method, clone method.
+   - Also learn Wrapper such as DocumentFragment()
+   - there are another olb method like appendChild(), insterBefore(), replaceChild(), removeChild()
+
+5. Style and Classes - Done
+
+   - From this topic i learn about class property like className for create class attribute and Classlist to add/remove/toggle class values.
+   - Style property is use for change style of element. and learn getcomputedstyle() property to get values of perticular style.
+
+6. Element Size and Scrolling - Done
+
+   - From this topic i learn about how to get content size when it has padding/border or not. using offsetWidth, offsetHeight, clientWidth, clientHeight
+   - also i learn about scrollwidth/Height.

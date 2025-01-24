@@ -3,105 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ClassName</title>
+    <title>Element Size and Scrolling</title>
     <style>
-      .list {
-        background-color: blanchedalmond;
-        padding: 10px;
+      #example {
+        border: 2px solid black;
       }
     </style>
   </head>
-  <body class="Body">
-    <div class="list">Div</div>
+  <body>
+    <main style="position: relative" id="main">
+      ///
+      <article>
+        <div id="example" style="position: absolute; left: 180px; top: 180px">
+          ...
+        </div>
+      </article>
+    </main>
     <script>
-      // ClassName
-      let body = document.body;
-      console.log(body.className); // Return - Body
+      console.log(example.offsetParent.id); // main
+      console.log(example.offsetLeft); // 180 (note: a number, not a string "180px")
+      console.log(example.offsetTop); // 180
+      console.log(example.offsetWidth); // 16, means 12+2+2
+      console.log(example.offsetHeight); // 22, means 18+2+2
 
-      // ClassList
-      body.classList.add("List");
-      console.log(body.className); // Return - Body List
+      console.log(example.clientTop); // 2
+      console.log(example.clientLeft); // 2
 
-      for (let name of body.classList) {
-        console.log(`name: ${name}`);
-      }
+      console.log(example.clientWidth); // 12
+      console.log(example.clientHeight); // 18
 
-      // getComputedStyle()
-      let list = document.getElementsByClassName("list")[0];
-      let computeStyle = getComputedStyle(list);
-
-      console.log(list.style.padding); // Empty
-
-      console.log(computeStyle.padding); // Return - 10px
-
-      /// Resetting Property
-      document.body.style.backgroundColor = "red"; //set background to red
-
-      setTimeout(
-        () => document.body.style.removeProperty("background-color"),
-        1000
-      );
+      console.log(example.scrollWidth); // 12
+      console.log(example.scrollHeight); // 18
     </script>
   </body>
 </html> -->
 
-<!-- Experiment -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <style>
-      .welcome {
-        position: fixed;
-        background-color: red;
-        color: wheat;
-        padding: 10px;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment</title>
   </head>
+  <body></body>
+  <script>
+    let div = document.createElement("div");
 
-  <body>
-    <h2>Notification is on the right</h2>
+    div.style.overflowY = "scroll";
+    div.style.width = "50px";
+    div.style.height = "50px";
+    document.body.append(div);
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
-      aspernatur quam ex eaque inventore quod voluptatem adipisci omnis nemo
-      nulla fugit iste numquam ducimus cumque minima porro ea quidem maxime
-      necessitatibus beatae labore soluta voluptatum magnam consequatur sit
-      laboriosam velit excepturi laborum sequi eos placeat et quia deleniti?
-      Corrupti velit impedit autem et obcaecati fuga debitis nemo ratione iste
-      veniam amet dicta hic ipsam unde cupiditate incidunt aut iure ipsum
-      officiis soluta temporibus. Tempore dicta ullam delectus numquam
-      consectetur quisquam explicabo culpa excepturi placeat quo sequi molestias
-      reprehenderit hic at nemo cumque voluptates quidem repellendus maiores
-      unde earum molestiae ad.
-    </p>
+    let scrollwidth = div.offsetWidth - div.clientWidth;
+    div.remove();
+    console.log(scrollwidth); // 15
 
-    <script>
-      function showNotification({ top = 0, right = 0, className, html }) {
-        let notification = document.createElement("div");
-        notification.className = className;
-
-        notification.innerHTML = `${html}`;
-        notification.style.top = `${top}px`;
-        notification.style.right = `${right}px`;
-
-        document.body.append(notification);
-
-        setTimeout(() => {
-          notification.remove();
-        }, 1500);
-      }
-
-      // test it
-      let i = 1;
-      setInterval(() => {
-        showNotification({
-          top: 10,
-          right: 10,
-          html: "Hello " + i++,
-          className: "welcome",
-        });
-      }, 2000);
-    </script>
-  </body>
+    ball.style.left = Math.round(field.clientWidth / 2) + "px";
+    ball.style.top = Math.round(field.clientheight / 2) + "px";
+  </script>
 </html>
