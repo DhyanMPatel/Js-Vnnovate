@@ -3,6 +3,7 @@
 # DOM Properties
 
 - DOM nodes are regular JavaScript objects
+- DOM properties are not always strings. For instance, the `input.checked` property (for checkboxes) is a boolean.
 
 ```js
 document.body.myData = {
@@ -33,6 +34,7 @@ document.body.sayHi(); // Hello, I'm BODY
 
 # HTML Attributes
 
+- `standard attribute` for one element can be unknown for another one. For instance, "type" is standard for `<input>`, but not for `<body>`.
 - All attributes are accessible by using the following methods:
 
   - `elem.hasAttribute(name)` – checks for existence.
@@ -65,6 +67,40 @@ document.body.sayHi(); // Hello, I'm BODY
   // property => attribute
   input.id = "newId";
   alert(input.getAttribute("id")); // newId (updated)
+</script>
+```
+
+## Non-standard attributes, dataset
+- Sometimes non-standard attributes are used to pass custom data from HTML to JavaScript, or to “mark” HTML-elements for JavaScript
+
+```html
+<!-- mark the div to show "name" here -->
+<div show-info="name"></div>
+<!-- and age here -->
+<div show-info="age"></div>
+
+<script>
+  // the code finds an element with the mark and shows what's requested
+  let user = {
+    name: "Pete",
+    age: 25
+  };
+
+  for(let div of document.querySelectorAll('[show-info]')) {
+    // insert the corresponding info into the field
+    let field = div.getAttribute('show-info');
+    div.innerHTML = user[field]; // first Pete into "name", then 25 into "age"
+  }
+</script>
+```
+
+- All attributes starting with “data-” are reserved for programmers’ use. They are available in the `dataset` property.
+- for instance, if an `elem` has an attribute named "data-about", it’s available as `elem.dataset.about`.
+
+```html
+<body data-about="Elephants">
+<script>
+  alert(document.body.dataset.about); // Elephants
 </script>
 ```
 

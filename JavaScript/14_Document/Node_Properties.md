@@ -39,6 +39,7 @@
     </script>
   </body>
   ```
+# innerHTML, outerHTML
 
 - The `innerHTML` property allows to get the HTML inside the element as a string. We can also modify it.
 
@@ -80,12 +81,38 @@
 - the `innerHTML` property is limited to elements.
 - but there is more nodes, to get their values we use `nodeValue`/`data`.
 
+```html
+<body>
+  Hello
+  <!-- Comment -->
+  <script>
+    let text = document.body.firstChild;
+    alert(text.data); // Hello
 
+    let comment = text.nextSibling;
+    alert(comment.data); // Comment
+  </script>
+</body>
+```
 
+## text-content: pure text
 - The `textContent` provides access to the text inside the element: only text, minus all `<tags>`.
 
   - Writing to textContent is much more useful, because it allows to write text the “safe way”.
 
+    ```html
+    <div id="news">
+      <h1>Headline!</h1>
+      <p>Martians attack people!</p>
+    </div>
+
+    <script>
+      // Headline! Martians attack people!
+      alert(news.textContent);
+    </script>
+    ```
+
+- `textContent` take all values as text, so bellow prompt value is also take as a text but `innerHTML` identify that `<b>` tag and bold it.
     ```html
     <div id="elem1"></div>
     <div id="elem2"></div>
@@ -98,8 +125,35 @@
     </script>
     ```
 
+## Hidden
+
 - The “hidden” attribute and the DOM property specifies whether the element is visible or not.
   - `hidden` works the same as `style="display:none"`. But it’s shorter to write.
+
+  ```html
+  <div>Both divs below are hidden</div>
+
+  <div hidden>With the attribute "hidden"</div>
+
+  <div id="elem">JavaScript assigned the property "hidden"</div>
+
+  <script>
+    elem.hidden = true;
+  </script>
+  ```
+
+# More Properties
+
+- DOM Object support more properties like `value`, `id`, `type`.
+  ```html
+  <input type="text" id="elem" value="value">
+
+  <script>
+    alert(elem.type); // "text"
+    alert(elem.id); // "elem"
+    alert(elem.value); // value
+  </script>
+  ```
 
 # Experiment
 

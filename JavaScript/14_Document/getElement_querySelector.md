@@ -14,6 +14,8 @@
 
     // make its background red
     elem.style.background = "red";
+
+    elem-content.innerHTML = "This is direct Access"
   </script>
   ```
 
@@ -21,6 +23,7 @@
 
 - `elem.querySelectorAll(css)` returns all elements inside `elem` matching the given CSS selector
 - Can use pseudo-classes as well
+- `querySelectorAll()` return static Collection.
 
   ```html
   <ul>
@@ -45,6 +48,8 @@
 - `elem.querySelector(css)` returns the first element for the given CSS selector.
 - It’s faster and also shorter to write
 
+# Matches
+- `elem.matches(css)` returns true if the element matches the given CSS selector
   ```html
   <a href="http://example.com/file.zip">...</a>
   <a href="http://ya.ru">...</a>
@@ -82,10 +87,11 @@
 </script>
 ```
 
-# getElementsBy
+# getElementsBy*
 
 - Don’t forget the "s" letter! except `getElementById()`
 - It returns a collection, not an element!
+- it return live collection
 
 ```js
 // doesn't work
