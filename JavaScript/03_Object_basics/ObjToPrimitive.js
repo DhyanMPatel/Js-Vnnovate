@@ -20,12 +20,13 @@ let user = {
 
   // or
 
-  [Symbol.toPrimitive](hint) {
-    console.log(`hint: ${hint}`);
+  // [Symbol.toPrimitive](hint) {
+  //   console.log(`hint: ${hint}`);
 
-    return hint == "string" ? `{name: "${this.name}"}` : this.num;
-  },
+  //   return hint == "string" ? `{name: "${this.name}"}` : this.num;
+  // },
 };
 
-console.log(user); // Return - Vnnovate
-console.log(+user); // Return - 1312
+// Required to pass inside String()/Number(), because console.log() unable to trigger [Symbol.toPrimitive] and toString()/ValueOf(). 
+console.log(String(user)); // Return - Vnnovate
+console.log(Number(user)); // Return - 1312

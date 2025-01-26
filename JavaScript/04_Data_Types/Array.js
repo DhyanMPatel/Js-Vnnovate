@@ -85,7 +85,7 @@ console.log(uniqueArr);
 /// Experiment
 console.log(0 == []); // Return true,  0==[] -> 0=="" -> 0==0
 
-// sum input numbers
+//  1) sum input numbers
 //      - Asks the user for values using prompt and stores the values in the array.
 //      - Finishes asking when the user enters a non-numeric value, an empty string, or presses “Cancel”.
 //      - Calculates and returns the sum of array items.
@@ -107,3 +107,26 @@ function sumInput() {
 
 console.log(sumInput());
 */
+
+//  2) get Max subSum()
+let arr = [2,-3,1,2]
+let max = 0
+
+/// Burst Solution O(n^2)
+for (let i = 0; i<arr.length;i++){
+  let sum = 0
+  for(let j=i;j<arr.length;j++){
+    sum += arr[j];
+    max = Math.max(sum,max)
+  }
+}
+
+/// Better Solution O(n)
+let sum = 0
+for(let elem of arr){
+  sum +=elem
+  max = Math.max(sum,max)
+  if(sum<0) sum=0
+}
+
+console.log(max)

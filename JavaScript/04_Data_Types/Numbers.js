@@ -53,7 +53,7 @@ console.log(0.1 + 0.2 === 0.3); /// false, can fixed using num.toFixed() Method
 console.log((0.1 + 0.2).toFixed(2) === (0.3).toFixed(2)); // true
 
 // Hello! I'm a self-increasing number!
-alert(9999999999999999); // shows 10000000000000000
+alert(9_999_999_999_999_999); // shows 10000000000000000
 */
 
 /*

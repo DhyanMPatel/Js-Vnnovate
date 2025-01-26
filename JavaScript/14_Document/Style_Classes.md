@@ -20,7 +20,7 @@
 - use to perform CSS operation using JS
 
 ```js
-document.body.style.backgroundColor = "red";
+document.body.style.backgroundColor = prompt('background color?', 'green');
 ```
 
 - `style.removeProperty('name of Property')` - use to remove perticuler CSS.

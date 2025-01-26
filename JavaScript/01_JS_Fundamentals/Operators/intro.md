@@ -15,3 +15,7 @@
     - Nullish Operator (??)
 - Delete Operator (delete)  - if want to delete any Obj properties
 - void Operator (void)  - return undefined
+
+### Note
+- Unary operator precedence is higher then Binary Operator
+- Increment/decrement can only be applied to variables. Trying to use it on a value like `5++` will give an error.

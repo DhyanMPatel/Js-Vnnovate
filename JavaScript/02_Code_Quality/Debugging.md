@@ -30,10 +30,10 @@
 
 ## Tracing the Execution
 - to Trac any process there are a many buttons
-    1. “Resume”: continue the execution, hotkey F8
-    2. “Step”: run the next command, hotkey F9
-    3. “Step over”: run the next command, but don’t go into a function, hotkey F10
-    4. “Step into”, hotkey F11
-    5. “Step out”: continue the execution till the end of the current function, hotkey `Shift+F11`
+    1. `Resume`: continue the execution, hotkey `F8`
+    2. `Step`: run the next command, hotkey `F9`
+    3. `Step over`: run the next command, but don’t go into a function, hotkey `F10`
+    4. `Step into`, hotkey `F11`
+    5. `Step out`: continue the execution till the end of the current function, hotkey `Shift+F11`
     6. enable/disable all breakpoints.
     7. enable/disable automatic pause in case of an error.

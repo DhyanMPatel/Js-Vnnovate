@@ -52,23 +52,42 @@ for (let entry of set.entries()) {
 }
 */
 
+
+
 /// Experiment
+
+/*
+///       1) Filter unique array Member
+function unique(arr) {
+  return Array.from(new Set(arr))
+}
+
+let values = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+console.log( unique(values) );
+*/
+
+/*
+///     2) Filter anagram
 // Anagrams = words that have a same number of same letter, but in different order.
 //  - step-> convert all words to letter then sort all letters then join and make word again
-
 function cleanAnagrams(arr) {
   let map = new Map();
-  for (let word of arr) {
-    let sorting = word.toLowerCase().split("").sort().join("");
-    map.set(sorting, word);
+  for(let word of arr){
+    let sorted = word.toLowerCase().split('').sort().join('');
+    map.set(sorted,word);
   }
   console.log(map);
 }
 let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
 cleanAnagrams(arr);
+*/
 
 /*
+///   3) Iterable Keys
 /// map keys are iterable but not an Array
+
 let map = new Map();
 map.set("name", "john");
 let keys = Array.from(map.keys());

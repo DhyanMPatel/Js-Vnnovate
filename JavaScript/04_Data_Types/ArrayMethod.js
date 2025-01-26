@@ -1,7 +1,7 @@
 // Array Methods
 //  - push(...items), pop(), unshift(...items), shift()
 
-let arr = [1, 2, 5, 6, 7, 8, 9, 10];
+// let arr = [1, 2, 5, 6, 7, 8, 9, 10];
 
 /*
 /// Array.isArray()
@@ -161,10 +161,12 @@ let splitedArr = names.split(", "); // Convert String to Arr
 let glueStr = splitedArr.join(", "); // Convert Arr to String
 */
 
+/*
+
 /// Reduce/ReduceRight
 //    - when we need to iterate and return the data for each element - we use `Map`
 //    - Same as Map but with some difference is that they are used to calculate a single value based on array
-//    - Syntax -> arr.reduce(function(accumulator, item, index, arr){/* some code */},[initial])
+//    - Syntax -> arr.reduce(function(accumulator, item, index, arr){ some code },[initial])
 //      - accu initially is initial value then return value is stored in accumulator.
 //    - ReduceRight also do same but goes from right to left
 
@@ -182,3 +184,256 @@ const result = RR.reduceRight((addition, ele) => {
   return addition.concat(ele);
 });
 console.log(result);
+
+*/
+
+/// Experiment
+
+
+//    1) Convert into camelCase formate
+// console.log(camelize("background-color")) // Return - backgroundColor
+
+function camelize(word) {
+  /*
+  /// Burst Solution
+  let result = word.split('-')
+  for(let i=1;i<result.length;i++){
+    result[i] = result[i].charAt(0).toUpperCase() + result[i].slice(1)
+  }
+  return result.join('')
+  */
+
+  /*
+  /// Better Solution
+  return word
+    .split('-')
+    .map((word, index) => {
+      return (index == 0)? word: word[0].toUpperCase() + word.slice(1)
+    })
+    .join('');
+  */
+}
+
+/*
+//    2) Filter Range
+arr = [5, 3, 8, 1]
+console.log(filterRange(arr, 1, 4)); // Return - [3,1]
+
+function filterRange(arr, min, max) {
+  let result = arr.filter(item => (item >= min && item <= max))
+  return result
+}
+*/
+
+/*
+//    3) Remove numbers acept min to max
+arr = [5,3,8,1]
+filterRangeInPlace(arr, 1, 4)
+console.log(arr); 
+
+function filterRangeInPlace(arr, min, max){
+  for(let i=0; i<arr.length; i++){
+    val = arr[i]
+    if(val<min || val>max){
+      arr.splice(i,1)
+      i--;
+    }
+  }
+}
+*/
+
+/*
+//    4) Sort in Reverse Order
+arr = [5, 2, 1, -10, 15, 8];
+
+arr.sort((a, b) => b - a) // if b>a means b before a , b<a means a before b , b==a means unchanged order 
+
+console.log(arr)
+*/
+
+/*
+//    5) Copy and sort Array
+arr = ["HTML","html", "JavaScript", "CSS","css"];
+
+function copySorted(arr){
+  return arr.slice().sort((a,b) => a.localeCompare(b))
+  //   or 
+  // return [...arr].sort((a,b) => a.localeCompare(b))
+}
+let sortedArr = copySorted(arr)
+console.log(sortedArr)
+*/
+
+/*
+//    6) Create Extendable Calculator
+function Calculator() {
+
+  this.methods = {
+    "-": (a, b) => a - b
+  }
+
+  this.calculate = function(str) {
+    let spliter = str.split(" ")
+    let a = spliter[0]
+    let op = spliter[1]
+    let b = spliter[2]
+
+    if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+      return "Invalide Input"
+    }
+
+    return this.methods[op](a,b)
+  }
+
+
+  this.addMethod = (op, func) =>{
+    this.methods[op] = func
+  }
+}
+
+let powerCalc = new Calculator;
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 ** 3");
+console.log( result ); // 8
+*/
+
+/*
+///   7) Map to Names (Array)
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [ john, pete, mary ];
+
+let names = users.map(item => item.name)
+
+console.log( names ); // John, Pete, Mary
+*/
+
+/*
+///   8) Map to Object 
+let john = { name: "John", surname: "Smith", id: 1 };
+let pete = { name: "Pete", surname: "Hunt", id: 2 };
+let mary = { name: "Mary", surname: "Key", id: 3 };
+
+let users = [ john, pete, mary ];
+
+let usersMapped = users.map(user =>({
+  fullName: `${user.name} ${user.surname}`,
+  id: user.id
+}))
+
+console.log(usersMapped)
+*/
+
+/*
+///   9) sort users by age
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let arr1 = [pete, john, mary];
+
+sortByAge(arr1);
+
+function sortByAge() {
+  return arr1.sort((a, b) => a.age - b.age);
+}
+
+// now: [john, mary, pete]
+console.log(arr1[0].name); // John
+console.log(arr1[1].name); // Mary
+console.log(arr1[2].name); // Pete
+*/
+
+/*
+//  10) Shuffle an Array 
+shuffle(arr); // arr = [3, 2, 1]
+console.log(arr)
+
+shuffle(arr); // arr = [2, 1, 3]
+console.log(arr)
+
+shuffle(arr); // arr = [3, 1, 2]
+console.log(arr)
+
+function shuffle(arr) {
+  /// not much solution
+  arr.sort(() => Math.random() - 0.5);
+
+  /// Better and same probebility of each case. (Fisher-Yates Shuffle Algorithm)
+  for (let i = arr.length - 1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[j], arr[i]] = [arr[i], arr[j]]
+  } 
+}
+*/
+
+/*
+// 11) Get Average Age
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+
+let arr = [ john, pete, mary ];
+
+console.log( getAverageAge(arr) );
+
+function getAverageAge(arr){
+
+  /// Burst Solution
+  let n = arr.length
+  let avg = 0;
+
+  arr.map((item) => {
+    avg += item.age;
+  })
+
+  return avg/n;
+
+  /// Better Solution
+  // return arr.reduce((acc, item)=> acc+item.age ,0) / arr.length
+}
+*/
+
+/*
+///   12) Create Unique Array
+function unique(arr) {
+  let result = [];
+  for(let item of arr){
+    if(!result.includes(item)){
+      result.push(item)
+    }
+  }
+  return result;
+}
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+console.log( unique(strings) ); // Hare, Krishna, :-O
+*/
+
+/*
+///   13) Create keyed object from array
+let users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+let usersById = groupById(users);
+console.log(usersById);
+
+function groupById(arr){
+  return arr.reduce((obj,val)=>{
+    obj[val.id] = val;
+    return obj
+  },{})
+}
+*/

@@ -5,6 +5,7 @@
 //      - Symbols don’t auto-convert to a string
 //      - Symbol properties are skipped by for...in & Object.keys() loop in Object
 //      - Symbol Properties are work as "Hidden" properties, but Object.assign({},source) copy both String and Symbol properties.
+//      - Also there is Built-in method `Object.getOwnPropertySymbols(obj)` to get Symbolic values. 
 
 /// MEthods
 //    - Symbol() for create Symbol
