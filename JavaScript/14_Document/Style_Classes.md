@@ -3,9 +3,6 @@
 - the `elem.className` corresponds to the "class" attribute.
 - `elem.className`, it replaces the whole string of classes. Sometimes that’s what we need, but often we want to add/remove a single class.
 
-```html
-
-```
 
 ## classList
 
@@ -23,11 +20,6 @@
 document.body.style.backgroundColor = prompt('background color?', 'green');
 ```
 
-- `style.removeProperty('name of Property')` - use to remove perticuler CSS.
-
-```js
-document.body.style.removeProperty("backgroundColor");
-```
 
 ## getcomputedStyle (element, [pseudo])
 
@@ -44,11 +36,12 @@ console.log(computeStyle.padding); // Return - 10px
 
 ## Resetting Properties
 
+- `style.removeProperty('name of Property')` - use to remove perticuler CSS.
 - also we can remove any perticular element style using removeProperty('style Property Name')
 - there value is include only vanila CSS type values
 
-```html
-
+```js
+document.body.style.removeProperty("backgroundColor");
 ```
 
 # Experiment

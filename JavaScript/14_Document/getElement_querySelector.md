@@ -78,7 +78,7 @@
   </ul>
 </div>
 <script>
-  let chapter = document.querySelector("chapter"); // li
+  let chapter = document.querySelector(".chapter"); // li
 
   alert(chapter.closest(".book")); //  ul
   alert(chapter.closest(".contents")); //  div

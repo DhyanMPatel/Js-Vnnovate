@@ -37,7 +37,7 @@
   ```
 
 - Don’t use for..in to loop over collections
-- The parentElement property returns the “element” parent, while parentNode returns “any node” parent
+- The `parentElement` property returns the “element” parent, while `parentNode` returns “any node” parent
 
   ```js
   alert(document.body.parentNode); // document

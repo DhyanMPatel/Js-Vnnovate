@@ -34,12 +34,12 @@
 
 - They provide the “outer” width/height of the element. Or, in other words, its full size including borders.
 - Example:
-  - `offsetWidth = 390` – the outer width, can be calculated as inner CSS-width (300px) plus paddings (2 _ 20px) and borders (2 _ 25px).
+  - `offsetWidth = 390` – the outer width, can be calculated as inner CSS-width (300px) plus paddings (2 x 20px) and borders (2 x 25px).
   - `offsetHeight = 290` – the outer height.
 
 ## clientTop/left
 
-- return width of top/left botder acoording to clientTop/Left
+- return width of top/left border acoording to clientTop/Left
 
 ## clientWidth/Height
 
