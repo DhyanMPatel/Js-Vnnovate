@@ -3,7 +3,6 @@
 - the `elem.className` corresponds to the "class" attribute.
 - `elem.className`, it replaces the whole string of classes. Sometimes that’s what we need, but often we want to add/remove a single class.
 
-
 ## classList
 
 - The `elem.classList` is a special object with methods to `add/remove/toggle` a single class.
@@ -15,11 +14,12 @@
 ## Element Style
 
 - use to perform CSS operation using JS
+- also we can use `style.cssText` to write css like:
 
 ```js
-document.body.style.backgroundColor = prompt('background color?', 'green');
+document.body.style.backgroundColor = prompt("background color?", "green");
+document.body.style.cssText = "backgroundColor: green";
 ```
-
 
 ## getcomputedStyle (element, [pseudo])
 

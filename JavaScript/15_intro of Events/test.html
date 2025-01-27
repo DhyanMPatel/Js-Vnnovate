@@ -1,71 +1,90 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Element Size and Scrolling</title>
-    <style>
-      #example {
-        border: 2px solid black;
-      }
-    </style>
+    <title>Documents</title>
   </head>
   <body>
-    <main style="position: relative" id="main">
-      ///
-      <article>
-        <div id="example" style="position: absolute; left: 180px; top: 180px">
-          ...
-        </div>
-      </article>
-    </main>
+    <div width="200px" height="200px" id="div">Hii</div>
+
+    <button id="coords-show-mark" onclick="createMessageUnder">
+      Button with id=“coords-show-mark”, the message will appear under it
+    </button>
+
     <script>
-      console.log(example.offsetParent.id); // main
-      console.log(example.offsetLeft); // 180 (note: a number, not a string "180px")
-      console.log(example.offsetTop); // 180
-      console.log(example.offsetWidth); // 16, means 12+2+2
-      console.log(example.offsetHeight); // 22, means 18+2+2
+      console.log(document.documentElement.clientWidth); // Return - 1366
+      console.log(document.documentElement.scrollWidth); // Return - 1366
 
-      console.log(example.clientTop); // 2
-      console.log(example.clientLeft); // 2
+      console.log("Current scroll from the top: " + window.pageYOffset); // Return - 0
+      console.log("Current scroll from the left: " + window.pageXOffset); // Return - 0
 
-      console.log(example.clientWidth); // 12
-      console.log(example.clientHeight); // 18
+      //  OR
 
-      console.log(example.scrollWidth); // 12
-      console.log(example.scrollHeight); // 18
+      console.log("window.scrollY: " + window.scrollY); // Return - 0
+      console.log("window.scrollX: " + window.scrollX); // Return - 0
+
+      /*
+      let centerX = document.documentElement.clientwidth / 2;
+      let centerY = document.documentElement.clientHeight / 2;
+
+      let elem = document.elementFromPoint(centerX, centerY);
+      alert(elem.tagName);
+      */
+
+      /*
+      /// use 'Fixed' position
+      let elem = document.getElementById("coords-show-mark");
+
+      function createMessageUnder(elem, html) {
+        // create message element
+        let message = document.createElement("div");
+        // better to use a css class for the style here
+        message.style.cssText =
+          "position:fixed; background-color: red; color: white; padding: 10px";
+
+        // assign coordinates, don't forget "px"!
+        let coords = elem.getBoundingClientRect();
+
+        message.style.left = coords.left + 100 + "px";
+        message.style.top = coords.bottom + 100 + "px";
+
+        message.innerHTML = html;
+
+        return message;
+      }
+
+      //    Usage:
+      //    add it for 5 seconds in the document
+      let message = createMessageUnder(elem, "Hello, world!");
+      document.body.append(message);
+      setTimeout(() => message.remove(), 5000);
+      */
+
+      /// Document Coordinates
+      function getCoords(elem) {
+        let box = elem.getBoundingClientRect();
+        return {
+          top: box.top + window.pageYOffset,
+          left: box.left + window.pageXOffset,
+          bottom: box.bottom + window.pageYOffset,
+          right: box.right + window.pageYOffset,
+        };
+      }
+
+      function createMessageUnder(elem, html) {
+        let message = document.createElement("div");
+        message.style.cssText = "position:absolute; color: red";
+
+        let coords = getCoords(elem);
+
+        message.style.left = coords.left + "px";
+        message.style.top = coords.bottom + "px";
+
+        message.innerHTML = html;
+
+        return message;
+      }
     </script>
   </body>
-</html> -->
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experiment</title>
-  </head>
-  <body></body>
-  <script>
-    let div = document.createElement("div");
-
-    div.style.overflowY = "scroll";
-    div.style.width = "50px";
-    div.style.height = "50px";
-    document.body.append(div);
-
-    let scrollwidth = div.offsetWidth - div.clientWidth;
-    div.remove();
-    console.log(scrollwidth); // 15
-
-    ball.style.left = Math.round(field.clientWidth / 2) + "px";
-    ball.style.top = Math.round(field.clientheight / 2) + "px";
-  </script>
-</html> -->
-
-<body something="non-standard"> Hello 
-  <script>
-    alert(document.body.getAttribute("something")); // non-standard
-    alert(document.querySelector("[something]"));
-  </script>
-</body>
+</html>
