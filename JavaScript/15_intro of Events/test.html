@@ -1,67 +1,277 @@
-<!DOCTYPE html>
-<html>
+<!-- Example of use of Event Delegation -->
+<!-- <!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Deligation</title>
+  </head>
+  <body>
+    <div id="form">
+      <input type="text" id="name" data-uppercase />
+      <input type="text" id="pan" />
+      <input type="text" id="mobile" deta-uppercase />
+    </div>
+    <script>
+      document.querySelector("#form").addEventListener("keyup", function (e) {
+        if (e.target.dataset.uppercase != undefined) {
+          e.target.value = e.target.value.toUpperCase();
+        }
+      });
+    </script>
+  </body>
+</html> -->
+
+<!--  print Action when we click on any button -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Deligation with Class</title>
+  </head>
+  <body>
+    <div id="menu">
+      <button data-action="save">Save</button>
+      <button data-action="load">Load</button>
+      <button data-action="search">Search</button>
+    </div>
+    <script>
+      class Menu {
+        constructor(elem) {
+          this.elem = elem;
+          elem.onclick = this.onClick.bind(this);
+        }
+        onClick(event) {
+          let action = event.target.dataset.action;
+          if (action) {
+            this[action]();
+          }
+        }
+        save() {
+          console.log(`Saving...`);
+        }
+        load() {
+          console.log(`Loading...`);
+        }
+        search() {
+          console.log(`Searching...`);
+        }
+      }
+      new Menu(menu);
+    </script>
+  </body>
+</html> -->
+
+<!--  Experiments -->
+
+<!--    1) Hide text with delegation -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 1</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="pane">
+        <h3>Horse</h3>
+        <p>
+          The horse is one of two extant subspecies of Equus ferus. It is an
+          odd-toed ungulate mammal belonging to the taxonomic family Equidae.
+        </p>
+        <button class="remove-button">[x]</button>
+      </div>
+      <div class="pane">
+        <h3>Donkey</h3>
+        <p>
+          The donkey or ass (Equus africanus asinus) is a domesticated member of
+          the horse family, Equidae.
+        </p>
+        <button class="remove-button">[x]</button>
+      </div>
+      <div class="pane">
+        <h3>Cat</h3>
+        <p>
+          The domestic cat (Latin: Felis catus) is a small, typically furry,
+          carnivorous mammal. They are often called house cats when kept as
+          indoor pets or simply cats when there is no need to distinguish
+        </p>
+        <button class="remove-button">[x]</button>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("click", function (e) {
+        if (e.target.className != "remove-button") return;
+
+        let pane = e.target.closest(".pane");
+        pane.remove();
+      });
+    </script>
+  </body>
+</html> -->
+
+<!--    2) Toggle list using Delegation -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
     <style>
-      form {
-        background-color: green;
-        position: relative;
-        width: 150px;
-        height: 150px;
-        text-align: center;
+      .tree span:hover {
+        font-weight: bold;
+      }
+
+      .tree span {
         cursor: pointer;
       }
-
-      div {
-        background-color: blue;
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        width: 100px;
-        height: 100px;
-      }
-
-      p {
-        background-color: red;
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        margin: 0;
-      }
-
-      body {
-        line-height: 25px;
-        font-size: 16px;
-      }
     </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 2</title>
   </head>
-
   <body>
-    A click shows both <code>event.target</code> and <code>this</code> to
-    compare:
-
-    <form id="form">
-      FORM
-      <div>
-        DIV
-        <p>P</p>
-      </div>
-    </form>
-
+    <ul class="tree" id="tree">
+      <li>
+        Animals
+        <ul>
+          <li>
+            Mammals
+            <ul>
+              <li>Cows</li>
+              <li>Donkeys</li>
+              <li>Dogs</li>
+              <li>Tigers</li>
+            </ul>
+          </li>
+          <li>
+            Other
+            <ul>
+              <li>Snakes</li>
+              <li>Birds</li>
+              <li>Lizards</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Fishes
+        <ul>
+          <li>
+            Aquarium
+            <ul>
+              <li>Guppy</li>
+              <li>Angelfish</li>
+            </ul>
+          </li>
+          <li>
+            Sea
+            <ul>
+              <li>Sea trout</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
     <script>
-      form.onclick = function (event) {
-        event.target.style.backgroundColor = "yellow";
+      for (let li of document.getElementsByTagName("li")) {
+        let span = document.createElement("span");
+        li.prepend(span);
+        span.append(span.nextSibling);
+      }
+      tree.addEventListener("click", function (e) {
+        if (e.target.tagName != "SPAN") return;
 
-        setTimeout(() => {
-          console.log(
-            `target = ${event.target.tagName}, this = ${this.tagName}`
-          );
-          event.target.style.backgroundColor = "";
-        }, 0);
+        let childContainer = e.target.parentNode.querySelector("ul");
+
+        if (!childContainer) return;
+
+        childContainer.hidden = !childContainer.hidden;
+      });
+    </script>
+  </body>
+</html> -->
+
+<!--    3) Shortable Table -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 3</title>
+  </head>
+  <body>
+    <table id="grid">
+      <thead>
+        <tr>
+          <th data-type="number">Age</th>
+          <th data-type="string">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>5</td>
+          <td>John</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Pete</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Ann</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Eugene</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Ilya</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      grid.onclick = function (e) {
+        if (e.target.tagName != "TH") return;
+
+        let th = e.target;
+        // if TH, then sort
+        // cellIndex is the number of th:
+        //   0 for the first column
+        //   1 for the second column, etc
+        sortGrid(th.cellIndex, th.dataset.type);
       };
+
+      function sortGrid(colNum, type) {
+        let tbody = grid.querySelector("tbody");
+
+        let rowsArray = Array.from(tbody.rows);
+
+        // compare(a, b) compares two rows, need for sorting
+        let compare;
+
+        switch (type) {
+          case "number":
+            compare = function (rowA, rowB) {
+              return (
+                rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML
+              );
+            };
+            break;
+          case "string":
+            compare = function (rowA, rowB) {
+              return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML
+                ? 1
+                : -1;
+            };
+            break;
+        }
+
+        // sort
+        rowsArray.sort(compare);
+
+        tbody.append(...rowsArray);
+      }
     </script>
   </body>
 </html>

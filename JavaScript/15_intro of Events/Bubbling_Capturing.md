@@ -12,6 +12,8 @@
 
   ![Bubbling Effect](./bubbling%20Effect.png)
 
+- All `Events` are not bubbled up.
+
 ## event.target
 
 - <b>The most deeply nested element that caused the event is called a target element, accessible as</b> `event.target`.

@@ -1,3 +1,17 @@
+# Event Deligation
+
+- Capturing and bubbling allow us to implement one of the most powerful event handling patterns called event delegation.
+- [Benefits]:
+
+  - save Memory through using single handler
+  - less code
+  - DOM menipulation esily
+
+- [Limitation]:
+
+  - all events are not bubbled up like blur, focus, resizing of window, scrolling are not bubbled up.
+  - If we use `event.stopPropagation()` then we can't bubbled up any event.
+
 # Actions in markup
 
 - We can add a handler for the whole menu and `data-action` attributes for buttons that has the method to call.
@@ -9,28 +23,28 @@
   <button data-action="search">Search</button>
 </div>
 <script>
-  let Menu {
-    constructor(elem){
-        this.elem = elem
-        elem.onclick = this.onClick.bind(this)
+  class Menu {
+    constructor(elem) {
+      this.elem = elem;
+      elem.onclick = this.onClick.bind(this);
     }
-    save(){
-        alert('Saving')
+    save() {
+      alert("Saving");
     }
-    load(){
-        alert('Loading')
+    load() {
+      alert("Loading");
     }
-    search(){
-        alert('Searching')
+    search() {
+      alert("Searching");
     }
-    onClick(event){
-        let action = event.target.dataset.action;
-        if(action){
-            this[action]();
-        }
-    };
-  };
-  new Menu(menu)
+    onClick(event) {
+      let action = event.target.dataset.action;
+      if (action) {
+        this[action]();
+      }
+    }
+  }
+  new Menu(menu);
 </script>
 ```
 
