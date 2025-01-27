@@ -1,89 +1,253 @@
+<!-- <input id="elem" type="button" value="Click me" />
+
+<script>
+  /*
+  function handler1() {
+    console.log("Thanks!");
+  }
+
+  function handler2() {
+    console.log("Thanks again!");
+  }
+
+  elem.onclick = () => console.log("Hello");
+  elem.addEventListener("click", handler1); // Thanks!
+  elem.addEventListener("click", handler2); // Thanks again!
+  */
+
+  /*
+  /// Event Object
+
+  elem.onclick = function (event) {
+    console.log(event.type, event.currentTarget, event.clientX, event.clientY);
+    //  Return - click <whole input tag> 51 21
+  };
+  */
+
+  /*
+  /// handleEvent() method in Object
+  class Menu {
+    handleEvent(event) {
+      switch (event.type) {
+        case "mousedown":
+          elem.value = "Mouse button pressed";
+          break;
+        case "mousehover":
+          elem.value = "You are hovering Mouse on button";
+          break;
+        case "mouseup":
+          elem.value = "Mouse Button Released.";
+      }
+    }
+  }
+  let menu = new Menu();
+
+  elem.addEventListener("mousehover", menu);
+  elem.addEventListener("mousedown", menu);
+  elem.addEventListener("mouseup", menu);
+  */
+
+</script> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiments</title>
+  </head>
+  <body>
+    <div id="text">Text</div>
+    <input id="button" type="button" value="Click btn to hide" />
+  </body>
+  <script>
+    /*
+    ///     1) Hide text
+    document.getElementById("button").onclick = function () {
+      document.getElementById("text").hidden = true;
+    };
+    */
+
+    /*
+    ///     2) Hide it selt
+    document.addEventListener("click", function () {
+      document.getElementById("button").hidden = true;
+    });
+    */
+
+    /*
+    ///     3) addEventListener() work independently here answer is 1 -> 2
+    button.addEventListener("click", () => alert("1"));
+
+    button.removeEventListener("click", () => alert("1")); // remove the handler we need to pass exactly the function that was assigned
+
+    button.onclick = () => alert(2);
+    */
+  </script>
+</html> -->
+
+<!--  4) Move ball to clicked Coordinate.   -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 4</title>
+    <style>
+      #field {
+        height: 100px;
+        width: 300px;
+        position: relative;
+        border: 10px groove black;
+        cursor: pointer;
+        overflow: hidden;
+      }
+      #ball {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        transition: 1s all;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="field">
+      <img src="https://en.js.cx/clipart/ball.svg" alt="Ball" id="ball" />
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . . . . . . . . . .
+    </div>
+  </body>
+  <script>
+    field.onclick = function (event) {
+      let fieldCoords = this.getBoundingClientRect();
+
+      let ballCoords = {
+        top:
+          event.clientY -
+          fieldCoords.top -
+          field.clientTop -
+          ball.clientHeight / 2,
+        left:
+          event.clientX -
+          fieldCoords.left -
+          field.clientLeft -
+          ball.clientWidth / 2,
+      };
+
+      if (ballCoords.top < 0) ballCoords.top = 0;
+      if (ballCoords.left < 0) ballCoords.left = 0;
+
+      if (ballCoords.left + ball.clientWidth > field.clientWidth) {
+        ballCoords.left = field.clientWidth - ball.clientWidth;
+      }
+
+      if (ballCoords.top + ball.clientHeight > field.clientHeight) {
+        ballCoords.top = field.clientHeight - ball.clientHeight;
+      }
+
+      ball.style.top = ballCoords.top + "px";
+      ball.style.left = ballCoords.left + "px";
+    };
+  </script>
+</html> -->
+
+<!--    5) cliding Menu -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 5</title>
+
+    <style>
+      .menu ul {
+        margin: 0;
+        list-style: none;
+        padding-left: 20px;
+        display: none;
+      }
+      .menu .title {
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .menu .title::before {
+        content: "▶ ";
+        font-size: 80%;
+        color: green;
+      }
+      .menu.open .title::before {
+        content: "▼ ";
+      }
+      .menu.open ul {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sweets" class="menu">
+      <span class="title"> Click me! </span>
+      <ul>
+        <li>Cake</li>
+        <li>Donut</li>
+        <li>Honey</li>
+      </ul>
+    </div>
+    <script>
+      let menuElem = document.getElementById("sweets");
+      let titleElem = document.querySelector(".title");
+
+      titleElem.onclick = function () {
+        menuElem.classList.toggle("open");
+      };
+    </script>
+  </body>
+</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documents</title>
+    <title>Experiments</title>
   </head>
   <body>
-    <div width="200px" height="200px" id="div">Hii</div>
-
-    <button id="coords-show-mark" onclick="createMessageUnder">
-      Button with id=“coords-show-mark”, the message will appear under it
-    </button>
-
+    <div class="pane">
+      <h3>Cat 1</h3>
+      <p>
+        The domestic cat (Latin: Felis catus) is a small, typically furry,
+        carnivorous mammal. They are often called house cats when kept as indoor
+        pets or simply cats when there is no need to distinguish them from
+      </p>
+    </div>
+    <div class="pane">
+      <h3>Cat 2</h3>
+      <p>
+        The domestic cat (Latin: Felis catus) is a small, typically furry,
+        carnivorous mammal. They are often called house cats when kept as indoor
+        pets or simply cats when there is no need to distinguish them from
+      </p>
+    </div>
+    <div class="pane">
+      <h3>Cat 3</h3>
+      <p>
+        The domestic cat (Latin: Felis catus) is a small, typically furry,
+        carnivorous mammal. They are often called house cats when kept as indoor
+        pets or simply cats when there is no need to distinguish them from
+      </p>
+    </div>
     <script>
-      console.log(document.documentElement.clientWidth); // Return - 1366
-      console.log(document.documentElement.scrollWidth); // Return - 1366
+      let panes = document.querySelectorAll(".pane");
 
-      console.log("Current scroll from the top: " + window.pageYOffset); // Return - 0
-      console.log("Current scroll from the left: " + window.pageXOffset); // Return - 0
-
-      //  OR
-
-      console.log("window.scrollY: " + window.scrollY); // Return - 0
-      console.log("window.scrollX: " + window.scrollX); // Return - 0
-
-      /*
-      let centerX = document.documentElement.clientwidth / 2;
-      let centerY = document.documentElement.clientHeight / 2;
-
-      let elem = document.elementFromPoint(centerX, centerY);
-      alert(elem.tagName);
-      */
-
-      /*
-      /// use 'Fixed' position
-      let elem = document.getElementById("coords-show-mark");
-
-      function createMessageUnder(elem, html) {
-        // create message element
-        let message = document.createElement("div");
-        // better to use a css class for the style here
-        message.style.cssText =
-          "position:fixed; background-color: red; color: white; padding: 10px";
-
-        // assign coordinates, don't forget "px"!
-        let coords = elem.getBoundingClientRect();
-
-        message.style.left = coords.left + 100 + "px";
-        message.style.top = coords.bottom + 100 + "px";
-
-        message.innerHTML = html;
-
-        return message;
-      }
-
-      //    Usage:
-      //    add it for 5 seconds in the document
-      let message = createMessageUnder(elem, "Hello, world!");
-      document.body.append(message);
-      setTimeout(() => message.remove(), 5000);
-      */
-
-      /// Document Coordinates
-      function getCoords(elem) {
-        let box = elem.getBoundingClientRect();
-        return {
-          top: box.top + window.pageYOffset,
-          left: box.left + window.pageXOffset,
-          bottom: box.bottom + window.pageYOffset,
-          right: box.right + window.pageYOffset,
+      for (let pane of panes) {
+        pane.insertAdjacentHTML(
+          "afterbegin",
+          '<button class="remove-button">[x]</button>'
+        );
+        pane.firstChild.onclick = function () {
+          pane.remove();
         };
-      }
-
-      function createMessageUnder(elem, html) {
-        let message = document.createElement("div");
-        message.style.cssText = "position:absolute; color: red";
-
-        let coords = getCoords(elem);
-
-        message.style.left = coords.left + "px";
-        message.style.top = coords.bottom + "px";
-
-        message.innerHTML = html;
-
-        return message;
       }
     </script>
   </body>
