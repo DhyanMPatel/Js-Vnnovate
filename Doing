@@ -9,37 +9,41 @@ Today Learning:
 4. Learn about Events and all it's types.
 
 Work done:
-Date: 24 Jan 2025
-Day: Friday
+Date: 27 Jan 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
-1. Searching Methods - Done
+1. Window Size & Scrolling
+   - Understand clientWidth/clientHeight for window, scrollWidth/scrollHeight for document width/height.
+   - Window.pageYOffset/pageXOffset to get current scroll same as window.scrollX/scrollY.
+   - Understand scrolling like scrollTo, scrollBy, scrollIntoView.
+2. Coordinates
 
-   - From this topic i learn different Searching Methods like getElementById, getElementsByTagname, getElementsByName, getElementsByClassName, querySelector & querySelectorAll
-   - Also learn about closest(), Metches(), contains()
+   - Understand about getBoundingClientRect() for perticular Area.
+   - Understand elementFromPoint(x,y) to get elem at that coordinate.
 
-2. Node Properties - Done
+3. Intro of Browser events
 
-   - From this topic i learn properties like nodeType, nodeName, TagName, innerHTML, outerHTML, textContent, nodeValue/data and other properties like value, type, href, id.
+   - Know about different types of Browser Event like Mouse events, Keyboard events, form element events, Document events, css events.
+   - Know about addEventListener() and their arguments
+   - Know about Event Object that occurs in each event.
+   - Also we can take handler as an Object and use handleEvent() method.
 
-3. Attributes & Properties - Done
+4. Bubbling & Capturing
 
-   - From this topic i learn what is property/attribute.
-   - Methods like hsaAttribute, getAttribute, setAttribute, removeAttribute also know about Non-standard Attributes and dataset
+   - Understood the difference between Bubbling and Capturing
+   - Know about event.target Property.
+   - using event.stopPropagation() we can stop Bubbling.
 
-4. Modify the Document - Done
+5. Event Delegation
 
-   - From this topic i learn about Modification of Document like create element, insert methods, remove method, clone method.
-   - Also learn Wrapper such as DocumentFragment()
-   - there are another olb method like appendChild(), insterBefore(), replaceChild(), removeChild()
+   - through Bubbling and Capturing we can impliment Event Delegation
+   - Delegation is a process where we add event at parent element to minimize the event handler.
 
-5. Style and Classes - Done
+6. Browser Default Actions
 
-   - From this topic i learn about class property like className for create class attribute and Classlist to add/remove/toggle class values.
-   - Style property is use for change style of element. and learn getcomputedstyle() property to get values of perticular style.
+   - There are many events automatically lead like, `touchstart`, `touchmove` in Mobile, `click on submit button`, etc.
+   - There are 2 method to handle that `event.preventDefault()` and `event.defaultPrevented`.
 
-6. Element Size and Scrolling - Done
-
-   - From this topic i learn about how to get content size when it has padding/border or not. using offsetWidth, offsetHeight, clientWidth, clientHeight
-   - also i learn about scrollwidth/Height.
+7. Custom Events

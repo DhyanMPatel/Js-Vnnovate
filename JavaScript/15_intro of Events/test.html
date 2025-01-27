@@ -1,277 +1,127 @@
-<!-- Example of use of Event Delegation -->
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Event Deligation</title>
-  </head>
-  <body>
-    <div id="form">
-      <input type="text" id="name" data-uppercase />
-      <input type="text" id="pan" />
-      <input type="text" id="mobile" deta-uppercase />
-    </div>
-    <script>
-      document.querySelector("#form").addEventListener("keyup", function (e) {
-        if (e.target.dataset.uppercase != undefined) {
-          e.target.value = e.target.value.toUpperCase();
-        }
-      });
-    </script>
-  </body>
-</html> -->
+<!-- <p>
+  Right-click for the document menu (added a check for event.defaultPrevented)
+</p>
+<button id="elem">Right-click for the button menu</button>
 
-<!--  print Action when we click on any button -->
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Event Deligation with Class</title>
-  </head>
-  <body>
-    <div id="menu">
-      <button data-action="save">Save</button>
-      <button data-action="load">Load</button>
-      <button data-action="search">Search</button>
-    </div>
-    <script>
-      class Menu {
-        constructor(elem) {
-          this.elem = elem;
-          elem.onclick = this.onClick.bind(this);
-        }
-        onClick(event) {
-          let action = event.target.dataset.action;
-          if (action) {
-            this[action]();
-          }
-        }
-        save() {
-          console.log(`Saving...`);
-        }
-        load() {
-          console.log(`Loading...`);
-        }
-        search() {
-          console.log(`Searching...`);
-        }
-      }
-      new Menu(menu);
-    </script>
-  </body>
-</html> -->
+<script>
+  elem.oncontextmenu = function (e) {
+    e.preventDefault();
+    console.log("Button Context Menu");
+  };
+  document.oncontextmenu = function (e) {
+    if (e.defaultPrevented) return;
+    e.preventDefault();
+    console.log("Document Context Menu");
+  };
+</script> -->
 
 <!--  Experiments -->
 
-<!--    1) Hide text with delegation -->
-<!-- <!DOCTYPE html>
-<html lang="en">
+<!-- 
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experiment 1</title>
-  </head>
-  <body>
-    <div id="container">
-      <div class="pane">
-        <h3>Horse</h3>
-        <p>
-          The horse is one of two extant subspecies of Equus ferus. It is an
-          odd-toed ungulate mammal belonging to the taxonomic family Equidae.
-        </p>
-        <button class="remove-button">[x]</button>
-      </div>
-      <div class="pane">
-        <h3>Donkey</h3>
-        <p>
-          The donkey or ass (Equus africanus asinus) is a domesticated member of
-          the horse family, Equidae.
-        </p>
-        <button class="remove-button">[x]</button>
-      </div>
-      <div class="pane">
-        <h3>Cat</h3>
-        <p>
-          The domestic cat (Latin: Felis catus) is a small, typically furry,
-          carnivorous mammal. They are often called house cats when kept as
-          indoor pets or simply cats when there is no need to distinguish
-        </p>
-        <button class="remove-button">[x]</button>
-      </div>
-    </div>
-    <script>
-      document.addEventListener("click", function (e) {
-        if (e.target.className != "remove-button") return;
-
-        let pane = e.target.closest(".pane");
-        pane.remove();
-      });
-    </script>
-  </body>
-</html> -->
-
-<!--    2) Toggle list using Delegation -->
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
+    <meta charset="utf-8" />
     <style>
-      .tree span:hover {
-        font-weight: bold;
-      }
-
-      .tree span {
-        cursor: pointer;
+      #contents {
+        padding: 5px;
+        border: 1px green solid;
       }
     </style>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experiment 2</title>
   </head>
+
   <body>
-    <ul class="tree" id="tree">
-      <li>
-        Animals
-        <ul>
-          <li>
-            Mammals
-            <ul>
-              <li>Cows</li>
-              <li>Donkeys</li>
-              <li>Dogs</li>
-              <li>Tigers</li>
-            </ul>
-          </li>
-          <li>
-            Other
-            <ul>
-              <li>Snakes</li>
-              <li>Birds</li>
-              <li>Lizards</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        Fishes
-        <ul>
-          <li>
-            Aquarium
-            <ul>
-              <li>Guppy</li>
-              <li>Angelfish</li>
-            </ul>
-          </li>
-          <li>
-            Sea
-            <ul>
-              <li>Sea trout</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <fieldset id="contents">
+      <legend>#contents</legend>
+      <p>
+        How about to read <a href="https://wikipedia.org">Wikipedia</a> or visit
+        <a href="https://w3.org"><i>W3.org</i></a> and learn about modern
+        standards?
+      </p>
+    </fieldset>
+
     <script>
-      for (let li of document.getElementsByTagName("li")) {
-        let span = document.createElement("span");
-        li.prepend(span);
-        span.append(span.nextSibling);
-      }
-      tree.addEventListener("click", function (e) {
-        if (e.target.tagName != "SPAN") return;
+      contents.onclick = function (event) {
+        function handleLink(href) {
+          let isLeaving = confirm(`Leave for ${href}?`);
+          if (!isLeaving) return false;
+        }
 
-        let childContainer = e.target.parentNode.querySelector("ul");
+        let target = event.target.closest("a");
 
-        if (!childContainer) return;
-
-        childContainer.hidden = !childContainer.hidden;
-      });
+        if (target && contents.contains(target)) {
+          return handleLink(target.getAttribute("href"));
+        }
+      };
     </script>
   </body>
 </html> -->
 
-<!--    3) Shortable Table -->
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experiment 3</title>
+    <style>
+      #thumbs {
+        display: flex;
+      }
+      #thumbs li {
+        list-style: none;
+      }
+    </style>
   </head>
   <body>
-    <table id="grid">
-      <thead>
-        <tr>
-          <th data-type="number">Age</th>
-          <th data-type="string">Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>5</td>
-          <td>John</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Pete</td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>Ann</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Eugene</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Ilya</td>
-        </tr>
-      </tbody>
-    </table>
-    <script>
-      grid.onclick = function (e) {
-        if (e.target.tagName != "TH") return;
+    <p>
+      <img
+        id="largeImg"
+        src="https://en.js.cx/gallery/img1-lg.jpg"
+        alt="Large image"
+      />
+    </p>
 
-        let th = e.target;
-        // if TH, then sort
-        // cellIndex is the number of th:
-        //   0 for the first column
-        //   1 for the second column, etc
-        sortGrid(th.cellIndex, th.dataset.type);
+    <ul id="thumbs">
+      <li>
+        <a href="https://en.js.cx/gallery/img2-lg.jpg" title="Image 2"
+          ><img src="https://en.js.cx/gallery/img2-thumb.jpg"
+        /></a>
+      </li>
+      <li>
+        <a href="https://en.js.cx/gallery/img3-lg.jpg" title="Image 3"
+          ><img src="https://en.js.cx/gallery/img3-thumb.jpg"
+        /></a>
+      </li>
+      <li>
+        <a href="https://en.js.cx/gallery/img4-lg.jpg" title="Image 4"
+          ><img src="https://en.js.cx/gallery/img4-thumb.jpg"
+        /></a>
+      </li>
+      <li>
+        <a href="https://en.js.cx/gallery/img5-lg.jpg" title="Image 5"
+          ><img src="https://en.js.cx/gallery/img5-thumb.jpg"
+        /></a>
+      </li>
+      <li>
+        <a href="https://en.js.cx/gallery/img6-lg.jpg" title="Image 6"
+          ><img src="https://en.js.cx/gallery/img6-thumb.jpg"
+        /></a>
+      </li>
+    </ul>
+    <script>
+      thumbs.onclick = function (e) {
+        let thumbnail = e.target.closest("a");
+        if (!thumbnail) return;
+        showThumbnail(thumbnail.href, thumbnail.title);
+        e.preventDefault();
       };
 
-      function sortGrid(colNum, type) {
-        let tbody = grid.querySelector("tbody");
-
-        let rowsArray = Array.from(tbody.rows);
-
-        // compare(a, b) compares two rows, need for sorting
-        let compare;
-
-        switch (type) {
-          case "number":
-            compare = function (rowA, rowB) {
-              return (
-                rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML
-              );
-            };
-            break;
-          case "string":
-            compare = function (rowA, rowB) {
-              return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML
-                ? 1
-                : -1;
-            };
-            break;
-        }
-
-        // sort
-        rowsArray.sort(compare);
-
-        tbody.append(...rowsArray);
+      function showThumbnail(href, title) {
+        largeImg.src = href;
+        largeImg.alt = title;
       }
     </script>
   </body>
-</html>
+</html> -->

@@ -5,6 +5,7 @@
 - `mouseover / mouseout` – when the mouse cursor comes over / leaves an element.
 - `mousedown / mouseup` – when the mouse button is pressed / released over an element.
 - `mousemove` – when the mouse is moved.
+- `oncontextmenu` - when right-click of mouse is clicked.
 
 ### Keyboard events:
 
