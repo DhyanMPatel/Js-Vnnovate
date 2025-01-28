@@ -14,7 +14,7 @@
   - `x/y`: X/Y-coordinates of the rectangle origin relative to window.
   - `width/height`: width/height of the rectangle (can be negative).
 - Additionally, there are derived properties:
-  - `top/bottom` – Y-coordinate for the top/bottom rectangle edge,
+  - `top/bottom` – Y-coordinate for the top/bottom rectangle edge, Note:-`bottom` can’t be 0
   - `left/right` – X-coordinate for the left/right rectangle edge.
 
 ## elementFromPoint(x, y)

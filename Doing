@@ -14,7 +14,7 @@ Today, I am working on below list of task:
 
 1. Mouse Events
 
-   - know about Mouse Event types like mousedown/up/over/out/move, click, dblclick, contextmenu also mouseenter/leave.
+   - know about Mouse Event types like `mousedown/up/over/out/move`, `click`, `dblclick`, `contextmenu` also mouseenter/leave.
    - Know about Modifiers like shiftKey, altKey, ctrlKey, metaKey.
    - Events `mouseenter/leave` are like `mouseover/out`.
    - there is a catch we can't use Event Delegation with `mouseenter/leave`.
@@ -22,6 +22,7 @@ Today, I am working on below list of task:
 2. Drag & Drop
 
    - Drag & Drop use Algorithm like: `mousedown` -> `mousemove` -> `mouseup`.
+   - there is also another events like `dragstart` & `dragend`.
 
 3. Pointer Events
 
@@ -38,4 +39,4 @@ Today, I am working on below list of task:
    - there are 3 types of keys like letter keys, digit keys, special keys. but there is no any key for `fn`.
 
 5. Scrolling
-   -
+   - I learn about `scroll` Event.
