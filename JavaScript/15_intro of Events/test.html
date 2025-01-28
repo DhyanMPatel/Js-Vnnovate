@@ -31,73 +31,56 @@
     <div id="slider" class="slider">
       <div class="thumb"></div>
     </div>
+
+    <input
+      id="phone"
+      type="text"
+      placeholder="Phone Number"
+      onkeydown="return checkPhoneKey(event)"
+    />
     <script>
-      let thumb = document.querySelector(".thumb");
-
-      /*
-      thumb.onmousedown = function (e) {
-        e.preventDefault();
-        let shiftX = e.clientX - thumb.getBoundingClientRect().left;
-
-        document.addEventListener("mousemove", onMouseMove);
-        document.addEventListener("mouseup", onMouseUp);
-
-        function onMouseMove(e) {
-          let newLeft =
-            event.clientX - shiftX - slider.getBoundingClientRect().left;
-
-          if (newLeft < 0) {
-            newLeft = 0;
-          }
-
-          let rightEdge = slider.offsetWidth - thumb.offsetWidth;
-          if (newLeft > rightEdge) {
-            newLeft = rightEdge;
-          }
-          thumb.style.left = newLeft + "px";
+      document.addEventListener("keydown", function (e) {
+        if (e.code == "KeyZ" && (e.ctrlKey || e.metaKey)) {
+          console.log(e.key, e.code);
         }
+      });
 
-        function onMouseUp() {
-          document.removeEventListener("mouseup", onMouseUp);
-          document.removeEventListener("mousemove", onMouseMove);
-        }
-      };
-      thumb.ondragstart = function () {
-        return false;
-      };
-      */
+      function checkPhoneKey(e) {
+        let key = e.key;
+        return (
+          (key >= 0 && key <= 9) ||
+          [
+            "+",
+            "(",
+            ")",
+            "-",
+            "ArrowLeft",
+            "Delete",
+            "ShiftRight",
+            "Backspace",
+          ].includes(key)
+        );
+      }
 
-      /// Replace above mouse Events into pointer Events
-      thumb.onpointerdown = function (event) {
-        // retarget all pointer events (until pointerup) to thumb
-        thumb.setPointerCapture(event.pointerId);
+      function runOnKeys(func, ...codes) {
+        let pressed = new Set();
 
-        // start tracking pointer moves
-        thumb.onpointermove = function (event) {
-          // moving the slider: listen on the thumb, as all pointer events are retargeted to it
-          let newLeft = event.clientX - slider.getBoundingClientRect().left;
-
-          if (newLeft < 0) {
-            newLeft = 0;
+        document.addEventListener("keydown", function (e) {
+          pressed.add(e.code);
+          for (let code of codes) {
+            if (!pressed.has(code)) {
+              return;
+            }
           }
-          let rightEdge = slider.offsetWidth - thumb.offsetWidth;
-          if (newLeft > rightEdge) {
-            newLeft = rightEdge;
-          }
+          pressed.clear(); // to make single time trigger
+          func();
+        });
 
-          thumb.style.left = newLeft + "px";
-        };
-
-        // on pointer up finish tracking pointer moves
-        thumb.onpointerup = function (event) {
-          thumb.onpointermove = null;
-          thumb.onpointerup = null;
-          // ...also process the "drag end" if needed
-        };
-      };
-      thumb.ondragstart = function () {
-        return false;
-      };
+        document.addEventListener("keyup", function (e) {
+          pressed.delete(e.code);
+        });
+      }
+      runOnKeys(() => alert("clicked!"), "KeyQ", "KeyW", "ShiftLeft");
     </script>
   </body>
 </html>

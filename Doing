@@ -14,8 +14,28 @@ Today, I am working on below list of task:
 
 1. Mouse Events
 
-2. Moving The Mouse
+   - know about Mouse Event types like mousedown/up/over/out/move, click, dblclick, contextmenu also mouseenter/leave.
+   - Know about Modifiers like shiftKey, altKey, ctrlKey, metaKey.
+   - Events `mouseenter/leave` are like `mouseover/out`.
+   - there is a catch we can't use Event Delegation with `mouseenter/leave`.
 
-3. Drag & Drop
+2. Drag & Drop
 
-4. Pointer Events
+   - Drag & Drop use Algorithm like: `mousedown` -> `mousemove` -> `mouseup`.
+
+3. Pointer Events
+
+   - In this topic i learn about `Pointer Events` which is same a `Mouse Events` but there is more events
+     in `Pointer<event>`.
+   - there are `pointerId`, `pointerType`, `isPrimary`, `width`, `Height`, `Pressure`, `tiltX`, `tiltY`, `twist` such properties.
+   - By the way pointer Events support `Multi-touch` through `isPrimary` and `pointerId` properties.
+   - Learn about `pointer Capturing`.
+
+4. Keyboad Events
+
+   - I learn about Keyboad events like `keydown`, `keyup`.
+   - During the event there is properties like `key`, `code`, `repeat` help to know about pressed key.
+   - there are 3 types of keys like letter keys, digit keys, special keys. but there is no any key for `fn`.
+
+5. Scrolling
+   -
