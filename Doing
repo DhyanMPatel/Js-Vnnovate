@@ -39,4 +39,12 @@ Today, I am working on below list of task:
    - there are 3 types of keys like letter keys, digit keys, special keys. but there is no any key for `fn`.
 
 5. Scrolling
+
    - I learn about `scroll` Event.
+
+6. Form and Controls
+
+   - Learn about `document.forms` property and their `elements` property.
+   - `element.form` using we can access that form tag/node.
+   - Aslo learn about form elements like `input` , `textarea`, `select`.
+   - `new Option()` we can create Option.
