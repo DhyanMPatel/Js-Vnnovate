@@ -2,16 +2,17 @@
 
 ## Mouse event types
 
-- mousedown/mouseup
-- mouseover/mouseout
-- mousemove
-- click
-- dblclick
-- contextmenu
+- `mousedown/mouseup` - Mouse button is clicked/released over an Element
+- `mouseover/mouseout` - Mouse pointer comes over/out from an element.
+- `mousemove`- Every mouse move over an element triggers that event.
+- `click` - Triggers after `mousedown` and then `mouseup` over the same element if the left mouse button was used.
+- `dblclick` - Triggers after two clicks on the same element within a short timeframe.
+- `contextmenu` - Triggers when the right mouse button is pressed.
 
 ## Mouse button
 
 - Click-related events always have the button property, which allows to get the exact mouse button.
+- We can get mouse button using `event.button` property.
 
   ![Mouse Button State](./Button%20State.png)
 
@@ -24,6 +25,10 @@
   - `ctrlKey`: Ctrl
   - `metaKey`: Cmd for Mac
 - There are also mobile devices
+
+```html
+
+```
 
 ## Coordinates: clientX/Y, pageX/Y
 

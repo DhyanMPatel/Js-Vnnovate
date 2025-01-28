@@ -1,12 +1,10 @@
-Date: 27 Jan 2025
-Day: Monday
+Date: 28 Jan 2025
+Day: Tuesday
 
 Today Learning:
 
 1. Revision of Last Work
-2. Learn Window Size and Scrolling
-3. learn about Coordinates
-4. Learn about Events and all it's types.
+2. Learn about UI Events like Mouse Events, Keyboard Events, Pointer Events, etc.
 
 Work done:
 Date: 27 Jan 2025
@@ -18,7 +16,7 @@ Today, I am working on below list of task:
 
    - Understand `clientWidth`/`clientHeight` for window, `scrollWidth`/`scrollHeight` for document width/height.
    - `Window.pageYOffset/pageXOffset` to get current scroll same as `window.scrollX/scrollY`.
-   - Understand scrolling like `scrollTo`, `scrollBy`, `scrollIntoView`.
+   - Understand scrolling like `scrollTo(pageX, pageY)`, `scrollBy(x,y)`, `scrollIntoView(top)`.
 
 2. Coordinates
 
