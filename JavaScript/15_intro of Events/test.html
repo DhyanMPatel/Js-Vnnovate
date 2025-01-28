@@ -34,6 +34,7 @@
     <script>
       let thumb = document.querySelector(".thumb");
 
+      /*
       thumb.onmousedown = function (e) {
         e.preventDefault();
         let shiftX = e.clientX - thumb.getBoundingClientRect().left;
@@ -60,6 +61,39 @@
           document.removeEventListener("mouseup", onMouseUp);
           document.removeEventListener("mousemove", onMouseMove);
         }
+      };
+      thumb.ondragstart = function () {
+        return false;
+      };
+      */
+
+      /// Replace above mouse Events into pointer Events
+      thumb.onpointerdown = function (event) {
+        // retarget all pointer events (until pointerup) to thumb
+        thumb.setPointerCapture(event.pointerId);
+
+        // start tracking pointer moves
+        thumb.onpointermove = function (event) {
+          // moving the slider: listen on the thumb, as all pointer events are retargeted to it
+          let newLeft = event.clientX - slider.getBoundingClientRect().left;
+
+          if (newLeft < 0) {
+            newLeft = 0;
+          }
+          let rightEdge = slider.offsetWidth - thumb.offsetWidth;
+          if (newLeft > rightEdge) {
+            newLeft = rightEdge;
+          }
+
+          thumb.style.left = newLeft + "px";
+        };
+
+        // on pointer up finish tracking pointer moves
+        thumb.onpointerup = function (event) {
+          thumb.onpointermove = null;
+          thumb.onpointerup = null;
+          // ...also process the "drag end" if needed
+        };
       };
       thumb.ondragstart = function () {
         return false;
