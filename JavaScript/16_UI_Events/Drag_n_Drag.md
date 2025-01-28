@@ -6,4 +6,9 @@
   - Then on `mousemove` move it by changing left/top with position:absolute.
   - On `mouseup` – perform all actions related to finishing the drag’n’drop.
 
+- In Morden HTML Standerd, there is special Events like `dragstart` & `dragend`.
 - There is good Functionality which should i watch in future.
+
+- [Limitation]
+  - There we not privent only `Horizontal` & `Vertical` drag only.
+  - Also, mobile device support for such events is very weak.
