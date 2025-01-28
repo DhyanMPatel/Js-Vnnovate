@@ -1,6 +1,7 @@
 /// Destructuring
 //      - Work on any Iterable on right-side
 //      - we can swap using destructuring
+//      - Ex:- Array, Object, Nested, Map, Set, etc Destructuring
 
 /*
 let arr = ["Dhyan", "This will ignore using comma(,) ", "Patel"];

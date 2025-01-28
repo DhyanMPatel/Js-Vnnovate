@@ -70,8 +70,12 @@ console.log(parsing);
 */
 
 /// Experiment
+
+/*
+//      1) create a date
 let interesting = new Date("2025-02-31");
-// console.log(interesting); // Return - 2025-03-03T00:00:00.000Z
+console.log(interesting); // Return - 2025-03-03T00:00:00.000Z
+*/
 
 /*
 // // as time measurement
@@ -119,7 +123,19 @@ console.log(`Time of Difference: ${banch(diffGetTime)}ms`);
 */
 
 /*
-/// Get European Weakend (mon - sun)
+///   2) Show Weekday
+let date = new Date(2012, 0, 3);  // 3 Jan 2012
+console.log( getWeekDay(date) );        // should output "TU"
+
+function getWeekDay(date) {
+  let weekDays = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA']; 
+  let day = date.getDay();
+  return weekDays[day];
+}
+*/
+
+/*
+///   3) Get European Weakend (mon - sun)
 let date = new Date(2025, 0, 6);
 console.log(`Final: ${getLocalDay(date)}`);
 function getLocalDay(date) {
@@ -132,12 +148,89 @@ function getLocalDay(date) {
 }
 */
 
-/// Get last Date of month
+/*
+///   4) which day of month was many days ago
+let date = new Date(2015, 0, 2);
+
+alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
+
+function getDateAgo(date, days){
+  date.setDate(date.getDate() - days);
+  return date.getDate();
+
+  /// If date should not be changed
+  let dateCopy = new Date(date);
+  return dateCopy.getDate(dateCopy.setDate(dateCopy.getDate() - days));
+}
+*/
+
+
+/*
+///  5) Get last Date of month
 function getLastDayOfMonth(year, month) {
   let date = new Date(year, month + 1, 0); // date start from 1.
   return date.getDate();
 }
 console.log(getLastDayOfMonth(2025, 1));
+*/
+
+/*
+///   6) How many seconds have passed today?
+console.log(getSecondsToday());
+function getSecondsToday(){
+  let now = new Date();
+  let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  let diff = now - today;
+  return Math.round(diff/1000);
+}
+*/
+
+/*
+///   7) How many seconds to tomorrow?
+console.log(getSecondsToTomorrow());
+function getSecondsToTomorrow(){
+  let now = new Date();
+  let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+  diff = tomorrow - now;
+  return Math.round(diff/1000);
+}
+*/
+
+///   8) Format the relative date
+console.log( formatRelativeDate(new Date(new Date - 1)) ); // Return - right now
+console.log( formatRelativeDate(new Date(new Date - 30 * 1000)) ); // "30 sec. ago"
+console.log( formatRelativeDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 min. ago"
+// yesterday's date like 31.12.16 20:00
+console.log( formatRelativeDate(new Date(new Date - 86400 * 1000)) );
+
+function formateRelativeDate(date){
+  let diff = new Date() - date;
+
+  if(diff < 1000){
+    return `right now`;
+  }
+  let sec = Math.round(diff/1000);
+  if(sec < 60){
+    return `${sec} seconds ago`;
+  }
+  let min = Math.round(sec/60);
+  if(min < 60){
+    return `${min} minutes ago`;
+  }
+  let d = date;
+  d= [
+    "0"+d.getDate(),
+    '0'+(d.getMonth()+1),
+    ''+ d.getFullYear(),
+    '0'+d.getHours(),
+    '0'+d.getMinutes()
+  ].map(compact => compact.slice(-2));
+
+  return d.slice(0,3).join('.')+' '+ d.slice(3).join(':');
+}
+
 
 /*
 //// Check it home
