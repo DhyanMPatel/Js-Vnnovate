@@ -1,8 +1,12 @@
 # Form
 
+- Using `document.form` we can access form tag in HTML.
+
 ## Navigation: form and elements
 
-- special collection document.forms, also called 'named collection'.
+- special collection `document.forms`, also called 'named collection', it’s both named and ordered.
+- form has `forms.elements` properties to get all form elements like input, etc.
+- `forms.elemName` property is use to get the Element. and `forms.elemName.name` can set name Property of that element.
 
 ```html
 <form name="my">
@@ -35,6 +39,10 @@
 </script>
 ```
 
+## Backreference: element.form
+
+- Using `element.form` we can refer to that form
+
 # Form elements
 
 - Let’s talk about form controls.
@@ -42,7 +50,7 @@
 ## input and textarea
 
 - We can access their value as `input.value` (string) or `input.checked` (boolean) for checkboxes and radio buttons.
-- Use `textarea.value`, not `textarea.innerHTML`
+- Use `textarea.value`, not `textarea.innerHTML` to access value inside textarea.
 
 ## select and option
 
@@ -50,6 +58,8 @@
   - `select.options` – the collection of `<option>` subelements,
   - `select.value` – the value of the currently selected `<option>`,
   - `select.selectedIndex` – the number of the currently selected `<option>`.
+- there is Zero-based indexing.
+- this above Option is use for get/set the value
 
 ```html
 <select id="select">
@@ -66,6 +76,8 @@
   // please note: options start from zero, so index 2 means the 3rd option.
 </script>
 ```
+
+- Also we can select multiple option like bellow
 
 ```html
 <select id="select" multiple>
@@ -86,14 +98,18 @@
 
 ## new Option
 
-    ```js
-    option = new Option(text, value, defaultSelected, selected);
-    ```
+- Using new Option() we can create that options
 
-- text – the text inside the option,
-- value – the option value,
-- defaultSelected – if true, then selected HTML-attribute is created,
-- selected – if true, then the option is selected.
+```js
+option = new Option(text, value, defaultSelected, selected);
+```
+
+- here are the parameters:
+
+  - `text` – the text inside the option,
+  - `value` – the option value,
+  - `defaultSelected` – if `true`, then selected HTML-attribute is created,
+  - `selected` – if `true`, then the option is selected.
 
   ```js
   let option = new Option("Text", "value");

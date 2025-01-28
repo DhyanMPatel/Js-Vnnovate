@@ -1,288 +1,70 @@
-<!-- Experiment 1 -->
-<!-- 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Endless Page</title>
+    <title>Form Properties and Methods</title>
   </head>
   <body>
+    <form name="my">
+      <p name="Sample">node</p>
+      <input name="one" value="1" />
+      <input name="two" value="2" />
+    </form>
+
+    <form id="form" name="another">
+      <fieldset name="userFields">
+        <legend>info</legend>
+        <input name="login" type="text" />
+      </fieldset>
+    </form>
+
+    <select id="select">
+      <option value="apple">Apple</option>
+      <option value="pear">Pear</option>
+      <option value="banana">Banana</option>
+    </select>
+
     <script>
-      function populate() {
-        while (true) {
-          let windowRelativeBottom =
-            document.documentElement.getBoundingClientRect().bottom;
-          if (
-            windowRelativeBottom >
-            document.documentElement.clientHeight + 100
-          )
-            break;
-          document.body.insertAdjacentHTML(
-            "beforeend",
-            `<p>Date: ${new Date()}</p>`
-          );
-        }
-      }
-      document.addEventListener("scroll", populate);
-      populate();
-    </script>
-  </body>
-</html> -->
+      /*
+      /// Work on `my` form
+      // console.log(document.forms);
+      let form = document.forms.my;
+      console.log(form.elements);
+      console.log(document.forms);
+      */
 
-<!-- Experiment 2 -->
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Up/down Button</title>
-    <style>
-      body,
-      html {
-        height: 100%;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-      }
+      /*
+      /// Work on `another` form
+      console.log(document.forms[1].login); // or document.forms[1].elements.login
+      let fieldset = document.forms[1].elements.userFields;
 
-      #matrix {
-        width: 400px;
-        margin: auto;
-        overflow: auto;
-        text-align: justify;
-      }
+      console.log(fieldset.elements.login === document.forms[1].elements.login); /// Return - true
 
-      #arrowTop {
-        height: 9px;
-        width: 14px;
-        color: green;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        cursor: pointer;
-      }
+      console.log(fieldset.form);
+      */
 
-      #arrowTop::before {
-        content: "▲";
-      }
-    </style>
-  </head>
-  <body>
-    <div id="matrix">
-      <script>
-        for (let i = 0; i < 2000; i++) {
-          document.writeln(i); // writeln use for new line if there are end.
-        }
-      </script>
-    </div>
-    <div id="arrowTop" hidden></div>
-    <script>
-      arrowTop.onclick = function () {
-        window.scrollTo(pageXOffset, 0);
-      };
-      window.addEventListener("scroll", function () {
-        arrowTop.hidden = pageYOffset < document.documentElement.clientHeight;
-        console.log(pageYOffset, document.documentElement.clientHeight);
-      });
-    </script>
-  </body>
-</html> -->
+      /*
+      /// Work on Option and Select
+      console.log(select.options); // Return all options
+      console.log(select.value); // Return - selected option value
+      console.log(select.selectedIndex); // Return - 0
 
-<!--  Eperiment 3 -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visible Image Load</title>
-  </head>
-  <body>
-    <p>Text and pictures are from https://wikipedia.org.</p>
+      select.value = "banana"; // or
+      select.selectedIndex = 2; // or
+      select.options[2].select = true;
 
-    <h3>All images with <code>data-src</code> load when become visible.</h3>
+      console.log(select.value); // Return - selected option value
+      console.log(select.selectedIndex); // Return - 0
+      */
 
-    <h1>Solar system</h1>
+      /// new Option()
+      let option = new Option("Text", "Value", true, false);
+      select.append(option);
 
-    <p>
-      The Solar System is the gravitationally bound system comprising the Sun
-    </p>
-
-    <p>
-      The Solar System formed 4.6 billion years ago from the gravitational
-      collapse of a giant interstellar molecular cloud.
-    </p>
-
-    <figure>
-      <img
-        src="placeholder.svg"
-        data-src="https://en.js.cx/clipart/solar/planets.jpg"
-        width="640"
-        height="360"
-      />
-    </figure>
-
-    <h1>Sun</h1>
-
-    <p>
-      The Sun is the Solar System's star and by far its most massive component.
-      Its large mass (332,900 Earth masses) produces
-    </p>
-
-    <figure>
-      <img
-        src="placeholder.svg"
-        data-src="https://en.js.cx/clipart/solar/sun.jpg"
-        width="658"
-        height="658"
-      />
-    </figure>
-
-    <h1>Mercury</h1>
-
-    <p>
-      Mercury (0.4 AU from the Sun) is the closest planet to the Sun and the
-      smallest planet in the Solar System (0.055 Earth
-    </p>
-
-    <figure>
-      <img
-        src="placeholder.svg"
-        data-src="https://en.js.cx/clipart/solar/mercury.jpg"
-        width="390"
-        height="390"
-      />
-    </figure>
-
-    <h1>Venus</h1>
-
-    <p>
-      Venus (0.7 AU from the Sun) is close in size to Earth (0.815 Earth masses)
-      and, like Earth, has a thick silicate mantle around
-    </p>
-
-    <figure>
-      <img
-        src="placeholder.svg"
-        data-src="https://en.js.cx/clipart/solar/venus.jpg"
-        width="390"
-        height="390"
-      />
-    </figure>
-
-    <h1>Earth</h1>
-
-    <p>
-      Earth (1 AU from the Sun) is the largest and densest of the inner planets,
-      the only one known to have current geological
-    </p>
-
-    <figure>
-      <img
-        src="placeholder.svg"
-        data-src="https://en.js.cx/clipart/solar/earth.jpg"
-        width="390"
-        height="390"
-      />
-    </figure>
-
-    <h1>Mars</h1>
-
-    <p>
-      Mars (1.5 AU from the Sun) is smaller than Earth and Venus (0.107 Earth
-    </p>
-
-    <figure>
-      <img
-        src="placeholder.svg"
-        data-src="https://en.js.cx/clipart/solar/mars.jpg"
-        width="390"
-        height="390"
-      />
-    </figure>
-
-    <h1>Jupiter</h1>
-
-    <p>
-      Jupiter (5.2 AU), at 318 Earth masses, is 2.5 times the mass of all the
-    </p>
-
-    <figure>
-      <img
-        src="placeholder.svg"
-        data-src="https://en.js.cx/clipart/solar/jupiter.jpg"
-        width="390"
-        height="390"
-      />
-    </figure>
-
-    <h1>Saturn</h1>
-    <p>
-      Saturn (9.5 AU), distinguished by its extensive ring system, has several
-    </p>
-
-    <figure>
-      <img
-        src="placeholder.svg"
-        data-src="https://en.js.cx/clipart/solar/saturn.jpg"
-        width="805"
-        height="390"
-      />
-    </figure>
-
-    <h1>Uranus</h1>
-    <p>
-      Uranus (19.2 AU), at 14 Earth masses, is the lightest of the outer
-      planets. Uniquely among the planets, it orbits the
-    </p>
-
-    <figure>
-      <img
-        src="placeholder.svg"
-        data-src="https://en.js.cx/clipart/solar/uranus.jpg"
-        width="390"
-        height="390"
-      />
-    </figure>
-
-    <h1>Neptune</h1>
-    <p>
-      Neptune (30.1 AU), though slightly smaller than Uranus, is more massive
-      (equivalent to 17 Earths) and hence more dense. It
-    </p>
-
-    <figure>
-      <img
-        src="placeholder.svg"
-        data-src="https://en.js.cx/clipart/solar/neptune.jpg"
-        width="390"
-        height="390"
-      />
-    </figure>
-    <script>
-      function isVisible(elem) {
-        let coords = elem.getBoundingClientRect();
-        let windowHeight = document.documentElement.clientHeight;
-
-        let topVisible = coords.top > 0 && coords.top < windowHeight;
-        let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
-        console.log(topVisible, bottomVisible);
-
-        return topVisible || bottomVisible;
-      }
-
-      function showVisible() {
-        for (let img of document.querySelectorAll("img")) {
-          let realSrc = img.dataset.img;
-
-          if (!realSrc) continue;
-
-          if (isVisible(img)) {
-            img.src = realSrc;
-            img.dataset.img = "";
-          }
-        }
-      }
+      console.log(option.selected); // Return - false, untill user select `text`.
+      console.log(option.index); // Return - 3
+      console.log(option.text); // Return - Text
     </script>
   </body>
 </html>
