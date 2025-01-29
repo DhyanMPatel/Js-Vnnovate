@@ -1,129 +1,31 @@
-<!-- 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Submit Event and Method</title>
+    <title>DOMContentLoaded, load & unload</title>
   </head>
   <body>
-    <form onsubmit="alert('submit!');return false">
-      First: Enter in the input field <input type="text" value="text!" /><br />
-      Second: Click "submit": <input type="Submit" value="Submit" /><br />
-      Third: Click 'Image': <input type="image" src="image.png" alt="Submit" />
-    </form>
-
+    <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0" />
     <script>
-      let form = document.createElement("form");
+      function ready() {
+        alert("DOM is ready");
 
-      form.innerHTML = '<input name="q" value="This will Search">';
-
-      form.method = "GET";
-      form.action = "https://google.com/search";
-
-      document.body.append(form);
-
-      setTimeout(() => form.submit(), 1000);
-    </script>
-  </body>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experiment</title>
-  </head>
-  <body>
-    <h2>Click the button below</h2>
-
-    <input type="button" value="Click to show the form" id="show-button" />
-
-    <div id="prompt-form-container">
-      <form id="prompt-form">
-        <div id="prompt-message"></div>
-        <input name="text" type="text" />
-        <input type="submit" value="Ok" />
-        <input type="button" name="cancel" value="Cancel" />
-      </form>
-    </div>
-    <script>
-      // Show a half-transparent DIV to "shadow" the page
-      // (the form is not inside, but near it, because it shouldn't be half-transparent)
-      function showCover() {
-        let coverDiv = document.createElement("div");
-        coverDiv.id = "cover-div";
-
-        // make the page unscrollable while the modal form is open
-        document.body.style.overflowY = "hidden";
-
-        document.body.append(coverDiv);
+        // image is not yet loaded (unless it was cached), so the size is 0x0
+        alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
       }
 
-      function hideCover() {
-        document.getElementById("cover-div").remove();
-        document.body.style.overflowY = "";
-      }
+      document.addEventListener("DOMContentLoaded", ready);
 
-      function showPrompt(text, callback) {
-        showCover();
-        let form = document.getElementById("prompt-form");
-        let container = document.getElementById("prompt-form-container");
-        document.getElementById("prompt-message").innerHTML = text;
-        form.text.value = "";
-
-        function complete(value) {
-          hideCover();
-          container.style.display = "none";
-          document.onkeydown = null;
-          callback(value);
-        }
-
-        form.onsubmit = function () {
-          let value = form.text.value;
-          if (value == "") return false; // ignore empty submit
-
-          complete(value);
-          return false;
-        };
-
-        form.cancel.onclick = function () {
-          complete(null);
-        };
-
-        document.onkeydown = function (e) {
-          if (e.key == "Escape") {
-            complete(null);
-          }
-        };
-
-        let lastElem = form.elements[form.elements.length - 1];
-        let firstElem = form.elements[0];
-
-        lastElem.onkeydown = function (e) {
-          if (e.key == "Tab" && !e.shiftKey) {
-            firstElem.focus();
-            return false;
-          }
-        };
-
-        firstElem.onkeydown = function (e) {
-          if (e.key == "Tab" && e.shiftKey) {
-            lastElem.focus();
-            return false;
-          }
-        };
-
-        container.style.display = "block";
-        form.elements.text.focus();
-      }
-
-      document.getElementById("show-button").onclick = function () {
-        showPrompt("Enter something<br>...smart :)", function (value) {
-          alert("You entered: " + value);
-        });
+      window.onbeforeunload = function () {
+        return false;
       };
+
+      console.log(document.readyState);
+
+      document.addEventListener("readystatechange", () =>
+        console.log(document.readyState)
+      );
     </script>
   </body>
 </html>
