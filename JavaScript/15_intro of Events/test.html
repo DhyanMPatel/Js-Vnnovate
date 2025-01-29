@@ -1,70 +1,345 @@
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Properties and Methods</title>
+    <title>Focusing</title>
   </head>
   <body>
-    <form name="my">
-      <p name="Sample">node</p>
-      <input name="one" value="1" />
-      <input name="two" value="2" />
-    </form>
+    <style>
+      .invalid {
+        border-color: red;
+      }
+      #error {
+        color: red;
+      }
+    </style>
 
-    <form id="form" name="another">
-      <fieldset name="userFields">
-        <legend>info</legend>
-        <input name="login" type="text" />
-      </fieldset>
-    </form>
+    Your email please: <input type="email" id="input" />
 
-    <select id="select">
-      <option value="apple">Apple</option>
-      <option value="pear">Pear</option>
-      <option value="banana">Banana</option>
-    </select>
+    <div id="error"></div>
+
+    <button tabindex="2">Focus after 1</button>
+    <input type="text" tabindex="1" value="First focused" />
+
+    <div tabindex="0">tabindex with 0 (even div will focused after email input)</div>
 
     <script>
-      /*
-      /// Work on `my` form
-      // console.log(document.forms);
-      let form = document.forms.my;
-      console.log(form.elements);
-      console.log(document.forms);
-      */
+      input.onblur = function () {
+        if (!input.value.includes("@")) {
+          this.classList.add("invalid"); // 'this' will refer to that input tag
+          error.innerHTML = "Please Correct that.";
+          setTimeout(() => input.focus(), 1000); // after an 1s it will focus automatically
+        }
+      };
 
-      /*
-      /// Work on `another` form
-      console.log(document.forms[1].login); // or document.forms[1].elements.login
-      let fieldset = document.forms[1].elements.userFields;
+      input.onfocus = function () {
+        if (input.className.includes("invalid")) {
+          input.classList.remove("invalid");
+          error.innerHTML = "";
+        }
+      };
+    </script>
+  </body>
+</html> -->
 
-      console.log(fieldset.elements.login === document.forms[1].elements.login); /// Return - true
+<!--  Experiments -->
 
-      console.log(fieldset.form);
-      */
+<!-- //   1) Make div Textable to converting into textarea tag -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 1</title>
+    <style>
+      .edit:focus {
+        border: 3px solid blue;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Click the div to edit.</li>
+      <li>Enter or blur saves the result.</li>
+    </ul>
 
-      /*
-      /// Work on Option and Select
-      console.log(select.options); // Return all options
-      console.log(select.value); // Return - selected option value
-      console.log(select.selectedIndex); // Return - 0
+    HTML is allowed.
 
-      select.value = "banana"; // or
-      select.selectedIndex = 2; // or
-      select.options[2].select = true;
+    <div id="view" class="view">Text</div>
+    <script>
+      let area = null;
+      let view = document.getElementById("view");
 
-      console.log(select.value); // Return - selected option value
-      console.log(select.selectedIndex); // Return - 0
-      */
+      view.onclick = function (e) {
+        editStart();
+      };
 
-      /// new Option()
-      let option = new Option("Text", "Value", true, false);
-      select.append(option);
+      function editStart() {
+        area = document.createElement("textarea");
+        area.className = "edit";
+        area.value = view.innerHTML;
 
-      console.log(option.selected); // Return - false, untill user select `text`.
-      console.log(option.index); // Return - 3
-      console.log(option.text); // Return - Text
+        area.onkeydown = function (e) {
+          if (e.key == "Enter") {
+            this.blur();
+          }
+        };
+
+        area.onkeyup = function () {
+          editEnd();
+        };
+
+        view.replaceWith(area);
+        area.focus();
+      }
+      function editEnd() {
+        view.innerHTML = area.value;
+        area.replaceWith(view);
+      }
+    </script>
+  </body>
+</html> -->
+
+<!--    2) Make Table Editable -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 2</title>
+    <style>
+      .edit-td .edit-area {
+        border: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+
+        /* remove resizing handle in Firefox */
+        resize: none;
+
+        /* remove outline on focus in Chrome */
+        outline: none;
+
+        /* remove scrollbar in IE */
+        overflow: auto;
+      }
+
+      .edit-controls {
+        position: absolute;
+      }
+
+      .edit-td {
+        position: relative;
+        padding: 0;
+      }
+      /* common styles for the table, no need to modify these */
+
+      th {
+        text-align: center;
+        font-weight: bold;
+      }
+      td {
+        width: 150px;
+        white-space: nowrap;
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+      }
+      .nw {
+        background-color: #999;
+      }
+      .n {
+        background-color: #03f;
+        color: #fff;
+      }
+      .ne {
+        background-color: #ff6;
+      }
+      .w {
+        background-color: #ff0;
+      }
+      .c {
+        background-color: #60c;
+        color: #fff;
+      }
+      .e {
+        background-color: #09f;
+        color: #fff;
+      }
+      .sw {
+        background-color: #963;
+        color: #fff;
+      }
+      .s {
+        background-color: #f60;
+        color: #fff;
+      }
+      .se {
+        background-color: #0c3;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Click on a table cell to edit it. Press OK or CANCEL when you finish.</p>
+
+    <table id="bagua-table">
+      <tr>
+        <th colspan="3">
+          <em>Bagua</em> Chart: Direction, Element, Color, Meaning
+        </th>
+      </tr>
+      <tr>
+        <td class="nw">
+          <strong>Northwest</strong> <br />Metal <br />Silver <br />Elders
+        </td>
+        <td class="n">
+          <strong>North</strong> <br />Water <br />Blue <br />Change
+        </td>
+        <td class="ne">
+          <strong>Northeast</strong> <br />Earth <br />Yellow <br />Direction
+        </td>
+      </tr>
+      <tr>
+        <td class="w">
+          <strong>West</strong> <br />Metal <br />Gold <br />Youth
+        </td>
+        <td class="c">
+          <strong>Center</strong> <br />All <br />Purple <br />Harmony
+        </td>
+        <td class="e">
+          <strong>East</strong> <br />Wood <br />Blue <br />Future
+        </td>
+      </tr>
+    </table>
+    <script>
+      let table = document.getElementById("bagua-table");
+
+      let editingTd;
+
+      table.onclick = function (event) {
+        // 3 possible targets
+        let target = event.target.closest(".edit-cancel,.edit-ok,td");
+
+        if (!table.contains(target)) return;
+
+        if (target.className == "edit-cancel") {
+          finishTdEdit(editingTd.elem, false);
+        } else if (target.className == "edit-ok") {
+          finishTdEdit(editingTd.elem, true);
+        } else if (target.nodeName == "TD") {
+          if (editingTd) return; // already editing
+
+          makeTdEditable(target);
+        }
+      };
+
+      function makeTdEditable(td) {
+        editingTd = {
+          elem: td,
+          data: td.innerHTML,
+        };
+
+        td.classList.add("edit-td"); // td is in edit state, CSS also styles the area inside
+
+        let textArea = document.createElement("textarea");
+        textArea.style.width = td.clientWidth + "px";
+        textArea.style.height = td.clientHeight + "px";
+        textArea.className = "edit-area";
+
+        textArea.value = td.innerHTML;
+        td.innerHTML = "";
+        td.appendChild(textArea);
+        textArea.focus();
+
+        td.insertAdjacentHTML(
+          "beforeEnd",
+          '<div class="edit-controls"><button class="edit-ok">OK</button><button class="edit-cancel">CANCEL</button></div>'
+        );
+      }
+
+      function finishTdEdit(td, isOk) {
+        if (isOk) {
+          td.innerHTML = td.firstChild.value;
+        } else {
+          td.innerHTML = editingTd.data;
+        }
+        td.classList.remove("edit-td");
+        editingTd = null;
+      }
+    </script>
+  </body>
+</html> -->
+
+<!--    3) Make Mouse Movable using Arrow Function -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 3</title>
+    <style>
+      #mouse {
+        display: inline-block;
+        cursor: pointer;
+        margin: 0;
+      }
+
+      #mouse:focus {
+        outline: 1px dashed black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Click on the mouse and move it with arrow keys.</p>
+
+    <pre id="mouse">
+ _   _
+(q\_/p)
+ /. .\
+=\_t_/=   __
+ /   \   (
+((   ))   )
+/\) (/\  /
+\  Y  /-'
+ nn^nn
+</pre
+    >
+
+    <script>
+      mouse.tabIndex = 0;
+
+      mouse.onclick = function () {
+        this.style.left = this.getBoundingClientRect().left + "px";
+        this.style.top = this.getBoundingClientRect().top + "px";
+
+        this.style.position = "fixed";
+      };
+
+      mouse.onkeydown = function (e) {
+        switch (e.key) {
+          case "ArrowLeft":
+            this.style.left =
+              parseInt(this.style.left) - this.offsetWidth + "px";
+            return false;
+          case "ArrowUp":
+            this.style.top =
+              parseInt(this.style.top) - this.offsetHeight + "px";
+            return false;
+          case "ArrowRight":
+            this.style.left =
+              parseInt(this.style.left) + this.offsetWidth + "px";
+            return false;
+          case "ArrowDown":
+            this.style.top =
+              parseInt(this.style.top) + this.offsetHeight + "px";
+            return false;
+        }
+      };
     </script>
   </body>
 </html>
