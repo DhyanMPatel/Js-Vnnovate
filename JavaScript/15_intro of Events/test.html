@@ -1,107 +1,129 @@
-<!-- Calculate Deposit and update on each input change -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Event and Method</title>
+  </head>
+  <body>
+    <form onsubmit="alert('submit!');return false">
+      First: Enter in the input field <input type="text" value="text!" /><br />
+      Second: Click "submit": <input type="Submit" value="Submit" /><br />
+      Third: Click 'Image': <input type="image" src="image.png" alt="Submit" />
+    </form>
+
+    <script>
+      let form = document.createElement("form");
+
+      form.innerHTML = '<input name="q" value="This will Search">';
+
+      form.method = "GET";
+      form.action = "https://google.com/search";
+
+      document.body.append(form);
+
+      setTimeout(() => form.submit(), 1000);
+    </script>
+  </body>
+</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experiment</title>
-    <style>
-      td select,
-      td input {
-        width: 150px;
-      }
-
-      #diagram td {
-        vertical-align: bottom;
-        text-align: center;
-        padding: 10px;
-      }
-
-      #diagram div {
-        margin: auto;
-      }
-    </style>
   </head>
   <body>
-    Deposit calculator.
+    <h2>Click the button below</h2>
 
-    <form name="calculator">
-      <table>
-        <tr>
-          <td>Initial deposit</td>
-          <td>
-            <input name="money" type="number" value="10000" required />
-          </td>
-        </tr>
-        <tr>
-          <td>How many months?</td>
-          <td>
-            <select name="months">
-              <option value="3">3 (minimum)</option>
-              <option value="6">6 (half-year)</option>
-              <option value="12" selected>12 (one year)</option>
-              <option value="18">18 (1.5 years)</option>
-              <option value="24">24 (2 years)</option>
-              <option value="30">30 (2.5 years)</option>
-              <option value="36">36 (3 years)</option>
-              <option value="60">60 (5 years)</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>Interest per year?</td>
-          <td>
-            <input name="interest" type="number" value="5" required />
-          </td>
-        </tr>
-      </table>
-    </form>
+    <input type="button" value="Click to show the form" id="show-button" />
 
-    <table id="diagram">
-      <tr>
-        <th>Was:</th>
-        <th>Becomes:</th>
-      </tr>
-      <tr>
-        <th id="money-before"></th>
-        <th id="money-after"></th>
-      </tr>
-      <td>
-        <div style="background: red; width: 40px; height: 100px"></div>
-      </td>
-      <td>
-        <div
-          style="background: green; width: 40px; height: 0"
-          id="height-after"
-        ></div>
-      </td>
-    </table>
+    <div id="prompt-form-container">
+      <form id="prompt-form">
+        <div id="prompt-message"></div>
+        <input name="text" type="text" />
+        <input type="submit" value="Ok" />
+        <input type="button" name="cancel" value="Cancel" />
+      </form>
+    </div>
     <script>
-      let form = document.forms.calculator;
+      // Show a half-transparent DIV to "shadow" the page
+      // (the form is not inside, but near it, because it shouldn't be half-transparent)
+      function showCover() {
+        let coverDiv = document.createElement("div");
+        coverDiv.id = "cover-div";
 
-      form.money.oninput = calculate;
-      form.months.onchange = calculate;
-      form.interest.oninput = calculate;
+        // make the page unscrollable while the modal form is open
+        document.body.style.overflowY = "hidden";
 
-      function calculate() {
-        let initial = +form.money.value;
-        if (!initial) return;
-
-        let interest = form.interest.value * 0.01;
-        if (!interest) return;
-
-        let years = form.months.value / 12;
-        if (!years) return;
-
-        let result = Math.round(initial * (1 + interest) ** years);
-
-        let height = (result / form.money.value) * 100 + "px"; // 100 which should same as height of green div.
-        document.getElementById("height-after").style.height = height;
-        document.getElementById("money-before").innerHTML = form.money.value;
-        document.getElementById("money-after").innerHTML = result;
+        document.body.append(coverDiv);
       }
 
-      calculate();
+      function hideCover() {
+        document.getElementById("cover-div").remove();
+        document.body.style.overflowY = "";
+      }
+
+      function showPrompt(text, callback) {
+        showCover();
+        let form = document.getElementById("prompt-form");
+        let container = document.getElementById("prompt-form-container");
+        document.getElementById("prompt-message").innerHTML = text;
+        form.text.value = "";
+
+        function complete(value) {
+          hideCover();
+          container.style.display = "none";
+          document.onkeydown = null;
+          callback(value);
+        }
+
+        form.onsubmit = function () {
+          let value = form.text.value;
+          if (value == "") return false; // ignore empty submit
+
+          complete(value);
+          return false;
+        };
+
+        form.cancel.onclick = function () {
+          complete(null);
+        };
+
+        document.onkeydown = function (e) {
+          if (e.key == "Escape") {
+            complete(null);
+          }
+        };
+
+        let lastElem = form.elements[form.elements.length - 1];
+        let firstElem = form.elements[0];
+
+        lastElem.onkeydown = function (e) {
+          if (e.key == "Tab" && !e.shiftKey) {
+            firstElem.focus();
+            return false;
+          }
+        };
+
+        firstElem.onkeydown = function (e) {
+          if (e.key == "Tab" && e.shiftKey) {
+            lastElem.focus();
+            return false;
+          }
+        };
+
+        container.style.display = "block";
+        form.elements.text.focus();
+      }
+
+      document.getElementById("show-button").onclick = function () {
+        showPrompt("Enter something<br>...smart :)", function (value) {
+          alert("You entered: " + value);
+        });
+      };
     </script>
   </body>
 </html>
