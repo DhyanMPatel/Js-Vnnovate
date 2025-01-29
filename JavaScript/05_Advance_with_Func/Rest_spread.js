@@ -43,4 +43,5 @@ console.log({ ...str }); // Object formate
 let copyArr1 = [...arr1];
 console.log(copyArr1 === arr1); /// Return - false
 console.log(JSON.stringify(copyArr1) === JSON.stringify(arr1)); // Return - true
+console.log(Array.isArray(copyArr1)); // Return - true
 */

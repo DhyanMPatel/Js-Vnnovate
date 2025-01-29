@@ -205,7 +205,7 @@ console.log( formatRelativeDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 min
 // yesterday's date like 31.12.16 20:00
 console.log( formatRelativeDate(new Date(new Date - 86400 * 1000)) );
 
-function formateRelativeDate(date){
+function formatRelativeDate(date){
   let diff = new Date() - date;
 
   if(diff < 1000){

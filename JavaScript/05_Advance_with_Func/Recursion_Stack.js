@@ -89,9 +89,9 @@ console.log(Linked_list2);
 //      - but when we want queue, or even deque
 */
 
-/// Examples
+/// Experiments
 
-// Sum of all number
+//    1) Sum of all number
 function sumTo(n) {
   let sum = 0;
   if (n == 1) return 1;
@@ -101,7 +101,7 @@ function sumTo(n) {
 }
 // console.log(sumTo(5));
 
-// Fectorial Calculation
+//    2) Fectorial Calculation
 function FectorialCal(n) {
   let total = 0;
   if (n == 1) return 1;
@@ -110,7 +110,7 @@ function FectorialCal(n) {
 }
 // console.log(FectorialCal(5));
 
-// Fibonacci Number
+//    3) Fibonacci Number
 function fibonacci(n) {
   if (n == 1 || n == 0) {
     return 1;
@@ -120,7 +120,7 @@ function fibonacci(n) {
 }
 // console.log(fibonacci(10));
 
-///
+///   4) Output a single-linked list
 let list = {
   value: 1,
   next: {
@@ -140,4 +140,4 @@ function printList(list) {
     printList(list.next);
   }
 }
-printList(list);
+// printList(list);

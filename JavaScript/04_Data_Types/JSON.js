@@ -81,7 +81,7 @@ let meetup = {
   room,
 };
 
-console.log(JSON.stringify(meetup));
+console.log(JSON.stringify(meetup,null,2));
 */
 
 /*
