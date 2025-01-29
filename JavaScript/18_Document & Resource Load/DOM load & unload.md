@@ -140,10 +140,10 @@ if (document.readyState == "loading") {
 
 - The typical output:
 
-  [1] initial readyState:loading
-  [2] readyState:interactive
-  [2] DOMContentLoaded
-  [3] iframe onload
-  [4] img onload
-  [4] readyState:complete
-  [4] window onload
+  - [1] initial readyState:loading
+  - [2] readyState:interactive
+  - [2] DOMContentLoaded
+  - [3] iframe onload
+  - [4] img onload
+  - [4] readyState:complete
+  - [4] window onload
