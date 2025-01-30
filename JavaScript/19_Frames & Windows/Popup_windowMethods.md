@@ -4,7 +4,7 @@
 
 - Most browsers block popups if they are called outside of user-triggered event handlers like `onclick`.
 
-## window.popup
+## window.open
 
 - Syntax
 

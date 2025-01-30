@@ -8,37 +8,26 @@ Today Learning:
 3. Binary data & files
 
 Work done:
-Date: 29 Jan 2025
-Day: Wednesday
+Date: 30 Jan 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
-1. Focusing: focus/blur
+1. Popups & Window Methods
 
-   - in this i learn about `autofocus` behaviour, `focus` and `blur` when element call/loss focus.
-   - Also there is method `focus()` & `blur()` to focus on Element.
-   - `TabIndex` that help to element get focus in order.
-   - `focusin` & `focusout` for Delegation.
+- From this topic i learn about Popups they are triggered through event handlers.
+- also lear about `window.open()`, Accessing popup from window and Accessing window from popup, `window.close()`
+- Also learn Moving, Resizing, Scrolling, focus and Blue of popup window.
 
-2. Events: Change, Input, Cut, Copy, Paste
+2. Cross Window Comunication
 
-   - From this topic i learn about different Events in form like `Change`, `Input`, `Cut`, `Copy`, `Paste`.
+- Here i learn how same site origin and different origin comunication
+- Know about window.frames, sandbox, postMessage, onMessage(event).
 
-3. Submit Event and Method
+3. ClickJaking
 
-   - To submit form there are 2 way `onSubmit` event and `submit()` method.
+- Here i Learn about clickJaking, Also x-frame-Option, samesite cookie attribute.
 
-4. DOMContentLoaded, load, unload
+4. Array Buffer
 
-   - From this topic i learn about `Lifecycle of HTML page`
-   - learn about `DOMContentLoaded`, `window.onload`, `window.onunload`, `window.onbeforeunload` events.
-   - Also learn about `document.readyState` property and `readystatechange` Event.
-
-5. Async & Defer with Script
-
-   - From this topic i learn how many ways to implement `Script` like simple, with defer, with async, Dynamically.
-
-6. Resource Loading
-   - From this topic i learn about how Windows allow access to track External Resource.
-   - To track use onload and onerror events.
-   - Also know about Crossorigin Policy.
+- From this topic i learn about ArrayBuffer, TypedArray, DataView.
