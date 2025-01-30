@@ -3,43 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Popup and Windows Methods</title>
+    <title>onMessage in Cross window communication</title>
   </head>
   <body>
-    <button id="button">click</button>
     <script>
-      /*
-      /// Will block
-      window.open("https://javascript.info/");
-
-      let params =
-          "menubar=no,toolbar=no,scrollbar=no,location=no,resizable=no,status=no,width=600,height=300,left=100,top=100";
-      button.onclick = function () {
-        window.open("https://javascript.info/", `test`, params);
-      };
-      */
-
-      /*
-      let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=600,height=300,left=100,top=100`;
-
-      button.onclick = function () {
-        window.open("https://javascript.info/", `test`, params);
-      };
-      */
-
-      let newWindow = open(
-        "https://javadcript.info",
-        "example",
-        "width=500,height=500"
-      );
-      newWindow.focus();
-
-      alert(newWindow.location.href); // (*) about:blank, loading hasn't started yet
-
-      newWindow.onload = function () {
-        let html = `<div style="font-size:30px">Welcome!</div>`; // this will write at start
-        newWindow.document.body.insertAdjacentHTML("afterbegin", html);
-      };
+      /// onMessage - asume that this is popup window
+      document.addEventListener("message", function (event) {
+        console.log(`origin: ${event.origin}, data: ${event.data}`);
+      });
     </script>
   </body>
 </html>
