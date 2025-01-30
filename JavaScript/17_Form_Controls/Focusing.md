@@ -85,3 +85,27 @@ input.onblur = function () {
 
 - Events `focus` and `blur` do not bubble. Can use capturing state `true`.
 - But using `focusin` & `focusout` events – exactly the same as `focus/blur`, but they bubble.
+
+```html
+<form id="form">
+  <input type="text" name="name" value="Name" />
+  <input type="text" name="surname" value="Surname" />
+</form>
+
+<style>
+  .focused {
+    outline: 1px solid red;
+  }
+</style>
+
+<script>
+  // put the handler on capturing phase (last argument true)
+  form.addEventListener("focus", () => form.classList.add("focused"), true);
+  form.addEventListener("blur", () => form.classList.remove("focused"), true);
+</script>
+
+<script>
+  form.addEventListener("focusin", () => form.classList.add("focused"));
+  form.addEventListener("focusout", () => form.classList.remove("focused"));
+</script>
+```
