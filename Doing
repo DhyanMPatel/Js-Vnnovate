@@ -13,39 +13,32 @@ Day: Wednesday
 
 Today, I am working on below list of task:
 
-1. Mouse Events
+1. Focusing: focus/blur
 
-   - know about Mouse Event types like `mousedown/up/over/out/move`, `click`, `dblclick`, `contextmenu` also mouseenter/leave.
-   - Know about Modifiers like shiftKey, altKey, ctrlKey, metaKey.
-   - Events `mouseenter/leave` are like `mouseover/out`.
-   - there is a catch we can't use Event Delegation with `mouseenter/leave`.
+   - in this i learn about `autofocus` behaviour, `focus` and `blur` when element call/loss focus.
+   - Also there is method `focus()` & `blur()` to focus on Element.
+   - `TabIndex` that help to element get focus in order.
+   - `focusin` & `focusout` for Delegation.
 
-2. Drag & Drop
+2. Events: Change, Input, Cut, Copy, Paste
 
-   - Drag & Drop use Algorithm like: `mousedown` -> `mousemove` -> `mouseup`.
-   - there is also another events like `dragstart` & `dragend`.
+   - From this topic i learn about different Events in form like `Change`, `Input`, `Cut`, `Copy`, `Paste`.
 
-3. Pointer Events
+3. Submit Event and Method
 
-   - In this topic i learn about `Pointer Events` which is same a `Mouse Events` but there is more events
-     in `Pointer<event>`.
-   - there are `pointerId`, `pointerType`, `isPrimary`, `width`, `Height`, `Pressure`, `tiltX`, `tiltY`, `twist` such properties.
-   - By the way pointer Events support `Multi-touch` through `isPrimary` and `pointerId` properties.
-   - Learn about `pointer Capturing`.
+   - To submit form there are 2 way `onSubmit` event and `submit()` method.
 
-4. Keyboad Events
+4. DOMContentLoaded, load, unload
 
-   - I learn about Keyboad events like `keydown`, `keyup`.
-   - During the event there is properties like `key`, `code`, `repeat` help to know about pressed key.
-   - there are 3 types of keys like letter keys, digit keys, special keys. but there is no any key for `fn`.
+   - From this topic i learn about `Lifecycle of HTML page`
+   - learn about `DOMContentLoaded`, `window.onload`, `window.onunload`, `window.onbeforeunload` events.
+   - Also learn about `document.readyState` property and `readystatechange` Event.
 
-5. Scrolling
+5. Async & Defer with Script
 
-   - I learn about `scroll` Event.
+   - From this topic i learn how many ways to implement `Script` like simple, with defer, with async, Dynamically.
 
-6. Form and Controls
-
-   - Learn about `document.forms` property and their `elements` property.
-   - `element.form` using we can access that form tag/node.
-   - Aslo learn about form elements like `input` , `textarea`, `select`.
-   - `new Option()` we can create Option.
+6. Resource Loading
+   - From this topic i learn about how Windows allow access to track External Resource.
+   - To track use onload and onerror events.
+   - Also know about Crossorigin Policy.

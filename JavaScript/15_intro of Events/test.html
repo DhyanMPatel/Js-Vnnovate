@@ -1,31 +1,101 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resource Loading: onload & onerror</title>
+  </head>
+  <body>
+    <script>
+      /*
+      /// onload
+      let script = document.createElement("script");
+      script.src =
+        "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js";
+      document.body.append(script);
+
+      script.onload = function () {
+        // Script will create '_'.
+        alert(_.VERSION);
+      };
+      */
+
+      /*
+      /// onerror
+      let script = document.createElement("script");
+      script.src = "https://example.com/404.js"; // no such script
+      document.body.append(script);
+
+      script.onerror = function () {
+        alert(`Error:  ${this.src}`);
+      };
+      */
+
+      /*
+      /// for <img>
+      let img = document.createElement("img");
+      img.src = "https://js.cx/clipart/train.gif";
+
+      img.onload = function () {
+        alert(`Image loaded, size ${img.width}x${img.height}`);
+      };
+      img.onerror = function () {
+        alert("Error occurred while loading image");
+      };
+      */
+    </script>
+  </body>
+</html> -->
+
+<!-- Experiment -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOMContentLoaded, load & unload</title>
+    <title>load Images with callback</title>
   </head>
   <body>
-    <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0" />
     <script>
-      function ready() {
-        alert("DOM is ready");
+      let sources = [
+        "https://en.js.cx/images-load/1.jpg",
+        "https://en.js.cx/images-load/2.jpg",
+        "https://en.js.cx/images-load/3.jpg",
+      ];
 
-        // image is not yet loaded (unless it was cached), so the size is 0x0
-        alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+      function preloadImages(sources, callback) {
+        let counter = 0;
+
+        for (let source of sources) {
+          let img = document.createElement("img");
+          img.onload = img.onerror = onLoad;
+          img.src = source;
+          document.body.append(img);
+        }
+        function onLoad() {
+          counter++;
+          if (counter == sources.length) callback();
+        }
       }
 
-      document.addEventListener("DOMContentLoaded", ready);
+      // add random characters to prevent browser caching
+      for (let i = 0; i < sources.length; i++) {
+        sources[i] += "?" + Math.random();
+      }
 
-      window.onbeforeunload = function () {
-        return false;
-      };
+      function testLoaded() {
+        let widthSum = 0;
+        for (let i = 0; i < sources.length; i++) {
+          let img = document.createElement("img");
+          img.src = sources[i];
+          widthSum += img.width;
+          document.body.append(img);
+        }
 
-      console.log(document.readyState);
+        alert(widthSum);
+      }
 
-      document.addEventListener("readystatechange", () =>
-        console.log(document.readyState)
-      );
+      preloadImages(sources, testLoaded);
     </script>
   </body>
 </html>
