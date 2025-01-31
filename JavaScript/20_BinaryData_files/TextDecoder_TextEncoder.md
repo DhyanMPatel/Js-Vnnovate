@@ -21,3 +21,13 @@
 # TextEncoder
 
 - convert `String` to `Byte`.
+
+  ```js
+  let encoder = new TextEncoder();
+
+  let encoding = encoder.encode(str);
+
+  let uint8Array = new Uint8Array(10);
+
+  let encodingInto = encoder.encodeInto(str, uint8Array);
+  ```
