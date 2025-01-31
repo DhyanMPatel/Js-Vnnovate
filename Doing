@@ -13,21 +13,35 @@ Day: Friday
 
 Today, I am working on below list of task:
 
-1. Popups & Window Methods
+1. TextDecoder & TextEncoder
 
-- From this topic i learn about Popups they are triggered through event handlers.
-- also lear about `window.open()`, Accessing popup from window and Accessing window from popup, `window.close()`
-- Also learn Moving, Resizing, Scrolling, focus and Blue of popup window.
+   - From this Topic i learn about encoding and decoding using `decoder.decode()`, `encoder.encode()`.
 
-2. Cross Window Comunication
+2. Blob
 
-- Here i learn how same site origin and different origin comunication
-- Know about window.frames, sandbox, postMessage, onMessage(event).
+   - From this topic i learn about blob(binary large Object) use to store large binary data like image,text,video, etc.
+   - also we can use blob as URL using `URL.createObjectURL()`. And using `fileReader` Object we can conver Blob to Base64.
+   - also i know about `Blob to ArrayBuffer` and `Blog to Stream`.
 
-3. ClickJaking
+3. File and FileReader
 
-- Here i Learn about clickJaking, Also x-frame-Option, samesite cookie attribute.
+   - `file` Obj inherits from `blob`, so same as blob Object we can create file.
+   - `fileReader` main purpose is reading data from `blob` using Methods like `readArrayBuffer(blob)`, `readAsText(blob)`, `abort()`.
+   - for Reading process there are events like: `loadstart`, `progress`, `load`, `aboat`, `error`, `loadend`.
 
-4. Array Buffer
+4. Cookie
 
-- From this topic i learn about ArrayBuffer, TypedArray, DataView.
+   - using `document.cookie` can create Cookie. this is `name=value` pair.
+   - Also learn about attributes like `domain`, `path`, `expire & max-age`, `secure`, `samesite`, `httpOnly`.
+
+5. LocalStorage & SessionStorage
+
+   - From this topic i learn about LocalStorage and SessionStorage also learn about their methods like `setItem()`, `getItem()`, `removeItem()`, `clear()`, `key(index)`, `length`.
+
+6. Regular Expression
+   - I learn about Anchors like `^`, `$`.
+   - char classes like `\d`,`\D`,`\s`, `\S`, `\w`, `\W`. `.`
+   - pattern and flag like `i,g,m,s,u,y`
+   - Quentifiers like {n}
+   - set and Range fot multi options
+   - Word Boundary `\b`, to check boundary of word.
