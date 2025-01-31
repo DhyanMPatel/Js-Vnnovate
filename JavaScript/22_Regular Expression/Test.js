@@ -19,14 +19,22 @@ console.log(nothing); // Return - null
 console.log(str.replace(/we/i, "I")); // Return - I will, we will rock you
 
 console.log(str.replace(/rock/i, "$& Odd")); // Return - We will, we will rock Odd you
-console.log(str.replace(/rock/i, "$` Odd")); // Return - We will, we will We will, we will  Odd you
+console.log(str.replace(/rock/i, "Odd $`")); // Return - We will, we will We will, we will  Odd you
 console.log(str.replace(/rock/i, "$' Odd")); // Return - We will, we will  you Odd you
+
 */
 
 /// Testing
 let regexp = /Rock/i;
 
-alert(regexp.test(str)); // true
+console.log(regexp.test(str)); // true
 
+///     Experiments
+console.log("John Doe".replace(/(\w+) (\w+)/, "$2 $1")); // Return - Doe John
 
-
+const str1 = "My email is test@example.com";
+const result = str1.replace(
+  /(\w+)@(\w+)\.(\w+)/,
+  "User: $1, Domain: $2, TLD: $3"
+);
+console.log(result); // Output: "My email is User: test, Domain: example, TLD: com"
