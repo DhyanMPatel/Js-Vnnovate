@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage & SessionStorage</title>
+  </head>
+  <body>
+    <script>
+      /*
+      localStorage.setItem("Vnn", 15);
+      alert(localStorage.getItem("Vnn"));
+      alert(localStorage.key(0));
+      alert(localStorage.length);
+
+      setTimeout(() => localStorage.removeItem("Vnn"), 1500);
+
+      setTimeout(() => localStorage.clear(), 2000);
+      */
+
+      sessionStorage.setItem("Vnn", 15);
+      alert(sessionStorage.getItem("Vnn")); // Return - 15
+      alert(sessionStorage.key(0)); // Return - Vnn
+      alert(sessionStorage.length); // Return - 1
+
+      setTimeout(() => sessionStorage.removeItem("Vnn"), 1500);
+
+      setTimeout(() => sessionStorage.clear(), 2000);
+
+      /*
+      /// Data Must be String
+      let user = { name: "Dhyan", age: 25 };
+      sessionStorage.setItem("user", JSON.stringify(user));
+
+      let parseruser = JSON.parse(sessionStorage.getItem("user"));
+      console.log(parseruser.name); // Return - Dhyan
+      */
+
+      // Storage Events
+      window.onstorage = (event) => {
+        console.log(event.key);
+        console.log(event.oldValue);
+        console.log(event.newValue);
+        console.log(event.storageArea);
+        console.log(event.url);
+      };
+    </script>
+  </body>
+</html>
