@@ -8,5 +8,33 @@
   <body>
     <a download="hello.txt" href="#" id="link">Download</a>
     <script src="./Test.js"></script>
+
+    <input type="file" onchange="showFile(this)" />
+
+    <script>
+      function showFile(input) {
+        let file = input.files[0];
+
+        alert(`File name: ${file.name}`); // e.g alien-svgrepo-com.svg
+        alert(`Last modified: ${file.lastModified}`); // e.g 1737607266416
+      }
+    </script>
+
+    <input type="file" onchange="readFile(this)" />
+    <script>
+      function readFile(input) {
+        let file = input.files[0];
+        let reader = new FileReader();
+
+        reader.readAsText(file);
+
+        reader.onload = function () {
+          console.log(reader.result);
+        };
+        reader.onerror = function () {
+          console.log(reader.error);
+        };
+      }
+    </script>
   </body>
 </html>
