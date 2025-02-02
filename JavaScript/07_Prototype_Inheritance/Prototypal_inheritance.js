@@ -77,6 +77,7 @@ for (let prop in Admin) console.log(prop); // Return - fName, lName, isAdmin, fu
 console.log(Object.keys(Admin)); // Return - [ 'fName', 'lName', 'isAdmin', 'fullName' ]
 */
 
+/*
 /// Experiment
 let animal = {
   jumps: null,
@@ -111,3 +112,4 @@ let rabbit1 = {
 rabbit1.eat(); // recive rabbit1
 console.log(rabbit1.full); // Return - True
 console.log(animal1.full); // Return - undefined
+*/

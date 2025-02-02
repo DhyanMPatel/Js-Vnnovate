@@ -94,6 +94,7 @@ try{
 }
 */
 
+/*
 try {
   let json = '{ "age": 30 }';
   let user = JSON.parse(json); // <-- no errors
@@ -103,3 +104,4 @@ try {
 } finally{
   console.log(`Try...catch...finally complete`);
 }
+  */

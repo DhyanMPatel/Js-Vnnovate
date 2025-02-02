@@ -1,7 +1,6 @@
 /*
 /// Static Methods
 //      - Static methods aren’t available for individual objects
-//      - Static method is not for individual Object
 
 class User {
   static staticMethod() {
@@ -35,7 +34,7 @@ console.log(articles[0].title); // Return - CSS
 console.log(articles[1].title); // Return - HTML
 console.log(articles[2].title); // Return - JavaScript
 
-Article.sayHii("Vnnovate");
+Article.sayHii();
 // articles.sayHii(); // Error - articles.sayHii is not a function
 */
 
@@ -51,6 +50,7 @@ console.log(User.name); // Return - Vnn
 console.log(user.name); // Return - undefined
 */
 
+/*
 /// inheritance with Static Method/Properties
 //      - WildAnimal extends Animal create 2 type of [[Reference]]
 //          1. WildAnimal function prototypally inherites from Animal function
@@ -87,8 +87,12 @@ console.log(animals[1].name); // Return - Rabit
 animals[1].run(); // Return - Animal Rabit can run 30 km/s fast.
 
 console.log(WildAnimal.planet); // Return - Earch
+*/
+
 
 /// Experiment
+
+/*
 //      1) - static method and prototypal method both can be inherite
 class Animal {}
 class Rabbit extends Animal {}
@@ -98,7 +102,9 @@ console.log(Rabbit.__proto__ === Animal); // Return - true
 
 // for regular methods
 console.log(Rabbit.prototype.__proto__ === Animal.prototype); // Return - true
+*/
 
+/*
 //      2) -
 class Rabbit {
   constructor(name) {
@@ -109,4 +115,5 @@ class Rabbit {
 let rabbit = new Rabbit("Rab");
 
 // hasOwnProperty method is from Object.prototype
-alert(rabbit.hasOwnProperty("name")); // Return - true
+console.log(rabbit.hasOwnProperty("name")); // Return - true
+*/

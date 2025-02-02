@@ -6,7 +6,7 @@
 - when we made prototypal chain, and if we made some changes in function then that obj and their chaild obj only see the changes, remaining will not feel any changes
 - [[this]] is not affected by prototypes at all.
 - methods are shared, but the object state is not.
-- Modern JS, there is not difference whether we take a property from and Object or its prototype. means there is no any time difference. They remember where they found using caching, next time search right there where it is made.
+- Modern JS, there is not difference whether we take a property from an Object or its prototype. means there is no any time difference. They remember where they found using caching, next time search right there where it is made.
 
 ## Prototypal Inheritance
 

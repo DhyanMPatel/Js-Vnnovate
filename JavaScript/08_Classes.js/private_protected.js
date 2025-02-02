@@ -1,3 +1,4 @@
+/*
 // Protecting fields
 //      - Protected properties are usually prefixed with an underscore _.
 //      - Protected fields can be inherited.
@@ -28,8 +29,9 @@ coffee._waterAmount = 20; // Possible ?
 coffee.power = 120; // Error - there is not any set method
 
 console.log(coffee.power); // Return - 100, can only for Read
+*/
 
-/*
+
 /// Private Fields
 //      - Privates should start with #.
 //      - They are only accessible from inside the class.
@@ -48,8 +50,15 @@ class CoffeeMachine {
     this.#power = value;
   }
 }
+
+class sample extends CoffeeMachine{
+  print(){
+    console.log(this.power);
+  }
+}
 let coffee = new CoffeeMachine(2);
 console.log(coffee.power);
+let smp = new sample(3);
+console.log(smp.power);
 
 // console.log(coffee.#power); // Error- not accessible from outside
-*/

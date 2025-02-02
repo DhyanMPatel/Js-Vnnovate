@@ -1,11 +1,11 @@
 /// Extending Error
 
-// class ValidationError extends Error{
-//     constructor(message){
-//         super(message)
-//         this.name = "ValidationError"
-//     }
-// }
+class ValidationError extends Error{
+    constructor(message){
+        super(message)
+        this.name = "ValidationError"
+    }
+}
 
 /*
 function test(){
@@ -180,7 +180,7 @@ try{
     console.log(err.name); // Return - PropertyRequiredError
 }
 */
-
+/*
 /// Experiment
 class FormatError extends SyntaxError {
   constructor(message) {
@@ -199,3 +199,4 @@ try {
   console.log(err instanceof FormatError); // Return - true
   console.log(err instanceof SyntaxError); // Return - true
 }
+*/

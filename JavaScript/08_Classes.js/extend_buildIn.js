@@ -20,3 +20,7 @@ console.log(arr.isEmpty()); // Return - false
 let FilteredArr = arr.filter((item) => item > 10);
 // console.log(FilteredArr.isEmpty()); // Return - false, or Error - not a function if we use [Symbol.species] method
 console.log(FilteredArr); // Return - [30,12,18]
+
+/// Extends what provide ?
+//      - If class make any static method that will also accessible from inherit classes.
+//      - but in Buit-in Objects like Array, Map, Set, Date etc. they can't inherit static methods. Because static methods are created in perticuler Object like "Array", "Map" not in .Prototype like "Array.Prototype", "Map.Prototype", etc. and They are inherited from [[.Prototype]] means `Array.prototype`, `Map.prototype`, etc. Inshort `static methods are not inherited in Buit-in Objects`.

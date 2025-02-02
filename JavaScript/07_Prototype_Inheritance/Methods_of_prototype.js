@@ -12,8 +12,10 @@ let dog = Object.create(animal, {
     value: false,
   },
 });
+console.log(Object.getPrototypeOf(dog)); // Return - { eats: true }
 console.log(dog.jumps); // Return - false
 console.log(dog.eats); // Return - true
+console.log(animal.jumps); // Return - undefined
 */
 
 /*
@@ -57,7 +59,7 @@ for (let key in dictionary) console.log(key);
 console.log(dictionary);
 */
 
-/*
+
 //      2) - Difference between calls
 function Rabbit(name) {
   this.name = name;
@@ -72,7 +74,7 @@ rabbit.sayHi(); // Return - Rabbit
 Rabbit.prototype.sayHi(); // Return - undefined
 Object.getPrototypeOf(rabbit).sayHi(); // Return - undefined
 rabbit.__proto__.sayHi(); // Return - undefined
-*/
+
 
 /*
 /// Home work

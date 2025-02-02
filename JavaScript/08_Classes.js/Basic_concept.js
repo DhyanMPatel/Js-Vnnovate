@@ -102,7 +102,7 @@ console.log(cat.name); // Return - Cat
 new Animal("Budy").sayHi(); // Return - Hii, Budy
 */
 
-/*
+
 // bound method with class field
 class Button {
   constructor(val) {
@@ -114,7 +114,7 @@ class Button {
 }
 let btn = new Button("Btn");
 setTimeout(btn.click, 1000);
-*/
+
 
 /// Experiment
 class Clock {

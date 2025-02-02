@@ -1,5 +1,12 @@
 /// Behind the seen in InstanceOf
 
+class Rabbit {}
+let rabbit = new Rabbit();
+console.log(rabbit instanceof Rabbit); // true
+
+function Rabbit2(){}
+console.log(new Rabbit2() instanceof Rabbit2); // true
+
 /*
 ///         1)
 // setup instanceOf check that assumes that
@@ -50,6 +57,7 @@ console.log(objectToString.call(123)); // Return - [object Number]
 console.log(objectToString.call(null)); // Return - [object Null]
 */
 
+/*
 /// Symbol.toStringTag
 //      - can be customized using a special Object property
 
@@ -57,6 +65,8 @@ let user = {
   [Symbol.toStringTag]: "User",
 };
 console.log({}.toString.call(user)); // Return - [object User]
+*/
+
 /*
 // Experiment
 function Rabbit() {}
