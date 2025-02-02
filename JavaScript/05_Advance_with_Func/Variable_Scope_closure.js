@@ -57,7 +57,7 @@ function getFunc() {
 getFunc()();
 */
 
-/*
+
 /// Garbage Collection
 //      - usually, Laxical Environment is removed from the memory with all it's variable after function call finishes. because it is not reachable.
 //      - However, nested function is still reachable after  the end of funtion.
@@ -73,7 +73,7 @@ function f() {
 
 let g1 = f(); // g.[[Environment]] stores a reference to the Lexical Environment
 // of the corresponding f() call
-*/
+
 
 /// Real-life Example
 function f() {
@@ -81,13 +81,15 @@ function f() {
 
   function g() {
     debugger; // in console: type alert(value); No such variable!
+    console.log(value);
   }
 
   return g;
 }
 
-let g2 = f();
-// g();
+let g2 = f(); // While g2 function exist, the value stay in Memory
+g2 = null
+
 
 /*
 /// home Work

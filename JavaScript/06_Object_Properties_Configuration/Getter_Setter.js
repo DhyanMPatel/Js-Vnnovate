@@ -9,28 +9,29 @@
 //      - property can be either an accessor or data property, not both.
 
 let obj = {
-  name: "Vnnovate",
+  firstName: "Vipul",
+  lastName: "Rajput",
   location: "Ahm",
   age: 19,
-  get sayHii() {
-    return `Hii, ${this.name}`;
+  get Address(){
+    return `at ${this.location}`;
   },
-  set sayHii(value) {
-    this.name = value;
-  },
+  set Address(value){
+    this.location = value;
+  }
 };
-obj.name = "Vnn";
-console.log(obj.sayHii);
+obj.Address = "Surat";
+console.log(obj.Address); // Return - at Surat
 
 Object.defineProperty(obj, "fullName", {
   get() {
-    return `${this.name} at ${this.location}`;
+    return `${this.firstName} ${this.lastName}`;
   },
   set(value) {
-    [this.name, this.location] = value.split(" ");
+    [this.firstName, this.lastName] = value.split(" ");
   },
 });
-obj.fullName = "Vnn Ahm";
+obj.fullName = "Dhyan Patel";
 console.log(obj.fullName);
 */
 

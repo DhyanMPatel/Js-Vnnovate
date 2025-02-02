@@ -5,6 +5,8 @@
 //      - this function always execute with "new" keyword
 //      - Generally constructor do not have return statement.
 //      - Their task is to write all necessary stuf into this.
+//      - use to make multiple similer Objects.
+//      - There are other functions like Date, Set, 
 
 function User(name, age) {
   // this = {};   (Implicitly)

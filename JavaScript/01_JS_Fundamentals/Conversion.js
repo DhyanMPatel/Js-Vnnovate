@@ -2,7 +2,7 @@
 
 let age = 13
 let str = String(age)
-// console.log(typeof value)
+// console.log(typeof str)
 
 
 /// NUMBER

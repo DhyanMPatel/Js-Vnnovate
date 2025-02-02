@@ -5,6 +5,10 @@
 //      - based on pertiqular properties
 //      - if we overrite available properties using defineProperty() then only name will be change not WEC value.
 //      - Flags worked in Strict mode only.
+//      - There are 3 Types of Flags
+//          1. Writable - if true then we can change value, otherwise not.
+//          2. Enumerable - if true then we can see in loops, otherwise not.
+//          3. Configurable - if true then we can delete, modify, etc. otherwise not.
 
 // Access those Flags
 //      - Syntax -> let descriptor = Object.getOwnPropertyDescriptor(obj, propertyName)
@@ -55,7 +59,7 @@ console.log(JSON.stringify(descriptor));
 let user = {
   name: "vnn",
   toString() {
-    return this.name;
+    return `Name: ${this.name}`;
   },
 };
 for (let key in user) console.log(`Key: ${key}`);
@@ -111,7 +115,7 @@ console.log(obj);
 */
 
 /*
-/// Object.getOwnPropertyDescriptor - use to get all property descriptor at once
+/// Object.getOwnPropertyDescriptors - use to get all property descriptor at once
 let obj = {
   name: "Vnnovate",
 };

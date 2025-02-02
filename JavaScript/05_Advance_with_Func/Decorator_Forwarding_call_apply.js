@@ -104,9 +104,9 @@ let print = {
   },
 };
 function hash(args) {
-  //   return `${(args[0], args[1])}`; // work only for 2 arguments
+  return `${(args[0], args[1])}`; // work only for 2 arguments
   // or
-  return [].join.call(arguments); // "Borrowing" - borrow `[].join` from array and use `[].join.call()`
+  // return [].join.call(arguments); // "Borrowing" - borrow `[].join` from array and use `[].join.call()`
 }
 
 print.sayHii = cachingDecorator(print.sayHii, hash);

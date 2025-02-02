@@ -13,7 +13,7 @@ console.log(Array.isArray({})); // Return - false
 /*
 /// Splice - can remove, modify & replace
 //      - arr.splice(start, elements, ...added_value)
-        - Nagative indexing is allow
+//      - Nagative indexing is allow
 let splices = arr.splice(
   1,
   1,

@@ -5,7 +5,7 @@
 //      - Can’t be called with new
 //      - They also don’t have super
 
-/*
+
 let group = {
   sayHii: "Hii",
   students: ["Dhyan", "Raj", "Rahul", "Smit"],
@@ -23,7 +23,7 @@ let group = {
 
 group.showList();
 group.showListReg(); // "this" return "undefined", "this.sayHii" refer provided arr "this.students"
-*/
+
 
 // do not have "arguments"
 
@@ -46,7 +46,9 @@ sayHiiRag("Vnn");
 //      - Arrow Function
 function deferArrow(f, ms) {
   return function () {
-    setTimeout(() => f.apply(this, arguments), ms);
+    setTimeout(() => f.bind(this, arguments), ms);
+    // or
+    // setTimeout(() => f.call(this, ...arguments),ms); // possible
   };
 }
 let sayHiiArrow = deferArrow(sayHii, 2000);

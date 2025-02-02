@@ -51,11 +51,12 @@ function sayHii(parse) {
 let funcUser = sayHii.bind(user);
 funcUser(); // Return - "Hii, Vnn. undefined Again."
 funcUser("Dhyan"); // Return  - "Hii, Vnn. Dhyan Again."
-setTimeout(funcUser, 800); // Return - "Hii, Vnn. undefined Again."
+setTimeout(()=>funcUser("Dhy"), 800); // Return - "Hii, Vnn. Dhy Again."
+
 
 let objUser = user.sayBye.bind(user);
 objUser("!"); // Return - "Bye, Vnn!"
-setTimeout(objUser, 1000); // Return - "Bye, Vnnundefined"
+setTimeout(()=>objUser("?"), 1000); // Return - "Bye, Vnn?"
 user = { // this is reassign of user properties
   name:"This is another", // name now changed to "This is another" otherwise "undefined" if we not define.
   sayBye() {
@@ -91,9 +92,9 @@ triple(3); // Return - 9, == mul(3,3)
 triple(10); // Return - 30, == mul(3,10)
 */
 
-/*
+
 /// Experiment
-//      1)
+//      1) what will be the output of `user.g()`?
 function f() {
   console.log(this); // ?
 }
@@ -102,7 +103,7 @@ let user = {
 };
 user.g(); // Return - null, use "use strict" at top
 
-//      2)
+//      2) Can't change "this" by Additional Binding.
 function f() {
   console.log(this.name);
 }
@@ -110,17 +111,49 @@ foo = f.bind({ name: "Vnnovate" }).bind({ name: "Vnn" }); // Can't change "This"
 
 foo(); // Return - Vnnovate
 
-//      3)
+//      3) after binding, what will be the output of `sayHi.test` and `bound.test`? '5' and 'undefined' why?
 function sayHi() {
   console.log(this.name);
 }
 sayHi.test = 5;
-let bound = sayHi.bind({
+let bound = sayHi.bind({  // "Bound" function is created by binding to {name: "Vnn"} only
   name: "Vnn",
 });
 console.log(sayHi.test); // return - 5
 console.log(bound.test); // during binding with sayHi we not pass test only passed name
-*/
+
+//      4)Bind function with object Methods?
+function askPassword(ok, fail){
+  let password = "Vnnovate";
+  if(password == "Vnnovate") ok();
+  else fail();
+}
+let binding = {
+  name: "Vnnovate",
+  login: function (){
+    console.log(`${this.name} logged in`);
+  },
+  loginfail: function (){
+    console.log(`${this.name} failed to log in`);
+  }
+}
+askPassword(()=> binding.login(), ()=> binding.loginfail());
+askPassword(binding.login.bind(binding), binding.loginfail.bind(binding));
+
+//      5) Partical application for login?
+function askPassword(ok, fail){
+  let password = "Vnnovate";
+  if(password == "Vnnovate") ok();
+  else fail();
+}
+let partialBinding = {
+  name: 'Vnnovate',
+  login(result){
+    console.log(`${this.name} ${result ? "Logged in" : "Falied to log in"}`);
+  }
+}
+askPassword(()=> binding.login(true), ()=> binding.login(false));
+askPassword(partialBinding.login.bind(partialBinding, true), partialBinding.login.bind(partialBinding, false));
 
 /*
 /// HomeWork
