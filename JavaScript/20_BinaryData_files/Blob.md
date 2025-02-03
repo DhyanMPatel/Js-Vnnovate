@@ -12,6 +12,16 @@
   let blob = new Blob(blobpart, options);
   ```
 
+  - `blobpart` - is an Array of `blob`/`ArrayBuffer`/`String` values.
+  - `options` - There are 2 Option. `Type` to show
+
+  ```js
+  // create Blob from a typed array and strings
+  let hello = new Uint8Array([72, 101, 108, 108, 111]); // "Hello" in binary form
+
+  let blob = new Blob([hello, " ", "world"], { type: "text/plain" });
+  ```
+
 - `blob.slice()`,
 
   ```js
