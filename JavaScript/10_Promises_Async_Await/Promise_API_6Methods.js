@@ -52,7 +52,7 @@ Promise.allSettled([
 /// Promise.race
 //      - Here 'first solved' and wait for that first Promise only
 //      - wait only for first stabble Promise whether it is result or error
-//      - here race means
+//      - here race means `First Come first Serve`. 
 
 Promise.race([
   new Promise((resolve) => setTimeout(() => resolve(1), 1000)),
@@ -100,10 +100,12 @@ Promise.any([
 });
 */
 
+/*
 /// Promise.resolve/reject
 
-Promise.resolve(value); // Same as - `let promise = new Promise(resolve => resolve(value));`
+Promise.resolve("value"); // Same as - `let promise = new Promise(resolve => resolve(value));`
 Promise.reject(error); // Same as - `let promise = new Promise((res,rej) => rej(err));`
+*/
 
 /*
 /// Experiment

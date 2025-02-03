@@ -50,7 +50,7 @@ new Promise((res, rej) => {
   });
 */
 
-/*
+
 /// unhandled Rejection - only for browser
 //    - An “unhandled rejection” occurs when a promise error is not handled at the end of the microtask queue.
 //    - If there is not Microtask (.catch() for catch error) then `unhandled Rejection` run and
@@ -86,7 +86,7 @@ setTimeout(
   1000 /// Must Required delay
 );
 window.addEventListener("unhandledrejection", (event) => alert(event.reason)); // Return(first) - Error: Again Promise Failed, untill catch occurs.
-*/
+
 
 /*
 /// Experiment
