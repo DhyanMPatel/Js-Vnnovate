@@ -33,6 +33,11 @@
   - Connector*Punctuation (`Pc`) – for the underscore `'*'` and similar characters,
   - Join_Control (`Join_C`) – two special codes `200c` and `200d`, used in ligatures, e.g. in Arabic.
 
+  ```js
+  let regex = /[\p{Alpha}\p{M}\p{Nd}\p{Pc}\p{join_C}]/;
+  let str = `Hi 你好 12 _c`;
+  ```
+
 # Excluding Range or Set
 
 - “excluding” ranges that look like `[^…]`. means match any character except the given ones.
@@ -42,4 +47,29 @@
 
 ```js
 alert("alice15@gmail.com".match(/[^\d\sA-Z]/gi)); // @ and .
+```
+
+# Ranges and flag "u"
+
+- If there are surrogate pairs then use `u` flag to handle them at the end of regex
+
+```js
+console.log("𝒳".match(/[𝒳𝒴]/u)); // Return - 𝒳
+```
+
+# Experiment
+
+-     1. which one will be match with `/Java[^script]/`.
+
+```js
+let regex = /Java[^script]/;
+console.log("Java".match(regex)); // Return - null
+console.log("JavaScript".match(regex)); // Return - JavaS
+```
+
+-     2. Findout Time `hh:mm` and `hh-mm`
+
+```js
+let regex = /\d\d[-:]\d\d/;
+console.log("Breakfast at 09:00. Dinner at 21-30".match(regex)); // Return - 09:00 , 21-30
 ```

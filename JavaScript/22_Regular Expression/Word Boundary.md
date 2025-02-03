@@ -5,7 +5,7 @@
 
 - There are three different positions that qualify as word boundaries:
 
-  - `at String Start` -
+  - `at String Start`
   - `Between char in the String`
   - `At String End`
 
@@ -15,4 +15,4 @@
   ```
 
 - We can use `\b` not only with words, but with digits as well.
-- Word boundary `\b` doesn’t work for non-latin alphabets
+- Word boundary `\b` doesn’t work for non-latin alphabets means doesn't work for Cryillic, Chines letters.
