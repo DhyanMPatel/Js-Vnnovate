@@ -8,21 +8,16 @@ Today Learning:
 3. know more about Regular Expression
 
 Work done:
-Date: 03 Feb 2025
-Day: Monday
+Date: 04 Feb 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
-1. IndexedDB
-
-   - Learn about INdexedDB which is DB at browser better Offlike App.
-   - using `open()` can create IndexedDB.
-   - there are table name as `ObjectStore`. and CRUD Operation in `Transaction`.
-   - Also learn about `Cursor`.
-
-2. Regular Expression
-   - Learn about Unicode flag "u" which is used for non-latin characters. and class `\p{...}` which has lots of categories also there are derived categories.
-   - Learn Set and range inside `[...]` there are also multiple language support
-   - Learn about Escaping which learn how to ignore Special Characters
-   - Learn about Quentifiers there are shorthand `+,?,*` that help to make short regex
-   - Learn about Greedy and Lazy Quentifiers where some times regex give wrong answer so can use Lazy Quentifier `?` or another method `"[^"]+"`.
+1. Regular Expression
+   - Learn about capturing group using `(...)`. There are also Named capturing, also learn about non-capturing group using `(?:...)`.
+   - Learn about BackReference by Name `\N` and by Number `\k<name>`.
+   - Learn about Alternation `|` which is same as OR but in RegExp.
+   - Learn about Lookahead `X(?=Y)`, Nagative Lookahead `X(?!Y)`, Lookbehind `(?<=Y)X`, Nagative Lookbehind `(?<!Y)X`.
+   - Learn about Stricky Flag `Y` that make indexing search strict.
+   - At last learn Methods like `str.match(reg)`, `str.matchAll(reg)`, `str.split(reg)`, `str.search(reg)`, `reg.exec(str)`, `reg.test(str)`.
+2. Revision of Advance working with function and Object Properties configuration.
