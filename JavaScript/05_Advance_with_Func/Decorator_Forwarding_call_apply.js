@@ -43,7 +43,6 @@ console.log(check(20));
 /// func.call(context, arg1, arg2, ...)
 //      - Transparent caching is defficult in Object to pass "this", that's way func.call() comes in.
 
-
 function sayHi(parse = "?") {
   console.log(`Hii, ${this.name} ${parse}`);
 }
@@ -53,7 +52,6 @@ let user2 = { name: "Vaibhav" };
 // pass Obj as "this"
 sayHi.call(user1, "!");
 sayHi.call(user2);
-
 
 /// transparent caching with Obj using func.call()
 let worker = {
@@ -86,6 +84,7 @@ console.log(worker.slow(10));
 console.log(worker.slow(10));
 */
 
+/*
 /// Multipal argument
 //  - problem is that we use Map that store like cache.set(x, result), but here is "x, y" what should do?
 //  - Solution
@@ -135,7 +134,55 @@ function cachingDecorator(func, hash) {
 //      - apply() takes Array like arguments where call() takes list of arguments
 
 // Borrowing the method
+//      - Here `join` is borrowed from Array.
 
 function hash() {
   return [].join.call(arguments); // This is called borrowing
+}
+*/
+
+///   Experiments
+/*
+//      1) Create a decorator spy(func) that should return a wrapper that saves all calls to function in its calls property.
+
+function spy(func) {
+  function wrapper(...args) {
+    wrapper.calls.push(args);
+    return func.apply(this, args);
+  }
+
+  wrapper.calls = [];
+
+  return wrapper;
+}
+
+function work(a, b) {
+  console.log(a + b); // work is an arbitrary function or method
+}
+
+work = spy(work);
+
+work(1, 3); // Return - 4
+work(2, 4); // Return - 6
+
+for (let args of work.calls) {
+  console.log("call:" + args.join()); // Return -
+}
+*/
+
+//      2) Delay Decorator
+function func(x) {
+  console.log(x);
+}
+
+let f1000 = delay(func, 1000);
+let f1500 = delay(func, 1500);
+
+f1500("Test 1500"); // Return - test 1500, after 1.5 Sec -> second display
+f1000("test 1000"); // Return - test 1000, after 1 Sec -> first display
+
+function delay(func, ms) {
+  return function () {
+    setTimeout(() => func.apply(this, arguments), ms);
+  };
 }

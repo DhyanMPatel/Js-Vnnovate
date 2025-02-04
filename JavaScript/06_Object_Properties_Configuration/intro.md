@@ -9,12 +9,15 @@
 - Display Flags
 
   ```js
-  let descriptor = Object.getOwnPropertyDescriptor(obj, propertyName)
+  let descriptor = Object.getOwnPropertyDescriptor(obj, propertyName);
+  let descriptors = Object.getOwnPropertyDescriptors(obj);
   ```
+
 - Change Flags
 
   ```js
   Object.defineProperty(obj, propertyNam, descriptor)
+  Object.defineProperties(obj,{prop1: des1, prop2: des2, ...})
   ```
 
 - Object Methods that limit access to the whole Object

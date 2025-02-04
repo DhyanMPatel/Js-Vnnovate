@@ -56,6 +56,7 @@ console.log(obj._name); // Vnntt, accessible
 console.log(obj); // Return - { name: [Getter/Setter], _name: 'Vnntt' }
 */
 
+/*
 /// for compatibility
 function User(name, birthday) {
   this.name = name;
@@ -71,3 +72,4 @@ function User(name, birthday) {
 let user1 = new User("Vnn", new Date(2004, 3, 10));
 console.log(user1.birthday); // Return - 2004-04-09T18:30:00.000Z
 console.log(user1.age); // Return - 21
+*/

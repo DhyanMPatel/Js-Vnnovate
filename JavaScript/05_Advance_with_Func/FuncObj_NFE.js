@@ -89,6 +89,7 @@ let sayHi = function func(who) {
   }
 };
 sayHi();
+sayHi("Gost")
 // func(); // Error - not defined
 
 let sayHiDefficult = function (who) {
@@ -111,7 +112,7 @@ let copySayHiDefficult = sayHiDefficult;
 copySayHiDefficult();
 */
 
-
+/*
 /// Experiment
 // make function that set counter, decrease counter
 function makeCounter() {
@@ -144,3 +145,4 @@ function sum(a) {
 }
 
 console.log(sum(10)(5)(20));
+*/

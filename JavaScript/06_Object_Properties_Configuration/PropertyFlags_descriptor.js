@@ -40,7 +40,7 @@ Object.defineProperty(user, "name", {
 });
 Object.defineProperty(user, "age", {
   value: 14,
-  enumerable: false, // If true then can see
+  enumerable: true, // If true then can see
   configurable: true,
 });
 user.name = "Vnnovate"; // Error - not Writable
@@ -124,12 +124,12 @@ console.log(Object.defineProperties({}, Object.getOwnPropertyDescriptors(obj)));
 
 /// Object Other Method
 //      - There are multiple Objects methods that limit access to the whole Object
-//          1. Object.preventExtensions(obj)
-//          2. Object.seal(obj)
-//          3. Object.freeze(obj)
-//          4. Object.isExtensible(obj)
-//          5. Object.isSeal(obj)
-//          6. Object.isFrozen(obj)
+//          1. Object.preventExtensions(obj) - forbid addition of new Properties
+//          2. Object.seal(obj) - forbid adding/removing properties, using `configurable: false`
+//          3. Object.freeze(obj) - forbid adding/removing/modify properties, using `configurable:false` and `writable:false`
+//          4. Object.isExtensible(obj) - check obj is extensible or not
+//          5. Object.isSeal(obj) - check obj is seeled or not
+//          6. Object.isFrozen(obj) - check obj is frozen or not
 
 /*
 /// Experiment

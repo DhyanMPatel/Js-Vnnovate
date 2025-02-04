@@ -67,7 +67,7 @@ console.log("Hello");
 */
 
 /// Experiment
-/// display number (from, to) in every second
+///     1) display number (from, to) in every second
 function printNum(from, to) {
   let current = from;
 
@@ -91,3 +91,13 @@ function printNum(from, to) {
 }
 printNum(1, 5);
 printNum(11, 15);
+
+/*
+///     2) What is the output of `i`?
+let i = 0;
+setTimeout(() => console.log(i), 100); // Return - 100000000
+// assume that the time to execute this function is >100ms
+for (let j = 0; j < 100000000; j++) {
+  i++;
+}
+*/

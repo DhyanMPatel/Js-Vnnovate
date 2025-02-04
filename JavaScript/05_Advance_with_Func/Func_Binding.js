@@ -1,6 +1,6 @@
 // Function Binding
 //      - When we passing Object methods as callback, there's a known problem: "Lossing This"
-//      - We loss `this` while we change any 
+//      - We loss `this` while we change any
 
 let obj = {
   name: "Vnnovate",
@@ -51,19 +51,19 @@ function sayHii(parse) {
 let funcUser = sayHii.bind(user);
 funcUser(); // Return - "Hii, Vnn. undefined Again."
 funcUser("Dhyan"); // Return  - "Hii, Vnn. Dhyan Again."
-setTimeout(()=>funcUser("Dhy"), 800); // Return - "Hii, Vnn. Dhy Again."
-
+setTimeout(() => funcUser("Dhy"), 800); // Return - "Hii, Vnn. Dhy Again."
 
 let objUser = user.sayBye.bind(user);
 objUser("!"); // Return - "Bye, Vnn!"
-setTimeout(()=>objUser("?"), 1000); // Return - "Bye, Vnn?"
-user = { // this is reassign of user properties
-  name:"This is another", // name now changed to "This is another" otherwise "undefined" if we not define.
+setTimeout(() => objUser("?"), 1000); // Return - "Bye, Vnn?"
+user = {
+  // this is reassign of user properties
+  name: "This is another", // name now changed to "This is another" otherwise "undefined" if we not define.
   sayBye() {
     console.log(`Again, Bye ${this.name}`); // This will not change value before setTimeout
   },
 };
-user.sayBye()
+user.sayBye(); // Return - Again, Bye This is another
 
 // use to bind all methods in Object
 for (let key in user) {
@@ -92,8 +92,8 @@ triple(3); // Return - 9, == mul(3,3)
 triple(10); // Return - 30, == mul(3,10)
 */
 
-
 /// Experiment
+/*
 //      1) what will be the output of `user.g()`?
 function f() {
   console.log(this); // ?
@@ -102,7 +102,9 @@ let user = {
   g: f.bind(null),
 };
 user.g(); // Return - null, use "use strict" at top
+*/
 
+/*
 //      2) Can't change "this" by Additional Binding.
 function f() {
   console.log(this.name);
@@ -110,7 +112,9 @@ function f() {
 foo = f.bind({ name: "Vnnovate" }).bind({ name: "Vnn" }); // Can't change "This" by additional binding
 
 foo(); // Return - Vnnovate
+*/
 
+/*
 //      3) after binding, what will be the output of `sayHi.test` and `bound.test`? '5' and 'undefined' why?
 function sayHi() {
   console.log(this.name);
@@ -121,7 +125,9 @@ let bound = sayHi.bind({  // "Bound" function is created by binding to {name: "V
 });
 console.log(sayHi.test); // return - 5
 console.log(bound.test); // during binding with sayHi we not pass test only passed name
+*/
 
+/*
 //      4)Bind function with object Methods?
 function askPassword(ok, fail){
   let password = "Vnnovate";
@@ -139,21 +145,30 @@ let binding = {
 }
 askPassword(()=> binding.login(), ()=> binding.loginfail());
 askPassword(binding.login.bind(binding), binding.loginfail.bind(binding));
+*/
 
+/*
 //      5) Partical application for login?
-function askPassword(ok, fail){
+function askPassword(ok, fail) {
   let password = "Vnnovate";
-  if(password == "Vnnovate") ok();
+  if (password == "Vnnovate") ok();
   else fail();
 }
 let partialBinding = {
-  name: 'Vnnovate',
-  login(result){
+  name: "Vnnovate",
+  login(result) {
     console.log(`${this.name} ${result ? "Logged in" : "Falied to log in"}`);
-  }
-}
-askPassword(()=> binding.login(true), ()=> binding.login(false));
-askPassword(partialBinding.login.bind(partialBinding, true), partialBinding.login.bind(partialBinding, false));
+  },
+};
+askPassword(
+  () => partialBinding.login(true),
+  () => partialBinding.login(false)
+);
+askPassword(
+  partialBinding.login.bind(partialBinding, true),
+  partialBinding.login.bind(partialBinding, false)
+);
+*/
 
 /*
 /// HomeWork
