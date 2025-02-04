@@ -8,7 +8,6 @@ openRequest.onsuccess = (e) => {
   let transaction = db.transaction("students", "readwrite");
   let students = transaction.objectStore("students");
 
-  /*
   /// INSERT DATA INTO INDEXED DB
   //   let request = students.add({
   //     id: 1,
@@ -21,16 +20,17 @@ openRequest.onsuccess = (e) => {
     name: "Jaymeen",
     email: "jaymeen@test.com",
   });
-  */
 
   /// GET DATA FROM INDEXED DB
   //   let request = students.get(1); // Return - data, where id=1
   //   let request = students.getAll(IDBKeyRange.bound(2, 3)); // Return - range of data, where id=2,3
   //   let request = students.getAllKeys(); // Return - range of keys only, all keys
 
+  /*
   //        CHANGE INDEXING
   let index = students.index("name");
   let request = index.get("Jaydip");
+  */
 
   request.onsuccess = (e) => {
     console.log(e.target.result); // Return - id value.

@@ -60,7 +60,7 @@
 - All Data Operation must be made withing a `Transaction` in IndexDB.
 - When all transaction requests are finished, and the `microtasks queue` is empty, it is committed automatically.
 - A failed request automatically aborts the transaction, canceling all its changes.
-- IndexedDB events bubble: `reques` -> `transaction` -> `database`.
+- IndexedDB events bubble: `request` -> `transaction` -> `database`.
 - To stop abort Transaction use `e.preventDefault()`, which is used in Event Delegation.
 - To stop bubble error use `e.stopPropogation()`, which is used in Event Delegation.
 
@@ -169,14 +169,14 @@
 
 - Cursor trigger `request.onsuccess` event multiple times: once for each result
 
-# Primise Wrapper
+# Promise Wrapper
 
 - To make simple we `Delegation` but `async/await` is much more convenient.
 
   ```js
   let db = await idb.openDB('college', 1, db => {
     if(db.oldValue == 0){
-      db.reateObjectStore('students', {keyPath: 'id'});
+      db.createObjectStore('students', {keyPath: 'id'});
     }
   });
 
