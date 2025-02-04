@@ -8,40 +8,21 @@ Today Learning:
 3. Learning more about Regular Expression
 
 Work done:
-Date: 31 Jan 2025
-Day: Friday
+Date: 03 Feb 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
-1. TextDecoder & TextEncoder
+1. IndexedDB
 
-   - From this Topic i learn about encoding and decoding using `decoder.decode()`, `encoder.encode()`.
+   - Learn about INdexedDB which is DB at browser better Offlike App.
+   - using `open()` can create IndexedDB.
+   - there are table name as `ObjectStore`. and CRUD Operation in `Transaction`.
+   - Also learn about `Cursor`.
 
-2. Blob
-
-   - From this topic i learn about blob(binary large Object) use to store large binary data like image,text,video, etc.
-   - also we can use blob as URL using `URL.createObjectURL()`. And using `fileReader` Object we can conver Blob to Base64.
-   - also i know about `Blob to ArrayBuffer` and `Blog to Stream`.
-
-3. File and FileReader
-
-   - `file` Obj inherits from `blob`, so same as blob Object we can create file.
-   - `fileReader` main purpose is reading data from `blob` using Methods like `readArrayBuffer(blob)`, `readAsText(blob)`, `abort()`.
-   - for Reading process there are events like: `loadstart`, `progress`, `load`, `aboat`, `error`, `loadend`.
-
-4. Cookie
-
-   - using `document.cookie` can create Cookie. this is `name=value` pair.
-   - Also learn about attributes like `domain`, `path`, `expire & max-age`, `secure`, `samesite`, `httpOnly`.
-
-5. LocalStorage & SessionStorage
-
-   - From this topic i learn about LocalStorage and SessionStorage also learn about their methods like `setItem()`, `getItem()`, `removeItem()`, `clear()`, `key(index)`, `length`.
-
-6. Regular Expression
-   - I learn about Anchors like `^`, `$`.
-   - char classes like `\d`,`\D`,`\s`, `\S`, `\w`, `\W`. `.`
-   - pattern and flag like `i,g,m,s,u,y`
-   - Quentifiers like {n}
-   - set and Range fot multi options
-   - Word Boundary `\b`, to check boundary of word.
+2. Regular Expression
+   - Learn about Unicode flag "u" which is used for non-latin characters. and class `\p{...}` which has lots of categories also there are derived categories.
+   - Learn Set and range inside `[...]` there are also multiple language support
+   - Learn about Escaping which learn how to ignore Special Characters
+   - Learn about Quentifiers there are shorthand `+,?,*` that help to make short regex
+   - Learn about Greedy and Lazy Quentifiers where some times regex give wrong answer so can use Lazy Quentifier `?` or another method `"[^"]+"`.
