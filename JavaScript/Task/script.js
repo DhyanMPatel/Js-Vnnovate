@@ -1,5 +1,7 @@
 let displayDiv = document.getElementById("displayDiv");
 document.onsubmit = function handleForm(e) {
+  let formDiv = document.getElementById("formDiv");
+   formDiv.style.display = 'none';
   if (displayDiv.children.length > 1) {
     console.log(localStorage.getItem("userData"));
     e.preventDefault();
@@ -66,6 +68,9 @@ function displayContent() {
     table.remove();
     remove.remove();
     edit.remove();
+    localStorage.removeItem("userData");
+    formDiv.style.display = 'block';
+    document.forms["form"].reset();
   };
 
   edit.onclick = function (e) {
@@ -74,6 +79,7 @@ function displayContent() {
     remove.remove();
     edit.remove();
     localStorage.removeItem("userData");
+    formDiv.style.display = 'block';
   };
 
   let table = content(data);
