@@ -57,8 +57,8 @@ class sample extends CoffeeMachine{
   }
 }
 let coffee = new CoffeeMachine(2);
-console.log(coffee.power);
+console.log(coffee.power); // Return - 2
 let smp = new sample(3);
-console.log(smp.power);
+console.log(smp.power); // Return - 3
 
 // console.log(coffee.#power); // Error- not accessible from outside

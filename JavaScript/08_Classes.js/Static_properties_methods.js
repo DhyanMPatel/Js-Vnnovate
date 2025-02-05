@@ -1,4 +1,4 @@
-/*
+
 /// Static Methods
 //      - Static methods aren’t available for individual objects
 
@@ -10,6 +10,8 @@ class User {
 User.staticMethod();
 
 class Article {
+  static publisher = "Vnn";
+
   constructor(title, date) {
     this.title = title;
     this.date = date;
@@ -19,7 +21,7 @@ class Article {
     return ArticleA.date - ArticleB.date;
   }
   static sayHii() {
-    console.log(`Hii, ${this.title}!`); /// Home Work - Why this return `undefined`?
+    console.log(`Hii, ${this.title} Published by ${this.publisher}!`); // Static method can access only static Properties.
   }
 }
 
@@ -34,9 +36,9 @@ console.log(articles[0].title); // Return - CSS
 console.log(articles[1].title); // Return - HTML
 console.log(articles[2].title); // Return - JavaScript
 
-Article.sayHii();
-// articles.sayHii(); // Error - articles.sayHii is not a function
-*/
+Article.sayHii(); // Return - undefined, because static method belongs to class itself not to instance of class.
+// articles[0].sayHii(); // Error - articles.sayHii is not a function
+
 
 /*
 /// Static Properties
