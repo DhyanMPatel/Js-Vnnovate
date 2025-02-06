@@ -6,16 +6,9 @@ TODO list:
 1. work on task. make form and create multiple users
 
 Work done:
-Date: 04 Feb 2025
-Day: Tuesday
+Date: 06 Feb 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
-1. Regular Expression
-   - Learn about capturing group using `(...)`. There are also Named capturing, also learn about non-capturing group using `(?:...)`.
-   - Learn about BackReference by Name `\N` and by Number `\k<name>`.
-   - Learn about Alternation `|` which is same as OR but in RegExp.
-   - Learn about Lookahead `X(?=Y)`, Nagative Lookahead `X(?!Y)`, Lookbehind `(?<=Y)X`, Nagative Lookbehind `(?<!Y)X`.
-   - Learn about Stricky Flag `Y` that make indexing search strict.
-   - At last learn Methods like `str.match(reg)`, `str.matchAll(reg)`, `str.split(reg)`, `str.search(reg)`, `reg.exec(str)`, `reg.test(str)`.
-2. Revision of Advance working with function and Object Properties configuration.
+1. Working on Task to Create Form and display users data. - in Progress
