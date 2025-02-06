@@ -1,7 +1,9 @@
 let displayDiv = document.getElementById("displayDiv");
+
 document.onsubmit = function handleForm(e) {
   let formDiv = document.getElementById("formDiv");
    formDiv.style.display = 'none';
+
   if (displayDiv.children.length > 1) {
     console.log(localStorage.getItem("userData"));
     e.preventDefault();

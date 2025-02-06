@@ -30,7 +30,7 @@
   - Alphabetic (`Alpha`) – for letters,
   - Mark (`M`) – for accents,
   - Decimal_Number (`Nd`) – for digits,
-  - Connector*Punctuation (`Pc`) – for the underscore `'*'` and similar characters,
+  - Connector_Punctuation (`Pc`) – for the underscore `'_'` and similar characters,
   - Join_Control (`Join_C`) – two special codes `200c` and `200d`, used in ligatures, e.g. in Arabic.
 
   ```js
