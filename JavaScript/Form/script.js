@@ -1,5 +1,8 @@
-let displayDiv = document.getElementById("displayDiv");
-let counter = 0;
+let users = JSON.parse(localStorage.getItem("UserData")) || [];
+// let key = localStorage.key();
+// console.log(key);
+let editData = JSON.parse(localStorage.getItem("editData"));
+console.log(editData);
 
 document.onsubmit = function handleForm(e) {
   let hobies = document.querySelectorAll('input[class="hobies"]:checked');
@@ -8,6 +11,7 @@ document.onsubmit = function handleForm(e) {
   let selectedCity = document.getElementById("city");
   let birthTime = document.getElementById("birthTime").value;
   let amPm;
+  let arrTime = birthTime.split(":");
 
   let obj = {
     firstName: document.getElementById("firstName").value,
@@ -27,23 +31,50 @@ document.onsubmit = function handleForm(e) {
     obj.hobies.push(hobie.value);
   }
 
-  let arrTime = birthTime.split(":");
-
   amPm = arrTime[0] >= 12 ? "PM" : "AM";
   if (arrTime[0] > 12) {
     arrTime[0] = String(arrTime[0] - 12);
   }
-
   obj.birthTime = `${arrTime.join(":")} ${amPm}`;
 
-  let id = "UserData" + counter;
-  counter++;
-  localStorage.setItem(id, JSON.stringify(obj));
+  localStorage.setItem("UserData", JSON.stringify(users));
 
   document.forms["form"].reset();
+
+  e.preventDefault();
 };
 
 let cancel = document.getElementById("cancel");
-cancel.onclick = function () {
+cancel.onclick = function (e) {
   document.forms["form"].reset();
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (editData) {
+    document.getElementById("firstName").value = editData.firstName;
+    document.getElementById("lastName").value = editData.lastName;
+    document.getElementById(editData.gender).checked = true;
+    for (let checked of editData.hobies) {
+      document.getElementById(checked).checked = true;
+    }
+  }
+
+  for (let add in editData.address) {
+    document.getElementById(add).value = editData.address[add];
+  }
+
+  document.getElementById("birthDate").value = editData.birthDate;
+  document.getElementById("birthTime").value = convertin24(editData.birthTime);
+});
+
+function convertin24(inputTime) {
+  let [time, period] = inputTime.split(" ");
+  let [hh, mm] = time.split(":");
+  let formatedHH = parseInt(hh);
+
+  if (period == "PM") {
+    formatedHH += 12;
+  }
+
+  return `${formatedHH}:${mm}`;
+}
