@@ -1,20 +1,21 @@
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
 }
-#div{
+#div {
   margin: 20px;
   border: 1px solid cadetblue;
   border-radius: 20px;
   width: 50%;
   justify-self: center;
 }
-#data{
+#data {
   display: flex;
   justify-self: start;
   width: 100px;
+  height: 30px;
   margin: 10px;
 }
 #formDiv {
@@ -23,7 +24,6 @@ body{
   justify-content: center;
   justify-self: center;
 }
-
 form {
   padding: 10px;
   justify-content: space-evenly;
