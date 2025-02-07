@@ -17,19 +17,21 @@ body {
   overflow: hidden;
 }
 
-th,
-td {
+thead th,
+thead td {
   padding: 12px;
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
 
-th {
+thead th {
   background-color: cadetblue;
   color: white;
   text-transform: uppercase;
 }
-
+tr:hover {
+  background-color: lightgrey;
+}
 .button {
   width: 50px;
   height: 30px;
@@ -41,4 +43,12 @@ th {
 }
 #remove {
   background-color: lightcoral;
+}
+tbody td {
+  text-align: center;
+}
+#defaultData {
+  height: 50px;
+  margin: 50px;
+  font-size: larger;
 }

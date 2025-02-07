@@ -34,10 +34,22 @@
               <th>Operations</th>
             </tr>
           </thead>
-          <tbody></tbody>
+          <tbody>
+            <tr id="defaultData">
+              <th colspan="11">There is No any data</th>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
+    <script>
+      let users = JSON.parse(localStorage.getItem("UserData"));
+      let defaultData = document.getElementById("defaultData");
+
+      if (users !== null) {
+        defaultData.style.display = "none";
+      }
+    </script>
     <script src="./display.js"></script>
   </body>
 </html>
