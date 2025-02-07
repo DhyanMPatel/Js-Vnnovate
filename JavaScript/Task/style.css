@@ -1,7 +1,23 @@
-#formDiv {
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+#div{
+  margin: 20px;
   border: 1px solid cadetblue;
   border-radius: 20px;
-  max-width: 46%;
+  width: 50%;
+  justify-self: center;
+}
+#data{
+  display: flex;
+  justify-self: start;
+  width: 100px;
+  margin: 10px;
+}
+#formDiv {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,11 +31,11 @@ form {
 form * {
   padding: 5px;
 }
-input[type="text"]{
+input[type="text"] {
   width: 90%;
   border-radius: 5px;
 }
-input[type="checkbox"]{
+input[type="checkbox"] {
   background-color: cadetblue;
 }
 .buttons {
@@ -34,35 +50,5 @@ input[type="checkbox"]{
   border-radius: 20px;
   background-color: cadetblue;
   color: white;
-  font-size: 15px;  
-}
-#displayDiv {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#displayDiv button {
-  width: 15%;
-  height: 27px;
-  margin: 0px 80px;
-  border-radius: 20px;
-  background-color: cadetblue;
-  color: white;
   font-size: 15px;
-}
-.table {
-  border-collapse: collapse;
-  width: 80%;
-  padding: 5px;
-  text-align: center;
-}
-.table td,
-.table th {
-  border: 1px solid cadetblue;
-}
-.innerTable {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 0%;
 }

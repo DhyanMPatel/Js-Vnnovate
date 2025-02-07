@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <a class="toDisplay" href="./display.html">Data</a>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="div">
+    <input type="button" id="data" onclick="todisplay()" class="button" value="Data" />
     <div id="formDiv">
       <form name="form">
         <table>
@@ -24,102 +27,43 @@
             </td>
           </tr>
           <tr id="genders">
-            <th>Gendor:</th>
+            <th>Gender:</th>
             <td>
-              <input
-                type="radio"
-                name="gender"
-                value="Male"
-                checked="checked"
-                id="male"
-              />
-              <label for="male">Male</label>
-              <input type="radio" id="female" name="gender" value="Female" />
-              <label for="female">Female</label>
-              <input
-                type="radio"
-                name="gender"
-                id="transgender"
-                value="Transgender"
-              />
-              <label for="transgender">Transgender</label>
+              <input type="radio" name="gender" , value="Male" id="Male"><label for="Male">Male</label>
+              <input type="radio" name="gender" , value="Female" id="Female"><label for="Female">Female</label>
+              <input type="radio" name="gender" , value="Transgender" id="Transgender"><label for="Transgender">Transgender</label>
             </td>
           </tr>
-          <tr id="genders">
-            <th>Hobies:</th>
+          <tr id="hobbies">
+            <th>Hobbies:</th>
             <td>
-              <input
-                id="cricket"
-                type="checkbox"
-                class="hobies"
-                name="cricket"
-                value="Cricket"
-              />
-              <label for="cricket">Cricket</label>
-              <input
-                id="football"
-                type="checkbox"
-                class="hobies"
-                name="football"
-                value="Football"
-              />
-              <label for="football">Football</label>
-              <input
-                id="cycling"
-                type="checkbox"
-                class="hobies"
-                name="cycling"
-                value="Cycling"
-              />
-              <label for="cycling">Cycling</label>
-              <input
-                id="fishing"
-                type="checkbox"
-                class="hobies"
-                name="fishing"
-                value="Fishing"
-              />
-              <label for="fishing">Fishing</label>
-              <input
-                id="swimming"
-                type="checkbox"
-                class="hobies"
-                name="swimming"
-                value="Swimming"
-              />
-              <label for="swimming">Swimming</label>
+              <input type="checkbox" name="hobbies" value="Cricket" id="Cricket"><label for="Cricket">Cricket</label>
+              <input type="checkbox" name="hobbies" value="Football" id="Football"><label for="Football">Football</label>
+              <input type="checkbox" name="hobbies" value="Reading" id="Reading"><label for="Reading">Reading</label>
+              <input type="checkbox" name="hobbies" value="Travelling" id="Travelling"><label for="Travelling">Travelling</label>
+              <input type="checkbox" name="hobbies" value="Cycling" id="Cycling"><label for="Cycling">Cycling</label>
             </td>
           </tr>
           <tr>
-            <th>Country:</th>
+            <th>Address:</th>
             <td>
-              <select id="country" required>
-                <option value="select" selected>Select</option>
-                <option value="india">India</option>
-                <option value="us">US</option>
-                <option value="uk">UK</option>
+              <select name="country" id="country" required>
+                <option value="Country" selected>Country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
               </select>
-            </td>
-          </tr>
-          <tr>
-            <th>State:</th>
-            <td>
-              <select id="state" required>
-                <option value="select" selected>Select</option>
-                <option value="gujarat">Gujarat</option>
-                <option value="cerala">Cerala</option>
-                <option value="rajastan">Rajastan</option>
+              <select name="state" id="state" required>
+                <option value="State" selected>State</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Cerala">Cerala</option>
+                <option value="Rajastan">Rajastan</option>
               </select>
-            </td>
-          </tr>
-          <tr>
-            <th>City:</th>
-            <td>
-              <select id="city" required>
-                <option value="select" selected>Select</option>
-                <option value="ahmedabad">Ahmedabad</option>
-                <option value="surat">Surat</option>
-                <option value="rajkot">Rajkot</option>
+              <select name="city" id="city" required>
+                <option value="City" selected>City</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Surat">Surat</option>
+                <option value="Vadodara">Vadodara</option>
               </select>
             </td>
           </tr>
@@ -129,7 +73,6 @@
               <input type="date" name="birthDate" id="birthDate" required />
             </td>
           </tr>
-
           <tr>
             <th>Birth Time:</th>
             <td>
@@ -138,12 +81,14 @@
           </tr>
         </table>
         <div class="buttons">
-          <input type="submit" id="submit" class="button" />
+          <input type="button" id="create" class="button" value="Create" />
+          <input type="button" id="update" class="button" value="Update"  hidden/>
           <input type="button" id="cancel" class="button" value="Cancel" />
         </div>
       </form>
     </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
 
-    <script type="module" src="./script.js"></script>
-  </body>
 </html>
