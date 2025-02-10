@@ -36,10 +36,10 @@
 
 - Intermediate Selector, 6. Descendant Selector - include all descendant of elem although h2 is in `div>p>h2` steel selected.
   `CSS
-          div h2 {
-              color: #fff
-          }
-      `
+    div h2 {
+        color: #fff
+    }
+`
 
   7. Child Selector - select all child (not grand-child).
 
@@ -135,7 +135,6 @@
 
 - there are svg generator like `getwaves.com` generate waves as svg.
 
-
 # Flex Blox
 
 - Syntax: `display: flex;`
@@ -143,29 +142,89 @@
 - This Property is `container level` Property
 
 - There are total `9` types of flex box
-    - Default Flex (row) left-right
-    - Column: `flex-direction: column;`
-    - Justify Content: (Left-Right) `justify-content: space-between;`
-    - Align Items: (Top-Bottom) `algin-items: center;`
-    - Flex Wrap: (set childs as they can possible in one line) `flex-wrap: wrap;`
-    - Align Content: (take all childs as one content) `align-content: space-around;`
-    - Order Property: (This use at perticular child) `order: num;`
-    - Flex Grow: (This use at perticular child) `flex-grow: num;`
-    - Align Self: (This also use at perticular child) (Top-Bottom) `align-self: flex-end`
+  - Default Flex (row) left-right
+  - Column: `flex-direction: column;`
+  - Justify Content: (Left-Right) `justify-content: space-between;`
+  - Align Items: (Top-Bottom) `algin-items: center;`
+  - Flex Wrap: (set childs as they can possible in one line) `flex-wrap: wrap;`
+  - Align Content: (take all childs as one content) `align-content: space-around;`
+  - Order Property: (This use at perticular child) `order: num;`
+  - Flex Grow: (This use at perticular child) `flex-grow: num;`
+  - Align Self: (This also use at perticular child) (Top-Bottom) `align-self: flex-end`
 
 # Grid
 
 - Syntax: `display: grid;`
-- `fr` frection - we can take fr as part of 100%. means `1fr`- 1 part, `2fr`- 2 part, `3fr` - 3 part,... of 100%. 
+- `fr` frection - we can take fr as part of 100%. means `1fr`- 1 part, `2fr`- 2 part, `3fr` - 3 part,... of 100%.
 - We can modify grid through multiple Property
-    - `grid-template-columns` - control width of each columns.
-    - `grid-template-row` - control height of each rows.
-    - `grid-template-areas` - control `grid-area` that given to each child. 
-    - `gap` - gap b/w each elements.
-    - `grid-auto-rows`:
-    - `grid-auto-columns`:
+
+  - `grid-template-columns` - control width of each columns.
+  - `grid-template-row` - control height of each rows.
+  - `grid-template-areas` - control `grid-area` that given to each child.
+  - `gap` - gap b/w each elements.
+  - `grid-auto-rows`:
+  - `grid-auto-columns`:
 
 - Also we can use more property to Customize each child
-    - `Grid Column`: give columns span Ex:- `grid-column: 1/4`, means start from 1st column and go untill 4 not include 4th column.
-    - `Grid Row`: give rows span Ex:- `grid-row: 1/3`, means start from 1st row and go untill 3 not include 3rd row.
-    - `Grid Area`: Define just like id, that what i access.
+  - `Grid Column`: give columns span Ex:- `grid-column: 1/4`, means start from 1st column and go untill 4 not include 4th column.
+  - `Grid Row`: give rows span Ex:- `grid-row: 1/3`, means start from 1st row and go untill 3 not include 3rd row.
+  - `Grid Area`: Define just like id, that what i access.
+
+# Design for Mobile, Tablet and web
+
+- Whenever we work with mobile responsive design we provide some media query (Anotated Symbols) start with `@...`.
+
+  ```css
+  @media (max-width: 600px) and (min-width: 200px) {
+    body {
+      align-items: start;
+    }
+    .responsive-div {
+      background-color: chocolate;
+    }
+  }
+  ```
+
+- Tailwind Provide px what not requeired to
+
+# BootStrap
+
+- There are CDN Links that Provide CSS, JS.
+
+  - CDN CSS link:
+
+    ```html
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    ```
+
+  - CDN CSS Link:
+    ```html
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    ```
+
+- we just need to link using `<link>`
+
+# Tailwind CSS
+
+- Tailwind CSS is CSS Framework.
+
+- There are many ways:
+
+  1. CDN way:- for HTML files.
+     ```html
+     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+     ```
+
+- Try adding some custom CSS
+  ```html
+
+  ```

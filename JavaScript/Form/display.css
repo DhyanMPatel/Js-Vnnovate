@@ -37,12 +37,14 @@ tr:hover {
   height: 30px;
   margin: 10px 10px;
   border-radius: 10px;
-  background-color: cadetblue;
-  color: white;
+  background-color: #5f9ea0;
+  color: #ffffff;
   font-size: 15px;
+  border: 0;
+  cursor: pointer;
 }
 #remove {
-  background-color: lightcoral;
+  background-color: #f08080;
 }
 tbody td {
   text-align: center;
@@ -52,7 +54,6 @@ tbody td {
   margin: 50px;
   font-size: larger;
 }
-tr{
-  border-bottom: 1px solid black;
+tr {
+  border-bottom: 1px solid grey;
 }
-

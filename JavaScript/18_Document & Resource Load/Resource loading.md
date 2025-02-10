@@ -1,6 +1,6 @@
 # Resource Loading
 
-- Browser allow us to Track loading of External Resources like `Iframes`, `Scripts`, `Images` and so on.
+- Browser allow us to Track loading of External Resources like `Scripts`, `Images` and so on. Exception is `Iframe` that have only `onload` event
 - There are two events for it:
 
   - `onload` – successful load,

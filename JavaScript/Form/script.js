@@ -6,10 +6,10 @@ function todisplay() {
 }
 
 function create() {
-  let birthTime = document.getElementById('birthTime').value;
+  let birthTime = document.getElementById("birthTime").value;
   let hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
   let amPm;
-  let arrTime = birthTime.split(':');
+  let arrTime = birthTime.split(":");
   amPm = arrTime[0] >= 12 ? "PM" : "AM";
 
   if (arrTime[0] > 12) {
@@ -27,23 +27,21 @@ function create() {
     city: document.getElementById("city").value,
     birthDate: document.getElementById("birthDate").value,
     birthTime: birthTime,
-  }
+  };
   for (let hobbie of hobbies) {
     obj.hobbies.push(hobbie.value);
   }
 
-  let users = JSON.parse(localStorage.getItem('UserData')) || [];
+  let users = JSON.parse(localStorage.getItem("UserData")) || [];
   users.push(obj);
   console.log(users);
-  
 
-  localStorage.setItem("UserData", JSON.stringify(users))
-  document.forms['form'].reset();
+  localStorage.setItem("UserData", JSON.stringify(users));
+  document.forms["form"].reset();
 
-  localStorage.removeItem("Operation")
-  OpCheck()
+  localStorage.removeItem("Operation");
+  OpCheck();
 }
-
 
 function OpCheck() {
   let operation = localStorage.getItem("Operation");
@@ -57,11 +55,11 @@ function OpCheck() {
 }
 
 let cancel = document.getElementById("cancel");
-cancel.onclick = function() {
+cancel.onclick = function () {
   document.forms["form"].reset();
   localStorage.removeItem("editIndex");
   localStorage.removeItem("Operation");
-  OpCheck()
+  OpCheck();
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -89,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("birthDate").value = user.birthDate;
     document.getElementById("birthTime").value = convertIn24(user.birthTime);
 
-    OpCheck()
+    OpCheck();
   }
 });
 
@@ -110,7 +108,7 @@ function convertIn24(birthTime) {
 }
 
 function update() {
-  let users = JSON.parse(localStorage.getItem('UserData')) || [];
+  let users = JSON.parse(localStorage.getItem("UserData")) || [];
   let editIndex = localStorage.getItem("editIndex");
 
   let birthTime = document.getElementById("birthTime").value;
@@ -133,35 +131,34 @@ function update() {
     city: document.getElementById("city").value,
     birthDate: document.getElementById("birthDate").value,
     birthTime: birthTime,
-  }
+  };
   for (let hobbie of hobbies) {
     obj.hobbies.push(hobbie.value);
   }
 
   users[editIndex] = obj;
-  
 
   localStorage.setItem("UserData", JSON.stringify(users));
 
-  localStorage.removeItem("editIndex")
-  localStorage.removeItem("Operation")
+  localStorage.removeItem("editIndex");
+  localStorage.removeItem("Operation");
 
   document.forms["form"].reset();
   OpCheck();
-
+  window.location.href = "display.html";
 }
 
-document.querySelector("form").onsubmit = function (e){
+document.querySelector("form").onsubmit = function (e) {
   e.preventDefault();
   console.log("On Submit");
-  
+
   let clickedBtn = document.activeElement.id;
 
-  if (clickedBtn === "update"){
+  if (clickedBtn === "update") {
     console.log("Hii");
-    update()
-  } else if(clickedBtn === "create"){
+    update();
+  } else if (clickedBtn === "create") {
     console.log("Hello");
-    create()
+    create();
   }
-}
+};

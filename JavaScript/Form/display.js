@@ -46,8 +46,9 @@ function deleteUser(index) {
     localStorage.setItem("UserData", JSON.stringify(users));
   } else {
     localStorage.removeItem("UserData");
+    window.location.href = "display.html";
   }
-  window.location.href = "display.html";
+  displayUsers();
 }
 
 // Function to edit user data (redirect to the form page with data)

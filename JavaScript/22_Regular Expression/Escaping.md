@@ -1,6 +1,8 @@
 # Escaping in "\ "
 
-- There are other special characters as well, that have special meaning in a regexp, such as `[ ] { } ( ) \ ^ $ . | ? * +`.
+- There are other special characters as well, that have special meaning in a regexp, such as `[ { } ( ) \ ^ $ . | ? * +`.
+- Also `/` need to escap if we use `/.../`.
+- `]` no need to escap.
 
 ```js
 console.log("Height: 5.8".match(/\d\.\d/)); // Return - 5.8
