@@ -30,7 +30,7 @@ thead th {
   text-transform: uppercase;
 }
 tr:hover {
-  background-color: lightgrey;
+  background-color: #e4e3e3;
 }
 .button {
   width: 50px;
@@ -52,3 +52,7 @@ tbody td {
   margin: 50px;
   font-size: larger;
 }
+tr{
+  border-bottom: 1px solid black;
+}
+

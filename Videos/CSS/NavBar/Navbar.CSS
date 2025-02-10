@@ -1,0 +1,137 @@
+/* `::after` create a "pseudo-element" that is the last child of the selected element */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+
+}
+
+.nav-container{
+    margin-bottom: 40px;
+}
+h2{
+    margin-bottom: 20px;
+}
+.nav1{
+    background-color: #dadada;
+}
+.nav1 ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav1 li{
+    display: inline;
+}
+.nav1 a{
+    text-decoration: none;
+    color: gray;
+    padding: 5px 10px;
+    position: relative;
+}
+.nav1 a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: burlywood;
+    transform: scaleX(0); /* Initially 0 */
+    transition: transform 0.3s ease-in-out;
+}
+.nav1 a:hover::after{
+    transform: scaleX(1); /* means 100% */
+}
+.nav1 .login-btn{
+    color: burlywood;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.nav1 .login-btn:hover{
+    background-color: burlywood;
+    color: #dadada;
+    transition: 0.5s;
+}
+
+
+.nav2{
+    background-color: #3a3a3a;
+    width: 200px;
+    padding: 20px;
+}
+.nav2 ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav2 li{
+    margin-bottom: 10px;
+}
+.nav2 a{
+    text-decoration: none;
+    color: bisque;
+    padding: 5px;
+    border-radius: 10px;
+    display: block;
+}
+.nav2 a:hover{
+    background-color: #7a7a7a;
+}
+.nav2 .login-btn{
+    background-color: burlywood;
+    color: #3a3a3a;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.nav2 .login-btn:hover{
+    background-color: #d1a263;
+}
+
+.nav3{
+    background-color: #d1a263;
+    padding: 10px;
+}
+.nav3 ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav3 a{
+    text-decoration: none;
+    color: #dadada;
+    padding: 10px;
+    display: block;
+}
+.nav3 .dropdown-content{
+    display: none;
+}
+.nav3 .dropdown:hover .dropdown-content{
+    display: block;
+    position: absolute;
+    background-color: #7a7a7a;
+    min-width: 150px;
+    border-radius: 10px;
+}
+.nav3 .login-btn{
+    color: burlywood;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+}
+.nav3 .login-btn:hover{
+    background-color: rgb(158, 129, 92);
+    color: #dadada;
+    transition: 0.5s;
+}

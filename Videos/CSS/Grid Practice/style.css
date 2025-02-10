@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(189, 187, 187);
+}
+.container{
+    padding: 10px;
+    border: 2px solid black;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+.box{
+    background-color: cyan;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+.box:nth-child(even){
+    background-color: crimson;
+}
+.four::after{
+    content: "";
+    transform: scaleX(0);
+    transition: transform 1s ease-in-out;
+}
+
+.four:hover::after{
+    content: "Extra";
+    color: white;
+    background-color: blue;
+    text-align: center;
+    align-content: center;
+    transform: scaleX(1);
+}

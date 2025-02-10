@@ -47,8 +47,13 @@ input[type="checkbox"] {
 .button {
   width: 30%;
   margin: 0 30px;
+  border: 0px;
   border-radius: 20px;
   background-color: cadetblue;
   color: white;
   font-size: 15px;
+}
+.button:hover{
+  background-color: rgb(58, 125, 127);
+  transition-duration: 500ms;
 }

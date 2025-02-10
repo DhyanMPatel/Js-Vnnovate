@@ -33,9 +33,12 @@ promise
 */
 
 /// Experiment
+//        2) Delay with Promise
 function Delay(ms) {
   return new Promise(function (res, rej) {
     return setTimeout(res, ms);
   });
 }
 Delay(2000).then(() => console.log("Complete in 2000 Ms"));
+
+//        3) Animate Circle with Promise
