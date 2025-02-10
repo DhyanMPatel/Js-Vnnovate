@@ -5,7 +5,7 @@
 - fetch is modern and versalite.
 - Syntax:-
   ```js
-  let promise = getch(url, [options]);
+  let promise = fetch(url, [options]);
   ```
   - `url` – the URL to access.
   - `options` – optional parameters: method, headers etc.
@@ -32,4 +32,5 @@
 
 ### Response Header
 
--
+- The response headers are available in a Map-like headers object in `response.headers`.
+- They are not proper Map. but similar method to get individual header.

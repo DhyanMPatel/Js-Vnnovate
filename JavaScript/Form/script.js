@@ -1,4 +1,4 @@
-function todisplay() {
+function showData() {
   window.location.href = "display.html";
   document.forms["form"].reset();
   localStorage.removeItem("Operation");
@@ -18,6 +18,7 @@ function create() {
   birthTime = `${arrTime.join(":")} ${amPm}`;
 
   let obj = {
+    id: document.getElementById("id").value,
     firstName: document.getElementById("firstName").value,
     lastName: document.getElementById("lastName").value,
     gender: document.querySelector('input[name="gender"]:checked').value,
@@ -34,13 +35,13 @@ function create() {
 
   let users = JSON.parse(localStorage.getItem("UserData")) || [];
   users.push(obj);
-  console.log(users);
 
   localStorage.setItem("UserData", JSON.stringify(users));
   document.forms["form"].reset();
 
   localStorage.removeItem("Operation");
   OpCheck();
+  window.location.href = "display.html";
 }
 
 function OpCheck() {
@@ -60,6 +61,7 @@ cancel.onclick = function () {
   localStorage.removeItem("editIndex");
   localStorage.removeItem("Operation");
   OpCheck();
+  window.location.href = "display.html";
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -67,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (editIndex !== null) {
     let users = JSON.parse(localStorage.getItem("UserData")) || [];
     let user = users[editIndex];
-
+    document.getElementById("id").value = parseInt(user.id);
     document.getElementById("firstName").value = user.firstName;
     document.getElementById("lastName").value = user.lastName;
     document.querySelector(
@@ -86,6 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("city").value = user.city;
     document.getElementById("birthDate").value = user.birthDate;
     document.getElementById("birthTime").value = convertIn24(user.birthTime);
+
+    console.log(user.id);
 
     OpCheck();
   }
@@ -135,6 +139,7 @@ function update() {
   for (let hobbie of hobbies) {
     obj.hobbies.push(hobbie.value);
   }
+  obj.id = users[editIndex].id;
 
   users[editIndex] = obj;
 
@@ -150,15 +155,12 @@ function update() {
 
 document.querySelector("form").onsubmit = function (e) {
   e.preventDefault();
-  console.log("On Submit");
 
   let clickedBtn = document.activeElement.id;
 
   if (clickedBtn === "update") {
-    console.log("Hii");
     update();
   } else if (clickedBtn === "create") {
-    console.log("Hello");
     create();
   }
 };

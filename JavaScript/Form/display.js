@@ -1,4 +1,4 @@
-function toIndex() {
+function addData() {
   window.location.href = "index.html";
   localStorage.removeItem("Operation");
   localStorage.setItem("Operation", "add");
@@ -12,7 +12,7 @@ function displayUsers() {
   users.map((user, index) => {
     let row = document.createElement("tr");
     row.innerHTML = `
-        <td>${index + 1}</td>
+        <td>${user.id}</td>
         <td>${user.firstName}</td>
         <td>${user.lastName}</td>
         <td>${user.gender}</td>

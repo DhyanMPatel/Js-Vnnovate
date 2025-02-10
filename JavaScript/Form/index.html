@@ -12,7 +12,7 @@
       <input
         type="button"
         id="data"
-        onclick="todisplay()"
+        onclick="showData()"
         class="button"
         value="Data"
         title="Show Users Data"
@@ -20,6 +20,19 @@
       <div id="formDiv">
         <form name="form">
           <table>
+            <tr id="idTr">
+              <th>ID:</th>
+              <td>
+                <input
+                  type="number"
+                  name="id"
+                  id="id"
+                  placeholder="Enter your ID"
+                  unique
+                  required
+                />
+              </td>
+            </tr>
             <tr>
               <th>First Name:</th>
               <td>
@@ -28,6 +41,8 @@
                   name="firstName"
                   id="firstName"
                   placeholder="Enter Your firstName"
+                  maxlength="10"
+                  minlength="3"
                   required
                 />
               </td>
@@ -40,6 +55,8 @@
                   name="lastName"
                   id="lastName"
                   placeholder="Enter Your LastName"
+                  maxlength="10"
+                  minlength="3"
                   required
                 />
               </td>
@@ -100,13 +117,19 @@
                   value="Cycling"
                   id="Cycling"
                 /><label for="Cycling">Cycling</label>
+                <input
+                  type="checkbox"
+                  name="hobbies"
+                  value="others"
+                  id="Others"
+                /><label for="Others">Other</label>
               </td>
             </tr>
             <tr>
               <th>Address:</th>
               <td>
                 <select name="country" id="country" required>
-                  <option value="Country">Country</option>
+                  <option value="Country" selected>Country</option>
                   <option value="India">India</option>
                   <option value="USA">USA</option>
                   <option value="UK">UK</option>
@@ -165,6 +188,15 @@
         </form>
       </div>
     </div>
+    <script>
+      let idTr = document.getElementById("idTr");
+      let Operation = localStorage.getItem("Operation");
+      if (Operation == "edit") {
+        idTr.hidden = true;
+      } else {
+        idTr.hidden = false;
+      }
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>

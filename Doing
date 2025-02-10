@@ -7,11 +7,12 @@ TODO list:
 2. Know Tailwind CSS
 
 Work done:
-Date: 07 Feb 2025
-Day: Friday
+Date: 10 Feb 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
-1. Multiple entry form - Complete
-2. Edit details of particular User - Complete
-3. Remove details of particular user with confirmation. - Complete
+1. Make Changes in Form Task - Given by @Rahul Sir
+   - Redirect to `Display.html` page when user click on `create`, `cancel`, `Update`, `Data`. - Complete
+   - make id for each User. - Complete
+   - Display Message when user forget to fill required data - In Progress
