@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let users = JSON.parse(localStorage.getItem("UserData")) || [];
     let user = users[editIndex];
     id.value = parseInt(user.id);
+    id.ariaReadOnly = true;
     firstName.value = user.firstName;
     lastName.value = user.lastName;
     document.querySelector(
@@ -178,13 +179,13 @@ const setSuccess = (elem) => {
   inputControl.classList.remove("error");
 };
 
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   if (!validateInputes()) {
     return;
   }
-
-  let clickedBtn = document.submitter?.value;
+  let clickedBtn = document.activeElement.value;
   console.log(clickedBtn);
   console.log("submited");
 
@@ -192,6 +193,7 @@ form.addEventListener("submit", (event) => {
     console.log(`update called`);
 
     handleUpdate();
+
   } else if (clickedBtn === "Create") {
     console.log("Create User Called");
     handleCreate();
@@ -217,17 +219,19 @@ const validateInputes = () => {
     valid.push(users[user].id);
   }
 
-  if (idValue === "") {
-    setErr(id, "Id is Required.");
-    isValid = false;
-  } else if (isNaN(idValue)) {
-    setErr(id, "Id should be Number");
-    isValid = false;
-  } else if (valid.includes(idValue)) {
-    setErr(id, "This User is Already there");
-    isValid = false;
-  } else {
-    setSuccess(id);
+  if (document.activeElement.value != "Update") {
+    if (idValue === "") {
+      setErr(id, "Id is Required.");
+      isValid = false;
+    } else if (isNaN(idValue)) {
+      setErr(id, "Id should be Number");
+      isValid = false;
+    } else if (valid.includes(idValue)) {
+      setErr(id, "This User is already Available.");
+      isValid = false;
+    } else {
+      setSuccess(id);
+    }
   }
 
   if (firstNameValue === "") {
@@ -302,3 +306,10 @@ const validateInputes = () => {
   }
   return isValid;
 };
+
+window.onload = function () {
+  let operation = localStorage.getItem("Operation");
+  if (operation == "edit") {
+    id.readOnly = true;
+  }
+}

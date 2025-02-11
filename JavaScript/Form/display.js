@@ -42,7 +42,6 @@ function displayUsers() {
 }
 function formateBirthDate(birthDate){
   let date = new Date(birthDate);
-  console.log(date);
 
   return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
 }
