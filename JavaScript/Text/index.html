@@ -18,80 +18,92 @@
         title="Show Users Data"
       />
       <div id="formDiv">
-        <form id="form" name="form">
+        <form name="form" onsubmit="validateForm()">
           <table style="position: relative">
-            <tr id="idTr">
+            <tr id="idTr" class="form-control">
               <th>ID:</th>
               <td>
-                <div class="input-control">
+                <div>
                   <input
                     type="text"
                     name="Id"
                     id="id"
                     placeholder="Enter your ID"
+                    min="1"
+                    pattern="\d+"
+                    required
                   />
-                  <span class="error"></span>
                 </div>
+                <span id="idErr"></span>
               </td>
             </tr>
-            <tr>
+            <tr class="form-control">
               <th>First Name:</th>
               <td>
-                <div class="input-control">
+                <div>
                   <input
                     type="text"
                     name="First Name"
                     id="firstName"
                     placeholder="Enter Your firstName"
+                    maxlength="10"
+                    minlength="3"
+                    required
                   />
-                  <span class="error"></span>
                 </div>
+                <span id="firstNameErr">Enter Your First Name</span>
               </td>
             </tr>
-            <tr>
+            <tr class="form-control">
               <th>Last Name:</th>
               <td>
-                <div class="input-control">
+                <div>
                   <input
                     type="text"
                     name="lastName"
                     id="lastName"
                     placeholder="Enter Your LastName"
+                    maxlength="10"
+                    minlength="3"
+                    required
                   />
-                  <span class="error"></span>
                 </div>
+                <span id="lastNameErr">Please enter Last Name</span>
               </td>
             </tr>
-            <tr id="genders">
+            <tr id="genders" class="form-control">
               <th>Gender:</th>
               <td>
-                <div class="input-control">
+                <div>
                   <input
                     type="radio"
                     name="gender"
                     value="Male"
                     id="Male"
+                    required
                   /><label for="Male">Male</label>
                   <input
                     type="radio"
                     name="gender"
                     value="Female"
                     id="Female"
+                    required
                   /><label for="Female">Female</label>
                   <input
                     type="radio"
                     name="gender"
                     value="Transgender"
                     id="Transgender"
+                    required
                   /><label for="Transgender">Transgender</label>
-                  <span class="error"></span>
                 </div>
+                <span id="genderErr"></span>
               </td>
             </tr>
             <tr id="hobbies">
               <th>Hobbies:</th>
               <td>
-                <div class="input-control">
+                <div>
                   <input
                     type="checkbox"
                     name="hobbies"
@@ -128,113 +140,103 @@
                     value="others"
                     id="Others"
                   /><label for="Others">Other</label>
-                  <span class="error"></span>
                 </div>
+                <!-- <span>Please enter </span> -->
               </td>
             </tr>
             <tr>
-              <th>Country:</th>
+              <th>Address:</th>
               <td>
-                <div class="input-control">
-                  <select name="country" id="country">
+                <div>
+                  <select name="country" id="country" required>
                     <option value="Country" selected>Country</option>
                     <option value="India">India</option>
                     <option value="USA">USA</option>
                     <option value="UK">UK</option>
                   </select>
-                  <span class="error"></span>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th>State:</th>
-              <td>
-                <div class="input-control">
-                  <select name="state" id="state">
+                  <select name="state" id="state" required>
                     <option value="State" selected>State</option>
                     <option value="Gujarat">Gujarat</option>
                     <option value="Cerala">Cerala</option>
                     <option value="Rajastan">Rajastan</option>
                   </select>
-                  <span class="error"></span>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th>City:</th>
-              <td>
-                <div class="input-control">
-                  <select name="city" id="city">
+                  <select name="city" id="city" required>
                     <option value="City" selected>City</option>
                     <option value="Ahmedabad">Ahmedabad</option>
                     <option value="Surat">Surat</option>
                     <option value="Vadodara">Vadodara</option>
                   </select>
-                  <span class="error"></span>
                 </div>
+                <span id="addrErr"
+                  >Please enter valid Country, State or City</span
+                >
               </td>
             </tr>
-            <tr>
+            <tr class="form-control">
               <th>Birth Date:</th>
               <td>
-                <div class="input-control">
-                  <input type="date" name="Birth Date" id="birthDate" />
-                  <span class="error"></span>
+                <div>
+                  <input
+                    type="date"
+                    name="Birth Date"
+                    id="birthDate"
+                    required
+                  />
                 </div>
+                <span id="birthDateErr">Please enter Birth Date </span>
               </td>
             </tr>
-            <tr>
+            <tr class="form-control">
               <th>Birth Time:</th>
               <td>
-                <div class="input-control">
-                  <input type="time" name="Birth Time" id="birthTime" />
-                  <span class="error"></span>
+                <div>
+                  <input
+                    type="time"
+                    name="Birth Time"
+                    id="birthTime"
+                    required
+                  />
                 </div>
+                <span id="birthTimeErr">Please enter Birth Time</span>
               </td>
             </tr>
           </table>
           <div class="buttons">
-            <button
+            <input
               type="submit"
               id="create"
               class="button"
               value="Create"
               title="Create New User"
-            >
-              Create
-            </button>
-            <button
+            />
+            <input
               type="submit"
               id="update"
               class="button"
               value="Update"
               title="Update User"
-              style="display: none"
-            >
-              Update
-            </button>
-            <button
+              hidden
+            />
+            <input
               type="button"
               id="cancel"
               class="button"
               value="Cancel"
               title="Cancel Data"
-            >
-              Cancel
-            </button>
+            />
           </div>
         </form>
       </div>
     </div>
-    <script src="./script.js"></script>
     <script>
-      const idTr = document.getElementById("idTr");
-      const Operation = localStorage.getItem("Operation");
+      let idTr = document.getElementById("idTr");
+      let Operation = localStorage.getItem("Operation");
       if (Operation == "edit") {
         idTr.hidden = true;
       } else {
         idTr.hidden = false;
       }
     </script>
+    <script src="./script.js"></script>
   </body>
 </html>

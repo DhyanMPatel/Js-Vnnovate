@@ -40,14 +40,14 @@ input[type="number"] {
 input[type="checkbox"] {
   background-color: cadetblue;
 }
-.input-control.success input {
-  border: 1px solid black;
-}
-.input-control.error input {
+/* #id,
+#firstName,
+#lastName,
+#birthDate,
+#birthTime {
   border: 1px solid red;
-}
-.input-control .error {
-  display: block;
+} */
+span {
   position: absolute;
   font-size: 10px;
   padding: 0 10px;
