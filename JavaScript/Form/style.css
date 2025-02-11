@@ -31,6 +31,9 @@ form {
 form * {
   padding: 5px;
 }
+.form-control{
+  position: relative;
+}
 input[type="text"],
 input[type="number"] {
   width: 90%;
@@ -39,6 +42,13 @@ input[type="number"] {
 input[type="checkbox"] {
   background-color: cadetblue;
 }
+/* .error{
+  width: 100%;
+  font-size: 9px;
+  position: absolute;
+  top: 0;
+  right: 0;
+} */
 .buttons {
   margin: 10px -6px;
   width: 100%;
@@ -57,4 +67,8 @@ input[type="checkbox"] {
 .button:hover {
   background-color: rgb(58, 125, 127);
   transition-duration: 500ms;
+}
+th{
+  min-width: 100px;
+  width: 150px;
 }

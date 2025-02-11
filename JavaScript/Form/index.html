@@ -18,9 +18,9 @@
         title="Show Users Data"
       />
       <div id="formDiv">
-        <form name="form">
-          <table>
-            <tr id="idTr">
+        <form name="form" onsubmit="ValidateForm()">
+          <table style="position: relative;">
+            <tr id="idTr" class="form-control">
               <th>ID:</th>
               <td>
                 <input
@@ -32,8 +32,10 @@
                   required
                 />
               </td>
+              
             </tr>
-            <tr>
+            <tr id="errorID" class="error" ><td colspan="2" >Please Enter Id</td></tr>
+            <tr class="form-control">
               <th>First Name:</th>
               <td>
                 <input
@@ -47,7 +49,7 @@
                 />
               </td>
             </tr>
-            <tr>
+            <tr class="form-control">
               <th>Last Name:</th>
               <td>
                 <input
@@ -61,7 +63,7 @@
                 />
               </td>
             </tr>
-            <tr id="genders">
+            <tr id="genders" class="form-control">
               <th>Gender:</th>
               <td>
                 <input
@@ -84,7 +86,7 @@
                 /><label for="Transgender">Transgender</label>
               </td>
             </tr>
-            <tr id="hobbies">
+            <tr id="hobbies" class="form-control">
               <th>Hobbies:</th>
               <td>
                 <input
@@ -125,7 +127,7 @@
                 /><label for="Others">Other</label>
               </td>
             </tr>
-            <tr>
+            <tr class="form-control">
               <th>Address:</th>
               <td>
                 <select name="country" id="country" required>
@@ -148,13 +150,13 @@
                 </select>
               </td>
             </tr>
-            <tr>
+            <tr class="form-control">
               <th>Birth Date:</th>
               <td>
                 <input type="date" name="birthDate" id="birthDate" required />
               </td>
             </tr>
-            <tr>
+            <tr class="form-control">
               <th>Birth Time:</th>
               <td>
                 <input type="time" name="birthTime" id="birthTime" required />

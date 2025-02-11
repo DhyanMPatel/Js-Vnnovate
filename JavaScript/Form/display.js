@@ -11,6 +11,11 @@ function displayUsers() {
 
   users.map((user, index) => {
     let row = document.createElement("tr");
+    let birthDate = user.birthDate
+
+    birthDate = formateBirthDate(birthDate);
+    
+
     row.innerHTML = `
         <td>${user.id}</td>
         <td>${user.firstName}</td>
@@ -20,7 +25,7 @@ function displayUsers() {
         <td>${user.country}</td>
         <td>${user.state}</td>
         <td>${user.city}</td>
-        <td>${user.birthDate}</td>
+        <td>${birthDate}</td>
         <td>${user.birthTime}</td>
         <td>
             <button onclick="editUser(${index})" class="button" id='edit' title="Edit User"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
@@ -34,6 +39,12 @@ function displayUsers() {
 
     tbody.appendChild(row);
   });
+}
+function formateBirthDate(birthDate){
+  let date = new Date(birthDate);
+  console.log(date);
+
+  return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
 }
 
 function deleteUser(index) {
