@@ -1,5 +1,5 @@
 const form = document.getElementById("form");
-const id = document.getElementById("id");
+const id = document.getElementById("Id");
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const country = document.getElementById("country");
@@ -10,6 +10,244 @@ const birthTime = document.getElementById("birthTime");
 const create = document.getElementById("create");
 const update = document.getElementById("update");
 const cancel = document.getElementById("cancel");
+const allGender = document.getElementsByName("gender");
+const allHobbies = document.querySelectorAll('input[name="hobbies"]');
+
+const setErr = (elem, mgs) => {
+  const inputControl = elem.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+
+  errorDisplay.innerText = mgs;
+  inputControl.classList.add("error");
+};
+
+const setSuccess = (elem) => {
+  const inputControl = elem.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+
+  errorDisplay.innerText = "";
+  inputControl.classList.remove("error");
+};
+
+const validateId = () => {
+  const idValue = id.value.trim();
+  const idRegex = /^\d+$/;
+  let isValid = true;
+  let operation = localStorage.getItem("Operation");
+
+  const users = JSON.parse(localStorage.getItem("UserData"));
+  let availableIds = [];
+
+  for (let user in users) {
+    availableIds.push(users[user].id);
+  }
+
+  if (operation == "add") {
+    if (!idValue) {
+      setErr(id, "ID is Required.");
+      isValid = false;
+    } else if (!idRegex.test(idValue)) {
+      setErr(id, "ID should be Positive Number");
+      isValid = false;
+    } else if (availableIds.includes(idValue)) {
+      setErr(id, "This User is already Available.");
+      isValid = false;
+    } else {
+      setSuccess(id);
+    }
+  }
+
+  return isValid;
+};
+
+const validateFirstName = () => {
+  const firstNameValue = firstName.value.trim();
+  const nameRegex = /^[a-z]{3,10}$/i;
+  let isValid = true;
+
+  if (!firstNameValue) {
+    setErr(firstName, "First Name is required");
+    isValid = false;
+  } else if (!nameRegex.test(firstNameValue)) {
+    setErr(firstName, "First Name should be 3-10 letters only.");
+    isValid = false;
+  } else {
+    setSuccess(firstName);
+  }
+  return isValid;
+};
+
+const validateLastName = () => {
+  const lastNameValue = lastName.value.trim();
+  const nameRegex = /^[a-z]{3,10}$/i;
+  let isValid = true;
+
+  if (!lastNameValue) {
+    setErr(lastName, "Last Name is required");
+    isValid = false;
+  } else if (!nameRegex.test(lastNameValue)) {
+    setErr(lastName, "Last Name should be 3-10 letters only ");
+    isValid = false;
+  } else {
+    setSuccess(lastName);
+  }
+  return isValid;
+};
+
+const validateGender = () => {
+  const gender = document.getElementsByName("gender");
+  let isValid = true;
+
+  if (!(gender[0].checked || gender[1].checked || gender[2].checked)) {
+    setErr(document.getElementById("Male"), "Gender is Required");
+    isValid = false;
+  } else {
+    setSuccess(gender[0]);
+  }
+  return isValid;
+};
+
+const validateHobbies = () => {
+  const hobbies = document.querySelectorAll("input[name='hobbies']:checked");
+  let isValid = true;
+
+  if (hobbies.length > 0) {
+    setSuccess(hobbies[0]);
+  } else {
+    setErr(document.getElementById("Cricket"), "Enter at least one Hobby");
+    isValid = false;
+  }
+  return isValid;
+};
+
+const validateCountry = () => {
+  const countryValue = country.value.trim();
+  let isValid = true;
+
+  if (countryValue == "Country") {
+    setErr(country, "Please select a Country.");
+    isValid = false;
+  } else {
+    setSuccess(country);
+  }
+  return isValid;
+};
+
+const validateState = () => {
+  const stateValue = state.value.trim();
+  let isValid = true;
+
+  if (stateValue == "State") {
+    setErr(state, "Please select a State.");
+    isValid = false;
+  } else {
+    setSuccess(state);
+  }
+  return isValid;
+};
+
+const validateCity = () => {
+  const cityValue = city.value.trim();
+  let isValid = true;
+
+  if (cityValue == "City") {
+    setErr(city, "Plase select a City.");
+    isValid = false;
+  } else {
+    setSuccess(city);
+  }
+  return isValid;
+};
+
+const validateBirthDate = () => {
+  const birthDateValue = birthDate.value;
+  let isValid = true;
+
+  if (!birthDateValue) {
+    setErr(birthDate, "Birth Date is Required");
+    isValid = false;
+  } else {
+    setSuccess(birthDate);
+  }
+  return isValid;
+};
+
+const validateBirthTime = () => {
+  const birthTimeValue = birthTime.value;
+  let isValid = true;
+
+  if (!birthTimeValue) {
+    setErr(birthTime, "Birth Time is Required");
+    isValid = false;
+  } else {
+    setSuccess(birthTime);
+  }
+  return isValid;
+};
+
+const validateInputes = () => {
+  let isValid = true;
+
+  if (!validateId()) {
+    isValid = false;
+  }
+  if (!validateFirstName()) {
+    isValid = false;
+  }
+  if (!validateLastName()) {
+    isValid = false;
+  }
+  if (!validateGender()) {
+    isValid = false;
+  }
+  if (!validateHobbies()) {
+    isValid = false;
+  }
+  if (!validateCountry()) {
+    isValid = false;
+  }
+  if (!validateState()) {
+    isValid = false;
+  }
+  if (!validateCity()) {
+    isValid = false;
+  }
+  if (!validateBirthDate()) {
+    isValid = false;
+  }
+  if (!validateBirthTime()) {
+    isValid = false;
+  }
+
+  return isValid;
+};
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (!validateInputes()) {
+    return;
+  }
+  let clickedBtn = document.activeElement.value;
+
+  if (clickedBtn === "Update") {
+    handleUpdate();
+  } else if (clickedBtn === "Create") {
+    handleCreate();
+  }
+});
+
+id.addEventListener("input", validateId);
+firstName.addEventListener("input", validateFirstName);
+lastName.addEventListener("input", validateLastName);
+allGender.forEach((gen) => gen.addEventListener("change", validateGender));
+allHobbies.forEach((hobbie) =>
+  hobbie.addEventListener("change", validateHobbies)
+);
+country.addEventListener("change", validateCountry);
+state.addEventListener("change", validateState);
+city.addEventListener("change", validateCity);
+birthDate.addEventListener("change", validateBirthDate);
+birthTime.addEventListener("change", validateBirthTime);
 
 function showData() {
   window.location.href = "display.html";
@@ -103,6 +341,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     OpCheck();
   }
+  let operation = localStorage.getItem("Operation");
+  if (operation == "edit") {
+    id.readOnly = true;
+    id.tabIndex = "-1";
+    id.style.border = "0px";
+    id.style.backgroundColor = "inherit";
+    id.style.pointerEvents = "none";
+  }
 });
 
 function convertIn24(birthTime) {
@@ -162,146 +408,3 @@ function handleUpdate() {
   alert("You Updated User Data!");
   window.location.href = "display.html";
 }
-
-const setErr = (elem, mgs) => {
-  const inputControl = elem.parentElement;
-  const errorDisplay = inputControl.querySelector(".error");
-
-  errorDisplay.innerText = mgs;
-  inputControl.classList.add("error");
-};
-
-const setSuccess = (elem) => {
-  const inputControl = elem.parentElement;
-  const errorDisplay = inputControl.querySelector(".error");
-
-  errorDisplay.innerText = "";
-  inputControl.classList.remove("error");
-};
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (!validateInputes()) {
-    return;
-  }
-  let clickedBtn = document.activeElement.value;
-
-  if (clickedBtn === "Update") {
-    handleUpdate();
-  } else if (clickedBtn === "Create") {
-    handleCreate();
-  }
-});
-
-const validateInputes = () => {
-  const idValue = id.value.trim();
-  const firstNameValue = firstName.value.trim();
-  const lastNameValue = lastName.value.trim();
-  const gender = document.getElementsByName("gender");
-  const hobbies = document.querySelectorAll("input[name='hobbies']:checked");
-  const countryValue = country.value.trim();
-  const stateValue = state.value.trim();
-  const cityValue = city.value.trim();
-  const birthDateValue = birthDate.value;
-  const birthTimeValue = birthTime.value;
-  let isValid = true;
-  const users = JSON.parse(localStorage.getItem("UserData"));
-  let availableIds = [];
-
-  for (let user in users) {
-    availableIds.push(users[user].id);
-  }
-
-  const idRegex = /^\d+$/;
-  const nameRegex = /^[a-z]{3,10}$/i;
-
-  if (document.activeElement.value != "Update") {
-    if (!idValue) {
-      setErr(id, "ID is Required.");
-      isValid = false;
-    } else if (!idRegex.test(idValue)) {
-      setErr(id, "ID should be Positive Number");
-      isValid = false;
-    } else if (availableIds.includes(idValue)) {
-      setErr(id, "This User is already Available.");
-      isValid = false;
-    } else {
-      setSuccess(id);
-    }
-  }
-
-  if (!firstNameValue) {
-    setErr(firstName, "First Name is required");
-    isValid = false;
-  } else if (!nameRegex.test(firstNameValue)) {
-    setErr(firstName, "First Name should be 3-10 letters only.");
-    isValid = false;
-  } else {
-    setSuccess(firstName);
-  }
-
-  if (!lastNameValue) {
-    setErr(lastName, "Last Name is required");
-    isValid = false;
-  } else if (!nameRegex.test(lastNameValue)) {
-    setErr(lastName, "Last Name should be 3-10 letters only ");
-    isValid = false;
-  } else {
-    setSuccess(lastName);
-  }
-
-  if (!(gender[0].checked || gender[1].checked || gender[2].checked)) {
-    setErr(document.getElementById("Male"), "Gender is Required");
-    isValid = false;
-  } else {
-    setSuccess(gender[0]);
-  }
-
-  if (hobbies.length > 0) {
-    setSuccess(hobbies[0]);
-  } else {
-    setErr(document.getElementById("Cricket"), "Enter at least one Hobby");
-    isValid = false;
-  }
-
-  if (countryValue == "Country") {
-    setErr(country, "Please select a Country.");
-    isValid = false;
-  } else {
-    setSuccess(country);
-  }
-  if (stateValue == "State") {
-    setErr(state, "Please select a State.");
-    isValid = false;
-  } else {
-    setSuccess(state);
-  }
-  if (cityValue == "City") {
-    setErr(city, "Plase select a City.");
-    isValid = false;
-  } else {
-    setSuccess(city);
-  }
-
-  if (!birthDateValue) {
-    setErr(birthDate, "Birth Date is Required");
-    isValid = false;
-  } else {
-    setSuccess(birthDate);
-  }
-
-  if (!birthTimeValue) {
-    setErr(birthTime, "Birth Time is Required");
-    isValid = false;
-  } else {
-    setSuccess(birthTime);
-  }
-  return isValid;
-};
-
-window.onload = function () {
-  let operation = localStorage.getItem("Operation");
-  if (operation == "edit") {
-    id.readOnly = true;
-  }
-};

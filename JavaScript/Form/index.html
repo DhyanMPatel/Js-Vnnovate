@@ -1,145 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Form</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <div id="div">
+      <input
+        type="button"
+        id="data"
+        onclick="showData()"
+        class="button"
+        value="Data"
+        title="Show Users Data"
+      />
+      <div id="formDiv">
+        <form id="form" name="form">
+          <table style="position: relative">
+            <tr id="idTr">
+              <th>ID:</th>
+              <td>
+                <div class="input-control">
+                  <input
+                    type="text"
+                    name="Id"
+                    id="Id"
+                    placeholder="Enter your ID"
+                  />
+                  <span class="error"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>First Name:</th>
+              <td>
+                <div class="input-control">
+                  <input
+                    type="text"
+                    name="First Name"
+                    id="firstName"
+                    placeholder="Enter Your firstName"
+                  />
+                  <span class="error"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>Last Name:</th>
+              <td>
+                <div class="input-control">
+                  <input
+                    type="text"
+                    name="lastName"
+                    id="lastName"
+                    placeholder="Enter Your LastName"
+                  />
+                  <span class="error"></span>
+                </div>
+              </td>
+            </tr>
+            <tr id="genders">
+              <th>Gender:</th>
+              <td>
+                <div class="input-control">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                    id="Male"
+                  /><label for="Male">Male</label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                    id="Female"
+                  /><label for="Female">Female</label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Transgender"
+                    id="Transgender"
+                  /><label for="Transgender">Transgender</label>
+                  <span class="error"></span>
+                </div>
+              </td>
+            </tr>
+            <tr id="hobbies">
+              <th>Hobbies:</th>
+              <td>
+                <div class="input-control">
+                  <input
+                    type="checkbox"
+                    name="hobbies"
+                    value="Cricket"
+                    id="Cricket"
+                  /><label for="Cricket">Cricket</label>
+                  <input
+                    type="checkbox"
+                    name="hobbies"
+                    value="Football"
+                    id="Football"
+                  /><label for="Football">Football</label>
+                  <input
+                    type="checkbox"
+                    name="hobbies"
+                    value="Reading"
+                    id="Reading"
+                  /><label for="Reading">Reading</label>
+                  <input
+                    type="checkbox"
+                    name="hobbies"
+                    value="Travelling"
+                    id="Travelling"
+                  /><label for="Travelling">Travelling</label>
+                  <input
+                    type="checkbox"
+                    name="hobbies"
+                    value="Cycling"
+                    id="Cycling"
+                  /><label for="Cycling">Cycling</label>
+                  <input
+                    type="checkbox"
+                    name="hobbies"
+                    value="others"
+                    id="Others"
+                  /><label for="Others">Other</label>
+                  <span class="error"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>Country:</th>
+              <td>
+                <div class="input-control">
+                  <select name="country" id="country">
+                    <option value="Country" selected>Country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                  </select>
+                  <span class="error"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>State:</th>
+              <td>
+                <div class="input-control">
+                  <select name="state" id="state">
+                    <option value="State" selected>State</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Cerala">Cerala</option>
+                    <option value="Rajastan">Rajastan</option>
+                  </select>
+                  <span class="error"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>City:</th>
+              <td>
+                <div class="input-control">
+                  <select name="city" id="city">
+                    <option value="City" selected>City</option>
+                    <option value="Ahmedabad">Ahmedabad</option>
+                    <option value="Surat">Surat</option>
+                    <option value="Vadodara">Vadodara</option>
+                  </select>
+                  <span class="error"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>Birth Date:</th>
+              <td>
+                <div class="input-control">
+                  <input type="date" name="Birth Date" id="birthDate" />
+                  <span class="error"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>Birth Time:</th>
+              <td>
+                <div class="input-control">
+                  <input type="time" name="Birth Time" id="birthTime" />
+                  <span class="error"></span>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="buttons">
+            <input
+              type="submit"
+              id="create"
+              class="button"
+              value="Create"
+              title="Create New User"
+              style="display: block"
+            />
 
-<body>
-  <div id="div">
-    <input type="button" id="data" onclick="showData()" class="button" value="Data" title="Show Users Data" />
-    <div id="formDiv">
-      <form id="form" name="form">
-        <table style="position: relative">
-          <tr id="idTr">
-            <th>ID:</th>
-            <td>
-              <div class="input-control">
-                <input type="text" name="Id" id="id" placeholder="Enter your ID" />
-                <span class="error"></span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th>First Name:</th>
-            <td>
-              <div class="input-control">
-                <input type="text" name="First Name" id="firstName" placeholder="Enter Your firstName" />
-                <span class="error"></span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th>Last Name:</th>
-            <td>
-              <div class="input-control">
-                <input type="text" name="lastName" id="lastName" placeholder="Enter Your LastName" />
-                <span class="error"></span>
-              </div>
-            </td>
-          </tr>
-          <tr id="genders">
-            <th>Gender:</th>
-            <td>
-              <div class="input-control">
-                <input type="radio" name="gender" value="Male" id="Male" /><label for="Male">Male</label>
-                <input type="radio" name="gender" value="Female" id="Female" /><label for="Female">Female</label>
-                <input type="radio" name="gender" value="Transgender" id="Transgender" /><label for="Transgender">Transgender</label>
-                <span class="error"></span>
-              </div>
-            </td>
-          </tr>
-          <tr id="hobbies">
-            <th>Hobbies:</th>
-            <td>
-              <div class="input-control">
-                <input type="checkbox" name="hobbies" value="Cricket" id="Cricket" /><label for="Cricket">Cricket</label>
-                <input type="checkbox" name="hobbies" value="Football" id="Football" /><label for="Football">Football</label>
-                <input type="checkbox" name="hobbies" value="Reading" id="Reading" /><label for="Reading">Reading</label>
-                <input type="checkbox" name="hobbies" value="Travelling" id="Travelling" /><label for="Travelling">Travelling</label>
-                <input type="checkbox" name="hobbies" value="Cycling" id="Cycling" /><label for="Cycling">Cycling</label>
-                <input type="checkbox" name="hobbies" value="others" id="Others" /><label for="Others">Other</label>
-                <span class="error"></span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th>Country:</th>
-            <td>
-              <div class="input-control">
-                <select name="country" id="country">
-                  <option value="Country" selected>Country</option>
-                  <option value="India">India</option>
-                  <option value="USA">USA</option>
-                  <option value="UK">UK</option>
-                </select>
-                <span class="error"></span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th>State:</th>
-            <td>
-              <div class="input-control">
-                <select name="state" id="state">
-                  <option value="State" selected>State</option>
-                  <option value="Gujarat">Gujarat</option>
-                  <option value="Cerala">Cerala</option>
-                  <option value="Rajastan">Rajastan</option>
-                </select>
-                <span class="error"></span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th>City:</th>
-            <td>
-              <div class="input-control">
-                <select name="city" id="city">
-                  <option value="City" selected>City</option>
-                  <option value="Ahmedabad">Ahmedabad</option>
-                  <option value="Surat">Surat</option>
-                  <option value="Vadodara">Vadodara</option>
-                </select>
-                <span class="error"></span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th>Birth Date:</th>
-            <td>
-              <div class="input-control">
-                <input type="date" name="Birth Date" id="birthDate" />
-                <span class="error"></span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th>Birth Time:</th>
-            <td>
-              <div class="input-control">
-                <input type="time" name="Birth Time" id="birthTime" />
-                <span class="error"></span>
-              </div>
-            </td>
-          </tr>
-        </table>
-        <div class="buttons">
-          <input type="submit" id="create" class="button" value="Create" title="Create New User" style="display: block;" />
+            <button
+              type="submit"
+              id="update"
+              class="button"
+              value="Update"
+              title="Update User"
+              style="display: none"
+            >
+              Update
+            </button>
 
-          <button type="submit" id="update" class="button" value="Update" title="Update User" style="display: none" >Update</button>
-
-          <button type="button" id="cancel" class="button" value="Cancel" title="Cancel Data">
-            Cancel
-          </button>
-        </div>
-      </form>
+            <button
+              type="button"
+              id="cancel"
+              class="button"
+              value="Cancel"
+              title="Cancel Data"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-  <script src="./script.js"></script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>

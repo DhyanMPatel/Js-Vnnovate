@@ -33,18 +33,23 @@ form * {
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="date"],
+input[type="time"] {
   width: 90%;
   border-radius: 5px;
 }
-input[type="checkbox"] {
-  background-color: cadetblue;
+select {
+  width: 93%;
+  border-radius: 5px;
 }
-/* .input-control.success input {
-  border: 2px solid black;
-} */
+.input-control input {
+  border: 1px solid black;
+}
+
 .input-control.error input {
-  border: 2px solid red;
+  border: 1px solid red;
+  outline: red;
 }
 .input-control .error {
   display: block;
