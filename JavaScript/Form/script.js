@@ -102,6 +102,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     OpCheck();
   }
+
+  // id.addEventListener('input', validateInputes())
+  // firstName.addEventListener('input', validateInputes())
+  // lastName.addEventListener('input', validateInputes())
+  // country.addEventListener('change', validateInputes())
+  // state.addEventListener('change', validateInputes())
+  // city.addEventListener('change', validateInputes())
+  // birthDate.addEventListener("change", validateInputes())
+  // birthTime.addEventListener("change", validateInputes())
+
+  // document.getElementsByName('gender').forEach((gen) => gen.addEventListener('change', validateInputes()))
+  // document.querySelectorAll(`input[name="hobbies"]`).forEach((hobbie) => hobbie.addEventListener("change", validateInputes()))
 });
 
 function convertIn24(birthTime) {
