@@ -1,17 +1,14 @@
-Date: 11 Feb 2025
-Day: Tuesday
+Date: 12 Feb 2025
+Day: Wednesday
 
 TODO list:
 
-1. Work on Form Validation Task - given by
+1. Check form Validation Task - given by
 
 Work done:
-Date: 10 Feb 2025
-Day: Monday
+Date: 11 Feb 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
-1. Make Changes in Form Task - Given by @Rahul Sir
-   - Redirect to `Display.html` page when user click on `create`, `cancel`, `Update`, `Data`. - Complete
-   - make id for each User. - Complete
-   - Display Message when user forget to fill required data - In Progress
+1. Form Validation - Complete

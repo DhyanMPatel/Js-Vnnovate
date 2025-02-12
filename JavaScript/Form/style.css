@@ -40,11 +40,11 @@ input[type="number"] {
 input[type="checkbox"] {
   background-color: cadetblue;
 }
-.input-control.success input {
-  border: 1px solid black;
-}
+/* .input-control.success input {
+  border: 2px solid black;
+} */
 .input-control.error input {
-  border: 1px solid red;
+  border: 2px solid red;
 }
 .input-control .error {
   display: block;

@@ -34,8 +34,10 @@
   4. ID Selector - `#idName {...}`
   5. Attribute Selector - Ex: `input[type="text"] {...}`
 
-- Intermediate Selector, 6. Descendant Selector - include all descendant of elem although h2 is in `div>p>h2` steel selected.
-  `CSS
+- Intermediate Selector,
+
+  6. Descendant Selector - include all descendant of elem although h2 is in `div>p>h2` steel selected.
+     `CSS
     div h2 {
         color: #fff
     }
@@ -49,7 +51,7 @@
       }
   ```
 
-  8. Adjacent Sibling Selector -
+  8. Adjacent Sibling Selector - select the `<form>` element that comes right after an `<h2>` element.
 
   ```CSS
       h2 + form {
@@ -73,7 +75,7 @@
       }
   ```
 
-  11. Pseudo-element Selector -
+  11. Pseudo-element Selector - target specific part of an element. like `first-letter` element.
 
   ```CSS
       p::first-letter{
@@ -225,6 +227,7 @@
      ```
 
 - Try adding some custom CSS
+
   ```html
 
   ```

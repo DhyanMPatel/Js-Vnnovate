@@ -52,6 +52,7 @@ function handleCreate() {
 
   localStorage.removeItem("Operation");
   OpCheck();
+  alert("You Created User Data!");
   window.location.href = "display.html";
 }
 
@@ -102,18 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     OpCheck();
   }
-
-  // id.addEventListener('input', validateInputes())
-  // firstName.addEventListener('input', validateInputes())
-  // lastName.addEventListener('input', validateInputes())
-  // country.addEventListener('change', validateInputes())
-  // state.addEventListener('change', validateInputes())
-  // city.addEventListener('change', validateInputes())
-  // birthDate.addEventListener("change", validateInputes())
-  // birthTime.addEventListener("change", validateInputes())
-
-  // document.getElementsByName('gender').forEach((gen) => gen.addEventListener('change', validateInputes()))
-  // document.querySelectorAll(`input[name="hobbies"]`).forEach((hobbie) => hobbie.addEventListener("change", validateInputes()))
 });
 
 function convertIn24(birthTime) {
@@ -170,6 +159,7 @@ function handleUpdate() {
 
   document.forms["form"].reset();
   OpCheck();
+  alert("You Updated User Data!");
   window.location.href = "display.html";
 }
 
@@ -188,7 +178,6 @@ const setSuccess = (elem) => {
   errorDisplay.innerText = "";
   inputControl.classList.remove("error");
 };
-
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -218,7 +207,6 @@ const validateInputes = () => {
   let isValid = true;
   const users = JSON.parse(localStorage.getItem("UserData"));
   let availableIds = [];
-  
 
   for (let user in users) {
     availableIds.push(users[user].id);
@@ -227,13 +215,12 @@ const validateInputes = () => {
   const idRegex = /^\d+$/;
   const nameRegex = /^[a-z]{3,10}$/i;
 
-
   if (document.activeElement.value != "Update") {
     if (!idValue) {
       setErr(id, "ID is Required.");
       isValid = false;
     } else if (!idRegex.test(idValue)) {
-      setErr(id, "ID should be Number");
+      setErr(id, "ID should be Positive Number");
       isValid = false;
     } else if (availableIds.includes(idValue)) {
       setErr(id, "This User is already Available.");
@@ -317,4 +304,4 @@ window.onload = function () {
   if (operation == "edit") {
     id.readOnly = true;
   }
-}
+};
