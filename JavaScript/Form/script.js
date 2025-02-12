@@ -167,7 +167,6 @@ const setErr = (elem, mgs) => {
 
   errorDisplay.innerText = mgs;
   inputControl.classList.add("error");
-  inputControl.classList.remove("success");
 };
 
 const setSuccess = (elem) => {
@@ -175,7 +174,6 @@ const setSuccess = (elem) => {
   const errorDisplay = inputControl.querySelector(".error");
 
   errorDisplay.innerText = "";
-  inputControl.classList.add("sucess");
   inputControl.classList.remove("error");
 };
 
@@ -186,16 +184,10 @@ form.addEventListener("submit", (event) => {
     return;
   }
   let clickedBtn = document.activeElement.value;
-  console.log(clickedBtn);
-  console.log("submited");
 
   if (clickedBtn === "Update") {
-    console.log(`update called`);
-
     handleUpdate();
-
   } else if (clickedBtn === "Create") {
-    console.log("Create User Called");
     handleCreate();
   }
 });
@@ -213,20 +205,25 @@ const validateInputes = () => {
   const birthTimeValue = birthTime.value;
   let isValid = true;
   const users = JSON.parse(localStorage.getItem("UserData"));
-  let valid = [];
+  let availableIds = [];
+  
 
   for (let user in users) {
-    valid.push(users[user].id);
+    availableIds.push(users[user].id);
   }
 
+  const idRegex = /^\d+$/;
+  const nameRegex = /^[a-z]{3,10}$/i;
+
+
   if (document.activeElement.value != "Update") {
-    if (idValue === "") {
-      setErr(id, "Id is Required.");
+    if (!idValue) {
+      setErr(id, "ID is Required.");
       isValid = false;
-    } else if (isNaN(idValue)) {
-      setErr(id, "Id should be Number");
+    } else if (!idRegex.test(idValue)) {
+      setErr(id, "ID should be Number");
       isValid = false;
-    } else if (valid.includes(idValue)) {
+    } else if (availableIds.includes(idValue)) {
       setErr(id, "This User is already Available.");
       isValid = false;
     } else {
@@ -234,27 +231,21 @@ const validateInputes = () => {
     }
   }
 
-  if (firstNameValue === "") {
+  if (!firstNameValue) {
     setErr(firstName, "First Name is required");
     isValid = false;
-  } else if (firstNameValue.length <= 3) {
-    setErr(firstName, "First Name should be more Then 3 letters.");
-    isValid = false;
-  } else if (firstNameValue.length > 10) {
-    setErr(firstName, "First Name should be less then 10 letters.");
+  } else if (!nameRegex.test(firstNameValue)) {
+    setErr(firstName, "First Name should be 3-10 letters only.");
     isValid = false;
   } else {
     setSuccess(firstName);
   }
 
-  if (lastNameValue === "") {
-    setErr(lastName, "First Name is required");
+  if (!lastNameValue) {
+    setErr(lastName, "Last Name is required");
     isValid = false;
-  } else if (lastNameValue.length <= 3) {
-    setErr(lastName, "First Name should be more Then 3 letters.");
-    isValid = false;
-  } else if (lastNameValue.length > 10) {
-    setErr(lastName, "First Name should be less then 10 letters.");
+  } else if (!nameRegex.test(lastNameValue)) {
+    setErr(lastName, "Last Name should be 3-10 letters only ");
     isValid = false;
   } else {
     setSuccess(lastName);
@@ -262,6 +253,7 @@ const validateInputes = () => {
 
   if (!(gender[0].checked || gender[1].checked || gender[2].checked)) {
     setErr(document.getElementById("Male"), "Gender is Required");
+    isValid = false;
   } else {
     setSuccess(gender[0]);
   }
@@ -270,36 +262,37 @@ const validateInputes = () => {
     setSuccess(hobbies[0]);
   } else {
     setErr(document.getElementById("Cricket"), "Enter at least one Hobby");
+    isValid = false;
   }
 
   if (countryValue == "Country") {
-    setErr(country, "Country should be selected.");
+    setErr(country, "Please select a Country.");
     isValid = false;
   } else {
     setSuccess(country);
   }
   if (stateValue == "State") {
-    setErr(state, "State should be selected.");
+    setErr(state, "Please select a State.");
     isValid = false;
   } else {
     setSuccess(state);
   }
   if (cityValue == "City") {
-    setErr(city, "City should be selected.");
+    setErr(city, "Plase select a City.");
     isValid = false;
   } else {
     setSuccess(city);
   }
 
-  if (birthDateValue == "") {
-    setErr(birthDate, "Birth Date Required");
+  if (!birthDateValue) {
+    setErr(birthDate, "Birth Date is Required");
     isValid = false;
   } else {
     setSuccess(birthDate);
   }
 
-  if (birthTimeValue == "") {
-    setErr(birthTime, "Birth Time Required");
+  if (!birthTimeValue) {
+    setErr(birthTime, "Birth Time is Required");
     isValid = false;
   } else {
     setSuccess(birthTime);
