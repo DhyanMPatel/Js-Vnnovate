@@ -1,4 +1,4 @@
-const defaultData = document.getElementById("defaultData")
+const defaultData = document.getElementById("defaultData");
 
 function addData() {
   window.location.href = "index.html";
@@ -6,18 +6,41 @@ function addData() {
   localStorage.setItem("Operation", "add");
 }
 
-function displayUsers() {
-  let users = JSON.parse(localStorage.getItem("UserData")) || [];
+const fetchData = async (url) => {
+  const response = await fetch(url);
+  let json;
 
+  if (response.ok) {
+    json = await response.json();
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Something went wrong!",
+    });
+    json = [];
+  }
+
+  return json;
+};
+
+async function displayUsers() {
+  if (!localStorage.getItem("UserData")) {
+    let jsonData = await fetchData(
+      "https://mocki.io/v1/0eb26a23-6231-46fb-84bb-82d1c82a0dab"
+    );
+    localStorage.setItem("UserData", JSON.stringify(jsonData));
+  }
+
+  let users = JSON.parse(localStorage.getItem("UserData")) || [];
   let tbody = document.querySelector("tbody");
   users.length != 0 ? (tbody.innerHTML = "") : null;
 
   users.map((user, index) => {
     let row = document.createElement("tr");
-    let birthDate = user.birthDate
+    let birthDate = user.birthDate;
 
     birthDate = formateBirthDate(birthDate);
-
 
     row.innerHTML = `
         <td>${user.id}</td>
@@ -46,21 +69,20 @@ function displayUsers() {
 function formateBirthDate(birthDate) {
   let date = new Date(birthDate);
 
-  return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
+  return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
 }
 
 async function deleteUser(index) {
   let users = JSON.parse(localStorage.getItem("UserData")) || [];
 
   let result = await Swal.fire({
-    title: 'Are you sure?',
-    text: 'You will not be able to recover this user data.',
-    icon: 'warning',
+    title: "Are you sure?",
+    text: "You will not be able to recover this user data.",
+    icon: "warning",
     showCancelButton: true,
-    confirmButtonText: 'Yes, delete it!',
-    cancelButtonText: 'No, cancel!'
-
-  })
+    confirmButtonText: "Yes, delete it!",
+    cancelButtonText: "No, cancel!",
+  });
   if (result.isConfirmed) {
     users.splice(index, 1);
     if (users.length == 0) {
@@ -70,29 +92,28 @@ async function deleteUser(index) {
       localStorage.setItem("UserData", JSON.stringify(users));
     } else {
       await Swal.fire({
-        title: 'Deleted!',
-        text: 'User has been deleted.',
-        icon: 'success',
+        title: "Deleted!",
+        text: "User has been deleted.",
+        icon: "success",
         showConfirmButton: false,
-        timer: 1000
-      })
+        timer: 1000,
+      });
       window.location.href = "display.html";
       localStorage.removeItem("UserData");
     }
     displayUsers();
     Swal.fire({
-      title: 'Deleted!',
-      text: 'User has been deleted.',
-      icon: 'success',
+      title: "Deleted!",
+      text: "User has been deleted.",
+      icon: "success",
       showConfirmButton: false,
-      timer: 1000
-    })
+      timer: 1000,
+    });
   }
-
 }
 
 // Function to edit user data (redirect to the form page with data)
-function editUser(index) {
+async function editUser(index) {
   localStorage.setItem("editIndex", index);
   localStorage.setItem("Operation", "edit");
   window.location.href = "index.html";
@@ -101,3 +122,126 @@ function editUser(index) {
 window.onload = function () {
   displayUsers();
 };
+
+// [
+//   {
+//     "id": 1,
+//     "firstName": "Aarav",
+//     "lastName": "Shah",
+//     "gender": "Male",
+//     "country": "India",
+//     "state": "Gujarat",
+//     "city": "Ahmedabad",
+//     "birthDate": "1995-07-12",
+//     "birthTime": "11:30 AM",
+//     "hobbies": ["Cricket", "Reading"]
+//   },
+//   {
+//     "id": 2,
+//     "firstName": "Meera",
+//     "lastName": "Patel",
+//     "gender": "Female",
+//     "country": "USA",
+//     "state": "California",
+//     "city": "Los Angeles",
+//     "birthDate": "1992-03-25",
+//     "birthTime": "03:45 PM",
+//     "hobbies": ["Travelling", "Swimming"]
+//   },
+//   {
+//     "id": 3,
+//     "firstName": "Rohan",
+//     "lastName": "Desai",
+//     "gender": "Male",
+//     "country": "Canada",
+//     "state": "Ontario",
+//     "city": "Toronto",
+//     "birthDate": "2000-11-18",
+//     "birthTime": "09:15 AM",
+//     "hobbies": ["Football", "Cycling"]
+//   },
+//   {
+//     "id": 4,
+//     "firstName": "Sanya",
+//     "lastName": "Verma",
+//     "gender": "Female",
+//     "country": "India",
+//     "state": "Maharashtra",
+//     "city": "Mumbai",
+//     "birthDate": "1998-06-30",
+//     "birthTime": "10:00 AM",
+//     "hobbies": ["Reading", "Swimming"]
+//   },
+//   {
+//     "id": 5,
+//     "firstName": "Arjun",
+//     "lastName": "Kapoor",
+//     "gender": "Male",
+//     "country": "Australia",
+//     "state": "Victoria",
+//     "city": "Melbourne",
+//     "birthDate": "1997-05-21",
+//     "birthTime": "02:20 PM",
+//     "hobbies": ["Cricket", "Football"]
+//   },
+//   {
+//     "id": 6,
+//     "firstName": "Ritika",
+//     "lastName": "Sharma",
+//     "gender": "Female",
+//     "country": "UK",
+//     "state": "England",
+//     "city": "London",
+//     "birthDate": "1993-09-10",
+//     "birthTime": "08:30 AM",
+//     "hobbies": ["Travelling", "Cycling"]
+//   },
+//   {
+//     "id": 7,
+//     "firstName": "Vivaan",
+//     "lastName": "Joshi",
+//     "gender": "Male",
+//     "country": "India",
+//     "state": "Karnataka",
+//     "city": "Bangalore",
+//     "birthDate": "2001-12-05",
+//     "birthTime": "06:50 PM",
+//     "hobbies": ["Swimming", "Football"]
+//   },
+//   {
+//     "id": 8,
+//     "firstName": "Kiara",
+//     "lastName": "Singh",
+//     "gender": "Female",
+//     "country": "USA",
+//     "state": "Texas",
+//     "city": "Houston",
+//     "birthDate": "1996-02-17",
+//     "birthTime": "04:40 AM",
+//     "hobbies": ["Reading", "Cricket"]
+//   },
+//   {
+//     "id": 9,
+//     "firstName": "Aryan",
+//     "lastName": "Mehta",
+//     "gender": "Transgender",
+//     "country": "Germany",
+//     "state": "Bavaria",
+//     "city": "Munich",
+//     "birthDate": "1994-08-29",
+//     "birthTime": "12:05 PM",
+//     "hobbies": ["Cycling", "Travelling"]
+//   },
+//   {
+//     "id": 10,
+//     "firstName": "Pooja",
+//     "lastName": "Chopra",
+//     "gender": "Female",
+//     "country": "India",
+//     "state": "West Bengal",
+//     "city": "Kolkata",
+//     "birthDate": "1999-10-14",
+//     "birthTime": "05:30 PM",
+//     "hobbies": ["Football", "Reading"]
+//   }
+// ]

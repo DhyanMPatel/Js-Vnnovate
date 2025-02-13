@@ -30,7 +30,7 @@ const setSuccess = (elem) => {
 };
 
 const validateId = () => {
-  const idValue = id.value.trim();
+  const idValue = parseInt(id.value.trim());
   const idRegex = /^\d+$/;
   let isValid = true;
   let operation = localStorage.getItem("Operation");
@@ -222,6 +222,12 @@ const validateInputes = () => {
   return isValid;
 };
 
+const compareUser = (userB, userA) => {
+  if (userA.id > userB.id) return -1;
+  if (userA.id == userB.id) return 0;
+  if (userA.id < userB.id) return 1;
+};
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   if (!validateInputes()) {
@@ -256,7 +262,7 @@ function showData() {
   localStorage.removeItem("editIndex");
 }
 
-function handleCreate() {
+async function handleCreate() {
   const hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
   const arrTime = birthTime.value.split(":");
   const amPm = arrTime[0] >= 12 ? "PM" : "AM";
@@ -267,7 +273,7 @@ function handleCreate() {
   const bt = `${arrTime.join(":")} ${amPm}`;
 
   const obj = {
-    id: id.value,
+    id: parseInt(id.value),
     firstName: firstName.value,
     lastName: lastName.value,
     gender: document.querySelector('input[name="gender"]:checked').value || [],
@@ -284,6 +290,7 @@ function handleCreate() {
 
   let users = JSON.parse(localStorage.getItem("UserData")) || [];
   users.push(obj);
+  users.sort(compareUser);
 
   localStorage.setItem("UserData", JSON.stringify(users));
   document.forms["form"].reset();
@@ -294,10 +301,10 @@ function handleCreate() {
     title: "User Created Successfully",
     text: "You have successfully added a new user.",
     icon: "success",
-    confirmButtonText: "OK"
+    confirmButtonText: "OK",
   }).then(() => {
-      window.location.href = "display.html";
-  })
+    window.location.href = "display.html";
+  });
 }
 
 function OpCheck() {
@@ -415,8 +422,8 @@ function handleUpdate() {
     icon: "success",
     title: "User Data Updated",
     text: "You Updated User Data!",
-    confirmButtonText: "OK"
-  }).then(()=>{
+    confirmButtonText: "OK",
+  }).then(() => {
     window.location.href = "display.html";
-  })
+  });
 }

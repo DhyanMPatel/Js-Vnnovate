@@ -11,12 +11,19 @@
   - `options` – optional parameters: method, headers etc.
 - without `options`, this is simple `GET` request, downloading a content of URL.
 
-- Request Properties like
+# Note
+
+- Getting a Response is a 2-step Process
+
+  1. An object of Response class cantaining "Status" & "ok" properties.
+  2. After that we need to call another method to access the body in different formats.
+
+- Request Properties like (1st then)
 
   - `ok`- return `true` if HTTP-status is 200-299.
   - `status` - if HTTP-status return 200.
 
-- `Response` provides multiple promise-based methods to access body in various formats.
+- `Response` provides multiple promise-based methods to access body in various formats. (2nd then)
 
   - `responsce.json()` - return as json.
   - `responce.text()` - return as text format
@@ -34,3 +41,20 @@
 
 - The response headers are available in a Map-like headers object in `response.headers`.
 - They are not proper Map. but similar method to get individual header.
+
+- Response Header will get when we fetch any API and get any response. They are available in `response.header`.
+
+### Request Header
+
+- Request Header is a header that we pass with our Request.
+- To set a Request Header in fetch, we can use the header option.
+
+  ```js
+  let res = fetch(url, {
+    header: {
+      Authentication: "secret",
+    },
+  });
+  ```
+
+### Post Request
