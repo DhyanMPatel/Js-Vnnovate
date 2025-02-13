@@ -1,3 +1,5 @@
+const defaultData = document.getElementById("defaultData")
+
 function addData() {
   window.location.href = "index.html";
   localStorage.removeItem("Operation");
@@ -6,6 +8,7 @@ function addData() {
 
 function displayUsers() {
   let users = JSON.parse(localStorage.getItem("UserData")) || [];
+
   let tbody = document.querySelector("tbody");
   users.length != 0 ? (tbody.innerHTML = "") : null;
 
@@ -14,14 +17,14 @@ function displayUsers() {
     let birthDate = user.birthDate
 
     birthDate = formateBirthDate(birthDate);
-    
+
 
     row.innerHTML = `
         <td>${user.id}</td>
         <td>${user.firstName}</td>
         <td>${user.lastName}</td>
         <td>${user.gender}</td>
-        <td>${user.hobbies.join(", ") || "No Interest"}</td>
+        <td>${user.hobbies.join(", ")}</td>
         <td>${user.country}</td>
         <td>${user.state}</td>
         <td>${user.city}</td>
@@ -40,25 +43,52 @@ function displayUsers() {
     tbody.appendChild(row);
   });
 }
-function formateBirthDate(birthDate){
+function formateBirthDate(birthDate) {
   let date = new Date(birthDate);
 
   return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
 }
 
-function deleteUser(index) {
+async function deleteUser(index) {
   let users = JSON.parse(localStorage.getItem("UserData")) || [];
-  let comfirm = confirm("Are You Sure?");
-  if (comfirm) {
+
+  let result = await Swal.fire({
+    title: 'Are you sure?',
+    text: 'You will not be able to recover this user data.',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, delete it!',
+    cancelButtonText: 'No, cancel!'
+
+  })
+  if (result.isConfirmed) {
     users.splice(index, 1);
+    if (users.length == 0) {
+      defaultData.style.display = "block";
+    }
+    if (users.length !== 0) {
+      localStorage.setItem("UserData", JSON.stringify(users));
+    } else {
+      await Swal.fire({
+        title: 'Deleted!',
+        text: 'User has been deleted.',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 1000
+      })
+      window.location.href = "display.html";
+      localStorage.removeItem("UserData");
+    }
+    displayUsers();
+    Swal.fire({
+      title: 'Deleted!',
+      text: 'User has been deleted.',
+      icon: 'success',
+      showConfirmButton: false,
+      timer: 1000
+    })
   }
-  if (users.length !== 0) {
-    localStorage.setItem("UserData", JSON.stringify(users));
-  } else {
-    localStorage.removeItem("UserData");
-    window.location.href = "display.html";
-  }
-  displayUsers();
+
 }
 
 // Function to edit user data (redirect to the form page with data)

@@ -42,7 +42,7 @@ const validateId = () => {
     availableIds.push(users[user].id);
   }
 
-  if (operation == "add") {
+  if (operation != "edit") {
     if (!idValue) {
       setErr(id, "ID is Required.");
       isValid = false;
@@ -236,7 +236,7 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-id.addEventListener("input", validateId);
+id.addEventListener("input", () => validateId());
 firstName.addEventListener("input", validateFirstName);
 lastName.addEventListener("input", validateLastName);
 allGender.forEach((gen) => gen.addEventListener("change", validateGender));
@@ -290,8 +290,14 @@ function handleCreate() {
 
   localStorage.removeItem("Operation");
   OpCheck();
-  alert("You Created User Data!");
-  window.location.href = "display.html";
+  Swal.fire({
+    title: "User Created Successfully",
+    text: "You have successfully added a new user.",
+    icon: "success",
+    confirmButtonText: "OK"
+  }).then(() => {
+      window.location.href = "display.html";
+  })
 }
 
 function OpCheck() {
@@ -405,6 +411,12 @@ function handleUpdate() {
 
   document.forms["form"].reset();
   OpCheck();
-  alert("You Updated User Data!");
-  window.location.href = "display.html";
+  Swal.fire({
+    icon: "success",
+    title: "User Data Updated",
+    text: "You Updated User Data!",
+    confirmButtonText: "OK"
+  }).then(()=>{
+    window.location.href = "display.html";
+  })
 }

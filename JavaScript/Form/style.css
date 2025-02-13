@@ -40,15 +40,20 @@ input[type="time"] {
   border-radius: 5px;
 }
 select {
-  width: 93%;
+  border: 2px solid black;
+  width: 92%;
   border-radius: 5px;
 }
 .input-control input {
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .input-control.error input {
-  border: 1px solid red;
+  border: 2px solid red;
+  outline: red;
+}
+.input-control.error select{
+  border: 2px solid red;
   outline: red;
 }
 .input-control .error {
