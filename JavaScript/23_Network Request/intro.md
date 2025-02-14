@@ -69,3 +69,7 @@
   - `Redirecting Response` (300-399)
   - `Client error Response` (400-499)
   - `Server error Response` (500-599)
+
+# FormData
+
+- `FormData` is about sending HTML forms: with or without files, with additional fields and so on

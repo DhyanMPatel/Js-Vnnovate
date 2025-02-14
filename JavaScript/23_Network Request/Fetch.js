@@ -14,3 +14,27 @@ if (responce.ok) {
 } else {
   alert("HTTP-Status: ", responce.status);
 }
+
+///   Experiment
+//      1) Fetch data from Github
+async function getUsers(names) {
+  let jobs = [];
+
+  for (let name of names) {
+    let job = await fetch(`https://api.github.com/users/${name}`).then(
+      (successResponse) => {
+        if (Response.status != 200) {
+          return null;
+        }
+        return Response.json();
+      },
+      (failResponse) => {
+        return null;
+      }
+    );
+    jobs.push(job);
+  }
+
+  let promise = await Promise.all(jobs);
+  return promise;
+}
