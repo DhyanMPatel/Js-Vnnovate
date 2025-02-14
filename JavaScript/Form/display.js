@@ -13,7 +13,7 @@ const fetchData = async (url) => {
   if (response.ok) {
     json = await response.json();
   } else {
-    Swal.fire({
+    await Swal.fire({
       icon: "error",
       title: "Oops...",
       text: "Something went wrong!",
@@ -86,11 +86,7 @@ async function deleteUser(index) {
   if (result.isConfirmed) {
     users.splice(index, 1);
     if (users.length == 0) {
-      defaultData.style.display = "block";
-    }
-    if (users.length !== 0) {
-      localStorage.setItem("UserData", JSON.stringify(users));
-    } else {
+      
       await Swal.fire({
         title: "Deleted!",
         text: "User has been deleted.",
@@ -98,8 +94,11 @@ async function deleteUser(index) {
         showConfirmButton: false,
         timer: 1000,
       });
-      window.location.href = "display.html";
       localStorage.removeItem("UserData");
+      defaultData.style.display = "block";
+      window.location.href = "display.html";
+    } else {
+      localStorage.setItem("UserData", JSON.stringify(users));
     }
     displayUsers();
     Swal.fire({
