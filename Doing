@@ -1,10 +1,11 @@
-Date: 13 Feb 2025
-Day: Thursday
+Date: 14 Feb 2025
+Day: Friday
 
 TODO list:
 
-1. Understand about Fetch API.
-2. Implement them in Form task - given by
+1. College Project
+   - Try to understand fruntend & backend installation
+2. Learn more about Axios.
 
 Work done:
 Date: 13 Feb 2025
@@ -12,10 +13,6 @@ Day: Thursday
 
 Today, I am working on below list of task:
 
-1. Getting Data from API and store in LocalStorage task given by
-2. Learn all API Methods - Complete
-
-   - There are `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, `HEAD`, `OPERATION`, etc methods.
-
-3. Learn about Axios
+1. Learn about Axios
    - `Axios` is latest promise-based JavaScript library to handle HTTP Operation.
+   - Axios methods to handle Api calls, also provide instance for more efficiency.

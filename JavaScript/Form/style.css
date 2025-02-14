@@ -52,7 +52,7 @@ select {
   border: 2px solid red;
   outline: red;
 }
-.input-control.error select{
+.input-control.error select {
   border: 2px solid red;
   outline: red;
 }
@@ -85,4 +85,9 @@ select {
 th {
   min-width: 100px;
   width: 150px;
+}
+
+*[type="button"]:hover,
+*[type="submit"]:hover {
+  cursor: pointer;
 }

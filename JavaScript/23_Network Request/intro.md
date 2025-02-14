@@ -1,5 +1,8 @@
 # Network Request
 
+- API basically work on Request and Responce.
+- In past We get Data in `AJAX` format and now get Data in `JSON` format
+
 ## Fetch
 
 - fetch is modern and versalite.
@@ -57,4 +60,12 @@
   });
   ```
 
-### Post Request
+### Response Status Codes
+
+- Response status codes indicate specific `HTTP` request has been successfully completed or not.
+- There are total 5 Classes
+  - `Informational Responses` (100-199)
+  - `Successfull Response` (200-299)
+  - `Redirecting Response` (300-399)
+  - `Client error Response` (400-499)
+  - `Server error Response` (500-599)
