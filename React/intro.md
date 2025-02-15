@@ -30,4 +30,9 @@
 ## Installation Steps
 
     1. Node -> `npm` (Node Package Manager) & `npx` (Node Package Executer)
-    2. npx create-react-app 01basicreact
+    2. Create React App -> npx create-react-app 01basicreact    ||    npm create vite@latest
+    3. Run Them -> npm run start    ||    npm run dev
+
+## `Note`
+- If use vite then must run `npm install` after created React app.
+- In Vite file will not accept `.js` file should be only `.jsx` or `.tsx` file. but Vanila React accept `.jsx` file.
