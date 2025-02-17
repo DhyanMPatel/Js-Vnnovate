@@ -1,5 +1,5 @@
 /// FETCH-API
-//      - Fetch uses [Reques] and [Response] objects.
+//      - Fetch uses [Request] and [Response] objects.
 
 const url = "https://example.com/users";
 

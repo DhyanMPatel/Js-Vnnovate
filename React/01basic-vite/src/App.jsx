@@ -1,3 +1,4 @@
+/*
 import Test from "./test"
 
 function App() {
@@ -13,3 +14,14 @@ function App() {
 }
 
 export default App
+*/
+
+///   Bg Change Code
+function App() {
+  return (
+    <>
+      <div></div>
+    </>
+  );
+}
+export default App;
