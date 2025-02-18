@@ -1,0 +1,15 @@
+@use "forP";
+@use "button";
+
+// $primary-color: crimson;
+// $primary-bg-color: aqua;
+
+@function double($size) {
+  @return $size * 2;
+}
+
+div {
+  font-size: double(10px);
+  color: forP.$primary-color;
+  background-color: forP.$primary-bg-color;
+}

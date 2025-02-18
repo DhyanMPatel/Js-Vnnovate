@@ -1,0 +1,26 @@
+p {
+  color: #f1e3d3;
+  background-color: #1b4d3e;
+}
+
+#submit {
+  background: #00879e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#cancel {
+  background: #690b22;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+div {
+  font-size: 20px;
+  color: #f1e3d3;
+  background-color: #1b4d3e;
+}/*# sourceMappingURL=style.css.map */

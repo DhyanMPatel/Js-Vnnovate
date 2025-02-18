@@ -1,0 +1,15 @@
+@mixin button-style($color) {
+  background: $color;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#submit {
+  @include button-style(#00879e);
+}
+
+#cancel {
+  @include button-style(#690b22);
+}
