@@ -98,11 +98,67 @@
   1. `Content-box` - only content part included
   2. `Border-box` - content, padding & border included
 
+### Display
+
+- `display` property specify the behaviour of an element.
+- There are Many types of display properties like `block`, `inline`, `inline-block`, `none`, `flex`, `grid`, etc.
+- If `display:inline` property ignore `margin`, `padding` from top, also we can't set `width`, `height` of element. to solve that do `display:inline-block`.
+
+### `Note`
+
+- `visibility:hidden` work like `display:none`. Just difference is that visibility not remove their space of element where display none remove element, space that ocupied.
+
 ### Inline & Block Elements
 
 - `Inline Element` - They take only content height & width. they ignore explicite Width & height.
+  - If element is inline
 - `Block Element` - they take whole width
 - We can change their behaviour using `display: block/inline`
+
+### Z-index
+
+- Z-index Property specify the stack order of an element.
+- There is a catch Position Should be anything except `static`.
+- Syntax:- `z-index: auto/number/initial/inherit`
+  - `auto`: Set stack in default order.
+  - `number`: Set stack based pm num. Nagative indexing possible
+  - `initial`: Set this property to its default value.
+  - `inherit`: Inherit this property from parent element.
+
+### Positioning Elements
+
+- CSS `position` help place element on the Page.
+
+  1. `static`: default value of element.
+
+     - Can't assign top, bottom, left, right values
+     - Syntax :- `position: static;`
+
+  2. `Relative`:
+
+     - Relative to Parent Element.
+     - Syntax:- `position: relative`
+
+  3. `Absolute`:
+
+     - Find nearest Positioned Ansistor that should not static. then element relative to that Ansistor
+     - e.g. If Parent Component is static then element say good bye i will not follow you and follow nearest Ansistor Which is positioned. Go up to HTML tag because abore there there is not any tag.
+     - Syntax :- `position: absolute`
+
+  4. `Fixed`:
+
+     - Fix element to screen, will not scrolled after scrolling.
+     - Syntax :- `position: Fixed`
+
+  5. `Sticky`:
+     - It behave like static untill we will scroll out of that element then become sticky.
+     - e.g. Inside VS-Code do in their editor field such as heading (positioning Elements, etc).
+     - Syntax:- `position: sticky`
+
+### `Note`
+
+- There are `Transform`, `filter`, `perspective` Properties can also make an element positioned, which is Weird.
+  - e.g. `transform: translate(0);`, `filter: invert(0);`, `perspective: 0em;` in parent elem, make parent positioned.
 
 # Pseudo-Elements
 
@@ -137,25 +193,57 @@
 
 - there are svg generator like `getwaves.com` generate waves as svg.
 
-# Flex Blox
+# Flex Box
 
+- Flex box is One-Dimention Layout.
 - Syntax: `display: flex;`
 - It try to set all childs in single line, it is default behaviour.
 - This Property is `container level` Property
 
 - There are total `9` types of flex box
+
   - Default Flex (row) left-right
   - Column: `flex-direction: column;`
-  - Justify Content: (Left-Right) `justify-content: space-between;`
-  - Align Items: (Top-Bottom) `algin-items: center;`
+  - Justify Content: (Left-Right / Top-Bottom) `justify-content: space-between;`
+  - Align Items: (Top-Bottom / Left-Right) `algin-items: center;`
   - Flex Wrap: (set childs as they can possible in one line) `flex-wrap: wrap;`
   - Align Content: (take all childs as one content) `align-content: space-around;`
   - Order Property: (This use at perticular child) `order: num;`
-  - Flex Grow: (This use at perticular child) `flex-grow: num;`
   - Align Self: (This also use at perticular child) (Top-Bottom) `align-self: flex-end`
+
+- There also one property `gap`, `row-gap`, `column-gap`.
+
+- There are also `Item-level` Property
+
+  - Order:
+
+    - If order value of element is near to 0 then it comes first but after non-order elements.
+    - If there are same order values then first assigned order comes first.
+    - Syntax:- `order: number`
+
+  - Flex Grow: (This use at perticular child)
+
+    - Means element take that num part from full width.
+    - Syntax:- `flex-grow: num;`
+
+  - Flex shrink:
+
+    - Means element will small in num speed. `e.g.` if num = 2, then element shrink in `double speed`.
+    - Syntax:- `flex-shrink: num;`
+
+  - Align-self:
+
+    - Means perticular element algin.
+
+### `Note`
+
+- `justify-content` and `align-items` will change acoording to `flex-direction`.
+- If There are Multiple line of children and we want all children use `align-content` not use [align-items].
+- There is no [justify-items].
 
 # Grid
 
+- Grid is Two-Dimention Layout.
 - Syntax: `display: grid;`
 - `fr` frection - we can take fr as part of 100%. means `1fr`- 1 part, `2fr`- 2 part, `3fr` - 3 part,... of 100%.
 - We can modify grid through multiple Property
@@ -174,7 +262,17 @@
 
 # Design for Mobile, Tablet and web
 
-- Whenever we work with mobile responsive design we provide some media query (Anotated Symbols) start with `@...`.
+- Whenever we also work with mobile responsive design we provide some `media query` (Anotated Symbols) start with `@...`.
+
+- Syntax:-
+
+  ```css
+    @media not|only mediatype and (expressions) {
+      CSS-Code;
+    }
+  ```
+
+  - `Mediatype`: there are multiple mediatypes such as `screen`, `speach`, `all`, `print`.
 
   ```css
   @media (max-width: 600px) and (min-width: 200px) {

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Position</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .parent {
+        border: 1px solid black;
+        padding: 40px;
+        margin: 40px;
+        /* position: relative; */
+      }
+      .box {
+        border: 2px solid black;
+        width: 80vw;
+        height: 200px;
+        padding: 3px;
+        margin: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+      }
+      .box1 {
+        background-color: bisque;
+        position: sticky;
+        top: 0px;
+        left: 0px;
+      }
+      .box2 {
+        background-color: chartreuse;
+        position: relative;
+        top: 30px;
+        left: 90px;
+      }
+      .box3 {
+        background-color: chocolate;
+        position: absolute; /* relative to nearest Positions Ansistor (except static)*/
+        top: 0px;
+        right: 0px;
+        width: 40px;
+      }
+      .box4 {
+        background-color: crimson;
+      }
+      .box5 {
+        background-color: cornflowerblue;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        width: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      parent
+      <div class="box1 box">1</div>
+      <div class="box2 box">2</div>
+      <div class="box3 box">3</div>
+      <div class="box4 box">4</div>
+      <div class="box5 box">5</div>
+    </div>
+  </body>
+</html>

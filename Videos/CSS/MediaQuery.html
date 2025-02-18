@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query in CSS</title>
+  </head>
+  <style>
+    body {
+      background-color: burlywood;
+    }
+    @media only screen and (max-width: 455px) {
+      /* 0 - 455*/
+      body {
+        background-color: chocolate;
+      }
+    }
+    @media screen and (orientation: landscape) {
+      body {
+        border: 2px solid green;
+      }
+    }
+  </style>
+  <body>
+    <div>Hey I am burlywood body guy!</div>
+  </body>
+</html>
