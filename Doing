@@ -15,3 +15,5 @@ Today, I am working on below list of task:
    - Learn Position, Flex, Grid, Display Property in CSS.
    - Learn about Media Query in CSS.
 2. Know about SCSS.
+   - Learn their Features like `Variable`, `Nesting`, `Mixin`, `Function`, `Operators`, `Partials`, `Modules`.
+   - variable store value, Nesting allow nested selector, Mixin store reusable part, function can operations using operators, Modules just like multiple partial files connect with main file.
