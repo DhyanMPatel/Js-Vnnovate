@@ -243,7 +243,7 @@
 
 # Grid
 
-- Grid is Two-Dimention Layout.
+- Grid is <strong>Two-Dimention Layout</strong>.
 - Syntax: `display: grid;`
 - `fr` frection - we can take fr as part of 100%. means `1fr`- 1 part, `2fr`- 2 part, `3fr` - 3 part,... of 100%.
 - We can modify grid through multiple Property
@@ -251,14 +251,23 @@
   - `grid-template-columns` - control width of each columns.
   - `grid-template-row` - control height of each rows.
   - `grid-template-areas` - control `grid-area` that given to each child.
-  - `gap` - gap b/w each elements.
+  - `gap` - gap b/w each elements. Their siblings like `row-gap`, `column-gap`.
   - `grid-auto-rows`:
   - `grid-auto-columns`:
 
 - Also we can use more property to Customize each child
-  - `Grid Column`: give columns span Ex:- `grid-column: 1/4`, means start from 1st column and go untill 4 not include 4th column.
-  - `Grid Row`: give rows span Ex:- `grid-row: 1/3`, means start from 1st row and go untill 3 not include 3rd row.
+  - `Grid Column`: give columns span Ex:- `grid-column: 1/4`, means start from 1st column and go untill 4 not include 4th column. Also take grid lines acoording to that line 1 to line 3.
+  - `Grid Row`: give rows span Ex:- `grid-row: 1/3`, means start from 1st row and go untill 3 not include 3rd row. Also take grid lines acoording to that line 1 to line 3.
   - `Grid Area`: Define just like id, that what i access.
+
+### `Note`
+
+- There are some keyword that help to understand grid.
+  - `Grid Line` - line between 2 columns, 2 row. grid line start from `1,2,...` or `-1,-2,...` from reverse. Also we can `Provide name` to perticular line.
+  - `Grid Cell` - one type of cell. e.g. `ms excel`.
+  - `Grid Track` - space between 2 parallal `grid line`.
+  - `Grid Area` - space between 2 row grid line and 2 column grid line.
+- There are one Property `place-content` means `justify-content` and `align-content`
 
 # Design for Mobile, Tablet and web
 
