@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -22,44 +23,38 @@
           <table style="position: relative">
             <tr id="idTr">
               <th>ID:</th>
-              <td>
-                <div class="input-control">
-                  <input
-                    type="text"
-                    name="Id"
-                    id="Id"
-                    placeholder="Enter your ID"
-                  />
-                  <span class="error"></span>
-                </div>
+              <td class="input-control">
+                <input
+                  type="text"
+                  name="Id"
+                  id="Id"
+                  placeholder="Enter your ID"
+                />
+                <span class="error"></span>
               </td>
             </tr>
             <tr>
               <th>First Name:</th>
-              <td>
-                <div class="input-control">
-                  <input
-                    type="text"
-                    name="First Name"
-                    id="firstName"
-                    placeholder="Enter Your firstName"
-                  />
-                  <span class="error"></span>
-                </div>
+              <td class="input-control">
+                <input
+                  type="text"
+                  name="First Name"
+                  id="firstName"
+                  placeholder="Enter Your firstName"
+                />
+                <span class="error"></span>
               </td>
             </tr>
             <tr>
               <th>Last Name:</th>
-              <td>
-                <div class="input-control">
-                  <input
-                    type="text"
-                    name="lastName"
-                    id="lastName"
-                    placeholder="Enter Your LastName"
-                  />
-                  <span class="error"></span>
-                </div>
+              <td class="input-control">
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="Enter Your LastName"
+                />
+                <span class="error"></span>
               </td>
             </tr>
             <tr id="genders">
@@ -134,118 +129,108 @@
             </tr>
             <tr>
               <th>Country:</th>
-              <td>
-                <div class="input-control">
-                  <select name="country" id="country">
-                    <option value="Country" selected>Country</option>
-                    <option value="India">India</option>
-                    <option value="USA">USA</option>
-                    <option value="UK">UK</option>
-                    <option value="Canada">Canada</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Germany">Germany</option>
-                    <option value="France">France</option>
-                    <option value="UAE">UAE</option>
-                  </select>
-                  <span class="error"></span>
-                </div>
+              <td class="input-control">
+                <select name="country" id="country">
+                  <option value="Country" selected>Country</option>
+                  <option value="India">India</option>
+                  <option value="USA">USA</option>
+                  <option value="UK">UK</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Germany">Germany</option>
+                  <option value="France">France</option>
+                  <option value="UAE">UAE</option>
+                </select>
+                <span class="error"></span>
               </td>
             </tr>
             <tr>
               <th>State:</th>
-              <td>
-                <div class="input-control">
-                  <select name="state" id="state">
-                    <option value="State" selected>State</option>
-                    <option value="Gujarat">Gujarat</option>
-                    <option value="Kerala">Kerala</option>
-                    <option value="Rajastan">Rajastan</option>
-                    <option value="California">California</option>
-                    <option value="Ontario">Ontario</option>
-                    <option value="Maharashtra">Maharashtra</option>
-                    <option value="Victoria">Victoria</option>
-                    <option value="England">England</option>
-                    <option value="Karnataka">Karnataka</option>
-                    <option value="Texas">Texas</option>
-                    <option value="Bavaria">Bavaria</option>
-                    <option value="Goa">Goa</option>
-                    <option value="Queensland">Queensland</option>
-                    <option value="West Bengal">West Bengal</option>
-                    <option value="Alberta">Alberta</option>
-                    <option value="Dubai">Dubai</option>
-                    <option value="Punjab">Punjab</option>
-                    <option value="Île-de-France">Île-de-France</option>
-                    <option value="Madhya Pradesh">Madhya Pradesh</option>
-                    <option value="Berlin">Berlin</option>
-                    <option value="Scotland">Scotland</option>
-                    <option value="Rajasthan">Rajasthan</option>
-                    <option value="New York">New York</option>
-                    <option value="New South Wales">New South Wales</option>
-                    <option value="British Columbia">British Columbia</option>
-                    <option value="Tamil Nadu">Tamil Nadu</option>
-                  </select>
-                  <span class="error"></span>
-                </div>
+              <td class="input-control">
+                <select name="state" id="state">
+                  <option value="State" selected>State</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Rajastan">Rajastan</option>
+                  <option value="California">California</option>
+                  <option value="Ontario">Ontario</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Victoria">Victoria</option>
+                  <option value="England">England</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Texas">Texas</option>
+                  <option value="Bavaria">Bavaria</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Queensland">Queensland</option>
+                  <option value="West Bengal">West Bengal</option>
+                  <option value="Alberta">Alberta</option>
+                  <option value="Dubai">Dubai</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Île-de-France">Île-de-France</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Berlin">Berlin</option>
+                  <option value="Scotland">Scotland</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="New York">New York</option>
+                  <option value="New South Wales">New South Wales</option>
+                  <option value="British Columbia">British Columbia</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                </select>
+                <span class="error"></span>
               </td>
             </tr>
             <tr>
               <th>City:</th>
-              <td>
-                <div class="input-control">
-                  <select name="city" id="city">
-                    <option value="City" selected>City</option>
-                    <option value="Ahmedabad">Ahmedabad</option>
-                    <option value="Surat">Surat</option>
-                    <option value="Vadodara">Vadodara</option>
-                    <option value="Los Angeles">Los Angeles</option>
-                    <option value="Toronto">Toronto</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Melbourne">Melbourne</option>
-                    <option value="London">London</option>
-                    <option value="Bangalore">Bangalore</option>
-                    <option value="Houston">Houston</option>
-                    <option value="Munich">Munich</option>
-                    <option value="Kolkata">Kolkata</option>
-                    <option value="Chennai">Chennai</option>
-                    <option value="Vancouver">Vancouver</option>
-                    <option value="Sydney">Sydney</option>
-                    <option value="New York City">New York City</option>
-                    <option value="Jaipur">Jaipur</option>
-                    <option value="Edinburgh">Edinburgh</option>
-                    <option value="Berlin">Berlin</option>
-                    <option value="Indore">Indore</option>
-                    <option value="Paris">Paris</option>
-                    <option value="Dallas">Dallas</option>
-                    <option value="Chandigarh">Chandigarh</option>
-                    <option value="Dubai">Dubai</option>
-                    <option value="Kochi">Kochi</option>
-                    <option value="Calgary">Calgary</option>
-                    <option value="Munich">Munich</option>
-                    <option value="Manchester">Manchester</option>
-                    <option value="Brisbane">Brisbane</option>
-                    <option value="Panaji">Panaji</option>
-                    <option value="Miami">Miami</option>
-                  </select>
-                  <span class="error"></span>
-                </div>
+              <td class="input-control">
+                <select name="city" id="city">
+                  <option value="City" selected>City</option>
+                  <option value="Ahmedabad">Ahmedabad</option>
+                  <option value="Surat">Surat</option>
+                  <option value="Vadodara">Vadodara</option>
+                  <option value="Los Angeles">Los Angeles</option>
+                  <option value="Toronto">Toronto</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Melbourne">Melbourne</option>
+                  <option value="London">London</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Houston">Houston</option>
+                  <option value="Munich">Munich</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Vancouver">Vancouver</option>
+                  <option value="Sydney">Sydney</option>
+                  <option value="New York City">New York City</option>
+                  <option value="Jaipur">Jaipur</option>
+                  <option value="Edinburgh">Edinburgh</option>
+                  <option value="Berlin">Berlin</option>
+                  <option value="Indore">Indore</option>
+                  <option value="Paris">Paris</option>
+                  <option value="Dallas">Dallas</option>
+                  <option value="Chandigarh">Chandigarh</option>
+                  <option value="Dubai">Dubai</option>
+                  <option value="Kochi">Kochi</option>
+                  <option value="Calgary">Calgary</option>
+                  <option value="Munich">Munich</option>
+                  <option value="Manchester">Manchester</option>
+                  <option value="Brisbane">Brisbane</option>
+                  <option value="Panaji">Panaji</option>
+                  <option value="Miami">Miami</option>
+                </select>
+                <span class="error"></span>
               </td>
             </tr>
             <tr>
               <th>Birth Date:</th>
-              <td>
-                <div class="input-control">
-                  <input type="date" name="Birth Date" id="birthDate" />
-                  <span class="error"></span>
-                </div>
+              <td class="input-control">
+                <input type="date" name="Birth Date" id="birthDate" />
+                <span class="error"></span>
               </td>
             </tr>
             <tr>
               <th>Birth Time:</th>
-              <td>
-                <div class="input-control">
-                  <input type="time" name="Birth Time" id="birthTime" />
-                  <span class="error"></span>
-                </div>
+              <td class="input-control">
+                <input type="time" name="Birth Time" id="birthTime" />
+                <span class="error"></span>
               </td>
             </tr>
           </table>

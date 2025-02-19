@@ -1,19 +1,18 @@
-Date: 18 Feb 2025
-Day: Tuesday
+Date: 19 Feb 2025
+Day: Wednesday
 
 Today, I am working on below list of task:
 
-1. Learning CSS and SCSS.
+1. Implementation of SCSS in Form Task.
 
 Work done:
-Date: 18 Feb 2025
-Day: Tuesday
+Date: 19 Feb 2025
+Day: Wednesday
 
 Today, I am working on below list of task:
 
-1. Know About CSS
-   - Learn Position, Flex, Grid, Display Property in CSS.
-   - Learn about Media Query in CSS.
-2. Know about SCSS.
-   - Learn their Features like `Variable`, `Nesting`, `Mixin`, `Function`, `Operators`, `Partials`, `Modules`.
-   - variable store value, Nesting allow nested selector, Mixin store reusable part, function can operations using operators, Modules just like multiple partial files connect with main file.
+1. Solve Problem of SASS compiler
+
+   - Convert Ruby-SASS to Dart-SASS for use.
+
+2. Implement SCSS in Form Task.

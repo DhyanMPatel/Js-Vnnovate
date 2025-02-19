@@ -301,7 +301,8 @@ async function handleCreate() {
     title: "User Created Successfully",
     text: "You have successfully added a new user.",
     icon: "success",
-    confirmButtonText: "OK",
+    showConfirmButton: false,
+    timer: 1000,
   }).then(() => {
     window.location.href = "display.html";
   });

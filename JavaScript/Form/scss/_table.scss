@@ -1,0 +1,36 @@
+@use "variable" as var;
+@use "button" as btn;
+
+#displayTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: var.$color;
+
+  thead {
+    tr {
+      background-color: var.$primary-color;
+      border-radius: 10px;
+    }
+  }
+  th,
+  td {
+    padding: 12px;
+    text-align: center;
+  }
+  tbody {
+    tr:hover {
+      background-color: #e4e3e3;
+    }
+  }
+
+  #remove {
+    @include btn.button-style(var.$cancel-button, var.$color);
+    width: 50px;
+    margin: 10px 10px;
+  }
+  #defaultData {
+    height: 50px;
+    margin: 50px;
+    font-size: large;
+  }
+}

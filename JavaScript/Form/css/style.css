@@ -1,0 +1,103 @@
+form {
+  padding: 10px;
+}
+form * {
+  padding: 5px;
+}
+form th {
+  min-width: 100px;
+  width: 150px;
+}
+form input[type=text],
+form input[type=number],
+form input[type=date],
+form input[type=time] {
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+form select {
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 92%;
+  margin: 2px 0;
+}
+form .error input,
+form .error select {
+  border: 1px solid red;
+  outline: red;
+}
+form .error .error {
+  display: block;
+  position: absolute;
+  font-size: 10px;
+  padding: 0px 10px;
+  color: red;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+#div {
+  margin: 20px;
+  border: 1px solid cadetblue;
+  border-radius: 20px;
+  width: 50%;
+  justify-self: center;
+}
+#div .buttons {
+  margin: 10px -6px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#div #data {
+  display: flex;
+  justify-self: start;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+}
+#div .button {
+  background-color: cadetblue;
+  color: white;
+  font-size: 15px;
+  width: 30%;
+  margin: 0 30px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#div .button:hover {
+  background-color: rgb(85.5, 142.2, 144);
+  transition-duration: 0.5s;
+}
+#div #cancel {
+  background-color: #f08080;
+  color: white;
+  font-size: 15px;
+  width: 30%;
+  margin: 0 30px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#div #cancel:hover {
+  background-color: rgb(237.3063380282, 105.1936619718, 105.1936619718);
+  transition-duration: 0.5s;
+}
+#div #formDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */

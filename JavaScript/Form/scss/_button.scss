@@ -1,0 +1,20 @@
+@mixin button-style($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+  font-size: 15px;
+  width: 30%;
+  margin: 0 30px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($bg-color, 5%);
+    transition-duration: 0.5s;
+  }
+}
+
+// @function cancel-button($bg-color) {
+//   @return $bg-color;
+// }

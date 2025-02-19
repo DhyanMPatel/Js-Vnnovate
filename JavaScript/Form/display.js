@@ -1,4 +1,5 @@
 const defaultData = document.getElementById("defaultData");
+const tbody = document.querySelector("tbody");
 
 function addData() {
   window.location.href = "index.html";
@@ -10,32 +11,21 @@ const fetchData = async (url) => {
   // const response = await fetch(url);
   // let json;
 
-  // if (response.ok) {
-  //   json = await response.json();
-  // } else {
-  //   await Swal.fire({
-  //     icon: "error",
-  //     title: "Oops...",
-  //     text: "Something went wrong!",
-  //   });
-  //   json = [];
-  // }
-
+  // json = await response.json();
   // return json;
 
   const response = await axios(url);
-
-  if (response.status === 200) {
-    return response.data;
-  } else {
-    await Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Something went wrong!",
-    });
-    json = [];
-  }
+  return response.data;
 };
+async function test() {
+  const arr = [];
+  await Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Something went wrong!",
+  });
+  return arr;
+}
 
 async function displayUsers() {
   if (!localStorage.getItem("UserData")) {
@@ -45,15 +35,14 @@ async function displayUsers() {
     localStorage.setItem("UserData", JSON.stringify(jsonData));
   }
 
-  let users = JSON.parse(localStorage.getItem("UserData")) || [];
-  let tbody = document.querySelector("tbody");
+  const users = JSON.parse(localStorage.getItem("UserData")) || (await test());
+
   users.length != 0 ? (tbody.innerHTML = "") : null;
 
   users.map((user, index) => {
-    let row = document.createElement("tr");
-    let birthDate = user.birthDate;
+    const row = document.createElement("tr");
 
-    birthDate = formateBirthDate(birthDate);
+    const birthDate = formateBirthDate(user.birthDate);
 
     row.innerHTML = `
         <td>${user.id}</td>
@@ -80,15 +69,15 @@ async function displayUsers() {
   });
 }
 function formateBirthDate(birthDate) {
-  let date = new Date(birthDate);
+  const date = new Date(birthDate);
 
   return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
 }
 
 async function deleteUser(index) {
-  let users = JSON.parse(localStorage.getItem("UserData")) || [];
+  const users = JSON.parse(localStorage.getItem("UserData")) || [];
 
-  let result = await Swal.fire({
+  const result = await Swal.fire({
     title: "Are you sure?",
     text: "You will not be able to recover this user data.",
     icon: "warning",
@@ -101,14 +90,6 @@ async function deleteUser(index) {
     if (users.length == 0) {
       localStorage.removeItem("UserData");
       defaultData.style.display = "block";
-      await Swal.fire({
-        title: "Deleted!",
-        text: "User has been deleted.",
-        icon: "success",
-        showConfirmButton: false,
-        timer: 1000,
-      });
-      displayUsers();
       window.location.href = "display.html";
     } else {
       localStorage.setItem("UserData", JSON.stringify(users));

@@ -1,0 +1,70 @@
+#displayTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+#displayTable thead tr {
+  background-color: cadetblue;
+  border-radius: 10px;
+}
+#displayTable th,
+#displayTable td {
+  padding: 12px;
+  text-align: center;
+}
+#displayTable tbody tr:hover {
+  background-color: #e4e3e3;
+}
+#displayTable #remove {
+  background-color: #f08080;
+  color: white;
+  font-size: 15px;
+  width: 30%;
+  margin: 0 30px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 50px;
+  margin: 10px 10px;
+}
+#displayTable #remove:hover {
+  background-color: rgb(237.3063380282, 105.1936619718, 105.1936619718);
+  transition-duration: 0.5s;
+}
+#displayTable #defaultData {
+  height: 50px;
+  margin: 50px;
+  font-size: large;
+}
+
+body {
+  margin: 20px;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+body .button {
+  background-color: cadetblue;
+  color: white;
+  font-size: 15px;
+  width: 30%;
+  margin: 0 30px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 50px;
+  margin: 10px 10px;
+}
+body .button:hover {
+  background-color: rgb(85.5, 142.2, 144);
+  transition-duration: 0.5s;
+}
+body #displayDiv {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid cadetblue;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=display.css.map */
