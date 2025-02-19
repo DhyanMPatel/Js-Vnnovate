@@ -1,0 +1,11 @@
+@use "variable" as var;
+
+.event-dashboard {
+  .dashboard-header {
+    background: linear-gradient(90deg, var.$primary-color, var.$primary-dark);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    color: var.$text-white;
+  }
+}

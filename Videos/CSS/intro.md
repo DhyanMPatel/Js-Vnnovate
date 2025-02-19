@@ -267,7 +267,7 @@
   - `Grid Cell` - one type of cell. e.g. `ms excel`.
   - `Grid Track` - space between 2 parallal `grid line`.
   - `Grid Area` - space between 2 row grid line and 2 column grid line.
-- There are one Property `place-content` means `justify-content` and `align-content`
+- There are one Property `place-content` means `justify-content` and `align-content`.
 
 # Design for Mobile, Tablet and web
 

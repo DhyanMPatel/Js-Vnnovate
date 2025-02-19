@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Detail</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="event-dashboard">
+      <header class="dashboard-header">
+        <div class="brand">
+          <div class="logo">
+            <i class="fas fa-car-side"></i>
+          </div>
+          <div class="title">
+            <h1>JAGUAR RACING</h1>
+            <span class="subtitle">Test Drive Event</span>
+          </div>
+        </div>
+        <button class="close-btn" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </header>
+
+      <main class="dashboard-content">
+        <section class="time-banner">
+          <div class="date-card start">
+            <div class="date-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div class="date-info">
+              <span class="label">Starts</span>
+              <span class="date">Dec 28</span>
+              <span class="time">11:50 AM</span>
+              <span class="year">2024</span>
+            </div>
+          </div>
+          <div class="duration-indicator">
+            <div class="line"></div>
+            <span class="duration">3 Days</span>
+          </div>
+          <div class="date-card end">
+            <div class="date-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="date-info">
+              <span class="label">Ends</span>
+              <span class="date">Dec 31</span>
+              <span class="time">7:00 PM</span>
+              <span class="year">2024</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="info-grid">
+          <section class="event-details">
+            <h2>Event Information</h2>
+            <div class="details-container">
+              <div class="detail-item">
+                <i class="fas fa-car"></i>
+                <div class="detail-content">
+                  <label>HOBs</label>
+                  <span>Jaguar</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-tasks"></i>
+                <div class="detail-content">
+                  <label>Activities</label>
+                  <span>Let's Drive</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-tag"></i>
+                <div class="detail-content">
+                  <label>Category</label>
+                  <span>Test Event</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-info-circle"></i>
+                <div class="detail-content">
+                  <label>Type</label>
+                  <span>Test-Drive</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="attendance-metrics">
+            <h2>Attendance</h2>
+            <div class="metrics-container">
+              <div class="metric">
+                <div class="metric-value">2</div>
+                <div class="metric-label">Registered</div>
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="metric">
+                <div class="metric-value">0</div>
+                <div class="metric-label">Checked In</div>
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </section>
+
+          <section class="location-management">
+            <div class="location-info">
+              <h2>Location</h2>
+              <div class="location-details">
+                <div class="location-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Western Cape 01</span>
+                </div>
+                <div class="location-item">
+                  <i class="fas fa-building"></i>
+                  <span>Lead Room</span>
+                </div>
+              </div>
+            </div>
+            <div class="management-info">
+              <h2>Management</h2>
+              <div class="management-details">
+                <div class="management-item">
+                  <i class="fas fa-user-tie"></i>
+                  <div class="manager-info">
+                    <label>Project Manager</label>
+                    <span>Ashish</span>
+                  </div>
+                </div>
+                <div class="management-item">
+                  <i class="fas fa-chalkboard-teacher"></i>
+                  <div class="instructor-info">
+                    <label>Instructor</label>
+                    <span>Praveen Suthar</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
