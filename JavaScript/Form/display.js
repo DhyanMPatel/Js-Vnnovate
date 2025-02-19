@@ -90,6 +90,13 @@ async function deleteUser(index) {
     if (users.length == 0) {
       localStorage.removeItem("UserData");
       defaultData.style.display = "block";
+      await Swal.fire({
+        title: "Deleted!",
+        text: "User has been deleted.",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 1000,
+      });
       window.location.href = "display.html";
     } else {
       localStorage.setItem("UserData", JSON.stringify(users));
