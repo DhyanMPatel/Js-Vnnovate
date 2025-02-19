@@ -8,7 +8,7 @@ form th {
   min-width: 100px;
   width: 150px;
 }
-form input[type=text],
+form select, form input[type=text],
 form input[type=number],
 form input[type=date],
 form input[type=time] {
@@ -17,9 +17,6 @@ form input[type=time] {
   border: 1px solid black;
 }
 form select {
-  width: 90%;
-  border-radius: 5px;
-  border: 1px solid black;
   width: 92%;
   margin: 2px 0;
 }
@@ -76,7 +73,7 @@ body {
   cursor: pointer;
 }
 #div .button:hover {
-  background-color: rgb(85.5, 142.2, 144);
+  background-color: rgb(90.25, 150.1, 152);
   transition-duration: 0.5s;
 }
 #div #cancel {
@@ -91,7 +88,7 @@ body {
   cursor: pointer;
 }
 #div #cancel:hover {
-  background-color: rgb(237.3063380282, 105.1936619718, 105.1936619718);
+  background-color: rgb(238.0563380282, 111.5436619718, 111.5436619718);
   transition-duration: 0.5s;
 }
 #div #formDiv {

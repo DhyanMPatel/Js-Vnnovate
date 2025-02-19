@@ -106,6 +106,37 @@
   }
   ```
 
+## Inheritance
+
+- SCSS also support inheritance using `@extend` keyword.
+- `@extend` allows one selector to <strong>inherit</strong> the styles of another selector. This helps in reducing code repetition and keeps styles <strong>consistent</strong>.
+
+  ```scss
+  .button {
+    background-color: crimson;
+    padding: 10px 20px;
+  }
+  .submit {
+    @extend .button;
+    font-waight: bold;
+  }
+  ```
+
+- Use of any selector we can use placeholders `%...`. which <strong>does not generate CSS unless used</strong>.
+
+  ```scss
+  %button-style {
+    background-color: crimson;
+    padding: 10px 20px;
+  }
+  .button {
+    @extend %button-style;
+  }
+  .submit {
+    @extend %button-style;
+  }
+  ```
+
 ### `Note`
 
 - Before CSS3 we use `SASS` then use `SCSS`.

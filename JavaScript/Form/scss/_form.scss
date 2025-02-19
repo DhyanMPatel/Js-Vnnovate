@@ -14,15 +14,18 @@ form {
     min-width: 100px;
     width: 150px;
   }
+  %input-style {
+    @include input-style;
+  }
 
   input[type="text"],
   input[type="number"],
   input[type="date"],
   input[type="time"] {
-    @include input-style;
+    @extend %input-style;
   }
   select {
-    @include input-style();
+    @extend %input-style;
     width: 92%;
     margin: 2px 0;
   }
