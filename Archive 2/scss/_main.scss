@@ -1,0 +1,59 @@
+@use "variable" as var;
+@use "sass:color";
+
+@mixin animation-mixin($name) {
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+}
+
+.dashboard-content {
+  padding: var.$padding;
+
+  .event-form {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var.$padding;
+
+      .form-section {
+        @include animation-mixin(slideIn);
+        h2 {
+          font-size: larger;
+          color: var.$text-primary-color;
+        }
+        .input-group {
+          .form-field {
+            .fas {
+            }
+            input {
+            }
+            .select-wrapper {
+            }
+          }
+        }
+      }
+      .form-actions {
+        .btn {
+        }
+        .btn-secondary {
+        }
+        .btn-primary {
+        }
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: repeat(auto-fit, minmax(768px, 1fr));
+        gap: 1rem;
+      }
+    }
+  }
+}
