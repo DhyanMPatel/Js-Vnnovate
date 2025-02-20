@@ -116,6 +116,7 @@
 
       h2 {
         font-size: larger;
+        color: var.$text-primary-color;
       }
       .details-container {
         display: grid;
@@ -171,6 +172,7 @@
 
       h2 {
         font-size: larger;
+        color: var.$text-primary-color;
       }
       .metrics-container {
         display: flex;
@@ -225,6 +227,7 @@
 
       h2 {
         font-size: larger;
+        color: var.$text-primary-color;
       }
 
       .location-info {
@@ -233,6 +236,7 @@
         padding: var.$padding;
         h2 {
           font-size: larger;
+          color: var.$text-primary-color;
         }
         .location-details {
           margin-top: 1rem;
@@ -266,6 +270,7 @@
 
         h2 {
           font-size: larger;
+          color: var.$text-primary-color;
         }
         .management-details {
           margin-top: 1rem;
