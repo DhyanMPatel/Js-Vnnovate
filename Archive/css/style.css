@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #f5f6fa;
   color: #212121;
   min-height: 100vh;
@@ -15,17 +15,321 @@ body {
 
 .event-dashboard {
   background-color: #ffffff;
+  border-radius: 12px;
   overflow: hidden;
-  width: 90%;
+  width: 95%;
   max-width: 1200px;
 }
 
 .event-dashboard .dashboard-header {
   background: linear-gradient(90deg, #1a237e, #000051);
-  padding: 15px;
+  padding: 1.5rem;
   display: flex;
   align-items: center;
   color: #fff;
+  justify-content: space-between;
+}
+.event-dashboard .dashboard-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.event-dashboard .dashboard-header .brand .logo {
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  height: 20px;
+  width: 20px;
+  font-size: 1.5rem;
+}
+.event-dashboard .dashboard-header .brand .title {
+  display: grid;
+  gap: 7px;
+}
+.event-dashboard .dashboard-header .brand .title h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.event-dashboard .dashboard-header .brand .title .subtitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+.event-dashboard .dashboard-header .close-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 15px;
+  color: #fff;
+  display: grid;
+  place-content: center;
+  border: none;
+  transition: all 0.3s ease;
+}
+.event-dashboard .dashboard-header .close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.dashboard-content {
+  padding: 1.5rem;
+}
+.dashboard-content .time-banner {
+  padding: 1.5rem;
+  background: linear-gradient(90deg, #fa5788, #c2185b);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.dashboard-content .time-banner .date-card {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  gap: 1rem;
+  min-width: 200px;
+}
+.dashboard-content .time-banner .date-card .date-icon {
+  font-size: 1.5rem;
+}
+.dashboard-content .time-banner .date-card .date-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.dashboard-content .time-banner .date-card .date-info .label {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+.dashboard-content .time-banner .date-card .date-info .date {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.dashboard-content .time-banner .date-card .date-info .time {
+  font-size: 0.9rem;
+}
+.dashboard-content .time-banner .date-card .date-info .year {
+  font-size: 0.8rem;
+}
+.dashboard-content .time-banner .duration-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.dashboard-content .time-banner .duration-indicator .line {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  width: 100px;
+  position: relative;
+}
+.dashboard-content .time-banner .duration-indicator .line::before, .dashboard-content .time-banner .duration-indicator .line::after {
+  content: "";
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.dashboard-content .time-banner .duration-indicator .line::before {
+  left: 0;
+}
+.dashboard-content .time-banner .duration-indicator .line::after {
+  right: 0;
+}
+.dashboard-content .time-banner .duration-indicator .duration {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+@media only screen and (max-width: 768px) {
+  .dashboard-content .time-banner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .dashboard-content .time-banner .date-card {
+    width: 100%;
+  }
+  .dashboard-content .time-banner .duration-indicator {
+    width: 90%;
+  }
+  .dashboard-content .time-banner .duration-indicator .line {
+    width: 90%;
+  }
+}
+.dashboard-content .info-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+.dashboard-content .info-grid .event-details {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+}
+.dashboard-content .info-grid .event-details h2 {
+  font-size: larger;
+}
+.dashboard-content .info-grid .event-details .details-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.dashboard-content .info-grid .event-details .details-container .detail-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #f5f6fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.dashboard-content .info-grid .event-details .details-container .detail-item:hover {
+  transform: translateX(10px);
+}
+.dashboard-content .info-grid .event-details .details-container .detail-item .fas {
+  font-size: 1.25rem;
+  color: #1a237e;
+}
+.dashboard-content .info-grid .event-details .details-container .detail-item .detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.dashboard-content .info-grid .event-details .details-container .detail-item .detail-content label {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+.dashboard-content .info-grid .event-details .details-container .detail-item .detail-content span {
+  font-weight: 500;
+}
+.dashboard-content .info-grid .attendance-metrics {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+}
+.dashboard-content .info-grid .attendance-metrics h2 {
+  font-size: larger;
+}
+.dashboard-content .info-grid .attendance-metrics .metrics-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+.dashboard-content .info-grid .attendance-metrics .metrics-container .metric {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background: #f5f6fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.dashboard-content .info-grid .attendance-metrics .metrics-container .metric:hover {
+  transform: translateY(-10px);
+}
+.dashboard-content .info-grid .attendance-metrics .metrics-container .metric .metric-value {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #1a237e;
+}
+.dashboard-content .info-grid .attendance-metrics .metrics-container .metric .metric-label {
+  height: 25px;
+  opacity: 0.5;
+}
+.dashboard-content .info-grid .attendance-metrics .metrics-container .metric .fas {
+  place-content: center;
+  position: absolute;
+  background-color: #1a237e;
+  color: #ffffff;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  top: -10%;
+  right: -10%;
+}
+.dashboard-content .info-grid .location-management {
+  grid-column: 1/-1;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.dashboard-content .info-grid .location-management h2 {
+  font-size: larger;
+}
+.dashboard-content .info-grid .location-management .location-info {
+  border-radius: 12px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+.dashboard-content .info-grid .location-management .location-info h2 {
+  font-size: larger;
+}
+.dashboard-content .info-grid .location-management .location-info .location-details {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.dashboard-content .info-grid .location-management .location-info .location-details .location-item {
+  background: #f5f6fa;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+.dashboard-content .info-grid .location-management .location-info .location-details .location-item:hover {
+  transform: translateX(10px);
+}
+.dashboard-content .info-grid .location-management .location-info .location-details .location-item .fas {
+  font-size: 20px;
+  color: #1a237e;
+}
+.dashboard-content .info-grid .location-management .management-info {
+  border-radius: 12px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+.dashboard-content .info-grid .location-management .management-info h2 {
+  font-size: larger;
+}
+.dashboard-content .info-grid .location-management .management-info .management-details {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.dashboard-content .info-grid .location-management .management-info .management-details .management-item {
+  display: flex;
+  gap: 1rem;
+  background: #f5f6fa;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.dashboard-content .info-grid .location-management .management-info .management-details .management-item:hover {
+  transform: translateX(10px);
+}
+.dashboard-content .info-grid .location-management .management-info .management-details .management-item .fas {
+  font-size: 20px;
+  color: #1a237e;
+}
+@media only screen and (max-width: 768px) {
+  .dashboard-content .info-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
