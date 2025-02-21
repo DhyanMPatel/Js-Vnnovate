@@ -143,6 +143,11 @@ body {
 .dashboard-content .event-form .form-grid .form-section .input-group .form-field select {
   position: relative;
 }
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field input:focus,
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field select:focus {
+  outline: none;
+  border-color: #1a237e;
+}
 .dashboard-content .event-form .form-grid .form-section .input-group .form-field .select-wrapper::after {
   content: url("../SVGs/arrow-down-3101.svg");
   position: absolute;
@@ -160,6 +165,10 @@ body {
   font-size: small;
   color: #dc3545;
   margin-top: 0.25rem;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field.success select,
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field.success input {
+  border: 1px solid #28a745;
 }
 .dashboard-content .event-form .form-grid .form-section .input-group .form-field:hover label .fas {
   transform: scale(1.1);

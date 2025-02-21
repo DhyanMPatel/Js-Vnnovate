@@ -87,6 +87,11 @@
             select {
               position: relative;
             }
+            input:focus,
+            select:focus {
+              outline: none;
+              border-color: var.$primary-color;
+            }
             .select-wrapper::after {
               content: url("../SVGs/arrow-down-3101.svg");
               position: absolute;
@@ -106,6 +111,12 @@
               font-size: small;
               color: var.$error;
               margin-top: 0.25rem;
+            }
+          }
+          .form-field.success {
+            select,
+            input {
+              border: 1px solid var.$success;
             }
           }
           .form-field:hover {
