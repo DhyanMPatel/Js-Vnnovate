@@ -2,44 +2,45 @@
 @use "variable" as var;
 
 .dashboard-header {
+  box-shadow: 0 10px 10px rgba($color: #000, $alpha: 0.1);
   background: linear-gradient(90deg, var.$primary-color, var.$primary-dark);
   padding: var.$padding;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: var.$text-white;
+
   .brand {
     display: flex;
     align-items: center;
     gap: 1rem;
     .logo {
-      padding: var.$padding;
       background-color: rgba($color: #fff, $alpha: 0.1);
       border-radius: 50%;
       display: grid;
       place-content: center;
-      height: 20px;
-      width: 20px;
+      height: 48px;
+      width: 48px;
       font-size: 1.5rem;
     }
     .title {
-      //   display: grid;
-      gap: 7px;
+      display: grid;
+      gap: 8px;
       h1 {
         font-size: 1.5rem;
         margin: 0;
       }
       .subtitle {
         font-size: 0.9rem;
-        opacity: 0.9;
+        opacity: 0.8;
       }
     }
   }
   .close-btn {
     background-color: rgba($color: #fff, $alpha: 0.1);
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    height: 36px;
+    width: 36px;
     padding: 15px;
     color: var.$text-white;
     display: grid;

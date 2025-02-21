@@ -22,6 +22,7 @@ body {
 }
 
 .dashboard-header {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   background: linear-gradient(90deg, #1a237e, #000051);
   padding: 1.5rem;
   display: flex;
@@ -35,17 +36,17 @@ body {
   gap: 1rem;
 }
 .dashboard-header .brand .logo {
-  padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: grid;
   place-content: center;
-  height: 20px;
-  width: 20px;
+  height: 48px;
+  width: 48px;
   font-size: 1.5rem;
 }
 .dashboard-header .brand .title {
-  gap: 7px;
+  display: grid;
+  gap: 8px;
 }
 .dashboard-header .brand .title h1 {
   font-size: 1.5rem;
@@ -53,13 +54,13 @@ body {
 }
 .dashboard-header .brand .title .subtitle {
   font-size: 0.9rem;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .dashboard-header .close-btn {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 36px;
+  width: 36px;
   padding: 15px;
   color: #fff;
   display: grid;
@@ -84,20 +85,136 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
+.dashboard-content .event-form .form-grid .form-section {
+  animation: slideIn 0.6s ease-out;
+  padding: 1.5rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+.dashboard-content .event-form .form-grid .form-section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #212121;
+  margin-bottom: 1.5rem;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #757575;
+  font-weight: 500;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field label .fas {
+  font-size: 1rem;
+  color: #1a237e;
+  transition: all 0.3s ease;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field label::after {
+  content: "*";
+  color: #dc3545;
+  margin-left: 4px;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field .select-wrapper {
+  position: relative;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field select,
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  font-size: 1rem;
+  background: #f8f9fa;
+  color: #212121;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field select {
+  position: relative;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field .select-wrapper::after {
+  content: url("../SVGs/arrow-down-3101.svg");
+  position: absolute;
+  top: 50%;
+  transform: translateY(-58%);
+  right: 1rem;
+  pointer-events: none;
+  color: #1a237e;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field.error select,
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field.error input {
+  border: 1px solid #dc3545;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field.error .error-message {
+  font-size: small;
+  color: #dc3545;
+  margin-top: 0.25rem;
+}
+.dashboard-content .event-form .form-grid .form-section .input-group .form-field:hover label .fas {
+  transform: scale(1.1);
+}
 @keyframes slideIn {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(10px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.dashboard-content .event-form .form-grid .form-section h2 {
-  font-size: larger;
+.dashboard-content .event-form .form-actions {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: end;
+  gap: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+.dashboard-content .event-form .form-actions .btn {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border: 0;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.dashboard-content .event-form .form-actions .btn-secondary {
+  background: #f5f6fa;
   color: #212121;
+}
+.dashboard-content .event-form .form-actions .btn-secondary:hover {
+  transform: translateY(-2px);
+  background: #e0e0e0;
+}
+.dashboard-content .event-form .form-actions .btn-primary {
+  background: #1a237e;
+  color: #fff;
+}
+.dashboard-content .event-form .form-actions .btn-primary:hover {
+  background: #534bae;
+  transform: translateY(-2px);
 }
 @media only screen and (max-width: 768px) {
   .dashboard-content .event-form .form-grid {
-    grid-template-columns: repeat(auto-fit, minmax(768px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .dashboard-content .event-form .form-grid .form-section .input-group {
+    grid-template-columns: 1fr;
   }
 }
 
