@@ -126,7 +126,7 @@ WHERE address LIKE '%TRAIL%' OR address LIKE '%AVENUE%';
 
 
 -- The REGEXP Operator
-	-- Allow us more complete search
+	-- Allow us more complex search
     -- ^: Represent beginning
     -- $: Represent end
     -- |: Represent logical or

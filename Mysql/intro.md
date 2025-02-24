@@ -57,65 +57,97 @@
   ```
 
 ## WHERE Clause
+
 - use for filter data
 - <, <=, >, >=, =, != (not equal), <> (not equal).
 - Exercise
-    - Get the Orders placed this year
-    ```sql
-        SELECT *
-        FROM Orders
-        WHERE order_date >= '2017-01-01' and order_date <= '2017-12-31';
-    ```
+  - Get the Orders placed this year
+  ```sql
+      SELECT *
+      FROM Orders
+      WHERE order_date >= '2017-01-01' and order_date <= '2017-12-31';
+  ```
 
 ## Operators
 
 ### AND, OR and NOT Operators
+
 - AND: Should all condition true
 - OR: One of the Condition Should be true
 - NOT: Condition matching data will not display
 - Exercise
-    - from the Order_items table, get the items
-        - for order #6
-		- where the total price is greater than 30
-    ```sql
-        SELECT *
-        FROM order_items
-        WHERE order_id = 6 AND (quantity * unit_price) > 30;
-    ```
+  - from the Order_items table, get the items
+    - for order #6
+    - where the total price is greater than 30
+  ```sql
+      SELECT *
+      FROM order_items
+      WHERE order_id = 6 AND (quantity * unit_price) > 30;
+  ```
+
 ### IN Operator
+
 - IN: is shorter of `OR` Operator.
 - Exercise
-    -  Return Products with 
-        - quantity in stock equal to 49, 38, 72.
-    ```sql
-    SELECT *
-    FROM products
-    WHERE quantity_in_stock IN (49, "38", 72);
+  - Return Products with
+    - quantity in stock equal to 49, 38, 72.
+  ```sql
+  SELECT *
+  FROM products
+  WHERE quantity_in_stock IN (49, "38", 72);
+  ```
 
 ### BETWEEN Operator
+
 - BETWEEN: use to display products in range.
 - Exercise
-    - Return customers born
-		- between 1/1/1990 and 1/1/2000
-    ```sql
-        SELECT *
-        FROM Customers
-        WHERE birth_date BETWEEN '1990-01-01' and '2000-01-01';
-    ```
+  - Return customers born
+    - between 1/1/1990 and 1/1/2000
+  ```sql
+      SELECT *
+      FROM Customers
+      WHERE birth_date BETWEEN '1990-01-01' and '2000-01-01';
+  ```
 
 ### LIKE Operator
+
 - LIKE: use to display products with specific pattern.
 - %: Represent multiple char
-- _: Represent single char
+- \_: Represent single char
 - Exercise
-    - get the customers whose
-		1) addresses cuontain TRAIL or AVENUE
-        2) phone numbers end with 9
-    ```sql
-        
-    ```
+  - get the customers whose
+    1. addresses cuontain TRAIL or AVENUE
+    2. phone numbers end with 9
+  ```sql
+    SELECT *
+    FROM Customers
+    WHERE address LIKE '%trail%' AND address LIKE '%avenue%';
+    -- WHERE phone LIKE '%9';
+  ```
 
 ### REGEXP Operator
+
+- Allow us more complex search
+  - `^`: Represent beginning of String
+  - `$`: Represent end of String
+  - `|`: Represent logical or
+  - `[]`: Represent set and range
+- Exercise
+
+  - Get the customers whose
+    1. first names are ELKA or AMBUR
+    2. last names end with EY or ON
+    3. last names start with MY or contains SE
+    4. last names contain B followed by R or U
+
+  ```sql
+        SELECT *
+        FROM Customers
+        -- WHERE first_name REGEXP 'elka|ambur';
+        -- WHERE last_name 'ey$|on$';
+        -- WHERE last_name '^my|se';
+        -- WHERE last_name 'b[ru]';
+  ```
 
 ### IS NULL Operator
 
