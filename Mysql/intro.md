@@ -151,6 +151,26 @@
 
 ### IS NULL Operator
 
+- find out Records with missing values
+- Exercise
+
+  - Get the orders that are not shipped
+
+  ```sql
+  SELECT *
+  FROM Orders
+  WHERE shipped_date IS NULL;
+  ```
+
 ### ORDER BY Operator
+
+- Order are 2 types `ASCE`(default) and `DESC`.
+- there can be multiple argument
+  ```sql
+    SELECT *
+    FROM Customers
+    -- ORDER BY first_name;
+    ORDER BY state, first_name;		-- order by first state, in same state order by first_name.
+  ```
 
 ### LIMIT Operator
