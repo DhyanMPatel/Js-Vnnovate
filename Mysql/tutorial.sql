@@ -126,7 +126,7 @@ WHERE address LIKE '%TRAIL%' OR address LIKE '%AVENUE%';
 
 
 -- The REGEXP Operator
-	-- Allow us more complex search
+	-- Allow us more complete search
     -- ^: Represent beginning
     -- $: Represent end
     -- |: Represent logical or
@@ -207,3 +207,15 @@ SELECT oi.*, p.name
 FROM Order_items oi
 JOIN Products p
 	ON oi.product_id = p.product_id;
+    
+-- Joining Across Databases
+	-- use to join multiple dbs
+    -- There is Noticable thing is we use sql_store DB and join sql_inventory.
+    
+SELECT *
+FROM order_items oi
+JOIN sql_inventory.products p
+	ON oi.product_id = p.product_id;
+   
+   
+-- Self Joins

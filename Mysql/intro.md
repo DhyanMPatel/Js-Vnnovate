@@ -172,5 +172,48 @@
     -- ORDER BY first_name;
     ORDER BY state, first_name;		-- order by first state, in same state order by first_name.
   ```
+- Exercise
+  - Get order_id is 2 Products and short by total value in DESC
+    ```sql
+    SELECT *
+    FROM Order_items
+    WHERE order_id=2
+    ORDER BY (quantity * unit_price) DESC;
+    ```
 
 ### LIMIT Operator
+
+- Use to limit the number of record return with querys
+
+  ```sql
+    SELECT *
+    FROM Customers
+    LIMIT 6,3;    -- First 6 rows skip then pick 3 rows.
+  ```
+
+- Exercise
+  - Get the top three loyal Customers (That have Highest points)
+
+    ```sql
+      SELECT *
+      FROM Customers
+      LIMIT 3;
+    ```
+
+### Inner JOIN
+
+- Exercise
+  - Join order_item table with Products table and display order_items table and name from Product table.
+    ```sql
+      SELECT oi.*, p.name
+      FROM Order_items oi
+      JOIN Products p
+        ON oi.product_id = p. product_id;
+    ```
+
+#### `NOTE`
+  - When use Alias then use them every where, not use original name(it give error).
+
+### Join Across Database
+
+### self Join
