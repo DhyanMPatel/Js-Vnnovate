@@ -1,17 +1,18 @@
-Date: 24 Feb 2025
-Day: Monday
+Date: 25 Feb 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
-1. Learning about GraphQL.
+1. Learning MySQL.
 
 Work done:
-Date: 24 Feb 2025
-Day: Monday
+Date: 25 Feb 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
-1. Learned about GraphQL
-   - Know Advantages and Disadvantages about GraphQL.
-   - Learn about Schema, Scaler Type, Object Type, Queries, Mutations.
-   - Also learn about Subscription Type.
+1. Learn MySQL
+   - Know about inner join, left join, right join, cross join, self join.
+   - Know about inserting single row, multiple rows and date in multiple table using `Last_insert_id()`.
+   - Know about Updating Single Row, multiple Row. also learn `Subqueries`.
+   - Know about Deleting rows

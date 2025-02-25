@@ -219,3 +219,347 @@ JOIN sql_inventory.products p
    
    
 -- Self Joins
+	-- Same table should have alias different to implement self join.
+USE sql_hr;
+
+SELECT e.employee_id, e.first_name, m.first_name as HR
+FROM employees as e
+JOIN employees as m
+	ON e.reports_to = m.employee_id;
+    
+
+-- Joining Multiple Tables
+
+USE sql_store;
+
+SELECT 
+	o.order_id, 
+    o.order_date, 
+    c.first_name, 
+    c.last_name, 
+    os.name AS status
+FROM orders o
+JOIN customers c
+	ON o.customer_id = c.customer_id
+JOIN order_statuses os
+	ON o.status = os.order_status_id;
+    
+-- Exercise
+	-- Use sql_invoicing DB. Connect Payments, clients and payment_methods. Display client (name), payment_methods (name) and Payments (amount)
+    
+USE sql_invoicing;
+
+SELECT 
+	p.date, 
+	p.invoice_id, 
+    p.amount, 
+    c.name, 
+    pm.name
+FROM payments p
+JOIN payment_methods pm
+	ON p.payment_method = pm.payment_method_id
+JOIN clients c
+	ON p.client_id = c.client_id;
+    
+
+-- Compound Join Conditions
+	-- Use multiple condition on join.
+
+USE sql_store;
+
+SELECT *
+FROM order_items oi
+JOIN order_item_notes as oin
+	ON oi.order_id = oin.order_id
+    AND oi.product_id = oin.product_id;
+
+
+-- Implicit JOIN Syntax
+	-- This is another Syntax that same as simple join (Explicit JOIN Syntax).
+    -- This will acouse mistake if we forgot to write where.
+SELECT *
+FROM orders o, customers c
+WHERE o.customer_id = c.customer_id;
+
+
+-- Outer JOINs
+	-- Inner join connect both table where not display whole first|second table. 
+    -- What if we want all rows from first table, use Outer JOINs
+    -- In Outer join have 2 type, 
+		-- left join (display first table)
+        -- right join (display second table)	
+    
+SELECT 
+	c.customer_id,
+    c.first_name,
+    o.order_id
+FROM customers c
+LEFT JOIN orders o
+	ON c.customer_id = o.customer_id
+ORDER BY c.customer_id;
+
+-- Exercise
+	-- Use products, order_items table
+    -- Here product 7 never been order so its order quantity will be null.
+    
+SELECT p.product_id, p.name, oi.quantity
+FROM  products p
+LEFT JOIN order_items oi
+	ON p.product_id = oi.product_id
+ORDER BY p.product_id;
+
+-- Outer Jions Between Multiple Tables
+
+SELECT 
+	c.customer_id, 
+	c.first_name, 
+    o.order_id, 
+	sh.name AS Shipper
+FROM customers c
+LEFT JOIN orders o
+	ON c.customer_id = o.customer_id
+LEFT JOIN shippers sh
+	ON o.shipper_id = sh.shipper_id
+ORDER BY c.customer_id;
+
+-- Exercise
+	-- Join Orders, Customers, Shippers and Order_statuses tables
+    
+
+SELECT 
+	o.order_date, 
+    o.order_id, 
+    c.first_name, 
+    sh.name AS shipper, 
+    os.name AS status
+FROM orders o
+LEFT JOIN customers c
+	ON o.customer_id = c.customer_id
+LEFT JOIN shippers sh
+	ON o.shipper_id = sh.shipper_id
+LEFT JOIN order_statuses os
+	ON o.status = os.order_status_id
+ORDER BY os.order_status_id;
+
+
+-- Self Outer JOINs
+	-- Using outer join we can print Manager name also.
+SELECT 
+	e.employee_id,
+    e.first_name,
+    m.first_name AS manager
+FROM employees e
+LEFT JOIN employees m
+	ON e.reports_to = m.employee_id;
+    
+-- The Clause
+	-- When column name is same in both table then use Clause, make more shorter.
+    -- USING only work when columns name is same in both table.
+
+USE sql_store;
+SELECT 
+	o.order_id,
+    c.first_name,
+    sh.name AS Shipper
+FROM orders o
+JOIN customers c
+	-- ON o.customer_id = c.customer_id
+	USING (customer_id)
+LEFT JOIN shippers sh
+	USING (shipper_id);
+    
+-- If there are multiple primary key like order_item_notes.
+
+SELECT *
+FROM order_items oi
+JOIN order_item_notes oin
+	-- USING (order_id, product_id)
+	ON oi.product_id = oin.product_id
+    AND oi.order_id = oin.order_id;
+    
+-- Exercise
+	-- connect clients, payments and payment_methods table from sql_invoicing table
+USE sql_invoicing;
+SELECT 
+	p.date,
+    c.name client,
+    p.amount,
+    pm.name payment_method
+FROM payments p
+JOIN clients c
+	USING (client_id)
+JOIN payment_methods pm
+	ON p.payment_method = pm.payment_method_id; -- USING will not work
+    
+-- Natural JOINs
+	-- Table join based in same name column from both tables.
+
+select 
+	o.order_id,
+    c.first_name
+from orders o
+natural join customers c;
+
+-- Cross JOIN
+	-- join every record from first table with every record from second table.
+USE sql_store;
+SELECT 
+	c.first_name AS Customer,
+    p.name AS product
+FROM customers c
+-- FROM customers c, orders o 		-- Implicite join
+CROSS JOIN products p		-- Explicite Join
+ORDER BY c.first_name;
+
+-- Exercise
+	-- Do a cross join between shippers and products
+		-- using implicit syntax
+        -- using explicit syntax
+        
+SELECT 
+	sh.name AS shipper,
+    p.name AS product
+FROM products p, shippers sh;
+
+SELECT 
+	sh.name AS shipper,
+    p.name AS product
+FROM products p
+CROSS JOIN shippers sh;
+
+
+-- Union
+	-- We can combine records from multiple result sets
+    -- Note: there should be same select colums numbers, otherwise give error.
+    -- Note: there column name will be based on first query.
+SELECT
+	order_id,
+    order_date,
+    'Active' AS status
+FROM  orders
+WHERE order_date >= '2019-01-01'
+UNION
+SELECT
+	order_id,
+    order_date,
+    'Archived' AS status
+FROM orders
+WHERE order_date < '2019-01-01';
+
+-- Exercise
+	-- Give customers types like Bronze, Silver, Gold based on points
+
+SELECT 
+	customer_id,
+    first_name,
+    points,
+    'Bronze' AS Type
+FROM customers
+WHERE points < 2000
+UNION
+SELECT 
+	customer_id,
+    first_name,
+    points,
+    'Silver' AS Type
+FROM customers
+WHERE points BETWEEN 2000 AND 3000
+UNION
+SELECT 
+	customer_id,
+    first_name,
+    points,
+    'Gold' AS Type
+FROM customers
+WHERE points >= 3000
+ORDER BY first_name;
+
+
+-- Column Attributes
+-- Insert a Single Row
+
+INSERT INTO customers
+VALUES (DEFAULT, 'John', 'Smith', '1990-01-01',DEFAULT, 'address', 'city', 'CA', DEFAULT);
+	-- OR
+INSERT INTO customers (first_name, last_name, birth_date, address, city, state)
+VALUES ('John', 'Smith', '1990-01-01', 'address', 'city', 'CA');
+
+-- Insert Multiple Rows
+
+INSERT INTO shippers (name)
+VALUES ('Shipper 1'),
+		('Shipper 2'),
+		('Shipper 2');
+	
+-- Exercise
+	-- Insert three rows in the products table
+INSERT INTO products (name, quantity_in_stock, unit_price)
+VALUES ('product 1', 95, 4.15),
+		('product 2', 90, 2.05),
+        ('product 3', 105, 13.20);
+
+
+-- Inserting Hierarchical Rows
+	-- Here we insert data in multiple tables
+    -- assume Orders table is parent and order_items table is chail
+INSERT INTO orders(customer_id, order_date, status)
+VALUES (1, '2019-01-02', 1);
+
+select Last_insert_id(); 	-- Return last insert operation table
+
+INSERT INTO order_items
+VALUES 
+	(last_insert_id(), 1,2,3.14),
+    (LAST_INSERT_ID(), 2, 4, 5.14);
+    
+-- Create a Copy of Table
+	-- This methods will not make PK in new table
+CREATE TABLE order_archived AS
+SELECT * FROM orders;
+	-- OR 
+INSERT INTO order_archived
+SELECT *
+FROM orders
+WHERE order_date < '2019-01-01';
+
+-- Exercise
+	-- In invoice table inside sql_invoicing DB there is client_id.
+    -- Make new table invoice_Archive that replace client_id with client_name.
+USE sql_invoicing;
+
+CREATE TABLE invoice_archived AS
+SELECT 
+	i.invoice_id,
+    i.number,
+    c.name AS client,
+    i.invoice_total,
+    i.payment_total,
+    i.invoice_date,
+    i.payment_date,
+    i.due_date
+FROM invoices i
+JOIN clients c
+	USING(client_id)
+WHERE payment_date IS NOT NULL;
+
+
+-- Update single row
+
+UPDATE invoices
+SET payment_total = invoice_total * 0.5, payment_date = '1990-04-02'
+WHERE invoice_id = 5;
+
+-- Update Multiple Rows
+	-- Condition will make changes in updating multiple rows or updating single row.
+    
+UPDATE invoices
+SET payment_total = invoice_total * 0.5, payment_date = "2025-03-25"
+Where client_id = 2;
+
+-- Exercise
+	-- give any customers born before 1990
+    -- 50 extra points
+USE sql_store;
+UPDATE customers
+SET points = points+50
+WHERE birth_date < '1990-01-01';
