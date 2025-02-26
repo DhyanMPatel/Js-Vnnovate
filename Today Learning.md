@@ -1,11 +1,28 @@
-# Today Learn About
+# Alter (Modify Existing Table)
 
-## Transition
+# Truncate (Delete records from table without affecting Structure)
 
-## Box-sizing
+# Group By (grouping data)
 
-## Box-shadow
+# Having (Filter grouping data)
 
-## Animation
+# Constraints in MySQL
 
-### Learn Important
+# Transactions in MySQL
+
+# Indexing for Performance
+
+- Indexes `speed up queries` by optimizing search operations.
+
+# Stored Procedures & Triggers
+
+## Stored Procedure (Reusable SQL Block)
+
+## Trigger (Auto-executes before/after actions)
+
+## Advance Topics
+
+- `Views` → Virtual tables
+- `Replication` → Copying databases
+- `Partitioning` → Splitting large tables
+- `Sharding` → Distributing database load

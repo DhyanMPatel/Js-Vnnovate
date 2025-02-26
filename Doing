@@ -1,18 +1,18 @@
-Date: 25 Feb 2025
-Day: Tuesday
+Date: 26 Feb 2025
+Day: Wednesday
 
 Today, I am working on below list of task:
 
 1. Learning MySQL.
 
 Work done:
-Date: 25 Feb 2025
-Day: Tuesday
+Date: 26 Feb 2025
+Day: Wednesday
 
 Today, I am working on below list of task:
 
 1. Learn MySQL
-   - Know about inner join, left join, right join, cross join, self join.
-   - Know about inserting single row, multiple rows and date in multiple table using `Last_insert_id()`.
-   - Know about Updating Single Row, multiple Row. also learn `Subqueries`.
-   - Know about Deleting rows
+   - Revision of Joins.
+   - Learn about `Grouping`, `Having` Which is used to group in table.
+   - Learn `Alter` command with table, can change schema.
+   - Learn `View` that create Virtual table.

@@ -1,6 +1,6 @@
 
 DROP DATABASE IF EXISTS `store`;
-CREATE DATABASE `store`;
+CREATE DATABASE IF NOT EXISTS `store`;
 USE `store`;
 
 CREATE TABLE `products` (
