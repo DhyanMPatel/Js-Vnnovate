@@ -501,7 +501,7 @@ VALUES ('product 1', 95, 4.15),
 
 -- Inserting Hierarchical Rows
 	-- Here we insert data in multiple tables
-    -- assume Orders table is parent and order_items table is chail
+    -- assume Orders table is parent and order_items table is chaild
 INSERT INTO orders(customer_id, order_date, status)
 VALUES (1, '2019-01-02', 1);
 

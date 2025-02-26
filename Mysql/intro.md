@@ -470,3 +470,123 @@
   WHERE points >= 3000
   ORDER BY first_name
   ```
+
+### Insert a Single Row
+
+- There are 2 ways to insert data
+
+  ```sql
+    INSERT INTO customers
+    VALUES (DEFAULT, 'John', 'Smith', '1990-01-01', DEFAULT, 'address', 'city', 'CA', DEFAULT);
+
+      // OR
+    
+    INSERT INTO Customers (first_name, last_name, birth_date, address, city, state)
+    VALUES ('John', 'Smith', '1990-01-01', 'address', 'city', 'CA');
+  ```
+
+### Insert Multiple ROWs
+
+- Exercise
+  - Insert three rows in the products table
+    ```sql
+      INSERT INTO products (name, quantity_in_stock, unit_price)
+      VALUES ('product 1', 95, 4.35),
+              ('product 2', 90, 2.05),
+              ('product 3', 105, 13.20);
+    ```
+
+### Inserting Hierarchical Rows
+  - Here we Insert data in Multiple tables
+  - Assume Orders table is Parent and Order_items table is child.
+
+  ```sql
+    INSERT INTO orders(customer_id, order_date, status)
+    VALUES (1, '2020-01-01', 1);
+
+    SELECT LAST_INSERT_ID();  -- Return last insert Operation table
+
+    INSERT INTO order_items
+    VALUES (last_insert_id(), 1, 2, 3.14),
+            (last_insert_id(), 2, 4, 5.14);
+  ```
+
+### Create a Copy of Table
+- This methods will not make PK in new table
+- Exercise
+  - In invoice table inside sql_invoicing DB there is client_id.
+  - Make new Table invoice_Archive that replace client_id with client_name.
+
+    ```SQL
+      USE sql_invoicing;
+
+      CREATE TABLE invoice_archived AS
+      SELECT 
+          i.invoice_id,
+          i.number,
+          c.name AS client,
+          i.invoice_total,
+          i.payment_total,
+          i.invoice_date,
+          i.payment_date,
+          i.due_date
+      FROM invoices i
+      JOIN clients c
+          USING(client_id)
+      WHERE payment_date IS NOT NULL;
+    ```
+
+### Update Single Row
+
+  ```sql
+    UPDATE invoices
+    SET payment_total = invoice_total * 0.5, payment_date = '1990-04-02'
+    WHERE invoice_id = 5;
+  ```
+
+### Update Multiple Rows
+
+- Condition will make changes in updating multiple rows or updating single row.
+
+- Exercise
+  - Give 50 extra Points to any customers born before 1990
+
+    ```sql
+      USE sql_store;
+
+      UPDATE customers
+      SET points = points+50
+      WHERE birth_date < '1990-01-01';
+    ```
+
+### UPDATE  Using Subquery
+
+- Exercise
+  - Give 'Gold Customers' comment on customers table where points > 3000.
+
+  ```sql
+    USE sql_store;
+
+    UPDATE orders
+    SET comments = 'Gold Customers'
+    WHERE customer_id IN
+        (SELECT customer_id
+        FROM customers
+        WHERE points > 3000);
+  ```
+
+- DELETE Data
+
+  - Delete every thing in invoices table.
+    ```sql
+      DELETE FROM invoices;
+    ```
+  
+  - Delete using Subquery
+    ```sql
+      DELETE FROM invoice
+      WHERE client_id = 
+            (SELECT client_id
+            FROM clients
+            WHERE name = 'Myworks');
+    ```
