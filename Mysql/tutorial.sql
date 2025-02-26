@@ -563,3 +563,36 @@ USE sql_store;
 UPDATE customers
 SET points = points+50
 WHERE birth_date < '1990-01-01';
+
+
+-- UPDATE Using Subquery
+USE sql_invoicing;
+UPDATE invoices
+SET 
+	payment_total = invoice_total * 0.5,
+    payment_date = due_date
+WHERE client_id = 
+			(SELECT client_id
+			FROM clients 
+			WHERE name = 'Myworks');
+            
+-- Exercise
+	-- 
+USE sql_store;
+
+UPDATE orders
+SET comments = 'Gold Customers'
+WHERE customer_id IN
+
+(SELECT customer_id
+FROM customers
+WHERE points > 3000);
+
+-- DELETE data
+DELETE FROM invoices;
+
+DELETE FROM invoices
+WHERE client_id =
+			(SELECT client_id
+			FROM clients
+			WHERE name = 'Myworks');
