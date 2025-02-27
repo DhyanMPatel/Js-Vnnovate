@@ -78,6 +78,8 @@
 
 ## Keys
 
+- There are mainly 2 type of Keys,
+
 1. `Primary Key`: It is a Column (or set of Columns) in a table that uniquely identifies each row. (Must `unique` and `NOT NULL` and Single in Table )
 2. `Foreign Key`: A foreign key is a column (or set of columns) in a table that refers to the primary key in another table.
    ```sql
@@ -85,6 +87,17 @@
    ```
 
 - `Note`:- Primary Key contain table is known as `Parent Table`, where Foreign Key contain table known as `Child Table`
+
+- There are Some other keys based on Condition,
+
+  1. `Candidate Key`: If any key Uniquely Identify any 2 tupples then it can be `Candidate Key`.
+
+     - CK can be Multiple. We make any one of them as `Primary Key`.
+
+  2. `Composit Key`: IF there are Multiple columns combination create uniqueness is called `Composit Key`.
+
+  3. `Super Key`: A Super Key is a combination of all possible attribute which can uniquely identify two tuples in a table.
+     - There should be `CK` atleast included in `SK`.
 
 ## Contrains
 
@@ -728,7 +741,7 @@ GROUP BY c.client_id
       USE sql_store;
 
       UPDATE customers
-      SET points = points+50
+      SET points = points + 50
       WHERE birth_date < '1990-01-01';
     ```
 
@@ -801,12 +814,14 @@ GROUP BY c.client_id
 
     ALTER TABLE order_archived_changed
     DROP COLUMN test_changed;
+
+    TRUNCATE TABLE order_archived_changed;
   ```
 
 ## Subquery
 
 - A Subquery or Inner query or a Nested Query is a query within another SQL query.
-- Subquery is used when we want dynamic Ansers based on current changes of table.
+- Subquery is used when we want dynamic Answers based on current changes of table.
 
 - It involves 2 select statements
 - There are 3 way to use Subquery
