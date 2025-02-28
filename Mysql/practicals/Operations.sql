@@ -20,15 +20,15 @@ SET birth_date = '2004-10-26'
 WHERE enrollment_no = 6; 
 
 UPDATE students
-SET enrollment_no = 2025020001
-WHERE enrollment_no = 1;
+SET enrollment_no = 2025020006
+WHERE enrollment_no = 6;
 
 ALTER TABLE `students`
 -- DROP COLUMN `std_id`;
 DROP COLUMN `age`;
 
 ALTER TABLE students
-CHANGE COLUMN roll_no enrollment_no INT(50) PRIMARY KEY;
+CHANGE COLUMN middel_name middle_name varChar(50) not null;
 
 ALTER TABLE students
 MODIFY enrollment_no INT(11) PRIMARY KEY AUTO_INCREMENT;
@@ -54,3 +54,6 @@ VALUES (1, 1),(1, 2),(1, 6),
 		(4, 2),(4, 6),(5, 1),
         (6, 2),(6, 3),(5, 5),
         (5, 6);
+        
+INSERT INTO students (first_name, middle_name, last_name, birth_date)
+VALUES ('Ramu', 'Mukeshbhai', 'Rabary', '2001-10-10');
