@@ -848,3 +848,34 @@ GROUP BY c.client_id
 
       SELECT * FROM view1;
     ```
+
+## PROCEDURE
+
+- `procedure` is used to save SQL code that can use again & again.
+
+- ### <strong>Banifite</strong>:
+
+  - Performance Optimization
+  - Security
+  - Code Reusability
+  - Reduced Network Traffic
+  - Better Error Handling
+
+- Example
+
+  - There are customers table contain id, first_name, last_name, country.
+
+  ```sql
+  -- Create a store Procedure,
+    DELIMITER &&
+    CREATE PROCEDURE get_customers_by_country ()
+    BEGIN
+      SELECT * FROM student_info WHERE marks > 70;
+      SELECT COUNT(stud_code) AS Total_Student FROM student_info;
+    END &&
+    DELIMITER;
+
+  -- Execute store Procedure
+    CALL get_merit_student();
+
+  ```
