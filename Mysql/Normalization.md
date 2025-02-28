@@ -68,7 +68,7 @@
 
 - `3NF` + L.H.S must be `CK` (Candidate Key) OR `SK` (Super Key).
 - Example
-  - There are `X` determin to `Y`. Then `X` should be `CK`/`SK`
+  - There are `X` determine to `Y`. Then `X` should be `CK`/`SK`
 
 ## 4th Normal Form
 
