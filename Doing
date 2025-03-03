@@ -1,14 +1,38 @@
-Date: 28 Feb 2025
-Day: Friday
+Date: 3 Mar 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
-1. Create Library_Management System using MySQL task given by
+1. Start Learning React.
 
 Work done:
-Date: 28 Feb 2025
-Day: Friday
+Date: 3 Mar 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
-1. Complete Task `Library_management_system` given by
+1. Know about `JSX` and `babel`.
+
+   - JSX is syntax extention to Js that allow **HTML-like code inside Javascript**
+   - Babel is Js Compiler that convert modern Js to browser compatible Js.
+
+2. Know Component Rendering.
+
+   - Use to **render components dynamically** using `return` statement in function.
+   - Know about Conditional rendering that allow us to show or hide elements based on condition. there are conditions like `if`, `if...else`, `&&`, `||`, `? :`.
+
+3. Know about `State` and `Props`.
+
+   - `State` stores dynamic value **inside Component** and Update UI when changed.
+   - Where `Props` use to Pass **data or functions from a parent component to a child component**.
+
+4. Know components.
+
+   - There are `Functional Component` and `Class Component` used in React.
+
+5. Know about Lifecycle.
+
+   - React lifecycle phases manage component `creation`, `updates`, and `cleanup` for efficiency.
+
+6. Know Event handling.
+   - To handle event on any action like `onClick`, `onSubmit`, `onKeyDown`, `onChange`, etc.

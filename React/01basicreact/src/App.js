@@ -5,6 +5,7 @@ function App() {
     <>
       <div>React App</div>
       <Test />
+      <h2>It is {new Date().toLocaleTimeString()}</h2>
     </>
   );
 }
