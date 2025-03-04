@@ -19,6 +19,10 @@
   6. One way data binding:- only Parent Component can pass data to child component through props.
   7. React Router:- Dynamic navigation in single page App.
 
+- Unlike other framework or library React has `largest Community & EcoSystem` support.
+- React has framework that enhance React like `Next.js` for server side rendering, `React Native` for Mobile apps.
+- React has other framworks like **Redux** for state management, **React Query** for Data fatching, Easy integration with **GraphQL**, **Backend Frameworks**.
+
 ## Advantages
 
 - There are some advantages:
