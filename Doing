@@ -11,28 +11,19 @@ Day: Tuesday
 
 Today, I am working on below list of task:
 
-1. Know about `JSX` and `babel`.
+1. Start learning React with questions
 
-   - JSX is syntax extention to Js that allow **HTML-like code inside Javascript**
-   - Babel is Js Compiler that convert modern Js to browser compatible Js.
+   - What is React?, How it works?, Why React?, Features of React, Advantages and Disadvantages of React.
 
-2. Know Component Rendering.
+2. Learn LifeCycle of Class Component
 
-   - Use to **render components dynamically** using `return` statement in function.
-   - Know about Conditional rendering that allow us to show or hide elements based on condition. there are conditions like `if`, `if...else`, `&&`, `||`, `? :`.
+   - There are total 4 phases. `Initialization`, `Mounting`, `Updating`, `Unmounting` phases and their Methods like
+     - `Initialization` - getInitialState(), getDefaultProps()
+     - `Mounting` - constructor(), static getDerivedStateFromProps(), render(), componentDidMount()
+     - `Updating` - static getDerivedStateFromProps(), shouldComponentUpdate(), render(), getsnapshotBeforeUpdate(), componentDidUpdate()
+     - `Unmounting` - componentWillUnmount()
 
-3. Know about `State` and `Props`.
+3. Learn about Components and types of components
 
-   - `State` stores dynamic value **inside Component** and Update UI when changed.
-   - Where `Props` use to Pass **data or functions from a parent component to a child component**.
-
-4. Know components.
-
-   - There are `Functional Component` and `Class Component` used in React.
-
-5. Know about Lifecycle.
-
-   - React lifecycle phases manage component `creation`, `updates`, and `cleanup` for efficiency.
-
-6. Know Event handling.
-   - To handle event on any action like `onClick`, `onSubmit`, `onKeyDown`, `onChange`, etc.
+4. Know Events in React and event handling.
+   - React events handling are just like HTML-like handling with JSX Syntax.

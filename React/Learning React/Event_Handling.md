@@ -1,11 +1,21 @@
+# React Events
+
+- React Events are function that triggered in response to user Interaction.
+
 # Event Handling
 
-- Common events like, `onClick`, `onSubmit`, `onChange`, `onMouseOver`, `onKeyDown`, etc.
+- Common events like, `onClick`, `onSubmit`, `onChange`, `onInput`, `onMouseOver`, `onKeyDown`, `onKeyUp` etc.
 
 ## handling click event
 
 - React uses `event handler` just like HTML but with JSX syntax.
 - In React no need to call `addEventListener` to add listener to the DOM element after it is created.
+
+- **`Note`**
+
+  - React Events are written in camelCase syntax.
+  - React Events handlers written inside `{...}`.
+  - To pass an arguments to an event handler, use arrow function.
 
   ```js
   function App() {
