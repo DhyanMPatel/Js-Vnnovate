@@ -59,6 +59,8 @@
 
 - `React DOM` compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.
 
+- Render Element is a process where React uses `rendering` to display elements inside the Browser's DOM.
+
 ## Components
 
 - Conceptually, components are `Javascript function`. They accept arbitrary inputs (`Props`) and return `React elements` describing what should appear on the screen.
@@ -88,11 +90,14 @@
 - A good rule of thumb is that if a part of your UI is used several times (`Button`, `Panel`, `Avatar`), or is complex enough on its own (`App`, `FeedStory`, `Comment`), it is a good candidate to be extracted to a separate component.
 
 ## Props
+-`Props` use to Pass **data or functions from a parent component to a child component**.
 
 - `Note`:- All React components must act like `pure functions` with respect to their `props`.
 
+
 ## State
 
+- `State` stores dynamic value **inside Component** and Update UI when changed.
 - State allows React components to change their output over time in response to `user actions`, `network responses`, and anything else.
 
 ## Lifecycle methods
@@ -119,7 +124,8 @@
 
 - There are some Methods,
   1. `componentDidMount()` :- Method run after component output has been rendered to the DOM.
-  2.
+  2. `componentDidUpdate()` :- Method run after rendering occurs. Not on initial mount.
+  3. `componentWillUnmount()` :- Method run before component is removed from DOM.
 
 ```js
 class Clock extends React.Component {
