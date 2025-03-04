@@ -1,15 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import LifeCycle from "./LifeCycle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-function tick() {
-  root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-}
-
-setInterval(tick, 1000);
+root.render(<LifeCycle favoriteColor="Yellow" />);
