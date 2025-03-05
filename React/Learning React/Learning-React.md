@@ -105,17 +105,6 @@
 
 - A good rule of thumb is that if a part of your UI is used several times (`Button`, `Panel`, `Avatar`), or is complex enough on its own (`App`, `FeedStory`, `Comment`), it is a good candidate to be extracted to a separate component.
 
-## Props
-
--`Props` use to Pass **data or functions from a parent component to a child component**.
-
-- `Note`:- All React components must act like `pure functions` with respect to their `props`.
-
-## State
-
-- `State` stores dynamic value **inside Component** and Update UI when changed.
-- State allows React components to change their output over time in response to `user actions`, `network responses`, and anything else.
-
 ## Lifecycle methods
 
 - In applications with many components, it’s very important to free up resources taken by the components when they are destroyed.
@@ -157,16 +146,16 @@
 
         2. **static getDerivedStateFromProps** : this is a static method that is called just before the render() method in both the mounting and updating phase in React.
 
-            - It takes updated props and current state as arguments.
+           - It takes updated props and current state as arguments.
 
-            ```js
-            static getDerivedStateFromProps(props, state){
-            if(props.value !== state.value){
-              return {value: props.value}; // Update state based on new props
-            }
-            return null; // There is not changes
-            }
-            ```
+           ```js
+           static getDerivedStateFromProps(props, state){
+           if(props.value !== state.value){
+             return {value: props.value}; // Update state based on new props
+           }
+           return null; // There is not changes
+           }
+           ```
 
         3. **render()** : Responsible to rendering JSX and updating DOM.
 
@@ -276,6 +265,17 @@
 ## Event Handling
 
 - Event Handling in React is `similar to HTML` but some difference
-  1. Events are writte
+  1. Events are written in camelCase format.
   2. With JSX, passed `function reference` instead of a string.
   3. React automatically handles `event binding` in function components.
+
+## Props
+
+-`Props` use to Pass **data or functions from a parent component to a child component**.
+
+- `Note`:- All React components must act like `pure functions` with respect to their `props`.
+
+## State
+
+- `State` stores dynamic value **inside Component** and Update UI when changed.
+- State allows React components to change their output over time in response to `user actions`, `network responses`, and anything else.

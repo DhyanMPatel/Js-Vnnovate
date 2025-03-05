@@ -1,4 +1,7 @@
 import Blog from "./test";
+import LifeCycle from "./LifeCycle";
+import Parent from "./Parent";
+import StateComponent from "./StateComponent";
 
 function App() {
   const posts = [
@@ -11,9 +14,19 @@ function App() {
   ];
   return (
     <>
-      <div>React App</div>
-      <Blog posts={posts} />
+      <h1>React App</h1>
+      {/* <Blog posts={posts} /> */}
       <h2>It is {new Date().toLocaleTimeString()}</h2>
+      <hr />
+
+      <LifeCycle favoriteColor="Yellow" />
+      <hr />
+
+      <Parent />
+      <hr />
+
+      <StateComponent />
+      <hr />
     </>
   );
 }

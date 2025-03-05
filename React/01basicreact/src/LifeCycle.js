@@ -66,11 +66,18 @@ class Child extends React.Component {
     super(props);
   }
   componentWillUnmount() {
-    alert("Are want to remove Element?");
+    console.log(
+      "componentWillUnmount: use for cleanup data to make better performance."
+    );
   }
 
   render() {
-    return <h2>My Favorite Color is {this.props.favoriteColor} </h2>;
+    return (
+      <>
+        <h2>LifeCycle</h2>
+        <h3>My Favorite Color is {this.props.favoriteColor} </h3>
+      </>
+    );
   }
 }
 
