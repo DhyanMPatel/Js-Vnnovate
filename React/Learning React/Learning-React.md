@@ -157,16 +157,16 @@
 
         2. **static getDerivedStateFromProps** : this is a static method that is called just before the render() method in both the mounting and updating phase in React.
 
-        - It takes updated props and current state as arguments.
+            - It takes updated props and current state as arguments.
 
-        ```js
-        static getDerivedStateFromProps(props, state){
-         if(props.value !== state.value){
-           return {value: props.value}; // Update state based on new props
-         }
-         return null; // There is not changes
-        }
-        ```
+            ```js
+            static getDerivedStateFromProps(props, state){
+            if(props.value !== state.value){
+              return {value: props.value}; // Update state based on new props
+            }
+            return null; // There is not changes
+            }
+            ```
 
         3. **render()** : Responsible to rendering JSX and updating DOM.
 
