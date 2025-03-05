@@ -11,19 +11,10 @@ Day: Wednesday
 
 Today, I am working on below list of task:
 
-1. Start learning React with questions
+1. Learn about State and Props
 
-   - What is React?, How it works?, Why React?, Features of React, Advantages and Disadvantages of React.
+   - State is for `Internal use` of component itself. Where props can be use to pass date from `parent component` to `child component`.
 
-2. Learn LifeCycle of Class Component
-
-   - There are total 4 phases. `Initialization`, `Mounting`, `Updating`, `Unmounting` phases and their Methods like
-     - `Initialization` - getInitialState(), getDefaultProps()
-     - `Mounting` - constructor(), static getDerivedStateFromProps(), render(), componentDidMount()
-     - `Updating` - static getDerivedStateFromProps(), shouldComponentUpdate(), render(), getsnapshotBeforeUpdate(), componentDidUpdate()
-     - `Unmounting` - componentWillUnmount()
-
-3. Learn about Components and types of components
-
-4. Know Events in React and event handling.
-   - React events handling are just like HTML-like handling with JSX Syntax.
+2. Create Form using React. task given by
+   - Basic css using SCSS, Form basic structure, data stored in LocalStorage - Complete
+   - Display component structure - in progress
