@@ -1,59 +1,107 @@
+@mixin input-style(){
+  width: 90%;
+  border-radius: 5px;
+  // border: 1px solid black;
+}
+
+@mixin button-style($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+  font-size: 15px;
+  width: 30%;
+  margin: 0 30px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    // background-color: color.scale($bg-color, $lightness: -5%);
+    transition-duration: 0.5s;
+  }
+}
+
 .container {
-  background-color: aquamarine;
   width: 100%;
-  padding: 2rem;
-  border-radius: 20px;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
   .formDiv {
-    table {
-      td,
-      th {
-        padding: 10px;
+    // background-color: aquamarine;
+    border: 3px solid purple;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 1rem;
+    width: 50%;
+    form {
+      padding: 10px;
+      * {
+        padding: 5px;
       }
-      tr {
-        td {
-          position: relative;
-          input[type="text"],
-          input[type="date"],
-          input[type="time"] {
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            width: 95%;
-            padding: 5px 10px;
-            border: 1px solid black;
-            border-radius: 5px;
-          }
-          select {
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            width: 100%;
-            padding: 5px 10px;
-            border: 1px solid black;
-            border-radius: 5px;
+      table {
+        th {
+          min-width: 100px;
+          width: 150px;
+        }
+        tr {
+          td {
+            position: relative;
+
+            %input-style {
+              @include input-style;
+            }
+
+            input[type="text"],
+            input[type="date"],
+            input[type="time"] {
+              @extend %input-style;
+            }
+            select {
+              // display: flex;
+              // flex-direction: column;
+              // justify-content: start;
+              // width: 100%;
+              // padding: 5px 10px;
+              // border: 1px solid black;
+              // border-radius: 5px;
+              @extend %input-style;
+              width: 92%;
+              margin: 2px 0;
+            }
           }
           .error {
-            color: red;
-            font-size: small;
-            position: absolute;
-            bottom: -6px;
-            left: 17px;
+            select{
+              border: 1px solid red;
+              outline: red;
+            }
+            input{
+              border: 1px solid red;
+              outline: red;
+            }
+            .error {
+              display: block;
+              color: red;
+              font-size: 10px;
+              padding: 0px 10px;
+              position: absolute;
+              bottom: -6px;
+            }
           }
         }
       }
-    }
-    .buttons {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      .button {
-        cursor: pointer;
-        font-size: medium;
-        margin-top: 10px;
-        padding: 5px 75px;
-        border: 1px solid black;
-        border-radius: 10px;
+      
+      .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        .button {
+          @include button-style(aquamarine, black);
+          cursor: pointer;
+          font-size: medium;
+          margin-top: 10px;
+          padding: 5px 75px;
+          border: 1px solid black;
+          border-radius: 10px;
+        }
       }
     }
   }
