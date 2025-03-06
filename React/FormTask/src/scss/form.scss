@@ -1,4 +1,4 @@
-@mixin input-style(){
+@mixin input-style() {
   width: 90%;
   border-radius: 5px;
   // border: 1px solid black;
@@ -21,7 +21,7 @@
   }
 }
 
-.container {
+.containerForm {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -67,16 +67,6 @@
               width: 92%;
               margin: 2px 0;
             }
-          }
-          .error {
-            select{
-              border: 1px solid red;
-              outline: red;
-            }
-            input{
-              border: 1px solid red;
-              outline: red;
-            }
             .error {
               display: block;
               color: red;
@@ -86,9 +76,19 @@
               bottom: -6px;
             }
           }
+          .error {
+            select {
+              border: 1px solid red;
+              outline: red;
+            }
+            input {
+              border: 1px solid red;
+              outline: red;
+            }
+          }
         }
       }
-      
+
       .buttons {
         width: 100%;
         display: flex;
@@ -98,22 +98,8 @@
           cursor: pointer;
           font-size: medium;
           margin-top: 10px;
-          padding: 5px 75px;
           border: 1px solid black;
           border-radius: 10px;
-        }
-      }
-    }
-  }
-  #displayTable {
-    display: flex;
-    flex-direction: column;
-    thead {
-      tr {
-        width: 100%;
-        th {
-          width: auto;
-          justify-content: center;
         }
       }
     }

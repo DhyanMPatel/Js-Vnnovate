@@ -26,3 +26,9 @@
 - `Replication` → Copying databases
 - `Partitioning` → Splitting large tables
 - `Sharding` → Distributing database load
+
+## Today should remind
+
+- `React` and `React-DOM` should be in `peerDependencies`.
+- `formik` in React. - to handle data in form
+- `yup` in react. - for validation

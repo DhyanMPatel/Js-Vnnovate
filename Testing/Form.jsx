@@ -1,22 +1,6 @@
 import { useEffect, useState } from "react";
 import "../css/form.css";
-import { useFormik, Field } from "formik";
-import * as Yup from "yup";
-
-const INITIAL_VALUE = {
-  id: "",
-  firstName: "",
-  lastName: "",
-  gender: "",
-  hobbies: [],
-  country: "",
-  state: "",
-  city: "",
-  birthDate: "",
-  birthTime: "",
-};
-
-const FORM_VALIDATION = Yup.object().shape({});
+import { useFormik } from "formik";
 
 export default function Form({ setUsers, users }) {
   // const [users, setUsers] = useState([]);
@@ -193,8 +177,18 @@ export default function Form({ setUsers, users }) {
   }
 
   const Formik = useFormik({
-    initialValues: INITIAL_VALUE,
-
+    initialValues: {
+      id: "",
+      firstName: "",
+      lastName: "",
+      gender: "",
+      hobbies: [],
+      country: "",
+      state: "",
+      city: "",
+      birthDate: "",
+      birthTime: "",
+    },
     onSubmit: (values) => {
       console.log(values);
     },
@@ -274,7 +268,7 @@ export default function Form({ setUsers, users }) {
                 <th>Gender:</th>
                 <td>
                   <div className={`input-control ${errors.gender && "error"}`}>
-                    {/* <input
+                    <input
                       type="radio"
                       name="gender"
                       id="Male"
@@ -283,10 +277,9 @@ export default function Form({ setUsers, users }) {
                       onChange={(e) =>
                         setUser({ ...user, gender: e.target.value })
                       }
-                    /> */}
-                    <Field type="radio" name="gender" value="Male" id="Male" />
+                    />
                     <label htmlFor="Male">Male</label>
-                    {/* <input
+                    <input
                       type="radio"
                       name="gender"
                       id="Female"
@@ -295,15 +288,9 @@ export default function Form({ setUsers, users }) {
                       onChange={(e) =>
                         setUser({ ...user, gender: e.target.value })
                       }
-                    /> */}
-                    <Field
-                      type="radio"
-                      name="gender"
-                      value="Female"
-                      id="Female"
                     />
                     <label htmlFor="Female">Female</label>
-                    {/* <input
+                    <input
                       type="radio"
                       name="gender"
                       id="Transgender"
@@ -312,12 +299,6 @@ export default function Form({ setUsers, users }) {
                       onChange={(e) =>
                         setUser({ ...user, gender: e.target.value })
                       }
-                    /> */}
-                    <Field
-                      type="radio"
-                      name="gender"
-                      value="Transgender"
-                      id="Transgender"
                     />
                     <label htmlFor="Transgender">Transgender</label>
                     {errors.gender && (

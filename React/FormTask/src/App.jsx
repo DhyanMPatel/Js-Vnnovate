@@ -1,13 +1,18 @@
 import "./App.css";
 import Form from "./components/Form";
+import FormikForm from "./components/formikForm";
 import Display from "./components/Display";
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
 
 function App() {
-  const [user, setUser] = useState({});
+  const [users, setUsers] = useState([]);
+
+  // useEffect(() => {}, [users]);
+
   return (
     <>
-      <Form setUser={setUser} />
+      {/* <Form setUsers={setUsers} users={users} /> */}
+      <FormikForm />
       <Display />
     </>
   );
