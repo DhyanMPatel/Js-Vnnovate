@@ -10,6 +10,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "graphql": "^16.10.0"
+    "graphql": "file:"
   }
 }

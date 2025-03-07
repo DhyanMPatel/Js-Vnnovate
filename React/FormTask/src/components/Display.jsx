@@ -42,6 +42,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
+import { Button } from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const columns = [
   { id: "id", label: "Id" },
@@ -85,72 +88,105 @@ function createData(
   };
 }
 
-const rows = [
-  createData(
-    1,
-    "Dhyan",
-    "Patel",
-    "Male",
-    "Cricket, Travelling",
-    "India",
-    "Gujarat",
-    "Ahmedabad",
-    "2000-10-10",
-    "23:50"
-  ),
-  createData(
-    2,
-    "Dhyan",
-    "Patel",
-    "Male",
-    "Cricket, Travelling",
-    "India",
-    "Gujarat",
-    "Ahmedabad",
-    "2000-10-10",
-    "23:50"
-  ),
-  createData(
-    3,
-    "Dhyan",
-    "Patel",
-    "Male",
-    "Cricket, Travelling",
-    "India",
-    "Gujarat",
-    "Ahmedabad",
-    "2000-10-10",
-    "23:50"
-  ),
-  createData(
-    4,
-    "Dhyan",
-    "Patel",
-    "Male",
-    "Cricket, Travelling",
-    "India",
-    "Gujarat",
-    "Ahmedabad",
-    "2000-10-10",
-    "23:50"
-  ),
-  createData(
-    5,
-    "Dhyan",
-    "Patel",
-    "Male",
-    "Cricket, Travelling",
-    "India",
-    "Gujarat",
-    "Ahmedabad",
-    "2000-10-10",
-    "23:50"
-  ),
-];
+// let rows = [
+//   createData(
+//     1,
+//     "Dhyan",
+//     "Patel",
+//     "Male",
+//     "Cricket, Travelling",
+//     "India",
+//     "Gujarat",
+//     "Ahmedabad",
+//     "2000-10-10",
+//     "23:50"
+//   ),
+//   createData(
+//     2,
+//     "Dhyan",
+//     "Patel",
+//     "Male",
+//     "Cricket, Travelling",
+//     "India",
+//     "Gujarat",
+//     "Ahmedabad",
+//     "2000-10-10",
+//     "23:50"
+//   ),
+//   createData(
+//     3,
+//     "Dhyan",
+//     "Patel",
+//     "Male",
+//     "Cricket, Travelling",
+//     "India",
+//     "Gujarat",
+//     "Ahmedabad",
+//     "2000-10-10",
+//     "23:50"
+//   ),
+//   createData(
+//     4,
+//     "Dhyan",
+//     "Patel",
+//     "Male",
+//     "Cricket, Travelling",
+//     "India",
+//     "Gujarat",
+//     "Ahmedabad",
+//     "2000-10-10",
+//     "23:50"
+//   ),
+//   createData(
+//     5,
+//     "Dhyan",
+//     "Patel",
+//     "Male",
+//     "Cricket, Travelling",
+//     "India",
+//     "Gujarat",
+//     "Ahmedabad",
+//     "2000-10-10",
+//     "23:50"
+//   ),
+// ];
 
 // const rows = JSON.parse(localStorage.getItem("UserData")) || [];
 
-export default function Display() {
+export default function Display({ users, setUsers, setEditUser }) {
+  // let rows = users;
+
+  let rows =
+    users.map(
+      ({
+        id,
+        firstName,
+        lastName,
+        gender,
+        hobbies,
+        country,
+        state,
+        city,
+        birthDate,
+        birthTime,
+      }) =>
+        createData(
+          id,
+          firstName,
+          lastName,
+          gender,
+          hobbies,
+          country,
+          state,
+          city,
+          birthDate,
+          birthTime,
+          "operations"
+        )
+    ) || [];
+
+  // console.log(rows);
+
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -163,6 +199,21 @@ export default function Display() {
     setPage(0);
   };
 
+  const handleEdit = (id) => {
+    const editUser = users.find((user) => user.id === id);
+    localStorage.setItem("EditUser", JSON.stringify(editUser));
+    setEditUser(editUser);
+  };
+
+  const handleDelete = (id) => {
+    const confirmDelete = confirm("Are you sure you want to delete this user?");
+    if (confirmDelete) {
+      rows = rows.filter((row) => row.id !== id);
+      localStorage.setItem("UserData", JSON.stringify(rows));
+      setUsers(rows);
+    }
+  };
+
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
       <TableContainer sx={{ maxHeight: 440 }}>
@@ -170,11 +221,7 @@ export default function Display() {
           <TableHead>
             <TableRow>
               {columns.map((column) => (
-                <TableCell
-                  key={column.id}
-                  align={column.align}
-                  // style={{ minWidth: column.minWidth }}
-                >
+                <TableCell key={column.id} align={column.align}>
                   {column.label}
                 </TableCell>
               ))}
@@ -190,9 +237,31 @@ export default function Display() {
                       const value = row[column.id];
                       return (
                         <TableCell key={column.id} align={column.align}>
-                          {column.format && typeof value === "number"
+                          {/* {column.format && typeof value === "number"
                             ? column.format(value)
-                            : value}
+                            : value} */}
+                          {column.id === "operations" ? (
+                            <>
+                              <Button
+                                variant="outlined"
+                                startIcon={<EditIcon />}
+                                onClick={() => handleEdit(row.id)}
+                              >
+                                Edit
+                              </Button>
+                              <Button
+                                variant="outlined"
+                                startIcon={<DeleteIcon />}
+                                onClick={() => handleDelete(row.id)}
+                              >
+                                Delete
+                              </Button>
+                            </>
+                          ) : column.id === "hobbies" ? (
+                            value.join(", ")
+                          ) : (
+                            value
+                          )}
                         </TableCell>
                       );
                     })}

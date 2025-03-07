@@ -1,7 +1,8 @@
+@use 'sass:color';
+
 @mixin input-style() {
   width: 90%;
   border-radius: 5px;
-  // border: 1px solid black;
 }
 
 @mixin button-style($bg-color, $color) {
@@ -16,7 +17,7 @@
   cursor: pointer;
 
   &:hover {
-    // background-color: color.scale($bg-color, $lightness: -5%);
+    background: color.adjust($bg-color, $lightness: -5%);
     transition-duration: 0.5s;
   }
 }
@@ -26,8 +27,7 @@
   display: flex;
   justify-content: center;
   .formDiv {
-    // background-color: aquamarine;
-    border: 3px solid purple;
+    border: 3px solid mediumblue;
     border-radius: 20px;
     margin-bottom: 20px;
     padding: 1rem;
@@ -50,22 +50,33 @@
               @include input-style;
             }
 
-            input[type="text"],
-            input[type="date"],
-            input[type="time"] {
+            .inputField{
               @extend %input-style;
+
+              &:focus {
+                border: 2px solid black;
+                outline: black;
+              }
             }
             select {
-              // display: flex;
-              // flex-direction: column;
-              // justify-content: start;
-              // width: 100%;
-              // padding: 5px 10px;
-              // border: 1px solid black;
-              // border-radius: 5px;
               @extend %input-style;
-              width: 92%;
+              width: 93%;
               margin: 2px 0;
+            }
+            
+          }
+          .error {
+            select {
+              border: 2px solid red;
+              outline: red;
+            }
+            .inputField {
+              border: 2px solid red;
+              outline: red;
+              &:focus {
+                border: 2px solid red;
+                outline: red;
+              }
             }
             .error {
               display: block;
@@ -76,16 +87,6 @@
               bottom: -6px;
             }
           }
-          .error {
-            select {
-              border: 1px solid red;
-              outline: red;
-            }
-            input {
-              border: 1px solid red;
-              outline: red;
-            }
-          }
         }
       }
 
@@ -94,12 +95,23 @@
         display: flex;
         justify-content: space-around;
         .button {
-          @include button-style(aquamarine, black);
-          cursor: pointer;
-          font-size: medium;
-          margin-top: 10px;
-          border: 1px solid black;
-          border-radius: 10px;
+          @include button-style(mediumblue, white);
+          // cursor: pointer;
+          // font-size: medium;
+          // margin-top: 10px;
+          // border: 1px solid black;
+          // border-radius: 10px;
+          &:hover {
+            background: color.adjust(mediumblue, $lightness: -5%);
+            transition-duration: 0.5s;
+          }
+        }
+        #cancel{
+          @include button-style(red, white);
+          &:hover {
+            background: color.adjust(red, $lightness: -10%);
+            transition-duration: 0.5s;
+          }
         }
       }
     }

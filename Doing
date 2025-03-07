@@ -15,3 +15,9 @@ Today, I am working on below list of task:
    - Implement Material UI in Display Users. - complete
    - Use formik and Yup for form handle and validation - in Progress
    - Update and delete User feature. - in Progress
+
+
+What i had completed?
+- add edit & delete user button using Material UI.
+- delete feature complete but Update user feature on work.
+- complete use of formik and Yup in formikForm.jsx
