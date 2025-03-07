@@ -1,13 +1,15 @@
-Date: 6 Mar 2025
-Day: Thursday
+Date: 7 Mar 2025
+Day: Friday
 
 Today, I am working on below list of task:
 
-1. Continue work on Form Task given by
+1. Continue work on Edit User Feature
+2. Continue work on Delete User feature
+3. Implement Sweet alert
 
 Work done:
-Date: 6 Mar 2025
-Day: Thursday
+Date: 7 Mar 2025
+Day: Friday
 
 Today, I am working on below list of task:
 
@@ -16,8 +18,8 @@ Today, I am working on below list of task:
    - Use formik and Yup for form handle and validation - in Progress
    - Update and delete User feature. - in Progress
 
-
 What i had completed?
+
 - add edit & delete user button using Material UI.
 - delete feature complete but Update user feature on work.
 - complete use of formik and Yup in formikForm.jsx

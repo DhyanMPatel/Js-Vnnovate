@@ -1,41 +1,50 @@
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import * as Yup from "yup";
 
-// const availableIds = (users && Array.isArray(users)) ? users.map((user) => user.id) : [];
-
 export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
-  // const [users, setUsers] = useState([]);
+  const [initialValues, setInitialValues] = useState({
+    id: "",
+    firstName: "",
+    lastName: "",
+    gender: "",
+    hobbies: [],
+    country: "",
+    state: "",
+    city: "",
+    birthDate: "",
+    birthTime: "",
+  });
 
   useEffect(() => {
-    const storedUsers = JSON.parse(localStorage.getItem("UserData")) || [];
-    setUsers(storedUsers);
-  }, []);
+    console.log("Edit User Changed:", editUser);
+    if (editUser) {
+      setInitialValues(editUser);
+    } else {
+      setInitialValues({
+        id: "",
+        firstName: "",
+        lastName: "",
+        gender: "",
+        hobbies: [],
+        country: "",
+        state: "",
+        city: "",
+        birthDate: "",
+        birthTime: "",
+      });
+    }
+  }, [editUser]);
 
-  const INITIAL_VALUE = {
-    id: editUser ? editUser.id : "",
-    firstName: editUser ? editUser.firstName : "",
-    lastName: editUser ? editUser.lastName : "",
-    gender: editUser ? editUser.gender : "",
-    hobbies: editUser ? editUser.hobbies : [],
-    country: editUser ? editUser.country : "",
-    state: editUser ? editUser.state : "",
-    city: editUser ? editUser.city : "",
-    birthDate: editUser ? editUser.birthDate : "",
-    birthTime: editUser ? editUser.birthTime : "",
-  };
   const idRegex = /^[0-9]+$/;
-  // const users = JSON.parse(localStorage.getItem("UserData"));
 
-  const availableIds = useMemo(() => {
-    return users && Array.isArray(users) ? users.map((user) => user.id) : [];
-  }, [users]);
+  const availableIds = users.map((user) => user.id);
 
   const FORM_VALIDATION = Yup.object().shape({
     id: Yup.string()
       .required("Enter your ID!")
       .matches(idRegex, "Id should be Positive Number")
-      .notOneOf(availableIds, "ID is already available"),
+      .notOneOf(editUser ? [] : availableIds, "ID is already available"), // Validation Here for Id
 
     firstName: Yup.string().min(3).max(20).required("Enter your First Name"),
 
@@ -74,31 +83,32 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
     birthTime: Yup.string().required("Birth Time is required!"),
   });
 
-  console.log(`editUser: ${{editUser}}`);
-
   return (
     <>
       <div className="containerForm">
         <div className="formDiv">
           <Formik
-            initialValues={{ ...INITIAL_VALUE }}
+            enableReinitialize
+            initialValues={initialValues} // Remove {{...}}
             validationSchema={FORM_VALIDATION}
             onSubmit={(values, { resetForm }) => {
               if (editUser) {
-                const updatedUsers = users.map((user) => {
-                  user.id === editUser.id ? { ...values } : user;
-                });
+                console.log("Updating User: ", editUser.id);
+
+                const updatedUsers = users.map((user) =>
+                  user.id === editUser.id ? { ...values } : user
+                );
                 setUsers(updatedUsers);
                 localStorage.setItem("UserData", JSON.stringify(updatedUsers));
+
                 setEditUser(null);
+                localStorage.removeItem("EditUser");
               } else {
                 const updatedUsers = [...users, values];
                 setUsers(updatedUsers);
-
                 localStorage.setItem("UserData", JSON.stringify(updatedUsers));
-
-                resetForm();
               }
+              resetForm();
             }}
           >
             {({ errors, touched, resetForm }) => (
@@ -111,7 +121,7 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
                       </th>
                       <td
                         className={`input-control ${
-                          errors.id && touched.id ? "error" : ""
+                          editUser ? "" : errors.id && touched.id ? "error" : ""
                         }`}
                       >
                         <Field
@@ -120,11 +130,14 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
                           placeholder="Enter your ID"
                           autoComplete="off"
                           className="inputField"
+                          disabled={!!editUser}
                         />
-                        <ErrorMessage
-                          name="id"
-                          render={(msg) => <div className="error">{msg}</div>}
-                        />
+                        {editUser ? null : (
+                          <ErrorMessage
+                            name="id"
+                            render={(msg) => <div className="error">{msg}</div>}
+                          />
+                        )}
                       </td>
                     </tr>
                     <tr>
@@ -375,21 +388,22 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
                 <div className="buttons">
                   <button
                     type="submit"
-                    id="create"
+                    id={editUser ? "update" : "create"}
                     className="button"
-                    title="Create New User"
+                    title={editUser ? "Update User" : "Create User"}
                   >
                     {editUser ? "Update" : "Create"}
                   </button>
+
                   <button
                     type="reset"
                     id="cancel"
                     className="button"
-                    title="Create New User"
-                    // onClick={resetForm}
+                    title="Clear Field"
                     onClick={() => {
                       resetForm();
                       setEditUser(null);
+                      localStorage.removeItem("EditUser");
                     }}
                   >
                     Cancel
