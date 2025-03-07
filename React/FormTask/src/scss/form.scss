@@ -1,7 +1,7 @@
-@use 'sass:color';
+@use "sass:color";
 
 @mixin input-style() {
-  width: 90%;
+  width: 95%;
   border-radius: 5px;
 }
 
@@ -26,10 +26,12 @@
   width: 100%;
   display: flex;
   justify-content: center;
+
   .formDiv {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border: 3px solid mediumblue;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     padding: 1rem;
     width: 50%;
     form {
@@ -50,20 +52,19 @@
               @include input-style;
             }
 
-            .inputField{
+            .inputField {
               @extend %input-style;
 
-              &:focus {
-                border: 2px solid black;
-                outline: black;
-              }
+              border: 1px solid black;
+              outline: black;
             }
             select {
               @extend %input-style;
-              width: 93%;
+              border: 1px solid black;
+              outline: black;
+              // width: 100%;
               margin: 2px 0;
             }
-            
           }
           .error {
             select {
@@ -106,7 +107,7 @@
             transition-duration: 0.5s;
           }
         }
-        #cancel{
+        #cancel {
           @include button-style(red, white);
           &:hover {
             background: color.adjust(red, $lightness: -10%);

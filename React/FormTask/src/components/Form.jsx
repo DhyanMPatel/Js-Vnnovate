@@ -156,12 +156,12 @@ export default function Form({ setUsers, users }) {
     if (Object.keys(validateErrors).length === 0) {
       const updatedUsers = [...users, user];
       setUsers(updatedUsers);
-      console.log(updatedUsers);
+      // console.log(updatedUsers);
       clearData();
       setErrors({});
 
-      console.log(user.hobbies);
-      console.log("submited");
+      // console.log(user.hobbies);
+      // console.log("submited");
 
       localStorage.setItem("UserData", JSON.stringify(updatedUsers));
     } else {
@@ -196,7 +196,7 @@ export default function Form({ setUsers, users }) {
     initialValues: INITIAL_VALUE,
 
     onSubmit: (values) => {
-      console.log(values);
+      // console.log(values);
     },
   });
 

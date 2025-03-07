@@ -13,9 +13,9 @@ function App() {
   );
 
   useEffect(() => {
-    console.log(editUser);
+    // console.log(editUser);
     if (editUser) {
-      console.log(`App EditUser: ${editUser.id}`);
+      // console.log(`App EditUser: ${editUser.id}`);
       localStorage.setItem("EditUser", JSON.stringify(editUser));
     } else {
       localStorage.removeItem("EditUser");

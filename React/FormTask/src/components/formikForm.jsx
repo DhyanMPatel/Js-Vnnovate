@@ -1,5 +1,6 @@
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useEffect, useMemo, useState } from "react";
+import Swal from "sweetalert2";
 import * as Yup from "yup";
 
 export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
@@ -17,7 +18,7 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
   });
 
   useEffect(() => {
-    console.log("Edit User Changed:", editUser);
+    // console.log("Edit User Changed:", editUser);
     if (editUser) {
       setInitialValues(editUser);
     } else {
@@ -91,24 +92,61 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
             enableReinitialize
             initialValues={initialValues} // Remove {{...}}
             validationSchema={FORM_VALIDATION}
-            onSubmit={(values, { resetForm }) => {
+            onSubmit={async (values, { resetForm }) => {
               if (editUser) {
-                console.log("Updating User: ", editUser.id);
+                // console.log("Updating User: ", editUser.id);
 
-                const updatedUsers = users.map((user) =>
-                  user.id === editUser.id ? { ...values } : user
-                );
-                setUsers(updatedUsers);
-                localStorage.setItem("UserData", JSON.stringify(updatedUsers));
+                // Swal.fire({
+                //   position: "center",
+                //   icon: "success",
+                //   title: "User Updated",
+                //   showConfirmButton: false,
+                //   timer: 1500,
+                // });
 
-                setEditUser(null);
-                localStorage.removeItem("EditUser");
+                await Swal.fire({
+                  title: "Do you want to save the changes?",
+                  showDenyButton: true,
+                  showCancelButton: true,
+                  confirmButtonText: "Save",
+                  denyButtonText: `Don't save`,
+                }).then((result) => {
+                  /* Read more about isConfirmed, isDenied below */
+                  if (result.isConfirmed) {
+                    Swal.fire("Saved!", "", "success");
+                    const updatedUsers = users.map((user) =>
+                      user.id === editUser.id ? { ...values } : user
+                    );
+                    setUsers(updatedUsers);
+                    localStorage.setItem(
+                      "UserData",
+                      JSON.stringify(updatedUsers)
+                    );
+
+                    setEditUser(null);
+                    localStorage.removeItem("EditUser");
+                    resetForm();
+                  } else if (result.isDenied) {
+                    Swal.fire("Changes are not saved");
+                    setEditUser(null);
+                    localStorage.removeItem("EditUser");
+                    resetForm();
+                  }
+                });
               } else {
                 const updatedUsers = [...users, values];
                 setUsers(updatedUsers);
                 localStorage.setItem("UserData", JSON.stringify(updatedUsers));
+
+                Swal.fire({
+                  position: "center",
+                  icon: "success",
+                  title: "New User Created",
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+                resetForm();
               }
-              resetForm();
             }}
           >
             {({ errors, touched, resetForm }) => (
@@ -400,7 +438,14 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
                     id="cancel"
                     className="button"
                     title="Clear Field"
-                    onClick={() => {
+                    onClick={async () => {
+                      Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "All User Fields are cleared",
+                        showConfirmButton: false,
+                        timer: 1500,
+                      });
                       resetForm();
                       setEditUser(null);
                       localStorage.removeItem("EditUser");

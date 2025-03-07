@@ -10,6 +10,7 @@ import TableRow from "@mui/material/TableRow";
 import { Button } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Swal from "sweetalert2";
 
 const columns = [
   { id: "id", label: "Id" },
@@ -24,34 +25,6 @@ const columns = [
   { id: "birthTime", label: "Birth Time" },
   { id: "operations", label: "Operations" },
 ];
-
-function createData(
-  id,
-  firstName,
-  lastName,
-  gender,
-  hobbies,
-  country,
-  state,
-  city,
-  birthDate,
-  birthTime,
-  operations
-) {
-  return {
-    id,
-    firstName,
-    lastName,
-    gender,
-    hobbies,
-    country,
-    state,
-    city,
-    birthDate,
-    birthTime,
-    operations,
-  };
-}
 
 export default function Display({ users, setUsers, setEditUser }) {
   const [page, setPage] = React.useState(0);
@@ -68,51 +41,46 @@ export default function Display({ users, setUsers, setEditUser }) {
 
   const handleEdit = (id) => {
     const editUser = users.find((user) => user.id === id);
-    // localStorage.setItem("EditUser", JSON.stringify(editUser));
+
     setEditUser(editUser);
-    console.log(`editUser: ${editUser.id}`);
+    // console.log(`editUser: ${editUser.id}`);
   };
 
-  const handleDelete = (id) => {
-    const confirmDelete = confirm("Are you sure you want to delete this user?");
+  const handleDelete = async (id) => {
+    const confirmDelete = await Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Deleted!",
+          text: `User ${id} has been deleted.`,
+          icon: "success",
+        });
+        const updatedUsers = users.filter((user) => user.id !== id);
+        // rows = rows.filter((row) => row.id !== id);
+        setUsers(updatedUsers);
+        localStorage.setItem("UserData", JSON.stringify(updatedUsers));
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        Swal.fire({
+          title: "Cancelled",
+          text: `User ${id} is not Deleted.`,
+          icon: "error",
+        });
+      }
+    });
+    console.log(confirmDelete);
     if (confirmDelete) {
-      const updatedUsers = users.filter((user) => user.id !== id);
-      // rows = rows.filter((row) => row.id !== id);
-      setUsers(updatedUsers);
-      localStorage.setItem("UserData", JSON.stringify(updatedUsers));
     }
   };
-
-  let rows =
-    users.map(
-      ({
-        id,
-        firstName,
-        lastName,
-        gender,
-        hobbies,
-        country,
-        state,
-        city,
-        birthDate,
-        birthTime,
-      }) =>
-        createData(
-          id,
-          firstName,
-          lastName,
-          gender,
-          hobbies,
-          country,
-          state,
-          city,
-          birthDate,
-          birthTime,
-          "operations"
-        )
-    ) || [];
-
-  // console.log(rows);
 
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
@@ -121,56 +89,62 @@ export default function Display({ users, setUsers, setEditUser }) {
           <TableHead>
             <TableRow>
               {columns.map((column) => (
-                <TableCell key={column.id} align={column.align}>
+                <TableCell key={column.id} align="center">
                   {column.label}
                 </TableCell>
               ))}
             </TableRow>
           </TableHead>
           <TableBody>
-            {users
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((user) => {
-                return users ? (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={user.id}>
-                    {columns.map((column) => {
-                      const value = user[column.id];
-                      return (
-                        <TableCell key={column.id} align={column.align}>
-                          {column.id === "operations" ? (
-                            <>
-                              <Button
-                                variant="outlined"
-                                startIcon={<EditIcon />}
-                                onClick={() => handleEdit(user.id)}
-                              >
-                                Edit
-                              </Button>
-                              <Button
-                                variant="outlined"
-                                startIcon={<DeleteIcon />}
-                                onClick={() => handleDelete(user.id)}
-                              >
-                                Delete
-                              </Button>
-                            </>
-                          ) : column.id === "hobbies" ? (
-                            value.join(", ")
-                          ) : (
-                            value
-                          )}
-                        </TableCell>
-                      );
-                    })}
-                  </TableRow>
-                ) : (
-                  <TableRow hover role="checkbox" tabIndex={-1}>
-                    <TableCell colSpan={11}>
-                      <div>There is No Users</div>
-                    </TableCell>
-                  </TableRow>
-                );
-              })}
+            {users.length === 0 ? (
+              <TableRow hover role="checkbox" tabIndex={-1}>
+                <TableCell colSpan={columns.length} align="center">
+                  <strong>No users available</strong>
+                </TableCell>
+              </TableRow>
+            ) : (
+              users
+                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                .map((user) => {
+                  return (
+                    <TableRow hover role="checkbox" tabIndex={-1} key={user.id}>
+                      {columns.map((column) => {
+                        const value = user[column.id];
+                        return (
+                          <TableCell key={column.id} align={column.align}>
+                            {column.id === "operations" ? (
+                              <>
+                                <div className="m-1">
+                                  <Button
+                                    variant="outlined"
+                                    // startIcon={<EditIcon />}
+                                    onClick={() => handleEdit(user.id)}
+                                  >
+                                    <EditIcon />
+                                  </Button>
+                                </div>
+                                <div className="m-1">
+                                  <Button
+                                    variant="outlined"
+                                    // startIcon={<DeleteIcon />}
+                                    onClick={() => handleDelete(user.id)}
+                                  >
+                                    <DeleteIcon />
+                                  </Button>
+                                </div>
+                              </>
+                            ) : column.id === "hobbies" ? (
+                              value.join(", ")
+                            ) : (
+                              value
+                            )}
+                          </TableCell>
+                        );
+                      })}
+                    </TableRow>
+                  );
+                })
+            )}
           </TableBody>
         </Table>
       </TableContainer>
