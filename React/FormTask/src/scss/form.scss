@@ -3,6 +3,9 @@
 @mixin input-style() {
   width: 95%;
   border-radius: 5px;
+  border: 2px solid black;
+  outline: black;
+  background-color: white;
 }
 
 @mixin button-style($bg-color, $color) {
@@ -52,18 +55,16 @@
               @include input-style;
             }
 
-            .inputField {
+            .inputField, select {
               @extend %input-style;
-
-              border: 1px solid black;
-              outline: black;
             }
             select {
-              @extend %input-style;
-              border: 1px solid black;
-              outline: black;
-              // width: 100%;
               margin: 2px 0;
+            }
+            .default{
+              border: 0px;
+              background-color: #fafafa;
+
             }
           }
           .error {
@@ -97,11 +98,6 @@
         justify-content: space-around;
         .button {
           @include button-style(mediumblue, white);
-          // cursor: pointer;
-          // font-size: medium;
-          // margin-top: 10px;
-          // border: 1px solid black;
-          // border-radius: 10px;
           &:hover {
             background: color.adjust(mediumblue, $lightness: -5%);
             transition-duration: 0.5s;

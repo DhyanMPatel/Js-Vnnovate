@@ -26,6 +26,19 @@ const columns = [
   { id: "operations", label: "Operations" },
 ];
 
+const timeFormate = (time) => {
+  const [hours, minutes] = time.split(":");
+  const suffix = hours >= 12 ? "PM" : "AM";
+
+  return `${hours % 12}:${minutes} ${suffix}`;
+};
+
+const dateFormate = (date) => {
+  const [year, month, day] = date.split("-");
+
+  return `${day}-${month}-${year}`;
+}
+
 export default function Display({ users, setUsers, setEditUser }) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -44,6 +57,7 @@ export default function Display({ users, setUsers, setEditUser }) {
 
     setEditUser(editUser);
     // console.log(`editUser: ${editUser.id}`);
+    window.scrollTo({top: 0, behavior: 'smooth'});
   };
 
   const handleDelete = async (id) => {
@@ -59,7 +73,7 @@ export default function Display({ users, setUsers, setEditUser }) {
       if (result.isConfirmed) {
         Swal.fire({
           title: "Deleted!",
-          text: `User ${id} has been deleted.`,
+          text: `User Id: ${id} has been deleted.`,
           icon: "success",
         });
         const updatedUsers = users.filter((user) => user.id !== id);
@@ -72,14 +86,12 @@ export default function Display({ users, setUsers, setEditUser }) {
       ) {
         Swal.fire({
           title: "Cancelled",
-          text: `User ${id} is not Deleted.`,
+          text: `User Id: ${id} is not Deleted.`,
           icon: "error",
         });
       }
     });
     console.log(confirmDelete);
-    if (confirmDelete) {
-    }
   };
 
   return (
@@ -117,7 +129,6 @@ export default function Display({ users, setUsers, setEditUser }) {
                                 <div className="m-1">
                                   <Button
                                     variant="outlined"
-                                    // startIcon={<EditIcon />}
                                     onClick={() => handleEdit(user.id)}
                                   >
                                     <EditIcon />
@@ -135,6 +146,8 @@ export default function Display({ users, setUsers, setEditUser }) {
                               </>
                             ) : column.id === "hobbies" ? (
                               value.join(", ")
+                            ) :column.id === "birthDate" ? dateFormate(value) : column.id === "birthTime" ? (
+                              timeFormate(value)
                             ) : (
                               value
                             )}

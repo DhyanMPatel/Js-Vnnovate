@@ -1,7 +1,7 @@
-import "./App.css";
-import Form from "./components/Form";
-import FormikForm from "./components/formikForm";
-import Display from "./components/Display";
+import "./css/App.css";
+// import Form from "./components/Form";
+import FormikForm from "./formikForm";
+import Display from "./Display";
 import { useEffect, useState } from "react";
 
 function App() {
