@@ -32,3 +32,7 @@
 - `React` and `React-DOM` should be in `peerDependencies`.
 - `formik` in React. - to handle data in form
 - `yup` in react. - for validation
+
+# Redux
+
+- What is `https://cdn.skypack.dev/redux`?

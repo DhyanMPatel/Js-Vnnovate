@@ -217,3 +217,63 @@ console.log(store.getState()); // {Value: 0}
 
   console.log(currentValue); // 2
   ```
+
+### Slice
+
+- A "`slice`" is a collection of **Redux reducer logic** and **actions** for a single feature in your app.
+
+## Example
+
+```js
+// Store
+const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+});
+
+// Slice
+const counterSlice = createSlice({
+  name: "counter",
+  initialState: { value: 0 },
+  reducers: {
+    increase: (state) => {
+      state.counter.value += 1;
+    },
+    decrease: (state) => {
+      state.counter.value -= 1;
+    },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload;
+    },
+  },
+});
+
+export const { increase, decrease, incrementByAmount } = counterSlice.actions;
+export default counterSlice.reducer;
+
+// Wrap app with Provider
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
+// Use Redux state (Counter.js)
+function Counter() {
+  const count = useSeletcor((state) => {
+    state.counter.value;
+  });
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <h3>Counter: {count}</h3>
+
+      <button onClick={() => dispatch(increase())}>increase</button>
+      <button onClick={() => dispatch(decrease())}>decrease</button>
+      <button onClick={() => dispatch(incrementByAmount(5))}>Add 5</button>
+    </div>
+  );
+}
+```

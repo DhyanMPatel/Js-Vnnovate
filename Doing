@@ -12,10 +12,11 @@ Day: Monday
 
 Today, I am working on below list of task:
 
-1. Work done in Form Task
-   - Edit User Feature - Complete
-   - Delete User Feature - Complete
-   - Implement Sweet alert - complete
+1. Add one button That toggle display.jsx component or form.jsx component. - complete
+2. Start Learning Redux
+   - Complate Introduction of Redux from official website. - complete
+   - Know keywords for redux like Action creator, Reducer, Slice, Store, Selector and Dispatch. - complete
+   - Know Redux work flow - complete
 
 Next 2 Day work
 
