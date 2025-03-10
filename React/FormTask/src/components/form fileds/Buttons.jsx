@@ -1,6 +1,12 @@
 import Swal from "sweetalert2";
 
-export default function Buttons({ editUser, resetForm, setEditUser }) {
+export default function Buttons({
+  editUser,
+  resetForm,
+  setEditUser,
+  setShowBtn,
+  showBtn,
+}) {
   return (
     <>
       <button
@@ -18,16 +24,17 @@ export default function Buttons({ editUser, resetForm, setEditUser }) {
         className="button"
         title="Clear Field"
         onClick={async () => {
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "All User Fields are cleared",
-            showConfirmButton: false,
-            timer: 1500,
-          });
           resetForm();
           setEditUser(null);
           localStorage.removeItem("EditUser");
+          await Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "All Fields are clear.",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          setShowBtn(true);
         }}
       >
         Cancel

@@ -15,7 +15,14 @@ import BirthDate from "./components/form fileds/BirthDate";
 import BirthTime from "./components/form fileds/BirthTime";
 import Buttons from "./components/form fileds/Buttons";
 
-export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
+export default function FormikForm({
+  users,
+  setUsers,
+  editUser,
+  setEditUser,
+  setShowBtn,
+  showBtn,
+}) {
   const [initialValues, setInitialValues] = useState({
     id: "",
     firstName: "",
@@ -100,7 +107,7 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
       <div className="containerForm">
         <div className="formDiv">
           <Formik
-            enableReinitialize    // Required for update operation
+            enableReinitialize // Required for update operation
             initialValues={initialValues} // Remove {{...}}
             validationSchema={FORM_VALIDATION}
             onSubmit={async (values, { resetForm }) => {
@@ -111,9 +118,8 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
                   showCancelButton: true,
                   confirmButtonText: "Save",
                   denyButtonText: `Don't save`,
-                }).then((result) => {
+                }).then(async (result) => {
                   if (result.isConfirmed) {
-                    Swal.fire("Saved!", "", "success");
                     const updatedUsers = users.map((user) =>
                       user.id === editUser.id ? { ...values } : user
                     );
@@ -122,30 +128,34 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
                       "UserData",
                       JSON.stringify(updatedUsers)
                     );
+                    await Swal.fire("Saved!", "", "success");
 
                     setEditUser(null);
                     localStorage.removeItem("EditUser");
                     resetForm();
+                    setShowBtn(true);
                   } else if (result.isDenied) {
-                    Swal.fire("Changes are not saved");
                     setEditUser(null);
                     localStorage.removeItem("EditUser");
                     resetForm();
+                    await Swal.fire("Changes are not saved");
+                    setShowBtn(true);
                   }
                 });
               } else {
-                const updatedUsers = [...users, values];
+                const updatedUsers = [values, ...users];
                 setUsers(updatedUsers);
                 localStorage.setItem("UserData", JSON.stringify(updatedUsers));
 
-                Swal.fire({
+                resetForm();
+                await Swal.fire({
                   position: "center",
                   icon: "success",
                   title: "New User Created",
                   showConfirmButton: false,
                   timer: 1500,
                 });
-                resetForm();
+                setShowBtn(true);
               }
             }}
           >
@@ -194,6 +204,8 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
                     editUser={editUser}
                     resetForm={resetForm}
                     setEditUser={setEditUser}
+                    setShowBtn={setShowBtn}
+                    showBtn={showBtn}
                   />
                 </div>
               </Form>

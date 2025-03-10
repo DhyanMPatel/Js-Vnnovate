@@ -13,7 +13,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Swal from "sweetalert2";
 
 const columns = [
-  { id: "id", label: "Id" },
+  { id: "id", label: "Index" },
   { id: "firstName", label: "First Name" },
   { id: "lastName", label: "Last Name" },
   { id: "gender", label: "Gender" },
@@ -37,9 +37,9 @@ const dateFormate = (date) => {
   const [year, month, day] = date.split("-");
 
   return `${day}-${month}-${year}`;
-}
+};
 
-export default function Display({ users, setUsers, setEditUser }) {
+export default function Display({ users, setUsers, setEditUser, setShowBtn }) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -56,7 +56,8 @@ export default function Display({ users, setUsers, setEditUser }) {
     const editUser = users.find((user) => user.id === id);
 
     setEditUser(editUser);
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    // window.scrollTo({top: 0, behavior: 'smooth'});
+    setShowBtn(false);
   };
 
   const handleDelete = async (id) => {
@@ -78,9 +79,7 @@ export default function Display({ users, setUsers, setEditUser }) {
         const updatedUsers = users.filter((user) => user.id !== id);
         setUsers(updatedUsers);
         localStorage.setItem("UserData", JSON.stringify(updatedUsers));
-      } else if (
-        result.dismiss === Swal.DismissReason.cancel
-      ) {
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
           title: "Cancelled",
           text: `User Id: ${id} is not Deleted.`,
@@ -141,7 +140,9 @@ export default function Display({ users, setUsers, setEditUser }) {
                               </>
                             ) : column.id === "hobbies" ? (
                               value.join(", ")
-                            ) :column.id === "birthDate" ? dateFormate(value) : column.id === "birthTime" ? (
+                            ) : column.id === "birthDate" ? (
+                              dateFormate(value)
+                            ) : column.id === "birthTime" ? (
                               timeFormate(value)
                             ) : (
                               value
