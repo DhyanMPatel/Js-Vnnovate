@@ -1,12 +1,12 @@
 import * as React from "react";
 import Paper from "@mui/material/Paper";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
+import Table from "@mui/material/Table";
 import TableHead from "@mui/material/TableHead";
-import TablePagination from "@mui/material/TablePagination";
+import TableBody from "@mui/material/TableBody";
 import TableRow from "@mui/material/TableRow";
+import TableCell from "@mui/material/TableCell";
+import TablePagination from "@mui/material/TablePagination";
 import { Button } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -56,12 +56,11 @@ export default function Display({ users, setUsers, setEditUser }) {
     const editUser = users.find((user) => user.id === id);
 
     setEditUser(editUser);
-    // console.log(`editUser: ${editUser.id}`);
     window.scrollTo({top: 0, behavior: 'smooth'});
   };
 
   const handleDelete = async (id) => {
-    const confirmDelete = await Swal.fire({
+    await Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
       icon: "warning",
@@ -77,11 +76,9 @@ export default function Display({ users, setUsers, setEditUser }) {
           icon: "success",
         });
         const updatedUsers = users.filter((user) => user.id !== id);
-        // rows = rows.filter((row) => row.id !== id);
         setUsers(updatedUsers);
         localStorage.setItem("UserData", JSON.stringify(updatedUsers));
       } else if (
-        /* Read more about handling dismissals below */
         result.dismiss === Swal.DismissReason.cancel
       ) {
         Swal.fire({
@@ -91,7 +88,6 @@ export default function Display({ users, setUsers, setEditUser }) {
         });
       }
     });
-    console.log(confirmDelete);
   };
 
   return (
@@ -137,7 +133,6 @@ export default function Display({ users, setUsers, setEditUser }) {
                                 <div className="m-1">
                                   <Button
                                     variant="outlined"
-                                    // startIcon={<DeleteIcon />}
                                     onClick={() => handleDelete(user.id)}
                                   >
                                     <DeleteIcon />
@@ -162,7 +157,7 @@ export default function Display({ users, setUsers, setEditUser }) {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[5, 10, 25, 100]}
         component="div"
         count={users.length}
         rowsPerPage={rowsPerPage}

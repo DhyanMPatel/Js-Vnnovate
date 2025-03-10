@@ -1,4 +1,4 @@
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 import { useEffect, useState } from "react";
 import "./css/form.css";
 import Swal from "sweetalert2";
@@ -30,7 +30,6 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
   });
 
   useEffect(() => {
-    // console.log("Edit User Changed:", editUser);
     if (editUser) {
       setInitialValues(editUser);
     } else {
@@ -59,9 +58,9 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
       .matches(idRegex, "Id should be Positive Number")
       .notOneOf(editUser ? [] : availableIds, "ID is already available"), // Validation Here for Id
 
-    firstName: Yup.string().min(3).max(20).required("Enter your First Name"),
+    firstName: Yup.string().min(2).max(20).required("Enter your First Name"),
 
-    lastName: Yup.string().min(3).max(20).required("Last Name is required!"),
+    lastName: Yup.string().min(2).max(20).required("Last Name is required!"),
 
     gender: Yup.string().required("Gender is required!"),
 
@@ -101,7 +100,7 @@ export default function FormikForm({ users, setUsers, editUser, setEditUser }) {
       <div className="containerForm">
         <div className="formDiv">
           <Formik
-            enableReinitialize
+            enableReinitialize    // Required for update operation
             initialValues={initialValues} // Remove {{...}}
             validationSchema={FORM_VALIDATION}
             onSubmit={async (values, { resetForm }) => {

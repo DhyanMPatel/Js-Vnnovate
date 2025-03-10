@@ -1,5 +1,4 @@
 import "./css/App.css";
-// import Form from "./components/Form";
 import FormikForm from "./formikForm";
 import Display from "./Display";
 import { useEffect, useState } from "react";
@@ -13,9 +12,7 @@ function App() {
   );
 
   useEffect(() => {
-    // console.log(editUser);
     if (editUser) {
-      // console.log(`App EditUser: ${editUser.id}`);
       localStorage.setItem("EditUser", JSON.stringify(editUser));
     } else {
       localStorage.removeItem("EditUser");
@@ -26,7 +23,6 @@ function App() {
     localStorage.setItem("UserData", JSON.stringify(users));
   }, [users]);
 
-  // console.log(editUser);
   return (
     <>
       <FormikForm
