@@ -50,20 +50,20 @@
 ## SQL Datatypes
 
 - They define the `type of values` that can be stored in a column.
-- There are multiple ple data types like,
+- There are multiple pql data types like,
 
-  1. CHAR - store Characters of fixed length, String(0-255)
-  2. VARCHAR - store Characters up to given length, String(0-255)
-  3. BLOB - store Binay large object, String(0-65535)
-  4. INT - Integer (-2^31 to 2^(31)-1)
-  5. TINYINT - Integer (-128 to 127)
-  6. BIGINT - Integer (-2^63 to 2^(63)-1)
-  7. BIT - store x-bit values. x can range from 1 to 64.
-  8. FLOAT - decimal number - with precision to 23 digits
-  9. DOUBLE - decimal number - with 24 to 53 digits
-  10. BOOLEAN - values 0 and 1
-  11. DATE - in format of `YYYY-MM-DD`
-  12. YEAR - 4 digit formate ranging from 1901 to 2155
+  1. **CHAR** - store Characters of fixed length, String(0-255)
+  2. **VARCHAR** - store Characters up to given length, String(0-255)
+  3. **BLOB** - store Binay large object, String(0-65535)
+  4. **INT** - Integer (-2<sup>31</sup> to 2<sup>31</sup>-1)
+  5. **TINYINT** - Integer (-128 to 127) (-2<sup>7</sup> to 2<sup>7</sup>-1)
+  6. **BIGINT** - Integer (-2<sup>63</sup> to 2<sup>63</sup>-1)
+  7. **BIT** - store x-bit values. x can range from 1 to 64.
+  8. **FLOAT** - decimal number - with precision to 23 digits
+  9. **DOUBLE** - decimal number - with 24 to 53 digits
+  10. **BOOLEAN** - values 0 and 1
+  11. **DATE** - in format of `YYYY-MM-DD`
+  12. **YEAR** - 4 digit formate ranging from 1901 to 2155
 
 - There are `Signed` and `Unsigned` keyword is used to change range
 
@@ -99,6 +99,8 @@
   3. `Super Key`: A Super Key is a combination of all possible attribute which can uniquely identify two tuples in a table.
      - There should be `CK` atleast included in `SK`.
      - `Super Key` is an attribute (or set of attributes) that is used to `uniquely identify all attributes` in a relation. All super keys can’t be candidate keys but the reverse is true.
+
+      [Keys Diagram that helps to understand](https://media.geeksforgeeks.org/wp-content/uploads/20230314093236/keys-in-dbms.jpg)
 
 ## Contrains
 
@@ -407,8 +409,8 @@ GROUP BY c.client_id
     USE sql_invoicing;
 
     SELECT
-    	p.date,
-    	p.invoice_id,
+      p.date,
+      p.invoice_id,
       p.amount,
       c.name,
       pm.name
