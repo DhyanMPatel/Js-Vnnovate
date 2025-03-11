@@ -11,6 +11,10 @@ import { Button } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Swal from "sweetalert2";
+import { useDispatch, useSelector } from "react-redux";
+import { setEditUser } from "./redux/slice/editUserSlice";
+import { setShowBtn } from "./redux/slice/showBtnSlice";
+import { setUsers } from "./redux/slice/userSlice";
 
 const columns = [
   { id: "id", label: "Index" },
@@ -39,7 +43,18 @@ const dateFormate = (date) => {
   return `${day}-${month}-${year}`;
 };
 
-export default function Display({ users, setUsers, setEditUser, setShowBtn }) {
+export default function Display(
+  {
+    // users,
+    // setUsers,
+    // setEditUser,
+    // setShowBtn
+  }
+) {
+  const users = useSelector((state) => state.users.value);
+  const showBtn = useSelector((state) => state.showBtn.value);
+  const dispatch = useDispatch();
+
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -55,9 +70,13 @@ export default function Display({ users, setUsers, setEditUser, setShowBtn }) {
   const handleEdit = (id) => {
     const editUser = users.find((user) => user.id === id);
 
-    setEditUser(editUser);
+    // setEditUser(editUser);
+    dispatch(setEditUser(editUser));
+
     // window.scrollTo({top: 0, behavior: 'smooth'});
-    setShowBtn(false);
+
+    // setShowBtn(false);
+    dispatch(setShowBtn(false));
   };
 
   const handleDelete = async (id) => {
@@ -77,7 +96,10 @@ export default function Display({ users, setUsers, setEditUser, setShowBtn }) {
           icon: "success",
         });
         const updatedUsers = users.filter((user) => user.id !== id);
-        setUsers(updatedUsers);
+
+        // setUsers(updatedUsers);
+        dispatch(setUsers(updatedUsers));
+
         localStorage.setItem("UserData", JSON.stringify(updatedUsers));
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
@@ -89,8 +111,20 @@ export default function Display({ users, setUsers, setEditUser, setShowBtn }) {
     });
   };
 
+  function handleShowBtn() {
+    dispatch(setShowBtn(!showBtn));
+  }
+
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
+      <div className="m-4">
+        {/* <Button variant="contained" onClick={() => setShowBtn(!showBtn)}>
+                  {showBtn ? "Add User" : "Show List"}
+                </Button> */}
+        <Button variant="contained" onClick={() => handleShowBtn()}>
+          {showBtn ? "Add User" : "Show List"}
+        </Button>
+      </div>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>

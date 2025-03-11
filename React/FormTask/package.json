@@ -14,11 +14,13 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.7",
     "@mui/material": "^6.4.7",
+    "@reduxjs/toolkit": "^2.6.1",
     "@tailwindcss/vite": "^4.0.10",
     "form-task": "file:",
     "formik": "^2.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
     "sweetalert2": "^11.17.2",
     "tailwindcss": "^4.0.10",
     "yup": "^1.6.1"

@@ -1,6 +1,8 @@
 import { Field, ErrorMessage } from "formik";
+import { useSelector } from "react-redux";
 
-export default function Id({ editUser, errors, touched }) {
+export default function Id({ /*editUser,*/ errors, touched }) {
+  const editUser = useSelector((state) => state.editUser.value);
   return (
     <>
       <th>

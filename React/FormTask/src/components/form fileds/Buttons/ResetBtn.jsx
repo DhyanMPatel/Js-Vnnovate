@@ -1,23 +1,12 @@
+import { setEditUser } from "../../../redux/slice/editUserSlice";
+import { setShowBtn } from "../../../redux/slice/showBtnSlice";
+import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
 
-export default function Buttons({
-  editUser,
-  resetForm,
-  setEditUser,
-  setShowBtn,
-  showBtn,
-}) {
+function ResetBtn({ resetForm }) {
+  const dispatch = useDispatch();
   return (
     <>
-      <button
-        type="submit"
-        id={editUser ? "update" : "create"}
-        className="button"
-        title={editUser ? "Update User" : "Create User"}
-      >
-        {editUser ? "Update" : "Create"}
-      </button>
-
       <button
         type="reset"
         id="cancel"
@@ -25,7 +14,9 @@ export default function Buttons({
         title="Clear Field"
         onClick={async () => {
           resetForm();
-          setEditUser(null);
+
+          // setEditUser(null);
+          dispatch(setEditUser(null));
           localStorage.removeItem("EditUser");
           await Swal.fire({
             position: "top-end",
@@ -34,7 +25,9 @@ export default function Buttons({
             showConfirmButton: false,
             timer: 1500,
           });
-          setShowBtn(true);
+
+          // setShowBtn(true);
+          dispatch(setShowBtn(true));
         }}
       >
         Cancel
@@ -42,3 +35,5 @@ export default function Buttons({
     </>
   );
 }
+
+export default ResetBtn;
