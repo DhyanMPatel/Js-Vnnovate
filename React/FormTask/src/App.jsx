@@ -1,4 +1,4 @@
-import "./css/App.css";
+import "./style/css/App.css";
 import FormikForm from "./formikForm";
 import Display from "./Display";
 import { useEffect, useState } from "react";

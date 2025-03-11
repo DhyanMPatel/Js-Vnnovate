@@ -1,6 +1,6 @@
 import { Formik, Form } from "formik";
 import { useEffect, useState } from "react";
-import "./css/form.css";
+import "./style/css/form.css";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 
