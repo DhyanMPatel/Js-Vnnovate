@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import usersReducer from "../slice/userSlice";
-import showBtnReducer from "../slice/showBtnSlice";
-import editUserReducer from "../slice/editUserSlice";
-import initialValuesReducer from "../slice/initialValuesSlice";
+import usersReducer from "../features/userSlice";
+import showBtnReducer from "../features/showBtnSlice";
+import editUserReducer from "../features/editUserSlice";
+import initialValuesReducer from "../features/initialValuesSlice";
 
 const store = configureStore({
   reducer: {
