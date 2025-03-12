@@ -1,25 +1,13 @@
 import "./style/css/App.css";
-import FormikForm from "./formikForm";
-import Display from "./Display";
-import { useEffect, useState } from "react";
-import { Button } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { setShowBtn } from "./redux/slice/showBtnSlice";
+import FormikForm from "./pages/formikForm";
+import Display from "./pages/Display";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 function App() {
-  // const [users, setUsers] = useState(
-  //   JSON.parse(localStorage.getItem("UserData")) || []
-  // );
-  // const [editUser, setEditUser] = useState(
-  //   JSON.parse(localStorage.getItem("EditUser")) || null
-  // );
-
-  // const [showBtn, setShowBtn] = useState(true);
-
   const users = useSelector((state) => state.users.value);
   const editUser = useSelector((state) => state.editUser.value);
   const showBtn = useSelector((state) => state.showBtn.value);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     if (editUser) {
@@ -33,27 +21,7 @@ function App() {
     localStorage.setItem("UserData", JSON.stringify(users));
   }, [users]);
 
-  return (
-    <>
-      {showBtn ? (
-        <Display
-        // users={users}
-        // setUsers={setUsers}
-        // setEditUser={setEditUser}
-        // setShowBtn={setShowBtn}
-        />
-      ) : (
-        <FormikForm
-        // users={users}
-        // setUsers={setUsers}
-        // editUser={editUser}
-        // setEditUser={setEditUser}
-        // setShowBtn={setShowBtn}
-        // showBtn={showBtn}
-        />
-      )}
-    </>
-  );
+  return <>{showBtn ? <Display /> : <FormikForm />}</>;
 }
 
 export default App;
