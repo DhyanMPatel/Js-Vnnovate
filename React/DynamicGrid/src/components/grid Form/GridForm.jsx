@@ -19,7 +19,7 @@ function GridForm({ initialValues, dispatch, VALIDATION }) {
             dispatch(setShowGrid(!showGrid));
           }}
         >
-          {(errors, touched) => (
+          {() => (
             <Form className=" w-2xl h-full flex flex-col justify-center items-center">
               <table className=" rounded-2xl p-3 m-4 table border-2 border-separate">
                 <tbody>

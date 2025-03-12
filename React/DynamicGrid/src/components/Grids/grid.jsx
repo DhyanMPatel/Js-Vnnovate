@@ -13,7 +13,7 @@ function Grid() {
   return (
     <>
       <Box sx={{ width: "100%", height: "100%" }}>
-        <Grid2 container spacing={2} columns={columns}>
+        <Grid2 container spacing={0.5} columns={columns}>
           {Array.from({ length: rows }, (_, rowIndex) =>
             Array.from({ length: columns }, (_, colIndex) => (
               <Grid2 key={`${rowIndex}x${colIndex}`} size={1}>
