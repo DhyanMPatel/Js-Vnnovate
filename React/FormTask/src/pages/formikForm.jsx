@@ -1,7 +1,7 @@
 import { Formik, Form } from "formik";
 import { useEffect } from "react";
 
-import '../style/css/form.css'
+import "../style/css/form.css";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 
@@ -53,7 +53,7 @@ export default function FormikForm() {
     }
   }, [editUser]);
 
-  const idRegex = /^[0-9]+$/;
+  const idRegex = /^[1-9][0-9]+?$/;
 
   const availableIds = users.map((user) => user.id);
 

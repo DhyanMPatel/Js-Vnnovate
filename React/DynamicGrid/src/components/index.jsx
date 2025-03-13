@@ -1,4 +1,4 @@
 import GridFormContainer from "./grid Form/GridFormContainer";
-import Grid from "./Grids/Grid";
+import GridItemContainer from "./Grids/GridItemContainer";
 
-export {GridFormContainer, Grid};
+export { GridItemContainer, GridFormContainer };

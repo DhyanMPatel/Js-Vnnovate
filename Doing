@@ -1,19 +1,20 @@
-Date: 12 Mar 2025
-Day: Wednesday
+Date: 13 Mar 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
-1. Create Dynamic Grid project Task with proper Folder Structure.
+1. Do Some changes in Dynamic Grid Task given by
+2. Continue add changes in Site map pages task in Vnnovate-next Project given by
 
 Work done:
-Date: 12 Mar 2025
-Day: Wednesday
+Date: 13 Mar 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
-1. Implement Redux in Form Task - Complete
-2. Know Folder Structure of React and Redux. - Complete
-3. Add Changes in Site map pages task in Vnnovate-next Project given by
+1. Create Dynamic Grid project Task with proper Folder Structure. - complete
+   - Create form that take rows and columns from user. then submit button will display dynamic Grid depending on user input.
+   - Dynamic Grid has "Go Back" button that will display form and hide Grid.
 
 Next 2 Day work
 

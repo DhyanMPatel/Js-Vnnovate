@@ -1,7 +1,6 @@
 import "./assets/style/App.css";
 import { useSelector } from "react-redux";
-import { Grid, GridFormContainer } from "./components";
-
+import { GridItemContainer, GridFormContainer } from "./components";
 
 function App() {
   const showGrid = useSelector((state) => state.showGrid.value);
@@ -9,7 +8,7 @@ function App() {
     <>
       {showGrid ? (
         <>
-          <Grid />
+          <GridItemContainer />
         </>
       ) : (
         <>

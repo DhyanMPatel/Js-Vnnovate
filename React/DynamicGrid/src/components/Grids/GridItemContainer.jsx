@@ -4,7 +4,7 @@ import GridItem from "./GridItem";
 import Box from "@mui/material/Box";
 import { setShowGrid } from "../../redux/reducer/ShowGridSlice";
 
-function Grid() {
+function GridItemContainer() {
   const rows = useSelector((state) => state.rows.value);
   const columns = useSelector((state) => state.columns.value);
   const showGrid = useSelector((state) => state.showGrid.value);
@@ -35,13 +35,4 @@ function Grid() {
     </>
   );
 }
-export default Grid;
-
-{
-  /* {Array.from({ length: rows * columns }).map((_, index) => (
-    <Grid2 key={index} size={1}>
-      
-    {index + 1}
-  </Grid2>
-))} */
-}
+export default GridItemContainer;
