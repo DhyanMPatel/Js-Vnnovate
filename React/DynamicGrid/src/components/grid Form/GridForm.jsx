@@ -3,10 +3,11 @@ import { Button } from "@mui/material";
 import { setRows } from "../../redux/reducer/RowSlice";
 import { setColumns } from "../../redux/reducer/ColsSlice";
 import { setShowGrid } from "../../redux/reducer/ShowGridSlice";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-function GridForm({ initialValues, dispatch, VALIDATION }) {
+function GridForm({ initialValues, VALIDATION }) {
   const showGrid = useSelector((state) => state.showGrid.value);
+  const dispatch = useDispatch();
   return (
     <>
       <div className="w-full h-full flex justify-center items-center">
