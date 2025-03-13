@@ -1,4 +1,4 @@
-import "./assets/style/App.css";
+import "./style/App.css";
 import { useSelector } from "react-redux";
 import { GridItemContainer, GridFormContainer } from "./components";
 
