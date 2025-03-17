@@ -1,26 +1,15 @@
-Date: 13 Mar 2025
-Day: Thursday
+Date: 17 Mar 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
-1. Do Some changes in Dynamic Grid Task given by
-2. Continue add changes in Site map pages task in Vnnovate-next Project given by
+1. Implement Searching option in Dynamic Grid task given by
 
 Work done:
-Date: 13 Mar 2025
-Day: Thursday
+Date: 17 Mar 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
-1. Create Dynamic Grid project Task with proper Folder Structure. - complete
-   - Create form that take rows and columns from user. then submit button will display dynamic Grid depending on user input.
-   - Dynamic Grid has "Go Back" button that will display form and hide Grid.
-
-Next 2 Day work
-
-- Do remind `React` also look `Redux`.
-- Check last `Form Task` Created with React.
-- Complete max 15 Video.
-- Check `Material UI`, `Yup`, `Sweet alert`.
-- Recall `MySQL`.
-- Recall Js from Classes.
+1. Add content in SiteMap Pages task given by
+2. Add Scrollbar in Dynamic Grid Task given by

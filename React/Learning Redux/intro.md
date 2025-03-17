@@ -44,7 +44,7 @@
 
 ## What does the Redux Toolkit do?
 
-- Redux Toolkit eliminate he "**boilerplate**" from hand-written Redux logic, prevent common mistakes, and provide APIs that simplify standard Redux tasks.
+- Redux Toolkit eliminate the "**boilerplate**" from hand-written Redux logic, prevent common mistakes, and provide APIs that simplify standard Redux tasks.
 - Redux Toolkit starts with two key APIs that simplify the most common things you do in every Redux app:
 
   1. `configureStore`- sets up a well-configured Redux store with a **single function call**, including **combining reducers**, adding **the thunk middleware**, and setting up the Redux DevTools integration.
@@ -137,7 +137,7 @@
 
 - `Reducer` functions get their name because they are similar to the kind of callback function we pass to the `Array.reduce()` method.
 
-- Reducer must follow bellow Rules:\
+- Reducer must follow bellow Rules:
 
   1. They should only calculate the **new state value** based on the `state` and `action` arguments.
   2. They are not allowed to modify the existing `state`. Instead, they must make _immutable updates_, by copying the existing `state` and making changes to the copied values.

@@ -1,5 +1,15 @@
-import RowReducer from "../reducer/RowSlice";
-import ColsReducer from "../reducer/ColsSlice";
-import ShowGridReducer from "../reducer/ShowGridSlice";
+import RowReducer from "./RowSliceRC";
+import ColsReducer from "./ColsSliceRC";
+import ShowGridReducer from "./ShowGridSliceRC";
+import PageReducer from "./PageSliceRC";
+import rowsPerPageReducer from "./RowsPerPageSliceRC";
+import searchReducer from "./SearchSliceRC";
 
-export { RowReducer, ColsReducer, ShowGridReducer };
+export {
+  RowReducer,
+  ColsReducer,
+  ShowGridReducer,
+  PageReducer,
+  rowsPerPageReducer,
+  searchReducer,
+};

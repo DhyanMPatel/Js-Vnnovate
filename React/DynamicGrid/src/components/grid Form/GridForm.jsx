@@ -1,8 +1,8 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Button } from "@mui/material";
-import { setRows } from "../../redux/reducer/RowSlice";
-import { setColumns } from "../../redux/reducer/ColsSlice";
-import { setShowGrid } from "../../redux/reducer/ShowGridSlice";
+import { setRows } from "../../redux/reducer/RowSliceRC";
+import { setColumns } from "../../redux/reducer/ColsSliceRC";
+import { setShowGrid } from "../../redux/reducer/ShowGridSliceRC";
 import { useDispatch, useSelector } from "react-redux";
 
 function GridForm({ initialValues, VALIDATION }) {
