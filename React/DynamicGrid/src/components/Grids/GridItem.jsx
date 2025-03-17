@@ -10,7 +10,11 @@ export default function GridItem({ row, column }) {
 
   return (
     <>
-      <div className="flex justify-center items-center border rounded-sm min-w-12">
+      <div
+        className={`flex justify-center items-center ${
+          isMatch ? "border" : null
+        } rounded-sm min-w-12`}
+      >
         {isMatch ? (
           <div>
             {row}x{column}
