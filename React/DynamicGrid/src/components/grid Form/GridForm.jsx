@@ -4,8 +4,11 @@ import { setRows } from "../../redux/reducer/RowSliceRC";
 import { setColumns } from "../../redux/reducer/ColsSliceRC";
 import { setShowGrid } from "../../redux/reducer/ShowGridSliceRC";
 import { useDispatch, useSelector } from "react-redux";
+import { setProgress } from "../../redux/reducer/ProgressSliceRC";
+import CircularWithValueLabel from "../Loader/CircularWithValueLabel";
 
 function GridForm({ initialValues, VALIDATION }) {
+  const progress = useSelector((state) => state.progress.value);
   const showGrid = useSelector((state) => state.showGrid.value);
   const dispatch = useDispatch();
   return (
@@ -15,9 +18,13 @@ function GridForm({ initialValues, VALIDATION }) {
           initialValues={initialValues}
           validationSchema={VALIDATION}
           onSubmit={(values) => {
-            dispatch(setRows(values.rows));
-            dispatch(setColumns(values.columns));
-            dispatch(setShowGrid(!showGrid));
+            dispatch(setProgress(true));
+            setTimeout(() => {
+              dispatch(setRows(values.rows));
+              dispatch(setColumns(values.columns));
+              dispatch(setShowGrid(!showGrid)); 
+              dispatch(setProgress(false));
+            }, 1000);
           }}
         >
           {() => (
@@ -65,9 +72,13 @@ function GridForm({ initialValues, VALIDATION }) {
                 </tbody>
               </table>
               <div>
-                <Button type="submit" variant="contained" disableElevation>
-                  Submit
-                </Button>
+                {progress ? (
+                  <CircularWithValueLabel />
+                ) : (
+                  <Button type="submit" variant="contained" disableElevation>
+                    Submit
+                  </Button>
+                )}
               </div>
             </Form>
           )}

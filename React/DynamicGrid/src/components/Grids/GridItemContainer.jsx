@@ -15,8 +15,11 @@ import { setShowGrid } from "../../redux/reducer/ShowGridSliceRC";
 import { setRowsPerPage } from "../../redux/reducer/RowsPerPageSliceRC";
 import { setPage } from "../../redux/reducer/PageSliceRC";
 import { updateSearch } from "../../redux/reducer/SearchSliceRC";
+import { useEffect } from "react";
+import { setProgress } from "../../redux/reducer/ProgressSliceRC";
 
 function GridItemContainer() {
+  const progress = useSelector((state) => state.progress.value);
   const rows = useSelector((state) => state.rows.value);
   const columns = useSelector((state) => state.columns.value);
   const showGrid = useSelector((state) => state.showGrid.value);
@@ -24,6 +27,14 @@ function GridItemContainer() {
   const rowsPerPage = useSelector((state) => state.rowsPerPage.value);
   const search = useSelector((state) => state.search.value);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setProgress(true)); // Start Loading
+    const timer = setTimeout(() => {
+      dispatch(setProgress(false)); // Stop Loading After 1s (Simulate API Delay)
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [rows, columns]);
 
   const handleChangePage = (_, newPage) => dispatch(setPage(newPage));
   const handleChangeRowsPerPage = (event) => {
@@ -35,7 +46,6 @@ function GridItemContainer() {
   return (
     <div className="relative">
       <Paper sx={{ width: "99vw", overflow: "hidden", position: "absolute" }}>
-        {/* Search Input */}
         <div className="p-2 flex justify-end">
           <TextField
             label="Search Rows/Columns"
@@ -46,27 +56,30 @@ function GridItemContainer() {
           />
         </div>
 
-        {/* Scrollable Table Container */}
-        <TableContainer sx={{ overflowX: "auto", maxWidth: "100%" }}>
-          <Table>
-            <TableBody>
-              {Array.from({ length: rows })
-                .map((_, rowIndex) => rowIndex + 1)
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row) => (
-                  <TableRow key={row}>
-                    {Array.from({ length: columns })
-                      .map((_, colIndex) => colIndex + 1)
-                      .map((col) => (
-                        <TableCell key={col} sx={{ padding: "8px" }}>
-                          <GridItem row={row} column={col} />
-                        </TableCell>
-                      ))}
-                  </TableRow>
-                ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+        {progress ? (
+          <CircularWithValueLabel />
+        ) : (
+          <TableContainer sx={{ overflowX: "auto", maxWidth: "100%" }}>
+            <Table>
+              <TableBody>
+                {Array.from({ length: rows })
+                  .map((_, rowIndex) => rowIndex + 1)
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((row) => (
+                    <TableRow key={row}>
+                      {Array.from({ length: columns })
+                        .map((_, colIndex) => colIndex + 1)
+                        .map((col) => (
+                          <TableCell key={col} sx={{ padding: "8px" }}>
+                            <GridItem row={row} column={col} />
+                          </TableCell>
+                        ))}
+                    </TableRow>
+                  ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        )}
 
         <TablePagination
           rowsPerPageOptions={[5, 10, 20]}

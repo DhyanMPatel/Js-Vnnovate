@@ -6,6 +6,7 @@ import {
   PageReducer,
   rowsPerPageReducer,
   searchReducer,
+  progressReducer,
 } from "../reducer";
 
 const Store = configureStore({
@@ -16,6 +17,7 @@ const Store = configureStore({
     page: PageReducer,
     rowsPerPage: rowsPerPageReducer,
     search: searchReducer,
+    progress: progressReducer,
   },
 });
 export default Store;
