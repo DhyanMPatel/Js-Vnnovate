@@ -1,26 +1,15 @@
-import { useSelector } from "react-redux";
-
 export default function GridItem({ row, column }) {
-  const search = useSelector((state) => state.search.value);
-
-  const isMatch =
-    search === "" ||
-    row.toString().includes(search) ||
-    column.toString().includes(search);
-
+  // const search = useSelector((state) => state.search.value);
+  // console.log(row, column);
   return (
     <>
-      <div
-        className={`flex justify-center items-center ${
-          isMatch ? "border" : null
-        } rounded-sm min-w-12`}
-      >
-        {isMatch ? (
-          <div>
-            {row}x{column}
-          </div>
-        ) : null}
+      <div className={`flex justify-center items-center rounded-sm min-w-12`}>
+        <div>
+          {row}x{column}
+        </div>
       </div>
     </>
   );
 }
+
+// ${ isMatch ? "border" : null}

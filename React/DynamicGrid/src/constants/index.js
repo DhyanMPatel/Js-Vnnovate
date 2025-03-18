@@ -1,4 +1,5 @@
-import InitialValues from "./FormVlues";
-import Validation from "./Validation";
+import InitialValues from "./Form/FormVlues";
+import Validation from "./Form/Validation";
+import configureValues from "./settings/configureValues";
 
-export { InitialValues, Validation };
+export { InitialValues, Validation, configureValues };

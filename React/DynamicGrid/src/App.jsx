@@ -1,10 +1,14 @@
 import "./style/App.css";
-import { useSelector } from "react-redux";
-import { GridItemContainer, GridFormContainer } from "./components";
+
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRouter from "./routes/AppRouter";
 
 function App() {
-  const showGrid = useSelector((state) => state.showGrid.value);
-  return showGrid ? <GridItemContainer /> : <GridFormContainer />;
+  return (
+    <Router>
+      <AppRouter />
+    </Router>
+  );
 }
 
 export default App;

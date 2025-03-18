@@ -1,42 +1,48 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Field, Form, Formik, ErrorMessage } from "formik";
+import { configureValues } from "../../constants";
+import { Validation } from "../../constants";
 import { Button } from "@mui/material";
-import { setRows } from "../../redux/reducer/RowSliceRC";
-import { setColumns } from "../../redux/reducer/ColsSliceRC";
-import { setShowGrid } from "../../redux/reducer/ShowGridSliceRC";
-import { useDispatch, useSelector } from "react-redux";
-import { setProgress } from "../../redux/reducer/ProgressSliceRC";
-import { NavLink } from "react-router";
-// import CircularWithValueLabel from "../Loader/CircularWithValueLabel";
+import BackArrow from "../../common/back_arrow";
+import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
+import { setRowConfig } from "../../redux/reducer/configure Row & Col/rowConfigSliceRC";
+import { setColsPerPage } from "../../redux/reducer/ColsPerPageSliceRC";
 
-function GridForm({ initialValues, VALIDATION }) {
-  // const progress = useSelector((state) => state.progress.value);
-  const showGrid = useSelector((state) => state.showGrid.value);
+function Settings() {
+  const navigation = useNavigate();
   const dispatch = useDispatch();
   return (
     <>
-      <div className="flex p-2">
-        <Button variant="outlined">
-          <NavLink to="/settings">Settings</NavLink>
+      <div className="p-2">
+        <Button
+          variant="outlined"
+          disableElevation
+          onClick={() => {
+            navigation("/");
+          }}
+        >
+          <BackArrow />
         </Button>
       </div>
       <div className="w-full h-full flex justify-center items-center">
         <Formik
-          initialValues={initialValues}
-          validationSchema={VALIDATION}
-          onSubmit={(values) => {
-            // dispatch(setProgress(true));
-            // setTimeout(() => {
-            dispatch(setRows(values.rows));
-            dispatch(setColumns(values.columns));
-            dispatch(setShowGrid(!showGrid));
-            // dispatch(setProgress(false));
-            // }, 1000);
+          initialValues={configureValues}
+          validationSchema={Validation}
+          onSubmit={(value) => {
+            dispatch(setRowConfig(value.rows));
+            dispatch(setColsPerPage(value.columns));
+            navigation("/");
           }}
         >
           {() => (
             <Form className=" w-2xl h-full flex flex-col justify-center items-center">
               <table className=" rounded-2xl p-3 m-4 table border-2 border-separate">
                 <tbody>
+                  <tr>
+                    <td colSpan={2} className="p-2 font-bold text-2xl">
+                      Configuration of Rows & Columns
+                    </td>
+                  </tr>
                   <tr className="table-row">
                     <th className="pt-3 pb-3">
                       <label htmlFor="rows">Rows</label>
@@ -45,7 +51,7 @@ function GridForm({ initialValues, VALIDATION }) {
                       <Field
                         id="rows"
                         name="rows"
-                        placeholder="Enter Rows"
+                        placeholder="Set Rows"
                         className="border-2 rounded-sm p-1"
                       />
                       <ErrorMessage
@@ -64,7 +70,7 @@ function GridForm({ initialValues, VALIDATION }) {
                       <Field
                         id="columns"
                         name="columns"
-                        placeholder="Enter Columns"
+                        placeholder="Set Columns"
                         className="border-2 rounded-sm p-1"
                       />
                       <ErrorMessage
@@ -82,7 +88,7 @@ function GridForm({ initialValues, VALIDATION }) {
                   <CircularWithValueLabel />
                 ) : ( */}
                 <Button type="submit" variant="contained" disableElevation>
-                  Submit
+                  Set
                 </Button>
                 {/* )} */}
               </div>
@@ -93,4 +99,4 @@ function GridForm({ initialValues, VALIDATION }) {
     </>
   );
 }
-export default GridForm;
+export default Settings;

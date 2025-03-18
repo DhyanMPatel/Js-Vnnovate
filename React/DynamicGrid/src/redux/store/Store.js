@@ -3,10 +3,12 @@ import {
   RowReducer,
   ColsReducer,
   ShowGridReducer,
-  PageReducer,
+  RowPageReducer,
   rowsPerPageReducer,
   searchReducer,
   progressReducer,
+  colsPerPageReducer,
+  ColPageReducer,
 } from "../reducer";
 
 const Store = configureStore({
@@ -14,10 +16,12 @@ const Store = configureStore({
     rows: RowReducer,
     columns: ColsReducer,
     showGrid: ShowGridReducer,
-    page: PageReducer,
+    rowPage: RowPageReducer,
     rowsPerPage: rowsPerPageReducer,
     search: searchReducer,
     progress: progressReducer,
+    colsPerPage: colsPerPageReducer,
+    colPage: ColPageReducer,
   },
 });
 export default Store;
