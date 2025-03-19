@@ -11,12 +11,18 @@ import GridItem from "./GridItem";
 import { setRowPage } from "../../redux/reducer/RowPageSliceRC";
 import { setRowsPerPage } from "../../redux/reducer/RowsPerPageSliceRC";
 
-function SearchGrid() {
-  const search = useSelector((state) => state.search.value);
-  const rows = useSelector((state) => state.rows.value);
-  const columns = useSelector((state) => state.columns.value);
-  const rowsPerPage = useSelector((state) => state.rowsPerPage.value);
-  const page = useSelector((state) => state.page.value);
+function SearchGrid({
+  rows,
+  columns,
+  rowPage,
+  colPage,
+  rowsPerPage,
+  colsPerPage,
+  search,
+  startColIndex,
+  endColIndex,
+  startRowIndex,
+}) {
   const dispatch = useDispatch();
 
   const matchedCells = {};

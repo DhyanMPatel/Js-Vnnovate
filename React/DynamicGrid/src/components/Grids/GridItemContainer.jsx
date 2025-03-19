@@ -30,15 +30,14 @@ function GridItemContainer() {
 
   const rows = useSelector((state) => state.rows.value);
   const columns = useSelector((state) => state.columns.value);
-  // const rowConfig = useSelector((state) => state.rowConfig.value);
+  const rowPage = useSelector((state) => state.rowPage.value);
+  const colPage = useSelector((state) => state.colPage.value);
   const colsPerPage = useSelector((state) => state.colsPerPage.value);
+  const rowsPerPage = useSelector((state) => state.rowsPerPage.value);
 
   // console.log(`colsPerPage: ${colsPerPage}`);
 
   const showGrid = useSelector((state) => state.showGrid.value);
-  const rowPage = useSelector((state) => state.rowPage.value);
-  const colPage = useSelector((state) => state.colPage.value);
-  const rowsPerPage = useSelector((state) => state.rowsPerPage.value);
   const search = useSelector((state) => state.search.value);
 
   useEffect(() => {
@@ -97,7 +96,7 @@ function GridItemContainer() {
               dispatch(setRowPage(0));
               dispatch(setRowsPerPage(5));
               dispatch(setColPage(0));
-            dispatch(setColsPerPage(5));
+              dispatch(setColsPerPage(5));
               dispatch(setShowGrid(!showGrid));
             }}
           >
@@ -119,13 +118,9 @@ function GridItemContainer() {
                 <TableBody>
                   {Array.from({ length: rows })
                     .map((_, rowIndex) => rowIndex + 1)
-                    .slice(
-                      startRowIndex,
-                      endRowIndex
-                    )
+                    .slice(startRowIndex, endRowIndex)
                     .map((row) => (
                       <TableRow key={row} className="relative">
-
                         {/* Left Arraow */}
                         <TableCell
                           className="sticky flex justify-center"
@@ -145,7 +140,12 @@ function GridItemContainer() {
                           .slice(startColIndex, endColIndex)
                           .map((col) => (
                             <TableCell key={col} sx={{ padding: "8px" }}>
-                              <GridItem row={row} column={col} />
+                              <GridItem
+                                row={row}
+                                column={col}
+                                startColIndex={startColIndex}
+                                endColIndex={endColIndex}
+                              />
                             </TableCell>
                           ))}
 
@@ -179,7 +179,15 @@ function GridItemContainer() {
             />
           </>
         ) : (
-          <SearchGrid />
+          <SearchGrid
+            rows={rows}
+            columns={columns}
+            rowPage={rowPage}
+            colPage={colPage}
+            rowsPerPage={rowsPerPage}
+            colsPerPage={colsPerPage}
+            search={search}
+          />
         )}
 
         {/* <div className="w-full flex justify-center items-center mt-2 mb-2"></div> */}
