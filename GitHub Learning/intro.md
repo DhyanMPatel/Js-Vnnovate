@@ -21,6 +21,7 @@
 
 - Check point (like games)
 - Commit behind the scene it contain few things
+
   - Hash - This is basically a head of commit
   - parent - for first commit it null, otherwise it will be previous commit
   - Info
@@ -54,6 +55,7 @@
   - `git diff branchOne.. branchTwo`
 
 ## Git stash
+
 - create a repo, work & commit on main
 - switch to another branch & work
 - conflicting changes do not allow to switch branch, without commits
@@ -65,9 +67,10 @@
 - `Note`: Stash is not just limited to any perticular branch only it can stash pop in different branch
 
 ## Git Rebase
+
 - alternative to merging
 - When we are merging that commits still branches are there. if we do changes in both branches then it will show different.
-- If we change any thing in same file then it will say for manual resolving. also read all thing in cmd. then add that resolved file and write `git rebase --continue` command to continue holded merging. 
+- If we change any thing in same file then it will say for manual resolving. also read all thing in cmd. then add that resolved file and write `git rebase --continue` command to continue holded merging.
 
 - `Note`: Keep it mind that run `git rebase` command from any branch `exept main branch`. and write command, `git rebase main`
 
@@ -88,6 +91,7 @@
               ->`git push origin main`
   ```
 - `git config` - Get and Set repository or global options.
+- `git config --list` - to get all current user name, email, many other details.
 
   - `git config --global user.name "User Name"`
   - `git config --global user.email "Email"`
@@ -100,8 +104,10 @@
 - `git branch` - provide branches.
 - `git merge` - for merging
 
-- This Command can help to checkout any commit using 
-  - `git checkout <Hash>`   -- This will move head to that perticular Hash(such as `9cdf011`)
-  - `git checkout main/master` - will comeback to lattest commit. 
+- This Command can help to checkout any commit using
+  - `git checkout <Hash>` -- This will move head to that perticular Hash(such as `9cdf011`)
+  - `git checkout main/master` - will comeback to lattest commit.
   - `git reflog` - This also work like above one.
   - `git checkout HEAD~2` - will look at 2 commit privious.
+
+![Git User details related Commands](git_User_Detail_Commands.png)

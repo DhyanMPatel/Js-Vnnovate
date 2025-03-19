@@ -1,16 +1,49 @@
-Date: 18 Mar 2025
-Day: Tuesday
+## Work Doing:
 
 Today, I am working on below list of task:
 
-1. Work on Dynamic Grid Task given by
+Date: 19 Mar 2025
+Day: Wednesday
 
-Work done:
-Date: 18 Mar 2025
-Day: Tuesday
+Project: KMZ
+
+1. Start KMZ Project to understand and setup with help of
+
+## Work done:
+
+Date: 19 Mar 2025
+Day: Wednesday
 
 Today, I am working on below list of task:
 
 1. Create Searching Option with new Grid - Complete
 2. Display Rows based on Row configure state - In Progress
 3. Display columns based on Column configure state - In Progress
+
+## Today New Learned:
+
+### UI
+
+- **Suspense** for lazy loading
+  - Ex.
+    ```html
+    <Suspense fallback={ <Loading isLoading={isLoading}/> }>
+        <Login />
+    </Suspense>
+    ```
+- **Lazy** for
+
+### Frameworks or Library
+
+- **Toastify** for
+- **heroicons**
+
+### Css
+
+- **flex-1**
+
+- **divide-y divide-slate-100 dark:divide-slate-800**
+
+### Hooks
+
+- **useForm**
