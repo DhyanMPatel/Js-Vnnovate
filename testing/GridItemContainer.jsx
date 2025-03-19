@@ -15,14 +15,14 @@ import { setShowGrid } from "../../redux/reducer/ShowGridSliceRC";
 import { setRowsPerPage } from "../../redux/reducer/RowsPerPageSliceRC";
 import { setRowPage } from "../../redux/reducer/RowPageSliceRC";
 import { updateSearch } from "../../redux/reducer/SearchSliceRC";
-import { useEffect } from "react";
-import { setProgress } from "../../redux/reducer/ProgressSliceRC";
+// import { setProgress } from "../../redux/reducer/ProgressSliceRC";
 import BackArrow from "../../common/back_arrow";
 import SearchGrid from "./SearchGrid";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import { setColPage } from "../../redux/reducer/ColPageSliceRC";
 import { setColsPerPage } from "../../redux/reducer/ColsPerPageSliceRC";
+import { updateRowData } from "../../redux/reducer/GridDataSliceRC";
 
 function GridItemContainer() {
   // const progress = useSelector((state) => state.progress.value);
@@ -30,24 +30,28 @@ function GridItemContainer() {
 
   const rows = useSelector((state) => state.rows.value);
   const columns = useSelector((state) => state.columns.value);
-  // const rowConfig = useSelector((state) => state.rowConfig.value);
   const colsPerPage = useSelector((state) => state.colsPerPage.value);
-
-  // console.log(`colsPerPage: ${colsPerPage}`);
 
   const showGrid = useSelector((state) => state.showGrid.value);
   const rowPage = useSelector((state) => state.rowPage.value);
   const colPage = useSelector((state) => state.colPage.value);
   const rowsPerPage = useSelector((state) => state.rowsPerPage.value);
   const search = useSelector((state) => state.search.value);
+  const gridData = useSelector((state) => state.gridData.gridData);
 
-  useEffect(() => {
-    dispatch(setProgress(true)); // Start Loading
-    const timer = setTimeout(() => {
-      dispatch(setProgress(false)); // Stop Loading After 1s (Simulate API Delay)
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, [rows, columns]);
+  const startColIndex = colPage * colsPerPage;
+  const endColIndex = parseInt(startColIndex) + parseInt(colsPerPage);
+
+  const startRowIndex = rowPage * rowsPerPage;
+  const endRowIndex = parseInt(startRowIndex) + parseInt(rowsPerPage);
+
+  // useEffect(() => {
+  //   dispatch(setProgress(true)); // Start Loading
+  //   const timer = setTimeout(() => {
+  //     dispatch(setProgress(false)); // Stop Loading After 1s (Simulate API Delay)
+  //   }, 1000);
+  //   return () => clearTimeout(timer);
+  // }, [rows, columns]);
 
   const handleChangePage = (_, newPage) => dispatch(setRowPage(newPage));
   const handleChangeRowsPerPage = (event) => {
@@ -57,33 +61,36 @@ function GridItemContainer() {
 
   const handleSearch = (event) => dispatch(updateSearch(event.target.value));
 
-  // console.log(`Search: ${search}`);
+  // // Left Button Handler
+  // const handleLeftClick = (rowIndex) => {
+  //   const currentRow =
+  //     gridData[rowIndex] ||
+  //     Array.from({ length: columns }).map((_, colIndex) => colIndex + 1).slice(startColIndex, endColIndex); // Get current row data
 
-  const startColIndex = colPage * colsPerPage;
-  const endColIndex = parseInt(startColIndex) + parseInt(colsPerPage);
+  //   console.log(`Left Click: ${currentRow}`);
+  //   dispatch(setColPage(colPage <= 0 ? colPage : colPage - 1));    // OR dispatch(setColPage(colPage - 1))
+  //   const newData = currentRow.map((value, colIndex) =>
+  //     colIndex >= startColIndex && colIndex < endColIndex ? value - colsPerPage : value
+  //   );
+  //   console.log(`Left New Data: ${newData}`);
 
-  const startRowIndex = rowPage * rowsPerPage;
-  const endRowIndex = parseInt(startRowIndex) + parseInt(rowsPerPage);
+  //   dispatch(updateRowData({ rowIndex, newData }));
+  // };
 
-  // console.log(`ColPage: ${colPage}`);
-  // console.log(`colsPerPage: ${colsPerPage}`);
-  // console.log(`StartColIndex: ${startColIndex}`);
-  // console.log(`EndColIndex: ${endColIndex}`);
+  // // Right Button Handler
+  // const handleRightClick = (rowIndex) => {
+  //   const currentRow =
+  //     gridData[rowIndex] ||
+  //     Array.from({ length: columns }).map((_, colIndex) => colIndex + 1).slice(startColIndex, endColIndex);
 
-  // console.log(`RowPage: ${rowPage}`);
-  // console.log(`RowsPerPage: ${rowsPerPage}`);
-
-  const handleLeftClick = (rowIndex) => {
-    const currentRow = gridData[rowIndex] || []; // Get current row data
-    const newData = currentRow.map((value) => value - 1); // Modify values (Example: Decrease)
-    dispatch(updateRowData({ rowIndex, newData }));
-  };
-
-  const handleRightClick = (rowIndex) => {
-    const currentRow = gridData[rowIndex] || [];
-    const newData = currentRow.map((value) => value + 1); // Modify values (Example: Increase)
-    dispatch(updateRowData({ rowIndex, newData }));
-  };
+  //   console.log(`Right Click: ${currentRow}`);
+  //   dispatch(setColPage(colPage >= columns ? colPage : colPage + 1));    // OR  dispatch(setColPage(colPage + 1))
+  //   const newData = currentRow.map((value, colIndex) =>
+  //     colIndex >= startColIndex && colIndex < endColIndex ? value + colsPerPage : value
+  //   );
+  //   console.log(`Right New Data: ${newData}`);
+  //   dispatch(updateRowData({ rowIndex, newData }));
+  // };
 
   return (
     <div className="relative">
@@ -97,7 +104,7 @@ function GridItemContainer() {
               dispatch(setRowPage(0));
               dispatch(setRowsPerPage(5));
               dispatch(setColPage(0));
-            dispatch(setColsPerPage(5));
+              dispatch(setColsPerPage(5));
               dispatch(setShowGrid(!showGrid));
             }}
           >
@@ -119,16 +126,12 @@ function GridItemContainer() {
                 <TableBody>
                   {Array.from({ length: rows })
                     .map((_, rowIndex) => rowIndex + 1)
-                    .slice(
-                      startRowIndex,
-                      endRowIndex
-                    )
+                    .slice(startRowIndex, endRowIndex)
                     .map((row) => (
                       <TableRow key={row} className="relative">
-
                         {/* Left Arraow */}
                         <TableCell
-                          className="sticky flex justify-center"
+                          className="sticky"
                           sx={{ padding: "8px", width: "50px" }}
                         >
                           <Button
@@ -145,14 +148,17 @@ function GridItemContainer() {
                           .slice(startColIndex, endColIndex)
                           .map((col) => (
                             <TableCell key={col} sx={{ padding: "8px" }}>
-                              <GridItem row={row} column={col} />
+                              <GridItem
+                                row={row}
+                                column={col}
+                                value={gridData[row]?.[col] ?? col + 1}
+                              />
                             </TableCell>
                           ))}
 
                         {/* Right Arrow */}
                         <TableCell
-                          // key={row}
-                          className="sticky right-0"
+                          className="sticky"
                           sx={{ padding: "8px", width: "50px" }}
                         >
                           <Button

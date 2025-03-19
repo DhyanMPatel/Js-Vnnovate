@@ -5,8 +5,8 @@ import { Button } from "@mui/material";
 import BackArrow from "../../common/back_arrow";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
-import { setRowConfig } from "../../redux/reducer/configure Row & Col/rowConfigSliceRC";
 import { setColsPerPage } from "../../redux/reducer/ColsPerPageSliceRC";
+import { setRowsPerPage } from "../../redux/reducer/RowsPerPageSliceRC";
 
 function Settings() {
   const navigation = useNavigate();
@@ -29,7 +29,7 @@ function Settings() {
           initialValues={configureValues}
           validationSchema={Validation}
           onSubmit={(value) => {
-            dispatch(setRowConfig(value.rows));
+            dispatch(setRowsPerPage(value.rows));
             dispatch(setColsPerPage(value.columns));
             navigation("/");
           }}

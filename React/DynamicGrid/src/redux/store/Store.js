@@ -9,6 +9,7 @@ import {
   progressReducer,
   colsPerPageReducer,
   ColPageReducer,
+  GridDataReducer
 } from "../reducer";
 
 const Store = configureStore({
@@ -22,6 +23,7 @@ const Store = configureStore({
     progress: progressReducer,
     colsPerPage: colsPerPageReducer,
     colPage: ColPageReducer,
+    gridData: GridDataReducer,
   },
 });
 export default Store;

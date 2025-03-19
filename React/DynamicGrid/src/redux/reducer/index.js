@@ -7,6 +7,7 @@ import searchReducer from "./SearchSliceRC";
 import progressReducer from "./ProgressSliceRC";
 import colsPerPageReducer from "./ColsPerPageSliceRC";
 import ColPageReducer from "./ColPageSliceRC";
+import GridDataReducer from "./GridDataSliceRC";
 
 export {
   progressReducer,
@@ -18,4 +19,5 @@ export {
   rowsPerPageReducer,
   colsPerPageReducer,
   ColPageReducer,
+  GridDataReducer
 };
