@@ -2,47 +2,88 @@
 
 Today, I am working on below list of task:
 
-Date: 19 Mar 2025
-Day: Wednesday
+Date: 20 Mar 2025
+Day: Thursday
 
 Project: KMZ
 
-1. Start KMZ Project to understand and setup with help of
+1. Fixing delete operation in Reports - Done
+2. Work on Update Reports operation
 
 ## Work done:
 
-Date: 19 Mar 2025
-Day: Wednesday
+Date: 20 Mar 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
-1. Create Searching Option with new Grid - Complete
-2. Display Rows based on Row configure state - In Progress
-3. Display columns based on Column configure state - In Progress
+1. Understand Structure of KMZ project
+2. Understand POS College Project
+
+Project: KMZ
+
+1. Implement Edit-Report Feature with Reports - Done
+
+- Display Reports list - Done
+- add new Reports - Done
+- Delete Reports - In Progress
 
 ## Today New Learned:
 
 ### UI
 
-- **Suspense** for lazy loading
+- **Suspense** component to handle **lazy loading**
+
+  - `fallback`: defines what should be displayed while waiting for the `<Login />` component to load.
+  - Why use Suspense?
+
+    - improves performance by **lazy loading**.
+    - Enhances **user experience** by displaying a loading indicator instead of a blank screen.
+
+  - **Lazy()**
+    - is built-in React function that enables lazy loading.
+    - `dynamically importing` the Login component using **React Lazy Loading**.
+    - use for low initial Bundle size (Faster page load)
   - Ex.
+
+    ```js
+    const Login = lazy(() => import("./pages/auth/login"));
+    ```
+
     ```html
     <Suspense fallback={ <Loading isLoading={isLoading}/> }>
         <Login />
     </Suspense>
     ```
-- **Lazy** for
 
 ### Frameworks or Library
 
-- **Toastify** for
+- **Toastify**
+
+  - **React library** for displaying toast notifications in React apps. It provides customizable and easy-to-use notifications.
+
 - **heroicons**
+
+  - Heroicons is a free set of beautiful, open-source icons by `Tailwind Labs`. You can use them as **SVGs** or with **React components**.
+
+- **iconify**
+
+  - provides thousands of icons from various icon sets like **Material Icons**, **FontAwesome**, **Heroicons**, and **more—all** in one package!
 
 ### Css
 
 - **flex-1**
 
+  - means `flex: 1 1 0%`:
+
+    - **flex-grow: 1** -> Element **expands** to take up available space.
+    - **flex-shrink: 1** -> Element **shrinks** if needed.
+    - **flex-basis: 0%** -> Element starts with **0 width** but grows as needed.
+
+  - If there are **2 for grow** then element expands twice as compare to 1.
+
 - **divide-y divide-slate-100 dark:divide-slate-800**
+  - they are horizontal divider
 
 ### Hooks
 
