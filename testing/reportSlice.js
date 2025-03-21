@@ -10,15 +10,14 @@ const initialState = {
   passwordUpdated: false,
   notification: [],
   reportData: [],
-  //   reportDetails: [],
+  reportDetails: [],
 };
 
 export const getReports = createAsyncThunk(
   "auth/getreports",
-  async (data, { dispatch }) => {
+  async (id, { dispatch }) => {
     try {
       const response = await Axios.get("/report/list");
-      console.log(`API Response: Report`, response.data);
 
       if (response.data.success) {
         return response.data.data || [];
@@ -36,7 +35,6 @@ export const getReports = createAsyncThunk(
         return [];
       }
     } catch (error) {
-      console.error("Error fetching Posts:", error);
       toast.error("Failed to fetch posts", {
         position: "top-right",
         autoClose: 1500,
@@ -87,7 +85,7 @@ export const handleAddReport = createAsyncThunk(
 export const handleDeleteReport = createAsyncThunk(
   "auth/delete-report",
   async (id, { dispatch }) => {
-    const response = await Axios.delete(`/post/delete/${id}`);
+    const response = await Axios.delete(`/report/delete/${id}`);
 
     if (response.data.success) {
       toast.success(response.data.message, {
@@ -112,6 +110,90 @@ export const handleDeleteReport = createAsyncThunk(
         theme: "light",
       });
       throw new Error(data.message);
+    }
+    return response;
+  }
+);
+
+export const getReportDetail = createAsyncThunk(
+  "auth/get-report-detail",
+  async (id, { rejectWithValue }) => {
+    try {
+      const response = await Axios.get(`/report/list/${id}`);
+      if (response.data.success) {
+        return response.data.data;
+      } else {
+        toast.error(response.data.message, {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        return rejectWithValue(response.data.message);
+      }
+    } catch (error) {
+      toast.error("Failed to fetch Report details", {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      return rejectWithValue("Failed to fetch Report details.");
+    }
+  }
+);
+
+export const UpdateReportDetail = createAsyncThunk(
+  "report/update-report",
+  async ({ id, data }, { dispatch }) => {
+    try {
+      const response = await Axios.put(`/report/update/${id}`, data);
+
+      if (response.data.success) {
+        toast.success(response.data.message, {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        return response;
+      } else {
+        toast.error(response.data.message, {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        throw new Error(response.data.message);
+      }
+    } catch (error) {
+      toast.error("Failed to update Report!", {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      throw error;
     }
   }
 );
@@ -158,6 +240,21 @@ const ReportSlice = createSlice({
         state.isLoading = false;
       })
       .addCase(handleDeleteReport.rejected, (state) => {
+        state.isLoading = false;
+      });
+    builder
+      .addCase(UpdateReportDetail.pending, (state, action) => {
+        state.isLoading = true;
+      })
+      .addCase(UpdateReportDetail.fulfilled, (state, action) => {
+        state.isLoading = false;
+        const updatedReport = action.payload.data;
+
+        state.reportData = state.reportData.map((rep) =>
+          rep._id === updatedReport._id ? updatedReport : rep
+        );
+      })
+      .addCase(UpdateReportDetail.rejected, (state) => {
         state.isLoading = false;
       });
   },

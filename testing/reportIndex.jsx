@@ -14,7 +14,10 @@ const Reports = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { reportData, isLoading } = useSelector((state) => state.report);
-  console.log(`Report Data: `, reportData);
+
+  useEffect(() => {
+    dispatch(getReports());
+  }, []);
 
   const COLUMNS = [
     {
@@ -50,35 +53,35 @@ const Reports = () => {
       Header: "action",
       accessor: "id",
       Cell: (row) => {
-        <div>
-          <div className="flex gap-4 divide-y divide-slate-100 dark:divide-slate-800">
-            <div
-              className="text-danger-600 bg-opacity-30 cursor-pointer hover:bg-opacity-100"
-              onClick={() => deletereport(row?.cell?.value)}
-            >
-              <span className="text-base">
-                <Icon icon={"heroicons-outline:trash"} />
-              </span>
-            </div>
-            <div
-              className={
-                " cursor-pointer dark:hover:bg-slate-600 dark:hover:bg-opacity-50"
-              }
-              onClick={() => navigate(`/edit-report/${row?.cell?.value}`)}
-            >
-              <span className="text-base">
-                <Icon icon={`heroicons:pencil-square`} />
-              </span>
+        return (
+          <div>
+            <div className="flex gap-4 divide-y divide-slate-100 dark:divide-slate-800">
+              <div
+                className={
+                  "text-danger-600 bg-opacity-30 cursor-pointer hover:bg-opacity-100"
+                }
+                onClick={() => deletereport(row?.cell?.value)}
+              >
+                <span className="text-base">
+                  <Icon icon={`heroicons-outline:trash`} />
+                </span>
+              </div>
+              <div
+                className={
+                  " cursor-pointer dark:hover:bg-slate-600 dark:hover:bg-opacity-50"
+                }
+                onClick={() => navigate(`/edit-report/${row?.cell?.value}`)}
+              >
+                <span className="text-base">
+                  <Icon icon={`heroicons:pencil-square`} />
+                </span>
+              </div>
             </div>
           </div>
-        </div>;
+        );
       },
     },
   ];
-
-  useEffect(() => {
-    dispatch(getReports());
-  }, []);
 
   const deletereport = async (id) => {
     Swal.fire({
@@ -102,10 +105,12 @@ const Reports = () => {
       }
     });
   };
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
-      <Loading isLoading={isLoading} />
       <div className="lg:col-span-8 col-span-12">
         <Card
           title="Reports"

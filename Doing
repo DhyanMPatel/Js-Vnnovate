@@ -19,11 +19,19 @@ Today, I am working on below list of task:
 
 1. Axios Interceptor
 
-- Intro of Interceptor.
-- Their 2 types, for request and for response.
-- method to remove Interceptor.
+   - Intro of Interceptor. - done
+   - Their 2 types, for request and for response. - done
+   - eject() for remove Interceptor. - done
+   - Implementation of Interceptor - In Progress
 
-2. Redux Middleware
+2. Middleware in Redux
+
+   - Intro of Middleware - done
+   - Types of Middleware like
+     - thunk - done
+     - saga - in Progress
+   - Difference between them. - in progress
+   - Implementation of Middleware - not Started
 
 ## Today New Learned:
 
