@@ -4,7 +4,7 @@
 - middleware can run logic like `HTTP requests`, `logging`, `authentication`.
 - There are many kind of middleware for Redux,
 
-  1. redux-thunk (for async login)
+  1. redux-thunk (for sync/async login inside action creators)
 
      - Thunk is programming turm that means "**a peace of code that does some delayed work**".
      - `configureStore` automatically setup thunk middleware by default.
@@ -13,7 +13,8 @@
 
   2. redux-saga ()
 
-     - Use **generator functions** for side effect.
+     - Use **generator functions** (`function*`) for side effect.
+     - Saga seperate side effects fron action creators.
 
   3. Custom Middleware
   4. Logger Middleware

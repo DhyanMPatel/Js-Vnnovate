@@ -59,7 +59,7 @@ for (let key in dictionary) console.log(key);
 console.log(dictionary);
 */
 
-
+/*
 //      2) - Difference between calls
 function Rabbit(name) {
   this.name = name;
@@ -74,7 +74,7 @@ rabbit.sayHi(); // Return - Rabbit
 Rabbit.prototype.sayHi(); // Return - undefined
 Object.getPrototypeOf(rabbit).sayHi(); // Return - undefined
 rabbit.__proto__.sayHi(); // Return - undefined
-
+*/
 
 /*
 /// Home work

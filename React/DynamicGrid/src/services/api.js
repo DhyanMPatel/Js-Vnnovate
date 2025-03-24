@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const Axios = axios.create({
-  baseURL: "https://jsonplaceholder.typicode.com/",
+  baseURL: "https://jsonplaceholder.typicode.com",
   headers: {
     "Content-Type": "application/json",
   },
@@ -24,3 +24,6 @@ Axios.interceptors.response.use(
     return Promise.reject(err);
   }
 );
+
+
+export default Axios;
