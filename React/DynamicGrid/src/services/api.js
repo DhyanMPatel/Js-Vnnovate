@@ -25,5 +25,4 @@ Axios.interceptors.response.use(
   }
 );
 
-
 export default Axios;

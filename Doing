@@ -2,39 +2,32 @@
 
 Today, I am working on below list of task:
 
-Date: 21 Mar 2025
-Day: Firday
+Date: 24 Mar 2025
+Day: Monday
 
-1. Learning Axios interceptor
-   - Overview, Implement in Dynemic Grid Task
-2. Learn Redux-saga
-   - Overview, Structure, API call
+1. Implement Saga in Dynamic Grid Task
 
 ## Work done:
 
-Date: 21 Mar 2025
-Day: Firday
+Date: 24 Mar 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
-1. Axios Interceptor
+1. Implement Saga in Dynamic Grid Task - In Progress
 
-   - Intro of Interceptor. - done
-   - Their 2 types, for request and for response. - done
-   - eject() for remove Interceptor. - done
-   - Implementation of Interceptor - In Progress
+Project - KMZ,
 
-2. Middleware in Redux
+1. Implement Filter option in Report tab. - Done
+2. format change of create_at and updated_at. - Done
 
-   - Intro of Middleware - done
-   - Types of Middleware like
-     - thunk - done
-     - saga - in Progress
-   - Difference between them. - in progress
-   - Implementation of Middleware - not Started
+## Today Do:
 
-## Today New Learned:
+- Search "between slice and action who is dipendent on which?".
 
-### rejectWithValue
+- `npm install @mui/material @mui/lab @mui/x-date-pickers dayjs @emotion/react @emotion/styled` for date Picker
 
-- during getReportDetail Router
+## Today I show new Things:
+
+- `Dayjs` - for easy date format
+- `@mui/x-date-pickers` - for mui date picker

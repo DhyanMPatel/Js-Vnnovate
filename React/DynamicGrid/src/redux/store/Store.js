@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import createSagaMiddleware from "redux-saga";
 import {
   RowReducer,
   ColsReducer,
@@ -9,8 +10,12 @@ import {
   progressReducer,
   colsPerPageReducer,
   ColPageReducer,
-  GridDataReducer
+  GridDataReducer,
+  sampleGridReducer,
 } from "../reducer";
+import watchFetchSamples from "../../components/sample Grid/store/sagas";
+
+const sagaMiddleware = createSagaMiddleware();
 
 const Store = configureStore({
   reducer: {
@@ -24,6 +29,11 @@ const Store = configureStore({
     colsPerPage: colsPerPageReducer,
     colPage: ColPageReducer,
     gridData: GridDataReducer,
+    sampleGrid: sampleGridReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(sagaMiddleware),
 });
+
+sagaMiddleware.run(watchFetchSamples);
 export default Store;

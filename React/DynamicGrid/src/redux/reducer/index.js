@@ -8,6 +8,7 @@ import progressReducer from "./ProgressSliceRC";
 import colsPerPageReducer from "./ColsPerPageSliceRC";
 import ColPageReducer from "./ColPageSliceRC";
 import GridDataReducer from "./GridDataSliceRC";
+import sampleGridReducer from "../../components/sample Grid/store/sampleGridSlice";
 
 export {
   progressReducer,
@@ -19,5 +20,6 @@ export {
   rowsPerPageReducer,
   colsPerPageReducer,
   ColPageReducer,
-  GridDataReducer
+  GridDataReducer,
+  sampleGridReducer,
 };

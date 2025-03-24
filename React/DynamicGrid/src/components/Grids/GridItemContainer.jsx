@@ -10,7 +10,7 @@ import {
   TablePagination,
   TextField,
 } from "@mui/material";
-import GridItem from "./GridItem";
+import GridItem from "../../common/GridItem";
 import { setShowGrid } from "../../redux/reducer/ShowGridSliceRC";
 import { setRowsPerPage } from "../../redux/reducer/RowsPerPageSliceRC";
 import { setRowPage } from "../../redux/reducer/RowPageSliceRC";
@@ -169,7 +169,7 @@ function GridItemContainer() {
             </TableContainer>
 
             <TablePagination
-              rowsPerPageOptions={[rowsPerPage, 5, 10, 25]}
+              rowsPerPageOptions={[rowsPerPage, 10, 25]}
               component="div"
               count={rows}
               rowsPerPage={rowsPerPage}

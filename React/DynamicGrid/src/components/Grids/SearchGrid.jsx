@@ -7,7 +7,7 @@ import {
   TablePagination,
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import GridItem from "./GridItem";
+import GridItem from "../../common/GridItem";
 import { setRowPage } from "../../redux/reducer/RowPageSliceRC";
 import { setRowsPerPage } from "../../redux/reducer/RowsPerPageSliceRC";
 
@@ -51,7 +51,7 @@ function SearchGrid({
         <Table>
           <TableBody>
             {Object.keys(matchedCells)
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .slice(rowPage * rowsPerPage, rowPage * rowsPerPage + rowsPerPage)
               .map((row) => (
                 <TableRow key={row}>
                   {matchedCells[row].map((cell) => (
@@ -70,7 +70,7 @@ function SearchGrid({
         component="div"
         count={rows}
         rowsPerPage={rowsPerPage}
-        page={page}
+        page={rowPage}
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
