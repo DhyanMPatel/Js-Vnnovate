@@ -6,18 +6,46 @@ import Card from "@/components/ui/Card";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import CompanyTable from "@/components/partials/Table/company-table";
-import { getReports, handleDeleteReport } from "./store/reportSlice";
+import {
+  getReports,
+  handleDeleteReport,
+  setFilteredReport,
+  setMonth,
+} from "./store/reportSlice";
 import Swal from "sweetalert2/dist/sweetalert2";
 import Loading from "../../components/Loading";
+import CSV from "../../components/ui/CSV";
 
 const Reports = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { reportData, isLoading } = useSelector((state) => state.report);
+  const { reportData, isLoading, month, filteredReport } = useSelector(
+    (state) => state.report
+  );
 
   useEffect(() => {
+    dispatch(setMonth(null));
     dispatch(getReports());
   }, []);
+
+  useEffect(() => {
+    if (month) {
+      const timeoutId = setTimeout(() => {
+        let filtered = [];
+        filtered = reportData.filter((report) => {
+          const reportDate = new Date(report.createdAt);
+          return (
+            !isNaN(reportDate) && reportDate.getMonth() + 1 === Number(month)
+          );
+        });
+
+        dispatch(setFilteredReport(filtered));
+      });
+      return () => clearTimeout(timeoutId);
+    } else {
+      dispatch(getReports());
+    }
+  }, [month]);
 
   const COLUMNS = [
     {
@@ -49,6 +77,28 @@ const Reports = () => {
         return <span>{row?.cell?.value}</span>;
       },
     },
+    {
+      Header: "Phone Number",
+      accessor: "phoneNumber",
+      Cell: (row) => {
+        return <span>{row?.cell?.value}</span>;
+      },
+    },
+    {
+      Header: "Address",
+      accessor: "address",
+      Cell: (row) => {
+        return <span>{row?.cell?.value}</span>;
+      },
+    },
+    {
+      Header: "Images",
+      accessor: "images",
+      Cell: (row) => {
+        return <span>{row?.cell?.value}</span>;
+      },
+    },
+
     {
       Header: "action",
       accessor: "id",
@@ -111,14 +161,22 @@ const Reports = () => {
 
   return (
     <>
+      <Loading isLoading={isLoading} />
       <div className="lg:col-span-8 col-span-12">
         <Card
           title="Reports"
+          datePicker
+          dateFilter={true}
           buttonTitle={"Add Report"}
           buttonLink={"/add-report"}
           noborder
+          // exportCSV={"Export CSV"}
         >
-          <CompanyTable columns={COLUMNS} data={reportData} />
+          <CompanyTable
+            columns={COLUMNS}
+            data={month ? filteredReport : reportData}
+          />
+          <CSV exportCSV={"Export CSV"} />
         </Card>
       </div>
     </>

@@ -16,11 +16,15 @@ Day: Tuesday
 
 Today, I am working on below list of task:
 
-1. Implement Saga in Dynamic Grid Task - In Progress
+1. Implement Saga in Dynamic Grid Task - Done
 
 Project - KMZ,
 
 1. Implement Export CSV feature in Report tab - Done
+2. New Fields like phone number, address, images
+   2.1. columns add in table - Done
+   2.2. add fields in Add reports page - In Progress
+   2.3. add fields in edit reports page - In Progress
 
 ## Today Learned
 
@@ -48,3 +52,28 @@ Project - KMZ,
 
     "git pull --rebase"
   ```
+
+## Need to Remember
+
+```js
+// const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
+
+// const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+
+
+/// Image validation in addReport.jsx
+images: yup
+      .mixed()
+      .test(
+        "fileFormat",
+        "jpeg, png, webp, jpg, svg files are allowed",
+        (value) => {
+          const supportedFormats = ["jpeg", "png", "webp", "jpg", "svg"];
+          if (value && value[0]) {
+            return supportedFormats.includes(value[0].name.split(".").pop());
+          }
+          return true;
+        }
+      )
+      .required("An Images are Requeired"),
+```
