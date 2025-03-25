@@ -3,7 +3,6 @@ export default function GridItem({ row, column, sample }) {
   // console.log(row, column);
   // console.log(`Grid Item: ${value}`)
 
-  console.log(`Sample: ${sample}`);
   return (
     <>
       {(row || column) && (

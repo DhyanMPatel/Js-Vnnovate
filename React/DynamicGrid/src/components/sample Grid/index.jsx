@@ -1,4 +1,5 @@
 import {
+  Button,
   Table,
   TableBody,
   TableCell,
@@ -12,17 +13,19 @@ import { setRowsPerPage } from "../../redux/reducer/RowsPerPageSliceRC";
 import GridItem from "../../common/GridItem";
 import { useEffect } from "react";
 import { fetchSamplesRequest } from "./store/sampleGridSlice";
+import BackArrow from "../../common/back_arrow";
+import { NavLink } from "react-router";
 
 const SampleGrid = () => {
   const dispatch = useDispatch();
 
   const { samples, loading, error } = useSelector((state) => state.sampleGrid);
 
-  const rows = useSelector((state) => state.rows.value);
+  // const rows = useSelector((state) => state.rows.value);
   const rowsPerPage = useSelector((state) => state.rowsPerPage.value);
   const rowPage = useSelector((state) => state.rowPage.value);
 
-  const columns = useSelector((state) => state.columns.value);
+  // const columns = useSelector((state) => state.columns.value);
   const colPage = useSelector((state) => state.colPage.value);
   const colsPerPage = useSelector((state) => state.colsPerPage.value);
 
@@ -49,15 +52,22 @@ const SampleGrid = () => {
 
   return (
     <>
+      <div>
+        <Button variant="outlined" disableElevation>
+          <NavLink to="/">
+            <BackArrow />
+          </NavLink>
+        </Button>
+      </div>
       <TableContainer>
         <Table>
           <TableBody>
-            {Array.from({ length: rows })
+            {Array.from({ length: rowsPerPage })
               .map((_, rowIndex) => rowIndex + 1)
               .slice(startRowIndex, endRowIndex)
               .map((rowIndex) => (
                 <TableRow key={rowIndex}>
-                  {Array.from({ length: columns })
+                  {Array.from({ length: colsPerPage })
                     .map((_, colIndex) => colIndex + 1)
                     .slice(startColIndex, endColIndex)
                     .map((colIndex) => (
@@ -65,8 +75,8 @@ const SampleGrid = () => {
                         <GridItem
                           // row={rowIndex}
                           // column={colIndex}
-                          // sample={samples[rowIndex % samples.length]}
-                          sample={sample}
+                          sample={samples[rowIndex % samples.length]}
+                          // sample={sample}
                           startColIndex={startColIndex}
                           endColIndex={endColIndex}
                         />
@@ -81,7 +91,7 @@ const SampleGrid = () => {
         // rowsPerPageOptions={[rowsPerPage !== 5 ? 5 : rowsPerPage, 10, 25]}
         rowsPerPageOptions={[rowsPerPage, 5, 10, 20]}
         component="div"
-        count={rows}
+        count={0}
         rowsPerPage={rowsPerPage}
         page={rowPage}
         onPageChange={handleChangePage}

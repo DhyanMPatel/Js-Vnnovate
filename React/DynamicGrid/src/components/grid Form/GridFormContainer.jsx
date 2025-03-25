@@ -8,7 +8,7 @@ function GridFormContainer() {
     const response = axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
-        console.log("Response: ", response);
+        // console.log("Response: ", response);
       })
       .catch((err) => {
         console.log(`Error: ${err}`);

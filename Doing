@@ -2,15 +2,17 @@
 
 Today, I am working on below list of task:
 
-Date: 24 Mar 2025
-Day: Monday
+Date: 25 Mar 2025
+Day: Tuesday
 
-1. Implement Saga in Dynamic Grid Task
+Project: KMZ
+
+1. Export csv feature in Report
 
 ## Work done:
 
-Date: 24 Mar 2025
-Day: Monday
+Date: 25 Mar 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
@@ -18,16 +20,31 @@ Today, I am working on below list of task:
 
 Project - KMZ,
 
-1. Implement Filter option in Report tab. - Done
-2. format change of create_at and updated_at. - Done
+1. Implement Export CSV feature in Report tab - Done
 
-## Today Do:
+## Today Learned
 
-- Search "between slice and action who is dipendent on which?".
+- `react-csv` - use to export csv file using **<CSVLink>**.
 
-- `npm install @mui/material @mui/lab @mui/x-date-pickers dayjs @emotion/react @emotion/styled` for date Picker
+## Today Case in GIT & GITHUB
 
-## Today I show new Things:
+- There is a file where i forgot to add in previous commit. So what i do...
 
-- `Dayjs` - for easy date format
-- `@mui/x-date-pickers` - for mui date picker
+  ```bash
+  Stap - 1 => Add forgot file
+
+    "git add file-you-forgot.ext"
+
+  Stap - 2 => Amend the last commit
+
+    "git commit --amend --no-edit"
+
+  Stap - 3 => Force push the updated commit to the remote branch:
+           => --force-with-lease is safer than --force, as it 'only pushes if no one else has updated the branch'.
+
+    "git push --force-with-lease"
+
+          => If others have already pulled your previous commit, inform them to sync their branch using:
+
+    "git pull --rebase"
+  ```
