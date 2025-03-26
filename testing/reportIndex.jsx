@@ -6,14 +6,18 @@ import Card from "@/components/ui/Card";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import CompanyTable from "@/components/partials/Table/company-table";
+import profileImage from "../../assets/images/avatar/dummyImage.jpg";
 import {
   getReports,
   handleDeleteReport,
   setFilteredReport,
   setMonth,
 } from "./store/reportSlice";
+import { getImages, getImagesbyReports } from "./store/imageSlice";
+
 import Swal from "sweetalert2/dist/sweetalert2";
 import Loading from "../../components/Loading";
+import { Label } from "recharts";
 import CSV from "../../components/ui/CSV";
 
 const Reports = () => {
@@ -22,11 +26,16 @@ const Reports = () => {
   const { reportData, isLoading, month, filteredReport } = useSelector(
     (state) => state.report
   );
+  const { reportImages } = useSelector((state) => state.reportImages);
 
   useEffect(() => {
     dispatch(setMonth(null));
     dispatch(getReports());
+    dispatch(getImages());
+    // dispatch(getImagesbyReports());
   }, []);
+
+  console.log(`reportImages: `, reportImages);
 
   useEffect(() => {
     if (month) {
@@ -93,11 +102,58 @@ const Reports = () => {
     },
     {
       Header: "Images",
-      accessor: "images",
+      accessor: "reportImages",
       Cell: (row) => {
-        return <span>{row?.cell?.value}</span>;
+        // console.log(`Image Row: `, row);
+
+        // console.log(`Image list: `, reportImages);
+        const imageUrl = row.cell.value
+          ? `http://localhost:3000/uploads/${row.cell.value}`
+          : `http://localhost:3000/uploads/dummyImage.jpg`;
+
+        return (
+          <span className="flex items-center">
+            <span className="w-10 h-10 rounded-full ltr:mr-3 rtl:ml-3 flex-none">
+              <button onClick={() => navigate("/imageGrid")}>
+                <img
+                  src={imageUrl}
+                  alt=""
+                  className="object-cover w-full h-full rounded-full"
+                />
+              </button>
+            </span>
+          </span>
+        );
       },
     },
+    // {
+    //   Header: "Images",
+    //   accessor: "reportId", // ✅ Use a unique name
+    //   Cell: ({ row }) => {
+    //     const reportImages = useSelector(
+    //       (state) => state.reportImages.reportImages
+    //     ); // ✅ Get images from Redux
+    //     const images = reportImages[row.original.id] || []; // ✅ Find images using row.original.id
+
+    //     console.log(`images: `, images);
+    //     return (
+    //       <div className="flex space-x-2">
+    //         {images.length > 0 ? (
+    //           images.map((img, index) => (
+    //             <img
+    //               key={index}
+    //               src={`http://localhost:3000/uploads/${img.fileName}`} // ✅ Adjust if needed
+    //               alt="Report Image"
+    //               className="w-10 h-10 rounded-full object-cover"
+    //             />
+    //           ))
+    //         ) : (
+    //           <span>No Images</span>
+    //         )}
+    //       </div>
+    //     );
+    //   },
+    // },
 
     {
       Header: "action",

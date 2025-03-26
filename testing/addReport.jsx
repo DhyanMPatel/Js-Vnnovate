@@ -10,10 +10,6 @@ import { useForm } from "react-hook-form";
 import { handleAddReport } from "./store/reportSlice";
 import Loading from "../../components/Loading";
 
-// const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
-
-// const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
-
 const schema = yup
   .object({
     name: yup
@@ -22,23 +18,24 @@ const schema = yup
       .max(30, "Maximum 30 characters are accepted"),
     phoneNumber: yup
       .string()
-      // .matches(phoneRegExp, "Phone number is not valid")
-      .required("A Phone Number is Required"),
-    address: yup.string().required("An Address is Required"),
+      .required("Phone number is required")
+      .matches(/^[0-9]{10}$/, "Phone number must be exactly 10 digits"),
+    address: yup
+      .string()
+      .required("Address is required")
+      .max(100, "Maximum 100 characters are accepted"),
     images: yup
       .mixed()
-      .test(
-        "fileFormat",
-        "jpeg, png, webp, jpg, svg files are allowed",
-        (value) => {
-          const supportedFormats = ["jpeg", "png", "webp", "jpg", "svg"];
-          if (value && value[0]) {
-            return supportedFormats.includes(value[0].name.split(".").pop());
-          }
-          return true;
-        }
-      )
-      .required("An Images are Requeired"),
+      .test("fileSize", "File size should be less than 2MB", (files) => {
+        if (!files || files.length === 0) return true;
+        return Array.from(files).every((file) => file.size <= 2 * 1024 * 1024);
+      })
+      .test("fileType", "Only image files are allowed", (files) => {
+        if (!files || files.length === 0) return true;
+        return Array.from(files).every((file) =>
+          ["image/jpeg", "image/png", "image/jpg"].includes(file.type)
+        );
+      }),
   })
   .required();
 
@@ -56,15 +53,18 @@ const AddReport = () => {
     mode: "all",
   });
   const onSubmit = async (data) => {
-    // console.log(`On Form Submit: ${data}`);
+    console.log("Form Data:", data);
 
-    // let storeData = new FormData();
-    // storeData.append("name", data.name);
-    // storeData.append("phoneNumber", data.phoneNumber);
-    // storeData.append("address", data.address);
-    // storeData.append("images", data.images);
-
-    // console.log(`Images: ${data.images}`);
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("phoneNumber", data.phoneNumber);
+    formData.append("address", data.address);
+    if (data.images && data.images.length > 0) {
+      Array.from(data.images).forEach((file) => {
+        console.log(`Image : `, file.name);
+        formData.append("images", file.name);
+      });
+    }
 
     let response = await dispatch(handleAddReport(data)).unwrap();
 
@@ -79,7 +79,7 @@ const AddReport = () => {
       <div className="space-y-5 profile-page">
         <div className="grid grid-cols-12 gap-6">
           <div className="lg:col-span-6 col-span-12">
-            <Card title="Add Category">
+            <Card title="Add Report">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <Textinput
                   name="name"
@@ -87,17 +87,15 @@ const AddReport = () => {
                   type="text"
                   placeholder="Enter Report Name"
                   register={register}
-                  // register={{ ...register(`name`, { required: true }) }}
                   error={errors.name}
                   className="h-[48px]"
                 />
                 <Textinput
                   name="phoneNumber"
                   label="Phone Number"
-                  type="text"
+                  text="text"
                   placeholder="Enter Phone Number"
                   register={register}
-                  // register={{ ...register("phoneNumber") }}
                   error={errors.phoneNumber}
                   className="h-[48px]"
                 />
@@ -105,9 +103,8 @@ const AddReport = () => {
                   name="address"
                   label="Address"
                   type="text"
-                  placeholder="Enter your Address"
+                  placeholder="Enter Address"
                   register={register}
-                  // register={{ ...register("phoneNumber") }}
                   error={errors.address}
                   className="h-[48px]"
                 />
@@ -115,14 +112,29 @@ const AddReport = () => {
                   name="images"
                   label="Images"
                   type="file"
+                  placeholder="Enter Images here"
                   register={register}
                   error={errors.images}
                   className="h-[48px]"
                 />
-                <button
-                  type="submit"
-                  className="btn btn-primary block w-full text-center"
-                >
+                {/* <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Upload Images
+                  </label>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    {...register("images")}
+                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm"
+                  />
+                  {errors.images && (
+                    <p className="text-red-500 text-sm">
+                      {errors.images.message}
+                    </p>
+                  )}
+                </div> */}
+                <button className="btn btn-primary block w-full text-center">
                   Add Report
                 </button>
               </form>

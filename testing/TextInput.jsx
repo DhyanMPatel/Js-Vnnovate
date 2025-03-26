@@ -14,8 +14,8 @@ const Textinput = ({
   register,
   name,
   phoneNumber,
-  address,
   images,
+  address,
   readonly,
   value,
   error,
@@ -39,6 +39,8 @@ const Textinput = ({
   const handleOpen = () => {
     setOpen(!open);
   };
+
+  console.log(`name: ${name}`);
 
   return (
     <div
@@ -73,63 +75,15 @@ const Textinput = ({
             disabled={disabled}
             id={id}
             onChange={(e) => {
+              // console.log(`Event: `, e.target);
+              if (name == "images") {
+                const files = e.target.files;
+                console.log(`Selected files:`, files);
+              }
+              // if (phoneNumber) {
+              //   console.log(`phoneNumber on change: ${e.target.value}`);
+              // }
               register(name).onChange(e);
-              if (onChange) onChange(e);
-            }}
-          />
-        ) : phoneNumber ? (
-          <input
-            type={type === "password" && open === true ? "text" : type}
-            {...register(phoneNumber)}
-            {...rest}
-            className={`${
-              error ? " has-error" : " "
-            } form-control py-2 pr-9 ${className}  `}
-            placeholder={placeholder}
-            readOnly={readonly}
-            defaultValue={defaultValue}
-            disabled={disabled}
-            id={id}
-            onChange={(e) => {
-              register(phoneNumber).onChange(e);
-              if (onChange) onChange(e);
-            }}
-          />
-        ) : address ? (
-          <input
-            type={type === "password" && open === true ? "text" : type}
-            {...register(address)}
-            {...rest}
-            className={`${
-              error ? "has-error" : " "
-            } form-control py-2 pr-9 ${className}`}
-            placeholder={placeholder}
-            readOnly={readonly}
-            defaultValue={defaultValue}
-            disabled={disabled}
-            id={id}
-            onChange={(e) => {
-              register(address).onChange(e);
-              if (onChange) onChange(e);
-            }}
-          />
-        ) : images ? (
-          <input
-            type={type === "password" && open === true ? "text" : type}
-            {...register(images)}
-            {...rest}
-            className={`${
-              error ? "has-error" : " "
-            } form-control py-2 pr-9 ${className}`}
-            placeholder={placeholder}
-            readOnly={readonly}
-            defaultValue={defaultValue}
-            disabled={disabled}
-            id={id}
-            onChange={(e) => {
-              const file = e.target.files[0];
-              console.log(`changed file: ${file}`);
-              register(file).onChange(e);
               if (onChange) onChange(e);
             }}
           />

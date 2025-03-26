@@ -97,10 +97,11 @@
   2. `Composite Key`: IF there are Multiple columns combination create uniqueness is called `Composite Key`.
 
   3. `Super Key`: A Super Key is a combination of all possible attribute which can uniquely identify two tuples in a table.
+
      - There should be `CK` atleast included in `SK`.
      - `Super Key` is an attribute (or set of attributes) that is used to `uniquely identify all attributes` in a relation. All super keys can’t be candidate keys but the reverse is true.
 
-      [Keys Diagram that helps to understand](https://media.geeksforgeeks.org/wp-content/uploads/20230314093236/keys-in-dbms.jpg)
+     [Keys Diagram that helps to understand](https://media.geeksforgeeks.org/wp-content/uploads/20230314093236/keys-in-dbms.jpg)
 
 ## Contrains
 

@@ -69,10 +69,11 @@ const Textinput = ({
             disabled={disabled}
             id={id}
             onChange={(e) => {
-                if (images) {
-                    const files = e.target.files;
-                    console.log(`Selected files:`, files);
-                  }
+              console.log(`Event: `, e);
+              // if (images) {
+              //     const files = e.target.files;
+              //     console.log(`Selected files:`, files);
+              //   }
               register(name || phoneNumber || address || images).onChange(e);
               if (onChange) onChange(e);
             }}

@@ -2,21 +2,25 @@
 
 Today, I am working on below list of task:
 
-Date: 25 Mar 2025
-Day: Tuesday
+Date: 26 Mar 2025
+Day: wednesday
 
 Project: KMZ
 
-1. Export csv feature in Report
+1. solve problem at Add report and edit report
+2. display Images in Report
 
 ## Work done:
 
-Date: 25 Mar 2025
-Day: Tuesday
+Date: 26 Mar 2025
+Day: wednesday
 
 Today, I am working on below list of task:
 
-1. Implement Saga in Dynamic Grid Task - Done
+1. Create report_images table in MySQL
+2. Configure Image in Table - In Progress
+3. Pass Image from add Report form - In Progress
+4. Export CSV with Backend - not Started
 
 Project - KMZ,
 
@@ -26,54 +30,16 @@ Project - KMZ,
    2.2. add fields in Add reports page - In Progress
    2.3. add fields in edit reports page - In Progress
 
-## Today Learned
+## issue faced
 
-- `react-csv` - use to export csv file using **<CSVLink>**.
+1: Formating createAt and updatedAt
+Problem: Difficult to format date in required type in less code
+solution: Using dayjs package it become quite simple
 
-## Today Case in GIT & GITHUB
+2: Grid set Dynamically
+Problem: display fixed rows and collumns in grid is quit difficult to solve
+Solution: solved using another state (rowsPerPage, colsPerPage).
 
-- There is a file where i forgot to add in previous commit. So what i do...
-
-  ```bash
-  Stap - 1 => Add forgot file
-
-    "git add file-you-forgot.ext"
-
-  Stap - 2 => Amend the last commit
-
-    "git commit --amend --no-edit"
-
-  Stap - 3 => Force push the updated commit to the remote branch:
-           => --force-with-lease is safer than --force, as it 'only pushes if no one else has updated the branch'.
-
-    "git push --force-with-lease"
-
-          => If others have already pulled your previous commit, inform them to sync their branch using:
-
-    "git pull --rebase"
-  ```
-
-## Need to Remember
-
-```js
-// const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
-
-// const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
-
-
-/// Image validation in addReport.jsx
-images: yup
-      .mixed()
-      .test(
-        "fileFormat",
-        "jpeg, png, webp, jpg, svg files are allowed",
-        (value) => {
-          const supportedFormats = ["jpeg", "png", "webp", "jpg", "svg"];
-          if (value && value[0]) {
-            return supportedFormats.includes(value[0].name.split(".").pop());
-          }
-          return true;
-        }
-      )
-      .required("An Images are Requeired"),
-```
+3. change data of perticular row in Grid task
+   Problem: when click on right button in any row it change all rows data not only perticular row
+   Solution: not solved

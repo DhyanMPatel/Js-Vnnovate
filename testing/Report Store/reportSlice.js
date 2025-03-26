@@ -1,16 +1,20 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 import Axios from "../../../services/api";
+import dayjs from "dayjs";
+import { getImagesbyReports } from "./imageSlice";
 
 const initialState = {
   isAuthenticated: false,
   user: null,
-  profile: null,
+  // profile: null,
   isLoading: false,
-  passwordUpdated: false,
+  // passwordUpdated: false,
   notification: [],
   reportData: [],
   reportDetails: [],
+  month: null,
+  filteredReport: [],
 };
 
 export const getReports = createAsyncThunk(
@@ -18,8 +22,22 @@ export const getReports = createAsyncThunk(
   async (id, { dispatch }) => {
     try {
       const response = await Axios.get("/report/list");
+      // console.log(`Report response: `, response);
 
       if (response.data.success) {
+        //   response.data.data.map((report) => {
+        //     report.createdAt = dayjs(report.createdAt).format("YYYY-MMM-DD");
+        //     report.updatedAt = dayjs(report.updatedAt).format("YYYY-MMM-DD");
+        //   });
+
+        await Promise.all(
+          response.data.data.map(async (report) => {
+            await dispatch(getImagesbyReports(report.id));
+            report.createdAt = dayjs(report.createdAt).format("YYYY-MMM-DD");
+            report.updatedAt = dayjs(report.updatedAt).format("YYYY-MMM-DD");
+          })
+        );
+
         return response.data.data || [];
       } else {
         toast.error(response.data.message, {
@@ -35,7 +53,7 @@ export const getReports = createAsyncThunk(
         return [];
       }
     } catch (error) {
-      toast.error("Failed to fetch posts", {
+      toast.error("Failed to fetch Reports", {
         position: "top-right",
         autoClose: 1500,
         hideProgressBar: false,
@@ -50,9 +68,22 @@ export const getReports = createAsyncThunk(
   }
 );
 
+const getImages = createAsyncThunk(
+  "auth/images/getByCategory",
+  async (categoryId, { rejectWithValue }) => {
+    try {
+      const response = await Axios.get(`/images/${categoryId}`);
+      console.log(`Image Response: `, response);
+    } catch (error) {
+      return rejectWithValue("Failed to fetch Images.");
+    }
+  }
+);
+
 export const handleAddReport = createAsyncThunk(
   "auth/addReport",
   async (data, { dispatch }) => {
+    // console.log(`Final Image Data: `, data);
     const response = await Axios.post("/report/add", data);
     if (response.data.success) {
       toast.success(response.data.message, {
@@ -209,6 +240,12 @@ const ReportSlice = createSlice({
     gotoLogin: (state) => {
       state.passwordUpdated = false;
     },
+    setMonth: (state, action) => {
+      state.month = action.payload;
+    },
+    setFilteredReport: (state, action) => {
+      state.filteredReport = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -260,5 +297,6 @@ const ReportSlice = createSlice({
   },
 });
 
-export const { logoutSuccess, gotoLogin } = ReportSlice.actions;
+export const { logoutSuccess, gotoLogin, setMonth, setFilteredReport } =
+  ReportSlice.actions;
 export default ReportSlice.reducer;
