@@ -14,6 +14,8 @@ const initialState = {
   reportData: [],
   reportDetails: [],
   month: null,
+  images: [],
+  reportWithImages: [],
   filteredReport: [],
 };
 
@@ -22,23 +24,33 @@ export const getReports = createAsyncThunk(
   async (id, { dispatch }) => {
     try {
       const response = await Axios.get("/report/list");
+      const imagesResponse = await Axios.get("/images");
       // console.log(`Report response: `, response);
 
-      if (response.data.success) {
-        //   response.data.data.map((report) => {
+      if (response.data.success && imagesResponse.data.success) {
+        response.data.data.map((report) => {
+          report.createdAt = dayjs(report.createdAt).format("YYYY-MMM-DD");
+          report.updatedAt = dayjs(report.updatedAt).format("YYYY-MMM-DD");
+        });
+
+        // await Promise.all(
+        //   response.data.data.map(async (report) => {
+        //     await dispatch(getImagesbyReports(report.id));
         //     report.createdAt = dayjs(report.createdAt).format("YYYY-MMM-DD");
         //     report.updatedAt = dayjs(report.updatedAt).format("YYYY-MMM-DD");
-        //   });
+        //   })
+        // );
 
-        await Promise.all(
-          response.data.data.map(async (report) => {
-            await dispatch(getImagesbyReports(report.id));
-            report.createdAt = dayjs(report.createdAt).format("YYYY-MMM-DD");
-            report.updatedAt = dayjs(report.updatedAt).format("YYYY-MMM-DD");
-          })
-        );
+        dispatch(setReportData(response.data.data));
+        dispatch(setImagesData(imagesResponse.data.data));
 
-        return response.data.data || [];
+        const reportWithImages = response.data.data.map((report) => ({
+          ...report,
+          images: imagesResponse.data.data.filter((img) => img.reportCategoryId === report.id ? img.url : []),
+
+        }))
+
+        return reportWithImages || [];
       } else {
         toast.error(response.data.message, {
           position: "top-right",
@@ -68,17 +80,17 @@ export const getReports = createAsyncThunk(
   }
 );
 
-const getImages = createAsyncThunk(
-  "auth/images/getByCategory",
-  async (categoryId, { rejectWithValue }) => {
-    try {
-      const response = await Axios.get(`/images/${categoryId}`);
-      console.log(`Image Response: `, response);
-    } catch (error) {
-      return rejectWithValue("Failed to fetch Images.");
-    }
-  }
-);
+// const getImages = createAsyncThunk(
+//   "auth/images/getByCategory",
+//   async (categoryId, { rejectWithValue }) => {
+//     try {
+//       const response = await Axios.get(`/images/${categoryId}`);
+//       console.log(`Image Response: `, response);
+//     } catch (error) {
+//       return rejectWithValue("Failed to fetch Images.");
+//     }
+//   }
+// );
 
 export const handleAddReport = createAsyncThunk(
   "auth/addReport",
@@ -246,6 +258,12 @@ const ReportSlice = createSlice({
     setFilteredReport: (state, action) => {
       state.filteredReport = action.payload;
     },
+    setReportData: (state, action) => {
+      state.reportData = action.payload;
+    },
+    setImagesData: (state, action) => {
+      state.images = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -254,7 +272,7 @@ const ReportSlice = createSlice({
       })
       .addCase(getReports.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.reportData = action.payload;
+        state.reportWithImages = action.payload;
       })
       .addCase(getReports.rejected, (state) => {
         state.isLoading = false;
@@ -287,7 +305,7 @@ const ReportSlice = createSlice({
         state.isLoading = false;
         const updatedReport = action.payload.data;
 
-        state.reportData = state.reportData.map((rep) =>
+        state.reportWithImages = state.reportWithImages.map((rep) =>
           rep._id === updatedReport._id ? updatedReport : rep
         );
       })

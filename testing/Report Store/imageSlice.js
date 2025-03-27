@@ -7,7 +7,7 @@ const initialState = {
   user: null,
   isLoading: false,
   reportImages: [],
-  reportId: [],
+  // reportId: [],
 };
 
 export const getImages = createAsyncThunk(

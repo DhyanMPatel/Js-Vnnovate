@@ -23,7 +23,7 @@ import CSV from "../../components/ui/CSV";
 const Reports = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { reportData, isLoading, month, filteredReport } = useSelector(
+  const { reportData, isLoading, month, filteredReport, reportWithImages } = useSelector(
     (state) => state.report
   );
   const { reportImages } = useSelector((state) => state.reportImages);
@@ -31,7 +31,7 @@ const Reports = () => {
   useEffect(() => {
     dispatch(setMonth(null));
     dispatch(getReports());
-    dispatch(getImages());
+    // dispatch(getImages());
     // dispatch(getImagesbyReports());
   }, []);
 
@@ -41,7 +41,7 @@ const Reports = () => {
     if (month) {
       const timeoutId = setTimeout(() => {
         let filtered = [];
-        filtered = reportData.filter((report) => {
+        filtered = reportWithImages.filter((report) => {
           const reportDate = new Date(report.createdAt);
           return (
             !isNaN(reportDate) && reportDate.getMonth() + 1 === Number(month)
@@ -102,7 +102,7 @@ const Reports = () => {
     },
     {
       Header: "Images",
-      accessor: "reportImages",
+      accessor: "images",
       Cell: (row) => {
         // console.log(`Image Row: `, row);
 
@@ -230,7 +230,7 @@ const Reports = () => {
         >
           <CompanyTable
             columns={COLUMNS}
-            data={month ? filteredReport : reportData}
+            data={month ? filteredReport : reportWithImages }
           />
           <CSV exportCSV={"Export CSV"} />
         </Card>
