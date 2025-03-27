@@ -8,6 +8,7 @@ import Card from "@/components/ui/Card";
 import Textinput from "@/components/ui/Textinput";
 import { getReportDetail, UpdateReportDetail } from "./store/reportSlice";
 import { useEffect } from "react";
+import Icon from "@/components/ui/Icon";
 
 const schema = yup
   .object({
@@ -23,6 +24,7 @@ const EditReport = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const { reportDetail, isLoading } = useSelector((state) => state.report);
+  // console.log(`reportDetail: `, reportDetail);
 
   const {
     register,
@@ -30,6 +32,23 @@ const EditReport = () => {
     handleSubmit,
     setValue,
   } = useForm({ resolver: yupResolver(schema), mode: "all" });
+
+  useEffect(() => {
+    if (!reportDetail || reportDetail.id !== Number(id)) {
+      // console.log(`getting report Detail...`);
+      dispatch(getReportDetail(id));
+    }
+  }, [dispatch, id, reportDetail]);
+
+  // console.log(`Id: `, id);
+
+  useEffect(() => {
+    if (id == reportDetail?.id) {
+      setValue("name", reportDetail?.name);
+      setValue("phoneNumber", reportDetail?.phoneNumber);
+      setValue("address", reportDetail?.address);
+    }
+  }, [reportDetail, id, setValue]);
 
   const onSubmit = async (data) => {
     let newData = { id: id, data };
@@ -42,18 +61,6 @@ const EditReport = () => {
     }
   };
 
-  useEffect(() => {
-    if (id) {
-      dispatch(getReportDetail(id));
-    }
-  }, [id]);
-
-  useEffect(() => {
-    if (id == reportDetail?.id) {
-      setValue("name", reportDetail?.name);
-    }
-  }, [reportDetail, id, setValue]);
-
   return (
     <>
       <Loading isLoading={isLoading} />
@@ -64,13 +71,51 @@ const EditReport = () => {
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <Textinput
                   name="name"
-                  lebel="Report Name"
+                  label="Report Name"
                   type="text"
                   placeholder="Enter Report Name"
                   register={register}
                   error={errors.name}
                   className="h-[48px]"
                 />
+                <Textinput
+                  name="phoneNumber"
+                  label="Phone Number"
+                  text="text"
+                  placeholder="Enter Phone Number"
+                  register={register}
+                  error={errors.phoneNumber}
+                  className="h-[48px]"
+                />
+                <Textinput
+                  name="address"
+                  label="Address"
+                  type="text"
+                  placeholder="Enter Address"
+                  register={register}
+                  error={errors.address}
+                  className="h-[48px]"
+                />
+                <div className="border-2 p-2 flex items-center space-x-2 relative">
+                  <label
+                    htmlFor="fileInput"
+                    className="cursor-pointer absolute right-0"
+                  >
+                    {/* <Icon
+                      icon="heroicons-outline:plus"
+                      className="text-2xl text-blue-500 hover:text-blue-700"
+                    /> */}
+                  </label>
+
+                  <input
+                    id="fileInput"
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    {...register("images")}
+                    // className="hidden"
+                  />
+                </div>
                 <button className="btn btn-primary block w-full text-center">
                   Update Report
                 </button>
