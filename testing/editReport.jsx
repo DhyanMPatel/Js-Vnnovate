@@ -9,6 +9,7 @@ import Textinput from "@/components/ui/Textinput";
 import { getReportDetail, UpdateReportDetail } from "./store/reportSlice";
 import { useEffect } from "react";
 import Icon from "@/components/ui/Icon";
+import { setExistingImages } from "./reportSlice";
 
 const schema = yup
   .object({
@@ -23,7 +24,7 @@ const EditReport = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { id } = useParams();
-  const { reportDetail, isLoading } = useSelector((state) => state.report);
+  const { reportDetail, isLoading, existingImages } = useSelector((state) => state.report);
   // console.log(`reportDetail: `, reportDetail);
 
   const {
@@ -47,6 +48,10 @@ const EditReport = () => {
       setValue("name", reportDetail?.name);
       setValue("phoneNumber", reportDetail?.phoneNumber);
       setValue("address", reportDetail?.address);
+
+      if (reportDetail?.images && Array.from(reportDetail?.images)) {
+        dispatch(setExistingImages(reportDetail?.images));
+      }
     }
   }, [reportDetail, id, setValue]);
 
@@ -96,6 +101,22 @@ const EditReport = () => {
                   error={errors.address}
                   className="h-[48px]"
                 />
+
+                <div className="mt-4">
+                  <h4 className="text-sm font-semibold">Existing Images</h4>
+                  <div className="grid grid-cols-3 gap-2 mt-2">
+                    {existingImages.length > 0 ? (
+                      existingImages.map((images, index) => (
+                        <div key={index} className="relative w-24 h-24 border rounded-md">
+                          <img src="" alt="" className="w-full h-full object-cover rounded-md"/>
+                        </div>
+                      ))
+                    ) : (
+                       <p className="text-sm text-gray-500">No existing images</p>
+                    )}
+                  </div>
+                </div>
+
                 <div className="border-2 p-2 flex items-center space-x-2 relative">
                   <label
                     htmlFor="fileInput"

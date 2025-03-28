@@ -16,6 +16,7 @@ const initialState = {
   month: null,
   filteredReport: [],
   reportWithImage: [],
+  existingImages: [],
 };
 
 export const getReports = createAsyncThunk(
@@ -238,6 +239,9 @@ const ReportSlice = createSlice({
     setReportWithImage: (state, action) => {
       state.reportWithImage = action.payload;
     },
+    setExistingImages: (state, action) => {
+      state.existingImages = action.payload;
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -306,5 +310,6 @@ export const {
   setMonth,
   setFilteredReport,
   setReportWithImage,
+  setExistingImages,
 } = ReportSlice.actions;
 export default ReportSlice.reducer;

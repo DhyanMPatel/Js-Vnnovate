@@ -17,18 +17,15 @@ Day: Thursday
 
 Today, I am working on below list of task:
 
+Project - KMZ,
+
 1. Display Images in Report Table - Done
 2. Add new Report with Images - Done
 3. Download Report list in CSV format with API - Done
 4. edit Report with Images - In Progress
 
-Project - KMZ,
+What i do - kal images Report Table me display karvai thi. Add report wale section bhi khatam ho gaya. At last CSV Download me temporary link generate karke csv file download karke dekh liya tha.
 
-1. Implement Export CSV feature in Report tab - Done
-2. New Fields like phone number, address, images
-   2.1. columns add in table - Done
-   2.2. add fields in Add reports page - In Progress
-   2.3. add fields in edit reports page - In Progress
 
 ## issue faced
 
