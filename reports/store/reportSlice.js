@@ -16,7 +16,6 @@ const initialState = {
   month: null,
   filteredReport: [],
   reportWithImage: [],
-  existingImages: [],
 };
 
 export const getReports = createAsyncThunk(
@@ -136,15 +135,27 @@ export const handleDeleteReport = createAsyncThunk(
   }
 );
 
+/// Get Report Detail and Images based on Report
 export const getReportDetail = createAsyncThunk(
   "auth/get-report-detail",
   async (id, { rejectWithValue }) => {
     try {
-      const response = await Axios.get(`/report/list/${id}`);
-      if (response.data.success) {
-        return response.data.data;
+      const reportResponse = await Axios.get(`/report/list/${id}`);
+      const imageResponse = await Axios.get(`/images/${id}`);
+      if (reportResponse.data.success && imageResponse.data.success) {
+        // console.log(`Report Details: `, reportResponse);
+        // console.log(`Image Response: `, imageResponse);
+
+        const reportDetailWithImages = {
+          ...reportResponse.data.data,
+          images: imageResponse.data.data || [],
+        };
+
+        // console.log(`report Detail With Images: `, reportDetailWithImages);
+
+        return reportDetailWithImages;
       } else {
-        toast.error(response.data.message, {
+        toast.error(reportResponse.data.message, {
           position: "top-right",
           autoClose: 1500,
           hideProgressBar: false,
@@ -154,7 +165,7 @@ export const getReportDetail = createAsyncThunk(
           progress: undefined,
           theme: "light",
         });
-        return rejectWithValue(response.data.message);
+        return rejectWithValue(reportResponse.data.message);
       }
     } catch (error) {
       toast.error("Failed to fetch Report details", {
@@ -239,9 +250,6 @@ const ReportSlice = createSlice({
     setReportWithImage: (state, action) => {
       state.reportWithImage = action.payload;
     },
-    setExistingImages: (state, action) => {
-      state.existingImages = action.payload;
-    }
   },
   extraReducers: (builder) => {
     builder
@@ -310,6 +318,5 @@ export const {
   setMonth,
   setFilteredReport,
   setReportWithImage,
-  setExistingImages,
 } = ReportSlice.actions;
 export default ReportSlice.reducer;

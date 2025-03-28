@@ -2,65 +2,24 @@
 
 Today, I am working on below list of task:
 
-Date: 27 Mar 2025
-Day: Thursday
+Date: 28 Mar 2025
+Day: Friday
 
 Project: KMZ
 
-1. Solve Issue with image in Report Table
-2. Add Image Field in Add report page
+1. Implement Drag and Drop in Add report Page
+2. Continue Work on edit Report Page
 
 ## Work done:
 
-Date: 27 Mar 2025
-Day: Thursday
+Date: 28 Mar 2025
+Day: Friday
 
 Today, I am working on below list of task:
 
 Project - KMZ,
 
-1. Display Images in Report Table - Done
-2. Add new Report with Images - Done
-3. Download Report list in CSV format with API - Done
-4. edit Report with Images - In Progress
+1. Implement drag and drop images in Add report page - Done
+2. Implement drag and drop images in edit report page - Done
 
-What i do - kal images Report Table me display karvai thi. Add report wale section bhi khatam ho gaya. At last CSV Download me temporary link generate karke csv file download karke dekh liya tha.
-
-
-## issue faced
-
-1: Formating createAt and updatedAt
-Problem: Difficult to format date in required type in less code
-solution: Using dayjs package it become quite simple
-
-2: Grid set Dynamically
-Problem: display fixed rows and collumns in grid is quit difficult to solve
-Solution: solved using another state (rowsPerPage, colsPerPage).
-
-3. change data of perticular row in Grid task
-   Problem: when click on right button in any row it change all rows data not only perticular row
-   Solution: not solved
-
-4. Images get in report
-   problem: Images come from different id and other data come from different id
-   Solution: need to merge data come from report api and images api and set based on reports with their order
-
-5. get CSV data from backend
-   Problem: first time handle csv data in life
-   solution: getting `response.data` which is blob data. then needs to creat object URL of **blob data**. At last create link that has attribute `download` that is use to download any file in `href` attribute.
-
-   ```js
-   // Convert response to Blob (Binary Large Object)
-   const blob = await response.data;
-   const url = window.URL.createObjectURL(blob);
-
-   console.log(`url: `, url); // output look like:  blob:http://localhost:5173/1543a798-8b0e-4b4a-87bd-d027b33348a5
-
-   // // Create a temporary download link
-   const link = document.createElement("a"); // create a tag.
-   link.href = url;
-   link.setAttribute("download", "report_data.csv"); // Filename from API
-   document.body.appendChild(link);
-   link.click();
-   document.body.removeChild(link);
-   ```
+What i do - kal images, Report Table me display karvai thi. Add report wale section bhi khatam ho gaya. At last CSV Download me temporary link generate karke csv file download karke dekh liya tha.
