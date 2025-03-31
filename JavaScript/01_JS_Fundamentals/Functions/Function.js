@@ -21,6 +21,7 @@ function func2() {
 
 /// Parameter - can pass data to functions using parameter
 //      - function create a local copy which is parameter
+//      - Default Parameter comes in ES6
 
 function fun(par1 ,par2, par3 = "Default Value"){ // Parameter
     console.log(`${par1}, ${par2} ${par3}`)
@@ -88,7 +89,7 @@ function min(a,b){
 function myPow(x,n){
     return (x ** n)
 }
-console.log(myPow(3,3.5));
+// console.log(myPow(3,3.5));
 
 
 ///
@@ -101,4 +102,4 @@ function outerFun(a) {
 }
 
 const addTen = outerFun(10); // value of a
-console.log(addTen(5)); // Value of b
+// console.log(addTen(5)); // Value of b

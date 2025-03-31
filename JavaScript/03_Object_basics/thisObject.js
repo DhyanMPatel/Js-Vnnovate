@@ -10,7 +10,7 @@ let user = {
   name: "Vnn",
   age: 25,
   ref: this, // instead of making properties make method and return this
-  ref(){
+  ref() {
     return this; // refer to current object data
   },
   sayHii() {
@@ -20,33 +20,33 @@ let user = {
 };
 let admin = user;
 user = null;
-console.log(admin.sayHii());
+// console.log(admin.sayHii());
 
 
-let user1 = {name:"User1"}
-let user2 = {name:"User2"}
+let user1 = { name: "User1" }
+let user2 = { name: "User2" }
 
-function sayHi(){
+function sayHi() {
   console.log(`Hii ${this.name}!`);
-  
+
 }
 user1.sayHi = sayHi; // required to make method of that obj
 user2.sayHi = sayHi;
-console.log(user1.sayHi()); // return - Hii User1!
+// console.log(user1.sayHi()); // return - Hii User1!
 
 /// Experiment
 let chaining = {
-  step:0,
+  step: 0,
 
-  up(){
+  up() {
     this.step++;
     return this;
   },
-  down(){
+  down() {
     this.step--;
     return this;
   },
-  showStep(){
+  showStep() {
     console.log(`Step: ${this.step}`);
     return this;
   }
@@ -56,8 +56,17 @@ let chaining = {
 chaining
   .up()
   .up()
-  .showStep()
+  // .showStep()
   .down()
   .up()
-  .showStep()
+// .showStep()
 
+
+// Note:  - Regular functions: this refers to the object that called the function.
+//        - Arrow functions: this is inherited from the surrounding scope (lexical scope).
+//        - Arrow functions are great for callbacks but not for object methods.
+const userChecking = {
+  name: "Dhyan",
+  arrowGreet: () => console.log(this.name), // ❌ Undefined
+  regularGreet() { console.log(this.name); } // ✅ "Dhyan"
+};

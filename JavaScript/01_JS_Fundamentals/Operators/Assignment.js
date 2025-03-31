@@ -70,7 +70,7 @@ let name = {
     lastName: "", 
   }; 
     
-  console.log(name.firstName); 
+  console.log(name.firstName); // Return - Ram
     
   // Changing the value using logical 
   // AND assignment operator 
@@ -78,17 +78,17 @@ let name = {
     
   // Here the value changed because 
   // name.firstName is truthy 
-  console.log(name.firstName); 
+  console.log(name.firstName); // Return - Shyam
     
   console.log(name.lastName); 
     
   // Changing the value using logical  
   // AND assignment operator 
-  name.lastName &&= "Kumar"; 
+  name.lastName &&= "Kumar"; // Return - ""
     
   // Here the value remains unchanged  
   // because name.lastName is falsy 
-  console.log(name.lastName); 
+  console.log(name.lastName); // Return - ""
 
 
 
@@ -96,19 +96,24 @@ let name = {
 /// ||=  // Means: x || (x=y)
 //      - if first operand will be falsy then second operand value will assigned to first operand
 
-  console.log(name.firstName); 
+  console.log(name.firstName); // Return - Ram
+  
   // Changing the value using logical 
   // OR assignment operator 
   name.firstName ||= "Shyam"; 
+  
   // But value does not change because 
   // name.firstName is truthy 
-  console.log(name.firstName);  
-  console.log(name.lastName); 
+  console.log(name.firstName); // Return - Ram
+  
+  console.log(name.lastName); // Return - ""
+  
   // Changing the value using logical 
   // OR assignment operator 
   name.lastName ||= "Kumar"; 
+
   // The value changes because name.lastName is falsy 
-  console.log(name.lastName); 
+  console.log(name.lastName); // Return - Kumar
 
 
 
@@ -118,8 +123,8 @@ let one = 1
 let empty1 = null
 let empty2 = undefined
 let three = 3
-console.log(one ??= empty1); // Return - 1
-console.log(empty2 ??= empty1); // Return - null    last value
-console.log(empty1 ??= three); // Return - 3
-
+// console.log(one ??= empty1); // Return - 1
+// console.log(empty2 ??= empty1); // Return - null    last value
+// console.log(empty1 ??= three); // Return - 3
+// console.log(empty2); // Return - null
 

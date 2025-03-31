@@ -61,7 +61,7 @@ console.log(now);
 /*
 /// Date.parse() from String
 //      - can read date from String
-//      - Formate: `YYYY-MM-DDTHH:mm:ss.sssZ`
+//      - Format: `YYYY-MM-DDTHH:mm:ss.sssZ`
 //          - T - use as delimiter
 //          - Z - denote the timeZone
 //      - return value in ms from jan 01 1970
@@ -199,11 +199,11 @@ function getSecondsToTomorrow(){
 */
 
 ///   8) Format the relative date
-console.log( formatRelativeDate(new Date(new Date - 1)) ); // Return - right now
-console.log( formatRelativeDate(new Date(new Date - 30 * 1000)) ); // "30 sec. ago"
-console.log( formatRelativeDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 min. ago"
-// yesterday's date like 31.12.16 20:00
-console.log( formatRelativeDate(new Date(new Date - 86400 * 1000)) );
+// console.log( formatRelativeDate(new Date(new Date - 1)) ); // Return - right now
+// console.log( formatRelativeDate(new Date(new Date - 30 * 1000)) ); // "30 sec. ago"
+// console.log( formatRelativeDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 min. ago"
+// // yesterday's date like 31.12.16 20:00
+// console.log( formatRelativeDate(new Date(new Date - 86400 * 1000)) );
 
 function formatRelativeDate(date){
   let diff = new Date() - date;

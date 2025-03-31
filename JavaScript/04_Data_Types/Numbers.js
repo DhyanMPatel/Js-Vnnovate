@@ -25,13 +25,13 @@ console.log(0o377); // Return - 255
 console.log(0b11_111_111); // Return - 255
 */
 
-
+/*
 /// .toString()
 console.log(bill.toString(10)); // Default
 console.log(bill.toString(16)); // Return - 3b9aca00
 
 console.log((123).toString()); // Return - 123, also 123..toString() possible
-
+*/
 
 /*
 /// Rounding

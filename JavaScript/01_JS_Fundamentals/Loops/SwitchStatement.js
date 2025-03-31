@@ -7,20 +7,21 @@
 //      - passed value type and case type should be "===". 
 
 let c = "4"
-let a = 2+2
+let a = 2 + 2
 let b = 2
-switch(a /* or +c */){
+switch (a /* or +c */) {
     default:
         console.log("I don't know.");
         break;
-    case b+2:
+    case b + 2:
         console.log("Here b+2 is same as a");
         break;
     case 2:
         console.log("2");
         break;
+
     // This is Grouping of Cases
-    case b+2:
+    case b + 2:
     case 2:
         console.log("Here b+2 is same as a");
         console.log("2");
@@ -34,5 +35,5 @@ switch(a /* or +c */){
     case 4:
         console.log("4");
         break;
-    
+
 }

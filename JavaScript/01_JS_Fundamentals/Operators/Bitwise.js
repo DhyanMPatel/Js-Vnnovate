@@ -9,9 +9,9 @@
 //      - Return 0 if there is any 0 bit
 let numEven = 12; // (1100)
 let numOdd = 13; // (1101)
-// console.log(numEven & 1 == 1); // Return - 0, because num is even
-// console.log(numOdd & 1 == 1); // Return - 1, because num is odd
-
+// console.log(numEven & 1); // Return - 0, because num is even
+// console.log(numOdd & 1); // Return - 1, because num is odd
+// console.log(1000004 & 1); // Return - 0
 
 /// | 
 //      - Return 1 if there is any 1 bit
@@ -28,15 +28,15 @@ function getMissingNo(a, n)
     let x1 = a[0];
     let x2 = 1;
     for (let i = 1; i < n; i++) {
-        x1 = x1 ^ a[i];
+        x1 = x1 ^ a[i]; // Return x1= 3(11) --> 7(111) --> 2(010) --> 4(100)
     };
-    for (let i = 2; i <= n + 1; i++) x2 = x2 ^ i;
-    return x1 ^ x2;
+    for (let i = 2; i <= n + 1; i++) x2 = x2 ^ i; // Return x2 = 3 --> 0 --> 4 --> 1 --> 7
+    return x1 ^ x2; // Return - (100)^(111) = (011)
 }
-let arr = [1, 2, 4, 5];
+let arr = [1, 2, 4, 5, 6]; // 3 is Missing
 let N = arr.length;
 let missingNo = getMissingNo(arr, N);
-// console.log(missingNo);
+console.log(missingNo);
 
 
 /// ~
@@ -86,5 +86,5 @@ function divByTwo(n) {
 
 let a = 4; 
 let b = -1 
-console.log(a>>>1); // Return - 2
-console.log(b>>>4); // Return - 268435455
+// console.log(a>>>1); // Return - 2
+// console.log(b>>>4); // Return - 268435455

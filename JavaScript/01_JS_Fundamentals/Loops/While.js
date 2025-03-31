@@ -5,7 +5,7 @@
 
 let i = 3
 while(i){   // when i == 0 means falsy, it will not run
-    // console.log(i);// Return - 3 -> 2 -> 1
+    // console.log(i);// Return - 3 -> 2 -> 1̥
     i--;
 }
 

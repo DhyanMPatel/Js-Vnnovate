@@ -8,6 +8,7 @@ let user = {
   name: "John",
 };
 let admin = user;
+admin.age = 25; // admin and user both refer to same object in memory
 /*
 1. user Object stored in memory, it has refernce of "name" properties means store address of properties in memory
 2. when we call properties using `user.name`. means it has address so go to that address in memory and provide value inside that.
@@ -27,7 +28,7 @@ let realCopy2 = {};
 for (ele in user) {
   realCopy1[ele] = user[ele];
 }
-Object.assign(realCopy2, user, admin);
+// Object.assign(realCopy2, user, admin);
 // console.log(realCopy1);
 // console.log(realCopy2);
 
@@ -57,4 +58,4 @@ let cir = {};
 cir.me = cir;
 
 let cirCopy = structuredClone(cir);
-console.log(cirCopy.me === cirCopy); /// true
+// console.log(cirCopy.me === cirCopy); /// true

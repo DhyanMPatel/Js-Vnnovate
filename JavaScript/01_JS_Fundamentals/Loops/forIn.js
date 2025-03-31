@@ -1,7 +1,7 @@
 /// For...in Loop
 //      - walk over all keys of an Object
 //      - not work with map and set
-//      - If we store properties as number in String formate then output will display number wise not in stored formate at last another type of String will display
+//      - If we store properties as number in String format then output will display number wise not in stored format at last another type of String will display
 
 
 /// Here properties value is number

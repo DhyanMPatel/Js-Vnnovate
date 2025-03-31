@@ -27,13 +27,13 @@ set.add(prakash);
 set.add(dhyan);
 set.add(mahi);
 
-console.log(set.size);
+// console.log(set.size);
 
 for (let visitor of set) {
-  console.log(visitor);
+  // console.log(visitor);
 }
 
-set.forEach((visitor) => console.log(visitor));
+// set.forEach((visitor) => console.log(visitor));
 
 /// Iteration over Set
 //      - keys and values are same

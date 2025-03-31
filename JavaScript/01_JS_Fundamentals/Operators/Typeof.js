@@ -20,4 +20,4 @@ let func = function(){} // will be function
 // console.log(typeof undefined); // Return - undefined
 // console.log(typeof null); // Return - object
 // console.log(typeof NaN); // Return - number
-console.log(typeof func); // Return - function
+// console.log(typeof func); // Return - function

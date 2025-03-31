@@ -17,5 +17,5 @@
 - void Operator (void)  - return undefined
 
 ### Note
-- Unary operator precedence is higher then Binary Operator
-- Increment/decrement can only be applied to variables. Trying to use it on a value like `5++` will give an error.
+- Unary operator precedence is higher then Binary Operators
+- Increment/Decrement can only be applied to variables. Trying to use it on a value like `5++` will give an error.

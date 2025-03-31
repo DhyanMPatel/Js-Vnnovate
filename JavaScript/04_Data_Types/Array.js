@@ -5,7 +5,7 @@
 //      - special in Array is The Engine tries to store its element in contiguous memory area
 //      - If we make ele like "arr.age = 12" this will stored after number key eles
 //      - push() & pop() are faster then unshift() & shift().
-//      - .length is property of Array no method
+//      - .length is property of Array not method
 //      - Array has own implimentation of toString()
 
 let arr1 = new Array(3); // ["undefined", "undefined", "undefined"]

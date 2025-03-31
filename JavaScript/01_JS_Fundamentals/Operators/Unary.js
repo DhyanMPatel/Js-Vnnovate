@@ -26,6 +26,6 @@ let y = -2
 
 /// -
 let min = -2
-// console.log(-"2");
-// console.log(-"-2");
-console.log(-min);  // Return - -2
+// console.log(-"2"); // Return - -2
+// console.log(-"-2"); // Return - 2
+// console.log(-min);  // Return - 2

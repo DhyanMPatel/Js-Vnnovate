@@ -17,7 +17,7 @@ let user2 = new Object({
 // console.log(user1.location);
 // console.log(user2.age);
 
-// user1.age = 11; // Modify
+user1.age = 11; // Modify
 // user2.age = 14;
 // console.log(user1);
 // console.log(user2);
@@ -88,7 +88,7 @@ let obj1 = {
   15: "fifteen",
   5: "five",
 };
-console.log(obj1);
+// console.log(obj1);
 
 let obj2 = {
   // but not it perform like above

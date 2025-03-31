@@ -6,7 +6,8 @@ let str = String(age)
 
 
 /// NUMBER
-// console.log(typeof("10"/"5"))
+// console.log(typeof("10"/"5")) // Return - number
+// console.log(typeof NaN) // Return - number
 
 let num = Number(str)
 // console.log(typeof num) // Return - number
@@ -21,7 +22,10 @@ let num = Number(str)
 // console.log(Number("")); // Return - 0
 // console.log(Number("\t")); // Return - 0
 // console.log(Number("\n")); // Return - 0
-
+// var obj = {}
+// var arr = [1, 2, 3]
+// console.log(Number(arr)); // Return - NaN, if arr is empty then return `0`
+// console.log(Number(obj)); // Return - NaN
 
 
 /// BOOLEAN
@@ -39,7 +43,10 @@ let num = Number(str)
 
 // truthy value return true
 // console.log(Boolean("\n"));
-
+// console.log(Boolean(" ")); // Return - true
+// console.log(Boolean([])); // Return - true
+// console.log(Boolean({})); // Return - true
+// ...
 
 /// Experiment
 let a = 0 // Falsy
@@ -50,9 +57,10 @@ let b = "0" // Truthy
 
 
 // SYMBOL
-// let obj ={name:'Vnnovate'}
+let obj ={name:'Vnnovate'}
 // console.log(Symbol(a)); // Return - Symbol (0)
-// console.log(Symbol(obj));
+// console.log(Symbol(obj)); // Return - Symbol [object Object]
 
-// console.log(Symbol (obj.name));
+console.log(Symbol (obj.name)); // Return - Symbol(Vnnovate)
+console.log(Symbol (obj.name).description); // Return - Vnnovate
 

@@ -15,11 +15,11 @@ let justJoint = 1 + 2 + " String"; // Add then Concatination(with String)
 
 
 /// - (Minus)
-let min = 1 - 2;
+// let min = 1 - 2;
 // console.log(min);
 // console.log(1 - "Str"); // Return - NaN
 // console.log(5 - true);
-// console.log(2n - 1); // Error - cannot mix bigInt and other types
+// // console.log(2n - 1); // Error - cannot mix bigInt and other types
 // console.log(1-NaN);
 // console.log(1-undefined);
 // console.log(1-null); // Return - 1
@@ -32,8 +32,8 @@ let min = 1 - 2;
 // console.log("3" * 2);
 // console.log(Infinity * 2); // Return - NaN
 // console.log(2n * 3n);
-// console.log(2n * 3); // Error - Cannot mix BigInt and other Types
-// console.log(2n * "num"); // Error - Cannot mix BigInt and other Types
+// // console.log(2n * 3); // Error - Cannot mix BigInt and other Types
+// // console.log(2n * "num"); // Error - Cannot mix BigInt and other Types
 // console.log(null * 2);  // Return 0
 // console.log(undefined * 2);
 // console.log(NaN * 2);
@@ -59,7 +59,7 @@ let min = 1 - 2;
 /// % (Remainder)
 // console.log(13.5 % 5);
 // console.log(-15 % 5); // Return - -0
-// console.log(13 % -5); // Return - 3
+// console.log(18 % -5); // Return - 3
 // console.log("16" % 5);
 // console.log(14 % 0); // Return - NaN
 // console.log(14 % Infinity); // Return - 14
@@ -74,8 +74,8 @@ let min = 1 - 2;
 
 /// ** (Exponentiation)
 // console.log(2 ** 3);
-// console.log(-2 ** 3); // Error - Unary Operator at left Operand
-// console.log(20 ** -3); // Return - 0.125
+// // console.log(-2 ** 3); // Error - Unary Operator at left Operand
+// console.log(20 ** -3); // Return - 0.000125
 // console.log(2.5 ** 3); // Return - 15.625
 // console.log(2 ** 3.5); // Return - 11.3137
 // console.log(2 ** (3 ** 2)); // Return - 512
@@ -104,4 +104,4 @@ let d = 3;
 
 
 /// Experiment
-console.log(d*"Hello!"); // Return - NaN
+// console.log(d*"Hello!"); // Return - NaN

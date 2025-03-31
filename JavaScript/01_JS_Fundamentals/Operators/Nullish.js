@@ -8,14 +8,14 @@ let two;
 
 // console.log(one ?? two); // Return - undefined
 
-two = 2
+// two = 2
 // console.log(one ?? two); // Return - 2
 
-one = 1
+// one = 1
 // console.log(one ?? two); // Return - 1
 
-one = undefined
-// console.log(one ?? two ?? undefined); // Return - 
+// one = undefined
+// console.log(one ?? two ?? undefined); // Return - undefined
 
 // with *
 let height = null;
@@ -40,10 +40,10 @@ let width = null;
 // console.log(1 || 2 ?? 3);   // Error - Required ((1 || 2) ?? 3)
 
 /// Experiment
-one = 0
+// one = 0
 // console.log(one ?? two); // Return - 0
-console.log(1 || (2 ?? 3)); // Return -1
-console.log(1 && (2 ?? 3)); // Return - 2
+// console.log(1 || (2 ?? 3)); // Return -1
+// console.log(1 && (2 ?? 3)); // Return - 2
 
 
 

@@ -1,7 +1,7 @@
 // Array Methods
 //  - push(...items), pop(), unshift(...items), shift()
 
-// let arr = [1, 2, 5, 6, 7, 8, 9, 10];
+let arr = [1, 2, 5, 6, 7, 8, 9, 10];
 
 /*
 /// Array.isArray()
@@ -21,7 +21,7 @@ let splices = arr.splice(
   4,
   "Add 3rd, 4th & this value after elements argument"
 );
-console.log(splices);
+console.log(splices); // return removed value
 console.log(arr);
 
 
@@ -49,7 +49,7 @@ console.log(sample == arr); // Return - false ,  sample is new array
 */
 
 /*
-// concate
+// concat
 //      - Syntax - arr.concat(arg1, arg2...)
 //      - Object has one Property name "[Symbol.isConcatSpreadable]: true" (default: false) which stored like arr
 let concatProcess = [1, 2, 3];
@@ -143,6 +143,8 @@ function compareNum(a, b) {
   if (a == b) return 0;
   if (a < b) return -1;
 }
+sorting.sort(compareNum); // Return - [1,2,15]
+console.log(sorting);
 */
 
 /*
@@ -173,7 +175,7 @@ let glueStr = splitedArr.join(", "); // Convert Arr to String
 let sum = arr.reduce(function (sum, ele) {
   return sum + ele;
 }, 0);
-console.log(sum);
+console.log(sum); // Return - 48
 
 let RR = [
   [0, 1],
@@ -183,14 +185,14 @@ let RR = [
 const result = RR.reduceRight((addition, ele) => {
   return addition.concat(ele);
 });
-console.log(result);
-
+console.log(result);  // Return - [4,5,2,3,0,1]
 */
+
 
 /// Experiment
 
 
-//    1) Convert into camelCase formate
+//    1) Convert into camelCase format
 // console.log(camelize("background-color")) // Return - backgroundColor
 
 function camelize(word) {

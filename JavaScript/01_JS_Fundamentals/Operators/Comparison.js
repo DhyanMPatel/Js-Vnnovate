@@ -1,7 +1,7 @@
 // [==,===,!=,!==,<,<=,>,>=]
 //  - Return Boolean value
 //  - NaN not equal to any one
-//  - null is loos-equal to itself and undefined & always equal to itself
+//  - null is loos-equal to undefined & always equal to itself
 //  - <,<=,>,>= convert operand to Number if possible otherwise to NaN
 //  - ==,===,!=,!== without convert operate 
 //  - Symbol always create unique identity whether value is same

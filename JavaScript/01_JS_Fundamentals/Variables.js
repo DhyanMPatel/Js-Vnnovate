@@ -1,5 +1,6 @@
 
 /// LET - no Hoisting, Block Scope
+//      - Comes in ES6
 {
   // Block Scope
   let one = 1;
@@ -32,6 +33,7 @@ function globalScope() {
 
 
 /// CONST - no Hoisting, Block Scope, No Reassigned, work with Primitives
+//      - Comes in ES6
 if (true) {
   // Block Scope
   const four = "4";

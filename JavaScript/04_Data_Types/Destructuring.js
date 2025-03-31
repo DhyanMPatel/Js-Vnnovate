@@ -17,11 +17,11 @@ let [firstName, , lastName] = arr;
 // console.log(`First Name: ${firstName},\nLast Name: ${lastName}`);
 
 for (let [key, value] of Object.entries(obj)) {
-  console.log(`Key: ${key}, Value: ${value}.`);
+  // console.log(`Key: ${key}, Value: ${value}.`);
 }
 
 for (let [key, value] of map) {
-  console.log(`Key: ${key}, Value: ${value}.`);
+  // console.log(`Key: ${key}, Value: ${value}.`);
 }
 */
 
