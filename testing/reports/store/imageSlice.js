@@ -10,7 +10,7 @@ const initialState = {
   reportImages: [],
   open: false,
   selectedDialog: null,
-  selectedImages: [],
+  // selectedImages: [],
 };
 
 export const getImages = createAsyncThunk(
@@ -73,7 +73,8 @@ export const uploadImages = createAsyncThunk(
         `/images/upload/${reportCategoryId}`,
         data
       );
-      console.log(`Upload Image Reponse: `, response);
+      // console.log(`Upload Image Reponse: `, response);
+      return response.data.data || [];
     } catch (error) {
       toast.error("Failed to upload Images", {
         position: "top-right",
@@ -93,16 +94,17 @@ export const uploadImages = createAsyncThunk(
 export const reorderImages = createAsyncThunk(
   "auth/reorder-images",
   async ({ reportCategoryId, data }, { dispatch }) => {
-    console.log(`reportCategoryId: `, reportCategoryId);
-    console.log("reorder Data: ", data);
+    // console.log(`reportCategoryId: `, reportCategoryId);
+    // console.log("reorder Data: ", data);
     try {
       const response = await Axios.put(
         `/images/reorder/${reportCategoryId}`,
         data
       );
       // dispatch(UpdateReportDetail());
-      console.log(`re-order Images: `, response);
+      // console.log(`re-order Images: `, response);
       if (response.data.success) {
+        dispatch(getImagesbyReports(reportCategoryId));
         return response.data.data || [];
       }
     } catch (error) {
@@ -141,9 +143,9 @@ const ImageSlice = createSlice({
     setSelectedImages: (state, action) => {
       state.selectedImages = action.payload;
     },
-    setReorderedImages: (state, action) => {
-      state.reorderedImages = action.payload;
-    },
+    // setReorderedImages: (state, action) => {
+    //   state.reorderedImages = action.payload;
+    // },
   },
   extraReducers: (builder) => {
     builder
@@ -184,7 +186,6 @@ const ImageSlice = createSlice({
       })
       .addCase(reorderImages.fulfilled, (state, action) => {
         state.isLoading = false;
-        // dispatch();
       })
       .addCase(reorderImages.rejected, (state) => {
         state.isLoading = false;

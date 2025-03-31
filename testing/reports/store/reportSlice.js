@@ -12,26 +12,23 @@ const initialState = {
   // passwordUpdated: false,
   notification: [],
   reportData: [],
-  reportDetail: [],
+  reportDetail: {},
   month: null,
   filteredReport: [],
   reportWithImage: [],
 };
 
+/// Get All Reports
 export const getReports = createAsyncThunk(
   "auth/getreports",
-  async (id, { dispatch }) => {
+  async (_, { dispatch }) => {
     try {
       const response = await Axios.get("/report/list");
       // console.log(`Report response: `, response);
 
       if (response.data.success) {
-        //   response.data.data.map((report) => {
-        //     report.createdAt = dayjs(report.createdAt).format("YYYY-MMM-DD");
-        //     report.updatedAt = dayjs(report.updatedAt).format("YYYY-MMM-DD");
-        //   });
 
-        await Promise.all(
+        const reports =  await Promise.all(
           response.data.data.map(async (report) => {
             await dispatch(getImagesbyReports(report.id));
             report.createdAt = dayjs(report.createdAt).format("YYYY-MMM-DD");
@@ -39,7 +36,7 @@ export const getReports = createAsyncThunk(
           })
         );
 
-        return response.data.data || [];
+        return reports || [];
       } else {
         toast.error(response.data.message, {
           position: "top-right",
@@ -69,11 +66,62 @@ export const getReports = createAsyncThunk(
   }
 );
 
+/// Add Report
 export const handleAddReport = createAsyncThunk(
   "auth/addReport",
   async (data, { dispatch }) => {
-    console.log(`Final Image Data: `, data);
-    const response = await Axios.post("/report/add", data);
+    // console.log(`Final Image Data: `, data);
+
+    try{
+      const response = await Axios.post("/report/add", data);
+    if (response.data.success) {
+      toast.success(response.data.message, {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      return response.data;
+    } else {
+      toast.error(response.data.message, {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      throw new Error(response.data.message);
+    }
+    }catch(error){
+      toast.error("Failed to add Report", {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      return [];
+    }
+  }
+);
+
+// Delete Report
+export const handleDeleteReport = createAsyncThunk(
+  "auth/delete-report",
+  async (id, { dispatch }) => {
+    try{
+      const response = await Axios.delete(`/report/delete/${id}`);
+
     if (response.data.success) {
       toast.success(response.data.message, {
         position: "top-right",
@@ -98,17 +146,8 @@ export const handleAddReport = createAsyncThunk(
       });
       throw new Error(data.message);
     }
-    return response;
-  }
-);
-
-export const handleDeleteReport = createAsyncThunk(
-  "auth/delete-report",
-  async (id, { dispatch }) => {
-    const response = await Axios.delete(`/report/delete/${id}`);
-
-    if (response.data.success) {
-      toast.success(response.data.message, {
+    } catch (error) {
+      toast.error("Failed to Delete Report", {
         position: "top-right",
         autoClose: 1500,
         hideProgressBar: false,
@@ -118,19 +157,9 @@ export const handleDeleteReport = createAsyncThunk(
         progress: undefined,
         theme: "light",
       });
-    } else {
-      toast.error(response.message, {
-        position: "top-right",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-      throw new Error(data.message);
+      return [];
     }
+    
     return response;
   }
 );
@@ -140,8 +169,10 @@ export const getReportDetail = createAsyncThunk(
   "auth/get-report-detail",
   async (id, { rejectWithValue }) => {
     try {
-      const reportResponse = await Axios.get(`/report/list/${id}`);
-      const imageResponse = await Axios.get(`/images/${id}`);
+      const [reportResponse, imageResponse] = await Promise.all([
+        Axios.get(`/report/list/${id}`),
+        Axios.get(`/images/${id}`),
+      ]);
       if (reportResponse.data.success && imageResponse.data.success) {
         // console.log(`Report Details: `, reportResponse);
         // console.log(`Image Response: `, imageResponse);
@@ -183,6 +214,7 @@ export const getReportDetail = createAsyncThunk(
   }
 );
 
+// Update Report
 export const UpdateReportDetail = createAsyncThunk(
   "report/update-report",
   async ({ id, data }, { dispatch }) => {
@@ -200,7 +232,7 @@ export const UpdateReportDetail = createAsyncThunk(
           progress: undefined,
           theme: "light",
         });
-        return response;
+        return response.data;
       } else {
         toast.error(response.data.message, {
           position: "top-right",
@@ -300,10 +332,10 @@ const ReportSlice = createSlice({
       })
       .addCase(UpdateReportDetail.fulfilled, (state, action) => {
         state.isLoading = false;
-        const updatedReport = action.payload.data;
+        const updatedReport = action.payload;
 
         state.reportData = state.reportData.map((rep) =>
-          rep._id === updatedReport._id ? updatedReport : rep
+          rep.id === updatedReport.id ? updatedReport : rep
         );
       })
       .addCase(UpdateReportDetail.rejected, (state) => {

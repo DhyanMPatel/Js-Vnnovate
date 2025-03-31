@@ -1,12 +1,10 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Icon from "@/components/ui/Icon";
 import Card from "@/components/ui/Card";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import CompanyTable from "@/components/partials/Table/company-table";
-import profileImage from "../../assets/images/avatar/dummyImage.jpg";
+// import profileImage from "../../assets/images/avatar/dummyImage.jpg";
 import {
   getReports,
   handleDeleteReport,

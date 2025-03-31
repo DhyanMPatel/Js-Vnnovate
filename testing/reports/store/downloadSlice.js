@@ -40,6 +40,17 @@ export const downloadCSV = createAsyncThunk(
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+
+      toast.success("CSV Downloaded Successfully!", {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } catch (error) {
       //   console.error("Error downloading CSV:", error);
       toast.error("Failed to Download CSV", {
@@ -60,7 +71,7 @@ export const downloadCSV = createAsyncThunk(
 );
 
 const DownloadSlice = createSlice({
-  name: "download-csv",
+  name: "downloadCSV",
   initialState,
   reducers: {
     logoutSuccess: (state) => {

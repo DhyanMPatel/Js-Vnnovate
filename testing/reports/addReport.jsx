@@ -40,6 +40,7 @@ const AddReport = () => {
   const selectedImages = useSelector(
     (state) => state.reportImages.selectedImages
   );
+  const [dragOver, setDragOver] = React.useState(false);
 
   const {
     register,
@@ -50,15 +51,35 @@ const AddReport = () => {
     mode: "all",
   });
 
-  const handleSelectedImages = (event) => {
-    const files = Array.from(event.target.files);
-    const newImages = files.map((file) => ({
+  const processFiles = (files) => {
+    const fileArray = Array.from(files);
+    const newImages = fileArray.map((file) => ({
       id: `${file.name}-${file.size}-${Date.now()}`, // Unique ID
       src: URL.createObjectURL(file),
       file, // Store actual file for FormData
     }));
     dispatch(setSelectedImages([...selectedImages, ...newImages]));
+
+  }
+
+  const handleSelectedImages = (event) => {
+    processFiles(event.target.files);
   };
+
+  const handleDragOver = (event) => {
+    event.preventDefault();
+    setDragOver(true);
+  }
+
+  const handleDragLeave = () => {
+    setDragOver(false);
+  };
+
+  const handleDrop = (event) => {
+    event.preventDefault()
+    setDragOver(false);
+    processFiles(event.dataTransfer.files);
+  }
 
   const handleDragEnd = (result) => {
     if (!result.destination) return;
