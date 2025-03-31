@@ -17,10 +17,10 @@ import BirthDate from "../components/form fileds/BirthDate";
 import BirthTime from "../components/form fileds/BirthTime";
 
 import { useDispatch, useSelector } from "react-redux";
-import { setInitialValues } from "../redux/slice/initialValuesSlice";
-import { setEditUser } from "../redux/slice/editUserSlice";
-import { setShowBtn } from "../redux/slice/showBtnSlice";
-import { setUsers } from "../redux/slice/userSlice";
+import { setInitialValues } from "../redux/features/initialValuesSlice";
+import { setEditUser } from "../redux/features/editUserSlice";
+import { setShowBtn } from "../redux/features/showBtnSlice";
+import { setUsers } from "../redux/features/userSlice";
 import SubmitBtn from "../components/form fileds/Buttons/SubmitBtn";
 import ResetBtn from "../components/form fileds/Buttons/ResetBtn";
 import ShowBtn from "../components/form fileds/Buttons/ShowBtn";
@@ -61,7 +61,7 @@ export default function FormikForm() {
     id: Yup.string()
       .required("Enter your ID!")
       .matches(idRegex, "Id should be Positive Number")
-      .notOneOf(editUser ? [] : availableIds, "ID is already available"), // Validation Here for Id
+      .notOneOf(editUser ? [] : availableIds, "ID is already available"),
 
     firstName: Yup.string().min(2).max(20).required("Enter your First Name"),
 

@@ -1,16 +1,14 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import Axios from "../../../services/api";
 import { toast } from "react-toastify";
-import { UpdateReportDetail } from "./reportSlice";
 
 const initialState = {
   isAuthenticated: false,
   user: null,
   isLoading: false,
   reportImages: [],
-  open: false,
   selectedDialog: null,
-  selectedImages: [],
+  reorderedImages: [],
 };
 
 export const getImages = createAsyncThunk(
@@ -19,7 +17,6 @@ export const getImages = createAsyncThunk(
     try {
       const response = await Axios.get("/images");
       if (response.data.success) {
-        // console.log(`Get All Images: `, response.data.data);
         return response.data.data || [];
       }
     } catch (error) {
@@ -41,10 +38,8 @@ export const getImages = createAsyncThunk(
 export const getImagesbyReports = createAsyncThunk(
   "auth/get-Images-by-Reports",
   async (reportCategoryId, { rejectWithValue }) => {
-    // console.log(`reportCategoryId: ${reportCategoryId}`);
     try {
       const response = await Axios.get(`/images/${reportCategoryId}`);
-      //   console.log(`Images Reports: `, response);
 
       if (response.data.success) {
         return response.data.data || [];
@@ -73,7 +68,7 @@ export const uploadImages = createAsyncThunk(
         `/images/upload/${reportCategoryId}`,
         data
       );
-      console.log(`Upload Image Reponse: `, response);
+      return response;
     } catch (error) {
       toast.error("Failed to upload Images", {
         position: "top-right",
@@ -93,15 +88,12 @@ export const uploadImages = createAsyncThunk(
 export const reorderImages = createAsyncThunk(
   "auth/reorder-images",
   async ({ reportCategoryId, data }, { dispatch }) => {
-    console.log(`reportCategoryId: `, reportCategoryId);
-    console.log("reorder Data: ", data);
     try {
       const response = await Axios.put(
         `/images/reorder/${reportCategoryId}`,
         data
       );
-      // dispatch(UpdateReportDetail());
-      console.log(`re-order Images: `, response);
+
       if (response.data.success) {
         return response.data.data || [];
       }
@@ -132,12 +124,6 @@ const ImageSlice = createSlice({
     gotoLogin: (state) => {
       state.passwordUpdated = false;
     },
-    setOpen: (state, action) => {
-      state.open = action.payload;
-    },
-    setSelectedDialog: (state, action) => {
-      state.selectedDialog = action.payload;
-    },
     setSelectedImages: (state, action) => {
       state.selectedImages = action.payload;
     },
@@ -163,7 +149,6 @@ const ImageSlice = createSlice({
       })
       .addCase(getImagesbyReports.fulfilled, (state, action) => {
         state.isLoading = false;
-        // state.reportImages = action.payload;
       })
       .addCase(getImagesbyReports.rejected, (state) => {
         state.isLoading = false;
@@ -184,7 +169,6 @@ const ImageSlice = createSlice({
       })
       .addCase(reorderImages.fulfilled, (state, action) => {
         state.isLoading = false;
-        // dispatch();
       })
       .addCase(reorderImages.rejected, (state) => {
         state.isLoading = false;
@@ -196,7 +180,7 @@ export const {
   logoutSuccess,
   gotoLogin,
   setOpen,
-  setSelectedDialog,
+  // setSelectedDialog,
   setSelectedImages,
   setReorderedImages,
 } = ImageSlice.actions;

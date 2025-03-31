@@ -12,9 +12,9 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
-import { setEditUser } from "../redux/slice/editUserSlice";
-import { setShowBtn } from "../redux/slice/showBtnSlice";
-import { setUsers } from "../redux/slice/userSlice";
+import { setEditUser } from "../redux/features/editUserSlice";
+import { setShowBtn } from "../redux/features/showBtnSlice";
+import { setUsers } from "../redux/features/userSlice";
 
 const columns = [
   { id: "id", label: "Index" },

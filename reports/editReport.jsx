@@ -15,6 +15,7 @@ import {
   Draggable,
 } from "react-beautiful-dnd-next";
 import { reorderImages, setReorderedImages } from "./store/imageSlice";
+import { toast } from "react-toastify";
 
 const schema = yup
   .object({
@@ -22,6 +23,26 @@ const schema = yup
       .string()
       .required("Report name is Required")
       .max(30, "Maximum 30 characters are accepted"),
+    phoneNumber: yup
+      .string()
+      .required("Phone number is required")
+      .matches(/^[0-9]{10}$/, "Phone number must be exactly 10 digits"),
+    address: yup
+      .string()
+      .required("Address is required")
+      .max(100, "Maximum 100 characters are accepted"),
+    images: yup
+      .mixed()
+      .test("fileSize", "File size should be less than 2MB", (files) => {
+        if (!files || files.length === 0) return true;
+        return Array.from(files).every((file) => file.size <= 2 * 1024 * 1024);
+      })
+      .test("fileType", "Only image files are allowed", (files) => {
+        if (!files || files.length === 0) return true;
+        return Array.from(files).every((file) =>
+          ["image/jpeg", "image/png", "image/jpg"].includes(file.type)
+        );
+      }),
   })
   .required();
 
@@ -30,10 +51,9 @@ const EditReport = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const { reportDetail, isLoading } = useSelector((state) => state.report);
-  console.log(`reportDetail: `, reportDetail);
-  const orderedImages = reportDetail?.images ? [...reportDetail.images] : [];
+  const { reorderedImages } = useSelector((state) => state.reportImages);
 
-  // console.log(`orderedImages: `, orderedImages);
+  const orderedImages = reportDetail?.images ? [...reportDetail.images] : [];
 
   const {
     register,
@@ -44,14 +64,10 @@ const EditReport = () => {
 
   useEffect(() => {
     if (!reportDetail || reportDetail.id !== Number(id)) {
-      // console.log(`getting report Detail...`);
       dispatch(getReportDetail(id));
     }
   }, [dispatch, id, reportDetail]);
 
-  // console.log(`Id: `, id);
-
-  // console.log(`Already available Images: `, reportDetail.images);
   useEffect(() => {
     if (id == reportDetail?.id) {
       setValue("name", reportDetail?.name);
@@ -61,11 +77,11 @@ const EditReport = () => {
         setValue("images", img);
       });
     }
-  }, [reportDetail, id, setValue]);
+  }, [reportDetail, id, setValue, reorderedImages]);
 
   const onSubmit = async (data) => {
     let newData = { id: id, data };
-    console.log(`new Data: `, newData);
+
     let response = await dispatch(UpdateReportDetail(newData)).unwrap();
 
     if (response.data.success) {
@@ -74,31 +90,6 @@ const EditReport = () => {
       toast.error(response.data.message);
     }
   };
-
-  console.log(`ordered Images: `, reportDetail.images);
-
-  // const handleDragEnd = (result) => {
-  //   if (!result.destination) return;
-
-  //   const reorderedImages = Array.from(reportDetail.images);
-  //   const [movedImage] = reorderedImages.splice(result.source.index, 1);
-  //   reorderedImages.splice(result.destination.index, 0, movedImage);
-
-  //   // console.log(`reorderedImages`, reorderedImages);
-  //   const final_reorderedImages = {
-  //     reportCategoryId: id,
-  //     data: reorderedImages.map((img, index) => ({
-  //       id: img.id,
-  //       order: index + 1,
-  //     })),
-  //   };
-
-  //   // console.log(`reordered Images = `, reorderedImages);
-  //   dispatch(setReorderedImages(reorderedImages));
-
-  //   // dispatch(setSelectedImages(reorderedImages));
-  //   dispatch(reorderImages(final_reorderedImages));
-  // };
 
   const handleDragEnd = (result) => {
     if (!result.destination) return;
@@ -122,7 +113,19 @@ const EditReport = () => {
       .then(() => {
         dispatch(getReportDetail(id));
       })
-      .catch((error) => console.error("Reorder failed:", error));
+      .catch((error) => {
+        toast.error("Failed to re-order images.", {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        console.log(`re-order error: `, error);
+      });
   };
 
   return (
@@ -174,7 +177,10 @@ const EditReport = () => {
                               {...provided.droppableProps}
                               className="flex gap-4 overflow-x-auto p-2 w-full max-w-full"
                             >
-                              {orderedImages.map((image, index) => (
+                              {(reorderedImages.length > 0
+                                ? reorderedImages
+                                : orderedImages
+                              ).map((image, index) => (
                                 <Draggable
                                   key={image.id}
                                   draggableId={image.id.toString()}
@@ -187,22 +193,11 @@ const EditReport = () => {
                                       {...provided.dragHandleProps}
                                       className="relative w-52 h-52 border flex-shrink-0 cursor-grab"
                                     >
-                                      {/* {console.log(`image URL: `, image.url)} */}
                                       <img
                                         src={`http://localhost:3000/uploads/${image.url}`}
                                         alt={`uploaded ${index}`}
                                         className="w-full h-full object-cover rounded hover:shadow-md"
                                       />
-                                      <button
-                                        type="button"
-                                        onClick={() => handleRemoveImage(index)}
-                                        className="absolute top-1 right-1 w-6 h-6 flex items-center justify-center bg-gray-700 text-white rounded-full cursor-pointer hover:bg-red-500"
-                                      >
-                                        <Icon
-                                          icon="heroicons-outline:x-mark"
-                                          className="w-4 h-4"
-                                        />
-                                      </button>
                                     </div>
                                   )}
                                 </Draggable>

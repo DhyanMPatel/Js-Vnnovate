@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { setShowBtn } from "../../../redux/slice/showBtnSlice";
-import { setEditUser } from "../../../redux/slice/editUserSlice";
+import { setShowBtn } from "../../../redux/features/showBtnSlice";
+import { setEditUser } from "../../../redux/features/editUserSlice";
 
 function ShowBtn({ resetForm }) {
   const showBtn = useSelector((state) => state.showBtn.value);

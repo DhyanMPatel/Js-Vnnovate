@@ -1,5 +1,5 @@
-import { setEditUser } from "../../../redux/slice/editUserSlice";
-import { setShowBtn } from "../../../redux/slice/showBtnSlice";
+import { setEditUser } from "../../../redux/features/editUserSlice";
+import { setShowBtn } from "../../../redux/features/showBtnSlice";
 import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
 

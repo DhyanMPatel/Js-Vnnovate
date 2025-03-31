@@ -35,3 +35,8 @@ Solution: solved using another state (rowsPerPage, colsPerPage).
    link.click();
    document.body.removeChild(link);
    ```
+
+6. Not Render Report page
+   Problem: Infinite re-rendering issue of report table page
+   Solution: When user comes from add Report to Reports page then UI not render because
+   use async with useEffect.

@@ -2,24 +2,27 @@
 
 Today, I am working on below list of task:
 
-Date: 28 Mar 2025
-Day: Friday
+Date: 31 Mar 2025
+Day: Monday
 
 Project: KMZ
 
-1. Implement Drag and Drop in Add report Page
-2. Continue Work on edit Report Page
+1. Solve issue while we with Images in Add Report page.
 
 ## Work done:
 
-Date: 28 Mar 2025
-Day: Friday
+Date: 31 Mar 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
 Project - KMZ,
 
-1. Implement drag and drop images in Add report page - Done
-2. Implement drag and drop images in edit report page - Done
+1. Solve the issue on add report with disha. - Done
+2. During edit report reduce loading time on reorder Images using state. - Done
+3. solve infinite re-rendering issue of report table page - Done
+   - When user comes from add Report to Reports page then it will not render UI because
+     use async with useEffect
+4. Implement validation to prevent duplicate report names in Add report page - Done
 
 What i do - kal images, Report Table me display karvai thi. Add report wale section bhi khatam ho gaya. At last CSV Download me temporary link generate karke csv file download karke dekh liya tha.

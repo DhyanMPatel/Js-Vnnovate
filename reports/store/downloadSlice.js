@@ -9,7 +9,6 @@ const initialState = {
 export const downloadCSV = createAsyncThunk(
   "report/download-csv",
   async (_, { dispatch }) => {
-    // dispatch(setIsDownloading(true));
     try {
       const response = await Axios.get("report/download-csv", {
         responseType: "blob",
@@ -41,7 +40,6 @@ export const downloadCSV = createAsyncThunk(
       link.click();
       document.body.removeChild(link);
     } catch (error) {
-      //   console.error("Error downloading CSV:", error);
       toast.error("Failed to Download CSV", {
         position: "top-right",
         autoClose: 1500,
@@ -53,9 +51,6 @@ export const downloadCSV = createAsyncThunk(
         theme: "light",
       });
     }
-    // finally {
-    //   dispatch(setIsDownloading(false));
-    // }
   }
 );
 

@@ -1,12 +1,13 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Icon from "@/components/ui/Icon";
 import Card from "@/components/ui/Card";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import CompanyTable from "@/components/partials/Table/company-table";
-import profileImage from "../../assets/images/avatar/dummyImage.jpg";
+import { toast } from "react-toastify";
+import { useMemo } from "react";
+
 import {
   getReports,
   handleDeleteReport,
@@ -14,37 +15,48 @@ import {
   setMonth,
   setReportWithImage,
 } from "./store/reportSlice";
-import { getImages, setOpen, setSelectedDialog } from "./store/imageSlice";
+import { getImages } from "./store/imageSlice";
 
 import Swal from "sweetalert2/dist/sweetalert2";
 import Loading from "../../components/Loading";
-import { Label } from "recharts";
+
 import CSV from "../../components/ui/CSV";
-import {
-  Button,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-} from "@mui/material";
+
+import DialogDiv from "../../components/ui/Dialog";
 
 const Reports = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { reportData, isLoading, month, filteredReport, reportWithImage } =
     useSelector((state) => state.report);
-  const { reportImages, open, selectedDialog } = useSelector(
-    (state) => state.reportImages
-  );
+  const { reportImages } = useSelector((state) => state.reportImages);
+  const [selectedDialog, setSelectedDialog] = useState(null);
 
   useEffect(() => {
     dispatch(setMonth(null));
     dispatch(getReports());
     dispatch(getImages());
+    console.log(`Rendering...`);
   }, []);
 
-  useEffect(() => {
-    const reportWithImage = reportData.map((report) => ({
+  // useEffect(() => {
+  //   const ReportWI = reportData.map((report) => ({
+  //     ...report,
+  //     imageUrls: reportImages
+  //       .filter((img) => img.reportCategoryId === report.id)
+  //       .sort((a, b) => a.order - b.order)
+  //       .map((img) => img.url),
+  //     images: reportImages
+  //       .filter((img) => img.reportCategoryId === report.id)
+  //       .sort((a, b) => a.order - b.order),
+  //   }));
+
+  //   dispatch(setReportWithImage(ReportWI));
+  //   // console.log(`reportData, reportImages`);
+  // }, [reportData, reportImages]);
+
+  const reportWI = useMemo(() => {
+    return reportData.map((report) => ({
       ...report,
       imageUrls: reportImages
         .filter((img) => img.reportCategoryId === report.id)
@@ -54,15 +66,11 @@ const Reports = () => {
         .filter((img) => img.reportCategoryId === report.id)
         .sort((a, b) => a.order - b.order),
     }));
-
-    dispatch(setReportWithImage(reportWithImage));
   }, [reportData, reportImages]);
 
-  // console.log(`reportData: `, reportData);
-  // console.log(`reportImage: `, reportImages);
-  // console.log(`Report With Image: `, reportWithImage);
-
-  // console.log(`reportImages: `, reportImages);
+  useEffect(() => {
+    dispatch(setReportWithImage(reportWI));
+  }, [dispatch, reportWithImage]);
 
   useEffect(() => {
     if (month) {
@@ -76,11 +84,13 @@ const Reports = () => {
         });
 
         dispatch(setFilteredReport(filtered));
-      });
+      }, 300);
       return () => clearTimeout(timeoutId);
-    } else {
-      dispatch(getReports());
     }
+    // else {
+    //   dispatch(getReports());
+    // }
+    console.log(`month`);
   }, [month]);
 
   const COLUMNS = [
@@ -131,69 +141,17 @@ const Reports = () => {
       Header: "Images",
       accessor: "imageUrls",
       Cell: (row) => {
-        const imageUrl = row?.cell?.value[0]
-          ? `http://localhost:3000/uploads/${row.cell.value[0]}`
-          : `http://localhost:3000/uploads/dummyImage.jpg`;
+        const imageUrl =
+          Array.isArray(row?.cell?.value) && row.cell.value.length > 0
+            ? `http://localhost:3000/uploads/${row.cell.value[0]}`
+            : `http://localhost:3000/uploads/dummyImage.jpg`;
         return (
-          <span className="flex items-center">
-            <span className="w-10 h-10 rounded-full ltr:mr-3 rtl:ml-3 flex-none">
-              {!imageUrl.includes("dummyImage.jpg") ? (
-                <button
-                  onClick={() => {
-                    // console.log(`Row clicked: `, row.row.original.id); // Example: 43, 48, ...
-                    // return dispatch(setOpen(true));
-                    return dispatch(setSelectedDialog(row.row.original.id));
-                  }}
-                >
-                  <img
-                    src={imageUrl}
-                    alt=""
-                    className="object-cover w-full h-full rounded-full"
-                  />
-                </button>
-              ) : (
-                <img
-                  src={imageUrl}
-                  alt=""
-                  className="object-cover w-full h-full rounded-full"
-                />
-              )}
-              <Dialog
-                className=""
-                open={selectedDialog === row.row.original.id}
-                onClose={() => dispatch(setSelectedDialog(null))}
-                sx={{
-                  "& .MuiDialog-container": {
-                    "& .MuiPaper-root": {
-                      width: "100%",
-                      maxWidth: "800px", // Set your width here
-                    },
-                  },
-                }}
-              >
-                <DialogTitle>{row.row.original.name}</DialogTitle>
-                <DialogContent className="grid grid-cols-2 gap-4 ">
-                  {row.cell.value.map((imgUrl) => (
-                    <div className="">
-                      <img
-                        src={`http://localhost:3000/uploads/${imgUrl}`}
-                        alt=""
-                        className="object-cover w-full rounded-lg"
-                      />
-                    </div>
-                  ))}
-                </DialogContent>
-                <DialogActions>
-                  <Button
-                    onClick={() => dispatch(setSelectedDialog(null))}
-                    color="secondary"
-                  >
-                    Close
-                  </Button>
-                </DialogActions>
-              </Dialog>
-            </span>
-          </span>
+          <DialogDiv
+            row={row}
+            imageUrl={imageUrl}
+            selectedDialog={selectedDialog}
+            setSelectedDialog={setSelectedDialog}
+          />
         );
       },
     },
@@ -269,7 +227,6 @@ const Reports = () => {
           buttonTitle={"Add Report"}
           buttonLink={"/add-report"}
           noborder
-          // exportCSV={"Export CSV"}
         >
           <CompanyTable
             columns={COLUMNS}

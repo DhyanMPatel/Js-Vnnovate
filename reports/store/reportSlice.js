@@ -7,9 +7,8 @@ import { getImagesbyReports } from "./imageSlice";
 const initialState = {
   isAuthenticated: false,
   user: null,
-  // profile: null,
   isLoading: false,
-  // passwordUpdated: false,
+  passwordUpdated: false,
   notification: [],
   reportData: [],
   reportDetail: [],
@@ -23,14 +22,8 @@ export const getReports = createAsyncThunk(
   async (id, { dispatch }) => {
     try {
       const response = await Axios.get("/report/list");
-      // console.log(`Report response: `, response);
 
       if (response.data.success) {
-        //   response.data.data.map((report) => {
-        //     report.createdAt = dayjs(report.createdAt).format("YYYY-MMM-DD");
-        //     report.updatedAt = dayjs(report.updatedAt).format("YYYY-MMM-DD");
-        //   });
-
         await Promise.all(
           response.data.data.map(async (report) => {
             await dispatch(getImagesbyReports(report.id));
@@ -69,13 +62,39 @@ export const getReports = createAsyncThunk(
   }
 );
 
+/// Add Report
 export const handleAddReport = createAsyncThunk(
   "auth/addReport",
   async (data, { dispatch }) => {
-    console.log(`Final Image Data: `, data);
-    const response = await Axios.post("/report/add", data);
-    if (response.data.success) {
-      toast.success(response.data.message, {
+    try {
+      const response = await Axios.post("/report/add", data);
+      if (response.data.success) {
+        toast.success(response.data.message, {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        return response.data;
+      } else {
+        toast.error(response.data.message, {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        throw new Error(response.data.message);
+      }
+    } catch (error) {
+      toast.error("Failed to add Report", {
         position: "top-right",
         autoClose: 1500,
         hideProgressBar: false,
@@ -85,20 +104,8 @@ export const handleAddReport = createAsyncThunk(
         progress: undefined,
         theme: "light",
       });
-    } else {
-      toast.error(response.data.message, {
-        position: "top-right",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-      throw new Error(data.message);
+      return [];
     }
-    return response;
   }
 );
 
@@ -143,15 +150,10 @@ export const getReportDetail = createAsyncThunk(
       const reportResponse = await Axios.get(`/report/list/${id}`);
       const imageResponse = await Axios.get(`/images/${id}`);
       if (reportResponse.data.success && imageResponse.data.success) {
-        // console.log(`Report Details: `, reportResponse);
-        // console.log(`Image Response: `, imageResponse);
-
         const reportDetailWithImages = {
           ...reportResponse.data.data,
           images: imageResponse.data.data || [],
         };
-
-        // console.log(`report Detail With Images: `, reportDetailWithImages);
 
         return reportDetailWithImages;
       } else {
