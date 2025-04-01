@@ -6,6 +6,7 @@ const initialState = {
   isDownloading: false,
 };
 
+// Get CSV file
 export const downloadCSV = createAsyncThunk(
   "report/download-csv",
   async (_, { dispatch }) => {

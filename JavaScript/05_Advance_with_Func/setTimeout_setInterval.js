@@ -59,7 +59,7 @@ setTimeout(() => clearTimeout(timeId), 10000);
 */
 
 /*
-/// Zero Delay settimeout
+/// Zero Delay setTimeout
 setTimeout(() => {
   console.log("Vnnovate!");
 }, 0);

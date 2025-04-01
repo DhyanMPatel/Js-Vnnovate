@@ -53,7 +53,7 @@ console.log(JSON.stringify(descriptor));
 
 /*
 /// Non-enumerable
-//      - there are a method or property, bydefault it appear in `for...in` loop.
+//      - there are a method or property, by default it appear in `for...in` loop.
 //      - but if we do't like to display during for...in loop (just like the built-in one) then do enumerable: false
 
 let user = {
@@ -75,7 +75,7 @@ console.log(Object.keys(user)); // also exclude "toString()"
 /// Non-Configurable
 //      - `configurable: flase` is sometimes priset for build-in Objects and properties
 //      - Ex -> Math.PI is non-WEC
-//      - we cant redefine property if there are only cofigurable: false. otherwise we can do anything like modify value, delete that, etc.
+//      - we can't redefine property if there are only cofigurable: false. otherwise we can do anything like modify value, delete that, etc.
 
 // let descriptor = Object.getOwnPropertyDescriptor(Math, "PI");
 // console.log(JSON.stringify(descriptor, null, 2));

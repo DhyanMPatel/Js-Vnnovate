@@ -2,27 +2,29 @@
 
 Today, I am working on below list of task:
 
-Date: 31 Mar 2025
+Date: 1 April 2025
 Day: Monday
 
 Project: KMZ
 
-1. Solve issue while we with Images in Add Report page.
+1. Code Optimization on Frontend
 
 ## Work done:
 
-Date: 31 Mar 2025
+Date: 1 April 2025
 Day: Monday
 
 Today, I am working on below list of task:
 
 Project - KMZ,
 
-1. Solve the issue on add report with disha. - Done
-2. During edit report reduce loading time on reorder Images using state. - Done
-3. solve infinite re-rendering issue of report table page - Done
-   - When user comes from add Report to Reports page then it will not render UI because
-     use async with useEffect
-4. Implement validation to prevent duplicate report names in Add report page - Done
+1. Optimize code on Frontend side - Done
 
-What i do - kal images, Report Table me display karvai thi. Add report wale section bhi khatam ho gaya. At last CSV Download me temporary link generate karke csv file download karke dekh liya tha.
+   - Checked all api calls.
+   - Remove unnecessary code
+
+2. fix delete option on filter - Done
+
+   - On filter, delete button will delete report but UI is not updating. so fixed it.
+
+3. Implement validation to prevent duplicate report names in Edit report page - Done

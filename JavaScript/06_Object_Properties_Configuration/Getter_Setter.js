@@ -5,7 +5,7 @@
 
 /*
 /// Getter & Setter
-//      - useing `get` & `set` we create accessor Property but look like function but we call as property
+//      - useing `get` & `set` we create accessor Property that look like a function but we call as property
 //      - property can be either an accessor or data property, not both.
 
 let obj = {
@@ -13,12 +13,12 @@ let obj = {
   lastName: "Rajput",
   location: "Ahm",
   age: 19,
-  get Address(){
+  get Address() {
     return `at ${this.location}`;
   },
-  set Address(value){
+  set Address(value) {
     this.location = value;
-  }
+  },
 };
 obj.Address = "Surat";
 console.log(obj.Address); // Return - at Surat
@@ -30,6 +30,8 @@ Object.defineProperty(obj, "fullName", {
   set(value) {
     [this.firstName, this.lastName] = value.split(" ");
   },
+  enumerable: true,
+  configurable: true,
 });
 obj.fullName = "Dhyan Patel";
 console.log(obj.fullName);

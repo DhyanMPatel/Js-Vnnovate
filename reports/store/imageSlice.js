@@ -7,10 +7,11 @@ const initialState = {
   user: null,
   isLoading: false,
   reportImages: [],
-  selectedDialog: null,
   reorderedImages: [],
+  selectedImages: [],
 };
 
+// Get all Images
 export const getImages = createAsyncThunk(
   "auth/getImages",
   async (id, { dispatch }) => {
@@ -35,6 +36,7 @@ export const getImages = createAsyncThunk(
   }
 );
 
+// Get Images by Report Caategory Id
 export const getImagesbyReports = createAsyncThunk(
   "auth/get-Images-by-Reports",
   async (reportCategoryId, { rejectWithValue }) => {
@@ -60,31 +62,7 @@ export const getImagesbyReports = createAsyncThunk(
   }
 );
 
-export const uploadImages = createAsyncThunk(
-  "auth/upload-images",
-  async (reportCategoryId, data, { dispatch }) => {
-    try {
-      const response = await Axios.post(
-        `/images/upload/${reportCategoryId}`,
-        data
-      );
-      return response;
-    } catch (error) {
-      toast.error("Failed to upload Images", {
-        position: "top-right",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-      return [];
-    }
-  }
-);
-
+// Re-order images
 export const reorderImages = createAsyncThunk(
   "auth/reorder-images",
   async ({ reportCategoryId, data }, { dispatch }) => {
@@ -154,16 +132,6 @@ const ImageSlice = createSlice({
         state.isLoading = false;
       });
     builder
-      .addCase(uploadImages.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(uploadImages.fulfilled, (state, action) => {
-        state.isLoading = false;
-      })
-      .addCase(uploadImages.rejected, (state) => {
-        state.isLoading = false;
-      });
-    builder
       .addCase(reorderImages.pending, (state) => {
         state.isLoading = true;
       })
@@ -180,7 +148,6 @@ export const {
   logoutSuccess,
   gotoLogin,
   setOpen,
-  // setSelectedDialog,
   setSelectedImages,
   setReorderedImages,
 } = ImageSlice.actions;

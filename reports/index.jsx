@@ -32,29 +32,6 @@ const Reports = () => {
   const { reportImages } = useSelector((state) => state.reportImages);
   const [selectedDialog, setSelectedDialog] = useState(null);
 
-  useEffect(() => {
-    dispatch(setMonth(null));
-    dispatch(getReports());
-    dispatch(getImages());
-    console.log(`Rendering...`);
-  }, []);
-
-  // useEffect(() => {
-  //   const ReportWI = reportData.map((report) => ({
-  //     ...report,
-  //     imageUrls: reportImages
-  //       .filter((img) => img.reportCategoryId === report.id)
-  //       .sort((a, b) => a.order - b.order)
-  //       .map((img) => img.url),
-  //     images: reportImages
-  //       .filter((img) => img.reportCategoryId === report.id)
-  //       .sort((a, b) => a.order - b.order),
-  //   }));
-
-  //   dispatch(setReportWithImage(ReportWI));
-  //   // console.log(`reportData, reportImages`);
-  // }, [reportData, reportImages]);
-
   const reportWI = useMemo(() => {
     return reportData.map((report) => ({
       ...report,
@@ -68,10 +45,19 @@ const Reports = () => {
     }));
   }, [reportData, reportImages]);
 
+  // get Reports and Images
+  useEffect(() => {
+    dispatch(setMonth(null));
+    dispatch(getReports());
+    dispatch(getImages());
+  }, []);
+
+  // Merge Reports and Images
   useEffect(() => {
     dispatch(setReportWithImage(reportWI));
-  }, [dispatch, reportWithImage]);
+  }, [dispatch, reportWithImage, reportData, reportImages]);
 
+  // Filter based on month
   useEffect(() => {
     if (month) {
       const timeoutId = setTimeout(() => {
@@ -87,11 +73,7 @@ const Reports = () => {
       }, 300);
       return () => clearTimeout(timeoutId);
     }
-    // else {
-    //   dispatch(getReports());
-    // }
-    console.log(`month`);
-  }, [month]);
+  }, [month, reportData, filteredReport]);
 
   const COLUMNS = [
     {
@@ -190,6 +172,7 @@ const Reports = () => {
     },
   ];
 
+  // Delete report
   const deletereport = async (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -206,15 +189,13 @@ const Reports = () => {
         let response = await dispatch(handleDeleteReport(id)).unwrap();
         if (response.data.success) {
           dispatch(getReports());
+          dispatch(setFilteredReport(filtered));
         } else {
           toast.error(response.data.message);
         }
       }
     });
   };
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <>

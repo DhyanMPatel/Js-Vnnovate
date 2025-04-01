@@ -1,4 +1,4 @@
-# Prototype
+# Prototype (special object property)
 
 - Object Reference by [prototype] is called `Prototype`
 - Objects access their propterties, methods, funcnality or inject into this via `prototype`
@@ -63,3 +63,33 @@
 
      console.log(Object.getPrototypeOf(obj2)); // Return - { type:"Car", name:"BMW" }
      ```
+
+### Notes
+
+- **for...in** loop can iterate over inherited properties too.
+- If we call `obj.method()` and method is taken from prototype, **this** still referes to obj. So method work for current object even if they are inherited.
+
+  ```js
+  // animal has methods
+  let animal = {
+    walk() {
+      if (!this.isSleeping) {
+        alert(`I walk`);
+      }
+    },
+    sleep() {
+      this.isSleeping = true;
+    },
+  };
+
+  let rabbit = {
+    name: "White Rabbit",
+    __proto__: animal,
+  };
+
+  // modifies rabbit.isSleeping only for rabbit object.
+  rabbit.sleep();
+
+  alert(rabbit.isSleeping); // true
+  alert(animal.isSleeping); // undefined (no such property in the prototype)
+  ```

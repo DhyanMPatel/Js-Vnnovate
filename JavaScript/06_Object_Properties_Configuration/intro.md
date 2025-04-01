@@ -5,18 +5,18 @@
   - Bydefault these all are `true`.
   1. writable - if `true`, the value can be changed, otherwise it's read-only
   2. enumirable - if `true`, then listed in loop, otherwise not listed
-  3. configurable - if `true`, then properties can be deleted and thes attributes can be modified, otherwise not
-- Display Flags
+  3. configurable - if `true`, then properties can be deleted and these attributes can be modified, otherwise not
+- Access Flags
 
   ```js
   let descriptor = Object.getOwnPropertyDescriptor(obj, propertyName);
   let descriptors = Object.getOwnPropertyDescriptors(obj);
   ```
 
-- Change Flags
+- Create properties with Flags
 
   ```js
-  Object.defineProperty(obj, propertyNam, descriptor)
+  Object.defineProperty(obj, propertyName, descriptor)
   Object.defineProperties(obj,{prop1: des1, prop2: des2, ...})
   ```
 

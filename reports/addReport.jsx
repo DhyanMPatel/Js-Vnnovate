@@ -31,7 +31,7 @@ const AddReport = () => {
       name: yup
         .string()
         .required("Report name is Required")
-        .max(30, "Maximum 30 characters are accepted")
+        .max(255, "Maximum 255 characters are accepted")
         .notOneOf(availableReports, "This Report is already available."),
       phoneNumber: yup
         .string()
@@ -67,6 +67,7 @@ const AddReport = () => {
     mode: "all",
   });
 
+  // Handle Input Images
   const handleSelectedImages = (event) => {
     const files = Array.from(event.target.files);
 
@@ -76,7 +77,6 @@ const AddReport = () => {
           ...prev,
           { file, preview: URL.createObjectURL(file) },
         ]);
-        // console.log(`selected Images: `, selectedImages);
       } else {
         alert("This image is already selected.");
       }
@@ -105,6 +105,7 @@ const AddReport = () => {
     dispatch(setSelectedImages([...selectedImages, ...newImages]));
   };
 
+  // Run after Drag end
   const handleDragEnd = (result) => {
     if (!result.destination) return;
 
@@ -115,18 +116,19 @@ const AddReport = () => {
     dispatch(setSelectedImages(reorderedImages));
   };
 
+  // Run when remove button click
   const handleRemoveImage = (index) => {
     const updatedImages = selectedImages.filter((_, i) => i !== index);
     dispatch(setSelectedImages(updatedImages));
   };
 
   useEffect(() => {
-    dispatch(getReports());
     if (selectedImages && selectedImages.length > 0) {
       dispatch(setSelectedImages([]));
     }
   }, []);
 
+  // Run on add Report button click
   const onSubmit = async (data) => {
     const ReportData = new FormData();
     ReportData.append("name", data.name);
@@ -207,10 +209,10 @@ const AddReport = () => {
 
                 {/* Image Upload Section */}
                 <div className="flex flex-col items-center space-y-4 w-full">
-                  <div className="border-2 flex items-center justify-center w-full h-96 relative cursor-pointer">
+                  <div className="border-2 flex items-center justify-center w-full h-96 relative">
                     <label
                       htmlFor="fileInput"
-                      className="w-full h-full flex items-center justify-center"
+                      className="w-full h-full flex items-center justify-center cursor-pointer"
                     >
                       {selectedImages && selectedImages.length > 0 ? (
                         <DragDropContext onDragEnd={handleDragEnd}>

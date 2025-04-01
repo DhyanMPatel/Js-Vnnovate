@@ -17,6 +17,7 @@ const initialState = {
   reportWithImage: [],
 };
 
+// Get Reports
 export const getReports = createAsyncThunk(
   "auth/getreports",
   async (id, { dispatch }) => {
@@ -26,7 +27,6 @@ export const getReports = createAsyncThunk(
       if (response.data.success) {
         await Promise.all(
           response.data.data.map(async (report) => {
-            await dispatch(getImagesbyReports(report.id));
             report.createdAt = dayjs(report.createdAt).format("YYYY-MMM-DD");
             report.updatedAt = dayjs(report.updatedAt).format("YYYY-MMM-DD");
           })
@@ -109,6 +109,7 @@ export const handleAddReport = createAsyncThunk(
   }
 );
 
+// Delete Report
 export const handleDeleteReport = createAsyncThunk(
   "auth/delete-report",
   async (id, { dispatch }) => {
@@ -185,6 +186,7 @@ export const getReportDetail = createAsyncThunk(
   }
 );
 
+// Update Report
 export const UpdateReportDetail = createAsyncThunk(
   "report/update-report",
   async ({ id, data }, { dispatch }) => {

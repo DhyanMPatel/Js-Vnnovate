@@ -17,44 +17,52 @@ import {
 import { reorderImages, setReorderedImages } from "./store/imageSlice";
 import { toast } from "react-toastify";
 
-const schema = yup
-  .object({
-    name: yup
-      .string()
-      .required("Report name is Required")
-      .max(30, "Maximum 30 characters are accepted"),
-    phoneNumber: yup
-      .string()
-      .required("Phone number is required")
-      .matches(/^[0-9]{10}$/, "Phone number must be exactly 10 digits"),
-    address: yup
-      .string()
-      .required("Address is required")
-      .max(100, "Maximum 100 characters are accepted"),
-    images: yup
-      .mixed()
-      .test("fileSize", "File size should be less than 2MB", (files) => {
-        if (!files || files.length === 0) return true;
-        return Array.from(files).every((file) => file.size <= 2 * 1024 * 1024);
-      })
-      .test("fileType", "Only image files are allowed", (files) => {
-        if (!files || files.length === 0) return true;
-        return Array.from(files).every((file) =>
-          ["image/jpeg", "image/png", "image/jpg"].includes(file.type)
-        );
-      }),
-  })
-  .required();
-
 const EditReport = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { id } = useParams();
-  const { reportDetail, isLoading } = useSelector((state) => state.report);
+  const { reportData, reportDetail, isLoading } = useSelector(
+    (state) => state.report
+  );
   const { reorderedImages } = useSelector((state) => state.reportImages);
 
   const orderedImages = reportDetail?.images ? [...reportDetail.images] : [];
 
+  const availableReports = reportData
+    .filter((report) => report.name != reportDetail.name)
+    .map((report) => report.name);
+
+  const schema = yup
+    .object({
+      name: yup
+        .string()
+        .required("Report name is Required")
+        .max(255, "Maximum 255 characters are accepted")
+        .notOneOf(availableReports, "This Report is already available."),
+      phoneNumber: yup
+        .string()
+        .required("Phone number is required")
+        .matches(/^[0-9]{10}$/, "Phone number must be exactly 10 digits"),
+      address: yup
+        .string()
+        .required("Address is required")
+        .max(100, "Maximum 100 characters are accepted"),
+      images: yup
+        .mixed()
+        .test("fileSize", "File size should be less than 2MB", (files) => {
+          if (!files || files.length === 0) return true;
+          return Array.from(files).every(
+            (file) => file.size <= 2 * 1024 * 1024
+          );
+        })
+        .test("fileType", "Only image files are allowed", (files) => {
+          if (!files || files.length === 0) return true;
+          return Array.from(files).every((file) =>
+            ["image/jpeg", "image/png", "image/jpg"].includes(file.type)
+          );
+        }),
+    })
+    .required();
   const {
     register,
     formState: { errors },
@@ -62,12 +70,14 @@ const EditReport = () => {
     setValue,
   } = useForm({ resolver: yupResolver(schema), mode: "all" });
 
+  // Get perticular report detail
   useEffect(() => {
     if (!reportDetail || reportDetail.id !== Number(id)) {
       dispatch(getReportDetail(id));
     }
   }, [dispatch, id, reportDetail]);
 
+  // Set value of all fields
   useEffect(() => {
     if (id == reportDetail?.id) {
       setValue("name", reportDetail?.name);
@@ -79,6 +89,7 @@ const EditReport = () => {
     }
   }, [reportDetail, id, setValue, reorderedImages]);
 
+  // Run on edit Report button click
   const onSubmit = async (data) => {
     let newData = { id: id, data };
 
@@ -91,6 +102,7 @@ const EditReport = () => {
     }
   };
 
+  // Run after drag end
   const handleDragEnd = (result) => {
     if (!result.destination) return;
 
@@ -171,6 +183,7 @@ const EditReport = () => {
                           droppableId="imageList"
                           direction="horizontal"
                         >
+                          {/* /// Droppable area */}
                           {(provided) => (
                             <div
                               ref={provided.innerRef}
@@ -186,6 +199,7 @@ const EditReport = () => {
                                   draggableId={image.id.toString()}
                                   index={index}
                                 >
+                                  {/* // Images */}
                                   {(provided) => (
                                     <div
                                       ref={provided.innerRef}

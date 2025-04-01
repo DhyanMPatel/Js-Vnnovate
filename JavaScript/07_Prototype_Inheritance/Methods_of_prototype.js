@@ -2,6 +2,7 @@
 //      1. Object.getPrototypeOf(obj) - returns the [[Prototype]] of obj
 //      2. Object.setPrototypeOf(obj, proto) - sets the [[Prototype]] of obj to proto.
 //      3. Object.create(proto[, descriptors]) - create an empty Object with given proto as [prototype] and optional property descriptors.
+//      4. __proto__ - use same as above (old method)
 
 /*
 let animal = {

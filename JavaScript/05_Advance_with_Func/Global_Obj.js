@@ -16,3 +16,6 @@ window.currentUser = {
 };
 alert(currentUser.name); // John
 alert(window.currentUser.name); // John
+
+sample = 5;
+console.log(`sample: `, window.sample);

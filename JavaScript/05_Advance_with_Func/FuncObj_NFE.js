@@ -2,7 +2,7 @@
 //      - in JS, Functions are Action Objects
 //      - function have 2 Built-in properties
 //          1. name
-//          2. length
+//          2. length (of parameters)
 //      - Object method have name too.
 
 /*
