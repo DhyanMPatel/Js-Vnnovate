@@ -3,7 +3,7 @@
 /// Transparent Caching
 //  - When to use?
 //      - when slow like function takes significant amount of time.
-//      - when function call with same input
+//      - when function call with same input give same output without calling slow function.
 //      - main work of this caching is optimize that code using caching
 
 //  - Banefit
@@ -138,7 +138,7 @@ function cachingDecorator(func, hash) {
 
 function hash() {
   return [].join.call(arguments); // This is called borrowing
-}
+}       // Array give .join() to arguments (array like object) for use is known as Borrowing.
 */
 
 ///   Experiments
@@ -170,6 +170,7 @@ for (let args of work.calls) {
 }
 */
 
+/*
 //      2) Delay Decorator
 function func(x) {
   console.log(x);
@@ -186,3 +187,4 @@ function delay(func, ms) {
     setTimeout(() => func.apply(this, arguments), ms);
   };
 }
+*/

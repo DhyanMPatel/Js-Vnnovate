@@ -245,6 +245,7 @@ const AddReport = () => {
                                         <button
                                           type="button"
                                           onClick={(e) => {
+                                            e.preventDefault();
                                             e.stopPropagation();
                                             handleRemoveImage(index);
                                           }}
