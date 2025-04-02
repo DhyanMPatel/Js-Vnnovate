@@ -2,29 +2,38 @@
 
 Today, I am working on below list of task:
 
-Date: 1 April 2025
+Date: 2 April 2025
 Day: Monday
 
-Project: KMZ
+Project:
 
-1. Code Optimization on Frontend
+1. Learn about theme integration in React.
 
 ## Work done:
 
-Date: 1 April 2025
+Date: 2 April 2025
 Day: Monday
 
 Today, I am working on below list of task:
 
-Project - KMZ,
+1. Know about Theme integration in React - Done
+   1.1. What is Theme integration ?
+   1.2. know how many ways to integrate theme in React.
 
-1. Optimize code on Frontend side - Done
+2. Download Theme for react - Done
+   2.1. Fix issue while project run
+   2.2. Need to install 18 version of node
+   2.3. Setup React Theme project
+   2.4. Know Folder Structure
 
-   - Checked all api calls.
-   - Remove unnecessary code
+3. Explore Folder Structure - Done
+   3.1. explore ThemeContext file
+   3.2. Try demo themes from ThemeDemo file
 
-2. fix delete option on filter - Done
+4. Modification - Done
+   4.1. Try to add one more color and use it
+   4.2. Try to add one more google font and use it
 
-   - On filter, delete button will delete report but UI is not updating. so fixed it.
+## Others
 
-3. Implement validation to prevent duplicate report names in Edit report page - Done
+themeforest-karciz-react-redux-ticketing-admin-dashboard
