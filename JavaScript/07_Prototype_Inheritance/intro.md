@@ -64,6 +64,54 @@
      console.log(Object.getPrototypeOf(obj2)); // Return - { type:"Car", name:"BMW" }
      ```
 
+3. Object.create()
+
+    - Syntax
+
+        ```js
+          Object.create(proto[, descriptors])
+        ```
+
+   - Example
+
+     ```js
+     let animal = {
+       eats: true,
+     };
+     let dog = Object.create(animal, {
+       jumps: {
+         value: false,
+       },
+     });
+     console.log(Object.getPrototypeOf(dog)); // Return - { eats: true }
+     console.log(dog.jumps); // Return - false
+     console.log(dog.eats); // Return - true
+     console.log(animal.jumps); // Return - undefined
+     ```
+
+# Primitives
+
+- Primitives are not an object. if we try to access their properties, temporary wrapper objects are created using built-in constructors `String`, `Number`, `Boolean`. they provide the methods and disappear.
+
+- Interesting This is that `Undefined` & `Null` has no have Wrapper Object. we can't make method on **undefined** and **null**.
+
+- If there are already any method is available and we override that method is bad Idea. So we take one approach thats **Polyfilling**.
+
+  ```js
+  // Without Polyfilling
+  String.prototype.show = function () {
+    console.log(this);
+  }
+
+  // With Polyfilling
+  if(!String.prototype.show){
+    String.prototype.show = function () {
+      console.log(this);
+    }
+  }
+
+  "Boom".show(); // Return - Boom
+
 ### Notes
 
 - **for...in** loop can iterate over inherited properties too.

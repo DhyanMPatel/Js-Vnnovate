@@ -4,6 +4,10 @@
 - Class have computed methods name using `[...]`
 - class fields is that they are set on individual objects, not `User.prototype`
 
+### Note 
+  1. What is Class?
+      - Class is kind of **Function**.
+
 ## Difference between Class & Function
 
 1. a function created by class is labelled by a special internal property [[IsClassConstructor]]: true.
