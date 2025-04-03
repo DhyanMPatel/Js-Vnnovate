@@ -61,6 +61,9 @@ tiger.hide();
 tiger.howLong();
 tiger.run(40);
 
+// If there are not used "super.run()" then how to call parent class method?
+Object.getPrototypeOf(WildAnimal.prototype).run.call(tiger, 50);  // Works fine 
+
 /*
 /// Experiment
 class Animal {

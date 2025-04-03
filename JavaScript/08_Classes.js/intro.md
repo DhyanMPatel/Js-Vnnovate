@@ -31,9 +31,9 @@
 
 ## override method / constructor
 
-- We can make same name method in chield class, that is called 'override method'.
-- Using `super.Pmethod()` to call parent method from chield class
-- Bydefault chield class create constructor,
+- We can make same name method in child class, that is called 'override method'.
+- Using `super.Pmethod()` to call parent method from child class
+- Bydefault child class create constructor,
 
   ```js
   constructor(...args){
