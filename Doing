@@ -2,38 +2,37 @@
 
 Today, I am working on below list of task:
 
-Date: 2 April 2025
-Day: Monday
+Date: 3 April 2025
+Day: Thursday
 
 Project:
 
-1. Learn about theme integration in React.
+1. Theme Integration in Theme project
 
 ## Work done:
 
-Date: 2 April 2025
-Day: Monday
+Date: 3 April 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
-1. Know about Theme integration in React - Done
-   1.1. What is Theme integration ?
-   1.2. know how many ways to integrate theme in React.
-
-2. Download Theme for react - Done
-   2.1. Fix issue while project run
-   2.2. Need to install 18 version of node
-   2.3. Setup React Theme project
-   2.4. Know Folder Structure
-
-3. Explore Folder Structure - Done
-   3.1. explore ThemeContext file
-   3.2. Try demo themes from ThemeDemo file
-
-4. Modification - Done
-   4.1. Try to add one more color and use it
-   4.2. Try to add one more google font and use it
+1. Logo - Done
+   - Download vnnovate logo and convert to svg file
+   - Implement logo
+2. Sidebar - Done
+   - Remove all tabs
+   - add Dashboard, Customers, and Logout tab
 
 ## Others
 
 themeforest-karciz-react-redux-ticketing-admin-dashboard
+
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M409 1103 c-13 -16 -12 -17 4 -4 9 7 17 15 17 17 0 8 -8 3 -21 -13z"/>
+</g>
+</svg>

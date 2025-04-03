@@ -23,7 +23,6 @@ console.log(user.age); // Return - 19
 console.log(User.prototype.age); // Return - undefined
 */
 
-/*
 /// Class Expression
 let Animal = class {
   isWalk() {
@@ -34,12 +33,11 @@ let Animal = class {
 /// Named Class Expression
 let NCE = class MyClass {
   sayHi() {
-    console.log(MyClass); // MyClass name is visible only inside the class
+    console.log("Hii, with name", MyClass); // MyClass name is visible only inside the class
   }
 };
 new NCE().sayHi(); // works, shows MyClass definition
 // console.log(MyClass); // error, MyClass name isn't visible outside of the class
-*/
 
 /*
 /// Can make Dynamically
@@ -102,7 +100,7 @@ console.log(cat.name); // Return - Cat
 new Animal("Budy").sayHi(); // Return - Hii, Budy
 */
 
-
+/*
 // bound method with class field
 class Button {
   constructor(val) {
@@ -114,8 +112,9 @@ class Button {
 }
 let btn = new Button("Btn");
 setTimeout(btn.click, 1000);
+*/
 
-
+/*
 /// Experiment
 class Clock {
   constructor(template) {
@@ -170,3 +169,4 @@ exClock.start();
 setTimeout(() => {
   exClock.stop();
 }, 10000);
+*/

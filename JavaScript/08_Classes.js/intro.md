@@ -4,9 +4,10 @@
 - Class have computed methods name using `[...]`
 - class fields is that they are set on individual objects, not `User.prototype`
 
-### Note 
-  1. What is Class?
-      - Class is kind of **Function**.
+### Note
+
+1. What is Class?
+   - Class is kind of **Function**.
 
 ## Difference between Class & Function
 
@@ -15,6 +16,25 @@
    - In Most JS engine, String representation of class constructor starts with class
 2. Class are non-Enumerable. A class definition sets `Enumerable` to `false`.
 3. Class are always `use Strict`. So inside the class construct is automatically in strict mode
+
+## Class Expression
+
+- Just like functions, they also contain expression just like function expression
+
+  ```js
+  let User = class {
+    sayHi() {
+      console.log("Hii");
+    }
+  };
+
+  let User1 = class MyClass {
+    sayHi() {
+      console.log("Hii, with name", MyClass); // MyClass accessible from inside only
+    }
+  };
+  new User1.sayHi(); // Return - Hii, with name [class MyClass] (MyClass definition)
+  ```
 
 ## Getter/Setter
 
