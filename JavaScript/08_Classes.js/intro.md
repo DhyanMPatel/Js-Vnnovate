@@ -42,12 +42,55 @@
 
 ## Computed Method Name
 
-### Making bound methods with class fields
+- We can put method name using brackets `[...]`
+
+  ```js
+  class User {
+    ["say" + "Hi"]() {
+      alert("Hello");
+    }
+  }
+
+  new User().sayHi(); // Return - Hello
+  ```
+
+##
+
+## Making bound methods with class fields
+
+  ```js
+  class Button {
+    constructor(value) {
+      this.value = value;
+    }
+
+    click() {
+      alert(this.value);
+    }
+  }
+
+  let button = new Button("hello");
+
+  setTimeout(button.click, 1000); // undefined
+  ```
 
 - If we use normal function then there is possibility to loss `this`
 - solution of that is,
   1. Pass Wrapper-Func use `Arrow Function`, such as setTimeout(()=> button.click(), 1000)
   2. Bind the Method to Object, e.g. in the constructor
+
+- But class provide another syntax,
+
+```js
+class Button{
+  constructor(name){
+    this.name = name
+  }
+  click = () => {
+    console.log(this.name)
+  }
+}
+```
 
 ## override method / constructor
 

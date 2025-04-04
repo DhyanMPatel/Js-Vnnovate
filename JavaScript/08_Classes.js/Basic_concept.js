@@ -16,12 +16,13 @@ class User {
   }
   // ...
 }
+// console.log(User.name); // Return - User, class name is User
 
-/*
-let user = new User();
-console.log(user.age); // Return - 19
-console.log(User.prototype.age); // Return - undefined
-*/
+// let user = new User("Dhyan");
+// console.log(user.age); // Return - 19
+// console.log(User.prototype.age); // Return - undefined
+// console.log(Object.getOwnPropertyNames(User.prototype)); // Return - [ 'constructor', 'giveName', 'sayHi' ]
+
 
 /// Class Expression
 let Animal = class {
@@ -30,14 +31,30 @@ let Animal = class {
   }
 };
 
+/*
 /// Named Class Expression
 let NCE = class MyClass {
+  name = "Vnno";
   sayHi() {
-    console.log("Hii, with name", MyClass); // MyClass name is visible only inside the class
+    console.log("Hii, with name", MyClass, " And Var name: ", this.name); // MyClass name is visible only inside the class
   }
 };
-new NCE().sayHi(); // works, shows MyClass definition
+// new NCE().sayHi(); // works, shows MyClass definition
+console.log(NCE.prototype.name); // Return - undefined, name is not in prototype
 // console.log(MyClass); // error, MyClass name isn't visible outside of the class
+
+NCE.prototype.name = "Vnnovate";
+console.log(NCE.prototype.name); // Return - undefined, name is not in prototype
+
+class test extends NCE {
+  constructor() {
+    super();
+  }
+
+}
+let testObj = new test();
+// testObj.sayHi(); // works, Return - Hii, with name [class MyClass]  And Var name:  Vnno
+*/
 
 /*
 /// Can make Dynamically
@@ -49,13 +66,13 @@ function makeClass(parse) {
   };
 }
 let DynamicClass = new makeClass("Vnno");
-new DynamicClass().sayHi();
+new DynamicClass().sayHi(); // Return - Hii, Vnno
 */
 
 /*
 let user1 = new User("Vnno");
-user1.sayHi();
-console.log(`user1 Name is ${user1.giveName()}!`);
+user1.sayHi(); // Return - Hii Vnno
+console.log(`user1 Name is ${user1.giveName()}!`); // Return - user1 Name is Vnno!
 
 // class is a function
 console.log(typeof User); // Return - function
@@ -106,12 +123,13 @@ class Button {
   constructor(val) {
     this.value = val;
   }
-  click = () => {
+  clickOk = () => {
     console.log("Clicked", this.value);
   };
 }
 let btn = new Button("Btn");
-setTimeout(btn.click, 1000);
+setTimeout(btn.clickOk, 1000); // Return - Clicked Btn
+console.log(Object.getOwnPropertyNames(Button.prototype)); // Return - [ 'constructor' ] because clickOk is not in prototype
 */
 
 /*
