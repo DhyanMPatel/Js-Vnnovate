@@ -2,26 +2,29 @@
 
 Today, I am working on below list of task:
 
-Date: 3 April 2025
-Day: Thursday
+Date: 4 April 2025
+Day: Friday
 
-Project:
-
-1. Theme Integration in Theme project
+1. Solve Issue with Vnnovate logo in theme project
+2. Create Appointment Management System
 
 ## Work done:
 
-Date: 3 April 2025
-Day: Thursday
+Date: 4 April 2025
+Day: Friday
 
 Today, I am working on below list of task:
 
-1. Logo - Done
-   - Download vnnovate logo and convert to svg file
-   - Implement logo
-2. Sidebar - Done
-   - Remove all tabs
-   - add Dashboard, Customers, and Logout tab
+1. Calender tab
+   1.1. Add Calender tab in sidebar with logo
+   1.2. Change header of Calender
+   1.3. Add list button that display list of events in table form
+   1.4. Made dynamic colour of all events headers
+
+2. Events
+   2.1. Made Events extendable
+   2.2. Made events can be multiple in single day
+   2.3. Implement drag & drop of events between different day
 
 ## Others
 
