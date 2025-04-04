@@ -17,6 +17,7 @@
     "@reduxjs/toolkit": "^2.6.1",
     "@tailwindcss/vite": "^4.0.13",
     "axios": "^1.8.4",
+    "dynamic_grid": "file:",
     "formik": "^2.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

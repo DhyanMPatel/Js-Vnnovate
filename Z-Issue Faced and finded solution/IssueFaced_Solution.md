@@ -40,3 +40,8 @@ Solution: solved using another state (rowsPerPage, colsPerPage).
    Problem: Infinite re-rendering issue of report table page
    Solution: When user comes from add Report to Reports page then UI not render because
    use async with useEffect.
+
+7. Node version change
+   Problem: In Comp pc there are 20V of node and for Theme Integration project need 18V.
+   Solution: Change node version using nvm package.
+   
