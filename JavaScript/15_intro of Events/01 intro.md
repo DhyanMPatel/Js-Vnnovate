@@ -143,7 +143,7 @@ document.addEventListner("DOMContentLoaded", function () {
 - The event object is also available in HTML handlers
 - Property of Event:
 
-  - `event.type` -
+  - `event.type` - Represent event type like click, mouseover, mousemove, keydown, keyup, etc.
   - `event.currentTarget` - That’s exactly the same as `this`, unless the handler is an arrow function, or its this is bound to something else, then we can get the element from `event.currentTarget`.
   - `event.clientX` / `event.clientY` - Window-relative coordinates of the cursor, for pointer events.
 

@@ -59,7 +59,7 @@ input.onblur = function () {
 
 - tabIndex is interact elements like: `<button>`, `<input>`, `<select>`, `<a>` and so on.
 - such as `<div>`, `<span>`, `<table>` – are unfocusable by default. and not focusable anyway.
-- Any element becomes focusable if it has `tabindex`. omcluding `div`, `span`, `table`, so on.
+- Any element becomes focusable if it has `tabindex`. including `div`, `span`, `table`, so on.
 - if we have two elements, the first has `tabindex="1"`, and the second has `tabindex="2"`, then pressing Tab while in the first element – moves the focus into the second one.
 - If there elem has not any tabIndex then they focused at last of `tabindex` order.
 - There are two special values:
@@ -83,7 +83,7 @@ input.onblur = function () {
 
 ## Delegation
 
-- Events `focus` and `blur` do not bubble. Can use capturing state `true`.
+- Events `focus` and `blur` do not bubble. Can use capturing state `true` (can capture).
 - But using `focusin` & `focusout` events – exactly the same as `focus/blur`, but they bubble.
 
 ```html

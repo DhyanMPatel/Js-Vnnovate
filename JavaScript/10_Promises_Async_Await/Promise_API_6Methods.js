@@ -1,4 +1,4 @@
-/// Promise Methods
+ /// Promise Methods
 //      - There are 6 static method
 
 /*

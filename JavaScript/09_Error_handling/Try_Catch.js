@@ -3,9 +3,9 @@
 //      - try...catch works synchronously
 
 //      - Error has 3 main Properties
-//        1. err.name - Error name
-//        2. err.message - Texual message
-//        3. err.stack - Current call Stack
+//        1. err.name - type of Error 
+//        2. err.message - Description of Error
+//        3. err.stack - stack trace (where error happened)
 //      - throw - generate an error
 //      - Error standerd type - Error, SyntaxError, ReferenceError, TypeError, HttpError, DbError, NotFoundError
 //      - Error can be inherite from above standerd type. 
@@ -26,7 +26,7 @@ try {
 // because the function itself is executed later, when the engine has already left the try...catch construct.
 try {
   setTimeout(function () {
-    noSuchVariable; // script will die here
+    noSuchVariable; // error, because script will die here
   }, 1000);
 } catch (err) {
   console.log("won't work");
@@ -50,7 +50,7 @@ setTimeout(function(){
 /// Modern JS
 try{
   lalala;
-} catch {
+} catch { // <-- without (err)
   console.log("Error has occurred!");
 }
 */

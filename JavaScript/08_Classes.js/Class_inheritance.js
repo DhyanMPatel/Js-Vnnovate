@@ -61,8 +61,15 @@ tiger.hide();
 tiger.howLong();
 tiger.run(40);
 
+let animal = new Animal("Animal");
+// console.log(animal instanceof Animal); // Return - true
+// console.log(animal instanceof WildAnimal); // Return - false
+
 // If there are not used "super.run()" then how to call parent class method?
 Object.getPrototypeOf(WildAnimal.prototype).run.call(tiger, 50);  // Works fine 
+
+// console.log(tiger instanceof WildAnimal); // Return - true
+// console.log(tiger instanceof Animal); // Return - true
 
 /*
 /// Experiment

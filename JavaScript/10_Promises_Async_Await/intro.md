@@ -43,3 +43,19 @@ new Promise(function (resolve, reject) {
 - `await` accepts “thenables”.
 - Async class methods
 - `async/await` works well with `Promise.all`
+
+# Microtask VS Macrotask
+
+## Microtask
+
+- MicroTask are `lightweight Asynchronous operations`
+- MicroTask are **Stored in Microtask queue** (internal of JS engine).
+- MicroTask **run just after synchronous task** completed.
+- Ex:- `Promise.then()`, `Promise.catch()`, `async/await`, etc.
+
+## Macrotask
+
+- Macrotask are `bigger Asynchronous operations`.
+- Macrotask are **Stored in Macrotask queue**.
+- Macrotask **run after Microtask queue is empty**.
+- Ex:- `setTimeout()`, `setInterval()`, `addEventListener`, etc.

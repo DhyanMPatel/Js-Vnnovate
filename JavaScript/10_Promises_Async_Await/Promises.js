@@ -10,11 +10,13 @@
 //          2. A finally handler “passes through” the result or error to the next suitable handler.
 //          3. A finally handler also shouldn’t return anything
 
-/*
-let promise = new Promise(function (resolve, reject) {
-  //   resolve("done!");
+// Finally use for Cleanup Task (like closing connections, hiding loaders, etc.)
 
-  reject(new Error("Whoops!")); // ignored
+
+let promise = new Promise(function (resolve, reject) {
+    resolve("done!");
+
+  // reject(new Error("Whoops!")); // ignored
   setTimeout(() => resolve("Complete"), 1000); // ignored
 });
 
@@ -30,7 +32,7 @@ promise
   )
 
   .catch((error) => console.log(error));
-*/
+
 
 /// Experiment
 //        2) Delay with Promise

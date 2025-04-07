@@ -72,7 +72,7 @@
     div.outerHTML = "<p>A new element</p>"; // (*)
 
     // Wow! 'div' is still the same!
-    alert(div.outerHTML); // <div id="elem">Hello <b>World</b></div> (**)
+    alert(div.outerHTML); // <div id="elem">Hello <b>World</b></div> (**) it still logs the old <div>, but not longer in DOM.
   </script>
   ```
 

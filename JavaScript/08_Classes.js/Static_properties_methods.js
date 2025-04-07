@@ -6,8 +6,13 @@ class User {
   static staticMethod() {
     console.log(`This is Static Method ${this === User}`);
   }
+  sayHii() {
+    console.log(`Hii, User!`);
+  }
 }
 User.staticMethod();
+console.log(User.prototype.staticMethod()); // Error, because static method is not available in Prototype.
+console.log(User.prototype.sayHii()); // Return - Hii, User! 
 
 class Article {
   static publisher = "Vnn";

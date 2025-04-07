@@ -27,7 +27,7 @@
 
 ## Event MouseEnter and MouseLeave
 
-- Events `mouseenter/mouseleave` are like `mouseover/mouseout`. hey [trigger when the mouse pointer enters/leaves] the element.
+- Events `mouseenter/mouseleave` are like `mouseover/mouseout`. They [trigger when the mouse pointer enters/leaves] the element.
 - When the pointer enters an element – `mouseenter` triggers. exect location not metter.
 - When the pointer leave an element - `mouseleave` triggers.
 - we can't Event Delegation with `mouseenter`/`mouseleave`.

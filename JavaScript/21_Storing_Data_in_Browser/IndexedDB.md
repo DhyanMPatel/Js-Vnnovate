@@ -32,6 +32,8 @@
 
   ```js
   db.createObjectStore(name[, keyOptions]);
+  db.deleteObjectStore(name[, keyOptions]);
+
   ```
 
   - `name` is the store name, e.g. `"books"` for books, `"students"`, etc.

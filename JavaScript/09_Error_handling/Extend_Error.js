@@ -1,11 +1,11 @@
 /// Extending Error
 
-class ValidationError extends Error{
-    constructor(message){
-        super(message)
-        this.name = "ValidationError"
-    }
-}
+// class ValidationError extends Error {
+//   constructor(message) {
+//     super(message)
+//     this.name = "ValidationError"
+//   }
+// }
 
 /*
 function test(){
@@ -22,29 +22,29 @@ try{
 */
 
 /*
-function readData(json){
-    let user = JSON.parse(json)
+function readData(json) {
+  let user = JSON.parse(json)
 
-    if(!user.age){
-        throw new ValidationError("No Field: Age")
-    }
-    if(!user.name){
-        throw new ValidationError("No Field: Name")
-    }
-    return user;
+  if (!user.age) {
+    throw new ValidationError("No Field: Age")
+  }
+  if (!user.name) {
+    throw new ValidationError("No Field: Name")
+  }
+  return user;
 }
 
-try{
-    let json = '{ "age": 30 }';
-    let user = readData(json);
-} catch(err){
-    if(err instanceof SyntaxError){
-        console.log("Invalid JSON");
-    } else if (err instanceof ValidationError){
-        console.log(`Invalid Data: ${err.message}`);
-    } else {
-        throw err;
-    }
+try {
+  let json = '{ "age": 30 }';   // { bad Json }   // {"name": "Vnn"}
+  let user = readData(json);
+} catch (err) {
+  if (err instanceof SyntaxError) {
+    console.log("Invalid JSON");
+  } else if (err instanceof ValidationError) {
+    console.log(`Invalid Data: ${err.message}`);
+  } else {
+    throw err;
+  }
 }
 */
 
@@ -94,10 +94,12 @@ try{
 /// Wrapping Exceptionse
 //      - it also caught first Error that occur first same as above.
 //      - we just make new class `ReadError extends Error` and call when we need Error handler and pass message and cause.
+//      - Used in Debugging ()
+
 class ReadError extends Error {
   constructor(message, cause) {
     super(message);
-    this.cause = cause;
+    this.cause = cause; // Store original error
     this.name = "ReadError";
   }
 }
@@ -126,15 +128,16 @@ function readUser(json) {
   let user;
 
   try {
-    user = JSON.parse(json);
+    user = JSON.parse(json); // Actually it is SyntaxError
   } catch (err) {
-    if (err instanceof SyntaxError) {
-      throw new ReadError("Syntax Error", err);
+    if (err instanceof SyntaxError) { 
+      throw new ReadError("Syntax Error", err); // err will describe the original error
     } else {
       throw err;
     }
   }
 
+  // If Json will right then we will validate the user.
   try {
     validateUser(user);
   } catch (err) {
