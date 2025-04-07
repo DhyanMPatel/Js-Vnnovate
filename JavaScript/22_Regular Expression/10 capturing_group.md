@@ -10,7 +10,7 @@
 ```js
 alert("Gogogo now!".match(/(go)+/gi)); // "Gogogo"
 
-alert("site.com my.site.com".match(/(\w+\.)+\w+/)); // site.com,my.site.com
+alert("site.com my.site.com".match(/(\w+\.)+\w+/g)); // site.com,my.site.com
 ```
 
 - For Email
@@ -85,9 +85,9 @@ console.log("<h1>Hello, world!</h1>".match(regexp)); // Return - <h1>, h1
   let str = "2019-04-30";
   let groups = str.match(dateRegexp).groups;
 
-  console.log(groups.year); // Return -
-  console.log(groups.month); // Return -
-  console.log(groups.day); // Return -
+  console.log(groups.year); // Return - 2019
+  console.log(groups.month); // Return - 04
+  console.log(groups.day); // Return - 30
   ```
 
 # Capturing Groups in Replacement

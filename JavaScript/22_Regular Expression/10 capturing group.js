@@ -1,7 +1,8 @@
-/*
+// console.log("site.com my.site.com".match(/(\w+?\.)+\w+/g)); // Return -  [ 'site.com', 'my.site.com' ]
+
 /// Named Group
 
-let dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/;
+let dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{1,2})-(?<day>[0-9]{2})/;
 let str = "2019-04-30";
 let groups = str.match(dateRegexp).groups;
 
@@ -18,8 +19,7 @@ let regexp = /(?:go)+ (\w+)/i;
 
 let result = nonCapturing.match(regexp);
 
-console.log(result);
-*/
+console.log(result); // ['Gogogo John', 'John', index: 0, input: 'Gogogo John!', groups: undefined]
 
 ///     Experiments
 /*
@@ -52,6 +52,7 @@ let str = "-1.5 0 2 -123.4.";
 console.log(str.match(regexp)); // -1.5, 0, 2, -123.4
 */
 
+/*
 //          4) Parse an Expression
 let [a, op, b] = parse("1.2 * 3.4");
 
@@ -66,3 +67,4 @@ function parse(str) {
 
   return [results.groups.a, results.groups.operator, results.groups.b];
 }
+*/
