@@ -4,7 +4,7 @@
 
 ## Set
 
-- [a,b,c] means any of 3 char at that perticular 1 char place in string.
+- [abc] means any of 3 char at that perticular 1 char place in string.
 - this will use on single word
 
   ```js
@@ -14,7 +14,7 @@
 
 ## Range
 
-- give Range of char like [a-z],[A-Z],[0-10],[5-10],[a-z0-15],[A-Z0-50], etc
+- give Range of char like [a-z],[A-Z],[0-9],[5-8],[a-z0-4],[A-Z2-7], etc
 
 - Character classes are shorthand for certain character set
 
@@ -30,7 +30,7 @@
   - Alphabetic (`Alpha`) – for letters,
   - Mark (`M`) – for accents,
   - Decimal_Number (`Nd`) – for digits,
-  - Connector_Punctuation (`Pc`) – for the underscore `'_'` and similar characters,
+  - Connector*Punctuation (`Pc`) – for the underscore `'*'` and similar characters,
   - Join_Control (`Join_C`) – two special codes `200c` and `200d`, used in ligatures, e.g. in Arabic.
 
   ```js

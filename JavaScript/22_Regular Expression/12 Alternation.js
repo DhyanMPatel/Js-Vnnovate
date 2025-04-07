@@ -19,7 +19,7 @@ console.log(time.match(regexp)); // Return - [ '00:00', '10:10', '23:59' ]
 /*
 //      1) Find Languages
 
-let regexp = /java(script)?|php|html|c(\+\+)?/gi;
+let regexp = /java(script)?|php|html|c(?:\+\+)?/gi;
 let lang = "Java JavaScript PHP HTML C++ C";
 console.log(lang.match(regexp)); // Return - [ 'Java', 'JavaScript', 'PHP', 'HTML', 'C++', 'C' ]
 */
@@ -28,7 +28,7 @@ console.log(lang.match(regexp)); // Return - [ 'Java', 'JavaScript', 'PHP', 'HTM
 //      2) Find BB-tags pairs
 //          - BB-tags can be nested. But a tag can’t be nested into itself
 
-let regexp = /\[(b|quote|url)] .*?(\/\1)/gs; // `\1` means "(b|quote|url)".
+let regexp = /\[(b|quote|url)].*?\[\/\1]/gs; // `\1` means "(b|quote|url)".
 let tags = `
   [b]hello![/b]
   [quote]
@@ -41,11 +41,13 @@ console.log(tags.match(regexp)); // Return - [b]hello![/b], [quote][url]http://g
 /*
 //      3) Find Quated Strings
 let regexp = /"(\\.|[^"\\])*"/g;
-let str = ' .. "test me" .. "Say \\"Hello\\"!" .. "\\\\ \\"" .. ';
+let str = ` .. "test me" .. "Say \\"Hello\\"!" .. "\\\\ \\"" .. `;
 console.log(str.match(regexp)); // Return - [ '"test me"', '"Say \\"Hello\\"!"', '"\\\\ \\""' ]
 */
 
+/*
 //      4) find Full tag
 let regexp = /<style(>|\s.*?>)/g;
 
 console.log('<style> <styler> <style test="...">'.match(regexp)); // Return - [ '<style>', '<style test="...">' ]
+*/
