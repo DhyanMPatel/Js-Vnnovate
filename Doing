@@ -19,10 +19,11 @@ Day: Tuesday
 
 Today, I am working on below list of task:
 
-1. Implement AddEvent button in Event list
-2. Remove events from Events list after draged in calender
-3. Fix issue on drag & drop between two days in calender
-4. Implement download CSV file button
+1. Setup Frontend and Backend - Done
+2. Create Database - In progress
+3. Understood project
+   - First know packages from package.json file - Done
+   - Then explore index, app, loader, login files - Done
 
 ## Others
 
