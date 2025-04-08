@@ -2,24 +2,27 @@
 
 Today, I am working on below list of task:
 
-Date: 7 April 2025
-Day: Monday
+Date: 8 April 2025
+Day: Tuesday
 
-1. Work on Calender in Theme Integration.
+project: Learning
+
+1. Fix issue on drag & drop between two days in calender
+2. Remove events from Events list after draged in calender
+3. Implement AddEvent button in Event list
+4. Implement download CSV file
 
 ## Work done:
 
-Date: 7 April 2025
-Day: Monday
+Date: 8 April 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
-1. Create new Component Table - Done
-2. Display data in Table - Done
-3. handle issue in resize of event - done
-4. Create download CSV button - Done
-5. Issue on drag & drop between 2 days - in progress
-6. Functional download CSV button - in Progress
+1. Implement AddEvent button in Event list
+2. Remove events from Events list after draged in calender
+3. Fix issue on drag & drop between two days in calender
+4. Implement download CSV file button
 
 ## Others
 
