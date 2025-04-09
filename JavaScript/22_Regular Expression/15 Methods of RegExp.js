@@ -23,6 +23,9 @@ let result = str.match(/Java(Script)/g);
 
 console.log( result[0] ); // JavaScript
 console.log( result.length ); // 1
+
+// console.log( result.index ); // undefined (no index)
+// console.log( result.input ); // undefined (no input)
 */
 
 //      - If there are no matches, no matter if there’s flag g or not, null is returned.
@@ -67,7 +70,7 @@ console.log("20, 1, 2025".split(regexp)); // Return - [ '20', '1', '2025' ]
 //      - Return first match position or "-1" if none found.
 
 let str = "A drop of ink may make a million think";
-console.log(str.search(/ink/gi)); // 10 (first match position)
+console.log(str.search(/ink/i)); // 10 (first match position)
 */
 
 /*
@@ -82,7 +85,7 @@ console.log("John Doe".replace(/(\w+) (\w+)/, "$2 $1")); // Return - Doe John
 console.log("This is Number 123".replace(/\d+/, "[$&]")); // Return - This is Number [123]
 console.log("Hello World!".replace(/World/, "Universe, $`")); // Return - Hello Universe, Hello!
 console.log("Hello World!".replace(/Hello/, "Hii $',")); // Return - Hii World!, world!
-console.log("Price: 50".replace(/50/, "$&$$")); // Return - Price: 50$
+console.log("Price: 50".replace(/50/, "$$$&")); // Return - Price: 50$
 
 //      - The function is called with arguments func(match, p1, p2, ..., pn, offset, input, groups):
 //          - `match` – the match,
@@ -92,7 +95,7 @@ console.log("Price: 50".replace(/50/, "$&$$")); // Return - Price: 50$
 //          - `groups` – an object with named groups.
 
 //      - Second parameter sometimes can be Function
-console.log("html and css".replace(/html|css/i), (str) => str.toUpperCase()); // Return - "HTML and CSS"
+console.log("html and css".replace(/html|css/gi, (match) => match.toUpperCase())); // Return - "HTML and CSS"
 
 //      - Replace each match by its position in the string:
 console.log("Ho-Ho-ho".replace(/ho/gi, (match, offset) => offset)); // Return - 0-3-6
@@ -126,7 +129,8 @@ console.log(
 //          - If first arg is `regexp` then without `g` flag it not work. give error
 
 //      - replace all dashes by a colon
-alert("12-34-56".replaceAll("-", ":")); // 12:34:56
+console.log("12-34-56".replaceAll("-", ":")); // 12:34:56
+console.log("12-34-56".replaceAll(/-/g, ":")); // 12:34:56, otherwise `String.prototype.replaceAll called with a non-global RegExp argument`
 */
 
 /*
@@ -137,11 +141,18 @@ alert("12-34-56".replaceAll("-", ":")); // 12:34:56
 
 let str = "More about JavaScript at https://javascript.info";
 let regexp = /javascript/gi;
+let regexpNonGlobal = /javascript/i;
+
+// let result = regexp.exec(str); // first match
+// let resultNonGlobal = regexpNonGlobal.exec(str); // first match
+// console.log(result); // [ 'JavaScript',  index: 11, input: 'More about JavaScript at https://javascript.info', groups: undefined ]
+// console.log(resultNonGlobal); // [ 'JavaScript',  index: 11, input: 'More about JavaScript at https://javascript.info', groups: undefined ]
+// console.log(regexp.lastIndex);  // Return - 21, first match position + length of match
 
 let result;
 
 while ((result = regexp.exec(str))) {
-  alert(`Found ${result[0]} at position ${result.index}`);
+  console.log(`Found ${result[0]} at position ${result.index}`);
   // Found JavaScript at position 11, then
   // Found javascript at position 33
 }
@@ -152,14 +163,16 @@ let strY = "Hello, world!";
 let regexpY = /\w+/y;
 regexpY.lastIndex = 5; // search exactly at position 5
 
-alert(regexpY.exec(strY)); // null
+console.log(regexpY.exec(strY)); // null
 */
 
-/// regexp.test(test)
+/*
+/// regexp.test(str)
 //      - Match and returns `true/false` whether it exists.
 //      - Search same as exec(). means follow lastIndex.
 let str = "I love JavaScript";
 
 //      - these two tests do the same
-alert(/love/i.test(str)); // true
-alert(str.search(/love/i) != -1); // true
+console.log(/love/i.test(str)); // true
+console.log(str.search(/love/i) != -1); // true
+*/

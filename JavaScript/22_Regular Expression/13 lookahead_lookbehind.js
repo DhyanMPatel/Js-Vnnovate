@@ -46,8 +46,8 @@ console.log(str.match(regexp)); // Return - 0, 12, 123
 */
 
 /*
-//      2) Insert After Head
-let regexp = /<body.*?>/;
+//      2) Insert HTML tag inside body tag
+let regexp = /<body.*?>/m; // m should be or not be there.
 
 let str = `
 <html>
@@ -57,6 +57,6 @@ let str = `
 </html>
 `;
 
-str = str.replace(regexp, `$&<h1>Hello</h1>`);
+str = str.replace(regexp, `$& \n  <h1>Hello</h1>`);
 console.log(str);
 */

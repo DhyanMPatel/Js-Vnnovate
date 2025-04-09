@@ -71,3 +71,12 @@ let testStr = "Find these: . + * ? ^ $ { } - ( ) | [ ] \\";
 console.log(testStr.match(regexSet));
 // Output: [ '-', '.', '+', '*', '?', '^', '$', '{', '}', ':', '(', ')', '|', '[', ']', '\\'];
 */
+
+/*
+// BackReference
+let str = `He said: "She's the one!".`;
+let regex = /(["'])(.*?)\1/g;
+let regexName = /(?<quate>["'])(.*)\k<quate>/g;
+console.log(str.match(regex)); // Return - [ `"She\'s the one!"` ]
+console.log(str.match(regexName)); // Return - [ `"She\'s the one!"` ]
+*/

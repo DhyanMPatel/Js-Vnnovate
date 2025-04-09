@@ -2,7 +2,10 @@
 
 - in Web-development we meet binary data mostly when dealing with files(create, upload, download) and image processing.
 - Binary data in JavaScript is important in a non-standard way.
-- The Basic Binary Object is `ArrayBuffer` - a reference to a fixed-length comfigue memory area.
+- The Basic Binary Object is `ArrayBuffer` - a reference to a fixed-length Binary Buffer.
+
+### What is Buffer?
+- `Buffer` is a temporary space in a memory used to store binary data.
 
 ```js
 let buffer = new ArrayBuffer(16);
@@ -16,7 +19,7 @@ console.log(buffer.byteLength); // Return 16
   - It takes exactly that much space in the memory.
   - To access individual bytes, another “view” object is needed, not `buffer[index]`.
 
-- To manipulate an `ArrayBuffer`, we need to use a `“view”` object.
+- To manipulate an `ArrayBuffer`, we need to use a `“view”` object (**TypedArray**).
 - The `view` Object will not store any Value. it's the `eyeglasses` that give an interpretation of the bytes stored in the `ArrayBuffer`.
 
   - `Uint8Array` - treat 1 byte as an integer number. `0` to `255`. called as `8-bit unsigned integer`
