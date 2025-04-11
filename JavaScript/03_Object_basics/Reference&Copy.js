@@ -28,7 +28,7 @@ let realCopy2 = {};
 for (ele in user) {
   realCopy1[ele] = user[ele];
 }
-// Object.assign(realCopy2, user, admin);
+Object.assign(realCopy2, user, admin);
 // console.log(realCopy1);
 // console.log(realCopy2);
 

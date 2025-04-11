@@ -60,7 +60,7 @@
                 const users = await axios.get(
                 "https://jsonplaceholder.typicode.com/users"
                 );
-                dispatch({ type: FETCH_USERS - SUCCESS, payload: users });
+                dispatch({ type: FETCH_USERS_SUCCESS, payload: users });
             } catch (error) {
                 dispatch({ type: FETCH_USERS_FAILURE, payload: error.message });
             }
