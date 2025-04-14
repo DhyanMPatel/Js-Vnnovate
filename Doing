@@ -2,25 +2,46 @@
 
 Today, I am working on below list of task:
 
-Date: 11 April 2025
-Day: Friday
+Date: 14 April 2025
+Day: Monday
 
-project: College
+project: Dealer Data,
 
-1. work on college project
+1. Explore Redux Structure
 
 ## Work done:
 
-Date: 11 April 2025
-Day: Friday
+Date: 14 April 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
-Project: college,
+Project: Dealer Data,
 
-1. Explore POS Project Structure
-2. Understand Implementation of Redux
-3. Understand Implementation of Routers
+1. Undestand Redux - Done
+   - explore all reducers in Store. like Authentication, Layout, Exception Report, Exception Email, Vehicle Report, etc reducers.
+2. Understand ThemeConfig file that can customize the template. - Done
+3. Understand ThemeContext that provide theme using Context API. - Done
+
+4. Understand Reducers
+   1.1. Authentication
+   1.2. Chart
+   1.3. Layout
+   1.4. navbar
+   1.5. exception Report
+   1.6. exception Email
+   1.6.1. There are only getData action in last not another like addUser, updateUser, deleteUser
+   1.7. update Report
+   1.8. Vehicle Report
+   1.9. salesV2
+   1.10. accessories
+   1.11. datatable1,2,3
+
+5. Understand ThemeConfig file
+6. Understand Context API
+   3.1. ThemeContext
+
+- ThemeContext file why contain themeColors variable?
 
 ## Others
 
