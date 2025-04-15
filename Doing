@@ -2,46 +2,39 @@
 
 Today, I am working on below list of task:
 
-Date: 14 April 2025
-Day: Monday
+Date: 15 April 2025
+Day: Tuesday
 
 project: Dealer Data,
 
-1. Explore Redux Structure
+1. Display first name in edit profile page
+2. Check whole flow of login logout, reset password, forgot password.
 
 ## Work done:
 
-Date: 14 April 2025
-Day: Monday
+Date: 15 April 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
 Project: Dealer Data,
 
-1. Undestand Redux - Done
-   - explore all reducers in Store. like Authentication, Layout, Exception Report, Exception Email, Vehicle Report, etc reducers.
-2. Understand ThemeConfig file that can customize the template. - Done
-3. Understand ThemeContext that provide theme using Context API. - Done
+- Task Given by
 
-4. Understand Reducers
-   1.1. Authentication
-   1.2. Chart
-   1.3. Layout
-   1.4. navbar
-   1.5. exception Report
-   1.6. exception Email
-   1.6.1. There are only getData action in last not another like addUser, updateUser, deleteUser
-   1.7. update Report
-   1.8. Vehicle Report
-   1.9. salesV2
-   1.10. accessories
-   1.11. datatable1,2,3
+1. Display first name in edit profile page - Done
+2. Can edit first name in edit profile page - Done
+3. Understand whole Login flow - Done
+4. Display toast message when Login form fields are empty - Done
+5. Solve issue when Login fields are empty and press Login button. - Done
+6. Display toast message when Send reset link button clicked on forget password. - Done
+7. Solve issue when reset password fields are empty and submit. - Done
+8. Display yellow color if Passport Number is null, --, and starts with 000000. - Done
 
-5. Understand ThemeConfig file
-6. Understand Context API
-   3.1. ThemeContext
+- Task Given by
 
-- ThemeContext file why contain themeColors variable?
+1. Export User functionality - In progress
+
+## Understading
 
 ## Others
 

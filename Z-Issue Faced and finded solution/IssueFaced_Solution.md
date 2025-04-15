@@ -16,7 +16,7 @@ Solution: solved using another state (rowsPerPage, colsPerPage).
    problem: Images come from different id and other data come from different id
    Solution: need to merge data come from report api and images api and set based on reports with their order
 
-5. get CSV data from from backend
+5. get CSV data from backend
    Problem: first time handle csv data in life
    solution: getting `response.data` which is blob data. then needs to creat object URL of **blob data**. At last create link that has attribute `download` that is use to download any file in `href` attribute.
 
@@ -44,4 +44,3 @@ Solution: solved using another state (rowsPerPage, colsPerPage).
 7. Node version change
    Problem: In Comp pc there are 20V of node and for Theme Integration project need 18V.
    Solution: Change node version using nvm package.
-   
