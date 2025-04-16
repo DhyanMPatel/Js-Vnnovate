@@ -2,18 +2,17 @@
 
 Today, I am working on below list of task:
 
-Date: 15 April 2025
-Day: Tuesday
+Date: 16 April 2025
+Day: Wednesday
 
 project: Dealer Data,
 
-1. Display first name in edit profile page
-2. Check whole flow of login logout, reset password, forgot password.
+1. Continue work on Export user functionality.
 
 ## Work done:
 
-Date: 15 April 2025
-Day: Tuesday
+Date: 16 April 2025
+Day: Wednesday
 
 Today, I am working on below list of task:
 
@@ -21,20 +20,22 @@ Project: Dealer Data,
 
 - Task Given by
 
-1. Display first name in edit profile page - Done
-2. Can edit first name in edit profile page - Done
-3. Understand whole Login flow - Done
-4. Display toast message when Login form fields are empty - Done
-5. Solve issue when Login fields are empty and press Login button. - Done
-6. Display toast message when Send reset link button clicked on forget password. - Done
-7. Solve issue when reset password fields are empty and submit. - Done
-8. Display yellow color if Passport Number is null, --, and starts with 000000. - Done
-
-- Task Given by
-
-1. Export User functionality - In progress
+1. Export User functionality - Done
+2. Report Page
+   2.1. Add new Reports tab. - Done
+   2.2. get Report Data - Done
+   2.3. Display Report Data - Done
 
 ## Understading
+
+- kal Disha ne 3 tasks diye the
+
+  1. Edit profile page me first_name value dispaly nai ho rahi thi to vo display kiya and first name edit bhi karvake dekha
+  2. Login flow dekha jisme toast messages dhikse work nai kar rahi thi to wo issue solve kiya. same chize forgot password page me kiya and reset password page me kiya
+  3. Customer data table me passport Number column me value null, --, 000000 se start ho to yellow color display karvaya.
+
+- then bhautik sir ne 1 task diya tha
+  1. Implement export user functionality.z
 
 ## Others
 
