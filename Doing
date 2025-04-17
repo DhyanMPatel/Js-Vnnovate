@@ -2,28 +2,40 @@
 
 Today, I am working on below list of task:
 
-Date: 8 April 2025
-Day: Tuesday
+Date: 16 April 2025
+Day: Wednesday
 
-project: Learning
+project: Dealer Data,
 
-1. Fix issue on drag & drop between two days in calender
-2. Remove events from Events list after draged in calender
-3. Implement AddEvent button in Event list
-4. Implement download CSV file
+1. Continue work on Export user functionality.
 
 ## Work done:
 
-Date: 8 April 2025
-Day: Tuesday
+Date: 16 April 2025
+Day: Wednesday
 
 Today, I am working on below list of task:
 
-1. Setup Frontend and Backend - Done
-2. Create Database - In progress
-3. Understood project
-   - First know packages from package.json file - Done
-   - Then explore index, app, loader, login files - Done
+Project: Dealer Data,
+
+- Task Given by
+
+1. Export User functionality - Done
+2. Report Page
+   2.1. Add new Reports tab. - Done
+   2.2. get Report Data - Done
+   2.3. Display Report Data - Done
+
+## Understading
+
+- kal Disha ne 3 tasks diye the
+
+  1. Edit profile page me first_name value dispaly nai ho rahi thi to vo display kiya and first name edit bhi karvake dekha
+  2. Login flow dekha jisme toast messages dhikse work nai kar rahi thi to wo issue solve kiya. same chize forgot password page me kiya and reset password page me kiya
+  3. Customer data table me passport Number column me value null, --, 000000 se start ho to yellow color display karvaya.
+
+- then bhautik sir ne 1 task diya tha
+  1. Implement export user functionality.z
 
 ## Others
 

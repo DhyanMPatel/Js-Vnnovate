@@ -5,7 +5,7 @@
 //      - Symbols don’t auto-convert to a string
 //      - Symbol properties are skipped by for...in & Object.keys() loop in Object
 //      - Symbol Properties are work as "Hidden" properties, but Object.assign({},source) copy both String and Symbol properties.
-//      - Also there is Built-in method `Object.getOwnPropertySymbols(obj)` to get Symbolic values. 
+//      - Also there is Built-in method `Object.getOwnPropertySymbols(obj)` to get Symbolic values.
 
 /// MEthods
 //    - Symbol() for create Symbol
@@ -43,5 +43,18 @@ console.log(Object.assign({}, obj));
 let user1 = Symbol.for("user");
 let user2 = Symbol.for("user");
 
-console.log(user1 === user2); // Return - true
-console.log(Symbol.keyFor(user1)); // Return - user, value of user1 Symbol
+// console.log(user1 === user2); // Return - true
+// console.log(Symbol.keyFor(user1)); // Return - user, value of user1 Symbol
+
+let user = {
+  name: "Dhyan",
+};
+
+let idGlobal = Symbol.for("id");
+user[idGlobal] = 123;
+
+let idSimple = Symbol("id");
+user[idSimple] = 456;
+
+console.log(user[idGlobal]); // 123
+console.log(user[idSimple]); // 456

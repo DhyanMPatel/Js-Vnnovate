@@ -15,6 +15,7 @@
 
   ```js
   let openRequest = indexedDB.open(name, version);
+  let deleteRequest = indexedDB.deleteDatabase(name);
   ```
 
   - `name` - db name
@@ -22,9 +23,11 @@
 
 - The call returns `openRequest` object, we should listen to events on it:
 
-  - `success`: database is ready, there’s the “database object” in openRequest.result, we should use it for further calls.
+  - `success`: database is ready, there’s the “database object” in `openRequest.result`, we should use it for further calls.
   - `upgradeneeded`: database is ready, but its version is outdated (see below).
-  - `error`: opening failed.
+  - `error`: opening failed. and recieve error in `openRequest.error`.
+
+- If the **local database version** is less than specified in `open`, then a special event upgradeneeded is triggered, and we can compare versions and upgrade data structures as needed.
 
 ## Object Store
 
