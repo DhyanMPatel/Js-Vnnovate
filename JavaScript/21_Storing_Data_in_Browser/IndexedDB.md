@@ -7,7 +7,11 @@
   - Supports key range queries, indexes.
   - Can store much bigger volumes of data than `localStorage`.
 
-- Note: Data Stored based on primary key index.
+## Note: 
+- Data Stored based on primary key index.
+- Storage capacity `depend on PC disk total remaining storage upto 80%` Ex. If total space is about 100 GB then IndexDB can storage upto 80 GB.
+
+## Steps
 
 ## Open IndexedDB Database
 
@@ -23,9 +27,9 @@
 
 - The call returns `openRequest` object, we should listen to events on it:
 
-  - `success`: database is ready, there’s the “database object” in `openRequest.result`, we should use it for further calls.
-  - `upgradeneeded`: database is ready, but its version is outdated (see below).
-  - `error`: opening failed. and recieve error in `openRequest.error`.
+  - `success`: database is ready. also trigger just after `onupgradeneeded` when version change. 
+  - `upgradeneeded`: called when database is ready, but its version is outdated (see below). also use to create Object store and indexes.
+  - `error`: Trigger when opening failed. and recieve error in `openRequest.error`.
 
 - If the **local database version** is less than specified in `open`, then a special event upgradeneeded is triggered, and we can compare versions and upgrade data structures as needed.
 
@@ -54,10 +58,25 @@
     let db = openRequest.result;
     if (!db.objectStoreNames.contains("students")) {
       // if there's no "students" store
-      db.createObjectStore("students", { keyPath: "id" }); // create it
+      let objectStore = db.createObjectStore("students", { keyPath: "id" }); // create Object Store
     }
   };
   ```
+
+## Index
+- Indexs are like a columns in Tables
+
+  ```js
+  objectStore.createIndex("Column_name", "Keypath_name", [options]);
+  ```
+
+- Example,
+
+  ```js
+  objectStore.createIndex("name", "name", {unique: false});
+  objectStore.createIndex("email", "email", {unique: true});
+  ```
+
 
 ## Transactions
 
@@ -82,7 +101,7 @@
 - Syntax:
 
   ```js
-  db.transaction(store, [type]);
+  db.transaction(store, [type]);  //  create Transaction
   ```
 
   - `store` - ObjectStore Name where we want to perform transaction

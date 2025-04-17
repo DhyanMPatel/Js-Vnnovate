@@ -2,17 +2,20 @@
 
 Today, I am working on below list of task:
 
-Date: 16 April 2025
-Day: Wednesday
+Date: 17 April 2025
+Day: Thursday
 
 project: Dealer Data,
 
-1. Continue work on Export user functionality.
+1. Do work on filter report table feature
+2. Do work on Date filter report table feature
+3. Export Report functionality
+4. Reset button  
 
 ## Work done:
 
-Date: 16 April 2025
-Day: Wednesday
+Date: 17 April 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
@@ -28,14 +31,12 @@ Project: Dealer Data,
 
 ## Understading
 
-- kal Disha ne 3 tasks diye the
+- Kal Bhautik sir ke 2 task par work kiya
+  1. Export User Functionality sir ko dikhaya nhi tha
+  2. Report Page par work kiya tha. jisme mene Report route create kiya then sidebar menu me use add bhi kiya and 
+  3. table me user data display karvaya tha
 
-  1. Edit profile page me first_name value dispaly nai ho rahi thi to vo display kiya and first name edit bhi karvake dekha
-  2. Login flow dekha jisme toast messages dhikse work nai kar rahi thi to wo issue solve kiya. same chize forgot password page me kiya and reset password page me kiya
-  3. Customer data table me passport Number column me value null, --, 000000 se start ho to yellow color display karvaya.
 
-- then bhautik sir ne 1 task diya tha
-  1. Implement export user functionality.z
 
 ## Others
 
