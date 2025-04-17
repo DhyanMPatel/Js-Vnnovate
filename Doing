@@ -10,7 +10,7 @@ project: Dealer Data,
 1. Do work on filter report table feature
 2. Do work on Date filter report table feature
 3. Export Report functionality
-4. Reset button  
+4. Reset button
 
 ## Work done:
 
@@ -23,20 +23,29 @@ Project: Dealer Data,
 
 - Task Given by
 
-1. Export User functionality - Done
-2. Report Page
-   2.1. Add new Reports tab. - Done
-   2.2. get Report Data - Done
-   2.3. Display Report Data - Done
+1. Display custom loader before data load - Done
+2. Make CustomPagination for table pagination - Done
+3. Display total reports number - Done
+4. On Search feature display according values - Done
+5. On Date Filter display according values - Done
+6. Export CSV file - Done
+7. Solve Issue when commiting in gitLab - Done
+
+```js
+selector: (row) =>
+        row?.last_updated
+          ? moment(row?.last_updated)
+              .tz("Africa/Johannesburg") // Convert to South Africa Time
+              .format("YYYY-MM-DD HH:mm")
+          : "--", // Format as requested, fallback to "--"
+```
 
 ## Understading
 
 - Kal Bhautik sir ke 2 task par work kiya
   1. Export User Functionality sir ko dikhaya nhi tha
-  2. Report Page par work kiya tha. jisme mene Report route create kiya then sidebar menu me use add bhi kiya and 
+  2. Report Page par work kiya tha. jisme mene Report route create kiya then sidebar menu me use add bhi kiya and
   3. table me user data display karvaya tha
-
-
 
 ## Others
 
