@@ -11,12 +11,14 @@
 function funcScope() {
   // Function Scope
   let two = 2;
-  console.log(two);
+  console.log(two); // Return - 2
   {
+    let two = 2.5; // Return - 2.5
     console.log(two);
   }
+  console.log(two); // Return - 2
 }
-// funcScope();
+funcScope();
 // console.log(two); // Error - two is not Defined
 
 let three = 3.5;

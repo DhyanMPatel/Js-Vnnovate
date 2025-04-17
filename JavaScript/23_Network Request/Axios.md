@@ -1,5 +1,7 @@
 # Axios
 
+- Axios is a promise-based HTTP library that helps you easily communicate with servers or APIs
+
 - Make `XMLHttpRequests` from the browser.
 - Make `http requests` from node.js.
 - Supports the `Promise API`.
@@ -10,7 +12,7 @@
 - 🆕 Automatic data object serialization to multipart/form-data and x-www-form-urlencoded body encodings.
 - Client side support for protecting against `XSRF`.
 
-- In Response we get `data`, `status`, `statusText`, `headers`, `config`, `reques` information.
+- In Response we get `data`, `status`, `statusText`, `headers`, `config`, `request` information.
 
 ## Package Install
 

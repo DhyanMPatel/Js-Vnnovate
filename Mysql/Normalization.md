@@ -60,7 +60,7 @@
 
 ## 3rd Normal Form
 
-- `2NF` + No Transitive Dependency + non-prime should not determine non-primer.
+- `2NF` + No Transitive Dependency + non-prime should not determine non-prime.
 - Example
   - There are `X` (PK) determine to `Y` and `Y` (Non-prime) determine to `Z` (Non-prime). So Transitively `X` also determin to `Z`.
 

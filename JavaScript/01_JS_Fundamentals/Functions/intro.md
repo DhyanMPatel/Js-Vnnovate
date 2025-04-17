@@ -29,7 +29,9 @@
 
 ## function Expression
 
-- If we create any function and assigned to any variable is called function Expression
+- If Function is created as a part of expression is called function expression.
+- Function Declaration can processed before the code block is executed. they are visible everywhere in the code.
+- Where, Function Expression are created when execution flow reaches them. 
 
 ## Types of function
 

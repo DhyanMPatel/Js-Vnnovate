@@ -50,13 +50,13 @@
 ## SQL Datatypes
 
 - They define the `type of values` that can be stored in a column.
-- There are multiple pql data types like,
+- There are multiple sql data types like,
 
   1. **CHAR** - store Characters of fixed length, String(0-255)
   2. **VARCHAR** - store Characters up to given length, String(0-255)
   3. **BLOB** - store Binay large object, String(0-65535)
-  4. **INT** - Integer (-2<sup>31</sup> to 2<sup>31</sup>-1)
-  5. **TINYINT** - Integer (-128 to 127) (-2<sup>7</sup> to 2<sup>7</sup>-1)
+  4. **TINYINT** - Integer (-128 to 127) (-2<sup>7</sup> to 2<sup>7</sup>-1)
+  5. **INT** - Integer (-2<sup>31</sup> to 2<sup>31</sup>-1)
   6. **BIGINT** - Integer (-2<sup>63</sup> to 2<sup>63</sup>-1)
   7. **BIT** - store x-bit values. x can range from 1 to 64.
   8. **FLOAT** - decimal number - with precision to 23 digits
@@ -72,7 +72,7 @@
 - In whole SQL we perform such kind of SQL Commands
   1. `DDL` (Data Definition Language): create, alter, rename, truncate & drop
   2. `DQL` (Data Query Languge): select
-  3. `DML` (Date Manipulation Language): insert, update & delete
+  3. `DML` (Data Manipulation Language): insert, update & delete
   4. `DCL` (Data Control Language): grant & revoke permission to users
   5. `TCL` (Transection Control Language): start transaction, commit, rollback
 
@@ -103,9 +103,9 @@
 
      [Keys Diagram that helps to understand](https://media.geeksforgeeks.org/wp-content/uploads/20230314093236/keys-in-dbms.jpg)
 
-## Contrains
+## Constrains
 
-- Contrains are used to specify rulls for data in table.
+- Constrains are used to specify rulls for data in table.
   1. NOT NULL
   2. UNIQUE
   3. PRIMARY KEY
@@ -394,12 +394,12 @@ GROUP BY c.client_id
 - We connect same table with self, applying different Alias.
 
   ```sql
-    USE  sql_hr
+      USE  sql_hr;
 
-    SELECT e.employee_id, e.first_name, m.first_name as Manager
-    FROM employees as e
-    INNER JOIN employees m
-      ON e.report_id = m.employee_id
+  SELECT e.employee_id, e.first_name, m.first_name as Manager
+  FROM employees as e
+  INNER JOIN employees m
+    ON e.reports_to = m.employee_id
   ```
 
 ### Multiple JOIN
@@ -460,6 +460,8 @@ GROUP BY c.client_id
   - Here product 7 never been order so its order quantity will be null.
 
   ```sql
+  USE sql_store;
+  
   SELECT p.product_id, p.name, oi.quantity
   FROM  products p
   LEFT JOIN order_items oi

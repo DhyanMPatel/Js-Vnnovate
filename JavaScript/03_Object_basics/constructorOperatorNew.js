@@ -8,6 +8,8 @@
 //      - use to make multiple similer Objects.
 //      - There are other functions like Date, Set, 
 
+//      - {...} Systex create single object but when we want to create multiple object with same properties then we use Constructor function.
+
 //      - New.Target will give the constructor function name which is used to create the object.
 
 function User(name, age) {

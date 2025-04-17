@@ -53,9 +53,12 @@ let realnestedObjCopy = structuredClone(nestedObj);
 let nestedObjRef = nestedObj;
 // console.log(realnestedObjCopy.address === nestedObjRef.address); // false
 
-/// but in circular Reference ?, `
+/// circular Reference also possible in JS 
 let cir = {};
 cir.me = cir;
 
 let cirCopy = structuredClone(cir);
-// console.log(cirCopy.me === cirCopy); /// true
+// console.log(cirCopy.me === cirCopy); /// true, here not cir but cirCopy
+// console.log(cirCopy.me === cir); /// false, here cir but cirCopy
+
+// structuredClone not support functions inside object.

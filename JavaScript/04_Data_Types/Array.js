@@ -8,6 +8,14 @@
 //      - .length is property of Array not method
 //      - Array has own implimentation of toString()
 
+/*
+const arr = [1,2,3];
+console.log(arr);
+// arr = [4,5,6]; // Return - TypeError: Assignment to constant variable.
+arr[0] = 4; // Return - 4, change value of first index
+console.log(arr);
+*/
+
 let arr1 = new Array(3); // ["undefined", "undefined", "undefined"]
 let fruits = ["Orange", "Apple", "Banana"];
 /*
@@ -108,6 +116,7 @@ function sumInput() {
 console.log(sumInput());
 */
 
+/*
 //  2) get Max subSum()
 let arr = [2,-3,1,2]
 let max = 0
@@ -130,3 +139,4 @@ for(let elem of arr){
 }
 
 console.log(max)
+*/

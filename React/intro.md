@@ -33,6 +33,7 @@
 
 1. Node -> `npm` (Node Package Manager) & `npx` (Node Package Executer)
 2. Create React App -> npx create-react-app 01basicreact || npm create vite@latest o1basic-vite --template react
+3. install dependencies -> npm install
 3. Run Them -> npm run start || npm run dev
 
 ## Installation of Tailwind in Vite app

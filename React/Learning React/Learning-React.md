@@ -13,8 +13,8 @@
 - There are some Features that React provide
 
   1. Component-based Architecture
-  2. Vertual DOM
-  3. State management:- Using `useState` hook manage State.
+  2. State management:- Using `useState` hook manage State.
+  3. Vertual DOM
   4. React Hooks:- Allow Functional components to use state and lifcycle.
   5. JSX:- Allow developers to write `HTML` inside Javascript.
   6. One way data binding:- only Parent Component can pass data to child component through props.
@@ -34,7 +34,7 @@
   3. Performance Enhancement
      - Because it use Virtual DOM that efficiently update changes part of DOM.
   4. SEO friendly
-     - Because SPA can be setup can be optimized for SEO.
+     - Because SPA setup can be optimized for SEO.
 
 ## Disadvantages
 

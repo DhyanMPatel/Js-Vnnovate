@@ -1,5 +1,4 @@
-
-
+// Functions are the main “building blocks” of the program. They allow the code to be called many times without repetition.
 
 let nameOut; // Global Variable
 // func1();

@@ -87,4 +87,4 @@ function divByTwo(n) {
 let a = 4; 
 let b = -1 
 // console.log(a>>>1); // Return - 2
-// console.log(b>>>4); // Return - 268435455
+// console.log(b>>>1); // Return - 268435455
