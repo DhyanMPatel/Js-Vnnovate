@@ -140,10 +140,10 @@
 ## By key
 
 - If there is no any key then return `undefined`.
-- `IDBKeyRange` Objects that specify an acceptable "key value"
+- `IDBKeyRange` Objects that specify an acceptable "key value". use to create range
 
-  - `IDBKeyRange.upperBound(upper, [open])` means: `>lower` if `open` is true
-  - `IDBKeyRange.lowerBound(lower, [open])` means: `<upper` if 'open' is true
+  - `IDBKeyRange.upperBound(upper, [open])` means: `<upper` if `open` is true otherwise `<=upper`.
+  - `IDBKeyRange.lowerBound(lower, [open])` means: `>lower` if 'open' is true otherwise `>=lower`.
   - `IDBKeyRange.bound(lower, upper, [loweOpen], [upperOpen])` means: between `lower` and `upper`.
   - `IDBKeyRange.only(key)` - a range that consist of only one `key`, rarely used.
 
@@ -162,7 +162,8 @@
 - to Search by Object field, need to create additional data structure named `index`.
 
   ```js
-  ObjectStore.index(colName);
+  const index = ObjectStore.index(colName); // If colName = "name"
+  let request = index.get("dhyan");
   ```
 
   - `colName` - Collumn name that we want to create index

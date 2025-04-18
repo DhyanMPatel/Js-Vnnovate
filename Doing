@@ -42,10 +42,12 @@ selector: (row) =>
 
 ## Understading
 
-- Kal Bhautik sir ke 2 task par work kiya
-  1. Export User Functionality sir ko dikhaya nhi tha
-  2. Report Page par work kiya tha. jisme mene Report route create kiya then sidebar menu me use add bhi kiya and
-  3. table me user data display karvaya tha
+- Kal Dealer Data me Report Page me work kiya tha
+  - Data get hone se pahele Loader display karvaya tha
+  - Custom Pagination kiya tha ReactPaginate ka use karke
+  - Search feature implement kiya tha
+  - Date filter bhi implement kiya tha
+  - export csv feature ka implement kiya tha
 
 ## Others
 
