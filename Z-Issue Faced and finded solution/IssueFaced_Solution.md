@@ -44,3 +44,13 @@ Solution: solved using another state (rowsPerPage, colsPerPage).
 7. Node version change
    Problem: In Comp pc there are 20V of node and for Theme Integration project need 18V.
    Solution: Change node version using nvm package.
+
+### Dealer Data
+
+8. Can't login when 2FA is Enable
+   Problem: When 2FA is Enable then 2FA page will open during login but after enter otp or recovery code not redirect to dashboard page.
+   Solution: import `getHomeRouteForLoggedInUser` which is use to redirect to dashboard page.
+
+9. Not display QrCode after login if it is enable.
+   Problem: when user login with 2FA then can't generate QrCode.
+   Solution: create new func that generate QrCode just need `google2fa` and `recoveryCode`. and called from `enable2FA` func and on starting.
