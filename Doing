@@ -22,7 +22,7 @@ Project: Dealer Data,
 
 1. Work on 2 Fector Authentication
    1.1. Made new Element for 2FA in profile page. - Done
-   1.2. Generate 2FA OrCode - Done
+   1.2. Generate 2FA QrCode - Done
    1.3. Create button for enable 2FA - Done
    1.4. Create button for disable 2FA - Done
    1.5. Create button for regenerate recovery codes - Done
@@ -48,12 +48,9 @@ selector: (row) =>
 
 ## Understading
 
-- Kal Dealer Data me Report Page me work kiya tha
-  - Data get hone se pahele Loader display karvaya tha
-  - Custom Pagination kiya tha ReactPaginate ka use karke
-  - Search feature implement kiya tha
-  - Date filter bhi implement kiya tha
-  - export csv feature ka implement kiya tha
+- Friday ko 2FA pe work kiya tha. Profile page me enable disable 2FA button implement kiya also generate Recovery codes button banaya tha.
+- generate and display Qrcode using qrcode package
+- Then one Extra page bhi add kiya tha login me.
 
 ## Others
 
