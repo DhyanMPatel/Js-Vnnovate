@@ -54,3 +54,7 @@ Solution: solved using another state (rowsPerPage, colsPerPage).
 9. Not display QrCode after login if it is enable.
    Problem: when user login with 2FA then can't generate QrCode.
    Solution: create new func that generate QrCode just need `google2fa` and `recoveryCode`. and called from `enable2FA` func and on starting.
+
+10. `twoFA.recoveryCodes` are not array.
+    Problem: `twoFA.recoveryCodes` give String value instead of Array
+    Solution: use **JSON.parse()** that gives array from localStorage.

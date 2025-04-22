@@ -2,8 +2,10 @@
 
 - Web storage allows saving key-value pairs in the browser using two objects:
 
-  - `localStorage` (persistent storage)
-  - `sessionStorage` (temporary storage)
+  - `localStorage` (persistent storage) - LocalStorage data can access by all tabs that will be same.
+    - Shared between all tabs and windows with the same origin.
+  - `sessionStorage` (temporary storage) - SessionStorage data is unique for all tabs.
+    - Visible within a browser tab, including iframes from the same origin
 
 - Benefits of LocalStorage & SessionStorage
 

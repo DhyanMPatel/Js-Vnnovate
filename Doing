@@ -2,17 +2,17 @@
 
 Today, I am working on below list of task:
 
-Date: 21 April 2025
-Day: Monday
+Date: 22 April 2025
+Day: Tuesday
 
 project: Dealer Data,
 
-1. Continue Work on 2 Fector Authentication task
+1. Solve Issue When admin enable 2FA then QrCode and recovery Code display on Dealer Profile.
 
 ## Work done:
 
-Date: 21 April 2025
-Day: Monday
+Date: 22 April 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
@@ -20,10 +20,12 @@ Project: Dealer Data,
 
 - Task Given by
 
-1. Solve issue on Authentication. - Done
-2. Code review with
-3. Code review with
-4. Solve Issue. When admin enable 2FA then QrCode and recovery Code display on Dealer Profile. - In Progress
+1. Solve Issue When admin enable 2FA then QrCode and recovery Code display on Dealer Profile. - Done
+2. Understand Roles in Dealer Data with . - Done
+3. Uderstand protected, Private, public in routes deeply. - Done
+4. Explore Statistic.js file responsible to display "Data Field Quality" and "Record Quality" in
+   Customer Data Page only Admine side. - Done
+5. Read Documentation of Dealer Data Project. - Done
 
 ```js
 selector: (row) =>
@@ -96,8 +98,10 @@ Description:
 - Work on 2 Fector Authentication
 - Create 2FA varification Page
 
-
 ## Leave Request
+
+to: bhautik
+Cc: mansi ma'am, vasik sir and rupendra sir
 
 Subject: Leave Request for 23-Apr-2025
 
