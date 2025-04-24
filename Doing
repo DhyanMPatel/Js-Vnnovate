@@ -2,17 +2,17 @@
 
 Today, I am working on below list of task:
 
-Date: 22 April 2025
-Day: Tuesday
+Date: 24 April 2025
+Day: Thursday
 
 project: Dealer Data,
 
-1. Solve Issue When admin enable 2FA then QrCode and recovery Code display on Dealer Profile.
+1. Code Understanding and documentation of Dealer Data Project.
 
 ## Work done:
 
-Date: 22 April 2025
-Day: Tuesday
+Date: 24 April 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
@@ -20,12 +20,11 @@ Project: Dealer Data,
 
 - Task Given by
 
-1. Solve Issue When admin enable 2FA then QrCode and recovery Code display on Dealer Profile. - Done
-2. Understand Roles in Dealer Data with . - Done
-3. Uderstand protected, Private, public in routes deeply. - Done
-4. Explore Statistic.js file responsible to display "Data Field Quality" and "Record Quality" in
-   Customer Data Page only Admine side. - Done
-5. Read Documentation of Dealer Data Project. - Done
+1. Make notes from Documentation. - Done
+2. know bigQuery API calls. - Done
+3. explore BigQuery Console (Web UI). - Done
+4. Create Account and Active free Trial. - Done
+5. Create Project in Google Cloud Console. - Done
 
 ```js
 selector: (row) =>
