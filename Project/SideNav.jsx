@@ -106,15 +106,6 @@ const SideNav = ({ collapsed, setCollapsed }) => {
           key: "productSortList",
           icon: <OrderedListOutlined />,
         },
-        // {
-        //   label: (
-        //     <NavLink to="/admin/adjust-inventory">
-        //       <span>Adjust Inventory</span>
-        //     </NavLink>
-        //   ),
-        //   key: "adjust-inventory",
-        //   icon: <PiWarehouseBold />,
-        // },
       ],
     },
 
@@ -201,19 +192,6 @@ const SideNav = ({ collapsed, setCollapsed }) => {
           key: "saleReturn",
           icon: <OrderedListOutlined />,
         },
-        // {
-        //   label: (
-        //     <NavLink to="/admin/quotation">
-        //       <span>Quotation</span>
-        //     </NavLink>
-        //   ),
-        //   permit: {
-        //     permissions: ["create-quote", "readAll-quote"],
-        //     operator: "or",
-        //   },
-        //   key: "QUOTATION",
-        //   icon: <MdRequestQuote />,
-        // },
       ],
     },
 
@@ -333,174 +311,8 @@ const SideNav = ({ collapsed, setCollapsed }) => {
             key: "paymentReport",
             icon: <FileSyncOutlined />,
           },
-          // {
-          //   label: (
-          //     <NavLink to='/admin/return-order-report'>
-          //       <span>Return Order Report</span>
-          //     </NavLink>
-          //   ),
-          //   key: "returnOrderReport",
-          //   icon: <FileSyncOutlined />,
-          // },
         ],
       },
-
-    // data?.dashboardType !== "e-commerce" && {
-    //   label: "E-COMMERCE",
-    //   permit: {
-    //     permissions: [
-    //       "create-discount",
-    //       "create-sliderImages",
-    //       "readAll-discount",
-    //       "readAll-sliderImages",
-    //     ],
-    //     operator: "or",
-    //   },
-    //   key: "e-Commerce",
-    //   icon: <CiShop />,
-    //   children: [
-    //     {
-    //       label: (
-    //         <NavLink to="/admin/order">
-    //           <span>Order</span>
-    //         </NavLink>
-    //       ),
-    //       permit: {
-    //         permissions: ["create-shippingTime", "readAll-shippingTime"],
-    //         operator: "or",
-    //       },
-    //       key: "CartOrder",
-    //       icon: <HiOutlineShoppingBag />,
-    //     },
-    //     {
-    //       label: (
-    //         <NavLink to="/admin/return-order">
-    //           <span>Return Orders</span>
-    //         </NavLink>
-    //       ),
-    //       permit: {
-    //         permissions: ["create-returnCartOrder", "readAll-returnCartOrder"],
-    //         operator: "or",
-    //       },
-    //       key: "return-order",
-    //       icon: <TbTruckReturn />,
-    //     },
-    //     {
-    //       label: (
-    //         <NavLink to="/admin/resend-return-order">
-    //           <span>Resend Return Orders </span>
-    //         </NavLink>
-    //       ),
-    //       permit: {
-    //         permissions: ["create-returnCartOrder", "readAll-returnCartOrder"],
-    //         operator: "or",
-    //       },
-    //       key: "resend-return",
-    //       icon: <MdShoppingCartCheckout />,
-    //     },
-    //     {
-    //       label: (
-    //         <NavLink to="/admin/manual-payment">
-    //           <span>Payment List</span>
-    //         </NavLink>
-    //       ),
-    //       permit: {
-    //         permissions: ["create-manualPayment", "readAll-manualPayment"],
-    //         operator: "or",
-    //       },
-    //       key: "manualPayment",
-    //       icon: <GiTakeMyMoney />,
-    //     },
-    //   ],
-    // },
-    // {
-    //   label: "E-COM SETTINGS",
-    //   permit: {
-    //     permissions: ["create-paymentMethod", "readAll-paymentMethod"],
-    //     operator: "or",
-    //   },
-    //   key: "e-comSettings",
-    //   icon: (
-    //     <svg
-    //       stroke="currentColor"
-    //       fill="none"
-    //       strokeWidth="2"
-    //       viewBox="0 0 24 24"
-    //       strokeLinecap="round"
-    //       strokeLinejoin="round"
-    //       xmlns="http://www.w3.org/2000/svg"
-    //       width="1em"
-    //       height="1em"
-    //     >
-    //       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    //       <path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-    //       <path d="M12 17h-6v-14h-2"></path>
-    //       <path d="M6 5l14 1l-.79 5.526m-3.21 1.474h-10"></path>
-    //       <path d="M19.001 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-    //       <path d="M19.001 15.5v1.5"></path>
-    //       <path d="M19.001 21v1.5"></path>
-    //       <path d="M22.032 17.25l-1.299 .75"></path>
-    //       <path d="M17.27 20l-1.3 .75"></path>
-    //       <path d="M15.97 17.25l1.3 .75"></path>
-    //       <path d="M20.733 20l1.3 .75"></path>
-    //     </svg>
-    //   ),
-    //   children: [
-    //     {
-    //       label: (
-    //         <NavLink to="/admin/delivery-fee">
-    //           <span>Delivery area</span>
-    //         </NavLink>
-    //       ),
-    //       permit: {
-    //         permissions: ["create-deliveryFee", "readAll-deliveryFee"],
-    //         operator: "or",
-    //       },
-    //       key: "deliveryArea",
-    //       icon: <MdOutlineReviews />,
-    //     },
-    //     {
-    //       label: (
-    //         <NavLink to="/admin/payment-method">
-    //           <span> Payment Methods</span>
-    //         </NavLink>
-    //       ),
-    //       permit: {
-    //         permissions: ["create-paymentMethod", "readAll-paymentMethod"],
-    //         operator: "or",
-    //       },
-    //       key: "paymentMethod",
-    //       icon: <RiSecurePaymentLine />,
-    //     },
-    //     {
-    //       label: (
-    //         <NavLink to="/admin/slider">
-    //           <span>Image Slider</span>
-    //         </NavLink>
-    //       ),
-    //       permit: {
-    //         permissions: ["create-sliderImages", "readAll-sliderImages"],
-    //         operator: "or",
-    //       },
-    //       key: "Slider",
-    //       icon: <LiaSlidersHSolid />,
-    //     },
-    //     {
-    //       label: (
-    //         <NavLink to="/admin/courier-medium">
-    //           <span>Delivery Medium</span>
-    //         </NavLink>
-    //       ),
-    //       permit: {
-    //         permissions: ["create-courier", "readAll-courier"],
-    //         operator: "or",
-    //       },
-    //       key: "deliveryMedium",
-
-    //       icon: <TbTruckDelivery />,
-    //     },
-    //   ],
-    // },
   ];
 
   const SettingMenu = [

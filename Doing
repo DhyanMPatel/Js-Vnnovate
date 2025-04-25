@@ -2,17 +2,17 @@
 
 Today, I am working on below list of task:
 
-Date: 24 April 2025
-Day: Thursday
+Date: 25 April 2025
+Day: Friday
 
-project: Dealer Data,
+project: College Project,
 
-1. Code Understanding and documentation of Dealer Data Project.
+1. Understand Routes and Redux from POS College Project.
 
 ## Work done:
 
-Date: 24 April 2025
-Day: Thursday
+Date: 25 April 2025
+Day: Friday
 
 Today, I am working on below list of task:
 
@@ -20,11 +20,15 @@ Project: Dealer Data,
 
 - Task Given by
 
-1. Make notes from Documentation. - Done
-2. know bigQuery API calls. - Done
-3. explore BigQuery Console (Web UI). - Done
-4. Create Account and Active free Trial. - Done
-5. Create Project in Google Cloud Console. - Done
+1. Supplier page - Done
+   1.1. Explore add supplier module with redux
+   1.2. Explore get supplier details module with redux
+   1.3. Explore get all supplier module with redux
+   1.4. Explore supplier report module with redux
+   1.5. Explore Update supplier module with redux
+2. Explore Purchase Order Page with AddPurchaseOrder, GetAllPurchaseOrderList,
+   SinglePurchase modules. - Done
+3. Explore POS page with POS,AddPOS, Products modules. - Done
 
 ```js
 selector: (row) =>
@@ -42,9 +46,14 @@ selector: (row) =>
 
 ## Understading
 
-- Friday ko 2FA pe work kiya tha. Profile page me enable disable 2FA button implement kiya also generate Recovery codes button banaya tha.
-- generate and display Qrcode using qrcode package
-- Then one Extra page bhi add kiya tha login me.
+- Kal documentation mese notes banae the
+- Bigquery ke bare me jana tha
+- Google cloud console ko explore kiya tha. usme account create kiya, Free cradit score Active kiya then new Project create kiya tha.
+
+- admin role me 2FA enable kare to dealer role me bhi wo enable dikhata tha to wo solve kiya
+- Dealer Data Project me 2 roles k bare me jana tha
+- Project ka documentation bhi refer kiya tha
+- Routes me protected routes kese work karta hai wo logically explore kiya tha
 
 ## Others
 
@@ -74,28 +83,19 @@ Git Commit Link:
 
 Description:
 
-- Understand Redux Structure
-- Understand ThemeConfig file for static config
-- Understand ThemeContext for Dynamic style
-- Display first name and editable in edit profile page
-- Understand whole Login flow
-- Display toast message when Login form fields are empty
-- Solve issue when Login fields are empty and press Login button.
-- Display toast message when Send reset link button clicked on forget password.
-- Solve issue when reset password fields are empty and submit.
-- Display yellow color if Passport Number is null, --, and starts with 000000.
-- Implement Export User functionality
-- Add Reports Route
-- Add new Reports tab
-- Display Reports Data in table
-- Display custom loader before data load
-- Make CustomPagination for table pagination
-- Display total reports number on heading
-- Work on Search feature in Report page.
-- Work on Date filter featue in Report page
-- Implement Export Report data functionality.
-- Work on 2 Fector Authentication
-- Create 2FA varification Page
+- Solve issue on Authentication.
+- Code review with Bhautik Zanzrukiya.
+- Code review with Disha Patel.
+- Issue When admin enable 2FA then QrCode and recovery Code display on Dealer Profile.
+- Understand Roles in Dealer Data
+- Uderstand protected, Private, public keywords in routes deeply.
+- Explore Statistic.js file responsible to display "Data Field Quality" and "Record Quality" in Customer Data Page only Admine side.
+- Read Documentation of Dealer Data Project.
+- Make notes from Documentation.
+- know about bigQuery API calls.
+- Explore BigQuery Console (Web UI).
+- Create Account and Active free Trial.
+- Create Project in Google Cloud Console.
 
 ## Leave Request
 
