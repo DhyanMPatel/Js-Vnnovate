@@ -23,18 +23,9 @@ Today, I am working on below list of task:
    1.6. learned about `Nested Persists` if we want to set a different cofiguration. - Done
    1.7. Understood how hydration works using the `REHYDRATE` action. - Done
 
-2. Student Management System Project - Done
+2. Student Management System Project task given by
    2.1. Create new Project - Done
-   2.2.
-
-```js
-selector: (row) =>
-        row?.last_updated
-          ? moment(row?.last_updated)
-              .tz("Africa/Johannesburg") // Convert to South Africa Time
-              .format("YYYY-MM-DD HH:mm")
-          : "--", // Format as requested, fallback to "--"
-```
+   2.2. Made routes for student form and student list page - Done
 
 ## Questions
 
@@ -74,16 +65,19 @@ Git Commit Link:
 
 Description:
 
-- Solve issue on Authentication.
-- Code review with Bhautik Zanzrukiya.
-- Code review with Disha Patel.
-- Issue When admin enable 2FA then QrCode and recovery Code display on Dealer Profile.
-- Understand Roles in Dealer Data
-- Uderstand protected, Private, public keywords in routes deeply.
-- Explore Statistic.js file responsible to display "Data Field Quality" and "Record Quality" in Customer Data Page only Admine side.
-- Read Documentation of Dealer Data Project.
-- Make notes from Documentation.
-- know about bigQuery API calls.
+1. Learn Redux-persist - Done
+   1.1. What is Redux Persist Library and why used? - Done
+   1.2. Learned Redux Persist work: `Persist`, `Rehydrate`. - Done
+   1.3. Understood Redux Persist main Concepts like `PersistStorage`, `PersistReducer`, `storage`. - Done
+   1.4. Understood `PersistGate` for delay UI Components to render. - Done
+   1.5. Understood customizing what's persisted using `whitelist` & `blacklist`. - Done
+   1.6. learned about `Nested Persists` if we want to set a different cofiguration. - Done
+   1.7. Understood how hydration works using the `REHYDRATE` action. - Done
+
+2. Student Management System Project task given by
+   2.1. Create new Project - Done
+   2.2. Made routes for student form and student list page - Done
+
 - Explore BigQuery Console (Web UI).
 - Create Account and Active free Trial.
 - Create Project in Google Cloud Console.
