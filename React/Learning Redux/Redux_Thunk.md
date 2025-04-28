@@ -105,15 +105,18 @@
     error: "",
   };
 
-  const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
-    const response = await Axios.get(
-      "https://jsonplaceholder.typicode.com/users"
-    );
+  export const fetchUsers = createAsyncThunk(
+    "users/fetchUsers",
+    async () => {
+      const response = await Axios.get(
+        "https://jsonplaceholder.typicode.com/users"
+      );
 
-    if (response.data.success) {
-      return response;
+      if (response.data.success) {
+        return response;
+      }
     }
-  });
+  );
 
   const userSlice = createSlice({
     name: "users",
@@ -166,6 +169,7 @@
 
   // Dispatch Thunk actions in a component
   import {useDispatch, useSelector} from 'react-redux';
+  import {fetchUsers} from 'store/UserSlice';
   function displayUsers=()=>{
     const dispatch = useDispatch();
     const {users, loading, error} => useSelector((store) => store.users)

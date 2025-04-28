@@ -73,73 +73,11 @@
   userStore.dispatch({ type: FETCH_USERS_REQUEST });
   ```
 
-- Latest Approatch
+### Latest Approatch
+
+- 1. Store.js file,
 
   ```js
-  /// Create API Server (api.js)
-  import axios from "axios";
-
-  const API = axios.create({
-      baseURL: "https://jsonplaceholder.typicode.com",
-      timeout: 5000, // 5-second timeout
-  });
-
-  /// Functions for call by sagas
-  export const fetchUsersAPI = () => API.get("/users");
-  export const fetchUsersByIdAPI = (id) => API.get(`/users/${id}`)
-
-
-  /// Create Redux Slice (usersSlice.js)
-  import { createSlice } from "@reduxjs/toolkit";
-
-  const initialState = {
-      loading: false,
-      users: [],
-      error: "",
-  };
-  const usersSlice = createSlice({
-      name: "users",
-      initialState,
-      reducers: {
-          fetchUsersRequest: (state) => {
-              state.loading = true;
-          },
-          fetchUsersSuccess: (state, action) => {
-              state.loading = false;
-              state.users = action.payload;
-          },
-          fetchUsersFailure: (state, action) => {
-              state.loading = false;
-              state.error = action.payload;
-          },
-      },
-  });
-
-  export const { fetchUsersRequest, fetchUsersSuccess, fetchUsersFailure } = usersSlice.actions;
-  export default usersSlice.reducer;
-
-
-  /// Create Redux-saga for API Calls (sagas.js)
-  import { call, put, takeEvery } from "redux-saga/effects";
-  import { fetchUsersRequest, fetchUsersSuccess, fetchUsersFailure } from "./usersSlice";
-  import { fetchUsersAPI } from "./api";
-
-  /// Worker saga
-  function* fetchUsers (){
-      try {
-          const response = yield call(fetchUsersAPI);
-          yield put(fetchUsersSuccess(response.data)); // Dispatch success action
-      } catch (error) {
-          yield put(fetchUsersFailure(error.message)); // Dispatch failure action
-      }
-  }
-
-  /// Watcher saga
-  function* watchFetchUSers(){
-      yield takeEvery(fetchUsersRequest.type, fetchUsers)
-  }
-  export default watchFetchUsers;
-
   /// Configure Redux-store with saga middleware (store.js)
   import { configureStore } from "@reduxjs/toolkit";
   import createSagaMiddleware from "redux-saga";
@@ -149,44 +87,126 @@
   const sagaMiddleware = createSagaMiddleware();
 
   const store = configureStore({
-      reducer:{
-          users: usersReducer
-      },
-      middleware: (getDefaultMiddleware) =>
-          getDefaultMiddleware({thunk: false}).concate(sagaMiddleware),   // Disable thunk and add saga
-  })
+    reducer: {
+      users: usersReducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({ thunk: false }).concate(sagaMiddleware), // Disable thunk and add saga
+  });
 
   sagaMiddleware.run(watchFetchUsers);
 
   export default store;
+  ```
 
+- 2. UserSlice.js file,
+
+  ```js
+  /// Create Redux Slice (usersSlice.js)
+  import { createSlice } from "@reduxjs/toolkit";
+
+  const initialState = {
+    loading: false,
+    users: [],
+    error: "",
+  };
+  const usersSlice = createSlice({
+    name: "users",
+    initialState,
+    reducers: {
+      fetchUsersRequest: (state) => {
+        state.loading = true;
+      },
+      fetchUsersSuccess: (state, action) => {
+        state.loading = false;
+        state.users = action.payload;
+      },
+      fetchUsersFailure: (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      },
+    },
+  });
+
+  export const { fetchUsersRequest, fetchUsersSuccess, fetchUsersFailure } =
+    usersSlice.actions;
+  export default usersSlice.reducer;
+  ```
+
+- 3. Api.js file,
+
+  ```js
+  /// Create API Server (api.js)
+  import axios from "axios";
+
+  const API = axios.create({
+    baseURL: "https://jsonplaceholder.typicode.com",
+    timeout: 5000, // 5-second timeout
+  });
+
+  /// Functions for call by sagas
+  export const fetchUsersAPI = () => API.get("/users");
+  export const fetchUsersByIdAPI = (id) => API.get(`/users/${id}`);
+  ```
+
+- 4. Sagas.js file,
+
+  ```js
+  /// Create Redux-saga for API Calls (sagas.js)
+  import { call, put, takeEvery } from "redux-saga/effects";
+  import {
+    fetchUsersRequest,
+    fetchUsersSuccess,
+    fetchUsersFailure,
+  } from "./usersSlice";
+  import { fetchUsersAPI } from "./api";
+
+  /// Worker saga
+  function* fetchUsers() {
+    try {
+      const response = yield call(fetchUsersAPI);
+      yield put(fetchUsersSuccess(response.data)); // Dispatch success action
+    } catch (error) {
+      yield put(fetchUsersFailure(error.message)); // Dispatch failure action
+    }
+  }
+
+  /// Watcher saga
+  function* watchFetchUSers() {
+    yield takeEvery(fetchUsersRequest.type, fetchUsers);
+  }
+  export default watchFetchUsers;
+  ```
+
+- 5. UserList Component,
+
+  ```js
   /// Dispatch API request in a React Component. (UsersList.js).
   import React, { useEffect } from "react";
   import { useDispatch, useSelector } from "react-redux";
   import { fetchUsersRequest } from "./usersSlice";
 
-  const userList = () =>{
-      const dispatch = useDispatch();
-      const { users, loading, error } = useSelector((state) => state.users);
+  const userList = () => {
+    const dispatch = useDispatch();
+    const { users, loading, error } = useSelector((state) => state.users);
 
-      useEffect(()=>{
-          dispatch(fetchUsersRequest());
-      }, [dispatch])
+    useEffect(() => {
+      dispatch(fetchUsersRequest());
+    }, [dispatch]);
 
-      return (
-          <div>
-          <h2>User List</h2>
-          {loading && <p>Loading...</p>}
-          {error && <p>Error: {error}</p>}
-          <ul>
-              {users.map((user) => (
-                  <li key={user.id}>{user.name}</li>
-              ))}
-          </ul>
-          </div>
-      );
+    return (
+      <div>
+        <h2>User List</h2>
+        {loading && <p>Loading...</p>}
+        {error && <p>Error: {error}</p>}
+        <ul>
+          {users.map((user) => (
+            <li key={user.id}>{user.name}</li>
+          ))}
+        </ul>
+      </div>
+    );
   };
 
   export default UsersList;
-
   ```

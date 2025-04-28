@@ -2,33 +2,25 @@
 
 Today, I am working on below list of task:
 
-Date: 25 April 2025
-Day: Friday
+Date: 28 April 2025
+Day: Monday
 
-project: College Project,
-
-1. Understand Routes and Redux from POS College Project.
+1. Learn about Persist Data in Redux.
 
 ## Work done:
 
-Date: 25 April 2025
-Day: Friday
+Date: 28 April 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
-Project: Dealer Data,
-
-- Task Given by
-
-1. Supplier page - Done
-   1.1. Explore add supplier module with redux
-   1.2. Explore get supplier details module with redux
-   1.3. Explore get all supplier module with redux
-   1.4. Explore supplier report module with redux
-   1.5. Explore Update supplier module with redux
-2. Explore Purchase Order Page with AddPurchaseOrder, GetAllPurchaseOrderList,
-   SinglePurchase modules. - Done
-3. Explore POS page with POS,AddPOS, Products modules. - Done
+- What is Redux Persist Library and why used? - Done
+- Learned Redux Persist work: `Persist`, `Rehydrate`. - Done
+- Understood Redux Persist main Concepts like `PersistStorage`, `PersistReducer`, `storage`. - Done
+- Understood `PersistGate` for delay UI Components to render. - Done
+- Understood customizing what's persisted using `whitelist` & `blacklist`. - Done
+- learned about `Nested Persists` if we want to set a different cofiguration. - Done
+- Understood how hydration works using the `REHYDRATE` action. - Done
 
 ```js
 selector: (row) =>
