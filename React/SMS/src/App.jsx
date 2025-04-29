@@ -1,14 +1,17 @@
 import "./assets/style/App.css";
 import { Routes, Route } from "react-router-dom";
-import StudentForm from "./pages/studentForm";
+import StudentForm from "./pages/StudentForm/studentForm";
 import StudentList from "./pages/studentList";
+import Layout from "./pages/Navbar";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" index={true} element={<StudentForm />} />
-        <Route path="/student-list" element={<StudentList />} />
+      <Route path="/" element={<Layout />}>
+          <Route index element={<StudentForm />} />
+          <Route path="student-list" element={<StudentList />} />
+        </Route>
       </Routes>
     </>
   );

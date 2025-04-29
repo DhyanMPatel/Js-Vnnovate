@@ -2,6 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./assets/style/index.css";
 import App from "./App.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // Routers
 import { BrowserRouter } from "react-router-dom";
