@@ -1,102 +1,107 @@
 /* StudentForm.css */
 
 .student-form-container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 40px auto;
-  }
-  
-  .student-form-container h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #444;
-    text-align: left;
-    cursor: pointer;
-    max-width: fit-content;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+}
 
-  }
-  
-  input[type="text"],
-  input[type="date"],
-  textarea,
-  select {
-    border-radius: 6px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s;
-  }
-  
-  input[type="text"]:focus,
-  input[type="date"]:focus,
-  textarea:focus,
-  select:focus {
-    border-color: #535bf2;
-    outline: none;
-  }
-  .gender-options, .sports-options {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Or use margin like .me-3, .ms-1 with Bootstrap */
-  }
-  
-  textarea {
-    min-height: 120px;
-    resize: vertical;
-  }
+.student-form-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
 
-  .range-picker{
-    height: 38px;
-  }
-  
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin-right: 8px;
-  }
-  
-  .button-submit {
-    width: 100%;
-    padding: 12px;
-    font-weight: bold;
-    background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
-    border: none;
-    color: white;
-    border-radius: 8px;
-    transition: background 0.3s;
-  }
-  
-  .button-submit:hover {
-    background: linear-gradient(90deg, #0056b3 0%, #0099cc 100%);
-  }
-  
-  /* Align From and To dates on the same line */
-  .date-row {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .date-row .form-group {
-    flex: 1;
-  }
-  
-  /* For sports checkboxes */
-  .sports-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+  text-align: left;
+  cursor: pointer;
+  max-width: fit-content;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #535bf2;
+  outline: none;
+}
+.gender-options,
+.sports-options {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Or use margin like .me-3, .ms-1 with Bootstrap */
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.range-picker {
+  height: 38px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.text-danger {
+  text-align: left;
+  left: 5px;
+  font-size: 0.875em;
+}
+
+.button-submit {
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.button-submit:hover {
+  background: linear-gradient(90deg, #0056b3 0%, #0099cc 100%);
+}
+
+/* Align From and To dates on the same line */
+.date-row {
+  display: flex;
+  gap: 20px;
+}
+
+.date-row .form-group {
+  flex: 1;
+}
+
+/* For sports checkboxes */
+.sports-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

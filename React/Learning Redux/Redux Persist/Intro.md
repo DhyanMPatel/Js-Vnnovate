@@ -69,8 +69,8 @@
 
   // Create a Persist Config:
   const persistConfig = {
-  key: "root", // key name to store data in localStorage
-  storage, // type of storage to use
+    key: "root", // key name to store data in localStorage
+    storage, // type of storage to use
   };
 
   // Wrap Root Reducer with persistReducer:
@@ -78,25 +78,25 @@
 
   // Create Store with the Persisted Reducer:
   export const store = configureStore({
-  reducer: persistedReducer,
-  devTool: process.env.VITE_APP_MODE !== "Production", // Enable Redux devTool not for Production mode.
+    reducer: persistedReducer,
+    devTool: process.env.VITE_APP_MODE !== "Production", // Enable Redux devTool not for Production mode.
 
-  middleware: (getDefaultMiddleware) => {
+    middleware: (getDefaultMiddleware) => {
       getDefaultMiddleware({
-          SerializableCheck: {
-              ignoredAction: ['persis/PERSIST', 'persist/REHYDRATE'], // Say that, ignore the serializable warning on this perticular actions.
-          }
-      })
-  }
-  /*
+        SerializableCheck: {
+          ignoredAction: ["persist/PERSIST", "persist/REHYDRATE"], // Say that, ignore the serializable warning on this perticular actions.
+        },
+      });
+    },
+    /*
       - Normally, Redux Toolkit automatically checks that all Redux actions and state are serializable.
-
+  
       - Serializable means: can it be safely converted into JSON? (Objects, arrays, strings are serializable; functions, promises are not.)
       */
   });
 
   // Create a Persistor:
-  export persistor = persistStore(store);
+  export const persistor = persistStore(store);
   ```
 
 - we can also use other storage engines like `sessionStorage` and `Redux Persist Cookie Storage Adapter`.
