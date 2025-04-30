@@ -7,7 +7,10 @@ import {
   Row,
   Col,
   FormFeedback,
+  InputGroupText,
 } from "reactstrap";
+import { FaCalendarAlt } from "react-icons/fa";
+
 import "./style/index.css";
 import { DatePicker } from "antd";
 import { Formik, Form, Field } from "formik";
@@ -17,7 +20,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { setFormData } from "../../redux/StudentSlice";
 
 function StudentForm() {
-  const { RangePicker } = DatePicker;
   const dispatch = useDispatch();
   const store = useSelector((state) => state.formData);
 
@@ -25,17 +27,29 @@ function StudentForm() {
     fullName: Yup.string().required("Full Name is required"),
     gender: Yup.string().required("Gender is required"),
     message: Yup.string(),
-    // dateRange: Yup.array().length(2, "Select From and To dates"),
+    fromDate: Yup.string().required("From date is required"),
+    toDate: Yup.string().required("To date is required"),
     standard: Yup.string().required("Standard is required"),
     sports: Yup.array().min(1, "At least any one sport required"),
-    // file: Yup.mixed().required("File is required"),
+    file: Yup.mixed().required("File is required"),
   });
 
   const handleSubmit = (values) => {
-    console.log("Submitted");
+    console.log("Submitted ", values);
     dispatch(setFormData(values));
-    console.log(store);
+    // console.log(store);
   };
+
+  const handleFiles = (event) => {
+    const file = event.target.files[0];
+    return {
+      fileInfo: {
+        name: file.name,
+        size: file.size,
+        previewURL: URL.createObjectURL(file),
+      }
+    }
+  }
 
   return (
     <div className="student-form-container">
@@ -101,6 +115,7 @@ function StudentForm() {
             {/* Message */}
             <FormGroup className="form-group">
               <Label for="message">Want to Say?</Label>
+
               <Input
                 id="message"
                 name="message"
@@ -113,22 +128,46 @@ function StudentForm() {
 
             {/* From - To Dates */}
             <Row>
-              <Col md={12}>
+              <Col md={6}>
                 <FormGroup className="form-group">
-                  <Label>From - To</Label>
-                  <RangePicker
+                  <Label for="fromDate">From</Label>
+                  <DatePicker
+                    id="fromDate"
+                    placeholder="Select from date"
                     className="w-100 range-picker"
-                    value={values.dateRange}
-                    onChange={(dates) =>
-                      setFieldValue(
-                        "dateRange",
-                        dates.map((d) => d && dayjs(d).format("YYYY-MM-DD"))
-                      )
+                    value={values.fromDate ? dayjs(values.fromDate) : null}
+                    disabledDate={(current) =>
+                      values.toDate
+                        ? current && current > dayjs(values.toDate)
+                        : false
                     }
-                    // onInvalidCapture={errors.dateRange}
+                    onBlur={handleBlur}
+                    onChange={(date) => setFieldValue("fromDate", dayjs(date).format("YYYY-MM-DD"))}
                   />
-                  {touched.dateRange && errors.dateRange && (
-                    <div className="text-danger">{errors.dateRange}</div>
+                  {touched.fromDate && errors.fromDate && (
+                    <div className="text-danger">{errors.fromDate}</div>
+                  )}
+                </FormGroup>
+              </Col>
+
+              <Col md={6}>
+                <FormGroup className="form-group">
+                  <Label for="toDate">To</Label>
+                  <DatePicker
+                    id="toDate"
+                    placeholder="Select to date"
+                    className="w-100 range-picker"
+                    value={values.toDate ? dayjs(values.toDate) : null}
+                    disabledDate={(current) =>
+                      values.fromDate
+                        ? current && current < dayjs(values.fromDate)
+                        : false
+                    }
+                    onBlur={handleBlur}
+                    onChange={(date) => setFieldValue("toDate", dayjs(date).format("YYYY-MM-DD"))}
+                  />
+                  {touched.toDate && errors.toDate && (
+                    <div className="text-danger">{errors.toDate}</div>
                   )}
                 </FormGroup>
               </Col>
@@ -144,9 +183,8 @@ function StudentForm() {
                 value={values.standard}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                // invalid={touched.standard && !!errors.standard}
               >
-                <option value="">Select Standard</option>
+                <option>Select Standard</option>
                 {[7, 8, 9, 10, 11, 12].map((num) => (
                   <option key={num}>{num}</option>
                 ))}
@@ -193,7 +231,7 @@ function StudentForm() {
                 name="file"
                 type="file"
                 onChange={(event) =>
-                  setFieldValue("file", event.currentTarget.files[0])
+                  setFieldValue("file", handleFiles(event))
                 }
               />
               {touched.file && errors.file && (

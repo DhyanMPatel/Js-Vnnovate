@@ -5,7 +5,8 @@ const initialState = {
     fullName: "",
     gender: "",
     message: "",
-    dateRange: [], // dayjs[] pair
+    fromDate: "",
+    toDate: "",
     standard: "",
     sports: [],
     file: null,
@@ -17,10 +18,11 @@ const StudentSlice = createSlice({
   initialState: initialState,
   reducers: {
     setFormData: (state, action) => {
-      (state.fullName = action.payload.fullName),
+      (state.formData.fullName = action.payload.fullName),
         (state.formData.gender = action.payload.gender),
         (state.formData.message = action.payload.message),
-        (state.formData.dateRange = action.payload.dateRange),
+        (state.formData.fromDate = action.payload.fromDate),
+        (state.formData.toDate = action.payload.toDate),
         (state.formData.standard = action.payload.standard),
         (state.formData.sports = action.payload.sports),
         (state.formData.file = action.payload.file);

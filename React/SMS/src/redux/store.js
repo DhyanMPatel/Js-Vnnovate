@@ -12,4 +12,11 @@ const persistedReducer = persistReducer(persistConfig, studentReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    serializable: {
+      ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
+    }
+  })
 });
+
+export const persistor = persistStore(store);
