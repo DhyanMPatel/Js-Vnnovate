@@ -6,17 +6,19 @@ import studentReducer from "./StudentSlice";
 const persistConfig = {
   key: "StudentList",
   storage,
+  whitelist: ["studentList"],
 };
 
 const persistedReducer = persistReducer(persistConfig, studentReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-    serializable: {
-      ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
-    }
-  })
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializable: {
+        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
+      },
+    }),
 });
 
 export const persistor = persistStore(store);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FormGroup,
   Label,
@@ -18,10 +18,22 @@ import dayjs from "dayjs";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import { setFormData } from "../../redux/StudentSlice";
+import { useNavigate } from "react-router-dom";
 
 function StudentForm() {
   const dispatch = useDispatch();
-  const store = useSelector((state) => state.formData);
+  const navigate = useNavigate();
+
+  const initialValues = {
+    fullName: "",
+    gender: "",
+    message: "",
+    fromDate: "",
+    toDate: "",
+    standard: "",
+    sports: [],
+    file: null,
+  };
 
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Full Name is required"),
@@ -29,7 +41,9 @@ function StudentForm() {
     message: Yup.string(),
     fromDate: Yup.string().required("From date is required"),
     toDate: Yup.string().required("To date is required"),
-    standard: Yup.string().required("Standard is required"),
+    standard: Yup.string()
+      .required("Standard is required")
+      .notOneOf(["Select Standard"], "Select correct Standard"),
     sports: Yup.array().min(1, "At least any one sport required"),
     file: Yup.mixed().required("File is required"),
   });
@@ -37,24 +51,37 @@ function StudentForm() {
   const handleSubmit = (values) => {
     console.log("Submitted ", values);
     dispatch(setFormData(values));
-    // console.log(store);
+    navigate("/student-list");
   };
 
-  const handleFiles = (event) => {
-    const file = event.target.files[0];
-    return {
-      fileInfo: {
+  const convertToBase64 = (file) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+
+  const handleFiles = async (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const base64 = await convertToBase64(file);
+
+      const fileInfo = {
+        base64Data: base64,
         name: file.name,
         size: file.size,
-        previewURL: URL.createObjectURL(file),
-      }
+      };
+      return {
+        fileInfo,
+      };
     }
-  }
+  };
 
   return (
     <div className="student-form-container">
       <Formik
-        initialValues={store}
+        initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
@@ -142,7 +169,12 @@ function StudentForm() {
                         : false
                     }
                     onBlur={handleBlur}
-                    onChange={(date) => setFieldValue("fromDate", dayjs(date).format("YYYY-MM-DD"))}
+                    onChange={(date) =>
+                      setFieldValue(
+                        "fromDate",
+                        dayjs(date).format("YYYY-MM-DD")
+                      )
+                    }
                   />
                   {touched.fromDate && errors.fromDate && (
                     <div className="text-danger">{errors.fromDate}</div>
@@ -164,7 +196,9 @@ function StudentForm() {
                         : false
                     }
                     onBlur={handleBlur}
-                    onChange={(date) => setFieldValue("toDate", dayjs(date).format("YYYY-MM-DD"))}
+                    onChange={(date) =>
+                      setFieldValue("toDate", dayjs(date).format("YYYY-MM-DD"))
+                    }
                   />
                   {touched.toDate && errors.toDate && (
                     <div className="text-danger">{errors.toDate}</div>
@@ -230,9 +264,12 @@ function StudentForm() {
                 id="file"
                 name="file"
                 type="file"
-                onChange={(event) =>
-                  setFieldValue("file", handleFiles(event))
-                }
+                onChange={async (event) => {
+                  const result = await handleFiles(event);
+                  if (result?.fileInfo) {
+                    setFieldValue("file", result.fileInfo);
+                  }
+                }}
               />
               {touched.file && errors.file && (
                 <div className="text-danger">{errors.file}</div>

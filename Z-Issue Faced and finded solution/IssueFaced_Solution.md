@@ -58,3 +58,18 @@ Solution: solved using another state (rowsPerPage, colsPerPage).
 10. `twoFA.recoveryCodes` are not array.
     Problem: `twoFA.recoveryCodes` give String value instead of Array
     Solution: use **JSON.parse()** that gives array from localStorage.
+
+11. During image Persist in SMS learning project
+    Problem: blob data stored in memmory so it is not permenent url as well as file is can't pass in persist. To display image in student list we need permenent url.
+
+    Solution: i pass base64Data that can be large but using promise. by the way use fileReader() then readAsDataURL(). It will create 64BaseData that can pass in Persist and then pass as src in image tag in student list model.
+
+```js
+const convertToBase64 = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+  });
+```

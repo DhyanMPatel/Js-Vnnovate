@@ -2,36 +2,36 @@
 
 Today, I am working on below list of task:
 
-Date: 29 April 2025
-Day: Tuesday
+Date: 30 April 2025
+Day: Wednesday
 
-1. Pull from Staging branch into dev_dhyan branch.
-2. Add redux with Persist state for Report.
-3. When logout user all data related to persist should be clear from localstorage.
+Project: Learning,
+
+1. Solve issue on Date and file type data during persist.
+2. Display student list,
+3. Crud operation with student list,
+4. Implement search operation in student list,
+5. Apply pagination in Student list
+6. export student list
 
 ## Work done:
 
-Date: 29 April 2025
-Day: Tuesday
+Date: 30 April 2025
+Day: Wednesday
 
 Today, I am working on below list of task:
 
-1. Pull from Staging branch into dev_dhyan branch. - Done
-   1.1. use pull request to pull every thing from staging branch - Done
-   1.2. Solve conflickt manually in some files - Done
+Project: Learning,
 
-2. Add redux with Persist state for Report. - Done
-   2.1. Combine Reducers to privent error. - Done
-   2.2. persist at LocalStorage or SessionStorage. - Done
-   2.3. Check persist at LocalStorage or SessionStorage working. - Done
-
-3. When logout user all data related to persist should be clear from localstorage. - Done
-
-4. Create Form for Student Management System Task given by
-   4.1. Create Student Form using formik and reactStrap. - Done
-   4.2. Implement Form validation using yup. - Done
-   4.3. Create Redux store with Persist state. - Done
-   4.4. Handle Date and File type data in Redux persist state. - In Progress
+1. Solve issue on Date type data during persist. - Done
+2. Solve issue of File type data while persist. - Done
+3. Display student list. - Done
+4. Implement sorting based on full name, gender, standard. - Done
+5. Display image on list. - Done
+6. Implement search operation in student list. - Done
+7. export student list. - Done
+8. Apply pagination in Student list. - Done
+9. Import CSV file. - In Progress
 
 ## Questions
 
@@ -40,14 +40,17 @@ Today, I am working on below list of task:
 
 ## Understading
 
-- Kal Redux-persist library ke bareme learn kiya tha like
+- Kal sir ne Persist State implement karne ko kaha tha to
 
-  - what is **Redux-persist**, why it is used.
-  - key points like `Persist`, `Rehydrate`, `persistStorage`, `PersistReducer`, `Storage`, `PersistGate`, `whitelist`, `blacklist`.
-  - `Nested Persists` bhi understand kiya tha
-  - Work flow while rehydration.
+  - first data pull kiya staging branch se
+  - redux store me persist state ka implement kiya tha reports ke liye
+  - Persist localStorage and sessionStorage me karke dikha tha
+  - then logout pe wo persist data remove bhi kar diya tha
 
-- then around
+- Then time mila to Rahul sir ne task diya tha SMS ka to usme kam kiya tha
+  - usme student form create kiya tha and name, gender, textarea, from date, to date, select, file type fields create ki, usme validation lagaya.
+  - redux store with persist state kiya
+  - usme date and file data me problem a raha tha.
 
 ## Others
 
