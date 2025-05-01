@@ -11,9 +11,14 @@ const StudentSlice = createSlice({
     setFormData: (state, action) => {
       state.studentList.push(action.payload);
     },
+    deleteStd: (state, action) => {
+      state.studentList = state.studentList.filter(
+        (std) => std.id !== action.payload
+      );
+    },
   },
 });
 
-export const { setFormData } = StudentSlice.actions;
+export const { setFormData, deleteStd } = StudentSlice.actions;
 
 export default StudentSlice.reducer;

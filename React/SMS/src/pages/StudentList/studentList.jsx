@@ -1,51 +1,98 @@
 import { useRef, useState } from "react";
-import DataTable from "react-data-table-component";
-import { useSelector } from "react-redux";
-import { Button, Input, Label } from "reactstrap";
-import { CSVLink } from "react-csv";
-import Papa from "papaparse";
-import { useNavigate } from "react-router-dom";
+
+import { useDispatch, useSelector } from "react-redux";
+import { Edit, Trash } from "react-feather";
+import Swal from "sweetalert2";
+
 import "./css/style.css";
+import { CSVExportBtn } from "../../common/CSVExportBtn";
+import { CSVImportBtn } from "../../common/CSVImportBtn";
+import { TableView } from "../../common/TableView";
+import { Search } from "../../common/SearchComp";
+import { deleteStd } from "../../redux/StudentSlice";
 
 const StudentList = () => {
+  const dispatch = useDispatch();
   const formData = useSelector((state) => state.studentList);
-  const navigate = useNavigate();
-  const fileInputRef = useRef(null);
+
+  // console.log(formData);
 
   const [searchData, setSearchData] = useState("");
 
+  // handle Search
   const filteredData = formData?.filter(
     (student) =>
       student.fullName?.toLowerCase().includes(searchData.toLowerCase()) ||
       student.gender?.toLowerCase() === searchData?.toLowerCase() ||
-      student.standard?.toLowerCase() === searchData?.toLowerCase()
+      student.standard?.toLowerCase().includes(searchData.toLowerCase())
   );
 
-  const formattedData = filteredData?.map((std) => ({
-    fullName: std.fullName,
-    gender: std.gender,
-    standard: std.standard,
-    fromDate: std.fromDate,
-    toDate: std.toDate,
-    file: std.file?.base64Data,
-    message: std.message,
-    sports: std.sports.map((sport) => sport),
-  }));
-
-  const headers = [
-    { label: "Name", key: "fullName" },
-    { label: "Gender", key: "gender" },
-    { label: "Standard", key: "standard" },
-    { label: "From", key: "fromDate" },
-    { label: "To", key: "toDate" },
-    { label: "Image", key: "file" },
-    { label: "Message", key: "message" },
-    { label: "Sports", key: "sports" },
-  ];
-
-  // console.log(filteredData);
-
+  // Columns to render
   const columns = [
+    {
+      name: "Actions",
+      center: "true",
+      width: "100px",
+      cell: (row, index) => (
+        <div className="column-action ">
+          <Edit
+            size={17}
+            className="cursor-pointer me-1"
+            id={`edit-tooltip-${row.id}`}
+            style={{ color: "#728088" }}
+            // onClick={() => {
+            //   setUser(row);
+            //   setShow(true);
+            // }}
+          />
+          {/* <UncontrolledTooltip
+            placement="top"
+            target={`edit-tooltip-${row.id}`}
+          >
+            Edit Email
+          </UncontrolledTooltip> */}
+
+          <Trash
+            size={17}
+            className="cursor-pointer"
+            id={`trash-tooltip-${row.id}`}
+            style={{ color: "#728088" }}
+            onClick={async (e) => {
+              e.preventDefault();
+              Swal.fire({
+                title: "Are you sure?",
+                text: "You want to delete this?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!",
+              }).then(async (result) => {
+                if (result.isConfirmed) {
+                  try {
+                    console.log(row.id);
+                    dispatch(deleteStd(row.id));
+                    Swal.fire("Deleted!", "Email has been deleted.", "success");
+                  } catch (error) {
+                    Swal.fire(
+                      "Error",
+                      "An error occurred while deleting the report.",
+                      "error"
+                    );
+                  }
+                }
+              });
+            }}
+          />
+          {/* <UncontrolledTooltip
+            placement="top"
+            target={`trash-tooltip-${row.id}`}
+          >
+            Delete User
+          </UncontrolledTooltip> */}
+        </div>
+      ),
+    },
     {
       name: "Full Name",
       center: "true",
@@ -58,6 +105,9 @@ const StudentList = () => {
       selector: (row) => row.gender,
       maxWidth: "100px",
       sortable: "true",
+      cell: (row) => {
+        return row?.gender.slice(0, 1).toUpperCase() + row?.gender.slice(1);
+      },
     },
     {
       name: "Standard",
@@ -96,7 +146,7 @@ const StudentList = () => {
             style={{
               width: "auto",
               height: "100px",
-              maxWidth: "200px",
+              maxWidth: "150px",
               objectFit: "fill",
               margin: "5px",
               borderRadius: "14px",
@@ -111,10 +161,12 @@ const StudentList = () => {
     {
       name: "Message",
       center: "true",
+      wrap: "true",
       selector: (row) => row.message,
     },
   ];
 
+  // Custom Style for table
   const customStyles = {
     headCells: {
       style: {
@@ -143,31 +195,6 @@ const StudentList = () => {
     },
   };
 
-  const handleClick = () => {
-    fileInputRef.current.click();
-  };
-
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-
-    const reader = new FileReader();
-
-    reader.onload = async ({ target }) => {
-      const csv = Papa.parse(target.result, {
-        header: true,
-      });
-      const parsedData = csv?.data;
-      const rows = Object.keys(parsedData[0]);
-
-      const columns = Object.values(parsedData[0]);
-      const res = rows.reduce((acc, e, i) => {
-        return [...acc, [[e], columns[i]]];
-      }, []);
-      console.log(res);
-    };
-    reader.readAsText(file);
-  };
-
   return (
     <>
       <div
@@ -188,31 +215,7 @@ const StudentList = () => {
           }}
         >
           {/* Search Section */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              borderRadius: "8px",
-              justifyContent: "flex-end",
-            }}
-          >
-            <h4
-              style={{
-                color: "black",
-                fontSize: "15px",
-                margin: "14px",
-              }}
-            >
-              Search
-            </h4>
-            <Input
-              type="text"
-              value={searchData}
-              placeholder="Search here..."
-              onChange={(e) => setSearchData(e.target.value)}
-            />
-          </div>
+          <Search searchData={searchData} setSearchData={setSearchData} />
 
           {/* Buttons */}
           <div
@@ -223,25 +226,8 @@ const StudentList = () => {
               flexDirection: "row",
             }}
           >
-            <input
-              type="file"
-              hidden
-              ref={fileInputRef}
-              onChange={handleFileChange}
-              accept=".csv"
-            />
-            <Button onClick={handleClick}>Import CSV</Button>
-
-            <Button style={{ marginLeft: "20px" }}>
-              <CSVLink
-                className="text-decoration-none text-light"
-                data={formattedData}
-                filename={"Student List.csv"}
-                headers={headers}
-              >
-                Export CSV
-              </CSVLink>
-            </Button>
+            <CSVImportBtn />
+            <CSVExportBtn filteredData={filteredData} />
           </div>
         </div>
       </div>
@@ -256,47 +242,12 @@ const StudentList = () => {
           paddingTop: "15px",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "10px 20px",
-            position: "relative",
-            backgroundColor: "#f5f5f5",
-            borderRadius: "8px",
-            // marginBottom: "20px",
-          }}
-        >
-          <Button style={{ zIndex: 1 }} onClick={() => navigate("/")}>
-            Add
-          </Button>
-          <h2
-            style={{
-              position: "absolute",
-              left: "50%",
-              transform: "translateX(-50%)",
-              fontSize: "20px",
-              margin: 0,
-            }}
-          >
-            Student Table
-          </h2>
-          <div style={{ width: "70px" }} />
-        </div>
-
-        <hr />
-        <DataTable
+        <TableView
+          add
+          title={"Student Table"}
           columns={columns}
           data={filteredData || []}
           customStyles={customStyles}
-          pagination
-          paginationPerPage={2}
-          paginationRowsPerPageOptions={[2, 5, 10, 15, 20]}
-          highlightOnHover
-          striped
-          responsive
-          fixedHeader
         />
       </div>
     </>

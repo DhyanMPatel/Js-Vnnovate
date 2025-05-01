@@ -23,8 +23,10 @@ import { useNavigate } from "react-router-dom";
 function StudentForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const stdlist = useSelector((state) => state.studentList);
 
   const initialValues = {
+    id: "",
     fullName: "",
     gender: "",
     message: "",
@@ -36,6 +38,11 @@ function StudentForm() {
   };
 
   const validationSchema = Yup.object().shape({
+    id: Yup.string()
+      .required("ID is required")
+      .test("unique", "ID must be unique", function (value) {
+        return !stdlist.some((student) => student.id === value);
+      }),
     fullName: Yup.string().required("Full Name is required"),
     gender: Yup.string().required("Gender is required"),
     message: Yup.string(),
@@ -49,7 +56,7 @@ function StudentForm() {
   });
 
   const handleSubmit = (values) => {
-    console.log("Submitted ", values);
+    // console.log("Submitted ", values);
     dispatch(setFormData(values));
     navigate("/student-list");
   };
@@ -94,6 +101,23 @@ function StudentForm() {
           touched,
         }) => (
           <Form className="p-4 border rounded">
+            {/* Id */}
+            <FormGroup className="form-group">
+              <Label for="id">Student ID</Label>
+              <Input
+                id="id"
+                name="id"
+                type="text"
+                value={values.id}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                placeholder="Enter Unique Student ID"
+              />
+              {touched.id && errors.id && (
+                <div className="text-danger">{errors.id}</div>
+              )}
+            </FormGroup>
+
             {/* Full Name */}
             <FormGroup className="form-group">
               <Label for="fullName">Full Name</Label>
@@ -260,7 +284,7 @@ function StudentForm() {
             {/* Image Upload */}
             <FormGroup className="form-group">
               <Label for="file">File</Label>
-              <Input
+              <input
                 id="file"
                 name="file"
                 type="file"
@@ -270,6 +294,7 @@ function StudentForm() {
                     setFieldValue("file", result.fileInfo);
                   }
                 }}
+                accept="image/png, image/heic, image/jpg, image/jpeg"
               />
               {touched.file && errors.file && (
                 <div className="text-danger">{errors.file}</div>

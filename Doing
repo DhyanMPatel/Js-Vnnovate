@@ -2,36 +2,50 @@
 
 Today, I am working on below list of task:
 
-Date: 30 April 2025
-Day: Wednesday
+Date: 1 May 2025
+Day: Thursday
 
 Project: Learning,
 
-1. Solve issue on Date and file type data during persist.
-2. Display student list,
-3. Crud operation with student list,
-4. Implement search operation in student list,
-5. Apply pagination in Student list
-6. export student list
+1. Continue work on Import CSV functionality.
 
 ## Work done:
 
-Date: 30 April 2025
-Day: Wednesday
+Date: 1 May 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
 Project: Learning,
 
-1. Solve issue on Date type data during persist. - Done
-2. Solve issue of File type data while persist. - Done
-3. Display student list. - Done
-4. Implement sorting based on full name, gender, standard. - Done
-5. Display image on list. - Done
-6. Implement search operation in student list. - Done
-7. export student list. - Done
-8. Apply pagination in Student list. - Done
-9. Import CSV file. - In Progress
+1. Create Common table module to display student list. - Done
+2. Import CSV
+   2.1. Create button to import CSV. - Done
+   2.2. Create modal to display imported CSV file content in table format. - Done
+   2.3. Create confirm button in modal to confirm add data. - Done
+   2.4. Create cancel button in modal to stop adding data. - Done
+   2.5. If user cancle input field then display privious data that should not display. -
+
+3. Change in Student Form.
+   3.1. Add one more field ID. - Done
+4. Add Actions
+   3.1. Implement Edit option. - In Progress
+   3.2. Implement delete option. - Done
+5. Set Loaders
+
+- Completed Work
+
+1. Create Common table module to display student list. - Done
+2. Import CSV - Done
+   2.1. Create button to import CSV. - Done
+   2.2. Create modal to display imported CSV file content in table format. - Done
+   2.3. Create confirm button in modal to confirm add data. - Done
+   2.4. Create cancel button in modal to stop adding data. - Done
+3. Change in Student Form. - Done
+   3.1. Add one more field ID. - Done
+4. Add Actions - Done
+   4.1. Implement Delete option. - Done
+   4.2. Implement Edit option. - In Progress
 
 ## Questions
 
