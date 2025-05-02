@@ -2,50 +2,41 @@
 
 Today, I am working on below list of task:
 
-Date: 1 May 2025
-Day: Thursday
+Date: 2 May 2025
+Day: Friday
 
 Project: Learning,
 
-1. Continue work on Import CSV functionality.
+1. Implement edit Student functionality.
 
 ## Work done:
 
-Date: 1 May 2025
-Day: Thursday
+Date: 2 May 2025
+Day: Friday
 
 Today, I am working on below list of task:
 
 Project: Learning,
 
-1. Create Common table module to display student list. - Done
-2. Import CSV
-   2.1. Create button to import CSV. - Done
-   2.2. Create modal to display imported CSV file content in table format. - Done
-   2.3. Create confirm button in modal to confirm add data. - Done
-   2.4. Create cancel button in modal to stop adding data. - Done
-   2.5. If user cancle input field then display privious data that should not display. -
+1. Create Common Form module for student form fields. - Done
+   1.1. There are common field UI for text, textarea, select, radio, checkbox type of inputs. - Done
+   1.2. There are common field UI for file type of input. - Done
+   1.3. There are common field UI for fromDate, toDate type of inputs. - Done
+2. Implement edit student functionality. - Done
+   2.1. Create Modal for edit student. - Done
+   2.2. Set student detail in state on edit button click. - Done
+   2.3. Display Image in update field. - Done
+   2.4. update Student based on changes. -Done
+   2.5. update redux store and persist data based on update. - Done
 
-3. Change in Student Form.
-   3.1. Add one more field ID. - Done
-4. Add Actions
-   3.1. Implement Edit option. - In Progress
-   3.2. Implement delete option. - Done
-5. Set Loaders
+3. Add Sweet Alerts. - Done
+   3.1. Display after student add. - Done
+   3.2. Display when delete button click. - Done
+   3.3. Display when confirm import data. - Done
+   3.4. Display when user successfully updated. - Done
+   3.5. Display on update cancel. - Done
 
-- Completed Work
-
-1. Create Common table module to display student list. - Done
-2. Import CSV - Done
-   2.1. Create button to import CSV. - Done
-   2.2. Create modal to display imported CSV file content in table format. - Done
-   2.3. Create confirm button in modal to confirm add data. - Done
-   2.4. Create cancel button in modal to stop adding data. - Done
-3. Change in Student Form. - Done
-   3.1. Add one more field ID. - Done
-4. Add Actions - Done
-   4.1. Implement Delete option. - Done
-   4.2. Implement Edit option. - In Progress
+4. Issue on Storing Images in CSV format and Persist state. - In Progress
 
 ## Questions
 
@@ -89,27 +80,75 @@ Cc: mansi ma'am
 
 Project Name: Dealer Data
 
-Git Commit ID:
-Git Commit Link:
+Git Commit ID: ac4a1019553f2f42ddfddfc73843f304ab47c680
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-rdb-frontend/-/commit/ac4a1019553f2f42ddfddfc73843f304ab47c680
 
 Description:
 
-1. Learn Redux-persist - Done
-   1.1. What is Redux Persist Library and why used? - Done
-   1.2. Learned Redux Persist work: `Persist`, `Rehydrate`. - Done
-   1.3. Understood Redux Persist main Concepts like `PersistStorage`, `PersistReducer`, `storage`. - Done
-   1.4. Understood `PersistGate` for delay UI Components to render. - Done
-   1.5. Understood customizing what's persisted using `whitelist` & `blacklist`. - Done
-   1.6. learned about `Nested Persists` if we want to set a different cofiguration. - Done
-   1.7. Understood how hydration works using the `REHYDRATE` action. - Done
+1. Learn Redux-persist
+   1.1. What is Redux Persist Library and why used?
+   1.2. Learned Redux Persist work: `Persist`, `Rehydrate`.
+   1.3. Understood Redux Persist main Concepts like `PersistStorage`, `PersistReducer`, `storage`.
+   1.4. Understood `PersistGate` for delay UI Components to render.
+   1.5. Understood customizing what's persisted using `whitelist` & `blacklist`.
+   1.6. learned about `Nested Persists` if we want to set a different cofiguration.
+   1.7. Understood how hydration works using the `REHYDRATE` action.
+2. Pull from Staging branch into dev_dhyan branch.
+   2.1. use pull request from staging branch.
+   2.2. Solve conflickt manually in some files
+3. Add redux with Persist state for Report.
+   3.1. Combine Reducers to privent error.
+   3.2. persist at LocalStorage or SessionStorage.
+   3.3. Check persist at LocalStorage or SessionStorage working.
+4. When logout user all data related to persist should be clear from localstorage.
 
-2. Student Management System Project task given by
-   2.1. Create new Project - Done
-   2.2. Made routes for student form and student list page - Done
+Project: Learning,
 
-- Explore BigQuery Console (Web UI).
-- Create Account and Active free Trial.
-- Create Project in Google Cloud Console.
+1. Student Management System Project task given by Rahul sir
+   1.1. Create new Project
+   1.2. Made routes for student form and student list page
+2. Create Form for Student Management System Task given by Rahul sir
+   2.1. Create Student Form using formik and reactStrap.
+   2.2. Implement Form validation using yup.
+   2.3. Create Redux store with Persist state.
+   2.4. Handle Date and File type data in Redux persist state.
+3. Solve issue on Date type data during persist.
+4. Solve issue of File type data while persist.
+5. Display student list.
+6. Implement sorting based on full name, gender, standard.
+7. Display image on list.
+8. Implement search operation in student list.
+9. export student list.
+10. Apply pagination in Student list.
+11. Import CSV file.
+12. Create Common table module to display student list.
+13. Import CSV
+    13.1. Create button to import CSV.
+    13.2. Create modal to display imported CSV file content in table format.
+    13.3. Create confirm button in modal to confirm add data.
+    13.4. Create cancel button in modal to stop adding data.
+14. Change in Student Form.
+    14.1. Add one more field ID.
+15. Add Actions
+    15.1. Implement Delete option.
+    15.2. Implement Edit option.
+16. Create Common Form module for student form fields.
+    16.1. There are common field UI for text, textarea, select, radio, checkbox type of inputs.
+    16.2. There are common field UI for file type of input.
+    16.3. There are common field UI for fromDate, toDate type of inputs.
+17. Implement edit student functionality.
+    17.1. Create Modal for edit student.
+    17.2. Set student detail in state on edit button click.
+    17.3. Display Image in update field.
+    17.4. update Student based on changes.
+    17.5. update redux store and persist data based on update.
+18. Add Sweet Alerts.
+    18.1. Display after student add.
+    18.2. Display when delete button click.
+    18.3. Display when confirm import data.
+    18.4. Display when user successfully updated.
+    18.5. Display on update cancel.
+19. Issue on Storing Images in CSV format and Persist state.
 
 ## Leave Request
 

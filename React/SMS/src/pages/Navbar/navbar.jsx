@@ -1,7 +1,12 @@
-import { Link } from "react-router-dom";
-import './navbar.css';
+import { Link, NavLink } from "react-router-dom";
+import "./navbar.css";
 
 function Navbar() {
+  const style = ({ isActive }) => {
+    return {
+      fontWeight: isActive ? "bold" : "",
+    };
+  };
   return (
     <nav
       style={{
@@ -12,16 +17,20 @@ function Navbar() {
         alignItems: "center",
       }}
     >
-      
-      <div className="nav-title" style={{ fontWeight: "bold", color: "#A0C878" }}>Student Management System</div>
-      
-      <div>
-        <Link className="nav-links" to="/" style={{ marginRight: "15px" }}>
+      <div
+        className="nav-title"
+        style={{ fontWeight: "bold", color: "#A0C878" }}
+      >
+        Student Management System
+      </div>
+
+      <div className="d-grid gap-3" style={{ gridTemplateColumns: "1fr 2fr" }}>
+        <NavLink className="nav-links" to="/" style={style}>
           Form
-        </Link>
-        <Link className="nav-links" to="/student-list" style={{ marginRight: "10px" }}>
+        </NavLink>
+        <NavLink className="nav-links" to="/student-list" style={style}>
           Student list
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );

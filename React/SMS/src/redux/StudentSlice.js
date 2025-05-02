@@ -16,9 +16,15 @@ const StudentSlice = createSlice({
         (std) => std.id !== action.payload
       );
     },
+    updateStd: (state, action) => {
+      console.log("Action: ", action.payload);
+      state.studentList = state.studentList.map((std) =>
+        std.id === action.payload.id ? action.payload : std
+      );
+    },
   },
 });
 
-export const { setFormData, deleteStd } = StudentSlice.actions;
+export const { setFormData, deleteStd, updateStd } = StudentSlice.actions;
 
 export default StudentSlice.reducer;

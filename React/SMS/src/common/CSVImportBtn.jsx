@@ -164,7 +164,11 @@ export const CSVImportBtn = () => {
         Swal.fire("Data Added");
         setData([]);
       } else {
-        Swal.fire("there are same Id");
+        Swal.fire({
+          icon: "error",
+          title: "Not Added",
+          text: "There are some ID is same in Available data",
+        });
         setData([]);
       }
     });
@@ -187,14 +191,14 @@ export const CSVImportBtn = () => {
         isOpen={isOpen}
         toggle={() => {
           setData([]);
-          return setIsOpen(!isOpen);
+          setIsOpen(!isOpen);
         }}
         size="xl"
       >
         <ModalHeader
           toggle={() => {
             setData([]);
-            return setIsOpen(!isOpen);
+            setIsOpen(!isOpen);
           }}
         >
           Student List

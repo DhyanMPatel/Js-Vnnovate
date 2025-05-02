@@ -1,49 +1,16 @@
-import React, { useEffect, useState } from "react";
-import {
-  FormGroup,
-  Label,
-  Input,
-  Button,
-  Row,
-  Col,
-  FormFeedback,
-  InputGroupText,
-} from "reactstrap";
-
-import "./style/style.css";
-import { DatePicker } from "antd";
-import { Formik, Form, Field } from "formik";
+import { Form, Formik } from "formik";
+import { FormView } from "../../common/FormView";
 import dayjs from "dayjs";
 import * as Yup from "yup";
-import { useDispatch, useSelector } from "react-redux";
-import { setFormData } from "../../redux/StudentSlice";
-import { useNavigate } from "react-router-dom";
-import { FormView } from "../../common/FormView";
+import { FormGroup, Button, Col, Label, Row } from "reactstrap";
+import { updateStd } from "../../redux/StudentSlice";
+import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
 
-function StudentForm() {
+export const UpdateStd = ({ std, setStd, setIsOpen }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const stdlist = useSelector((state) => state.studentList);
-
-  const initialValues = {
-    id: "",
-    fullName: "",
-    gender: "",
-    message: "",
-    fromDate: "",
-    toDate: "",
-    standard: "",
-    sports: [],
-    file: null,
-  };
-
   const validationSchema = Yup.object().shape({
-    id: Yup.string()
-      .required("ID is required")
-      .test("unique", "ID must be unique", function (value) {
-        return !stdlist.some((student) => student.id === value);
-      }),
+    id: Yup.string().required("ID is required"),
     fullName: Yup.string().required("Full Name is required"),
     gender: Yup.string().required("Gender is required"),
     message: Yup.string(),
@@ -57,16 +24,12 @@ function StudentForm() {
   });
 
   const handleSubmit = (values) => {
-    dispatch(setFormData(values));
     Swal.fire({
-      position: "top-end",
+      title: "Student Success fully Updated",
       icon: "success",
-      title: "Student successfuly Added",
-      showConfirmButton: false,
-      timer: 1500,
-      width: 400,
     });
-    navigate("/student-list");
+    dispatch(updateStd(values));
+    setIsOpen(false);
   };
 
   const convertToBase64 = (file) =>
@@ -94,10 +57,11 @@ function StudentForm() {
   };
 
   return (
-    <div className="student-form-container">
+    <>
       <Formik
-        initialValues={initialValues}
+        initialValues={std}
         validationSchema={validationSchema}
+        enableReinitialize={true}
         onSubmit={handleSubmit}
       >
         {({
@@ -120,8 +84,8 @@ function StudentForm() {
               placeholder={"Enter Student Id here"}
               touched={touched.id}
               error={errors.id}
+              readOnly={true}
             />
-
             {/* Full Name */}
             <FormView
               label={"Full Name"}
@@ -134,7 +98,6 @@ function StudentForm() {
               touched={touched.fullName}
               error={errors.fullName}
             />
-
             {/* Gender */}
             <FormGroup className="form-group" tag="fieldset">
               <Label className="form-label">Gender</Label>
@@ -157,7 +120,6 @@ function StudentForm() {
                 <div className="text-danger">{errors.gender}</div>
               )}
             </FormGroup>
-
             {/* Message */}
             <FormView
               label={"Want to Say?"}
@@ -168,7 +130,6 @@ function StudentForm() {
               onBlur={handleBlur}
               placeholder={"Write anything you want"}
             />
-
             {/* From - To Dates */}
             <Row>
               <Col md={6}>
@@ -184,8 +145,6 @@ function StudentForm() {
                       : false
                   }
                   setFieldValue={setFieldValue}
-                  touched={touched.fromDate}
-                  error={errors.fromDate}
                 />
               </Col>
 
@@ -202,12 +161,9 @@ function StudentForm() {
                       : false
                   }
                   setFieldValue={setFieldValue}
-                  touched={touched.toDate}
-                  error={errors.toDate}
                 />
               </Col>
             </Row>
-
             {/* Standard Selector */}
             <FormView
               label={"Standard"}
@@ -219,10 +175,10 @@ function StudentForm() {
               touched={touched.standard}
               error={errors.standard}
             />
-
             {/* Sports Checkboxes */}
             <FormGroup className="form-group">
               <Label>Sports</Label>
+              {/* {console.log(values.sports)} */}
               <div className="d-flex gap-4">
                 {["Cricket", "Football", "Basketball"].map((sport) => (
                   <FormView
@@ -232,7 +188,7 @@ function StudentForm() {
                     name={"sports"}
                     type={"checkbox"}
                     value={sport}
-                    checked={values.sports.includes(sport)}
+                    checked={values.sports?.includes(sport) || false}
                     onChange={(e) => {
                       const checked = e.target.checked;
                       const updated = checked
@@ -248,10 +204,9 @@ function StudentForm() {
                 <div className="text-danger">{errors.sports}</div>
               )}
             </FormGroup>
-
             {/* Image Upload */}
             <FormView
-              label={"File"}
+              label={"Change File"}
               id={"file"}
               type={"file"}
               onChange={async (event) => {
@@ -264,15 +219,86 @@ function StudentForm() {
               error={errors.file}
             />
 
+            {/* Display Available image */}
+            {
+              <img
+                src={values.file?.base64Data}
+                alt={values.file?.name}
+                style={{
+                  width: "auto",
+                  height: "100px",
+                  maxWidth: "150px",
+                  objectFit: "fill",
+                  margin: "5px",
+                  borderRadius: "14px",
+                  backgroundColor: "#f0f0f0",
+                }}
+              />
+            }
+
+            <hr />
             {/* Submit Button */}
-            <Button color="primary" type="submit">
-              Submit
-            </Button>
+            <div
+              style={{
+                marginTop: "1rem",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-around",
+              }}
+            >
+              <Button
+                color="success"
+                type="submit"
+                style={{
+                  width: "calc-size(fit-content, size * 2)",
+                }}
+              >
+                Update
+              </Button>
+              <Button
+                color="danger"
+                style={{
+                  width: "calc-size(fit-content, size * 2)",
+                }}
+                onClick={() => {
+                  Swal.fire({
+                    title: "Cancel will not make any Changes",
+                    icon: "warning",
+
+                    showClass: {
+                      popup: `
+                            animate__animated
+                            animate__fadeInUp
+                            animate__faster
+                          `,
+                    },
+                    hideClass: {
+                      popup: `
+                            animate__animated
+                            animate__fadeOutDown
+                            animate__faster
+                          `,
+                    },
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    showCancelButton: true,
+                    confirmButtonText: "Okey",
+                    cancelButtonText: "No Worry",
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                      setStd({});
+                      setIsOpen(false);
+                    }
+                  });
+                }}
+              >
+                Cancel
+              </Button>
+            </div>
           </Form>
         )}
       </Formik>
-    </div>
+    </>
   );
-}
-
-export default StudentForm;
+};

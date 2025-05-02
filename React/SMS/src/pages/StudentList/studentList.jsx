@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { Edit, Trash } from "react-feather";
@@ -10,14 +10,27 @@ import { CSVImportBtn } from "../../common/CSVImportBtn";
 import { TableView } from "../../common/TableView";
 import { Search } from "../../common/SearchComp";
 import { deleteStd } from "../../redux/StudentSlice";
+import { Modal, ModalBody, ModalHeader } from "reactstrap";
+
+import { UpdateStd } from "./updateStd";
 
 const StudentList = () => {
   const dispatch = useDispatch();
   const formData = useSelector((state) => state.studentList);
 
-  // console.log(formData);
-
   const [searchData, setSearchData] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+  const [std, setStd] = useState({
+    id: "",
+    fullName: "",
+    gender: "",
+    message: "",
+    fromDate: "",
+    toDate: "",
+    standard: "",
+    sports: [],
+    file: null,
+  });
 
   // handle Search
   const filteredData = formData?.filter(
@@ -40,17 +53,11 @@ const StudentList = () => {
             className="cursor-pointer me-1"
             id={`edit-tooltip-${row.id}`}
             style={{ color: "#728088" }}
-            // onClick={() => {
-            //   setUser(row);
-            //   setShow(true);
-            // }}
+            onClick={() => {
+              setStd(row);
+              setIsOpen(true);
+            }}
           />
-          {/* <UncontrolledTooltip
-            placement="top"
-            target={`edit-tooltip-${row.id}`}
-          >
-            Edit Email
-          </UncontrolledTooltip> */}
 
           <Trash
             size={17}
@@ -70,7 +77,6 @@ const StudentList = () => {
               }).then(async (result) => {
                 if (result.isConfirmed) {
                   try {
-                    console.log(row.id);
                     dispatch(deleteStd(row.id));
                     Swal.fire("Deleted!", "Email has been deleted.", "success");
                   } catch (error) {
@@ -84,12 +90,6 @@ const StudentList = () => {
               });
             }}
           />
-          {/* <UncontrolledTooltip
-            placement="top"
-            target={`trash-tooltip-${row.id}`}
-          >
-            Delete User
-          </UncontrolledTooltip> */}
         </div>
       ),
     },
@@ -103,7 +103,7 @@ const StudentList = () => {
       name: "Gender",
       center: "true",
       selector: (row) => row.gender,
-      maxWidth: "100px",
+      width: "100px",
       sortable: "true",
       cell: (row) => {
         return row?.gender.slice(0, 1).toUpperCase() + row?.gender.slice(1);
@@ -113,7 +113,7 @@ const StudentList = () => {
       name: "Standard",
       center: "true",
       selector: (row) => row.standard,
-      maxWidth: "100px",
+      width: "100px",
       sortable: "true",
     },
     {
@@ -125,13 +125,13 @@ const StudentList = () => {
       name: "From Date",
       center: "true",
       selector: (row) => row.fromDate,
-      maxWidth: "100px",
+      width: "100px",
     },
     {
       name: "To Date",
       center: "true",
       selector: (row) => row.toDate,
-      maxWidth: "100px",
+      width: "100px",
     },
     {
       name: "Image",
@@ -142,7 +142,7 @@ const StudentList = () => {
         return row.file?.base64Data ? (
           <img
             src={row.file?.base64Data}
-            alt="Student image"
+            alt={row.file?.name}
             style={{
               width: "auto",
               height: "100px",
@@ -194,6 +194,8 @@ const StudentList = () => {
       },
     },
   };
+
+  /// On Update
 
   return (
     <>
@@ -250,6 +252,15 @@ const StudentList = () => {
           customStyles={customStyles}
         />
       </div>
+
+      <Modal isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} size="lg">
+        <ModalHeader toggle={() => setIsOpen(!isOpen)}>
+          Update Student
+        </ModalHeader>
+        <ModalBody>
+          <UpdateStd std={std} setStd={setStd} setIsOpen={setIsOpen} />
+        </ModalBody>
+      </Modal>
     </>
   );
 };

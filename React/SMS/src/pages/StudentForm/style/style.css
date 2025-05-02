@@ -9,12 +9,6 @@
   margin: 40px auto;
 }
 
-.student-form-container h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
-}
-
 .form-group {
   margin-bottom: 20px;
   display: flex;
@@ -51,7 +45,7 @@ select:focus {
 .sports-options {
   display: flex;
   align-items: center;
-  gap: 20px; /* Or use margin like .me-3, .ms-1 with Bootstrap */
+  gap: 20px;
 }
 
 textarea {
@@ -59,7 +53,7 @@ textarea {
   resize: vertical;
 }
 
-.range-picker {
+.date-picker {
   height: 38px;
 }
 
@@ -70,7 +64,6 @@ input[type="checkbox"] {
 
 .text-danger {
   text-align: left;
-  left: 5px;
   font-size: 0.875em;
 }
 
@@ -78,7 +71,7 @@ input[type="checkbox"] {
   width: 100%;
   padding: 12px;
   font-weight: bold;
-  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  background: #535bf2;
   border: none;
   color: white;
   border-radius: 8px;
@@ -86,22 +79,5 @@ input[type="checkbox"] {
 }
 
 .button-submit:hover {
-  background: linear-gradient(90deg, #0056b3 0%, #0099cc 100%);
-}
-
-/* Align From and To dates on the same line */
-.date-row {
-  display: flex;
-  gap: 20px;
-}
-
-.date-row .form-group {
-  flex: 1;
-}
-
-/* For sports checkboxes */
-.sports-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  background: #0056b3;
 }
