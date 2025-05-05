@@ -1,5 +1,7 @@
 import { CSVLink } from "react-csv";
 import { Button } from "reactstrap";
+import LZString from "lz-string";
+import pako from "pako";
 
 export const CSVExportBtn = ({ filteredData }) => {
   // Formate for Export
@@ -10,11 +12,12 @@ export const CSVExportBtn = ({ filteredData }) => {
     standard: std.standard,
     fromDate: new Date(std.fromDate).getTime(),
     toDate: new Date(std.toDate).getTime(),
-    fileBase64: std.file?.base64Data,
+    sports: std.sports.map((sport) => sport),
+    message: std.message,
     fileName: std.file?.name,
     fileSize: std.file?.size,
-    message: std.message,
-    sports: std.sports.map((sport) => sport),
+    // fileBase64: LZString.compressToBase64(std.file?.base64Data),
+    fileBase64: pako.deflate(std?.file?.base64Data, { to: "string" }),
   }));
 
   return (

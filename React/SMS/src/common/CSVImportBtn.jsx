@@ -58,8 +58,9 @@ export const CSVImportBtn = () => {
     {
       name: "File Base URL",
       center: "true",
-      selector: (row) => row.fileBase64 || "No file",
+      selector: (row) => row.fileBase64 || "No File",
       cell: (row) => {
+        // console.log(row.fileBase64);
         return row.fileBase64 ? (
           <img
             src={row?.fileBase64}
@@ -109,15 +110,22 @@ export const CSVImportBtn = () => {
           if (row.sports && typeof row.sports === "string") {
             row.sports = row.sports.split(",").map((sport) => sport.trim());
           }
-          if (row.fromDate) {
-            row.From = dayjs(row.From).format("YYYY-MM-DD");
+          if (row.fromDate && typeof row.fromDate === "number") {
+            row.fromDate = dayjs(row.fromDate).format("YYYY-MM-DD");
           }
           if (row.toDate) {
-            row.To = dayjs(row.To).format("YYYY-MM-DD");
+            row.toDate = dayjs(row.toDate).format("YYYY-MM-DD");
+          }
+          if (row?.fileBase64 || row?.fileName || row?.fileSize) {
+            row.file = {
+              base64Data: row?.fileBase64,
+              name: row?.fileName,
+              size: row?.fileSize,
+            };
           }
           return row;
         });
-        console.log("Rows-> ", rows);
+        console.log("Import Rows-> ", rows);
         setData(rows);
       }
     };
@@ -160,9 +168,11 @@ export const CSVImportBtn = () => {
 
     data.forEach((row) => {
       if (!stdArr.includes(row.id)) {
+        // console.log(row);
         dispatch(setFormData(row));
         Swal.fire("Data Added");
         setData([]);
+        setIsOpen(false);
       } else {
         Swal.fire({
           icon: "error",
@@ -170,6 +180,7 @@ export const CSVImportBtn = () => {
           text: "There are some ID is same in Available data",
         });
         setData([]);
+        setIsOpen(false);
       }
     });
     setIsOpen(false);

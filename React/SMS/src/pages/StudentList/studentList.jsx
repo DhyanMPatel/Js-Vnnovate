@@ -32,6 +32,8 @@ const StudentList = () => {
     file: null,
   });
 
+  // console.log(formData);
+
   // handle Search
   const filteredData = formData?.filter(
     (student) =>
@@ -136,13 +138,13 @@ const StudentList = () => {
     {
       name: "Image",
       center: "true",
-      selector: (row) => row.file?.base64Data || "No file",
+      selector: (row) => row.file?.base64Data || row?.fileBase64 || "No file",
       cell: (row) => {
         // console.log(row.file?.base64Data);
-        return row.file?.base64Data ? (
+        return row.file?.base64Data || row?.fileBase64 ? (
           <img
-            src={row.file?.base64Data}
-            alt={row.file?.name}
+            src={row.file?.base64Data || row?.fileBase64}
+            alt={row.file?.name || row?.fileName}
             style={{
               width: "auto",
               height: "100px",
