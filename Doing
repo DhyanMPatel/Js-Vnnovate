@@ -7,7 +7,8 @@ Day: Monday
 
 Project: Learning,
 
-1. Solve Issue with images while Import CSV and while persist state.
+1. Check all module wise filter and search with pagination.
+2. create Report that say which module have which feature proper or not.
 
 ## Work done:
 
@@ -16,32 +17,60 @@ Day: Monday
 
 Today, I am working on below list of task:
 
-Project: Learning,
+1. Check filter and search with pagination for all modules. - Done
+2. Create Report for which module contain which feature also which feature work properly and which not. - Done
+3. Solve Issue in Customer Data module when change rows per page and plateform filter is applied. - Done
 
-1. Identify storing image in csv and persist. - Done
+   - Add more fields when change rows per page like show_errors, platform, start_date, end_date, transaction_type. - Done
+
+4. Display Total of Exception email in exception email module and change when searching also. - Done
+
+5. Solve Issue on Rows per page in Vehicle Report module. - Done
+
+   - Make some change to pass selected rows per page value. - Done
+
+6. There is problem in API response when search feature use in Vehicle Report, Vehicle Ownership and Accessories module. needs to changes from backend side. - Done
+
+## For me to understand,
 
 Project: Dealer Data,
 
-1. Check Filter and Pagination
-   1.1. Check filter and search with pagination in `User list` module. - Done
-   1.2. Solve issue on `Show error Records` button in `Customer Data` module. - Done
-   1.3. Check filter and search with pagination in `Exception Email` module. - Done
-   1.4. Set Loader on `Vehicle Reports` module when searching. - Done
-   1.5. Check filter and search with pagination in `Accessories` module. - Done
+1. User List Module,
 
-2. All above filter and search with pagination check with API response. - Done
+- Problem: Search with filter not work.
+- Suggestion: Remove Search functionality from Role. (Backend side)
 
-- Need to complate,
-  1.2. Understand filter functionality and Pagination in `Customer Data` module with their select option. - Done
-  1.2.1. **Show error Records** not work properly.
+2. Customer Data
 
-  1.3. Understand filter functionality and Pagination in `Exception Email` module. - Done
-  1.4. Understand filter functionality and Pagination in `Vehicle Reports` module with their select option. - Done
-  1.4.1. Set Loader in Search - Done
+- Problem: per page pass platform(profile_type) filter only for 1st time. - Done
+- Suggestion: check what thing pass while changing per page value. (Frontend side)
 
-  1.5. Understand filter functionality and Pagination in `Vehicle Ownership` module. -
-  1.6. Understand filter functionality and Pagination in `Accessories` module. -
-  1.5. Understand filter functionality and Pagination in `Report` module with their date option. -
+- Problem: Not work properly "show error records". - Done
+- Suggestion: When disable "show error records" pass value "".
+
+3. Exception Email
+
+- Display total of Exception email. - Done
+
+4. Vehicle Report
+
+- Problem: Per page not work properly. - Done
+- Suggestion: check when change value of perpage then which value is passed in API. because when i select 100 it pass 25(previous).
+
+- Problem: Search functionality not work.
+- Suggestion: check what happened when called. (Ex- there "SALEA7AWXP2147514" should be only single row. but count property value is wrong in API response.)
+
+5. Vehicle Ownership
+
+- Suggestion:
+
+6. Accessories
+
+- Suggestion:
+
+7. Report
+
+- Suggestion:
 
 ## Questions
 
