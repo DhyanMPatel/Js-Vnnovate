@@ -2,75 +2,43 @@
 
 Today, I am working on below list of task:
 
-Date: 5 May 2025
-Day: Monday
+Date: 7 May 2025
+Day: Wednesday
 
 Project: Learning,
 
-1. Check all module wise filter and search with pagination.
-2. create Report that say which module have which feature proper or not.
+1. Continue work on Filter and Search with pagination in all module.
+2. Set Loader where needed in all module.
+
+3. Solve some issue on API response with Disha.
+
+4. Need to remove search based on Role from backend in User List module.
+5. Need to update count property value given in API response in Vehicle Report, Vehicle Ownership and Accessories modules
 
 ## Work done:
 
-Date: 5 May 2025
-Day: Monday
+Date: 7 May 2025
+Day: Wednesday
 
 Today, I am working on below list of task:
 
-1. Check filter and search with pagination for all modules. - Done
-2. Create Report for which module contain which feature also which feature work properly and which not. - Done
-3. Solve Issue in Customer Data module when change rows per page and plateform filter is applied. - Done
+1. Set Loader for Better UI experience - Done
+   1.1. Set loader in `Customer Data` module when change rows per page value. - Done
+   1.2. Set loader in `Vehical Report` module when change rows per page value. - Done
+   1.3. Set loader in `Accessories` module when change rows per page value and when search. - Done
+   1.4. Set loader in `Report` module when change rows per page value and when search. - Done
 
-   - Add more fields when change rows per page like show_errors, platform, start_date, end_date, transaction_type. - Done
+2. Create Report for list of issue on filter with pagination and search with pagination that needs to make changes from Backend. and give to Disha. - Done
 
-4. Display Total of Exception email in exception email module and change when searching also. - Done
+3. Implement Debouncing for Search feature in Module. - Done
+   3.1. Apply in Users list module. - Done
+   3.2. Apply in Exception Email module. - Done
 
-5. Solve Issue on Rows per page in Vehicle Report module. - Done
+4. Make some changes in `Customer Data` Module. - Done
+   4.1. Solve Issue on filter feature by adding one more field "profile". - Done
+   4.2. clear search value when reset button click. - Done
 
-   - Make some change to pass selected rows per page value. - Done
-
-6. There is problem in API response when search feature use in Vehicle Report, Vehicle Ownership and Accessories module. needs to changes from backend side. - Done
-
-## For me to understand,
-
-Project: Dealer Data,
-
-1. User List Module,
-
-- Problem: Search with filter not work.
-- Suggestion: Remove Search functionality from Role. (Backend side)
-
-2. Customer Data
-
-- Problem: per page pass platform(profile_type) filter only for 1st time. - Done
-- Suggestion: check what thing pass while changing per page value. (Frontend side)
-
-- Problem: Not work properly "show error records". - Done
-- Suggestion: When disable "show error records" pass value "".
-
-3. Exception Email
-
-- Display total of Exception email. - Done
-
-4. Vehicle Report
-
-- Problem: Per page not work properly. - Done
-- Suggestion: check when change value of perpage then which value is passed in API. because when i select 100 it pass 25(previous).
-
-- Problem: Search functionality not work.
-- Suggestion: check what happened when called. (Ex- there "SALEA7AWXP2147514" should be only single row. but count property value is wrong in API response.)
-
-5. Vehicle Ownership
-
-- Suggestion:
-
-6. Accessories
-
-- Suggestion:
-
-7. Report
-
-- Suggestion:
+5. Clear search value when reset button click in `Report` module. - Done
 
 ## Questions
 
