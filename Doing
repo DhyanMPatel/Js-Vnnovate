@@ -18,20 +18,16 @@ Today, I am working on below list of task:
 
 Project: Dealer Data,
 
-1. Optimize all Modules in Admin side,
-   1.1. check `Database` module. -
-   1.2. check `User Manager` module. -
-   1.3. check `Customer Data` module. -
-   1.4. check `Exception Email` module. -
-   1.5. check `Vehicle Report` module. -
-   1.6. check `Vehicle Ownership` module. -
-   1.7. check `Accessories` module. -
-   1.8. check `Report` module. -
-
-2. Optimize all modules in Dealer side,
-   1.1. check `Database` module. -
-   1.2. check `Customer Data` module. -
-   1.3. check `Vehicle Ownership` module. -
+1. Check all Modules and remove unwanted code in Admin side. - Done
+2. Check all modules and remove unwanted code in Dealer side. - Done
+3. Optimize `Customer Data` module by Implementing Debouncing. - Done
+4. Optimize `Vehicle Report` module by Implementing Debouncing. - Done
+5. Optimize `Accessories` module by Implementing Debouncing. - Done
+6. Optimize `Report` module by Implementing Debouncing. - Done
+7. Change layout of Data Field Quality in Dashboard Module. - Done
+8. Display image on `Overall` at Data field quality module in Dealer side. - Done
+9. Remove Search value on Reset button click in `Vehicle Report` module. - Done
+10. Solve issue between search and date filter in `Report` module. - Done
 
 ## Questions
 
@@ -77,6 +73,16 @@ Description:
     11.1. Solve Issue on filter feature by adding one more field "profile" in API request.
     11.2. clear search value when reset button click.
 12. Clear search value when reset button click in `Report` module.
+13. Check all Modules and remove unwanted code in Admin side.
+14. Check all modules and remove unwanted code in Dealer side.
+15. Optimize `Customer Data` module by Implementing Debouncing.
+16. Optimize `Vehicle Report` module by Implementing Debouncing.
+17. Optimize `Accessories` module by Implementing Debouncing.
+18. Optimize `Report` module by Implementing Debouncing.
+19. Change layout of Data Field Quality in Dashboard Module.
+20. Display image on `Overall` at Data field quality module in Dealer side.
+21. Remove Search value on Reset button click in `Vehicle Report` module.
+22. Solve issue between search and date filter in `Report` module.
 
 ## Leave Request
 
