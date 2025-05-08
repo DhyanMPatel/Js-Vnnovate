@@ -2,76 +2,41 @@
 
 Today, I am working on below list of task:
 
-Date: 7 May 2025
-Day: Wednesday
+Date: 8 May 2025
+Day: Thursday
 
-Project: Learning,
+Project: Dealer Data,
 
-1. Continue work on Filter and Search with pagination in all module.
-2. Set Loader where needed in all module.
-
-3. Solve some issue on API response with Disha.
-
-4. Need to remove search based on Role from backend in User List module.
-5. Need to update count property value given in API response in Vehicle Report, Vehicle Ownership and Accessories modules
+1. Optimise all modules.
 
 ## Work done:
 
-Date: 7 May 2025
-Day: Wednesday
+Date: 8 May 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
-1. Set Loader for Better UI experience - Done
-   1.1. Set loader in `Customer Data` module when change rows per page value. - Done
-   1.2. Set loader in `Vehical Report` module when change rows per page value. - Done
-   1.3. Set loader in `Accessories` module when change rows per page value and when search. - Done
-   1.4. Set loader in `Report` module when change rows per page value and when search. - Done
+Project: Dealer Data,
 
-2. Create Report for list of issue on filter with pagination and search with pagination that needs to make changes from Backend. and give to Disha. - Done
+1. Optimize all Modules in Admin side,
+   1.1. check `Database` module. -
+   1.2. check `User Manager` module. -
+   1.3. check `Customer Data` module. -
+   1.4. check `Exception Email` module. -
+   1.5. check `Vehicle Report` module. -
+   1.6. check `Vehicle Ownership` module. -
+   1.7. check `Accessories` module. -
+   1.8. check `Report` module. -
 
-3. Implement Debouncing for Search feature in Module. - Done
-   3.1. Apply in Users list module. - Done
-   3.2. Apply in Exception Email module. - Done
-
-4. Make some changes in `Customer Data` Module. - Done
-   4.1. Solve Issue on filter feature by adding one more field "profile". - Done
-   4.2. clear search value when reset button click. - Done
-
-5. Clear search value when reset button click in `Report` module. - Done
+2. Optimize all modules in Dealer side,
+   1.1. check `Database` module. -
+   1.2. check `Customer Data` module. -
+   1.3. check `Vehicle Ownership` module. -
 
 ## Questions
 
 - What the use of layout in router/routes/Admin.js file?
 - What their values?
-
-## Understading
-
-- Kal sir ne Persist State implement karne ko kaha tha to
-
-  - first data pull kiya staging branch se
-  - redux store me persist state ka implement kiya tha reports ke liye
-  - Persist localStorage and sessionStorage me karke dikha tha
-  - then logout pe wo persist data remove bhi kar diya tha
-
-- Then time mila to Rahul sir ne task diya tha SMS ka to usme kam kiya tha
-  - usme student form create kiya tha and name, gender, textarea, from date, to date, select, file type fields create ki, usme validation lagaya.
-  - redux store with persist state kiya
-  - usme date and file data me problem a raha tha.
-
-## Others
-
-themeforest-karciz-react-redux-ticketing-admin-dashboard
-
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M409 1103 c-13 -16 -12 -17 4 -4 9 7 17 15 17 17 0 8 -8 3 -21 -13z"/>
-</g>
-</svg>
 
 ## Email
 
@@ -80,77 +45,38 @@ Cc: mansi ma'am
 
 **Subject**: Weekly Report of Dhyan
 
-Project Name: Dealer Data
+Project Name: Dealer Data,
 
-Git Commit ID: ac4a1019553f2f42ddfddfc73843f304ab47c680
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-rdb-frontend/-/commit/ac4a1019553f2f42ddfddfc73843f304ab47c680
+Git Commit ID:
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-rdb-frontend/-/commit/
 
 Description:
 
-1. Learn Redux-persist
-   1.1. What is Redux Persist Library and why used?
-   1.2. Learned Redux Persist work: `Persist`, `Rehydrate`.
-   1.3. Understood Redux Persist main Concepts like `PersistStorage`, `PersistReducer`, `storage`.
-   1.4. Understood `PersistGate` for delay UI Components to render.
-   1.5. Understood customizing what's persisted using `whitelist` & `blacklist`.
-   1.6. learned about `Nested Persists` if we want to set a different cofiguration.
-   1.7. Understood how hydration works using the `REHYDRATE` action.
-2. Pull from Staging branch into dev_dhyan branch.
-   2.1. use pull request from staging branch.
-   2.2. Solve conflickt manually in some files
-3. Add redux with Persist state for Report.
-   3.1. Combine Reducers to privent error.
-   3.2. persist at LocalStorage or SessionStorage.
-   3.3. Check persist at LocalStorage or SessionStorage working.
-4. When logout user all data related to persist should be clear from localstorage.
-
-Project: Learning,
-
-1. Student Management System Project task given by Rahul sir
-   1.1. Create new Project
-   1.2. Made routes for student form and student list page
-2. Create Form for Student Management System Task given by Rahul sir
-   2.1. Create Student Form using formik and reactStrap.
-   2.2. Implement Form validation using yup.
-   2.3. Create Redux store with Persist state.
-   2.4. Handle Date and File type data in Redux persist state.
-3. Solve issue on Date type data during persist.
-4. Solve issue of File type data while persist.
-5. Display student list.
-6. Implement sorting based on full name, gender, standard.
-7. Display image on list.
-8. Implement search operation in student list.
-9. export student list.
-10. Apply pagination in Student list.
-11. Import CSV file.
-12. Create Common table module to display student list.
-13. Import CSV
-    13.1. Create button to import CSV.
-    13.2. Create modal to display imported CSV file content in table format.
-    13.3. Create confirm button in modal to confirm add data.
-    13.4. Create cancel button in modal to stop adding data.
-14. Change in Student Form.
-    14.1. Add one more field ID.
-15. Add Actions
-    15.1. Implement Delete option.
-    15.2. Implement Edit option.
-16. Create Common Form module for student form fields.
-    16.1. There are common field UI for text, textarea, select, radio, checkbox type of inputs.
-    16.2. There are common field UI for file type of input.
-    16.3. There are common field UI for fromDate, toDate type of inputs.
-17. Implement edit student functionality.
-    17.1. Create Modal for edit student.
-    17.2. Set student detail in state on edit button click.
-    17.3. Display Image in update field.
-    17.4. update Student based on changes.
-    17.5. update redux store and persist data based on update.
-18. Add Sweet Alerts.
-    18.1. Display after student add.
-    18.2. Display when delete button click.
-    18.3. Display when confirm import data.
-    18.4. Display when user successfully updated.
-    18.5. Display on update cancel.
-19. Issue on Storing Images in CSV format and Persist state.
+1. Check Filter and Pagination
+   1.1. Check filter and search with pagination in `User list` module.
+   1.2. Solve issue on `Show error Records` button in `Customer Data` module.
+   1.3. Check filter and search with pagination in `Exception Email` module.
+   1.4. Set Loader on `Vehicle Reports` module when searching.
+   1.5. Check filter and search with pagination in `Accessories` module.
+2. All above filter and search with pagination check with API response.
+3. Create Report for which module contain which feature also which feature work properly and which not.
+4. Solve Issue in Customer Data module when change rows per page and plateform filter is applied.
+5. Display Total of Exception email in exception email module and change when searching also.
+6. Solve Issue on Rows per page in Vehicle Report module.
+7. There is problem in API response when search feature use in Vehicle Report, Vehicle Ownership and Accessories module. needs to changes from backend side.
+8. Set Loader for Better UI experience
+   8.1. Set loader in `Customer Data` module when change rows per page value.
+   8.2. Set loader in `Vehical Report` module when change rows per page value.
+   8.3. Set loader in `Accessories` module when change rows per page value and when search.
+   8.4. Set loader in `Report` module when change rows per page value and when search.
+9. Create Report for list of issue on filter with pagination and search with pagination that needs to make changes from Backend. and give to Disha.
+10. Implement Debouncing for Search feature in Module.
+    10.1. Apply in Users list module.
+    10.2. Apply in Exception Email module.
+11. Make some changes in `Customer Data` Module.
+    11.1. Solve Issue on filter feature by adding one more field "profile" in API request.
+    11.2. clear search value when reset button click.
+12. Clear search value when reset button click in `Report` module.
 
 ## Leave Request
 
