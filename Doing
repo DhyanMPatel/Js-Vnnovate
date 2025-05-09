@@ -2,32 +2,36 @@
 
 Today, I am working on below list of task:
 
-Date: 8 May 2025
-Day: Thursday
+Date: 9 May 2025
+Day: Friday
 
 Project: Dealer Data,
 
-1. Optimise all modules.
+1. Set code structure for all modules.
 
 ## Work done:
 
-Date: 8 May 2025
-Day: Thursday
+Date: 9 May 2025
+Day: Friday
 
 Today, I am working on below list of task:
 
 Project: Dealer Data,
 
-1. Check all Modules and remove unwanted code in Admin side. - Done
-2. Check all modules and remove unwanted code in Dealer side. - Done
-3. Optimize `Customer Data` module by Implementing Debouncing. - Done
-4. Optimize `Vehicle Report` module by Implementing Debouncing. - Done
-5. Optimize `Accessories` module by Implementing Debouncing. - Done
-6. Optimize `Report` module by Implementing Debouncing. - Done
-7. Change layout of Data Field Quality in Dashboard Module. - Done
-8. Display image on `Overall` at Data field quality module in Dealer side. - Done
-9. Remove Search value on Reset button click in `Vehicle Report` module. - Done
-10. Solve issue between search and date filter in `Report` module. - Done
+1. Solve Problem in `User List` module with filter with pagination. - Done
+
+   - After filter total Page not change. - Done
+
+2. Solve Issue on Customer Data Module on Filter with Search. - Done
+
+3. Set Code in Structure format for all Modules. - Done
+
+4. Problem solve in Navigate user from `Vehicle Ownership` to `Vehicle Report` page on VIN Number click. - Done
+
+## NoteDown
+
+- There is an issue with Dealer Data Customer Data Module.
+  - There both API gives Data and which one should display is problematic. How she solve i don't know.
 
 ## Questions
 
@@ -83,6 +87,11 @@ Description:
 20. Display image on `Overall` at Data field quality module in Dealer side.
 21. Remove Search value on Reset button click in `Vehicle Report` module.
 22. Solve issue between search and date filter in `Report` module.
+23. Solve Problem in `User List` module with filter with pagination. - Done
+    - After filter total Page not change. - Done
+24. Solve Issue on Customer Data Module on Filter with Search. - Done
+25. Set Code in Structure format for all Modules. - Done
+26. Problem solve in Navigate user from `Vehicle Ownership` to `Vehicle Report` page on VIN Number click. - Done
 
 ## Leave Request
 
