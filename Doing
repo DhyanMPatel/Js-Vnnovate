@@ -2,24 +2,47 @@
 
 Today, I am working on below list of task:
 
-Date: 12 May 2025
-Day: Monday
+Date: 13 May 2025
+Day: Tuesday
 
 Project: Dealer Data,
 
-1. Create Report for Optimisation Operations.
+1. Optimise in State for all modules.
+2. Remove unnecessary State from all modules.
+3. Remove unnecessary Input from all modules.
+
+- Modules
+  1. User List
+     - Remove exportLoader state.
+  2. Customer Data
+  3. Exception Email
+  4. Vehicle Reports
+  5. Vehicle Ownership
+  6. Accessories
+  7. Reports
 
 ## Work done:
 
-Date: 12 May 2025
-Day: Monday
+Date: 13 May 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
 Project: Dealer Data,
 
-1. Create Report of Optimisation Performed in Dealer Data and give to Rahul sir. - Done
-2. Create Common Pagination Component and implement in all routes where pagination used. - Done
+1. Create Summer report of Project where i include summery of Project, key modules with features and issue observed by me in module wise. - Done
+2. Solve task given by Rahul sir. - Done
+   - Create onChange event handler in user Management module. - Done
+3. Change in User List module. - Done
+
+   - Optimize in state. - Done
+   - Remove unnecessary state. - Done
+   - Create common on change handler. - Done
+
+4. Change in Customer Data module. - In Progress
+   - Optimize in state. - Done
+   - Remove unnecessary state. - Done
+   - Create common on change handler. - in progress
 
 ## NoteDown
 
