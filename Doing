@@ -2,47 +2,38 @@
 
 Today, I am working on below list of task:
 
-Date: 13 May 2025
-Day: Tuesday
+Date: 14 May 2025
+Day: Wednesday
 
-Project: Dealer Data,
+Project: BEC JLR,
 
-1. Optimise in State for all modules.
-2. Remove unnecessary State from all modules.
-3. Remove unnecessary Input from all modules.
-
-- Modules
-  1. User List
-     - Remove exportLoader state.
-  2. Customer Data
-  3. Exception Email
-  4. Vehicle Reports
-  5. Vehicle Ownership
-  6. Accessories
-  7. Reports
+1. Clone Project and setup in my system.
 
 ## Work done:
 
-Date: 13 May 2025
-Day: Tuesday
+Date: 14 May 2025
+Day: Wednesday
 
 Today, I am working on below list of task:
 
 Project: Dealer Data,
 
-1. Create Summer report of Project where i include summery of Project, key modules with features and issue observed by me in module wise. - Done
-2. Solve task given by Rahul sir. - Done
-   - Create onChange event handler in user Management module. - Done
-3. Change in User List module. - Done
-
-   - Optimize in state. - Done
-   - Remove unnecessary state. - Done
-   - Create common on change handler. - Done
-
-4. Change in Customer Data module. - In Progress
-   - Optimize in state. - Done
-   - Remove unnecessary state. - Done
-   - Create common on change handler. - in progress
+1. Clone BEC JLR project in my System. - Done
+2. Set up BEC JLR project in my System. - Done
+3. understand all Packages used in BEC JLR project. - Done
+4. Explore routes folder. - Done
+5. Explore Redux store folder. - Done
+6. Explore Layout folder. - Done
+7. Explore Service folder. - Done
+8. Understand Dashboard module. - Done
+   - Go to Email Settings Module. - In Progress
+   - Sentiment Module. - Done
+   - Dashboard visual ratio and percentage module. - Done
+   - Event Schedule module. - Done
+9. Understand User Management module. - In Progress
+   - Add, edit and delete User Functionality. - Done
+   - Mark leave functionality. - In Progress
+10. Prepare documentation of BEC JLR project based on my understanding. - In Progress
 
 ## NoteDown
 
