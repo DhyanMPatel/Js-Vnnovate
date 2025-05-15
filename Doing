@@ -2,38 +2,67 @@
 
 Today, I am working on below list of task:
 
-Date: 14 May 2025
-Day: Wednesday
+Date: 15 May 2025
+Day: Thursday
 
 Project: BEC JLR,
 
-1. Clone Project and setup in my system.
+1. Project Understanding
+2. Continue preparing Project Documentation.
 
 ## Work done:
 
-Date: 14 May 2025
-Day: Wednesday
+Date: 15 May 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
 Project: Dealer Data,
 
-1. Clone BEC JLR project in my System. - Done
-2. Set up BEC JLR project in my System. - Done
-3. understand all Packages used in BEC JLR project. - Done
-4. Explore routes folder. - Done
-5. Explore Redux store folder. - Done
-6. Explore Layout folder. - Done
-7. Explore Service folder. - Done
-8. Understand Dashboard module. - Done
-   - Go to Email Settings Module. - In Progress
-   - Sentiment Module. - Done
-   - Dashboard visual ratio and percentage module. - Done
-   - Event Schedule module. - Done
-9. Understand User Management module. - In Progress
-   - Add, edit and delete User Functionality. - Done
-   - Mark leave functionality. - In Progress
-10. Prepare documentation of BEC JLR project based on my understanding. - In Progress
+1. Prepare documentation of BEC JLR project based on my understanding. - In Progress
+2. Understand Dashboard module. - Done
+3. Understand User Management module. - Done
+4. Understand Setting modules. - Done
+   4.1. Except Email module. - In Progress
+5. Understand Utilization. - Done
+6. Fleat Utilization module. - In Progress
+
+## My Understanding
+
+1. Prepare documentation of BEC JLR project based on my understanding. - In Progress
+2. Understand Dashboard module. - Done
+   - AI chat module. - Done
+3. Understand User Management module. - Done
+   - Mark leave module. - Done
+4. Understand Setting modules. - Done
+
+   - Except Email module. - In Progress
+
+   - Event Types module. -
+   - Booking Type module. -
+   - Event Categories module. -
+   - Event Activities module. -
+   - Guest Interests list module. -
+   - Guest Type module. -
+   - Conference Rooms module. -
+   - HOM module. -
+   - Region module. -
+   - Compliment module. -
+   - Utilization Type module. -
+   - Voucher Type module. -
+   - Tasks module. -
+   - Reminder Type module. -
+   - Customer Brands module. -
+
+5. Understand Utilization. - Done
+
+   - Vehicle Utilization. - Done
+     - There AddNode, AddedOption modules not Displayed.
+   - Instructor Utilization. - Done
+     - In Event List Pagination not display pages properly.
+
+6. Fleat Utilization module. - In Progress
+   - Page name `BEC Calendar`.
 
 ## NoteDown
 
