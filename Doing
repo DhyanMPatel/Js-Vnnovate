@@ -2,8 +2,8 @@
 
 Today, I am working on below list of task:
 
-Date: 15 May 2025
-Day: Thursday
+Date: 16 May 2025
+Day: Friday
 
 Project: BEC JLR,
 
@@ -12,20 +12,17 @@ Project: BEC JLR,
 
 ## Work done:
 
-Date: 15 May 2025
-Day: Thursday
+Date: 16 May 2025
+Day: Friday
 
 Today, I am working on below list of task:
 
 Project: Dealer Data,
 
 1. Prepare documentation of BEC JLR project based on my understanding. - In Progress
-2. Understand Dashboard module. - Done
-3. Understand User Management module. - Done
-4. Understand Setting modules. - Done
-   4.1. Except Email module. - In Progress
-5. Understand Utilization. - Done
-6. Fleat Utilization module. - In Progress
+2. Understand Indemnity forms module. - Done
+3. Understand Feedback form module. - Done
+4. Understand Guest Management module. - In Progress
 
 ## My Understanding
 
@@ -41,10 +38,14 @@ Project: Dealer Data,
    - Event Types module. -
    - Booking Type module. -
    - Event Categories module. -
+     - There actions name are not proper.
    - Event Activities module. -
    - Guest Interests list module. -
    - Guest Type module. -
+     - Guest type module name is "gusetType".
+     - Is getIDList used at Guests module or not? also there is not any action only thunk is there.
    - Conference Rooms module. -
+     - Why is this used? Means where this conference room used?
    - HOM module. -
    - Region module. -
    - Compliment module. -
@@ -54,7 +55,7 @@ Project: Dealer Data,
    - Reminder Type module. -
    - Customer Brands module. -
 
-5. Understand Utilization. - Done
+5. Utilization module. - Done
 
    - Vehicle Utilization. - Done
      - There AddNode, AddedOption modules not Displayed.
@@ -62,7 +63,22 @@ Project: Dealer Data,
      - In Event List Pagination not display pages properly.
 
 6. Fleat Utilization module. - In Progress
+
    - Page name `BEC Calendar`.
+
+7. Indemnity forms module. -
+8. Feedback form module. -
+
+   - In Edit mode of perticular question where only Mandatory option and Add question option change.
+   - There no any active option to delete any question.
+   - There is no save or submit option at view option.
+
+9. Guest Management module. -
+   9.1. Guests module. -
+   9.2. Vouchers module. - This module not update(not reRender) when assigned any voucher.
+   9.3. Vehicles module. -
+
+10. Solve Issue when render to Event Media route. -
 
 ## NoteDown
 
@@ -83,13 +99,59 @@ Cc: mansi ma'am
 
 Project Name: Dealer Data,
 
-Git Commit ID:
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-rdb-frontend/-/commit/
+Git Commit ID: e697cc9238d27efa0bfed3c2370edc7b96d2a6be
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-rdb-frontend/-/commit/e697cc9238d27efa0bfed3c2370edc7b96d2a6be
 
 Description:
 
 1. Create Report of Optimisation Performed in Dealer Data and give to Rahul sir. - Done
 2. Create Comman Pagination Component and impliment in all routes where pagination used. - Done
+3. Create Summer report of Project where i include summery of Project, key modules with features and issue observed by me in module wise.
+4. Solve task given by Rahul sir.
+   4.1. Create onChange event handler in user Management module.
+5. Change in User List module.
+   5.1. Optimize in state.
+   5.2. Remove unnecessary state.
+   5.3. Create common on change handler.
+6. Change in Customer Data module.
+   6.1. Optimize in state.
+   6.2. Remove unnecessary state.
+   6.3. Create common on change handler.
+7. Do some changes in Customer Data module.
+
+Project: BEC JLR,
+
+Git Commit ID: 087ea96540d73af21002a9294294226238e29c09
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/087ea96540d73af21002a9294294226238e29c09
+
+Description:
+
+1. Clone BEC JLR project in my System.
+2. Set up BEC JLR project in my System.
+3. understand all Packages used in BEC JLR project.
+4. Explore routes folder.
+5. Explore Redux store folder.
+6. Explore Layout folder.
+7. Explore Service folder.
+8. Understand Dashboard module.
+   8.1. Go to Email Settings Module.
+   8.2. Sentiment Module.
+   8.3. Dashboard visual ratio and percentage module.
+   8.4. Event Schedule module.
+9. Understand User Management module.
+   9.1. Add, edit and delete User Functionality.
+   9.2. Mark leave functionality.
+10. Prepare documentation of BEC JLR project based on my understanding.
+11. Understand Dashboard module.
+12. Understand User Management module.
+13. Understand Setting modules.
+    13.1. Except Email module.
+14. Understand Utilization.
+15. Understand Fleat Utilization (BEC Calender) module.
+16. Prepare documentation of BEC JLR project based on my understanding.
+17. Understand Indemnity forms module.
+18. Understand Feedback form module.
+19. Understand Guest Management module. - In Progress
 
 ## Leave Request
 

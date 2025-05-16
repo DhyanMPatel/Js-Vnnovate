@@ -64,7 +64,7 @@
     "react-loading-skeleton": "^3.5.0",
     "react-lottie": "^1.2.4",
     "react-markdown": "^9.0.1",
-    "react-multi-date-picker": "^4.4.1",
+    "react-multi-date-picker": "^4.4.1", // Use to select multiple dates and provide plugin to extend further.
     "react-pdf": "^7.7.0",
     "react-phone-input-2": "^2.15.1",
     "react-player": "^2.13.0",
