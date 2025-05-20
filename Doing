@@ -2,54 +2,32 @@
 
 Today, I am working on below list of task:
 
-Date: 19 May 2025
-Day: Monday
+Date: 20 May 2025
+Day: Tuesday
 
 Project: BEC JLR,
 
-1. Project Understanding
-2. Continue preparing Project Documentation.
+1. Continue work on Gift voucher at Invited Guest module in Guests module.
 
 ## Work done:
 
-Date: 19 May 2025
-Day: Monday
+Date: 20 May 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
 Project: Dealer Data,
 
 1.  Changes at Invited Guests module in Events module.
-    1.1. Add one more component for "Gift Voucher". - Done
-    1.2. display all voucher that assigned to particular Guest. - In Progress
-    1.3. Create GiftVoucher component that display all Voucher list. - In Progress
 
-2.  Prepare documentation of BEC JLR project based on my understanding. - In Progress
-3.  Understand Guest Management route with Guests, Voucher and Vehicle modules. - Done
-    3.1. Guests module. - Done
-    3.2. Vouchers module. - Done
-    3.3. Vehicles module. - Done
+    - Add one more component for "Gift Voucher". - Done
 
-4.  Understand Event Management route with Events and Event Media modules. -
-    4.1. Events. - Done
-    4.2. Event Media. - Done
-    4.3. Create Task Notes. -
-    4.4. Create Reminder Notes. -
-
-5.  Solve issue of Event Media page on load. - Done
-
-6.  Understand Fleet Management Module. -
-    5.1. BEC Fleet. -
-    5.2. Fleet Booking. -
-
-7.  Understand Instructor module. -
-    6.1. Schedule. -
-    6.2. Upload Event Media. -
-    6.3. Assign Notes. -
-    6.4. Attendance Register. -
-
-8.  Understand Reports module. -
-    7.1. Event Feedback. -
+2.  Create Gift Voucher module. -
+    - Display all vouchers of perticular Guest. - Done
+    - Implement UnAssign functionality. - Done
+    - Implement View Voucher functionality. - Done
+    - Display default voucher if voucherType is null. - Done
+    - Implement Generate New Voucher functionality. - Done
 
 ## My Understanding
 
