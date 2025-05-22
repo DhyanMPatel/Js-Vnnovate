@@ -2,32 +2,34 @@
 
 Today, I am working on below list of task:
 
-Date: 21 May 2025
-Day: Wednesday
+Date: 22 May 2025
+Day: Thursday
 
 Project: BEC JLR,
 
-1. Review and validate all functionalities related to the Gift Voucher module, including voucher assignment, unassignment, default voucher handling, and UI integration to ensure everything works as expected.
+1. Investigate and analyze the code implementation for uploading the license during the user registration flow.
 
 ## Work done:
 
-Date: 21 May 2025
-Day: Wednesday
+Date: 22 May 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
+1. Next.js Learning
+
+   - Overview of Next.js and its use cases. - Done
+   - Key differences between React and Next.js. - Done
+   - Introduction to Server and Client Components. - Done
+   - Installed and initialized a Next.js project. - Done
+   - Explored the default project structure. - In progress
+
 Project: Dealer Data,
 
-1. Successfully reviewed and validated all functionalities related to the Gift Voucher module. - Done
-2. Analyzed and understood the Sentiment Analysis feature within the Guests module. - Done
-3. Gained a clear understanding of the View Media functionality and its code flow. - Done
-4. Completed a detailed code flow analysis of the BEC Fleet module. - Done
-5. Understood the implementation and logic behind the Fleet Bookings module. - Done
-6. Acquired a basic understanding of the Customer Registration Form structure and logic. - Done
-7. Reviewed the Instructor module to develop a foundational understanding. - Done
-8. Explored the Report module to understand its core functionality and system integration. - Done
-9. Explored and reviewed all route-level functionalities for the Dealer role. - Done
-10. Explored and reviewed all route-level functionalities for the Freelancer role. - Done
+1. Analyzed and understood the license upload functionality within the registration flow. - Done
+2. Reviewed the relevant code to trace the file handling and upload process during user registration. - Done
+3. Implemented functionality to display the uploaded license during the registration flow. – Done
+4. Remove unwanted consoles from code. - Done
 
 ## My Understanding
 
@@ -67,14 +69,14 @@ Project: Dealer Data,
     - Instructor Utilization. - Done
       - In Event List Pagination not display pages properly.
 
-6.  Fleat Utilization module. - In Progress
+6.  Fleet Utilization module. - In Progress
 
     - Page name `BEC Calendar`.
 
 7.  Indemnity forms module. -
 8.  Feedback form module. -
 
-    - In Edit mode of perticular question where only Mandatory option and Add question option change.
+    - In Edit mode of particular question where only Mandatory option and Add question option change.
     - There no any active option to delete any question.
     - There is no save or submit option at view option.
 
@@ -84,13 +86,16 @@ Project: Dealer Data,
          - Learn about stepper component in for multi step form.
          - There is an issue on Vouchers list on add guest form at 2nd step. (It get data from API but not display in UI.)
          - In View Guest option contain details of guest. there contact Number is not display even if we write that during form filling.
-         - Durring form filling. 1st step contain DOB there is an issue when selecting date.
+         - During form filling. 1st step contain DOB there is an issue when selecting date.
          - If we dynamically create any voucher and assign to Guest then Guest users list not update and not display correct voucher assigned.
 
     9.2. Vouchers module. - This module not update(not reRender) when assigned any voucher.
     9.3. Vehicles module. -
 
 10. Solve Issue when render to Event Media route. -
+11. Event Details module at schedule module in Instructor route.
+    P.1 There Number of Guests are not display correct
+    - It may be provide registered guests or may be wrong.
 
 ### User/Dealer
 
@@ -116,8 +121,8 @@ Project: Dealer Data,
 
 ## Email
 
-to: vasik sir, rupendra sir
-Cc: mansi ma'am
+to: Vasik sir, Rupendra sir
+Cc: Mansi ma'am
 
 **Subject**: Weekly Report of Dhyan
 
@@ -167,7 +172,7 @@ Description:
 13. Understand Setting modules.
     13.1. Except Email module.
 14. Understand Utilization.
-15. Understand Fleat Utilization (BEC Calender) module.
+15. Understand Fleet Utilization (BEC Calender) module.
 16. Prepare documentation of BEC JLR project based on my understanding.
 17. Understand Indemnity forms module.
 18. Understand Feedback form module.
@@ -175,7 +180,7 @@ Description:
 
 ## Leave Request
 
-to: bhautik
+to: Bhautik
 Cc: mansi ma'am, vasik sir and rupendra sir
 
 Subject: Leave Request for 23-Apr-2025
