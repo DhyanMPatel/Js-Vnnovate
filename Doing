@@ -2,34 +2,33 @@
 
 Today, I am working on below list of task:
 
-Date: 22 May 2025
-Day: Thursday
+Date: 23 May 2025
+Day: Friday
 
 Project: BEC JLR,
 
-1. Investigate and analyze the code implementation for uploading the license during the user registration flow.
+1. Implement functionality to display the guest's name upon clicking the top-right button in the Guest registration profile menu.
 
 ## Work done:
 
-Date: 22 May 2025
-Day: Thursday
+Date: 23 May 2025
+Day: Friday
 
 Today, I am working on below list of task:
 
-1. Next.js Learning
-
-   - Overview of Next.js and its use cases. - Done
-   - Key differences between React and Next.js. - Done
-   - Introduction to Server and Client Components. - Done
-   - Installed and initialized a Next.js project. - Done
-   - Explored the default project structure. - In progress
-
-Project: Dealer Data,
-
-1. Analyzed and understood the license upload functionality within the registration flow. - Done
-2. Reviewed the relevant code to trace the file handling and upload process during user registration. - Done
-3. Implemented functionality to display the uploaded license during the registration flow. – Done
-4. Remove unwanted consoles from code. - Done
+1. Implemented functionality to display the guest's name upon clicking the top-right button in the Guest Registration Profile menu. - Done
+2. Analyzed and understood the implementation of dynamic validation and dynamic values in the Feedback Form. - Done
+3. Explored the Instructor Ratings and Event Rating features to understand their code structure and flow. - Done
+4. Investigated the Feedback Form within the Guest Registration Profile to gain clarity on its behavior and integration. - Done
+5. Pulled the latest changes from the staging branch. - Done
+6. Resolved merge conflicts in several files. - Done
+7. Instructor Route Updates:
+   7.1 Added a new route for Instructor Fleet Booking. - Done
+8. Instructor Fleet Booking Module Enhancements:
+   8.1 Removed "Is Retailer Booking" and "Leasing Partner" sections from Booking Management. - Done
+   8.2 Replaced references to “Fleet” with “Instructor” in the Fleet Assets module. - Done
+   8.3 Change in Add, Edit, Delete, and View module. - Done
+   8.4 Ongoing improvements in the Store logic. - In Progress
 
 ## My Understanding
 
@@ -78,7 +77,7 @@ Project: Dealer Data,
 
     - In Edit mode of particular question where only Mandatory option and Add question option change.
     - There no any active option to delete any question.
-    - There is no save or submit option at view option.
+    - If there are any question is missing to fill although there is not mandatory still form submit and give "There is something wrong" as a response.
 
 9.  Guest Management module. -
     9.1. Guests module. -
@@ -108,6 +107,9 @@ Project: Dealer Data,
 ### Customer Registration
 
 - There checkIn QrCode not display in Attendance Register module.
+  1. Rating module:-
+     - getFeedbackEvents api not working give 500 error.
+     - after ratting of event "event ratting" button disappear.
 
 ## NoteDown
 
@@ -126,57 +128,58 @@ Cc: Mansi ma'am
 
 **Subject**: Weekly Report of Dhyan
 
-Project Name: Dealer Data,
+Project: BEC JLR,
 
-Git Commit ID: e697cc9238d27efa0bfed3c2370edc7b96d2a6be
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-rdb-frontend/-/commit/e697cc9238d27efa0bfed3c2370edc7b96d2a6be
+Git Commit ID: feeeb0b1de55c527e93eccff56d04d5eaf595c40
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/feeeb0b1de55c527e93eccff56d04d5eaf595c40
 
 Description:
 
 1. Changes at Invited Guests module in Events module.
 
    - Add one more component for "Gift Voucher".
+   - display all voucher that assigned to particular Guest.
+   - Create GiftVoucher component that display all Voucher list.
 
-2. Create Gift Voucher module.
+2. Prepare documentation of BEC JLR project based on my understanding.
+3. Understand Guest Management route with Guests, Voucher and Vehicle modules.
+4. Understand Event Management route with Events and Event Media modules.
+5. Solve Issue of rendering Event media module.
+6. Create Gift Voucher module.
+
    - Display all vouchers of perticular Guest.
    - Implement UnAssign functionality.
    - Implement View Voucher functionality.
    - Display default voucher if voucherType is null.
    - Implement Generate New Voucher functionality.
 
-Project: BEC JLR,
-
-Git Commit ID: 087ea96540d73af21002a9294294226238e29c09
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/087ea96540d73af21002a9294294226238e29c09
-
-Description:
-
-1. Clone BEC JLR project in my System.
-2. Set up BEC JLR project in my System.
-3. understand all Packages used in BEC JLR project.
-4. Explore routes folder.
-5. Explore Redux store folder.
-6. Explore Layout folder.
-7. Explore Service folder.
-8. Understand Dashboard module.
-   8.1. Go to Email Settings Module.
-   8.2. Sentiment Module.
-   8.3. Dashboard visual ratio and percentage module.
-   8.4. Event Schedule module.
-9. Understand User Management module.
-   9.1. Add, edit and delete User Functionality.
-   9.2. Mark leave functionality.
-10. Prepare documentation of BEC JLR project based on my understanding.
-11. Understand Dashboard module.
-12. Understand User Management module.
-13. Understand Setting modules.
-    13.1. Except Email module.
-14. Understand Utilization.
-15. Understand Fleet Utilization (BEC Calender) module.
-16. Prepare documentation of BEC JLR project based on my understanding.
-17. Understand Indemnity forms module.
-18. Understand Feedback form module.
-19. Understand Guest Management module. - In Progress
+7. Successfully reviewed and validated all functionalities related to the Gift Voucher module.
+8. Analyzed and understood the Sentiment Analysis feature within the Guests module.
+9. Gained a clear understanding of the View Media functionality and its code flow.
+10. Completed a detailed code flow analysis of the BEC Fleet module.
+11. Understood the implementation and logic behind the Fleet Bookings module.
+12. Acquired a basic understanding of the Customer Registration Form structure and logic.
+13. Reviewed the Instructor module to develop a foundational understanding.
+14. Explored the Report module to understand its core functionality and system integration.
+15. Explored and reviewed all route-level functionalities for the Dealer role.
+16. Explored and reviewed all route-level functionalities for the Freelancer role.
+17. Analyzed and understood the license upload functionality within the registration flow.
+18. Reviewed the relevant code to trace the file handling and upload process during user registration.
+19. Implemented functionality to display the uploaded license during the registration flow.
+20. Remove unwanted consoles from code.
+21. Implemented functionality to display the guest's name upon clicking the top-right button in the Guest Registration Profile menu.
+22. Analyzed and understood the implementation of dynamic validation and dynamic values in the Feedback Form.
+23. Explored the Instructor Ratings and Event Rating features to understand their code structure and flow.
+24. Investigated the Feedback Form within the Guest Registration Profile to gain clarity on its behavior and integration.
+25. Pulled the latest changes from the staging branch.
+26. Resolved merge conflicts in several files.
+27. Instructor Route Updates:
+    27.1 Added a new route for Instructor Fleet Booking.
+28. Instructor Fleet Booking Module Enhancements:
+    28.1 Removed "Is Retailer Booking" and "Leasing Partner" sections from Booking Management.
+    28.2 Replaced references to “Fleet” with “Instructor” in the Fleet Assets module.
+    28.3 Change in Add, Edit, Delete, and View module.
+    28.4 Ongoing improvements in the Store logic.
 
 ## Leave Request
 
