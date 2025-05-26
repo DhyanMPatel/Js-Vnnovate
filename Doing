@@ -2,33 +2,45 @@
 
 Today, I am working on below list of task:
 
-Date: 23 May 2025
-Day: Friday
+Date: 26 May 2025
+Day: Monday
 
 Project: BEC JLR,
 
-1. Implement functionality to display the guest's name upon clicking the top-right button in the Guest registration profile menu.
+1. Continued development and refinement of the Instructor Fleet Booking module.
 
 ## Work done:
 
-Date: 23 May 2025
-Day: Friday
+Date: 26 May 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
-1. Implemented functionality to display the guest's name upon clicking the top-right button in the Guest Registration Profile menu. - Done
-2. Analyzed and understood the implementation of dynamic validation and dynamic values in the Feedback Form. - Done
-3. Explored the Instructor Ratings and Event Rating features to understand their code structure and flow. - Done
-4. Investigated the Feedback Form within the Guest Registration Profile to gain clarity on its behavior and integration. - Done
-5. Pulled the latest changes from the staging branch. - Done
-6. Resolved merge conflicts in several files. - Done
-7. Instructor Route Updates:
-   7.1 Added a new route for Instructor Fleet Booking. - Done
-8. Instructor Fleet Booking Module Enhancements:
-   8.1 Removed "Is Retailer Booking" and "Leasing Partner" sections from Booking Management. - Done
-   8.2 Replaced references to “Fleet” with “Instructor” in the Fleet Assets module. - Done
-   8.3 Change in Add, Edit, Delete, and View module. - Done
-   8.4 Ongoing improvements in the Store logic. - In Progress
+1. Cloned the BEC project and successfully set it up on a new system. - Done
+2. Transferred all project-related documents to the new system. - In Progress
+3. Store Updates:
+    - Created a new instructorFleetSlice and integrated it into the root reducer. - Done
+
+4. CRUD Operations – Instructor Fleet Booking Module:
+    1. Add Fleet Module:
+      - Implemented logic to fetch the available instructor list based on selected start and end date/time. - Done
+      - Cleaned up the module by commenting out unwanted code. - Done
+      - Collaborated with Ashish Pathani bhai to resolve API-related issues. - Done
+
+    2. Edit Fleet Module:
+      - Set selected element details for edit functionality. - Done
+      - Implement Update Functionality. - Done 
+
+    3. Delete Fleet Module:
+      - Implemented functionality to delete specific fleet records. -  Done
+
+    4. View Fleet Module:
+      - Displayed relevant fleet data in the view module. - Done
+      - Made some changes to display instructor detail. - Done
+
+5. Removed all unnecessary/unwanted code from the modules. - Done
+6. Cleared all console.log() statements from the codebase for production readiness. - Done
+
 
 ## My Understanding
 
