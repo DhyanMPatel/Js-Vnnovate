@@ -2,45 +2,31 @@
 
 Today, I am working on below list of task:
 
-Date: 26 May 2025
-Day: Monday
+Date: 27 May 2025
+Day: Tuesday
 
 Project: BEC JLR,
 
-1. Continued development and refinement of the Instructor Fleet Booking module.
+1. Update Dashboard UI.
 
 ## Work done:
 
-Date: 26 May 2025
-Day: Monday
+Date: 27 May 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
-1. Cloned the BEC project and successfully set it up on a new system. - Done
-2. Transferred all project-related documents to the new system. - In Progress
-3. Store Updates:
-    - Created a new instructorFleetSlice and integrated it into the root reducer. - Done
+Project: BEC,
 
-4. CRUD Operations – Instructor Fleet Booking Module:
-    1. Add Fleet Module:
-      - Implemented logic to fetch the available instructor list based on selected start and end date/time. - Done
-      - Cleaned up the module by commenting out unwanted code. - Done
-      - Collaborated with Ashish Pathani bhai to resolve API-related issues. - Done
+1. Create PR and give to Rahul sir. - Done
 
-    2. Edit Fleet Module:
-      - Set selected element details for edit functionality. - Done
-      - Implement Update Functionality. - Done 
+Project: Dealer Data,
 
-    3. Delete Fleet Module:
-      - Implemented functionality to delete specific fleet records. -  Done
-
-    4. View Fleet Module:
-      - Displayed relevant fleet data in the view module. - Done
-      - Made some changes to display instructor detail. - Done
-
-5. Removed all unnecessary/unwanted code from the modules. - Done
-6. Cleared all console.log() statements from the codebase for production readiness. - Done
-
+1. Pull from Staging and create new Branch dev_dhyan_design. - Done
+2. Clone dealer Data frontend side code and setup in my System. - Done
+3. Solve Issue with Bhautik when npm install. - Done
+4. Header style change in Accessories, Vehicle Ownership, Vehicle Report, Exception Email, Add exception email module. - Done
+5. Changes in Dashboard UI. - In Progress
 
 ## My Understanding
 
@@ -207,3 +193,8 @@ I am writing to request leave on the 23rd of April, 2025, due to College Project
 I kindly seek your approval for the same.
 
 Thank you
+
+## What Write
+
+1. `Z-During Project new things learned` add GitHub learned topic.
+   - How to create new branch from any branch (staging).
