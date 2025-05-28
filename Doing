@@ -2,31 +2,29 @@
 
 Today, I am working on below list of task:
 
-Date: 27 May 2025
-Day: Tuesday
+Date: 28 May 2025
+Day: Wednesday
 
 Project: BEC JLR,
 
-1. Update Dashboard UI.
+1. Continue work on Update Dashboard UI.
 
 ## Work done:
 
-Date: 27 May 2025
-Day: Tuesday
+Date: 28 May 2025
+Day: Wednesday
 
 Today, I am working on below list of task:
 
-Project: BEC,
-
-1. Create PR and give to Rahul sir. - Done
-
 Project: Dealer Data,
 
-1. Pull from Staging and create new Branch dev_dhyan_design. - Done
-2. Clone dealer Data frontend side code and setup in my System. - Done
-3. Solve Issue with Bhautik when npm install. - Done
-4. Header style change in Accessories, Vehicle Ownership, Vehicle Report, Exception Email, Add exception email module. - Done
-5. Changes in Dashboard UI. - In Progress
+1. Changes in Dashboard UI. - Done
+2. Changes in Customer Data UI. - Done
+3. Create Image constant of Overall at Data field quality part. - Done
+4. Create Loader as a constant. - Done
+5. Remove inline css from Dashboard and static Data of Customer Data module. - Done
+6. Remove Unwanted code as well as style from Dashboard and Static Data of Customer Data module. - Done
+7. Remove SVG from project and replace with icon. - In Progress
 
 ## My Understanding
 
@@ -116,8 +114,22 @@ Project: Dealer Data,
 
 ## Questions
 
-- What the use of layout in router/routes/Admin.js file?
-- What their values?
+Project: Dealer Data
+
+1. view/pages/authentication/`ForgotPasswordBasic.js` kya use thay chhe?
+2. view/pages/authentication/`ForgotPasswordCover.js` kya use thay chhe?
+3. src/views/pages/authentication/`LoginBasic.js` kya use thay chhe?
+4. src/views/pages/authentication/`LoginCover.js` kya use thay chhe?
+
+## Needs to Remove
+
+Project: Dealer Data,
+
+1. src/components/table/Table.js
+2. src/components/table/TableSection.js
+3. src/components/reusable/Loader.js
+4. src/components/editor/Editor.js
+5. src/views/components/toasts/ToastHeaderIcons.js
 
 ## Email
 
