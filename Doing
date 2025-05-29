@@ -2,29 +2,35 @@
 
 Today, I am working on below list of task:
 
-Date: 28 May 2025
-Day: Wednesday
+Date: 29 May 2025
+Day: Thursday
 
-Project: BEC JLR,
+Project: Vnnovate,
 
-1. Continue work on Update Dashboard UI.
+1. Testing and Fixing in About and Contact us.
+2. Resolving bugs and checking responsiveness.
 
 ## Work done:
 
-Date: 28 May 2025
-Day: Wednesday
+Date: 29 May 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
 Project: Dealer Data,
 
-1. Changes in Dashboard UI. - Done
-2. Changes in Customer Data UI. - Done
-3. Create Image constant of Overall at Data field quality part. - Done
-4. Create Loader as a constant. - Done
-5. Remove inline css from Dashboard and static Data of Customer Data module. - Done
-6. Remove Unwanted code as well as style from Dashboard and Static Data of Customer Data module. - Done
-7. Remove SVG from project and replace with icon. - In Progress
+1. About module. - Done
+   - Tested and fixed.
+   - Resolved bugs and checked responsiveness.
+2. Contact us module. - Done
+   - Tested and fixed
+   - Resolved bugs and checked responsiveness.
+3. Changes in Solution module.
+   - Tested and fixed.
+   - Resolved bugs and checked responsiveness.
+   - Changes in Submodule of Solution module. - in Progress
+4. Change z-index to 1000 of scrollToTop module. - Done
+   - give problem in mobile view
 
 ## My Understanding
 
