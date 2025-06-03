@@ -2,25 +2,24 @@
 
 Today, I am working on below list of task:
 
-Date: 2 Jun 2025
-Day: Friday
+Date: 3 June, 2025
+Day: Tuesday
 
 Project: Table Booking Web,
 
-1. Theme searching for user side.
+1. Working on common model module.
 
 ## Work done:
 
-Date: 2 Jun 2025
-Day: Friday
+Date: 3 Jun 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
 Project: Hotel Table booking web,
 
-1. Researched and selected a theme for the user interface. - Done
-2. Cloned the Hotel Table Booking web project and configured it on my local system. - Done
-3. Developing the About Us and Contact Us modules. - In Progress
+1. Recreate Footer module with use of Material Ui and Scss. - Done
+2. Create common model module. - In Progress
 
 ## My Understanding
 
@@ -223,3 +222,10 @@ Thank you
 
 1. `Z-During Project new things learned` add GitHub learned topic.
    - How to create new branch from any branch (staging).
+
+## Merge Request (PR)
+
+Date : 29-May-2025
+Project : Table booking web
+commit : Commit for added
+PR :
