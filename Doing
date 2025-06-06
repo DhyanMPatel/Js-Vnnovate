@@ -2,24 +2,30 @@
 
 Today, I am working on below list of task:
 
-Date: 3 June, 2025
-Day: Tuesday
+Date: 4 June, 2025
+Day: Thursday
 
 Project: Table Booking Web,
 
-1. Working on common model module.
+1. Setup new System and clone Hotel table booking web project and run. - Done
+2. Create Profile Dropdown.
 
 ## Work done:
 
-Date: 3 Jun 2025
-Day: Tuesday
+Date: 4 Jun 2025
+Day: Thursday
 
 Today, I am working on below list of task:
 
 Project: Hotel Table booking web,
 
-1. Recreate Footer module with use of Material Ui and Scss. - Done
-2. Create common model module. - In Progress
+1. System Setup – Done
+   - Configured GitLab
+   - Set up the project environment
+
+2. Profile Dropdown Module – Done
+   - Implemented dropdown functionality
+   - Ensured responsive design across devices
 
 ## My Understanding
 
