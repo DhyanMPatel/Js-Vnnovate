@@ -2,30 +2,29 @@
 
 Today, I am working on below list of task:
 
-Date: 4 June, 2025
-Day: Thursday
+Date: 9 June, 2025
+Day: Monday
 
 Project: Table Booking Web,
 
-1. Setup new System and clone Hotel table booking web project and run. - Done
-2. Create Profile Dropdown.
+1. Update text styling on the Home Page.
+2. Develop and integrate the Booking History module.
 
 ## Work done:
 
-Date: 4 Jun 2025
-Day: Thursday
+Date: 9 Jun 2025
+Day: Monday
 
 Today, I am working on below list of task:
 
 Project: Hotel Table booking web,
 
-1. System Setup – Done
-   - Configured GitLab
-   - Set up the project environment
+1. Change Font style in home page with responsiveness. - Done
+2. Before signIn or login user can't see profile drawer checked. - Done
+3. Add Booking history module in profile drawer. - In Progress
+   - Find default Images of restaurant. - In progress 
+   - display whole details of table booking or banquet booking. - In Progress
 
-2. Profile Dropdown Module – Done
-   - Implemented dropdown functionality
-   - Ensured responsive design across devices
 
 ## My Understanding
 
