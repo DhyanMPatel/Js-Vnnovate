@@ -2,29 +2,31 @@
 
 Today, I am working on below list of task:
 
-Date: 9 June, 2025
-Day: Monday
+Date: 10 June, 2025
+Day: Tuesday
 
 Project: Table Booking Web,
 
-1. Update text styling on the Home Page.
-2. Develop and integrate the Booking History module.
+1. Continue development of the Booking History module
+   - Implement route protection to prevent unauthenticated access
+   - Add default images for restaurants
+   - Display detailed information for both table bookings and banquet bookings
 
 ## Work done:
 
-Date: 9 Jun 2025
-Day: Monday
+Date: 10 Jun 2025
+Day: Tuesday
 
 Today, I am working on below list of task:
 
 Project: Hotel Table booking web,
 
-1. Change Font style in home page with responsiveness. - Done
-2. Before signIn or login user can't see profile drawer checked. - Done
-3. Add Booking history module in profile drawer. - In Progress
-   - Find default Images of restaurant. - In progress 
-   - display whole details of table booking or banquet booking. - In Progress
-
+1. Booking History Module Enhancements - Done
+   - Developed the Booking History module
+   - Added default images for restaurants
+   - Implemented route protection to restrict access for unauthenticated users
+   - Displayed detailed booking information in a popup for both table and banquet bookings
+   - Added safety checks within the module for improved stability
 
 ## My Understanding
 
