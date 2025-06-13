@@ -2,31 +2,40 @@
 
 Today, I am working on below list of task:
 
-Date: 10 June, 2025
-Day: Tuesday
+Date: 13 June, 2025
+Day: Friday
 
 Project: Table Booking Web,
 
-1. Continue development of the Booking History module
-   - Implement route protection to prevent unauthenticated access
-   - Add default images for restaurants
-   - Display detailed information for both table bookings and banquet bookings
+1. Add default images in the Themes module.
+2. Update Breadcrumb Navigation.
+   - For the Book Table Process route
+   - For the Themes route
+3. Redesigned the Top-Bottom Navigation Buttons for side images.
+4. Resolved the issue related to Theme Pagination.
+5. Displayed only 3 Themes in the Event Details module.
+6. Developed a new Review & Rating component for all Restaurants.
+7. Completed API Integration with the Booking History module.
 
 ## Work done:
 
-Date: 10 Jun 2025
-Day: Tuesday
+EOD,
+Date: 13 Jun 2025
+Day: Friday
 
-Today, I am working on below list of task:
+Today, I am worked on below list of task:
 
 Project: Hotel Table booking web,
 
-1. Booking History Module Enhancements - Done
-   - Developed the Booking History module
-   - Added default images for restaurants
-   - Implemented route protection to restrict access for unauthenticated users
-   - Displayed detailed booking information in a popup for both table and banquet bookings
-   - Added safety checks within the module for improved stability
+1. Add default images in the Themes module. - Done
+2. Update Breadcrumb Navigation. - Done
+   - For the Book Table Process route
+   - For the Themes route
+3. Redesigned the Top-Bottom Navigation Buttons for side images. - Done
+4. Resolved the issue related to Theme Pagination. - Done
+5. Displayed only 3 Themes in the Event Details module. - Done
+6. Developed a new Review & Rating component for all Restaurants. - Done
+7. Completed API Integration with the Booking History module. - Done
 
 ## My Understanding
 
@@ -238,10 +247,10 @@ I hope this message finds you well. I am experiencing persistent lagging issues 
 
 Here are the details of the issue:
 
-   - System: Company-provided laptop
-   - Symptoms: Slow response times, frequent application crashes, and processing delays
-   - Frequency: Constant
-   - Tasks Affected: Coding and designing tasks
+- System: Company-provided laptop
+- Symptoms: Slow response times, frequent application crashes, and processing delays
+- Frequency: Constant
+- Tasks Affected: Coding and designing tasks
 
 Could you kindly guide me on the next steps to resolve this issue or direct me to the appropriate IT support contact? I am happy to provide further details or assist with troubleshooting.
 
