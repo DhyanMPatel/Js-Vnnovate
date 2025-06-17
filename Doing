@@ -2,40 +2,34 @@
 
 Today, I am working on below list of task:
 
-Date: 13 June, 2025
-Day: Friday
+Date: 17 June, 2025
+Day: Tuesday
 
 Project: Table Booking Web,
 
-1. Add default images in the Themes module.
-2. Update Breadcrumb Navigation.
-   - For the Book Table Process route
-   - For the Themes route
-3. Redesigned the Top-Bottom Navigation Buttons for side images.
-4. Resolved the issue related to Theme Pagination.
-5. Displayed only 3 Themes in the Event Details module.
-6. Developed a new Review & Rating component for all Restaurants.
-7. Completed API Integration with the Booking History module.
+1. Testing all changes in Live of yesterday.
+2. Disable Review button if there are not Review related to Restaurant and event.
+3. Continue work on Convert the existing photo popup modal into a bottom drawer for better accessibility and design consistency.
 
 ## Work done:
 
 EOD,
-Date: 13 Jun 2025
-Day: Friday
+Date: 17 Jun 2025
+Day: Tuesday
 
 Today, I am worked on below list of task:
 
 Project: Hotel Table booking web,
 
-1. Add default images in the Themes module. - Done
-2. Update Breadcrumb Navigation. - Done
-   - For the Book Table Process route
-   - For the Themes route
-3. Redesigned the Top-Bottom Navigation Buttons for side images. - Done
-4. Resolved the issue related to Theme Pagination. - Done
-5. Displayed only 3 Themes in the Event Details module. - Done
-6. Developed a new Review & Rating component for all Restaurants. - Done
-7. Completed API Integration with the Booking History module. - Done
+1. Resolved email-related issue in the Teams app. - Done
+2. Disabled the Review button when no reviews are available for Restaurants or Events. - Done
+3. Completed conversion of the photo popup modal into a bottom drawer for improved accessibility and design. - Done
+4. Conducted thorough testing of all changes made yesterday and today on the live environment. - Done
+5. Added cover images for both Restaurants and Events. - Done
+6. Removed unnecessary code and console logs from the Category View Details module. - Done
+7. Fixed a live issue related to the Category View Details module. - Done
+8. Resolved the mobile view header display issue. - Done
+9. Completed API integration for the Feedback Form module along with related CSS improvements. - Done
 
 ## My Understanding
 
