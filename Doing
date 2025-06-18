@@ -2,34 +2,33 @@
 
 Today, I am working on below list of task:
 
-Date: 17 June, 2025
-Day: Tuesday
+Date: 18 June, 2025
+Day: Wednesday
 
 Project: Table Booking Web,
 
-1. Testing all changes in Live of yesterday.
-2. Disable Review button if there are not Review related to Restaurant and event.
-3. Continue work on Convert the existing photo popup modal into a bottom drawer for better accessibility and design consistency.
+1. Integrate SweetAlert for user confirmation upon Feedback Form submission
+2. Develop a common Full-Screen Drawer module for reusable use across the application
 
 ## Work done:
 
 EOD,
-Date: 17 Jun 2025
-Day: Tuesday
+Date: 18 Jun 2025
+Day: Wednesday
 
 Today, I am worked on below list of task:
 
 Project: Hotel Table booking web,
 
-1. Resolved email-related issue in the Teams app. - Done
-2. Disabled the Review button when no reviews are available for Restaurants or Events. - Done
-3. Completed conversion of the photo popup modal into a bottom drawer for improved accessibility and design. - Done
-4. Conducted thorough testing of all changes made yesterday and today on the live environment. - Done
-5. Added cover images for both Restaurants and Events. - Done
-6. Removed unnecessary code and console logs from the Category View Details module. - Done
-7. Fixed a live issue related to the Category View Details module. - Done
-8. Resolved the mobile view header display issue. - Done
-9. Completed API integration for the Feedback Form module along with related CSS improvements. - Done
+1. Implemented SweetAlert on successful submission of the Feedback Form. - Done
+2. Applied styling enhancements to the Feedback Form. - Done
+3. Added validation for first_name, last_name, and Diet fields. - Done
+4. Created a common Drawer component for full-screen use. - Done
+5. Removed unnecessary code and imports across relevant modules. - Done
+6. Added animation to the Drawer open action in collaboration with Rahul Sir. - Done
+7. Resolved width issue in the Profile Dropdown component. - Done
+8. Made design adjustments to the Category View Details module. - Done
+   - Fixed alignment issues for `Photos`, `Reviews`, and `Feedback` options on mobile view. - Done
 
 ## My Understanding
 
