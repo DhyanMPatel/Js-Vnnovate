@@ -2,33 +2,29 @@
 
 Today, I am working on below list of task:
 
-Date: 18 June, 2025
-Day: Wednesday
+Date: 19 June, 2025
+Day: Thursday
 
 Project: Table Booking Web,
 
-1. Integrate SweetAlert for user confirmation upon Feedback Form submission
-2. Develop a common Full-Screen Drawer module for reusable use across the application
+1. Implement a custom modal within the Success SweetAlert for enhanced user feedback experience.
 
 ## Work done:
 
 EOD,
-Date: 18 Jun 2025
-Day: Wednesday
+Date: 19 Jun 2025
+Day: Thursday
 
 Today, I am worked on below list of task:
 
 Project: Hotel Table booking web,
 
-1. Implemented SweetAlert on successful submission of the Feedback Form. - Done
-2. Applied styling enhancements to the Feedback Form. - Done
-3. Added validation for first_name, last_name, and Diet fields. - Done
-4. Created a common Drawer component for full-screen use. - Done
-5. Removed unnecessary code and imports across relevant modules. - Done
-6. Added animation to the Drawer open action in collaboration with Rahul Sir. - Done
-7. Resolved width issue in the Profile Dropdown component. - Done
-8. Made design adjustments to the Category View Details module. - Done
-   - Fixed alignment issues for `Photos`, `Reviews`, and `Feedback` options on mobile view. - Done
+1. Custom Modal Integration for SweetAlert Functionality – Completed
+   - Enhanced the Common Modal to support SweetAlert-style behavior
+   - Updated the Booking History module to utilize the Common Modal for success alerts
+2. Breadcrumb Implementation – Completed
+   - Added breadcrumb navigation to the Event Booking Process page
+3. Add Multiple Branch data from admin side. - Done
 
 ## My Understanding
 
