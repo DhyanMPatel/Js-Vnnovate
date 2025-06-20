@@ -2,29 +2,25 @@
 
 Today, I am working on below list of task:
 
-Date: 19 June, 2025
-Day: Thursday
+Date: 20 June, 2025
+Day: Friday
 
 Project: Table Booking Web,
 
-1. Implement a custom modal within the Success SweetAlert for enhanced user feedback experience.
+1. Create of sheet for Whole task done by me in Table Booking Web project.
 
 ## Work done:
 
 EOD,
-Date: 19 Jun 2025
-Day: Thursday
+Date: 20 Jun 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Hotel Table booking web,
 
-1. Custom Modal Integration for SweetAlert Functionality – Completed
-   - Enhanced the Common Modal to support SweetAlert-style behavior
-   - Updated the Booking History module to utilize the Common Modal for success alerts
-2. Breadcrumb Implementation – Completed
-   - Added breadcrumb navigation to the Event Booking Process page
-3. Add Multiple Branch data from admin side. - Done
+1. Replaced SweetAlert with the reusable Common Modal component to display alerts after feedback form submission. - Done
+2. Developed and integrated a Collapse component to manage the Waiting List section within the Booking History module. - Done
 
 ## My Understanding
 
