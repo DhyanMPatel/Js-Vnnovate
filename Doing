@@ -132,77 +132,45 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly Report of Dhyan
+**Subject**: Weekly (16 June - 20 June) Report of Dhyan
 
-Project: BEC JLR,
+Project: Hotel Table Booking Web,
 
-Git Commit ID: 000182c563ab9f04439400f9ba8a00fcc34ed987
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/000182c563ab9f04439400f9ba8a00fcc34ed987
-
-Description:
-
-1. Cloned the BEC project and successfully set it up on a new system.
-2. Transferred all project-related documents to the new system.
-3. Store Updates:
-   - Created a new instructorFleetSlice and integrated it into the root reducer.
-4. CRUD Operations – Instructor Fleet Booking Module:
-
-   1. Add Fleet Module:
-      - Implemented logic to fetch the available instructor list based on selected start and end date/time.
-      - Cleaned up the module by commenting out unwanted code.
-      - Collaborated with Ashish Pathani bhai to resolve API-related issues.
-   2. Edit Fleet Module:
-      - Set selected element details for edit functionality.
-      - Implement Update Functionality.
-   3. Delete Fleet Module:
-      - Implemented functionality to delete specific fleet records.
-   4. View Fleet Module:
-      - Displayed relevant fleet data in the view module.
-      - Made some changes to display instructor detail.
-
-5. Removed all unnecessary/unwanted code from the modules.
-6. Cleared all console.log() statements from the codebase for production readiness.
-7. Create PR and give to Rahul sir.
-
-Project: Dealer Data,
-
-Git Commit ID: 5dfc930b75b438ac4b9467363362cae4a92fb082
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-rdb-frontend/-/commit/5dfc930b75b438ac4b9467363362cae4a92fb082
+Git Commit ID: 8a17de43433d8c184fb84e9ff3a0d010858bfc5f
+Git Commit Link: https://gitlab.com/vnnovatesolutions/hotel-table-booking-web-user/-/commit/8a17de43433d8c184fb84e9ff3a0d010858bfc5f
 
 Description:
 
-1. Pull from Staging and create new Branch dev_dhyan_design.
-2. Clone dealer Data frontend side code and setup in my System.
-3. Solve Issue with Bhautik when npm install.
-4. Header style change in Accessories, Vehicle Ownership, Vehicle Report, Exception Email, Add exception email module.
-5. Changes in Dashboard UI.
-6. Changes in Dashboard UI.
-7. Changes in Customer Data UI.
-8. Create Image constant of Overall at Data field quality part.
-9. Create Loader as a constant.
-10. Remove inline css from Dashboard and static Data of Customer Data module.
-11. Remove Unwanted code as well as style from Dashboard and Static Data of Customer Data module.
-12. Remove SVG from project and replace with icon.
-
-Project: Vnnovate,
-
-Git Commit ID:
-Git Commit Link: https://gitlab.com/devarshi_vnnovate/vnnovate-next/-/commit/
-
-Description:
-
-1. About module.
-   - Tested and fixed.
-   - Resolved bugs and checked responsiveness.
-2. Contact us module.
-   - Tested and fixed
-   - Resolved bugs and checked responsiveness.
-3. Changes in Solution module.
-   - Tested and fixed.
-   - Resolved bugs and checked responsiveness.
-   - Changes in Submodule of Solution module.
-4. Change z-index to 1000 of scrollToTop module.
-   - give problem in mobile view
+1. Redesign the Restaurant and Event Details pages for improved layout and user experience.
+2. Make Photos and Reviews buttons fully functional.
+3. Convert the existing photo popup modal into a bottom drawer for better accessibility and design consistency.
+4. Resolved email-related issue in the Teams app.
+5. Disabled the Review button when no reviews are available for Restaurants or Events.
+6. Completed conversion of the photo popup modal into a bottom drawer for improved accessibility and design.
+7. Conducted thorough testing of all changes made yesterday and today on the live environment.
+8. Find cover images for both Restaurants and Events.
+9. Removed unnecessary code and console logs from the Category View Details module.
+10. Fixed a live issue related to the Category View Details module.
+11. Resolved the mobile view header display issue.
+12. Completed API integration for the Feedback Form module along with related CSS improvements.
+13. Implemented SweetAlert on successful submission of the Feedback Form.
+14. Applied styling enhancements to the Feedback Form.
+15. Added validation for first_name, last_name, and Diet type fields.
+16. Created a common Drawer component for full-screen use.
+17. Removed unnecessary code and imports across relevant modules.
+18. Added animation to the Drawer open action in collaboration with Rahul Sir.
+19. Resolved width issue in the Profile Dropdown component.
+20. Made design adjustments to the Category View Details module.
+    - Fixed alignment issues for `Photos`, `Reviews`, and `Feedback` options on mobile view.
+21. Tested todays changes in live.
+22. Custom Modal Integration for SweetAlert Functionality – Completed
+    - Enhanced the Common Modal to support SweetAlert-style behavior
+    - Updated the Booking History module to utilize the Common Modal for success alerts
+23. Breadcrumb Implementation
+    - Added breadcrumb navigation to the Event Booking Process page
+24. Add Multiple Branch data from admin side.
+25. Replaced SweetAlert with the reusable Common Modal component to display alerts after feedback form submission.
+26. Developed and integrated a Collapse component to manage the Waiting List section within the Booking History module.
 
 ## Leave Request
 
@@ -249,6 +217,7 @@ Web Developer Intern
 
 1. `Z-During Project new things learned` add GitHub learned topic.
    - How to create new branch from any branch (staging).
+2. How to create Bread Crumb.
 
 ## Merge Request (PR)
 
