@@ -119,4 +119,25 @@
 
 ### 2. CommonJS Modules (CJS)
 
-- 
+- CommonJS is the default module system used in NodeJS.
+- It enables code modularity by allowing developers to export and import functions, objects, or variables using `module.exports` and `require()`.
+
+  ```jsx
+  //import 
+  const module1 = require('./module1');
+
+  //export
+  module.exports = { module1, module2, ... };
+  ```
+
+- How Common JS works?
+
+  - Uses `require()` to import modules.
+  - Uses `module.exports` to export functions, objects, or variables.
+  - Modules are loaded `synchronously`, meaning execution waits until the module is fully loaded.- It is default in NodeJS, but not natively supported in browsers.
+  - `Each module` `runs in its own scope`, preventing variable conflicts.
+
+- Use Cases of CommonJS Modules
+  1. Creating a Utility Module
+  2. Building a Configuration File
+  3. Handling Routes in an Express App

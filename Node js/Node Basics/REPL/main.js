@@ -1,30 +1,30 @@
-import http from "http";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+// import http from "http";
+// import fs, { readFile } from "fs";
+// import path from "path";
+// import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
-const server = http.createServer((req, res) => {
-    const filePath = path.join(__dirname, "message.txt");
+// const server = http.createServer((req, res) => {
+//   const filePath = path.join(__dirname, "message.txt");
 
-    fs.readfile(filePath, "urf8", (err, data) => {
-        if(err){
-            res.writeHead(500, {"content-type": "text/plain"});
-            res.end("Error reading file");
-        } else {
-            res.writeHead(200, {"content-type": "text/plain"});
-            res.end(data);
-        }
-    })
-})
+//   fs.readfile(filePath, "urf8", (err, data) => {
+//     if (err) {
+//       res.writeHead(500, { "content-type": "text/plain" });
+//       res.end("Error reading file");
+//     } else {
+//       res.writeHead(200, { "content-type": "text/plain" });
+//       res.end(data);
+//     }
+//   });
+// });
 
-server.listen(3000, () => {
-    console.log("Server is listening on port 3000");
-})
+// server.listen(3000, () => {
+//   console.log("Server is listening on port 3000");
+// });
 
-global.a = "Hii this is Global Object";
+// global.a = "Hii this is Global Object";
 
 // console.log("Process ID:", process.pid);
 // console.log("Node.js Version:", process.version);
@@ -40,6 +40,34 @@ global.a = "Hii this is Global Object";
 // myUrl.searchParams.append('age', '20');
 // console.log(myUrl.href);
 
-const encoder = new TextEncoder();
-const encoded = encoder.encode("Hello, This will encode.");
-console.log(encoded);
+// const encoder = new TextEncoder();
+// const encoded = encoder.encode("Hello, This will encode.");
+// console.log(encoded);
+
+// import http from "http";
+
+// const server2 = http.createServer((req, res) => {
+//   //   res.writeHead(200, { "content-type": "text/html" });
+//   //   res.end("<h2>Welcome, Node.js!</h2>");
+
+//   res.writeHead(200, { "content-type": "application/json" });
+//   res.end(JSON.stringify({ message: "This is Message from Backend" }));
+// });
+// server2.listen(
+//   4000,
+//   console.log("Server is listening on http://localhost:4000/ Port...")
+// );
+
+/* Read file with Async/Await */
+import fs from 'fs/promises';
+
+async function readFileAsync() {
+  try {
+    const data = await fs.readFile('message.txt', 'utf8');
+    console.log(data);
+  } catch (err) {
+    console.log('Error: ', err.message);
+  }
+}
+
+readFileAsync();

@@ -2,25 +2,49 @@
 
 Today, I am working on below list of task:
 
-Date: 20 June, 2025
-Day: Friday
+Date: 23 June, 2025
+Day: Monday
 
 Project: Table Booking Web,
 
-1. Create of sheet for Whole task done by me in Table Booking Web project.
+1. Resolve various live issues reported on the production environment
+2. Apply necessary changes and improvements to the Waiting List module
+3. Perform UI enhancements on the Booking History page and the Category Detail page for better user experience
 
 ## Work done:
 
 EOD,
-Date: 20 Jun 2025
-Day: Friday,
+Date: 23 Jun 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Hotel Table booking web,
 
-1. Replaced SweetAlert with the reusable Common Modal component to display alerts after feedback form submission. - Done
-2. Developed and integrated a Collapse component to manage the Waiting List section within the Booking History module. - Done
+1. Changes in Booking History module - Done
+   - Updated the Waiting List Collapse Module for better structure
+   - Removed unnecessary fields: Total Table and Review from the waiting list
+   - Implemented logic to display waiting list only if user has any waiting records
+
+Learning,
+
+1. Introduction to Node.js - Done
+   - What is Node.js, Why use it, Key Features
+   - Use cases and comparison with browsers and other languages
+2. Environment Setup - Done
+   - Installed Node.js, understood npm (Node Package Manager) and nvm (Node Version Manager)
+3. JavaScript Essentials for Node.js - Done
+   - ES6+ Features
+   - Asynchronous JavaScript (callbacks, promises, async/await)
+   - Modular programming and basic error handling
+4. Node.js Architecture - Done
+   - Single-threaded and event-driven architecture
+   - Deep dive into the Event Loop
+   - Understanding Non-blocking I/O model
+5. Core Node.js Modules - Done
+   - Explored built-in modules: http, fs, path, url
+6. Practical Task - Done
+   - Implemented CRUD operations using the file system module (fs)
 
 ## My Understanding
 
