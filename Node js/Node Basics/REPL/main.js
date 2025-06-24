@@ -58,16 +58,37 @@
 //   console.log("Server is listening on http://localhost:4000/ Port...")
 // );
 
-/* Read file with Async/Await */
-import fs from 'fs/promises';
+// /* Read file with Async/Await */
+// import fs from 'fs/promises';
 
-async function readFileAsync() {
-  try {
-    const data = await fs.readFile('message.txt', 'utf8');
-    console.log(data);
-  } catch (err) {
-    console.log('Error: ', err.message);
-  }
+// async function readFileAsync() {
+//   try {
+//     const data = await fs.readFile('message.txt', 'utf8');
+//     console.log(data);
+//   } catch (err) {
+//     console.log('Error: ', err.message);
+//   }
+// }
+
+// readFileAsync();
+
+import { deleteFile, readFile, updateFile, writeFile } from "./fsCRUD.js";
+import fs from 'fs';
+try {
+  fs.access("message.json");
+} catch {
+  fs.writeFile("message.json", '[]', 'utf8', (err) => {
+    if (err) throw err;
+    console.log('File written successfully!');
+  });
+  console.log("Initialized users.json");
 }
 
-readFileAsync();
+await writeFile(1, "Dhayan")
+await readFile()
+await writeFile(2, "Bhautik")
+await readFile()
+await updateFile(1, "Dhyan")
+await readFile()
+await deleteFile(2)
+await readFile()
