@@ -2,29 +2,45 @@
 
 Today, I am working on below list of task:
 
-Date: 23 June, 2025
-Day: Monday
+Date: 24 June, 2025
+Day: Tuesday,
 
 Project: Table Booking Web,
 
 1. Resolve various live issues reported on the production environment
-2. Apply necessary changes and improvements to the Waiting List module
-3. Perform UI enhancements on the Booking History page and the Category Detail page for better user experience
+2. Apply necessary changes and improvements to the Booking History module.
 
 ## Work done:
 
 EOD,
-Date: 23 Jun 2025
-Day: Monday,
+Date: 24 Jun 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Hotel Table booking web,
-
-1. Changes in Booking History module - Done
-   - Updated the Waiting List Collapse Module for better structure
-   - Removed unnecessary fields: Total Table and Review from the waiting list
-   - Implemented logic to display waiting list only if user has any waiting records
+1. Booking History Module Enhancements - Done
+  - Updated restaurant name formatting for better readability and user preference
+  - Resolved issues related to pagination and search functionality
+2. Login Module Improvements - Done
+  - Improved email validation rules
+  - Disabled Sign In button and added a loader during login attempts
+  - Displayed appropriate error messages for invalid email or password
+3. Registration Module Updates - Done
+  - Disabled submit button and added a loader during API calls
+  - Displayed specific error messages for failed registrations
+  - Added minimum and maximum character limits for first and last names
+  - Implemented strong password validation rules
+4. Home Page Improvements - Done
+  - Addressed naming clarity: clarified tab names like “Restaurant” vs “Restaurant Table” and “Event” vs “Kid’s Party”
+  - Made phone number and email in the footer clickable for direct action
+5. Restaurant and Event List Page Updates - Done
+  - Investigated and addressed issues related to sorting functionality
+6. Restaurant Page Enhancements - Done
+  - Improved name validation on the feedback form
+  - Ensured proper page highlighting for active Restaurant tab/page
+7. Event Page Enhancements - Done
+  - Enhanced name validation on the feedback form
 
 Learning,
 
