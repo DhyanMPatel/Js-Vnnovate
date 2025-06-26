@@ -72,23 +72,23 @@
 
 // readFileAsync();
 
-import { deleteFile, readFile, updateFile, writeFile } from "./fsCRUD.js";
+import { deleteFile, readFile, updateFile, writeFile } from './fsCRUD.js';
 import fs from 'fs';
 try {
-  fs.access("message.json");
+  fs.access('message.json');
 } catch {
-  fs.writeFile("message.json", '[]', 'utf8', (err) => {
+  fs.writeFile('message.json', '[]', 'utf8', (err) => {
     if (err) throw err;
     console.log('File written successfully!');
   });
-  console.log("Initialized users.json");
+  console.log('Initialized users.json');
 }
 
-await writeFile(1, "Dhayan")
-await readFile()
-await writeFile(2, "Bhautik")
-await readFile()
-await updateFile(1, "Dhyan")
-await readFile()
-await deleteFile(2)
-await readFile()
+await writeFile(1, 'Dhayan');
+await readFile();
+await writeFile(2, 'Bhautik');
+await readFile();
+await updateFile(1, 'Dhyan');
+await readFile();
+await deleteFile(2);
+await readFile();
