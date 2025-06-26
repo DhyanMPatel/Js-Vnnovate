@@ -61,6 +61,6 @@ let obj ={name:'Vnnovate'}
 // console.log(Symbol(a)); // Return - Symbol (0)
 // console.log(Symbol(obj)); // Return - Symbol [object Object]
 
-console.log(Symbol (obj.name)); // Return - Symbol(Vnnovate)
-console.log(Symbol (obj.name).description); // Return - Vnnovate
+// console.log(Symbol (obj.name)); // Return - Symbol(Vnnovate)
+// console.log(Symbol (obj.name).description); // Return - Vnnovate
 

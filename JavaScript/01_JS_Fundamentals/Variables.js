@@ -4,7 +4,7 @@
 {
   // Block Scope
   let one = 1;
-  //   console.log(one);
+    // console.log(one);
 }
 // console.log(one);   // Error - one is not Defined
 
@@ -18,7 +18,7 @@ function funcScope() {
   }
   console.log(two); // Return - 2
 }
-funcScope();
+// funcScope();
 // console.log(two); // Error - two is not Defined
 
 let three = 3.5;
@@ -77,7 +77,7 @@ function varFuncScope() {
 
 // let str = "Vnnovate";
 // str[2] = "o"; 
-// console.log(str);
+// console.log(str); // No change in String, because String is Immutable
 
 
 /// Exception in Number Datatype
