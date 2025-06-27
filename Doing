@@ -2,50 +2,39 @@
 
 Today, I am working on below list of task:
 
-Date: 25 June, 2025
-Day: Wednesday,
+Date: 26 June, 2025
+Day: Thursday,
 
 Project: Table Booking Web,
 
-1. Testing yesterday changes in live
-2. Resolve Remaining live issues reported on the production environment.
+1. Perform comprehensive testing of all recent changes on the live environment to ensure stability and functionality
+
 
 ## Work done:
 
 EOD,
-Date: 25 Jun 2025
-Day: Wednesday,
+Date: 26 Jun 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
 Project: Hotel Table booking web,
 
-1. Registration Form
-  - Added left margin to error messages for improved spacing
-2. CategoryViewDetail Module (Restaurant & Event Details)
-  - Fixed "Book Now" button redirect issue (now correctly routes to Event Booking)
-  - Updated routing logic to match Restaurant Details behavior
-  - Resolved Search input focus issue in both Restaurant and Event lists (CategoryList)
-3. Table Booking Page
-  - Updated routes for consistency and clarity
-4. Breadcrumb Navigation
-  Adjusted breadcrumb logic for:
-    - Event Details, Themes, Table & Event Booking pages
-5. Contact Us Page
-  - Added form validation, social links, and clickable email
-6. Profile Route
-  - Enabled switching between Profile and Change Password views via dropdown
-  - Added confirmation popup on logout
-7. Profile Dropdown Module
-  - Implemented confirmation modal before logout action
-8. About Page
-  - Made all CTA buttons functional: Book Now, Plan Event, Reserve Your Table
-9. Footer Module
-  - Added Vnnovate website link to the “Vnnovate” text
-10. Reset Password & Verify OTP
-  - Improved form validation
-  - Fixed issues with API integration
-11 Testing All changes in Live. - In Progress
+1. Windows Security
+  - Set up PIN on Windows login for system security
+2. Table Booking Process
+  - Disabled the final step of the booking process when the API call is pending to prevent duplicate submissions
+3. Booking History Module
+  - Resolved drawer width issue in the Total Table view
+4. Table Booking Flow Enhancements
+  - Added logic to automatically place users in the waiting list when enough tables are not available
+  - Improved suggestion prompt for users to join the waiting list when necessary
+5. Live Environment Testing
+  - Tested all recent changes in the live environment to ensure smooth functionality
+
+Learning,
+6. JavaScript Practice
+  - Practiced JavaScript questions to strengthen problem-solving and language fundamentals
 
 Learning,
 
