@@ -70,7 +70,7 @@ let name = {
     lastName: "", 
   }; 
     
-  console.log(name.firstName); // Return - Ram
+  // console.log(name.firstName); // Return - Ram
     
   // Changing the value using logical 
   // AND assignment operator 
@@ -78,9 +78,9 @@ let name = {
     
   // Here the value changed because 
   // name.firstName is truthy 
-  console.log(name.firstName); // Return - Shyam
+  // console.log(name.firstName); // Return - Shyam
     
-  console.log(name.lastName); 
+  // console.log(name.lastName); 
     
   // Changing the value using logical  
   // AND assignment operator 
@@ -88,7 +88,7 @@ let name = {
     
   // Here the value remains unchanged  
   // because name.lastName is falsy 
-  console.log(name.lastName); // Return - ""
+  // console.log(name.lastName); // Return - ""
 
 
 
@@ -96,7 +96,7 @@ let name = {
 /// ||=  // Means: x || (x=y)
 //      - if first operand will be falsy then second operand value will assigned to first operand
 
-  console.log(name.firstName); // Return - Ram
+  // console.log(name.firstName); // Return - Ram
   
   // Changing the value using logical 
   // OR assignment operator 
@@ -104,21 +104,22 @@ let name = {
   
   // But value does not change because 
   // name.firstName is truthy 
-  console.log(name.firstName); // Return - Ram
+  // console.log(name.firstName); // Return - Ram
   
-  console.log(name.lastName); // Return - ""
+  // console.log(name.lastName); // Return - ""
   
   // Changing the value using logical 
   // OR assignment operator 
   name.lastName ||= "Kumar"; 
 
   // The value changes because name.lastName is falsy 
-  console.log(name.lastName); // Return - Kumar
+  // console.log(name.lastName); // Return - Kumar
 
 
 
 /// ??=  // Means: x ?? (x = y)
 //      - In Object there is a properties is not defined which is indicate as a undefined so ??= will create that undefined property and assigned right side value
+//      - Return first not null or undefined value otheerwise return last value
 let one = 1
 let empty1 = null
 let empty2 = undefined

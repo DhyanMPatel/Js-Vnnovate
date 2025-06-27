@@ -4,7 +4,7 @@
 let sum = 1 + 2 + true; // return - 4
 // console.log(sum);
 
-let justJoint = 1 + 2 + " String"; // Add then Concatination(with String)
+let justJoint = 1 + 2 + " String"; // Add then Concatenation(with String)
 // console.log(justJoint);
 
 // let bigIntiger = 1n + 3; // Solution - use Explicit conversions
@@ -52,7 +52,7 @@ let justJoint = 1 + 2 + " String"; // Add then Concatination(with String)
 // console.log(-3n / 2n); // Return - -1n
 // console.log(3n / 2n); // Return - 1n
 // console.log(3n / 4n);   // Return - 0n
-// console.log(-3n / 4n); // Return - 0n
+// console.log(-3n / 4n); // Return - 0n, No `-0n` is available in BigInt
 // console.log(3n / -4n);  // Return - 0n
 // console.log(2n / 0n); // Error - Not Division by Zero
 
