@@ -9,7 +9,6 @@ Project: Learning,
 
 1. Continue learning Node.js Basic Concepts, including its core architecture, modules, and asynchronous behavior
 
-
 ## Work done:
 
 EOD,
@@ -18,23 +17,26 @@ Day: Friday,
 
 Today, I am worked on below list of task:
 
-Project: Hotel Table booking web,
+Project: Learning,
 
-1. Windows Security
-  - Set up PIN on Windows login for system security
-2. Table Booking Process
-  - Disabled the final step of the booking process when the API call is pending to prevent duplicate submissions
-3. Booking History Module
-  - Resolved drawer width issue in the Total Table view
-4. Table Booking Flow Enhancements
-  - Added logic to automatically place users in the waiting list when enough tables are not available
-  - Improved suggestion prompt for users to join the waiting list when necessary
-5. Live Environment Testing
-  - Tested all recent changes in the live environment to ensure smooth functionality
-
-Learning,
-6. JavaScript Practice
-  - Practiced JavaScript questions to strengthen problem-solving and language fundamentals
+1. Introduction to Node.js - Done
+  - What is Node.js, Why use it, Key Features
+  - Use cases and comparison with browsers and other languages
+2. Environment Setup - Done
+  - Installed Node.js, understood npm (Node Package Manager) and nvm (Node Version Manager)
+3. JavaScript Essentials for Node.js - Done
+  - ES6+ Features, Asynchronous JavaScript (callbacks, promises, async/await), Modular programming and basic error handling
+4. Node.js Architecture - Done
+  - Single-threaded and event-driven architecture, Deep dive into the Event Loop, Understanding Non-blocking I/O model
+5. Core Node.js Modules - Done
+  - Explored built-in modules: http, fs, path, url
+6. Practical Task - Done
+  - Implemented CRUD operations using the file system module (fs)
+1. Node.js Architecture
+- Studied the architecture diagram and explored the Event Loop and its role in non-blocking I/O
+2. Core Node.js Modules
+- Covered key modules: http, fs, path, url, and os
+- Practiced basic methods and use cases for each
 
 Learning,
 
@@ -162,45 +164,76 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (16 June - 20 June) Report of Dhyan
+**Subject**: Weekly (23 June - 27 June) Report of Dhyan
 
 Project: Hotel Table Booking Web,
 
-Git Commit ID: 8a17de43433d8c184fb84e9ff3a0d010858bfc5f
-Git Commit Link: https://gitlab.com/vnnovatesolutions/hotel-table-booking-web-user/-/commit/8a17de43433d8c184fb84e9ff3a0d010858bfc5f
+Git Commit ID: 304816bd05f4602fa5dec8604cc2e827047ca4e1
+Git Commit Link: https://gitlab.com/vnnovatesolutions/hotel-table-booking-web-user/-/commit/304816bd05f4602fa5dec8604cc2e827047ca4e1
 
 Description:
 
-1. Redesign the Restaurant and Event Details pages for improved layout and user experience.
-2. Make Photos and Reviews buttons fully functional.
-3. Convert the existing photo popup modal into a bottom drawer for better accessibility and design consistency.
-4. Resolved email-related issue in the Teams app.
-5. Disabled the Review button when no reviews are available for Restaurants or Events.
-6. Completed conversion of the photo popup modal into a bottom drawer for improved accessibility and design.
-7. Conducted thorough testing of all changes made yesterday and today on the live environment.
-8. Find cover images for both Restaurants and Events.
-9. Removed unnecessary code and console logs from the Category View Details module.
-10. Fixed a live issue related to the Category View Details module.
-11. Resolved the mobile view header display issue.
-12. Completed API integration for the Feedback Form module along with related CSS improvements.
-13. Implemented SweetAlert on successful submission of the Feedback Form.
-14. Applied styling enhancements to the Feedback Form.
-15. Added validation for first_name, last_name, and Diet type fields.
-16. Created a common Drawer component for full-screen use.
-17. Removed unnecessary code and imports across relevant modules.
-18. Added animation to the Drawer open action in collaboration with Rahul Sir.
-19. Resolved width issue in the Profile Dropdown component.
-20. Made design adjustments to the Category View Details module.
-    - Fixed alignment issues for `Photos`, `Reviews`, and `Feedback` options on mobile view.
-21. Tested todays changes in live.
-22. Custom Modal Integration for SweetAlert Functionality – Completed
-    - Enhanced the Common Modal to support SweetAlert-style behavior
-    - Updated the Booking History module to utilize the Common Modal for success alerts
-23. Breadcrumb Implementation
-    - Added breadcrumb navigation to the Event Booking Process page
-24. Add Multiple Branch data from admin side.
-25. Replaced SweetAlert with the reusable Common Modal component to display alerts after feedback form submission.
-26. Developed and integrated a Collapse component to manage the Waiting List section within the Booking History module.
+1. Changes in Booking History module
+  - Updated the Waiting List Collapse Module for better structure
+  - Removed unnecessary fields: Total Table and Review from the waiting list
+  - Implemented logic to display waiting list only if user has any waiting records
+2. Booking History Module Enhancements
+  - Updated restaurant name formatting for better readability and user preference
+  - Resolved issues related to pagination and search functionality
+3. Login Module Improvements
+  - Improved email validation rules
+  - Disabled Sign In button and added a loader during login attempts
+  - Displayed appropriate error messages for invalid email or password
+4. Registration Module Updates
+  - Disabled submit button and added a loader during API calls
+  - Displayed specific error messages for failed registrations
+  - Added minimum and maximum character limits for first and last names
+  - Implemented strong password validation rules
+5. Home Page Improvements
+  - Addressed naming clarity: clarified tab names like “Restaurant” vs “Restaurant Table” and “Event” vs “Kid’s Party”
+  - Made phone number and email in the footer clickable for direct action
+6. Restaurant and Event List Page Updates
+  - Investigated and addressed issues related to sorting functionality
+7. Restaurant Page Enhancements
+  - Improved name validation on the feedback form
+  - Ensured proper page highlighting for active Restaurant tab/page
+8. Event Page Enhancements
+  - Enhanced name validation on the feedback form
+9. Registration Form
+  - Added left margin to error messages for improved spacing
+10. CategoryViewDetail Module (Restaurant & Event Details)
+  - Fixed "Book Now" button redirect issue (now correctly routes to Event Booking)
+  - Updated routing logic to match Restaurant Details behavior
+  - Resolved Search input focus issue in both Restaurant and Event lists (CategoryList)
+11. Table Booking Page
+  - Updated routes for consistency and clarity
+12. Breadcrumb Navigation
+  - Adjusted breadcrumb logic for:
+    - Event Details, Themes, Table & Event Booking pages
+13. Contact Us Page
+  - Added form validation, social links, and clickable email
+14. Profile Route
+  - Enabled switching between Profile and Change Password views via dropdown
+  - Added confirmation popup on logout
+15. Profile Dropdown Module
+  - Implemented confirmation modal before logout action
+16. About Page
+  - Made all CTA buttons functional: Book Now, Plan Event, Reserve Your Table
+17. Footer Module
+  - Added Vnnovate website link to the “Vnnovate” text
+18. Reset Password & Verify OTP
+  - Improved form validation
+  - Fixed issues with API integration
+19. Testing All changes in Live.
+20. Table Booking Process
+  - Disabled the final step of the booking process when the API call is pending to prevent duplicate submissions
+21. Booking History Module
+  - Resolved drawer width issue in the Total Table view
+22. Table Booking Flow Enhancements
+  - Added logic to automatically place users in the waiting list when enough tables are not available
+  - Improved suggestion prompt for users to join the waiting list when necessary
+23. Live Environment Testing
+  - Tested all recent changes in the live environment to ensure smooth functionality
 
 ## Leave Request
 
