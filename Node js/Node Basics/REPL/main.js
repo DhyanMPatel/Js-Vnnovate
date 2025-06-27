@@ -72,23 +72,48 @@
 
 // readFileAsync();
 
+/// File System CRUD Operations
 import { deleteFile, readFile, updateFile, writeFile } from './fsCRUD.js';
+import http from 'http';
 import fs from 'fs';
-try {
-  fs.access('message.json');
-} catch {
-  fs.writeFile('message.json', '[]', 'utf8', (err) => {
-    if (err) throw err;
-    console.log('File written successfully!');
-  });
-  console.log('Initialized users.json');
-}
+import { ReadFileDynamic, WriteFileDynamic } from './fsCRUDPayload.js';
+// try {
+//   fs.access('message.json');
+// } catch {
+//   fs.writeFile('message.json', '[]', 'utf8', (err) => {
+//     if (err) throw err;
+//     console.log('File written successfully!');
+//   });
+//   console.log('Initialized users.json');
+// }
 
-await writeFile(1, 'Dhayan');
-await readFile();
-await writeFile(2, 'Bhautik');
-await readFile();
-await updateFile(1, 'Dhyan');
-await readFile();
-await deleteFile(2);
-await readFile();
+// await writeFile(1, 'Dhayan');
+// await readFile();
+// await writeFile(2, 'Bhautik');
+// await readFile();
+// await updateFile(1, 'Dhyan');
+// await readFile();
+// await deleteFile(2);
+// await readFile();
+
+const server = http.createServer((req, res) => {
+  if (req.method === 'POST' && req.url === '/') {
+    let body = {};
+    req.on('data', (data) => {
+      body = data;
+    });
+    req.on('end', async () => {
+      if (req.method === 'POST') {
+        WriteFileDynamic(body, res);
+      } else {
+        const data = ReadFileDynamic();
+        res.write(data);
+        res.end();
+      }
+    });
+  }
+});
+
+server.listen(4000, () => {
+  console.log('Server is running on port 4000');
+});
