@@ -5,9 +5,10 @@ Today, I am working on below list of task:
 Date: 30 June, 2025
 Day: Monday,
 
-Project: Learning,
+Project: Bill Book,
 
-1. Start learning Express.js and its basic concepts, including routing, middleware, request/response handling, and project structure.
+1. Set up the Bill Booking project locally for development.
+2. Research and identify an AI tool to enhance development speed and productivity for the project.
 
 ## Work done:
 
@@ -17,42 +18,16 @@ Day: Monday,
 
 Today, I am worked on below list of task:
 
-Project: Learning,
+Project: Bill Book,
 
-1. Introduction to Node.js - Done
-  - What is Node.js, Why use it, Key Features
-  - Use cases and comparison with browsers and other languages
-2. Environment Setup - Done
-  - Installed Node.js, understood npm (Node Package Manager) and nvm (Node Version Manager)
-3. JavaScript Essentials for Node.js - Done
-  - ES6+ Features, Asynchronous JavaScript (callbacks, promises, async/await), Modular programming and basic error handling
-4. Node.js Architecture - Done
-  - Single-threaded and event-driven architecture, Deep dive into the Event Loop, Understanding Non-blocking I/O model
-5. Core Node.js Modules - Done
-  - Explored built-in modules: http, fs, path, url
-6. Practical Task - Done
-  - Implemented CRUD operations using the file system module (fs)
-1. Node.js Architecture
-- Studied the architecture diagram and explored the Event Loop and its role in non-blocking I/O
-2. Core Node.js Modules
-- Covered key modules: http, fs, path, url, and os
-- Practiced basic methods and use cases for each
-
-Learning,
-
-1. Introduction to Node.js - Done
-   - What is Node.js, Why use it, Key Features
-   - Use cases and comparison with browsers and other languages
-2. Environment Setup - Done
-   - Installed Node.js, understood npm (Node Package Manager) and nvm (Node Version Manager)
-3. JavaScript Essentials for Node.js - Done
-   - ES6+ Features, Asynchronous JavaScript (callbacks, promises, async/await), Modular programming and basic error handling
-4. Node.js Architecture - Done
-   - Single-threaded and event-driven architecture, Deep dive into the Event Loop, Understanding Non-blocking I/O model
-5. Core Node.js Modules - Done
-   - Explored built-in modules: http, fs, path, url
-6. Practical Task - Done
-   - Implemented CRUD operations using the file system module (fs)
+1. Setup the Bill Booking project locally for development. I have successfully set up the project locally and it is ready. - Completed
+2. AI Tool Research for UI Code Generation – Completed
+  - Cursor – effective for code generation, but limited in styling support
+  - BlackBox – powerful features, but requires login for full access
+3. Parties Page Development – Completed
+  - Created the Parties page.
+  - Developed the Add Party module for managing party entries.
+  - Proper styling is remaining.
 
 ## My Understanding
 
