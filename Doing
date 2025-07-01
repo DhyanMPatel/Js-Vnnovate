@@ -2,32 +2,29 @@
 
 Today, I am working on below list of task:
 
-Date: 30 June, 2025
-Day: Monday,
+Date: 1 July, 2025
+Day: Tuesday,
 
-Project: Bill Book,
+Project: My Bill Book,
 
-1. Set up the Bill Booking project locally for development.
-2. Research and identify an AI tool to enhance development speed and productivity for the project.
+1. Develop the Parties main page and its subpages accessible via the /parties route.
 
 ## Work done:
 
 EOD,
-Date: 30 Jun 2025
-Day: Monday,
+Date: 1 July, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
-Project: Bill Book,
+Project: My Bill Book,
 
-1. Setup the Bill Booking project locally for development. I have successfully set up the project locally and it is ready. - Completed
-2. AI Tool Research for UI Code Generation – Completed
-  - Cursor – effective for code generation, but limited in styling support
-  - BlackBox – powerful features, but requires login for full access
-3. Parties Page Development – Completed
-  - Created the Parties page.
-  - Developed the Add Party module for managing party entries.
-  - Proper styling is remaining.
+1. Project Setup - Done
+  - Cloned the Bill Book Project from the remote repository
+  - Successfully set up the project in the local development environment
+2. Landing Page Development - Done
+  - Designed and styled the Header, Hero Section, Business Needs and Footer modules.
+  - Maintained proper MVC structure for all modules to ensure clean and scalable code organization.
 
 ## My Understanding
 
