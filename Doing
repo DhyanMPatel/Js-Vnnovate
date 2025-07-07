@@ -2,29 +2,36 @@
 
 Today, I am working on below list of task:
 
-Date: 1 July, 2025
-Day: Tuesday,
+Date: 7 July, 2025
+Day: Monday,
 
-Project: My Bill Book,
+Project: Learning,
 
-1. Develop the Parties main page and its subpages accessible via the /parties route.
+1. Start Learning Angular JS.
 
 ## Work done:
 
 EOD,
-Date: 1 July, 2025
-Day: Tuesday,
+Date: 7 July, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
-Project: My Bill Book,
+Learning:
 
-1. Project Setup - Done
-  - Cloned the Bill Book Project from the remote repository
-  - Successfully set up the project in the local development environment
-2. Landing Page Development - Done
-  - Designed and styled the Header, Hero Section, Business Needs and Footer modules.
-  - Maintained proper MVC structure for all modules to ensure clean and scalable code organization.
+1. Introduction to Angular
+  - Gained a foundational understanding of what Angular is and its key features
+2. Setting Up Angular Development Environment
+  - Installed Angular CLI and configured the environment for building Angular applications
+3. Angular Application Architecture
+  - Studied the structure and flow of Angular apps, including modules, components, templates, and services
+4. Angular Components – Deep Dive
+  - Component Basics: Structure, metadata, and usage
+  - Component Lifecycle: Learned lifecycle hooks like ngOnInit, ngOnDestroy, etc.
+  - ViewChild Decorator: Accessing and interacting with child components or elements
+  - Standalone Components: Introduction and when to use them
+  - View Encapsulation: Explored Emulated, ShadowDom, and None strategies
+  - Parent to Child Communication: Using @Input() for data binding
 
 ## My Understanding
 
@@ -136,76 +143,47 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (23 June - 27 June) Report of Dhyan
+**Subject**: Weekly (30 June - 4 July) Report of Dhyan
 
 Project: Hotel Table Booking Web,
 
-Git Commit ID: 304816bd05f4602fa5dec8604cc2e827047ca4e1
-Git Commit Link: https://gitlab.com/vnnovatesolutions/hotel-table-booking-web-user/-/commit/304816bd05f4602fa5dec8604cc2e827047ca4e1
+Git Commit ID: 8df2f64108fb2bbb5637d28d46446ce15279a137
+Git Commit Link: https://gitlab.com/vnnovatesolutions/billsmart-invoice-mgmt-system/-/commit/8df2f64108fb2bbb5637d28d46446ce15279a137
 
 Description:
 
-1. Changes in Booking History module
-  - Updated the Waiting List Collapse Module for better structure
-  - Removed unnecessary fields: Total Table and Review from the waiting list
-  - Implemented logic to display waiting list only if user has any waiting records
-2. Booking History Module Enhancements
-  - Updated restaurant name formatting for better readability and user preference
-  - Resolved issues related to pagination and search functionality
-3. Login Module Improvements
-  - Improved email validation rules
-  - Disabled Sign In button and added a loader during login attempts
-  - Displayed appropriate error messages for invalid email or password
-4. Registration Module Updates
-  - Disabled submit button and added a loader during API calls
-  - Displayed specific error messages for failed registrations
-  - Added minimum and maximum character limits for first and last names
-  - Implemented strong password validation rules
-5. Home Page Improvements
-  - Addressed naming clarity: clarified tab names like “Restaurant” vs “Restaurant Table” and “Event” vs “Kid’s Party”
-  - Made phone number and email in the footer clickable for direct action
-6. Restaurant and Event List Page Updates
-  - Investigated and addressed issues related to sorting functionality
-7. Restaurant Page Enhancements
-  - Improved name validation on the feedback form
-  - Ensured proper page highlighting for active Restaurant tab/page
-8. Event Page Enhancements
-  - Enhanced name validation on the feedback form
-9. Registration Form
-  - Added left margin to error messages for improved spacing
-10. CategoryViewDetail Module (Restaurant & Event Details)
-  - Fixed "Book Now" button redirect issue (now correctly routes to Event Booking)
-  - Updated routing logic to match Restaurant Details behavior
-  - Resolved Search input focus issue in both Restaurant and Event lists (CategoryList)
-11. Table Booking Page
-  - Updated routes for consistency and clarity
-12. Breadcrumb Navigation
-  - Adjusted breadcrumb logic for:
-    - Event Details, Themes, Table & Event Booking pages
-13. Contact Us Page
-  - Added form validation, social links, and clickable email
-14. Profile Route
-  - Enabled switching between Profile and Change Password views via dropdown
-  - Added confirmation popup on logout
-15. Profile Dropdown Module
-  - Implemented confirmation modal before logout action
-16. About Page
-  - Made all CTA buttons functional: Book Now, Plan Event, Reserve Your Table
-17. Footer Module
-  - Added Vnnovate website link to the “Vnnovate” text
-18. Reset Password & Verify OTP
-  - Improved form validation
-  - Fixed issues with API integration
-19. Testing All changes in Live.
-20. Table Booking Process
-  - Disabled the final step of the booking process when the API call is pending to prevent duplicate submissions
-21. Booking History Module
-  - Resolved drawer width issue in the Total Table view
-22. Table Booking Flow Enhancements
-  - Added logic to automatically place users in the waiting list when enough tables are not available
-  - Improved suggestion prompt for users to join the waiting list when necessary
-23. Live Environment Testing
-  - Tested all recent changes in the live environment to ensure smooth functionality
+1. Project Setup
+  - Cloned the Bill Booking project from the remote repository
+  - Successfully set up the project in the local development environment
+2. AI Tool Research
+  - Researched AI tools for UI code generation:
+    - Cursor – good for code but limited styling support
+    - BlackBox – powerful features, login required for full access
+3. Landing Page Development
+  - Designed and styled the following modules:
+    - Header, Hero Section, Business Needs, Footer
+  - Maintained MVC structure for all modules to ensure clean and scalable code organization
+  - Fixed mobile drawer width issue
+  - Replaced “Start Free Billing” and “Book Free Demo” buttons with “Sign In” button across all sections
+  - Added navigation to /signIn route on Sign In button
+  - Applied styling improvements to the Footer
+4. Main Menu Enhancements
+  - Configured the drawer menu to be shown only on mobile and tablet devices
+  - Made all main menu items functional with proper route navigation
+5. Parties Page Development
+  - Created the Parties main page
+  - Developed the Add Party module
+6. Dashboard Layout & Sidebar
+  - Redesigned the Dashboard layout and skeleton loader for mobile and tablet views
+  - Continued design and implementation of the Dashboard Sidebar across devices
+7. Items Module Enhancements
+  - Redesigned UI for all screen sizes
+  - Added a skeleton loader
+  - Made table rows and the stock value section clickable for better interactivity
+8. Live Environment Testing
+  - Tested all recent changes in the live environment
+  - Fixed bugs and applied adjustments based on testing feedback
+  - Used Ant Design (antd) UI components for UI consistency and responsiveness
 
 ## Leave Request
 
