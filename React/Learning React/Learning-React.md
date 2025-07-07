@@ -112,8 +112,8 @@
 - Lifecycle refers to the different phases of a component goes through during it's time in a React Application.
 
 - There are total 4 Phases:
-
-  [Lifecycle Methods](./Screenshot%20from%202025-03-04%2018-18-31.png)
+  
+    ![Lifecycle Methods](./Screenshot%20from%202025-03-04%2018-18-31.png)
 
   1.  **Initialization** :- When we tacking about class-based components. It occurs in the constructor of component. also it occurs only one time.
 

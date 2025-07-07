@@ -30,7 +30,7 @@ function checkAge(age){
 // console.log(value);     // undefined
 
 let val = 1 && 2 && 0 && 3
-console.log(val);
+// console.log(val);
 
 
 

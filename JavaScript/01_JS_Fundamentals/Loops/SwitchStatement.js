@@ -1,9 +1,9 @@
 // Switch Statement
 
 //      - Replace multiple if checks
-//      - Default can be at anny place
+//      - Default can be at any place
 //      - break is required in all cases including default if it is not at last of switch Statement
-//      - Swich or case both can be arbitrary expressions.
+//      - Switch or case both can be arbitrary expressions.
 //      - passed value type and case type should be "===". 
 
 let c = "4"

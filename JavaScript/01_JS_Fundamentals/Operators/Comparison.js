@@ -21,6 +21,7 @@
 // console.log(null == undefined);
 // console.log(null == 0); // Return - false
 // console.log(NaN == NaN); // Return - false
+// console.log(undefined == 0); // Return - false
 
 // ===
 // console.log(null === undefined); // Return - false
@@ -51,6 +52,6 @@
 // console.log( 0 == false ); // true
 // console.log( 0 == '' ); // true
 
-console.log([] == ""); // Return - true
-console.log([] == []); // Return - false, because internally "==" use "===" also [] will not convert to ""(no need to convert).
+// console.log([] == ""); // Return - true
+// console.log([] == []); // Return - false, because internally "==" use "===" also [] will not convert to ""(no need to convert).
 

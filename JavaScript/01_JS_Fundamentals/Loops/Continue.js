@@ -4,11 +4,11 @@
 //  - Continue/Break is not work with Tarnery Operator
 
 let sum = 0
-while (sum < 100) {
-    let val = +prompt('Enter a Number', "")
-    if (!val) continue;  // it will ask the user untill user put the value
-    sum += val;
-}
+// while (sum < 100) {
+//     let val = +prompt('Enter a Number', "")
+//     if (!val) continue;  // it will ask the user untill user put the value
+//     sum += val;
+// }
 
 
 // (sum>=0)? break: break // Error - Syntactic Error
