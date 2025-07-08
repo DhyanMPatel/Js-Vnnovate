@@ -3,7 +3,7 @@
 ViewChild is a powerful `decorator` that allows you to **access** and **manipulate** `child components`, `directives`, or `DOM elements` from a parent component.
 
 
-### Steps to use ViewCHild in Angular
+### Steps to use ViewChild in Angular
 
 Step 1: Create the Angular Application
 ```
@@ -114,3 +114,5 @@ ng serve
 3. **DOM Manipulation** : Access native DOM elements to perform `low-level operations`.
 
 # Note: Now learn Standalone Component
+
+[Standalone Component](./StandaloneComp.md)

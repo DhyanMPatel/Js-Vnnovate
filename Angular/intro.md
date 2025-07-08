@@ -3,7 +3,8 @@
 - Angular is a `free` and `open-source` JavaScript framework that helps developers build modern web applications. It **extends HTML with new attributes** and it is perfect for single-page applications (`SPAs`).
 
 - AngularJS, developed by `Google`. 
-- latest version is `1.2.21`.
+- Latest Active version is `v20.1`.
+- Latest LTS version is `v19`.
 
 
 ### What is AngularJS?
@@ -166,3 +167,5 @@ ng serve --o
     - HTTP client module in angular is used for making HTTP requests to interact with backend services(API calls) to fetch or send data.
 
 # Note : Now Learn about Angular Components
+
+[Angular Components](./Components/intro.md)

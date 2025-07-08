@@ -87,3 +87,5 @@ const routes : Routes = [
 - This configuration ensures that the StandaloneComponent is loaded only when the user navigates to the `/standalone` route, **reducing the initial load time**.
 
 # Note: Now learn View Encapsulation
+
+[View Encapsulation](./ViewEncapsulation.md)

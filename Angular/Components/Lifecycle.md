@@ -79,3 +79,5 @@ Angular provides a set of lifecycle hooks that allow developers to execute code 
         ```
 
 # Note: Now learn Use of ViewChild.
+
+[ViewChild](./viewChild.md)

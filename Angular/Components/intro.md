@@ -90,3 +90,6 @@ ng generate component my-comp
 ng g c my-comp
 ```
 
+# Note : Now Learn LifeCycle of Component
+
+[Component LifeCycle](./Lifecycle.md)
