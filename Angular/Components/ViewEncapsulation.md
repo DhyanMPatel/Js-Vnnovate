@@ -1,4 +1,4 @@
-## View Encapsulation
+## View Encapsulation (Style scoping)
 
 - View Encapsulation in Angular is a way to control how styles (like CSS) apply to the components in your application. Think of it as putting your component's styles in a protective bubble, so they don’t accidentally change other parts of your app.
 
