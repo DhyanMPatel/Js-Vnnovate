@@ -22,19 +22,19 @@ Today, I am worked on below list of task:
 
 Learning:
 
-1. Introduction to Angular
-  - Gained a foundational understanding of what Angular is and its key features
-2. Setting Up Angular Development Environment
-  - Installed Angular CLI and configured the environment for building Angular applications
-3. Angular Application Architecture
-  - Studied the structure and flow of Angular apps, including modules, components, templates, and services
-4. Angular Components – Deep Dive
-  - Component Basics: Structure, metadata, and usage
-  - Component Lifecycle: Learned lifecycle hooks like ngOnInit, ngOnDestroy, etc.
-  - ViewChild Decorator: Accessing and interacting with child components or elements
-  - Standalone Components: Introduction and when to use them
-  - View Encapsulation: Explored Emulated, ShadowDom, and None strategies
-  - Parent to Child Communication: Using @Input() for data binding
+1. Revision & Practical Implementation
+  - Revised and practiced previously learned concepts including components, lifecycle hooks, ViewChild, and data binding
+2. Angular Modules
+  - Understood different types of modules (root, feature, shared, Routing Module)
+  - Learned how to create, import, and organize modules
+  - Explored lazy loading for optimizing performance
+3. Angular Templates
+  - Gained an overview of template syntax and structure
+  - Practiced:
+    - Dynamic text, property, and attribute binding
+    - Event binding using (event)
+    - Two-way binding using [(ngModel)]
+    - Control flow directives like @if, @else-if, @else, @for, @switch.
 
 ## My Understanding
 
