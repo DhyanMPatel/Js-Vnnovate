@@ -60,7 +60,7 @@ export default function FormikForm() {
   const FORM_VALIDATION = Yup.object().shape({
     id: Yup.string()
       .required("Enter your ID!")
-      .matches(idRegex, "Id should be Positive Number")
+      // .matches(idRegex, "Id should be Positive Number")
       .notOneOf(editUser ? [] : availableIds, "ID is already available"),
 
     firstName: Yup.string().min(2).max(20).required("Enter your First Name"),

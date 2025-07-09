@@ -1,0 +1,25 @@
+.form-card {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 16px;
+}
+
+.submit-button {
+  margin: 16px;
+}
+
+.form-actions {
+  justify-content: flex-end;
+  padding: 0 16px 16px;
+}
+
+.error-text {
+  color: #d32f2f;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.form-grid{
+  margin-bottom: 16px;
+}

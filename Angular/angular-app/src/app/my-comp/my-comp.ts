@@ -11,9 +11,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class MyComp {
   message: string = "Hello from MyComp!";
 
-  buttonClasses ={
-    full_width: true,
-  }
+  buttonClasses = "full-width"; // Css style apply when `buttonClasses` assigned to any element as [class] attribute.
 
   changeMessage() {
     this.message = "Message was changed!";

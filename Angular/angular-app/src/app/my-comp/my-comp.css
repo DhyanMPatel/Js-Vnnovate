@@ -3,3 +3,11 @@ p {
     font-size: 16px;
     margin: 10px;
 }
+
+.full-width{
+    color: white;
+    background-color: brown;
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin: 10px 0;
+}

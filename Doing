@@ -27,24 +27,8 @@ Today, I am worked on below list of task:
 
 Learning:
 
-1. Revision & Practical Implementation
-
-- Revised and practiced previously learned concepts including components, lifecycle hooks, ViewChild, and data binding
-
-2. Angular Modules
-
-- Understood different types of modules (root, feature, shared, Routing Module)
-- Learned how to create, import, and organize modules
-- Explored lazy loading for optimizing performance
-
-3. Angular Templates
-
-- Gained an overview of template syntax and structure
-- Practiced:
-  - Dynamic text, property, and attribute binding
-  - Event binding using (event)
-  - Two-way binding using [(ngModel)]
-  - Control flow directives like @if, @else-if, @else, @for, @switch.
+1. Revision of Angular topics including modules and Templates - Done
+2. MCQ and Practical Example conduct by Rahul sir. - Done
 
 ## My Understanding
 
