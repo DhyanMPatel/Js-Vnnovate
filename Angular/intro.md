@@ -109,6 +109,8 @@ npm install -g @angular/cli
 ng serve --o
 ```
 
+- `--o` or `--open` for open project in given port
+
 
 ## Architecture
 

@@ -6,21 +6,21 @@
     1. **Emulated**: This is the default encapsulation mode. Styles from the `component are applied to the component and do not leak outside`, but the `component's elements are not truly isolated`.
 
         ```
-        encapsulation: viewEncapsulation.Emulated
+        encapsulation: ViewEncapsulation.Emulated
         ```
 
     2. **ShadowDom**: This encapsulation mode uses browser native Shadow DOM which means that `styles are scoped to the component and do not leak into other areas of the application`.
 
         ```
-        encapsulation: viewEncapsulation.ShadowDom
+        encapsulation: ViewEncapsulation.ShadowDom
         ```
 
     3. **None**: In this instance, there is `no encapsulation applied`; hence we have **global styles** that can affect other components.
 
         ```
-        encapsulation: viewEncapsulation.None
+        encapsulation: ViewEncapsulation.None
         ```
 
 # Note: Now Learn about Angular Modules
 
-[Angular Modules]()
+[Angular Modules](../Modules/intro.md)

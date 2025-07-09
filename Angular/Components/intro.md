@@ -12,7 +12,7 @@ The structure of an Angular component consists of three main parts:
    - The template defines the HTML markup of the component's view.
    - It contains `placeholders` and Angular `directives` that are `replaced with dynamic data and logic during runtime`.
 2. Styles :
-   - The styles define the component's visual appearance, including CSS rules and stylesheets
+   - The styles define the component's **visual appearance**, including CSS rules and stylesheets
    - Styles can be defined using `inline styles`, `external CSS files`, or `CSS preprocessors` like Sass or Less.
 3. TypeScript Code :
    - The TypeScript code defines the component's `behavior` and `logic`.
@@ -51,13 +51,13 @@ Data binding in Angular allows for communication between the `component's TypeSc
 Component communication in Angular involves `passing data between components` and `coordinating their behavior`.
 
 1. **Parent-Child Communication** :
-    - Data can be passed from a parent component to a child component using input properties, and events can be emitted from the child component to the parent component using output properties.
+    - Data can be passed from a parent component to a child component using `input properties`, and events can be emitted from the child component to the parent component using `output properties`.
 
 2. **Siblings Communication** :
-    - Sibling components can **communicate indirectly** through their common parent component by passing data through input and output properties or using a shared service to store and exchange data.
+    - Sibling components can **communicate indirectly** through their common parent component by passing data through `input` and `output` properties or using a `shared service` to store and exchange data.
 
 3. **Communication between unrelated components** :
-    - Components that are not directly related can communicate through a shared service. The shared service acts as a mediator, allowing components to exchange data and coordinate their behavior without having a direct relationship.
+    - Components that are not directly related can communicate through a `shared service`. The shared service acts as a mediator, allowing components to exchange data and coordinate their behavior without having a direct relationship.
 
 ## Features
 

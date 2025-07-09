@@ -98,3 +98,7 @@ const routes: Routes = [
 
 - To improve the user experience, you can preload some lazy-loaded modules after the initial application load. Angular provides a built-in strategy for this.
 - With PreloadAllModules, Angular will load the modules in the background, minimizing the delay when the user navigates to a route that requires a lazy-loaded module.
+
+# Note : Now Learn about Templates
+
+[Introduction of Template](../Templates/intro.md)

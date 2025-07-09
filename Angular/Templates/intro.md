@@ -42,7 +42,8 @@ export class AppComponent {
 Data binding is a powerful feature of Angular that **connects** the `template` (`view`) to the `component class` (`model`). There are several types of data binding in Angular:
 
 1. Interpolation :
-    - Interpolation is used to `display dynamic data from the component class in the template`.
+    - Interpolation is used to `display dynamic data in the template from the component class`.
+    - Interpolation work when we write data inside double curly brackets in template.
 
         ```html
         <!-- Template -->

@@ -2,39 +2,49 @@
 
 Today, I am working on below list of task:
 
-Date: 8 July, 2025
-Day: Tuesday,
+Date: 9 July, 2025
+Day: Wednesday,
 
 Learning:
 
-1. Revise previous Angular topics, including components, lifecycle hooks, ViewChild, and view encapsulation.
-2. Continue learning key Angular concepts:
-  - Modules: structure and usage
-  - Templates: syntax, binding, and directives
+1. Revise previously covered Angular topics, including modules and templates
+2. Continue learning advanced Angular concepts:
+  2.1 Templates:
+    - pipes, ng-content, ng-template, ng-container
+    - Template variables and whitespace handling
+  2.2 Directives:
+    - Built-in directives
+    - Structural and attribute directives
+    - Introduction to custom directives
 
 ## Work done:
 
 EOD,
-Date: 8 July, 2025
-Day: Tuesday,
+Date: 9 July, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Learning:
 
 1. Revision & Practical Implementation
-  - Revised and practiced previously learned concepts including components, lifecycle hooks, ViewChild, and data binding
+
+- Revised and practiced previously learned concepts including components, lifecycle hooks, ViewChild, and data binding
+
 2. Angular Modules
-  - Understood different types of modules (root, feature, shared, Routing Module)
-  - Learned how to create, import, and organize modules
-  - Explored lazy loading for optimizing performance
+
+- Understood different types of modules (root, feature, shared, Routing Module)
+- Learned how to create, import, and organize modules
+- Explored lazy loading for optimizing performance
+
 3. Angular Templates
-  - Gained an overview of template syntax and structure
-  - Practiced:
-    - Dynamic text, property, and attribute binding
-    - Event binding using (event)
-    - Two-way binding using [(ngModel)]
-    - Control flow directives like @if, @else-if, @else, @for, @switch.
+
+- Gained an overview of template syntax and structure
+- Practiced:
+  - Dynamic text, property, and attribute binding
+  - Event binding using (event)
+  - Two-way binding using [(ngModel)]
+  - Control flow directives like @if, @else-if, @else, @for, @switch.
 
 ## My Understanding
 
@@ -156,37 +166,52 @@ Git Commit Link: https://gitlab.com/vnnovatesolutions/billsmart-invoice-mgmt-sys
 Description:
 
 1. Project Setup
-  - Cloned the Bill Booking project from the remote repository
-  - Successfully set up the project in the local development environment
+
+- Cloned the Bill Booking project from the remote repository
+- Successfully set up the project in the local development environment
+
 2. AI Tool Research
-  - Researched AI tools for UI code generation:
-    - Cursor – good for code but limited styling support
-    - BlackBox – powerful features, login required for full access
+
+- Researched AI tools for UI code generation:
+  - Cursor – good for code but limited styling support
+  - BlackBox – powerful features, login required for full access
+
 3. Landing Page Development
-  - Designed and styled the following modules:
-    - Header, Hero Section, Business Needs, Footer
-  - Maintained MVC structure for all modules to ensure clean and scalable code organization
-  - Fixed mobile drawer width issue
-  - Replaced “Start Free Billing” and “Book Free Demo” buttons with “Sign In” button across all sections
-  - Added navigation to /signIn route on Sign In button
-  - Applied styling improvements to the Footer
+
+- Designed and styled the following modules:
+  - Header, Hero Section, Business Needs, Footer
+- Maintained MVC structure for all modules to ensure clean and scalable code organization
+- Fixed mobile drawer width issue
+- Replaced “Start Free Billing” and “Book Free Demo” buttons with “Sign In” button across all sections
+- Added navigation to /signIn route on Sign In button
+- Applied styling improvements to the Footer
+
 4. Main Menu Enhancements
-  - Configured the drawer menu to be shown only on mobile and tablet devices
-  - Made all main menu items functional with proper route navigation
+
+- Configured the drawer menu to be shown only on mobile and tablet devices
+- Made all main menu items functional with proper route navigation
+
 5. Parties Page Development
-  - Created the Parties main page
-  - Developed the Add Party module
+
+- Created the Parties main page
+- Developed the Add Party module
+
 6. Dashboard Layout & Sidebar
-  - Redesigned the Dashboard layout and skeleton loader for mobile and tablet views
-  - Continued design and implementation of the Dashboard Sidebar across devices
+
+- Redesigned the Dashboard layout and skeleton loader for mobile and tablet views
+- Continued design and implementation of the Dashboard Sidebar across devices
+
 7. Items Module Enhancements
-  - Redesigned UI for all screen sizes
-  - Added a skeleton loader
-  - Made table rows and the stock value section clickable for better interactivity
+
+- Redesigned UI for all screen sizes
+- Added a skeleton loader
+- Made table rows and the stock value section clickable for better interactivity
+
 8. Live Environment Testing
-  - Tested all recent changes in the live environment
-  - Fixed bugs and applied adjustments based on testing feedback
-  - Used Ant Design (antd) UI components for UI consistency and responsiveness
+
+- Tested all recent changes in the live environment
+- Fixed bugs and applied adjustments based on testing feedback
+- Used Ant Design (antd) UI components for UI consistency and responsiveness
 
 ## Leave Request
 
