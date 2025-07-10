@@ -18,8 +18,6 @@ import {
 } from "@mui/material";
 import { Field, Form, Formik } from "formik";
 import "./FormStyle.css";
-import { useNavigate } from "react-router-dom";
-import { useEffect, useRef } from "react";
 
 const FormView = ({
   initialValues,
@@ -28,8 +26,6 @@ const FormView = ({
   onSubmit,
   resetTimeout,
 }) => {
-
-  
   return (
     <Formik
       initialValues={initialValues}
