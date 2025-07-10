@@ -24,10 +24,16 @@ Day: Thursday,
 
 Today, I am worked on below list of task:
 
-Learning:
+Learning: Angular,
 
-1. Revision of Angular topics including modules and Templates - Done
-2. MCQ and Practical Example conduct by Rahul sir. - Done
+1. Angular Templates : - Done
+	- Pipes for transforming data
+	- Use of ng-content, ng-template, and ng-container for advanced template composition
+	- Template variables for referencing elements and components
+2. Angular Directives :
+	- Built-in directives like `*ngIf`, `*ngFor`, `[ngClass]`, `[ngStyle]`, etc.
+	- Categories: Structural, Attribute, and Component directives
+  - Custom directives - Continue
 
 ## My Understanding
 
