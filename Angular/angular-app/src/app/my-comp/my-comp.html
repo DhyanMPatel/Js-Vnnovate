@@ -1,3 +1,18 @@
+@let msg = message;
+
 <h2>Child Component</h2>
-<p>{{ message }}</p>
-<button (click)="changeMessage()" [class]="buttonClasses">Change Message</button>
+<p>{{ msg }}</p>
+<input
+  type="text"
+  [(ngModel)]="message"
+  placeholder="You can change above Message here"
+/>
+<button (click)="changeMessage()" [class]="buttonClasses">
+  Change Message
+</button>
+
+<p>{{pipeTesting | reverseTransform}}</p>
+
+<hr />
+
+<ng-content></ng-content>

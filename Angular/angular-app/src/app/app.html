@@ -2,6 +2,35 @@
   <h1>Parent Component</h1>
   <app-my-comp></app-my-comp> <br />
   <button (click)="callChildMethod()">Call Child Method</button>
+  <button sample>Testing for ng-content</button>
 </div>
 
-<router-outlet />
+<div>
+  @if(a>b) {
+  {{ a }} is bigger then {{ b }}
+  } @else {
+  {{ b }} is bigger then {{ a }}
+  }
+
+  <ol type="i">
+    @for(i of arr; track i){
+    <li>{{ i }}</li>
+    } @empty {
+    <p>No Data Found</p>
+    }
+  </ol>
+
+  @switch(user){ @case ("admin") {
+  <p>You are an Admin</p>
+  } @case ("user") {
+  <p>You are an User</p>
+  } @case ("guest") {
+  <p>You are an Guest</p>
+  } @default {
+  <p>We are not know, Who you are?</p>
+  } }
+
+  Today Data is {{today | date:'dd MMM, yyyy'}}
+</div>
+
+<!-- <router-outlet /> -->
