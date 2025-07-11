@@ -66,6 +66,6 @@
   </div>
   ```
 
-# Note : Now Learn Directives
+# Note : Now you learn ng-content
 
-[Directives are markers of DOM](../Directives/intro.md)
+[ng-content for a template fragment and controls how components render content](./ngContent.md)

@@ -2,25 +2,25 @@
 
 Today, I am working on below list of task:
 
-Date: 10 July, 2025
-Day: Thursday,
+Date: 11 July, 2025
+Day: Friday,
 
 Learning:
-
-1. Continue learning advanced Angular concepts:
-  1.1 Templates:
-   - pipes, ng-content, ng-template, ng-container
-   - Template variables and whitespace handling
-  1.2 Directives:
-   - Built-in directives
-   - Structural and attribute directives
-   - Introduction to custom directives
+1. Revise previously learned Angular concepts, including templates and directives
+2. Continue learning advanced Angular concepts:
+  2.1. Routing & Navigation
+    - Introduction, purpose, and setup
+    - Using RouterOutlet
+    - Understanding and implementing AuthGuards and route protection
+  2.2. Services & Dependency Injection
+    - Creating and using services
+    - Injecting dependencies across components
 
 ## Work done:
 
 EOD,
-Date: 10 July, 2025
-Day: Thursday,
+Date: 11 July, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
@@ -154,53 +154,44 @@ Git Commit Link: https://gitlab.com/vnnovatesolutions/billsmart-invoice-mgmt-sys
 
 Description:
 
-1. Project Setup
-
-- Cloned the Bill Booking project from the remote repository
-- Successfully set up the project in the local development environment
-
-2. AI Tool Research
-
-- Researched AI tools for UI code generation:
-  - Cursor – good for code but limited styling support
-  - BlackBox – powerful features, login required for full access
-
-3. Landing Page Development
-
-- Designed and styled the following modules:
-  - Header, Hero Section, Business Needs, Footer
-- Maintained MVC structure for all modules to ensure clean and scalable code organization
-- Fixed mobile drawer width issue
-- Replaced “Start Free Billing” and “Book Free Demo” buttons with “Sign In” button across all sections
-- Added navigation to /signIn route on Sign In button
-- Applied styling improvements to the Footer
-
-4. Main Menu Enhancements
-
-- Configured the drawer menu to be shown only on mobile and tablet devices
-- Made all main menu items functional with proper route navigation
-
-5. Parties Page Development
-
-- Created the Parties main page
-- Developed the Add Party module
-
-6. Dashboard Layout & Sidebar
-
-- Redesigned the Dashboard layout and skeleton loader for mobile and tablet views
-- Continued design and implementation of the Dashboard Sidebar across devices
-
-7. Items Module Enhancements
-
-- Redesigned UI for all screen sizes
-- Added a skeleton loader
-- Made table rows and the stock value section clickable for better interactivity
-
-8. Live Environment Testing
-
-- Tested all recent changes in the live environment
-- Fixed bugs and applied adjustments based on testing feedback
-- Used Ant Design (antd) UI components for UI consistency and responsiveness
+1. Introduction & Setup
+  - Gained a foundational understanding of Angular and its key features
+  - Set up the Angular development environment using Angular CLI
+  - Configured the workspace and tools for building Angular applications
+2. Angular Architecture
+- Learned the structure and flow of Angular apps, including:
+  1. Modules
+  2. Components
+  3. Templates
+  4. Services
+3. Components – Deep Dive
+  - Understood component basics: structure, metadata, and usage
+  - Studied lifecycle hooks: ngOnInit, ngOnDestroy, etc.
+  - Used ViewChild decorator to access child elements/components
+  - Explored standalone components and their use cases
+  - Learned view encapsulation modes: Emulated, ShadowDom, None
+  - Implemented parent-to-child communication using @Input()
+4. Angular Modules
+  - Understood types of modules: root, feature, shared, and routing modules
+  - Learned how to create, import, and organize modules
+  - Implemented lazy loading for performance optimization
+5. Angular Templates
+Learned and practiced:
+  - Binding: dynamic text, properties, attributes
+  - Event binding using (event)
+  - Two-way binding with [(ngModel)]
+  - Control flow: *ngIf, *ngFor, @switch, etc.
+  - Pipes for data transformation
+  - Template constructs: ng-template, ng-container, ng-content
+  - Use of template reference variables
+6. Angular Directives Explored:
+  - Built-in directives: *ngIf, *ngFor, [ngClass], [ngStyle]
+  - Structural directives: modify DOM structure
+  - Attribute directives: change element appearance/behavior
+  - Component directives: used via selector
+7. Reinforcement Activities
+  - Conducted practical implementations and revision
+  - Participated in MCQ and practical assessments in React conducted by Rahul Sir
 
 ## Leave Request
 
