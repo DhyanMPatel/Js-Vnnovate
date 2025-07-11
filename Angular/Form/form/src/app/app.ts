@@ -25,14 +25,25 @@ export class App {
       dsa: false,
     },
     location: {
-      city: '',
+      city: 'Select',
     },
     url: '',
     about: '',
   };
 
+  tableData: (typeof this.formData)[] = [];
+
   handleSubmit = () => {
-    console.log(this.formData);
+    this.tableData.push(structuredClone(this.formData));
+    console.log(this.formData, 'Form Data');
+    console.log(this.tableData, 'Table Data');
+    this.resetForm();
+  };
+
+  getSelectedSubjects(subjects: any): string {
+    return Object.keys(subjects)
+      .filter((key) => subjects[key])
+      .join(', ');
   }
 
   resetForm = () => {

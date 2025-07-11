@@ -26,14 +26,17 @@ Today, I am worked on below list of task:
 
 Learning: Angular,
 
-1. Angular Templates : - Done
-	- Pipes for transforming data
-	- Use of ng-content, ng-template, and ng-container for advanced template composition
-	- Template variables for referencing elements and components
-2. Angular Directives :
-	- Built-in directives like `*ngIf`, `*ngFor`, `[ngClass]`, `[ngStyle]`, etc.
-	- Categories: Structural, Attribute, and Component directives
-  - Custom directives - Continue
+1. Revised previously learned Angular concepts, including templates and directives
+2. Advanced Angular Concepts:
+  2.1. Routing & Navigation
+    - Introduction, purpose, and setup. - Done
+    - Using RouterOutlet.
+  2.2. Services & Dependency Injection
+    - Creating and using services.
+    - Injecting dependencies across components.
+3. CRUD Operation
+	- Form to capture data and store it in a formData variable
+	- Planned to display the data using a tableData array in a table structure - Continue
 
 ## My Understanding
 
@@ -145,7 +148,7 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (30 June - 4 July) Report of Dhyan
+**Subject**: Weekly (7 July - 11 July) Report of Dhyan
 
 Project: Hotel Table Booking Web,
 
@@ -189,7 +192,17 @@ Learned and practiced:
   - Structural directives: modify DOM structure
   - Attribute directives: change element appearance/behavior
   - Component directives: used via selector
-7. Reinforcement Activities
+7. Routing & Navigation
+  - Understood the purpose and setup of Angular Routing
+  - Practiced using RouterOutlet for dynamic content display
+  - Learned about AuthGuard and route protection (introductory level)
+8. Services & Dependency Injection
+  - Created Angular services using CLI
+  - Practiced injecting services across components using Angular’s DI system
+9. CRUD Operation (In Progress)
+  - Created a form to collect user input and store it in a formData variable
+  - Started rendering formData in a table using tableData variable
+10. Reinforcement Activities
   - Conducted practical implementations and revision
   - Participated in MCQ and practical assessments in React conducted by Rahul Sir
 
