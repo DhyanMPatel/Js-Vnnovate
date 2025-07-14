@@ -29,17 +29,14 @@ Today, I am worked on below list of task:
 
 Learning: Angular,
 
-1. Revised previously learned Angular concepts, including templates and directives
-2. Advanced Angular Concepts:
-  2.1. Routing & Navigation
-    - Introduction, purpose, and setup. - Done
-    - Using RouterOutlet.
-  2.2. Services & Dependency Injection
-    - Creating and using services.
-    - Injecting dependencies across components.
-3. CRUD Operation
-	- Form to capture data and store it in a formData variable
-	- Planned to display the data using a tableData array in a table structure - Continue
+1. Revised Previously learned Angular concepts, including Dependency injection, Angular Routes.
+2. CRUD Operation
+	- display the data using a tableData array in table structure. - Done
+3. Understood the core difference between Reactive Forms and Template-driven Forms.
+4. RxJS Basics
+	- Learned the introduction and core purpose of RxJS in Angular
+	- Observables and how they differ from Promises
+	- Observers and Subscriptions
 
 ## My Understanding
 
