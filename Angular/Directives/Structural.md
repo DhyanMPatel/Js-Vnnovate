@@ -16,10 +16,10 @@
 
 - Angular uses `ng-template` with element selector in order to display the else section on DOM.
 
-```html
-<div *ngIf="boolean; else id_selector">  </div>
-<ng-template #id_selector>  </ng-template>
-```
+    ```html
+    <div *ngIf="boolean; else id_selector">  </div>
+    <ng-template #id_selector>  </ng-template>
+    ```
 
 2. **ngFor** : `Iterates over a collection` and instantiates a template once for each item in the collection.
     ```html

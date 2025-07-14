@@ -173,4 +173,4 @@ ng serve --open
 
 # Note : Now learn Router Outlet
 
-[Router Outlet are viewport within the application layout]()
+[Router Outlet are viewport within the application layout](./routerOutlet.md)

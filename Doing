@@ -2,25 +2,28 @@
 
 Today, I am working on below list of task:
 
-Date: 11 July, 2025
-Day: Friday,
+Date: 14 July, 2025
+Day: Monday,
 
-Learning:
-1. Revise previously learned Angular concepts, including templates and directives
-2. Continue learning advanced Angular concepts:
-  2.1. Routing & Navigation
-    - Introduction, purpose, and setup
-    - Using RouterOutlet
-    - Understanding and implementing AuthGuards and route protection
-  2.2. Services & Dependency Injection
-    - Creating and using services
-    - Injecting dependencies across components
+Learning: Angular,
+1. Revise previously learned topics from last Friday, including:
+  - Routing & Navigation
+  - Services & Dependency Injection
+  - Initial CRUD operations setup
+2. Continue learning advance topic:
+  2.1. Angular Forms
+  - Template-driven forms: syntax, ngModel, form validation
+  - Reactive forms: using FormGroup, FormControl, and form validation with better scalability
+  2.2. RxJS Basics
+  - Introduction to RxJS in Angular
+  - Understanding Observables, Operators, and Subscriptions
+  - Comparison with Promises and real-world usage
 
 ## Work done:
 
 EOD,
-Date: 11 July, 2025
-Day: Friday,
+Date: 14 July, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 

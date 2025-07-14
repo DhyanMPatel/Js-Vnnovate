@@ -22,3 +22,7 @@
 ### Step 5: Using our directive in template
 
 ## Example
+
+# Note : Now You Learn Routing in Angular
+
+[Routing is navigation library to manage navigation and state](../Routing/intro.md)

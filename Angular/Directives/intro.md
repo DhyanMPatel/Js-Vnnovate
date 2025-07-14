@@ -36,7 +36,7 @@ export class AppComponent {}
 ## Structural Directives
 
 - Structural directives are responsible for `manipulating the DOM layout` by adding, removing, or manipulating elements based on conditions.
-- They are denoted by an asterisk (*) preceding the directive name and are commonly used to alter the structure of the DOM based on conditions.
+- They are denoted by an asterisk (`*`) preceding the directive name and are commonly used to alter the structure of the DOM based on conditions.
 
 ### Built-in Structural Directives:
 1. **ngIf** : `Conditionally includes` or `removes` an element based on a provided expression.

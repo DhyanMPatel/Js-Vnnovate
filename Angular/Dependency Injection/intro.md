@@ -2,7 +2,7 @@
 
 - Dependency Injection is a `design pattern` in which `components or services are provided with their dependencies` instead of creating or locating them internally.
 
--  In Angular, the Dependency Injection system manages the dependencies between various parts of an application, providing loose coupling and modular development.
+-  In Angular, the Dependency Injection system **manages the dependencies between various parts of an application**, providing loose coupling and modular development.
 
 ## Key Concepts of Dependency Injection in Angular
 
@@ -132,6 +132,6 @@ export class AppComponent {
 - **Reusability and Maintainability**: Dependency Injection promotes code reuse by enabling components and services to be `easily composed and reused` across different parts of the application. It `improves maintainability` by reducing code duplication and making it easier to understand and refactor code.
 
 
-# Note : Now learn about Angular Forms
+# Note : Now learn Services
 
-[Creating a Form in Angular includes the use of directives](../Form/intro.md)
+[What are Services and how works with DI ](./Services.md)

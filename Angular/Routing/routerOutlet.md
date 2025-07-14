@@ -6,4 +6,4 @@
 
 # Note : Now learn about Dependency Injection
 
-[DI is a design pattern provide loose coupling](../Dependency%20Injection/intro.md)
+[DI is a design pattern provides loose coupling](../Dependency%20Injection/intro.md)
