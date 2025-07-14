@@ -1,12 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
+  standalone: true,
 })
 export class App {
   protected title = 'Form';
@@ -18,11 +20,11 @@ export class App {
     contact: '',
     gender: '',
     subjects: {
-      maths: false,
-      science: false,
-      physics: false,
-      chemistry: false,
-      dsa: false,
+      Maths: false,
+      Science: false,
+      Physics: false,
+      Chemistry: false,
+      DSA: false,
     },
     location: {
       city: 'Select',
@@ -34,9 +36,7 @@ export class App {
   tableData: (typeof this.formData)[] = [];
 
   handleSubmit = () => {
-    this.tableData.push(structuredClone(this.formData));
-    console.log(this.formData, 'Form Data');
-    console.log(this.tableData, 'Table Data');
+    this.tableData = [...this.tableData, structuredClone(this.formData)];
     this.resetForm();
   };
 
@@ -54,14 +54,14 @@ export class App {
       contact: '',
       gender: '',
       subjects: {
-        maths: false,
-        science: false,
-        physics: false,
-        chemistry: false,
-        dsa: false,
+        Maths: false,
+        Science: false,
+        Physics: false,
+        Chemistry: false,
+        DSA: false,
       },
       location: {
-        city: '',
+        city: 'Select',
       },
       url: '',
       about: '',
