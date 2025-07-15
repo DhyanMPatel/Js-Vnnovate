@@ -1,0 +1,73 @@
+<!-- // src/app/my-form/my-form.html -->
+
+<div class="form-div">
+  <h1>Angular Form</h1>
+  <fieldset>
+    <form class="form" (ngSubmit)="handleSubmit()">
+      <div class="content">
+        <div>
+          <label class="label" for="first_name">First Name* :</label>
+          <input type="text" name="first_name" placeholder="Enter First Name" id="first_name" [(ngModel)]="formData.firstName" required />
+        </div>
+
+        <div>
+          <label class="label" for="last_name">Last Name* :</label>
+          <input type="text" name="last_name" placeholder="Enter Last Name" id="last_name" [(ngModel)]="formData.lastName" required />
+        </div>
+
+        <div>
+          <label class="label" for="email">Email* :</label>
+          <input type="email" placeholder="Enter Your Email id" name="email" id="email" [(ngModel)]="formData.email" required />
+        </div>
+
+        <div>
+          <label class="label" for="contact">Contact* :</label>
+          <input type="tel" placeholder="Enter Your Contact Number" name="contact" id="contact" [(ngModel)]="formData.contact" required />
+        </div>
+
+        <div>
+          <label class="label" for="gender">Gender :</label>
+          <input type="radio" name="gender" id="male" value="male" [(ngModel)]="formData.gender" />
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="female" value="female" [(ngModel)]="formData.gender" />
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="other" value="other" [(ngModel)]="formData.gender" />
+          <label for="other">Other</label>
+        </div>
+
+        <div>
+          <label class="label" for="subject">Your Best Subject :</label>
+          <input type="checkbox" name="maths" id="maths" [(ngModel)]="formData.subjects.Maths" /><label for="maths">Maths</label>
+          <input type="checkbox" name="science" id="science" [(ngModel)]="formData.subjects.Science" /><label for="science">Science</label>
+          <input type="checkbox" name="physics" id="physics" [(ngModel)]="formData.subjects.Physics" /><label for="physics">Physics</label>
+          <input type="checkbox" name="chemistry" id="chemistry" [(ngModel)]="formData.subjects.Chemistry" /><label for="chemistry">Chemistry</label>
+          <input type="checkbox" name="dsa" id="dsa" [(ngModel)]="formData.subjects.DSA" /><label for="dsa">DSA</label>
+        </div>
+
+        <div>
+          <label class="label" for="location">Location :</label>
+          <select name="city" id="location" [(ngModel)]="formData.location.city">
+            <option value="Select" selected>Select</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Gandhinager">Gandhinager</option>
+            <option value="Surat">Surat</option>
+            <option value="Vadodara">Vadodara</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="label" for="url">Enter Your URL :</label>
+          <input type="url" placeholder="Enter Your URL here" id="url" [(ngModel)]="formData.url" name="url" />
+        </div>
+
+        <div>
+          <label class="label" for="about">About :</label>
+          <textarea name="about" id="about" [(ngModel)]="formData.about" placeholder="Enter About Your self here..."></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="reset" (click)="resetForm()">Reset</button>
+      </div>
+    </form>
+  </fieldset>
+</div>

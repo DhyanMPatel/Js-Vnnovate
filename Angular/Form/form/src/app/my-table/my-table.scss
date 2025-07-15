@@ -1,0 +1,44 @@
+.dataTable {
+  /* Existing styles */
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  overflow: hidden;
+
+  .headerRow {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    th {
+      padding: 12px;
+      text-align: left;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid #ddd;
+
+    td {
+      padding: 12px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    /* Style for the "no data" row */
+    &.no-data-row {
+      td {
+        text-align: center;
+        color: #777;
+        font-style: italic;
+        font-size: 16px;
+        padding: 20px;
+      }
+    }
+  }
+}
