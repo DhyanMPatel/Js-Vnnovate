@@ -2,28 +2,25 @@
 
 Today, I am working on below list of task:
 
-Date: 14 July, 2025
-Day: Monday,
+Date: 15 July, 2025
+Day: Tuesday,
 
 Learning: Angular,
-1. Revise previously learned topics from last Friday, including:
-  - Routing & Navigation
-  - Services & Dependency Injection
-  - Initial CRUD operations setup
-2. Continue learning advance topic:
-  2.1. Angular Forms
-  - Template-driven forms: syntax, ngModel, form validation
-  - Reactive forms: using FormGroup, FormControl, and form validation with better scalability
-  2.2. RxJS Basics
-  - Introduction to RxJS in Angular
-  - Understanding Observables, Operators, and Subscriptions
-  - Comparison with Promises and real-world usage
+1. Revise Previously learned Angular concepts, including Reactive Forms vs Template-driven Forms, RxJS Basics.
+2. Form Validation (Project-Level)
+  - Implement validation logic within form fields
+  - Ensure proper error handling and user feedback for invalid inputs
+  - Apply validation using Reactive Forms or Template-driven Forms, as suitable
+3. Continue learning RxJS (Basics):
+  - Practice how to create Observables manually.
+  - Implement Observers and manage Subscriptions.
+  - Learn and experiment with common RxJS Operators (e.g., map, filter, take, tap).
 
 ## Work done:
 
 EOD,
-Date: 14 July, 2025
-Day: Monday,
+Date: 15 July, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
