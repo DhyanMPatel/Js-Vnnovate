@@ -101,4 +101,4 @@ const routes: Routes = [
 
 # Note : Now Learn about Templates
 
-[Introduction of Template](../Templates/intro.md)
+[Introduction of Template](../Template/intro.md)
