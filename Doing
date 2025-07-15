@@ -5,6 +5,13 @@ Today, I am working on below list of task:
 Date: 15 July, 2025
 Day: Tuesday,
 
+Project: Smart Bill Book, 
+
+1. Continue Work on Inventory page
+  - Create "Create Inventory" module with their multi tab functionality.
+  - functional Reports drawer items.
+
+
 Learning: Angular,
 1. Revise Previously learned Angular concepts, including Reactive Forms vs Template-driven Forms, RxJS Basics.
 2. Form Validation (Project-Level)
@@ -24,16 +31,18 @@ Day: Tuesday,
 
 Today, I am worked on below list of task:
 
-Learning: Angular,
+Project: Smart Bill Book, 
 
-1. Revised Previously learned Angular concepts, including Dependency injection, Angular Routes.
-2. CRUD Operation
-	- display the data using a tableData array in table structure. - Done
-3. Understood the core difference between Reactive Forms and Template-driven Forms.
-4. RxJS Basics
-	- Learned the introduction and core purpose of RxJS in Angular
-	- Observables and how they differ from Promises
-	- Observers and Subscriptions
+1. Inventory Page Development:
+	- Added a skeleton loader for the Inventory page to improve user experience during data loading.
+	- Separated logic from UI for better modularity.
+	- Integrated a "Create Item" module triggered via a modal.
+	- Implemented functional Reports menu items for navigation.
+2. Create New Item Modal:
+	- Developed a Basic Details form with Formik and Yup for validation, including responsive design for tablets and larger devices.
+	- Created a Stock Details form with features like alternative unit and low stock warning, including responsive design for tablets and larger devices.
+3. Additional Components:
+	- Built a container and view to manage modal and section navigation, with responsive styling.
 
 ## My Understanding
 
