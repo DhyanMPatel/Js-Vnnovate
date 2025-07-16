@@ -2,14 +2,16 @@
 
 Today, I am working on below list of task:
 
-Date: 15 July, 2025
-Day: Tuesday,
+Date: 16 July, 2025
+Day: Wednesday,
 
 Project: Smart Bill Book, 
 
 1. Continue Work on Inventory page
-  - Create "Create Inventory" module with their multi tab functionality.
-  - functional Reports drawer items.
+  - Create a dedicated folder and setup for the Pricing Details form tab
+  - Display a default illustration (placeholder) for the Party Wise Price tab
+  - Store Basic Details and Stock Details form data
+  - Temporarily log stored form data to the console for testing purposes
 
 
 Learning: Angular,
@@ -26,23 +28,20 @@ Learning: Angular,
 ## Work done:
 
 EOD,
-Date: 15 July, 2025
-Day: Tuesday,
+Date: 16 July, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Smart Bill Book, 
 
-1. Inventory Page Development:
-	- Added a skeleton loader for the Inventory page to improve user experience during data loading.
-	- Separated logic from UI for better modularity.
-	- Integrated a "Create Item" module triggered via a modal.
-	- Implemented functional Reports menu items for navigation.
-2. Create New Item Modal:
-	- Developed a Basic Details form with Formik and Yup for validation, including responsive design for tablets and larger devices.
-	- Created a Stock Details form with features like alternative unit and low stock warning, including responsive design for tablets and larger devices.
-3. Additional Components:
-	- Built a container and view to manage modal and section navigation, with responsive styling.
+1. Inventory Page Enhancements
+	- Updated Basic Details and Stock Details modal tabs based on feedback from Rahul Sir
+	- Created the Pricing Details modal tab structure
+	- Logged Basic Details form data to the console when the "Create" button is clicked after validation
+2. UI & Styling Improvements
+	- Applied styling changes to the modal layout triggered by the "Create Item" button
+	- Implemented style adjustments in the Main Menu for better UI consistency
 
 ## My Understanding
 
