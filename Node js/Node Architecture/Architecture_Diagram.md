@@ -52,3 +52,7 @@
         - Example: `fs.readFile` may use the thread pool, but the main thread remains free.
     - **Node.js Bindings**:
         - Connects V8 and libuv, enabling JavaScript to interact with system-level operations.
+
+# Note : Now start to Learn Express
+
+[Express is a Framework of Node](../Express%20JS/intro.md)

@@ -4,7 +4,7 @@
 
 - Node.js includes a powerful `built-in HTTP module` that enables to **create HTTP servers** and **make HTTP requests**.
 
-- **Purpose**: Create HTTP servers and clients to handle requests and responses.
+- **Purpose**: Create HTTP servers and handle requests and responses comes from clients.
 - **Key Methods**:
   - `http.createServer((req, res) => {...})`: Creates a server.
   - `req`: Request object (URL, method, headers).
@@ -109,3 +109,8 @@
     console.log('Total Memory:', os.totalmem() / 1024 / 1024, 'MB');
     ```
 - **Use Case**: Monitor server resources.
+
+
+# Note : Now learn Basic Concept of Node
+
+[Basic Concept like module, Global Objects](../Node%20Basics/module.md)

@@ -62,7 +62,7 @@
 ## Setup Environment
 
 - Basic Terminal Commands to navigate and manage files :
-    - `ls` (macOS/Linux) or dir (Windows): List files.
+    - `ls` (macOS/Linux) or `dir` (Windows): List files.
     - `cd folder`: Change directory.
     - `mkdir folder`: Create a folder.
     - `touch file.js` (macOS/Linux) or `echo. > file.js` (Windows): Create a file.
@@ -192,3 +192,8 @@
                 ```
 
         - **Key Difference** : Node.js has more power but requires you to handle security (e.g., sanitizing inputs).
+
+
+# Note : Now learn Code Modules
+
+[Code modules are Built-in modules of Node](./Node%20Core%20Modules/Intro.md)

@@ -141,3 +141,7 @@
   1. Creating a Utility Module
   2. Building a Configuration File
   3. Handling Routes in an Express App
+
+# Note : Now know about Global Objects
+
+[Global Objects are accessible without install](./Global%20Objects.md)

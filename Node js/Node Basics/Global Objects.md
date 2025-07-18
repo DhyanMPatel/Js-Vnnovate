@@ -86,3 +86,8 @@ const encoder = new TextEncoder();
 const encoded = encoder.encode("Hello, Node.js!");
 console.log(encoded);  // Outputs a Uint8Array of encoded text
 ```
+
+
+# Note : Now know about Architecture Diagram
+
+[Node Architecture Diagram to handle task async](../Node%20Architecture/Architecture_Diagram.md)
