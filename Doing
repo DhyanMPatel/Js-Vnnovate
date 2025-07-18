@@ -2,34 +2,23 @@
 
 Today, I am working on below list of task:
 
-Date: 16 July, 2025
-Day: Wednesday,
+Date: 18 July, 2025
+Day: Friday,
 
 Project: Smart Bill Book, 
 
-1. Continue Work on Inventory page
-  - Create a dedicated folder and setup for the Pricing Details form tab
-  - Display a default illustration (placeholder) for the Party Wise Price tab
-  - Store Basic Details and Stock Details form data
-  - Temporarily log stored form data to the console for testing purposes
+1. Working on Inventory module.
+  1.1. Add one more dropdown which is "With tax" and "without tax" in Basic Details form tab in Create Item modal.
+2. Basic Details Form API integration
+  2.1. Post Basic details form data to API.
+  2.2. display to table in Inventory page.
 
-
-Learning: Angular,
-1. Revise Previously learned Angular concepts, including Reactive Forms vs Template-driven Forms, RxJS Basics.
-2. Form Validation (Project-Level)
-  - Implement validation logic within form fields
-  - Ensure proper error handling and user feedback for invalid inputs
-  - Apply validation using Reactive Forms or Template-driven Forms, as suitable
-3. Continue learning RxJS (Basics):
-  - Practice how to create Observables manually.
-  - Implement Observers and manage Subscriptions.
-  - Learn and experiment with common RxJS Operators (e.g., map, filter, take, tap).
 
 ## Work done:
 
 EOD,
-Date: 16 July, 2025
-Day: Wednesday,
+Date: 18 July, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
