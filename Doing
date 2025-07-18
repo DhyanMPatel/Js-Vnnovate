@@ -24,13 +24,17 @@ Today, I am worked on below list of task:
 
 Project: Smart Bill Book, 
 
-1. Inventory Page Enhancements
-	- Updated Basic Details and Stock Details modal tabs based on feedback from Rahul Sir
-	- Created the Pricing Details modal tab structure
-	- Logged Basic Details form data to the console when the "Create" button is clicked after validation
-2. UI & Styling Improvements
-	- Applied styling changes to the modal layout triggered by the "Create Item" button
-	- Implemented style adjustments in the Main Menu for better UI consistency
+1. Category Module Enhancements
+	- Used the Common Module to create the Category module
+	- Resolved issues related to form validation and submission process
+2. API Integration & Fixes
+	- Collaborated with Bhautik Bhai to resolve Fetch Category API issue
+	- Integrated Create Item API on the "Create" button click
+	- fetched Created Items and displayed them in table of the Inventory module.
+3. UI & Form Enhancements
+	- Added a new dropdown field: price_includes_tax
+	- Set default values in each related view file
+	- Applied theme-based styling for Switches, Radio Buttons, and Buttons
 
 ## My Understanding
 
@@ -142,63 +146,59 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (7 July - 11 July) Report of Dhyan
+**Subject**: Weekly (14 July - 18 July) Report of Dhyan
 
-Project: Hotel Table Booking Web,
+Angular Learning,
+  1. Dependency Injection & Routing
+    - Revised previously learned concepts including Angular routes and dependency injection.
+  2. Forms
+    - Understood the core differences between Reactive Forms and Template-driven Forms.
+    - Practiced CRUD functionality using a tableData array to display data in a table.
+  3. RxJS
+    - Learned the basics of RxJS:
+      - Observables vs Promises
+      - Observers and Subscriptions
+      - Use cases and integration within Angular applications
 
-Git Commit ID: 8df2f64108fb2bbb5637d28d46446ce15279a137
-Git Commit Link: https://gitlab.com/vnnovatesolutions/billsmart-invoice-mgmt-system/-/commit/8df2f64108fb2bbb5637d28d46446ce15279a137
+
+Project: Smart Bill Book,
+
+Git Commit ID: 181cdc8d2b11504c5c17977cff6ee21256b5ac8b
+Git Commit Link: https://gitlab.com/vnnovatesolutions/billsmart-invoice-mgmt-system/-/commit/181cdc8d2b11504c5c17977cff6ee21256b5ac8b
 
 Description:
 
-1. Introduction & Setup
-  - Gained a foundational understanding of Angular and its key features
-  - Set up the Angular development environment using Angular CLI
-  - Configured the workspace and tools for building Angular applications
-2. Angular Architecture
-- Learned the structure and flow of Angular apps, including:
-  1. Modules
-  2. Components
-  3. Templates
-  4. Services
-3. Components – Deep Dive
-  - Understood component basics: structure, metadata, and usage
-  - Studied lifecycle hooks: ngOnInit, ngOnDestroy, etc.
-  - Used ViewChild decorator to access child elements/components
-  - Explored standalone components and their use cases
-  - Learned view encapsulation modes: Emulated, ShadowDom, None
-  - Implemented parent-to-child communication using @Input()
-4. Angular Modules
-  - Understood types of modules: root, feature, shared, and routing modules
-  - Learned how to create, import, and organize modules
-  - Implemented lazy loading for performance optimization
-5. Angular Templates
-Learned and practiced:
-  - Binding: dynamic text, properties, attributes
-  - Event binding using (event)
-  - Two-way binding with [(ngModel)]
-  - Control flow: *ngIf, *ngFor, @switch, etc.
-  - Pipes for data transformation
-  - Template constructs: ng-template, ng-container, ng-content
-  - Use of template reference variables
-6. Angular Directives Explored:
-  - Built-in directives: *ngIf, *ngFor, [ngClass], [ngStyle]
-  - Structural directives: modify DOM structure
-  - Attribute directives: change element appearance/behavior
-  - Component directives: used via selector
-7. Routing & Navigation
-  - Understood the purpose and setup of Angular Routing
-  - Practiced using RouterOutlet for dynamic content display
-  - Learned about AuthGuard and route protection (introductory level)
-8. Services & Dependency Injection
-  - Created Angular services using CLI
-  - Practiced injecting services across components using Angular’s DI system
-9. CRUD Operation (In Progress)
-  - Created a form to collect user input and store it in a formData variable
-  - Started rendering formData in a table using tableData variable
-10. Reinforcement Activities
-  - Conducted practical implementations and revision
-  - Participated in MCQ and practical assessments in React conducted by Rahul Sir
+1. Inventory Module
+  ➤ Inventory Page Setup & Enhancements
+    - Added a skeleton loader to enhance UX during data fetch.
+    - Separated logic and UI layers for cleaner architecture.
+    - Updated main menu styles for better UI consistency.
+    - Applied theme-based styling to switches, radio buttons, and button states (hover, active).
+    - Fetched and displayed created items from API.
+  ➤ Create Item Modal (Multi-tab Form)
+    - Basic Details Tab:
+      - Built using Formik and Yup for validation.
+      - Included responsive design for tablets and desktops.
+      - Logged data to console after validation on Create click.
+      - Integrated Create Item API to submit form data.
+      - Added new dropdown field: price_includes_tax.
+    - Stock Details Tab:
+      - Added features like low stock warning and alternative unit fields.
+      - Implemented responsive styling.
+      - Made UI changes based on feedback from Rahul Sir.
+    - Pricing Details Tab:
+      - Created folder structure and modal tab for pricing details.
+      - Displayed default illustration for Party Wise Price section.
+    - Container & View Layer:
+      - Developed reusable containers to manage modal tabs and navigation.
+2. Category Module
+  - Integrated Category API into Create Item modal.
+  - Built Create Category functionality within the modal.
+  - Used the Common Module for managing reusable modal logic.
+  - Resolved issues with form validation and submission.
+  - Fixed API issue with the help of Bhautik Bhai.
+  - Updated Category dropdown layout in Basic Details tab.
+  - Completed Category listing and Create Category API integration.
 
 ## Leave Request
 
