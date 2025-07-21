@@ -2,39 +2,40 @@
 
 Today, I am working on below list of task:
 
-Date: 18 July, 2025
-Day: Friday,
+Date: 21 July, 2025
+Day: Monday,
 
 Project: Smart Bill Book, 
 
-1. Working on Inventory module.
-  1.1. Add one more dropdown which is "With tax" and "without tax" in Basic Details form tab in Create Item modal.
-2. Basic Details Form API integration
-  2.1. Post Basic details form data to API.
-  2.2. display to table in Inventory page.
+1. Inventory Page Enhancements
+  - Implement Category API call on page load to dynamically populate data
+2. Category Dropdown Functionality
+  - Integrate an editable Category dropdown in the Inventory page
+  - Add support for Edit and Delete operations directly from the dropdown
 
+  1.1. Comment Advance Form in Create Item modal for temporary.
 
 ## Work done:
 
 EOD,
-Date: 18 July, 2025
-Day: Friday,
+Date: 21 July, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Smart Bill Book, 
 
-1. Category Module Enhancements
-	- Used the Common Module to create the Category module
-	- Resolved issues related to form validation and submission process
-2. API Integration & Fixes
-	- Collaborated with Bhautik Bhai to resolve Fetch Category API issue
-	- Integrated Create Item API on the "Create" button click
-	- fetched Created Items and displayed them in table of the Inventory module.
-3. UI & Form Enhancements
-	- Added a new dropdown field: price_includes_tax
-	- Set default values in each related view file
-	- Applied theme-based styling for Switches, Radio Buttons, and Buttons
+1. UI Fixes & Enhancements
+  - Resolved double scroll issues on the Landing Page and Parties Page
+  - Updated Category Dropdown UI filter for better user experience
+2. Inventory Module
+  - Displayed Stock Quantity with Measuring Unit in the Inventory table
+  - Called the Category API on Inventory page reload
+  - Enabled Add Category functionality directly within the Category dropdown
+3. Category Management
+  - Developed the Edit Category module
+  - Integrated Edit Category API
+  - Currently working on: Delete Category API integration
 
 ## My Understanding
 
