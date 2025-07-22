@@ -45,7 +45,7 @@
 
   2. Named Exports with Aliases
 
-     - Named exports `allow multiple` `functions`, `objects`, or `variables` to be exported `from a single module`.
+     - Named exports `allow multiple functions`, `objects`, or `variables` to be exported `from a single module`.
      - Unlike default exports, named exports `must be imported using the exact name` they were exported with, `unless an alias is provided during import`.
 
        ```js

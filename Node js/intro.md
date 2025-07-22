@@ -9,6 +9,13 @@
     - **V8 Engine**: The `same engine used by Google Chrome` to run JavaScript in browsers, making Node.js fast and efficient.
     - **Server-Side**: Unlike traditional JavaScript (which runs in browsers to manipulate web pages), Node.js handles server tasks like `file operations`, `database interactions`, and `HTTP requests`.
 
+## What Server can do?
+Bellow are Task that Server only can do not browser
+1. `Database` : Can CRUD operation with data in Database. 
+2. `Authentication` : Can Authenticate User.
+3. `Input Validation` : User enter Correct Inputs (email, password, etc).
+4. `Business Logic` : That user should not see, that take too much time to run in browser.
+
 ## Why Node.js?
 
 - Node.js is popular for backend development due to its unique features:
@@ -48,8 +55,19 @@
 
 - There are some comparison with Node.js
     - **Node.js vs. PHP**: Node.js is `asynchronous` and `JavaScript-based`; PHP is synchronous and better for traditional web pages.
+        - `Node.js` can **run server** and **listen to incomming requests** where `PHP` use **Apache** and **Nginx** tools to run server and listen to incomming requests then execute PHP code.
     - **Node.js vs. Python (Django/Flask)**: Node.js is `faster for I/O tasks`; `Python is better for CPU-heavy tasks` like machine learning.
     - **Node.js vs. Java**: Node.js is `lighter and faster to develop`; Java is more robust for enterprise systems.
+
+## Node.js Executing Methods
+
+- Node.js has two main methods to execute code:
+    - **REPL** : 
+        - **Read** (Input) -**Eval** (Execute) -**Print** (Output) -**Loop** (Repeat)
+        - Just writing `node` in terminal and press enter to open REPL.
+        - To exit REPL, write `exit` or press `Ctrl + C` twice.
+    - **Script File** : 
+        - Writing `node filename.js` in terminal to execute script file.
 
 ## Common Pitfalls for Beginners
 
