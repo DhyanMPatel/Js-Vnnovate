@@ -2,40 +2,39 @@
 
 Today, I am working on below list of task:
 
-Date: 21 July, 2025
-Day: Monday,
+Date: 22 July, 2025
+Day: Tuesday,
 
 Project: Smart Bill Book, 
 
-1. Inventory Page Enhancements
-  - Implement Category API call on page load to dynamically populate data
-2. Category Dropdown Functionality
-  - Integrate an editable Category dropdown in the Inventory page
-  - Add support for Edit and Delete operations directly from the dropdown
-
-  1.1. Comment Advance Form in Create Item modal for temporary.
+1. Working on Inventory module.
+  1.1. Continue Work on Delete Category API integration
+  1.2. Display Category Group name with Item name column.
+2. Start working on Detailed page of each item.
 
 ## Work done:
 
 EOD,
-Date: 21 July, 2025
-Day: Monday,
+Date: 22 July, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Smart Bill Book, 
 
-1. UI Fixes & Enhancements
-  - Resolved double scroll issues on the Landing Page and Parties Page
-  - Updated Category Dropdown UI filter for better user experience
-2. Inventory Module
-  - Displayed Stock Quantity with Measuring Unit in the Inventory table
-  - Called the Category API on Inventory page reload
-  - Enabled Add Category functionality directly within the Category dropdown
-3. Category Management
-  - Developed the Edit Category module
-  - Integrated Edit Category API
-  - Currently working on: Delete Category API integration
+1. Category Management
+  1.1. Implemented Delete Category functionality within the Inventory module
+  1.2. Completed API Integration for deleting categories
+  1.3. Thoroughly tested all CRUD operations (Create, Read, Update, Delete) for Category management
+2. Inventory Module Enhancements
+  2.1. Implemented category-based filtering for inventory items
+  2.2. Added pagination support for the inventory item list
+  2.3. Integrated pagination logic with the Fetch Item API call
+  2.4. Displayed Category name alongside Item name in the Inventory table
+3. Search & Filtering Optimization
+  3.1. Created a debounced function to handle updates on:
+    - Search, Category selection, Show Low Stock toggle
+  3.2. Coordinated with backend team to add new query parameters (search, categoryName, showLowStock) to the Fetch Item API – In Progress
 
 ## My Understanding
 
