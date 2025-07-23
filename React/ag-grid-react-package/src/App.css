@@ -1,0 +1,8 @@
+.ag-theme-alpine .ag-cell {
+  border-right: 1px solid #ccc !important; /* Vertical line between columns */
+  border-bottom: 1px solid #ccc !important; /* Ensure horizontal lines are visible */
+}
+
+.ag-theme-alpine .ag-header-cell {
+  border-right: 1px solid #ccc !important; /* Vertical line in header */
+}
