@@ -2,39 +2,32 @@
 
 Today, I am working on below list of task:
 
-Date: 22 July, 2025
-Day: Tuesday,
+Date: 23 July, 2025
+Day: Wednesday,
 
 Project: Smart Bill Book, 
 
-1. Working on Inventory module.
-  1.1. Continue Work on Delete Category API integration
-  1.2. Display Category Group name with Item name column.
-2. Start working on Detailed page of each item.
+1. Work on Bulk import functionality in Inventory module.
 
 ## Work done:
 
 EOD,
-Date: 22 July, 2025
-Day: Tuesday,
+Date: 23 July, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Smart Bill Book, 
 
-1. Category Management
-  1.1. Implemented Delete Category functionality within the Inventory module
-  1.2. Completed API Integration for deleting categories
-  1.3. Thoroughly tested all CRUD operations (Create, Read, Update, Delete) for Category management
-2. Inventory Module Enhancements
-  2.1. Implemented category-based filtering for inventory items
-  2.2. Added pagination support for the inventory item list
-  2.3. Integrated pagination logic with the Fetch Item API call
-  2.4. Displayed Category name alongside Item name in the Inventory table
-3. Search & Filtering Optimization
-  3.1. Created a debounced function to handle updates on:
-    - Search, Category selection, Show Low Stock toggle
-  3.2. Coordinated with backend team to add new query parameters (search, categoryName, showLowStock) to the Fetch Item API – In Progress
+1. Researched to display Excel sheets within the app using the ag-grid-react package for bulk item updates.
+
+2. Developed Bulk Upload Items functionality:
+  - Created modal with “Bulk Upload” and “Download Sample Excel File” buttons
+  - Resolved issue related to Axios interceptor overriding Content-Type header
+
+3. Inventory Pagination
+  - Worked on and successfully tested pagination for Inventory items
+  - Resolved issues encountered during pagination integration
 
 ## My Understanding
 
