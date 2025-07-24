@@ -22,6 +22,8 @@
     - Helps handle I/O-bound tasks efficiently.
     - Makes Node.js suitable for scalable applications like web servers.
 
+![Event Loop](./Event%20Loop.png)
+
 - How It Works:
     - The event loop processes tasks in phases, handling timers, I/O callbacks, and other events.
     - Key phases:
@@ -36,6 +38,7 @@
     ```js
     process.exit()
     ```
+    - `Process exit` basically hard exited our event loop means close our server and gave control back to our terminal or simply press `CTRL + C` in same terminal where we run our server.
     - without import anything
 
 
