@@ -9,18 +9,61 @@
   - `http.createServer((req, res) => {...})`: Creates a server.
   - `req`: Request object (URL, method, headers).
   - `res`: Response object (set headers, send data).
+
+- **Syntax** : 
+  - You can explicitly use function call or anonymous function or Arrow function.
+  ```js
+  import http from "http";
+  const server = http.createServer(requestListener)
+
+  server.listen(port, callback);
+  ```
+  - The `requestListener` is a function which receive `request` and `response` objects. request and response objects are `built-in` provided by Node.js.
+
 - **Example**:
 
   ```js
   import http from "http";
-  const server = http.createServer((req, res) => {
+
+  const explicitFunction = (req, res) => {
+    res.writeHeader(200, { "Content-Type": "text/plain" });
+    res.end("Hello, Node.js!");
+  }
+
+  const explicitServer = http.createServer(explicitFunction); // Explicit function call
+
+  const anonymousServer = http.createServer(function (req, res) { // Anonymous function
     res.writeHeader(200, { "Content-Type": "text/plain" });
     res.end("Hello, Node.js!");
   });
-  server.listen(3000, () => console.log("Server on http://localhost:3000"));
+  
+  const arrowServer = http.createServer((req, res) => { // Arrow function
+    res.writeHeader(200, { "Content-Type": "text/plain" });
+    res.end("Hello, Node.js!");
+  });
+
+  explicitServer.listen(3001, () => console.log("Server on http://localhost:3001"));
+  anonymousServer.listen(3002, () => console.log("Server on http://localhost:3002"));
+  arrowServer.listen(3000, () => console.log("Server on http://localhost:3000")); 
   ```
 
 - **Use Case**: Build REST APIs or serve static content.
+
+### Request and Response Object
+
+- **Request Object**: 
+    - `req.url`: URL of the request.
+    - `req.method`: HTTP method (GET, POST, etc).
+    - `req.headers`: Request headers.
+    - `req.query`: Query parameters (e.g., `?name=John`).
+    - `req.body`: Request body (for POST/PUT requests).
+
+- **Response Object**: 
+    - `res.writeHead`: Set response headers.
+    - `res.write`: Send data to the client.
+    - `res.end`: End the response.
+    - `res.statusCode`: Set HTTP status code.
+
 
 ## Fs Module
 
