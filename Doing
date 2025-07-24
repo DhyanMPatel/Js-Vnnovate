@@ -2,32 +2,47 @@
 
 Today, I am working on below list of task:
 
-Date: 23 July, 2025
-Day: Wednesday,
+Date: 24 July, 2025
+Day: Thursday,
 
 Project: Smart Bill Book, 
 
-1. Work on Bulk import functionality in Inventory module.
+1. Make changes in Bulk upload functionality
+  - use Drag and Drop functionality.
+  - make UI changes for better UI experience.
+2. Implement Delete Inventory Item functionality in Inventory page.
 
 ## Work done:
 
 EOD,
-Date: 23 July, 2025
-Day: Wednesday,
+Date: 24 July, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
 Project: Smart Bill Book, 
 
-1. Researched to display Excel sheets within the app using the ag-grid-react package for bulk item updates.
+1. Bulk Upload Enhancements
+  1.1. Applied UI improvements to the Bulk Upload module based on feedback
+  1.2. Implemented drag-and-drop file upload functionality
+  1.3. Tested end-to-end Bulk Upload flow for correctness and stability
 
-2. Developed Bulk Upload Items functionality:
-  - Created modal with “Bulk Upload” and “Download Sample Excel File” buttons
-  - Resolved issue related to Axios interceptor overriding Content-Type header
+2. Inventory Item Deletion
+  2.1. Developed Delete Inventory Item feature:
+    - Added delete button for each row in the Inventory table
+    - Integrated Delete Item API.
 
-3. Inventory Pagination
-  - Worked on and successfully tested pagination for Inventory items
-  - Resolved issues encountered during pagination integration
+3. Inventory Item Editing – In Progress
+  3.1. Implemented:
+    - Fetch Inventory Item by ID API
+    - Update Inventory Item by ID API
+  3.2. Continue work on the Edit Item module UI and logic
+
+
+1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
+2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
+3. Then check Monday's task that i had done like pagination, category filter in Inventory items API. also make changes regarding updates.
+
 
 ## My Understanding
 
