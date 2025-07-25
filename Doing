@@ -2,46 +2,37 @@
 
 Today, I am working on below list of task:
 
-Date: 24 July, 2025
-Day: Thursday,
+Date: 25 July, 2025
+Day: Friday,
 
 Project: Smart Bill Book, 
 
-1. Make changes in Bulk upload functionality
-  - use Drag and Drop functionality.
-  - make UI changes for better UI experience.
-2. Implement Delete Inventory Item functionality in Inventory page.
+1. Edit Inventory Item Functionality
+  - Continue development and finalize the Edit Inventory Item module
+    - Resolve issues related to the Category dropdown
+    - Complete the edit functionality, including form updates, validation, and API integration
 
 ## Work done:
 
 EOD,
-Date: 24 July, 2025
-Day: Thursday,
+Date: 25 July, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Smart Bill Book, 
 
-1. Bulk Upload Enhancements
-  1.1. Applied UI improvements to the Bulk Upload module based on feedback
-  1.2. Implemented drag-and-drop file upload functionality
-  1.3. Tested end-to-end Bulk Upload flow for correctness and stability
-
-2. Inventory Item Deletion
-  2.1. Developed Delete Inventory Item feature:
-    - Added delete button for each row in the Inventory table
-    - Integrated Delete Item API.
-
-3. Inventory Item Editing – In Progress
-  3.1. Implemented:
-    - Fetch Inventory Item by ID API
-    - Update Inventory Item by ID API
-  3.2. Continue work on the Edit Item module UI and logic
+1. Resolved the issue related to the Category dropdown in the edit Inventory Item form.
+2. Completed and Tested the edit functionality, including form updates, validation, and API integration.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
 3. Then check Monday's task that i had done like pagination, category filter in Inventory items API. also make changes regarding updates.
+
+1. Yesterday, i make Enhancement in Bulk upload functionality based on feedback like Implemented drag-and-drop file upload functionality, UI improvements and Tested whole work flow.
+2. Then worked on Inventory Item Deletion functionality where when user click on delete button it ask again for confirmation and then it will delete that Item.
+3. At last worked on Inventory Item Editing functionality where when user click on edit button it will open modal and in that modal user can see all the details of that item and then i integrate 2 API integration for Edit Item 1st is for fetching item by id and 2nd is for updating item by id.
 
 
 ## My Understanding
@@ -154,59 +145,68 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (14 July - 18 July) Report of Dhyan
-
-Angular Learning,
-  1. Dependency Injection & Routing
-    - Revised previously learned concepts including Angular routes and dependency injection.
-  2. Forms
-    - Understood the core differences between Reactive Forms and Template-driven Forms.
-    - Practiced CRUD functionality using a tableData array to display data in a table.
-  3. RxJS
-    - Learned the basics of RxJS:
-      - Observables vs Promises
-      - Observers and Subscriptions
-      - Use cases and integration within Angular applications
+**Subject**: Weekly (21 July - 25 July) Report of Dhyan
 
 
 Project: Smart Bill Book,
 
-Git Commit ID: 181cdc8d2b11504c5c17977cff6ee21256b5ac8b
-Git Commit Link: https://gitlab.com/vnnovatesolutions/billsmart-invoice-mgmt-system/-/commit/181cdc8d2b11504c5c17977cff6ee21256b5ac8b
+Git Commit ID: fb7946350948018e25a5524ebedab56a6dc97eb5
+Git Commit Link: https://gitlab.com/vnnovatesolutions/billsmart-invoice-mgmt-system/-/commit/fb7946350948018e25a5524ebedab56a6dc97eb5
 
 Description:
 
 1. Inventory Module
-  ➤ Inventory Page Setup & Enhancements
-    - Added a skeleton loader to enhance UX during data fetch.
-    - Separated logic and UI layers for cleaner architecture.
-    - Updated main menu styles for better UI consistency.
-    - Applied theme-based styling to switches, radio buttons, and button states (hover, active).
-    - Fetched and displayed created items from API.
-  ➤ Create Item Modal (Multi-tab Form)
-    - Basic Details Tab:
-      - Built using Formik and Yup for validation.
-      - Included responsive design for tablets and desktops.
-      - Logged data to console after validation on Create click.
-      - Integrated Create Item API to submit form data.
-      - Added new dropdown field: price_includes_tax.
-    - Stock Details Tab:
-      - Added features like low stock warning and alternative unit fields.
-      - Implemented responsive styling.
-      - Made UI changes based on feedback from Rahul Sir.
-    - Pricing Details Tab:
-      - Created folder structure and modal tab for pricing details.
-      - Displayed default illustration for Party Wise Price section.
-    - Container & View Layer:
-      - Developed reusable containers to manage modal tabs and navigation.
-2. Category Module
-  - Integrated Category API into Create Item modal.
-  - Built Create Category functionality within the modal.
-  - Used the Common Module for managing reusable modal logic.
-  - Resolved issues with form validation and submission.
-  - Fixed API issue with the help of Bhautik Bhai.
-  - Updated Category dropdown layout in Basic Details tab.
-  - Completed Category listing and Create Category API integration.
+  1.1. Displayed Stock Quantity with Measuring Unit in the table
+  1.2. Implemented category-based filtering for inventory items
+  1.3. Displayed Category name alongside Item name in the table
+  1.4. Integrated pagination logic with Fetch Item API
+  1.5. Added debounced search, category, and low stock filtering
+  1.6. Integrated Delete Inventory Item API with UI button
+  1.7. Developed and completed Edit Item functionality:
+    - Fetch & update item by ID
+    - Fixed dropdown issues
+    - API integration, form validation, and UI polish
+  1.8. Built Bulk Upload Items feature:
+    - Modal with "Upload Excel" & "Download Sample File"
+    - Drag-and-drop functionality
+    - Solved Axios content-type override issue
+  1.9. Tested and resolved pagination issues with inventory list
+
+2. Category Management
+  2.1. Called Category API on Inventory page reload
+  2.2. Enabled "Add Category" option from dropdown
+  2.3. Edit Category Module:
+    - UI created and API integrated
+  2.4. Delete Category Module:
+    - UI implemented
+    - API integrated
+    - All CRUD operations tested
+
+3. Bulk Upload Module
+  3.1. Created dedicated modal with essential action buttons
+  3.2. Enhanced UI with drag-and-drop support
+  3.3. Handled validation and error cases
+  3.4. Successfully tested full upload flow
+
+5. Search, Filter & Pagination Enhancements
+  5.1. Created debounced function to handle:
+    - Search input
+    - Category dropdown
+    - Low stock toggle
+  5.2. Coordinated with backend to support query parameters (search, categoryName, showLowStock).
+  5.3. Finalized and tested pagination integration
+
+6. UI/UX Fixes & Enhancements
+  6.1. Fixed double scroll issue on:
+    - Landing Page
+    - Parties Page
+  6.2. Updated UI of:
+    - Category Dropdown Filter
+    - Inventory Table Actions
+    - Edit Form Dropdowns
+
+7. Research
+  7.1. Explored `ag-grid-react` for rendering and editing Excel files directly inside the app for bulk updates.
 
 ## Leave Request
 
