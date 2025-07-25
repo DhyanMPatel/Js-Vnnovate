@@ -57,9 +57,12 @@
     - `req.headers`: Request headers.
     - `req.query`: Query parameters (e.g., `?name=John`).
     - `req.body`: Request body (for POST/PUT requests).
+    - `req.on("data", (chunk) => {...})`: Listen for data events. parameters are `event name` and `callback function`.
+
 
 - **Response Object**: 
-    - `res.writeHead`: Set response headers.
+    - `res.writeHead`: Set response headers (but less flexible). parameters are `status code` and `headers`.
+    - `res.setHeader`: Set response headers (more flexible). parameters are `header name` and `header value`.
     - `res.write`: Send data to the client.
     - `res.end`: End the response.
     - `res.statusCode`: Set HTTP status code.
@@ -69,8 +72,8 @@
 
 - **Purpose**: Read, write, and manage files and directories.
 - **Key Methods**:
-  - `fs.readFile`/`fs.promises.readFile`: Read files (async).
-  - `fs.writeFile`/`fs.promises.writeFile`: Write files.
+  - `fs.readFile`/`fs.promises.readFile`: Read files (async). parameters are `file name`, `encoding` and `callback function`.
+  - `fs.writeFile`/`fs.promises.writeFile`: Write files. parameters are `file name`, `data`, `encoding` and `callback function`.
   - `fs.readdir`: List directory contents.
   - `fs.mkdir`: Create directories.
 - **Example**:
