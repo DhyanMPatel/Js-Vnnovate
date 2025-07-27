@@ -89,4 +89,4 @@ console.log(encoded);  // Outputs a Uint8Array of encoded text
 
 # NOte : Now understand the flow of web 
 
-[How Web Works](./Web%20works.md)
+[How Web Works](./Web%20work.md)

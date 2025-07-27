@@ -34,6 +34,8 @@
         - **Close**: Handles cleanup (e.g., closing sockets).
     - The loop runs as long as there are tasks to process.
 
+    ![Event behind the Seen](./Event%20behind%20the%20seen.png)
+
 - How to exit Event loop?
     ```js
     process.exit()
@@ -56,6 +58,18 @@
     - **Node.js Bindings**:
         - Connects V8 and libuv, enabling JavaScript to interact with system-level operations.
 
-# Note : Now start to Learn Express
+### Behind the seen of actual Work flow
 
-[Express is a Framework of Node](../Express%20JS/intro.md)
+![Actual Work flow](./Actual%20Work%20flow.png)
+
+### Now Know whole Work flow of Backend.
+- Explore Practice 1 which is at Node Core Modules folder
+
+
+# Note : Now Deep dive to improved Development Workflow and Debugging
+
+[Improved Development Workflow and Debugging](../ImprovedDevelopment/intro.md)
+
+<!-- # Note : Now start to Learn Express
+
+[Express is a Framework of Node](../Express%20JS/intro.md) -->
