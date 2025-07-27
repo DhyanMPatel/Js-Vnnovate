@@ -80,7 +80,7 @@ const server = http.createServer((req, res) => {
     res.write("</html>");
     return res.end();  // If i write (without return statement) like this then it will execute rest of the bellow lines too. which gives an error. So always write with return keyword so it will return and not execute bellow code.
 
-  } else if (req.url === '/message' && req.method === "POST"){
+  } else if (req.url === '/message' && req.method === "POST") {
     const body = [];
     req.on("data", (chunk) => {
       body.push(chunk);
