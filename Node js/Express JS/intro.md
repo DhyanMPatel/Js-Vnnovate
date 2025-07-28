@@ -44,11 +44,12 @@ app.listen(3000, () => {
 ### Installing Express.js
 
 ```bash
+# If install Express permanently (inside Dependencies)
 npm install express
 #   OR
 npm install --save express
 
-# If install Express temporarily
+# If install Express temporarily (inside DevDependencies)
 npm install express --no-save
 ```
 

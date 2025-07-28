@@ -2,28 +2,27 @@
 
 Today, I am working on below list of task:
 
-Date: 25 July, 2025
-Day: Friday,
+Date: 28 July, 2025
+Day: Monday,
 
-Project: Smart Bill Book, 
+Project: Royal Crucible, 
 
-1. Edit Inventory Item Functionality
-  - Continue development and finalize the Edit Inventory Item module
-    - Resolve issues related to the Category dropdown
-    - Complete the edit functionality, including form updates, validation, and API integration
+1. Theme searching for user side.
 
 ## Work done:
 
 EOD,
-Date: 25 July, 2025
-Day: Friday,
+Date: 28 July, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
-Project: Smart Bill Book, 
+Project: Royal Crucible,
 
-1. Resolved the issue related to the Category dropdown in the edit Inventory Item form.
-2. Completed and Tested the edit functionality, including form updates, validation, and API integration.
+1. Theme Search for User Side:
+	- Searched for both paid and free themes
+	- Explored some GitHub repositories offering free templates and tested them locally
+	- Tried to find a suitable React-based template for the project
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
@@ -34,6 +33,7 @@ Project: Smart Bill Book,
 2. Then worked on Inventory Item Deletion functionality where when user click on delete button it ask again for confirmation and then it will delete that Item.
 3. At last worked on Inventory Item Editing functionality where when user click on edit button it will open modal and in that modal user can see all the details of that item and then i integrate 2 API integration for Edit Item 1st is for fetching item by id and 2nd is for updating item by id.
 
+1. Today i work on Royal Crucible project where i find theme based on that project requirement. 
 
 ## My Understanding
 
