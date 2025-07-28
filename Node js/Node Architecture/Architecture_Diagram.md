@@ -69,7 +69,3 @@
 # Note : Now Deep dive to improved Development Workflow and Debugging
 
 [Improved Development Workflow and Debugging](../ImprovedDevelopment/intro.md)
-
-<!-- # Note : Now start to Learn Express
-
-[Express is a Framework of Node](../Express%20JS/intro.md) -->
