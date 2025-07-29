@@ -1,19 +1,26 @@
 ## Work Doing:
 
+
+Date: 29 July, 2025
+Day: Tuesday,
+
 Today, I am working on below list of task:
-
-Date: 28 July, 2025
-Day: Monday,
-
 Project: Royal Crucible, 
 
-1. Theme searching for user side.
+1. Theme Integration
+  - Clone the selected theme (as per Vashik Sir's choice).
+  - Set up and configure the theme on the local development environment.
+
+2. Code Conversion
+  - Begin converting the theme's static HTML/CSS structure into dynamic React components.
+  - Structure code with reusable components and follow project conventions.
+
 
 ## Work done:
 
 EOD,
-Date: 28 July, 2025
-Day: Monday,
+Date: 29 July, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 

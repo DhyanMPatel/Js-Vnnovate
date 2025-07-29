@@ -117,13 +117,25 @@
        console.log(greet("Rohan"));
        ```
 
+#### **Features** of ECMAScript Modules in Node.js
+
+- **Named Exports**: Export multiple variables, functions, or classes from a module using named exports.
+- **Default Exports**: Export a single variable, function, or class as the default export.
+- **Importing**: Import named exports or the default export from other modules.
+- **Asynchronous Module Loading**: Use dynamic imports (import() syntax) for loading modules asynchronously.
+
+#### **Differences** from CommonJS
+  1. **Syntax**: Use `import` and `export` keywords instead of `require` and `module.exports`.
+  2. **Scope**: `ECMAScript Modules` are **scoped to the file** (`similar to ES6 modules` in the browser), while `CommonJS modules` are **evaluated synchronously** and **share a global module scope**.
+  3. **Static Analysis**: `ECMAScript Modules` allow for more efficient static analysis and optimization by the JavaScript engine.
+
 ### 2. CommonJS Modules (CJS)
 
 - CommonJS is the default module system used in NodeJS.
 - It enables code modularity by allowing developers to export and import functions, objects, or variables using `module.exports` and `require()`.
 
   ```jsx
-  //import 
+  //import
   const module1 = require('./module1');
 
   //export
@@ -138,9 +150,106 @@
   - `Each module` `runs in its own scope`, preventing variable conflicts.
 
 - Use Cases of CommonJS Modules
+
   1. Creating a Utility Module
+
+     - A utility module is a collection of reusable helper functions that simplify coding by handling common tasks like **string manipulation**, **date formatting**, **number calculations**, **logging**, and **error handling**.
+
+       ```js
+       /// utils.js
+       export function add(a, b) {
+         return a + b;
+       }
+
+       export function multiply(a, b) {
+         return a * b;
+       }
+
+       export function capitalize(str) {
+         return str.charAt(0).toUpperCase() + str.slice(1);
+       }
+
+       export function reverseString(str) {
+         return str.split("").reverse().join("");
+       }
+
+       /// app.js
+       import { add, multiply, capitalize, reverseString } from "./utils.js";
+
+       console.log("Utility Module Output:");
+       console.log("Addition:", add(10, 5));
+       console.log("Multiplication:", multiply(6, 3));
+       console.log("Capitalized:", capitalize("hello"));
+       console.log("Reversed String:", reverseString("Node.js"));
+       ```
+
   2. Building a Configuration File
+
+     - A configuration file in NodeJS is used to store **application settings**, **environment variables**, **API keys**, **database credentials**, and other configurable options.
+
+      ```js
+      /// Config.js
+        const config = {
+            appName: "My Node.js App",
+            port: 3000,
+            databaseURL: "mongodb://localhost:27017/mydatabase",
+            apiKey: "1234567890abcdef",
+        };
+
+        export default config;
+
+        /// app.js
+        import config from './config.js';
+
+        console.log("Building a Configuration File Output:");
+        console.log("Application Name:", config.appName);
+        console.log("Server running on port:", config.port);
+        console.log("Database URL:", config.databaseURL);
+        console.log("API Key:", config.apiKey);
+      ```
+
   3. Handling Routes in an Express App
+
+     - Routing is a crucial part of any web application as it defines how the application responds to client requests for different URLs. In Express.js, routing enables us to handle `HTTP` requests like **GET**, **POST**, **PUT**, **DELETE**, and more.
+
+     ```js
+      /// routes.js
+      const express = require('express');
+      const router = express.Router();
+
+      router.get('/', (req, res) => res.send('Home Page'));
+
+      module.exports = router;
+
+
+      /// app.js
+      const express = require('express');
+      const app = express();
+      const routes = require('./routes');
+
+      app.use('/', routes);
+      app.listen(3000, () => console.log('Server running on port 3000'));
+     ```
+#### Module Caching in NodeJS
+- When a module is loaded using `require()`, NodeJS caches it, preventing repeated loading and improving performance.`
+
+```js
+require('./greet'); // First time - Loads module
+require('./greet'); // Second time - Uses cached version
+
+// To clear cache, use
+delete require.cache[require.resolve('./greet')];
+```
+
+## Why Use Modules in NodeJS?
+
+- Using modules provides several benefits like,
+
+  1. **Separation of Concerns**: Keeps code `modular` and `well-structured`.
+  2. **Reusability**: `Code can be reused` across multiple files or projects
+  3. **Encapsulation**: `Avoids global scope` pollution by keeping variables local.
+  4. **Maintainability**: `Smaller`, `independent modules` make debugging easier.
+  5. **Performance Optimization**: `Cached modules` improve execution speed.
 
 # Note : Now know about Global Objects
 
