@@ -14,6 +14,6 @@
     - It is a stateful protocol.
 
 
-# Note : Now know about Architecture Diagram
+# Note : Now know How to handle Error in Node
 
-[Node Architecture Diagram to handle task async](../Node%20Architecture/Architecture_Diagram.md)
+[How to handle Error in Node?](./Error%20Handling.md)
