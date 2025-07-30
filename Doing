@@ -1,16 +1,13 @@
 ## Work Doing:
 
 
-Date: 29 July, 2025
-Day: Tuesday,
+Date: 30 July, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 Project: Royal Crucible, 
 
-1. Theme Integration
-  - Clone the selected theme (as per Vashik Sir's choice).
-  - Set up and configure the theme on the local development environment.
-
+1. Complete Configuration of theme on the local development environment.
 2. Code Conversion
   - Begin converting the theme's static HTML/CSS structure into dynamic React components.
   - Structure code with reusable components and follow project conventions.
@@ -19,8 +16,8 @@ Project: Royal Crucible,
 ## Work done:
 
 EOD,
-Date: 29 July, 2025
-Day: Tuesday,
+Date: 30 July, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
@@ -50,6 +47,13 @@ Learning,
 3. At last worked on Inventory Item Editing functionality where when user click on edit button it will open modal and in that modal user can see all the details of that item and then i integrate 2 API integration for Edit Item 1st is for fetching item by id and 2nd is for updating item by id.
 
 1. Today i work on Royal Crucible project where i find theme based on that project requirement. 
+
+2. Yesterday i work on Setup and Configuration of Theme. for that i waited for the selection of theme. during waiting i added completed task in June and July into the planner and revise some topics of Node and Express js. like, 
+  - Node Modules, 
+  - Error handling, 
+Then in Express js revise intro and its core features like
+  - How it can improve Server side code performance?
+and then at last know How it can handle client request and response?
 
 ## My Understanding
 
