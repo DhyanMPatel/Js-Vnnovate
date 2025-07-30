@@ -22,21 +22,14 @@ Day: Wednesday,
 Today, I am worked on below list of task:
 
 Project: Royal Crucible,
-1. Project install and Setup
-	- Clone the selected theme - Done
-	- Set up and configure the theme on the local development environment. - In Progress
-
-Others,
-1. Added completed tasks from June and July into the planner for tracking and progress overview.
-
-Learning,
-1. Learning Node :
-	- Revised Node Modules. - Done
-	- Reviewed error handling in Node.js, including synchronous and asynchronous error handling patterns.
-2. Learning Express JS :
-	- Completed an introduction to Express.js and its core features.
-	- Successfully set up a basic Express application.
-	- Client Request and Response handling in progress. - In Progress
+1. Project Understanding
+  - Reviewed and understood the Initial Setup zip file provided by Rahul Sir.
+2. Initial Setup Implementation
+  - Set up the Redux store for state management.
+  - Configured project routes for navigation structure.
+3. Layout Development
+  - Develop and integrated the Header module. - In Progress
+  - Develop and integrated the Footer module. - In Progress
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
