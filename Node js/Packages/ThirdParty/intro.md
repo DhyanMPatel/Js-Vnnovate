@@ -22,9 +22,9 @@
 
 ### Dependencies
 
-- `express` :
-- 
+- `express` : Heart of Node js application.
+- `body-parser` : Automatically parse the body in request.
 
 ### DevDependencies
 
-- `nodemon` :
+- `nodemon` : Run server on every time when developer make changes in files.
