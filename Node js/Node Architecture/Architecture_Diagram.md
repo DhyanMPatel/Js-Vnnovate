@@ -63,7 +63,9 @@
 ![Actual Work flow](./Actual%20Work%20flow.png)
 
 ### Now Know whole Work flow of Backend.
-- Explore Practice 1 which is at Node Core Modules folder
+- Explore Assignment 1 which is at Node Core Modules folder
+
+[Assignment 1](../Node%20Core%20Modules/practice%201/intro.md)
 
 
 # Note : Now Deep dive to improved Development Workflow and Debugging

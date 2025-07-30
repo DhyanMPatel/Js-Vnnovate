@@ -13,21 +13,21 @@
 
 - the bellow example show how to handle Sever in Express JS
 
-```js
-const express = require("express");
+    ```js
+    const express = require("express");
 
-const app = express();
+    const app = express();
 
-// Define a Route
-app.get("/", (req,res) => {
-    res.send("Welcome to Express JS");
-})
+    // Define a Route
+    app.get("/", (req,res) => {
+        res.send("Welcome to Express JS");
+    })
 
-// Start the Server
-app.listen(3000, () => {
-    console.log("Server is Running on http://localhost:3000 port...");
-})
-```
+    // Start the Server
+    app.listen(3000, () => {
+        console.log("Server is Running on http://localhost:3000 port...");
+    })
+    ```
 
 ### Need of Express.js
 
@@ -42,23 +42,47 @@ app.listen(3000, () => {
 - **Community and Plugins**: Provides access to a vast community of developers and plugins, making it easier to find solutions and extend functionality.
 
 ### Installing Express.js
+- installation process of Express js in Node js project
+    ```bash
+    # If install Express permanently (inside Dependencies)
+    npm install express
+    #   OR
+    npm install --save express
 
-```bash
-# If install Express permanently (inside Dependencies)
-npm install express
-#   OR
-npm install --save express
+    # If install Express temporarily (inside DevDependencies)
+    npm install --save-dev nodemon
+    #   OR
+    npm install nodemon --save-dev
+    ```
 
-# If install Express temporarily (inside DevDependencies)
-npm install express --no-save
-```
-
-```javascript
-const express = require('express');
-const app = express();
-```
+    ```javascript
+    // Then you can require express package 
+    const express = require('express');
+    const app = express();
+    ```
 
 ### Adding Middleware
+- `Middleware` are the functions which are executed before the request reaches the route.
+- `app.use()` is used to add middleware.
+
+    ```js
+    app.use((req,res, next) => {
+        console.log("Middleware");
+        next();
+    })
+
+    // Middleware can be route specific
+    app.use("/route", (req,res, next) => {
+        console.log("Middleware");
+        res.send("Middleware 1 can pass response") // If i write this then it will not execute bellow code
+        next();
+    })
+    ```
+    - `next()` is used to pass control to the next middleware function. `next()` is optional.
+    - `res.send()` is work as `res.write()` and `res.writeHead()` because **res.send() automatically set Header**.
+- **Note** : Most specific Middleware set first and least specific MiddleWare set at last. Because `Middleware` are executed in the order they are defined.   
+
+### [Assignment 2](./Assignement%202/ReadMe.md)
 
 ### Sending Response
 
