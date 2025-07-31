@@ -1,0 +1,15 @@
+.header{
+    background-color: bisque;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+}
+
+.header ul{
+    list-style: none;
+    display: flex;
+}
+
+.header a{
+    margin: 0 1rem;
+}

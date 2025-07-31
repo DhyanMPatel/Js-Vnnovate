@@ -45,15 +45,28 @@ app.use(bodyParser.urlencoded({extended: false})); // This will parse only simpl
 // })
 
 
-//      - Serving HTML pages
+// //      - Serving HTML pages
+// const adminRoutes = require('./routes/admin');
+// const shopRoutes = require('./routes/shop');
+// const errorRoutes = require('./routes/404');
+
+// app.use('/admin', adminRoutes);
+// app.use(shopRoutes);
+// app.use(errorRoutes); // Please put this at the end of all routes, because it will catch all the requests that are not handled by previous routes.
+
+
+//      - Serving File Statically
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const errorRoutes = require('./routes/404');
 
-app.use('/admin', adminRoutes);
-app.use(shopRoutes);
-app.use(errorRoutes); // Please put this at the end of all routes, because it will catch all the requests that are not handled by previous routes.
+const path = require("path");
 
+app.use(express.static(path.join(__dirname, "public"))); // This will allow to serve Static files from public folder.
+
+app.use("/admin", adminRoutes);
+app.use(shopRoutes);
+app.use(errorRoutes);
 
 app.listen(3000, () => {
     console.log("Server is running on http://localhost:3000 port...")
