@@ -1,0 +1,18 @@
+const path = require('path');
+
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const router = express.Router();
+router.use(bodyParser.urlencoded({extended: false})); // This will parse only key-value pairs
+
+router.get('/add-product', (req,res,next) => {
+    res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
+});
+
+router.post('/product', (req,res,next) => {
+    res.send('<h1>Product Added</h1>');
+    console.log(req.body);  // Without bodyParser it will return undefined. because node by default does not parse the body.
+})
+
+module.exports = router;

@@ -34,15 +34,25 @@ app.use(bodyParser.urlencoded({extended: false})); // This will parse only simpl
 // });
 
 
-//      - Parsing Incoming Request
-app.use("/add-product", (req,res,next) => {
-    res.send("<form action='/product' method='POST'><input type='text' name='firstName'><input type='text' name='lastName'><button type='submit'>Submit</button></form>")
-})
+// //      - Parsing Incoming Request
+// app.use("/add-product", (req,res,next) => {
+//     res.send("<form action='/product' method='POST'><input type='text' name='firstName'><input type='text' name='lastName'><button type='submit'>Submit</button></form>")
+// })
 
-app.use('/product', (req,res,next)=> {
-    console.log(req.body);  // Without bodyParser it will return undefined. because node by default does not parse the body. 
-    res.send("Product Page")
-})
+// app.use('/product', (req,res,next)=> {
+//     console.log(req.body);  // Without bodyParser it will return undefined. because node by default does not parse the body. 
+//     res.send("Product Page")
+// })
+
+
+//      - Serving HTML pages
+const adminRoutes = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
+const errorRoutes = require('./routes/404');
+
+app.use('/admin', adminRoutes);
+app.use(shopRoutes);
+app.use(errorRoutes); // Please put this at the end of all routes, because it will catch all the requests that are not handled by previous routes.
 
 
 app.listen(3000, () => {
