@@ -53,6 +53,13 @@ Then in Express js revise intro and its core features like
   - How it can improve Server side code performance?
 and then at last know How it can handle client request and response?
 
+## ReadMe.md file for initial project setup
+
+Prerequisites
+- Ensure you have the following installed:
+  - Node.js (v16 or higher)
+  - npm (v7 or higher)
+
 ## My Understanding
 
 1.  Prepare documentation of BEC JLR project based on my understanding. - In Progress

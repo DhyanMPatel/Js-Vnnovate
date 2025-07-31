@@ -2,12 +2,15 @@ const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const { rootDir } = require('../utils/path');
 
 const router = express.Router();
 router.use(bodyParser.urlencoded({extended: false})); // This will parse only key-value pairs
 
 router.get('/add-product', (req,res,next) => {
-    res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
+    res.sendFile(path.join(__dirname, '..', 'views', 'add-product.html'));
+    //      OR
+    // res.sendFile(path.join(rootDir, 'views', 'add-product.html')); // More robust way to get the path
 });
 
 router.post('/product', (req,res,next) => {
