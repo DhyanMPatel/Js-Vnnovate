@@ -64,6 +64,7 @@
 
 ### Now Know whole Work flow of Backend.
 - Explore Assignment 1 which is at Node Core Modules folder
+- In Assignment 1, We `create server`, `make 2 routes` through provide route to middleware in same file, pass data from one route to another route.
 
 [Assignment 1](../Node%20Core%20Modules/practice%201/intro.md)
 

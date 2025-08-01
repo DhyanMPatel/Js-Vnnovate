@@ -82,10 +82,17 @@
     - `res.send()` is work as `res.write()` and `res.writeHead()` because **res.send() automatically set Header**.
 - **Note** : Most specific Middleware set first and least specific MiddleWare set at last. Because `Middleware` are executed in the order they are defined.   
 
-### [Assignment 2](./Assignement%202/ReadMe.md)
+### [Assignment 2 (use of ``middleware``, `routes`, `Serve Static files` such as **.js**, **.css**, etc.) ](./Assignement%202/ReadMe.md)
+
 
 ### Sending Response
 
 ### Express DeepDive
 
 ### Handling Routes
+
+### Wrap up
+
+- This is a whole summery of Learning Basic Express js
+
+![Basic Express Wrap up](./Basics/Basic%20Express%20wrap%20up.png)
