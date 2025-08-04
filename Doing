@@ -1,24 +1,36 @@
 ## Work Doing:
 
 
-Date: 1 August, 2025
-Day: Friday,
+Date: 4 August, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 Project: Royal Crucible, 
 
-1. Work on About Us Section in Home page.
-  - Design and develop the About Us section in the Landing/Home page.
-  - Ensure responsive layout and styling.
-2. Implement Initial Motion.
-  - Explore how to implement initial motion effects for section transitions or on-load animations.
-  - Implement initial motion in Hero section and About Us section.
+1. Add Multiple Routes - Done
+  - Create and configure multiple routes based on the Royal Crucible project structure.
+  - Ensure navigation works seamlessly between different pages.
+
+2. Create 404 Page (Not Found) - Done
+  - Design and implement a user-friendly 404 error page.
+  - Add routing logic to display this page for unknown or unmatched routes.
+
+
+3. Create Working in Progress Page - Done
+  - Design and implement a user-friendly working in progress page.
+  - Display when any page is in progress state.
+
+4. Create Contact Us Page.
+  - Follow proper folder structure. - Done
+  - Make responsive for all devices. - In Progress
+
+5. Add logic in buttons to handle clients speak view scrolling.
 
 ## Work done:
 
 EOD,
-Date: 1 August, 2025
-Day: Friday,
+Date: 4 August, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
