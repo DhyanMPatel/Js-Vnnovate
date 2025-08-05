@@ -64,7 +64,7 @@ const path = require("path");
 
 app.use(express.static(path.join(__dirname, "public"))); // This will allow to serve Static files from public folder.
 
-app.use("/admin", adminRoutes);
+app.use("/admin", adminRoutes.router);
 app.use(shopRoutes);
 app.use(errorRoutes);
 
