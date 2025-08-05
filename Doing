@@ -11,22 +11,9 @@ Project: Royal Crucible,
 2. Gallery Module
   - Create the structure and layout for the Gallery module.
   - Start working on its design and functionality as per the project requirements.
+  - Filter out images in different filter.
+  - Display list of Images in Modal When user click on any type of Image like UI/UX, Development, photography, marketing, etc type. - In Progress.
 
-1. Add Multiple Routes - Done
-  - Create and configure multiple routes based on the Royal Crucible project structure.
-  - Ensure navigation works seamlessly between different pages.
-
-2. Create 404 Page (Not Found) - Done
-  - Design and implement a user-friendly 404 error page.
-  - Add routing logic to display this page for unknown or unmatched routes.
-
-3. Create Working in Progress Page - Done
-  - Design and implement a user-friendly working in progress page.
-  - Display when any page is in progress state.
-
-4. Create Contact Us Page.
-  - Follow proper folder structure. - Done
-  - Make responsive for all devices. - In Progress
 
 5. Add logic in buttons to handle clients speak view scrolling.
 
@@ -39,17 +26,20 @@ Day: Tuesday,
 Today, I am worked on below list of task:
 
 Project: Royal Crucible,
-1. About Us Section – Home Page
-  - Designed and developed the "About Us" section in the Landing/Home page.
-  - Ensured responsive layout and styling for all devices.
-  - Used Swiper for auto-scrolling of testimonials.
+1. Improvement in Contact Us Page
+  - Continued refining responsiveness across all screen sizes (mobile, tablet, desktop).
+  - Ensured consistent spacing, alignment, and visibility across devices.
+  - Display toast message when user submit the form.
 
-2. Initial Motion Implementation
-  - Researched and explored how to implement initial motion effects for section transitions/on-load.
-  - Successfully implemented framer-motion animations in:
-    - Hero section
-    - About Us section
-    - Mobile Drawer
+2. Gallery Module
+  - Created structure and layout for the Gallery section.
+  - Applied Framer Motion for smooth entry animations.
+  - Implemented filtering logic to categorize images (e.g., UI/UX, Development, Photography, Marketing).
+  - Displaying filtered image sets in a modal view. - In Progress.
+
+3. Gallery Modal Module
+  - Researched the lightGallery package to handle image modals and previews.
+  - Began development of a reusable common modal component for gallery display. - In Progress.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
