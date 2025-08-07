@@ -15,7 +15,7 @@ router.get('/add-product', getAddProduct); // Using the controller function to h
 
 router.post('/product', (req, res, next) => {
     res.send('<h1>Product Added</h1>');
-    console.log(req.body);  // Without bodyParser it will return undefined. because node by default does not parse the body.
+    console.log(req.body, "body Data");  // Without bodyParser it will return undefined. because node by default does not parse the body.
 
 
     // ProductData.push({ title: req.body.title });
@@ -27,6 +27,7 @@ router.post('/product', (req, res, next) => {
 })
 
 router.get('/products', (req, res, next) => {
+
     res.send("<h2>This route is only for Post requests</h2 >");
 })
 
