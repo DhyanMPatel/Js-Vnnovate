@@ -1,39 +1,38 @@
 ## Work Doing:
 
 
-Date: 6 Aug, 2025
-Day: Wednesday,
+Date: 7 Aug, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
 Project: Royal Crucible, 
 
-1. About Crucible Page
-  - Begin development of the About Crucible page.
-  - Structure and style the section content.
-  - Implement Framer Motion for smooth initial animations.
-
-2. Add Royal Crucible Website Content
-  - Add all necessary text, images, and other content provided from the Royal Crucible source to appropriate pages/modules.
-
-5. Add logic in buttons to handle clients speak view scrolling.
+1. Making final design/content changes to the Home Page based on feedback from Vashik Sir and Rahul Sir.
 
 ## Work done:
 
 EOD,
-Date: 6 Aug, 2025
-Day: Wednesday,
+Date: 7 Aug, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
 Project: Royal Crucible,
-1. Applied all changes as per the review points shared by Disha for the Royal Crucible website.
-2. About Crucible Page
-	- Developed the entire About Crucible page.
-	- Added all relevant content from the Royal Crucible source.
-	- Implemented Framer Motion for smooth entry animations.
-3. Add Content of royal Crucible website in Home, Header, Footer, About Us, About Crucible, Gallery, Content pages.
-4. Removed all unwanted comments and console logs from all files across the project.
-5. Making final design/content changes to the Home Page based on feedback from Vashik Sir and Rahul Sir. - In Progress.
+1. Hero Section Updates
+  - Recreated the Hero Section to match the Royal Crucible website design.
+  - Applied Framer Motion animations (different animations for different elements).
+  - Added the "Expertise" section and "Side Products" section within the Hero module.
+2. Home Page Adjustments
+  - Reduced top and bottom paddings/margins across sections for a cleaner, more compact layout.
+  - Finalized all content and design tweaks based on review feedback from Vashik Sir and Rahul Sir.
+
+3. Products Page Enhancements
+  - Collected and referred to the zip copy of Royal Crucible project (where Disha had worked on the Product page).
+  - Made necessary style updates to align with the Royal Crucible theme.
+  - Added and modified code related to the Product module functionality.
+
+4. Footer Module
+  - Added social media links (e.g., Facebook, LinkedIn, Instagram, etc.) to the footer as per Royal Crucible content.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
