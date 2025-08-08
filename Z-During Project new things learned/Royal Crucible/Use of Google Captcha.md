@@ -27,9 +27,6 @@
 ### Step 3: Add the reCAPTCHA Widget in Your Form
 
 ```html
-<!-- Head -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 <!-- Body -->
 <form action="/submit" method="POST">
   <!-- Your input fields -->
