@@ -22,7 +22,7 @@ router.post('/product', (req, res, next) => {
     // console.log(ProductData);
 
     //      OR
-    const product = new productData(req.body.title);
+    const product = new productData(req.body.title); // Create an instance
     product.save();
 })
 

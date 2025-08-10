@@ -25,7 +25,3 @@
 - Go Back to Learn Express Framework
 
 [Express is a Framework of Node](../Basics/intro.md)
-
-- Go Next Topic is MVC (Models, Views, Controllers)
-
-[MVC to maintain Proper structure of app](../MVC/intro.md)

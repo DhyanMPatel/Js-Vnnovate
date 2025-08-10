@@ -1,8 +1,7 @@
-const products = [];
 const path = require('path');
 const fs = require('fs');
 
-const p = path.join(path.dirname(process.mainModule.filename), 'data','products.json');
+const p = path.join(path.dirname(process.mainModule.filename), 'data','products.json'); // OR path.dirname(require.main.filename)
 module.exports = class productData {
     constructor(t) {
         this.title = t;
