@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const { rootDir } = require('../utils/path');
+const Product = require('../Models/product');
 
 const router = express.Router();
 
@@ -13,7 +14,14 @@ const router = express.Router();
 
 /// Use Pug Template engine
 router.get('/', (req, res, next) => {
-    res.render("shop"); // This will automatically look for shop.pug file in views folder and render it.
+    Product.fetchAll(products => {
+        console.log(products, "Product Data for Shop");
+        res.render("shop", { 
+            products: products || [],
+            pageTitle: 'Shop',
+            path: '/'
+        });
+    });
 })
 
 module.exports = router;

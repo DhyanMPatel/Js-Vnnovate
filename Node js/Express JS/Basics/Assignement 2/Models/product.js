@@ -25,15 +25,13 @@ module.exports = class productData {
         // products.push(this);
     }
 
-    static fetchAll() {
-
+    static fetchAll(cb) {
         fs.readFile(p, (err, fileContent) => {
-            if(err) {
-                return [];
+            if (err) {
+                cb([]);
+            } else {
+                cb(JSON.parse(fileContent));
             }
-            return JSON.parse(fileContent);
-        })
-
-        // return products;
+        });
     }
 }

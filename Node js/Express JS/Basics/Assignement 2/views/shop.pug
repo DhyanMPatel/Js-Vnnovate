@@ -3,7 +3,7 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title #{pageTitle}
         link(rel="stylesheet", href='/css/main.css')
     body 
         header.header
@@ -17,6 +17,13 @@ html(lang="en")
                         a(href="/") Shop
         
         main.main
-            h1 Shop
+            h1 #{pageTitle}
             p List of all Products
             p Shop File from Pug Template Engine
+
+            if products.length > 0
+                ul
+                    each product in products
+                        li #{product.title}
+            else
+                p No products found.

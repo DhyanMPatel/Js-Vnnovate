@@ -204,6 +204,10 @@ html
 
 ## Note :
 
+- Go Back to Dynamic Content & Template Engine intro file
+
+[Dynamic Content & Template Engine](../intro.md)
+
 - Go Next Topic is MVC (Models, Views, Controllers)
 
 [MVC to maintain Proper structure of app](../MVC/intro.md)
