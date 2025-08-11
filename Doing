@@ -1,38 +1,36 @@
 ## Work Doing:
 
 
-Date: 8 Aug, 2025
-Day: Friday,
+Date: 11 Aug, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
-Project: Learning, 
+Project: Media site Web development, 
 
-1. Continue Learning Node and Express JS topics.
+1. Understand Requirement of Media site Web development Project.
+2. Find Theme Related based on requirement of Media site Web development Project.
 
 ## Work done:
 
 EOD,
-Date: 8 Aug, 2025
-Day: Friday,
+Date: 11 Aug, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
-Project: Royal Crucible,
-1. Hero Section Updates
-  - Recreated the Hero Section to match the Royal Crucible website design.
-  - Applied Framer Motion animations (different animations for different elements).
-  - Added the "Expertise" section and "Side Products" section within the Hero module.
-2. Home Page Adjustments
-  - Reduced top and bottom paddings/margins across sections for a cleaner, more compact layout.
-  - Finalized all content and design tweaks based on review feedback from Vashik Sir and Rahul Sir.
+Project: Media Planner,
+1. Theme Search
+  - Find a suitable theme based on the Media Planner project requirements.
+  - Explore both free and paid options, considering design, responsiveness, and tech stack compatibility.
 
-3. Products Page Enhancements
-  - Collected and referred to the zip copy of Royal Crucible project (where Disha had worked on the Product page).
-  - Made necessary style updates to align with the Royal Crucible theme.
-  - Added and modified code related to the Product module functionality.
-
-4. Footer Module
-  - Added social media links (e.g., Facebook, LinkedIn, Instagram, etc.) to the footer as per Royal Crucible content.
+2. Project Setup
+  - Create a new React project using Vite for faster builds and development.
+  - Implement basic routing for page navigation.
+  - Set up a basic Redux store for state management.
+  - Implement basic Axios configuration for API requests.
+3. Layout Module
+  - Create Sidebar, Header, and layoutHOC folders/components.
+  - Style and structure them to match the provided Figma design as closely as possible.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
@@ -169,7 +167,7 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (28 July - 1 Aug) Report of Dhyan
+**Subject**: Weekly (4 Aug - 8 Aug) Report of Dhyan
 
 
 Project: Smart Bill Book,
@@ -179,57 +177,63 @@ Git Commit Link: https://gitlab.com/vnnovatesolutions/billsmart-invoice-mgmt-sys
 
 Description:
 
-1. Theme Selection
-  - Searched both paid and free themes.
-  - Explored GitHub repositories for free templates and tested them locally.
-  - Searched for a React-based template suitable for the project.
+1. Routing & Navigation
+  - Added Multiple Routes based on the Royal Crucible project structure.
+  - Implemented 404 Page (Not Found) for unmatched routes.
+  - Designed and implemented a Working in Progress Page for under-construction pages.
 
-2. Project Installation & Setup
-  - Cloned the selected theme.
-  - Configured the theme in the local development environment.
-  - Reviewed and understood the Initial Setup zip provided by Rahul Sir.
-  - Set up the Redux store for state management.
-  - Configured React Router for page navigation.
+2. Home Page
+  - Recreated Hero Section as per Royal Crucible:
+    - Added "Expertise" and "Side Products" sections.
+    - Applied Framer Motion animations for dynamic UI.
+  - Adjusted top-bottom paddings/margins across sections.
+  - Made final content and UI changes based on feedback from Vashik Sir and Rahul Sir.
+  - Removed About and Gallery sections based on Disha’s review.
 
-3. Header Module
-  - Developed layout for laptop and large devices. 
-  - Implemented dropdown for mobile and tablet view.
+3. About Us Page
+  - Adjusted font sizes for better readability.
+  - Verified and refined page layout across all devices.
+  - Added page heading (except on the Home page).
+  - Integrated API call to submit the contact form data from this page.
+  - Integrated Google Captcha with form and passed value to API for security.
 
-4. Mobile Drawer
-  - Created drawer for mobile and tablet devices.
-  - Applied styling and made it responsive.
+4. About Crucible Page
+  - Fully developed and styled the About Crucible page.
+  - Integrated content from the Royal Crucible source.
+  - Used Framer Motion for animated transitions.
+  - Made UI changes based on Disha’s feedback.
+  - Added page heading.
 
-5. Footer Module
-  - Developed responsive footer layout for all devices. 
+5. Gallery Module
+  - Designed and implemented the Gallery section layout.
+  - Used Framer Motion for section animation.
+  - Implemented image filtering by type (UI/UX, Development, etc.).
+  - Integrated image preview via modal view.
 
-6. Landing Page Setup
-  - Created a new Landing page to serve as the Home page.
+6. Gallery Modal Module
+  - Researched and selected lightGallery for modal implementation.
+  - Started development of a reusable common modal component to show image previews.
 
-7. Hero Section
-  - Developed the Hero section in the Landing page.
-  - Styled and made it responsive for all devices.
+7. Products Page
+  - Referred to Disha's previous work via zip copy for consistency.
+  - Updated Product module logic and styles to match theme.
+  - Ensured tab remains active on /product/:id route.
 
-8. About Us Section
-  - Designed and developed the About Us section.
-  - Made it responsive for all devices.
-  - Used Swiper for testimonial auto-scroll.
+8. Contact Us Page
+  - Designed full Contact Us Page with proper folder structure.
+  - Ensured full responsiveness across mobile, tablet, and desktop.
+  - Used Formik for form handling and Yup for validation.
+  - Added toast notification after form submission.
+  - Integrated Google Captcha for spam prevention.
+  - Implemented form submission API call.
 
-9. Initial Motion with Framer Motion
-  - Researched initial motion effects for smooth transitions and entrance animations.
-  - Implemented Framer Motion animations in:
-    - Hero section
-    - About Us section
-    - Mobile Drawer
+9. Footer Module
+  - Added social media links (or kept Royal Crucible website link where applicable).
+  - Verified no social media links were missing as per confirmation with Vashik Sir.
 
-10. Learning Progress
-  - Node.js
-    - Revised Node Modules.
-    - Reviewed synchronous and asynchronous error handling patterns.
-
-  - Express.js
-    - Completed Express.js introduction and explored core features.
-    - Set up a basic Express app.
-    - Started Client Request & Response handling.
+10. General Cleanup
+  - Removed all unwanted comments and console logs across the project.
+  - Verified and standardized fonts across all pages.
 
 ## Leave Request
 
