@@ -1,36 +1,41 @@
 ## Work Doing:
 
 
-Date: 11 Aug, 2025
-Day: Monday,
+Date: 12 Aug, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 Project: Media site Web development, 
 
-1. Understand Requirement of Media site Web development Project.
-2. Find Theme Related based on requirement of Media site Web development Project.
+1. Side Menu Development
+  - Continue work on the Side Menu component.
+  - Display menu data exactly as per the Figma design.
+  - Implement routing so that clicking side menu items navigates to the correct pages.
+
+2. Layout Styling Adjustments
+  - Make style refinements in the Layout module based on the Figma design guidelines.
+  - Ensure spacing, typography, and alignment match the design specifications.
+
 
 ## Work done:
 
 EOD,
-Date: 11 Aug, 2025
-Day: Monday,
+Date: 12 Aug, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
-1. Theme Search
-  - Find a suitable theme based on the Media Planner project requirements.
-  - Explore both free and paid options, considering design, responsiveness, and tech stack compatibility.
-
-2. Project Setup
-  - Create a new React project using Vite for faster builds and development.
-  - Implement basic routing for page navigation.
-  - Set up a basic Redux store for state management.
-  - Implement basic Axios configuration for API requests.
-3. Layout Module
-  - Create Sidebar, Header, and layoutHOC folders/components.
-  - Style and structure them to match the provided Figma design as closely as possible.
+1. Side Menu
+  - Corrected logic for sidebar display.
+  - Matched sidebar layout and data display with the Figma design.
+  - Implemented routing for side menu items and ensured main content updates accordingly.
+2. Layout Module
+  - Applied style corrections to match the Figma specifications (spacing, colors, typography).
+3. Header Module
+  - Added and styled header content exactly as per Figma design.
+4. Project Setup
+  - Cloned project repository and completed local setup.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
@@ -288,3 +293,36 @@ Date : 29-May-2025
 Project : Table booking web
 commit : Commit for added
 PR :
+
+
+
+
+
+1. Sidebar (Left Panel)
+
+- Position: Fixed to the left edge of the viewport.
+- Height: 100% of the viewport height.
+- Width: ~16–18% of total viewport width.
+- Content:
+  - Brand name/logo at the top.
+  - Vertical list of navigation menu items (Dashboard, User Management, Campaign Management, Finance & Sage, Reports & Analytics).
+  - At the bottom: "Settings" and "Logout" buttons.
+
+2. Header (Top Navigation Bar)
+
+- Position: Fixed to the top, right of the sidebar.
+- Height: ~8–10% of viewport height.
+- Width: Remaining space after sidebar (~82–84% of viewport width).
+- Content:
+  - Left side: menu (hamburger) icon, search bar.
+  - Right side: notification icon, language dropdown, user profile avatar with name and role.
+
+3. Main Content Area
+
+- Position: Below the header, right of the sidebar.
+- Height: Remaining viewport height after header.
+- Width: Same as header (~82–84% of viewport width).
+- Content:
+  - Page title (e.g., "Global Admin Dashboard").
+  - Four metric cards (Total Users, Total Orders, Total Sales, Total Pending).
+  - Sales chart section.

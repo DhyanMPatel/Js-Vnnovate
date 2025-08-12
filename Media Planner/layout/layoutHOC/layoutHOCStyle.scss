@@ -1,0 +1,19 @@
+// Main layout styles
+.main-content {
+  min-height: 100vh;
+  background-color: #eff6ff;
+  padding: 24px !important;
+  transition: margin 0.3s ease, width 0.3s ease;
+}
+
+// Responsive adjustments
+@media (max-width: 960px) {
+  .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .MuiDrawer-paper {
+    width: 240px !important;
+  }
+}
