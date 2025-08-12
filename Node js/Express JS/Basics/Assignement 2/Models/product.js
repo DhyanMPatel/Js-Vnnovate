@@ -25,7 +25,7 @@ module.exports = class productData {
         // products.push(this);
     }
 
-    static fetchAll(cb) {
+    static fetchAll(cb) { // This cb is required to pass data from Model to Controller
         fs.readFile(p, (err, fileContent) => {
             if (err) {
                 cb([]);

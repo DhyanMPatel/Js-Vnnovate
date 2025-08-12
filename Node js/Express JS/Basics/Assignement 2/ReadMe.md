@@ -12,6 +12,10 @@
 
 [Express js learning](../intro.md)
 
-# If you Come from MVC folder then Go back to there After understand.
+# If you Come from `Dynamic Content & Template Engine` then Go back to there After understand.
+
+[Dynamic Content & Template Engine](../../Dynamic%20Content%20&%20Template%20Engine/intro.md)
+
+# If you Come from `MVC folder` then Go back to there After understand.
 
 [MVC](../../MVC/intro.md)

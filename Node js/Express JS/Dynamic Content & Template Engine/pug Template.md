@@ -11,16 +11,129 @@
 - **Cleaner and Readable Code**: The syntax of Pug is `designed to be clean` and `readable`, which can lead to more maintainable code. The indentation-based structure often results in templates that are visually simpler than equivalent HTML.
 - **Expressive Templates**: Pug provides a `concise` and `expressive` **way to define your HTML structure**. This can be beneficial when working on projects that involve a lot of templating and view rendering.
 
-## How to install Pug
+## How to Use Pug files
+-  This all practice is done in [Assignement 2](../Basics/Assignement%202/index.js) folder in Basics
 
-- **Installing Pug**:
+### 1. **Installing Pug**:
 
 ```bash
 npm install --save pug
-
 #  OR
-
 npm install pug
+```
+
+### 2. **Setting Pug as View Engine**:
+
+```js
+/// index.js
+app.set("view engine", "pug");
+```
+
+### 3. **Setting Views Directory**:
+
+```js
+/// index.js
+app.set("views", path.join(__dirname, "views"));
+```
+
+### 4. **Rendering Pug Template**:
+
+```js
+/// routes/shop.js
+const router = express.Router();
+
+router.get("/", (req, res, next) => {
+  Product.fetchAll((products) => {
+    res.render("shop", {
+      products: products || [],
+      pageTitle: "Shop",
+      path: "/", // This will helps to identify dynamic route in Pug Template layout.
+    });
+  });
+});
+```
+
+### 5. Use Layout if we want to reduce Boilerplate code
+
+```pug
+/// views/layouts/main-layout.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle}
+        block styles
+
+    body
+        header.header
+            nav
+                ul.lists
+                    li.list-item
+                        a(href="/admin/products", class=(path === '/admin/products' ? 'active' : '')) Products
+                    li.list-item
+                        a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add Product
+                    li.list-item
+                        a(href="/", class=(path === '/' ? 'active' : '')) Shop
+        block content
+
+//- This path is coming from routes/shop.js
+```
+
+```pug
+/// views/shop.pug
+extends layouts/main-layout.pug
+
+block content
+    main.main
+            h1 #{pageTitle}
+            p List of all Products
+            p Shop File from Pug Template Engine
+
+            if products.length > 0
+                ul
+                    each product in products
+                        li #{product.title}
+            else
+                p No products found.
+
+block styles
+    link(rel="stylesheet", href='/css/main.css')
+```
+
+### 6. If not want to use Layout
+
+```pug
+/// views/shop.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle}
+        link(rel="stylesheet", href='/css/main.css')
+    body 
+        header.header
+            nav
+                ul.lists
+                    li.list-item
+                        a(href="/admin/products") Products
+                    li.list-item
+                        a(href="/admin/add-product") Add Product
+                    li.list-item
+                        a(href="/") Shop
+        
+        main.main
+            h1 #{pageTitle}
+            p List of all Products
+            p Shop File from Pug Template Engine
+
+            if products.length > 0
+                ul
+                    each product in products
+                        li #{product.title}
+            else
+                p No products found.
 ```
 
 ## **Writing Pug Template**:
@@ -201,6 +314,63 @@ html
         // Display each course as a list item
         li= course
 ```
+
+## Reducer Boilerplate
+
+- Pug Template add one layer of Layout
+- Which is help to reduce Boilerplate code
+- There use `block` keyword which allow to override the layout. means we can dynamically change content of that block
+- If we want to use that layout then we can use `extends` keyword. which helps to use layout in other files
+
+### Example:
+
+```pug
+/// layouts/main-layout.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        block styles
+
+    body
+        header.header
+            nav
+                ul.lists
+                    li.list-item
+                        a(href="/admin/products") Products
+                    li.list-item
+                        a(href="/admin/add-product") Add Product
+                    li.list-item
+                        a(href="/") Shop
+        block content
+
+
+
+/// shop.pug
+extends layouts/main-layout.pug
+
+block content
+    main.main
+            h1 #{pageTitle}
+            p List of all Products
+            p Shop File from Pug Template Engine
+
+            if products.length > 0
+                ul
+                    each product in products
+                        li #{product.title}
+            else
+                p No products found.
+
+block styles
+    link(rel="stylesheet", href='/css/main.css')
+```
+
+- This main-layout.pug file is used to reduce boilerplate code. We can use this layout in other files by using `extends` keyword.
+
+- **Note** : Here `block name` can be in any order. It will not effect the output. just like above example
 
 ## Note :
 

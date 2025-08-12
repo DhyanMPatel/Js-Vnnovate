@@ -15,11 +15,10 @@ const router = express.Router();
 /// Use Pug Template engine
 router.get('/', (req, res, next) => {
     Product.fetchAll(products => {
-        console.log(products, "Product Data for Shop");
         res.render("shop", { 
             products: products || [],
             pageTitle: 'Shop',
-            path: '/'
+            path: '/'  // This will helps to identify dynamic route in Pug Template layout.
         });
     });
 })
