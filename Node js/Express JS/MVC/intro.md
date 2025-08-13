@@ -5,7 +5,7 @@
 - MVC stands for Module, View and Controller.
 - We write MVC structure into Assignment 2 at Basic folder.
 
-[MVC structure](../Basics/Assignement%202/ReadMe.md)
+[See MVC structure](../Basics/Assignement%202/ReadMe.md)
 
 ![What is MVC?](./What%20is%20MVC.png)
 
@@ -32,3 +32,7 @@ exports.getAddProduct = (req,res,next) => {
     res.sendFile(path.join(rootDir, 'views', 'add-product.html'))
 }
 ```
+
+![MVC understanding](./MVC%20understanding.png)
+
+![MVC Wrap up](./MVC%20Wrap%20up.png)
