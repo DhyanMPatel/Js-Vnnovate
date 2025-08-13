@@ -1,20 +1,21 @@
 ## Work Doing:
 
 
-Date: 12 Aug, 2025
-Day: Tuesday,
+Date: 13 Aug, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 Project: Media site Web development, 
 
-1. Side Menu Development
-  - Continue work on the Side Menu component.
-  - Display menu data exactly as per the Figma design.
-  - Implement routing so that clicking side menu items navigates to the correct pages.
-
-2. Layout Styling Adjustments
-  - Make style refinements in the Layout module based on the Figma design guidelines.
-  - Ensure spacing, typography, and alignment match the design specifications.
+1. Make Some changes in Side bar, Header module based on Review by Rahul sir. - Done
+  - Style changes in Company Logo for normal and collapsed menu.
+  - Use React-icons library for icons.
+  - Add Nested menu functionality in sidebar.
+  - Update design of lang and profile drawer button and created drawer too.
+2. Research
+  - Explore the i18n package for adding multi-language support in the website. - In Progress
+3. Implementation
+  - Add language switcher functionality in the header (top-right side) using i18n. - In Progress
 
 
 ## Work done:
