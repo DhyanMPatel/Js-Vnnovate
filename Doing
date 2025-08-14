@@ -1,42 +1,38 @@
 ## Work Doing:
 
 
-Date: 13 Aug, 2025
-Day: Wednesday,
+Date: 14 Aug, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
 Project: Media site Web development, 
 
-1. Make Some changes in Side bar, Header module based on Review by Rahul sir. - Done
-  - Style changes in Company Logo for normal and collapsed menu.
-  - Use React-icons library for icons.
-  - Add Nested menu functionality in sidebar.
-  - Update design of lang and profile drawer button and created drawer too.
-2. Research
-  - Explore the i18n package for adding multi-language support in the website. - In Progress
-3. Implementation
-  - Add language switcher functionality in the header (top-right side) using i18n. - In Progress
+1. Continue Add language switcher functionality in the header (top-right side) using i18n.
 
 
 ## Work done:
 
 EOD,
-Date: 12 Aug, 2025
-Day: Tuesday,
+Date: 14 Aug, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
-1. Side Menu
-  - Corrected logic for sidebar display.
-  - Matched sidebar layout and data display with the Figma design.
-  - Implemented routing for side menu items and ensured main content updates accordingly.
-2. Layout Module
-  - Applied style corrections to match the Figma specifications (spacing, colors, typography).
-3. Header Module
-  - Added and styled header content exactly as per Figma design.
-4. Project Setup
-  - Cloned project repository and completed local setup.
+
+1. Implemented language switcher functionality in the header.
+2. Applied language changes to:
+  - Header module
+  - Sidebar module
+  - Register page
+  - Login page
+  - Verify OTP - In Progress
+3. Verify OTP Page:
+  - Identified "Submit OTP" unwanted issue with Rahul Sir.
+4. Sign In Page:
+  - Used Formik for form handling and Yup for validation.
+  - Integrated API for login.
+
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
