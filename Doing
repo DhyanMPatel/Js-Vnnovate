@@ -173,73 +173,66 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (4 Aug - 8 Aug) Report of Dhyan
+**Subject**: Weekly (11 Aug - 14 Aug) Report of Dhyan
 
 
-Project: Smart Bill Book,
+Project: Media Planner,
 
-Git Commit ID: fb7946350948018e25a5524ebedab56a6dc97eb5
-Git Commit Link: https://gitlab.com/vnnovatesolutions/billsmart-invoice-mgmt-system/-/commit/fb7946350948018e25a5524ebedab56a6dc97eb5
+Git Commit ID: 8e1dc45ae025b9ae351497b25022aaaf17c12288
+Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/8e1dc45ae025b9ae351497b25022aaaf17c12288
 
 Description:
 
-1. Routing & Navigation
-  - Added Multiple Routes based on the Royal Crucible project structure.
-  - Implemented 404 Page (Not Found) for unmatched routes.
-  - Designed and implemented a Working in Progress Page for under-construction pages.
+1. Project Setup
+  - Created a new React project using Vite for faster builds and development.
+  - Implemented basic routing for page navigation.
+  - Set up a Redux store for state management.
+  - Configured Axios for API requests.
+  - Cloned project repository and completed local setup.
+  - Implemented persist in Redux store.
 
-2. Home Page
-  - Recreated Hero Section as per Royal Crucible:
-    - Added "Expertise" and "Side Products" sections.
-    - Applied Framer Motion animations for dynamic UI.
-  - Adjusted top-bottom paddings/margins across sections.
-  - Made final content and UI changes based on feedback from Vashik Sir and Rahul Sir.
-  - Removed About and Gallery sections based on Disha’s review.
+2. Layout Module
 
-3. About Us Page
-  - Adjusted font sizes for better readability.
-  - Verified and refined page layout across all devices.
-  - Added page heading (except on the Home page).
-  - Integrated API call to submit the contact form data from this page.
-  - Integrated Google Captcha with form and passed value to API for security.
+  - Created Sidebar, Header, and layoutHOC folders/components.
+  - Styled and structured them to match the provided Figma design.
+  - Applied style corrections (spacing, colors, typography) as per Figma.
+  - Corrected sidebar display logic.
+  - Matched sidebar layout and data display with Figma design.
+  - Implemented routing for sidebar menu items and ensured main content updates accordingly.
 
-4. About Crucible Page
-  - Fully developed and styled the About Crucible page.
-  - Integrated content from the Royal Crucible source.
-  - Used Framer Motion for animated transitions.
-  - Made UI changes based on Disha’s feedback.
-  - Added page heading.
+3. Sidebar Module
 
-5. Gallery Module
-  - Designed and implemented the Gallery section layout.
-  - Used Framer Motion for section animation.
-  - Implemented image filtering by type (UI/UX, Development, etc.).
-  - Integrated image preview via modal view.
+  - Made style changes in Company Logo for normal and collapsed menu.
+  - Used React-icons library for icons.
+  - Added Nested menu functionality.
 
-6. Gallery Modal Module
-  - Researched and selected lightGallery for modal implementation.
-  - Started development of a reusable common modal component to show image previews.
+4. Header Module
 
-7. Products Page
-  - Referred to Disha's previous work via zip copy for consistency.
-  - Updated Product module logic and styles to match theme.
-  - Ensured tab remains active on /product/:id route.
+  - Added and styled header content exactly as per Figma design.
+  - Updated design of language and profile drawer buttons and created the drawer.
+  - Implemented language switcher functionality (top-right side) using i18n.
 
-8. Contact Us Page
-  - Designed full Contact Us Page with proper folder structure.
-  - Ensured full responsiveness across mobile, tablet, and desktop.
-  - Used Formik for form handling and Yup for validation.
-  - Added toast notification after form submission.
-  - Integrated Google Captcha for spam prevention.
-  - Implemented form submission API call.
+5. Authentication Module
 
-9. Footer Module
-  - Added social media links (or kept Royal Crucible website link where applicable).
-  - Verified no social media links were missing as per confirmation with Vashik Sir.
+  - Register Page: Applied language switcher changes.
+  - Login Page:
+    - Used Formik for form handling.
+    - Used Yup for validation.
+    - Integrated API for login.
+  - Verify OTP Page:
+    - Language changes in progress.
+    - Identified “Submit OTP” unwanted reload issue with Rahul Sir.
 
-10. General Cleanup
-  - Removed all unwanted comments and console logs across the project.
-  - Verified and standardized fonts across all pages.
+6. Multi-language (i18n) Integration
+
+  - Researched i18n package for adding multi-language support.
+
+  - Implemented language switcher functionality in:
+    - Header module
+    - Sidebar module
+    - Register page
+    - Login page
+    - Verify OTP (In Progress)
 
 ## Leave Request
 
