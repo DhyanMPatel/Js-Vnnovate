@@ -1,37 +1,39 @@
 ## Work Doing:
 
 
-Date: 14 Aug, 2025
-Day: Thursday,
+Date: 18 Aug, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
-Project: Media site Web development, 
+Project: Media Planner,
 
-1. Continue Add language switcher functionality in the header (top-right side) using i18n.
-
+1. Common Component
+  - Create a reusable Common Component for the "Create Item" functionality to ensure consistency across modules.
+2. Client Management Module
+  - Start working on the Client Management Module.
 
 ## Work done:
 
 EOD,
-Date: 14 Aug, 2025
-Day: Thursday,
+Date: 18 Aug, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Implemented language switcher functionality in the header.
-2. Applied language changes to:
-  - Header module
-  - Sidebar module
-  - Register page
-  - Login page
-  - Verify OTP - In Progress
-3. Verify OTP Page:
-  - Identified "Submit OTP" unwanted issue with Rahul Sir.
-4. Sign In Page:
-  - Used Formik for form handling and Yup for validation.
-  - Integrated API for login.
+1. Common Components
+  - Create Common Modal Component
+  - Create Text Input Component
+
+2. User Management Module
+  - Add "Add User" button in User Management Module that triggers the Common Modal
+  - Implement Form Handling (Formik)
+  - Implement Form Validation (Yup)
+
+3. Client Management Module (In Progress)
+  - Implement API integration for client-related data
+  - Design module as per Figma design
 
 
 
