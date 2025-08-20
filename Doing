@@ -1,33 +1,32 @@
 ## Work Doing:
 
 
-Date: 19 Aug, 2025
-Day: Tuesday,
+Date: 20 Aug, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-1. Continue work on Client Management Module.
+1. Modify Common modal popup to work as a sweet alert too.
 
 ## Work done:
 
 EOD,
-Date: 19 Aug, 2025
-Day: Tuesday,
+Date: 20 Aug, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Common Components
-	- Create Form Title Component - Done
-	- Create footer Button Component - Done
-	- Create Status Chip Component - Done
-2. Client Management Module
-	- Add Table and display client list. - Done
-	- Use i18n feature for client Management and add client module. - Done
-	- Implement delete client functionality. - Done
-	- Implement edit client functionality. - Done
+1. Format Master Module - Done
+	- Implement CRUD Operation with Static Data.
+	- Implement Validation using Yup with formik.
+	- Implement UI screens.
+2. Language Master Module - Done
+	- Implement CRUD Operation with Static Data.
+	- Implement Validation using Yup with formik.
+	- Implement UI screens.
 
 
 

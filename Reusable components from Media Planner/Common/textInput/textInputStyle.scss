@@ -1,0 +1,45 @@
+.required-asterisk {
+  color: #f5222d;
+  margin-left: 4px;
+}
+
+.form-field {
+  font-family: inherit !important;
+}
+.form-field .MuiOutlinedInput-root {
+  border-radius: 6px;
+  background-color: #fafafa;
+  font-family: inherit !important;
+
+  &:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #40a9ff;
+  }
+}
+.form-field .Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+.form-field .MuiInputLabel-root {
+  color: #595959;
+  font-size: 14px;
+  transform: translate(14px, 16px) scale(1);
+
+  &.Mui-focused {
+    color: #1890ff;
+  }
+}
+.form-field .MuiInputBase-input {
+  padding: 12px 14px;
+  font-size: 0.875rem; // 14px
+  color: #1a1a1a;
+  font-family: inherit !important;
+}
+.MuiInputBase-input::placeholder {
+  color: #a3a3a3;
+  opacity: 1;
+}
+.form-field .Mui-error.Mui-focused .MuiOutlinedInput-notchedOutline,
+.form-field .Mui-error:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #f5222d !important;
+  box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2) !important;
+}

@@ -1,0 +1,18 @@
+.client-management .client-management__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.client-management .client-management__title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  font-family: inherit;
+}
+
+.client-management .create-client-btn {
+  border-radius: 5px;
+}
