@@ -1,25 +1,22 @@
 import { Box, Button, IconButton, Typography } from "@mui/material";
 import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
 import { FiEdit2, FiTrash2 } from "react-icons/fi";
 import { MdOutlineGroupAdd } from "react-icons/md";
-import { StatusChipContainer } from "../../../common";
 import DataTableContainer from "../../../common/dataTable/dataTableContainer";
-import "./formatStyle.scss";
+import "./timeStyle.scss";
 
-const FormatView = (props) => {
-  const { t } = useTranslation();
+const TimeView = (props) => {
   const {
-    formats,
+    timeSlots,
     loading,
     totalItems,
     currentPage,
     pageSize,
     totalPages,
-    fetchFormats,
-    onAddFormat,
-    onEditFormat,
-    onDeleteFormat,
+    fetchTimeSlots,
+    onAddTimeSlot,
+    onEditTimeSlot,
+    onDeleteTimeSlot,
   } = props;
 
   const columns = useMemo(
@@ -30,42 +27,34 @@ const FormatView = (props) => {
       },
       {
         accessorKey: "name",
-        header: "name",
+        header: "Name",
       },
       {
-        accessorKey: "description",
-        header: "description",
+        accessorKey: "start_time",
+        header: "Start Time",
       },
       {
-        accessorKey: "allowed_sizes",
-        header: "Allowed Sizes",
-      },
-      {
-        accessorKey: "allowed_durations",
-        header: "Allowed Durations",
-      },
-      {
-        accessorKey: "cost_parameters",
-        header: "Cost Parameters",
+        accessorKey: "end_time",
+        header: "End Time",
       },
       {
         id: "actions",
         header: "Actions",
         cell: ({ row }) => {
-          const format = row.original;
+          const timeSlot = row.original;
           return (
             <Box sx={{ display: "flex", gap: 1 }}>
               <IconButton
                 size="small"
                 color="primary"
-                onClick={() => onEditFormat(format)}
+                onClick={() => onEditTimeSlot(timeSlot)}
               >
                 <FiEdit2 size={16} />
               </IconButton>
               <IconButton
                 size="small"
                 color="error"
-                onClick={() => onDeleteFormat(format.id)}
+                onClick={() => onDeleteTimeSlot(timeSlot.id)}
               >
                 <FiTrash2 size={16} />
               </IconButton>
@@ -81,32 +70,30 @@ const FormatView = (props) => {
     <Box className="client-management">
       <Box className="client-management__header">
         <Typography component="h1" className="client-management__title">
-          {/* {t("clientManagement.title")} */}
-          fomat Master
+          Time Slot Master
         </Typography>
         <Button
           variant="contained"
           color="primary"
-          onClick={onAddFormat}
+          onClick={onAddTimeSlot}
           startIcon={<MdOutlineGroupAdd />}
           className="create-client-btn"
         >
-          {/* {t("clientManagement.addClient")} */}
-          add Format
+          add Time Slot
         </Button>
       </Box>
 
       {/* Table */}
       <DataTableContainer
-        title={"Format Master List"}
-        data={formats || []}
+        title={"Time Slot Master List"}
+        data={timeSlots || []}
         columns={columns}
         loading={loading}
         totalItems={totalItems}
-        fetchData={fetchFormats}
+        fetchData={fetchTimeSlots}
       />
     </Box>
   );
 };
 
-export default FormatView;
+export default TimeView;

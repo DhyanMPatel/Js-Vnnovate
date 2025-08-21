@@ -1,32 +1,47 @@
 ## Work Doing:
 
 
-Date: 20 Aug, 2025
-Day: Wednesday,
+Date: 21 Aug, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-1. Modify Common modal popup to work as a sweet alert too.
+1. Work on CRUD of Time Slot Master, Size Master and Placement / Position Master modules.
 
 ## Work done:
 
 EOD,
-Date: 20 Aug, 2025
-Day: Wednesday,
+Date: 21 Aug, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Format Master Module - Done
-	- Implement CRUD Operation with Static Data.
-	- Implement Validation using Yup with formik.
-	- Implement UI screens.
-2. Language Master Module - Done
-	- Implement CRUD Operation with Static Data.
-	- Implement Validation using Yup with formik.
-	- Implement UI screens.
+1. Position Master Module
+
+  - Implement CRUD Operation with Static Data
+  - Implement Validation (Formik + Yup)
+  - Implement UI Screens
+
+2. Size Master Module
+
+  - Implement CRUD Operation with Static Data
+  - Implement Validation (Formik + Yup)
+  - Implement UI Screens
+
+3. Time Slot Master Module
+
+  - Implement CRUD Operation with Static Data
+  - Implement Validation (Formik + Yup)
+  - Implement UI Screens
+
+4. Modified Text Input Common Component
+  - Added Time Field support for time-related inputs
+
+5. Time Slot Master Module (API Integration)
+  - API Integration – In Progress
 
 
 

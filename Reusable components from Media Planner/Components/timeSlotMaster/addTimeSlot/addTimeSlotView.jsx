@@ -1,20 +1,22 @@
+import { Box, Button, MenuItem } from "@mui/material";
 import React from "react";
 import { ModalContainer, TextInputContainer } from "../../../common";
-import { Box, Button, MenuItem } from "@mui/material";
+import "./AddTimeSlotStyle.scss";
 
-const EditFormatView = ({
-  isModalOpen,
-  toggleModal,
-  handleSubmit,
-  validationSchema,
-  initialValues,
-  loading,
-}) => {
+const AddTimeSlotView = (props) => {
+  const {
+    isModalOpen,
+    toggleModal,
+    handleSubmit,
+    validationSchema,
+    initialValues,
+    loading,
+  } = props;
   return (
     <ModalContainer
       isOpen={isModalOpen}
       onClose={toggleModal}
-      title="Add New Format"
+      title="Add New Time Slot"
       initialValues={initialValues}
       validationSchema={validationSchema}
       formikHandleFormSubmit={handleSubmit}
@@ -47,66 +49,45 @@ const EditFormatView = ({
             <TextInputContainer
               name="name"
               label="Name"
-              placeholder="Enter name"
               required
-              formikProps={formikProps}
-              className="full-width"
-            />
-          </Box>
-          <Box className="form-field">
-            <TextInputContainer
-              name="description"
-              label="Description"
-              placeholder="Enter description"
-              formikProps={formikProps}
-              required
-              multiline
-              rows={4}
-              inputProps={{ maxLength: 250 }}
-              className="full-width"
-            />
-            <span className="char-count">
-              {formikProps.values.description.length}/250 characters
-            </span>
-          </Box>
-          <Box className="form-field">
-            <TextInputContainer
-              name="allowed_sizes"
-              label="Allowed Sizes"
-              placeholder="Select allowed sizes"
               formikProps={formikProps}
               select
               className="full-width"
             >
-              <MenuItem
-                value="Leaderboard (728x90)"
-                label="Leaderboard (728x90)"
-              >
-                Leaderboard (728x90)
+              <MenuItem value="Morning" label="Morning">
+                Morning
               </MenuItem>
-              <MenuItem value="Square (1:1)" label="Square (1:1)">
-                Square (1:1)
+              <MenuItem value="Afternoon" label="Afternoon">
+                Afternoon
+              </MenuItem>
+              <MenuItem value="Evening" label="Evening">
+                Evening
+              </MenuItem>
+              <MenuItem value="Prime Time" label="Prime Time">
+                Prime Time
               </MenuItem>
             </TextInputContainer>
           </Box>
           <Box className="form-field">
             <TextInputContainer
-              name="allowed_durations"
-              label="Allowed Durations"
-              placeholder="Select allowed durations"
+              name="start_time"
+              label="Start Time"
+              required
               formikProps={formikProps}
-              select
               className="full-width"
-            >
-              <MenuItem value="15 seconds" label="15 seconds">
-                15 seconds
-              </MenuItem>
-              <MenuItem value="30 seconds" label="30 seconds">
-                30 seconds
-              </MenuItem>
-            </TextInputContainer>
+              isTime={true}
+            />
           </Box>
-
+          <Box className="form-field">
+            <TextInputContainer
+              name="end_time"
+              label="End Time"
+              required
+              formikProps={formikProps}
+              className="full-width"
+              isTime={true}
+            />
+          </Box>
           <Box className="modal-actions" sx={{ display: "flex", gap: 1 }}>
             <Button
               type="button"
@@ -139,4 +120,4 @@ const EditFormatView = ({
   );
 };
 
-export default EditFormatView;
+export default AddTimeSlotView;

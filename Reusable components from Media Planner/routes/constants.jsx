@@ -4,6 +4,9 @@ import {
   EditClientContainer,
   FormatContainer,
   LangContainer,
+  PositionContainer,
+  SizeContainer,
+  TimeContainer,
   UserManagementContainer,
 } from "../components";
 import SigninContainer from "../components/auth/signin/signInContainer";
@@ -12,7 +15,10 @@ import VerifyOtp from "../components/auth/verifyOtp/verifyOtpContainer";
 import AddDurationContainer from "../components/durationsManagement/addDuration/AddDurationContainer";
 import DurationsListContainer from "../components/durationsManagement/durationsList/durationsListContainer";
 import EditDurationContainer from "../components/durationsManagement/editDuration/EditDurationContainer";
+import ListLocationMasterContainer from "../components/LocationMaster/listLocationMaster/listLocationMasterContainer";
+import ListMediaCostMasterContainer from "../components/mediaCostMaster/listMediaCostMaster/listMediaCostMasterContainer";
 import MediaTypeMasterContainer from "../components/mediaTypeMaster/listMediaTypeMaster/mediaTypeMasterContainer";
+import ListPublisherMasterContainer from "../components/publisherMaster/listPublisherMaster/listPublisherMasterContainer";
 import AddVendorContainer from "../components/vendorManagement/addVendor/addVendorContainer";
 import EditVendorContainer from "../components/vendorManagement/editVendor/editVendorContainer";
 import VendorManagementContainer from "../components/vendorManagement/vendorList/vendorListManagementContainer";
@@ -38,13 +44,18 @@ const addClient = "/client-management/add";
 const updateClient = "/client-management/:id";
 const dataTableExample = "/data-table-example";
 const mediaTypeMaster = "/media-type-master";
-
+const publisherMaster = "/publisher-master";
+const mediaCostMaster = "/media-cost-master";
+const locationMaster = "/location-master";
 const durationsManagement = "/durations-management";
 const addDuration = "/durations-management/add";
 const editDuration = "/durations-management/:id/edit";
 
 const FormatMaster = "/format-master";
 const LangMaster = '/lang-master';
+const positionMaster = '/position-master';
+const sizeMaster = '/size-master';
+const timeSlot = '/time-slot-master';
 
 export {
   add,
@@ -70,6 +81,9 @@ export {
   verifyOtp,
   FormatMaster,
   LangMaster,
+  positionMaster,
+  sizeMaster,
+  timeSlot,
 };
 
 const allRoutes = [
@@ -108,6 +122,21 @@ const allRoutes = [
         id: "media-type-master",
         path: mediaTypeMaster,
         element: <MediaTypeMasterContainer />,
+      },
+      {
+        id: "publisher-master",
+        path: publisherMaster,
+        element: <ListPublisherMasterContainer />,
+      },
+      {
+        id: "media-cost-master",
+        path: mediaCostMaster,
+        element: <ListMediaCostMasterContainer />,
+      },
+      {
+        id: "location-master",
+        path: locationMaster,
+        element: <ListLocationMasterContainer />,
       },
       {
         id: "settings",
@@ -183,6 +212,21 @@ const allRoutes = [
         id: "lang-master",
         path: LangMaster,
         element: <LangContainer />,
+      },
+      {
+        id: "position-master",
+        path: positionMaster,
+        element: <PositionContainer />,
+      },
+      {
+        id: "time-slot-master",
+        path: timeSlot,
+        element: <TimeContainer />,
+      },
+      {
+        id: "size-master",
+        path: sizeMaster,
+        element: <SizeContainer />,
       },
 
       // Redirect any unmatched paths to dashboard

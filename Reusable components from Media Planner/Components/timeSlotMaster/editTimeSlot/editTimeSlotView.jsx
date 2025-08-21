@@ -1,18 +1,9 @@
-import { Box, Button, Divider, Grid, MenuItem, Paper, Typography } from "@mui/material";
+import { Box, Button, MenuItem } from "@mui/material";
 import React from "react";
-import {
-  //   FormBtnsContainer,
-  //   FormTitleContainer,
-  ModalContainer,
-  TextInputContainer,
-} from "../../../common";
-// import {
-//   initialValues,
-//   validationSchema,
-// } from "../../../utils/clientManagementConstants";
-import "./AddFormatStyle.scss";
+import { ModalContainer, TextInputContainer } from "../../../common";
+import "./editTimeSlotStyle.scss";
 
-const AddFormatView = ({
+const EditTimeSlotView = ({
   isModalOpen,
   toggleModal,
   handleSubmit,
@@ -24,7 +15,7 @@ const AddFormatView = ({
     <ModalContainer
       isOpen={isModalOpen}
       onClose={toggleModal}
-      title="Add New Format"
+      title="Update Time Slot"
       initialValues={initialValues}
       validationSchema={validationSchema}
       formikHandleFormSubmit={handleSubmit}
@@ -57,67 +48,44 @@ const AddFormatView = ({
             <TextInputContainer
               name="name"
               label="Name"
-              placeholder="Enter name"
               required
-              formikProps={formikProps}
-              className="full-width"
-            />
-          </Box>
-          <Box className="form-field">
-            <TextInputContainer
-              name="description"
-              label="Description"
-              placeholder="Enter description"
-              formikProps={formikProps}
-              required
-              multiline
-              rows={4}
-              inputProps={{ maxLength: 250 }}
-              className="full-width"
-            />
-            <span className="char-count">
-              {formikProps.values.description.length}/250 characters
-            </span>
-          </Box>
-          <Box className="form-field">
-            <TextInputContainer
-              name="allowed_sizes"
-              label="Allowed Sizes"
-              placeholder="Select allowed sizes"
               formikProps={formikProps}
               select
               className="full-width"
             >
-              <MenuItem
-                value="Leaderboard (728x90)"
-                label="Leaderboard (728x90)"
-              >
-                Leaderboard (728x90)
+              <MenuItem value="Morning" label="Morning">
+                Morning
               </MenuItem>
-              <MenuItem
-                value="Square (1:1)"
-                label="Square (1:1)"
-              >
-                Square (1:1)
+              <MenuItem value="Afternoon" label="Afternoon">
+                Afternoon
+              </MenuItem>
+              <MenuItem value="Evening" label="Evening">
+                Evening
+              </MenuItem>
+              <MenuItem value="Prime Time" label="Prime Time">
+                Prime Time
               </MenuItem>
             </TextInputContainer>
           </Box>
           <Box className="form-field">
             <TextInputContainer
-              name="allowed_durations"
-              label="Allowed Durations"
-              placeholder="Select allowed durations"
+              name="start_time"
+              label="Start Time"
+              required
               formikProps={formikProps}
-              select
               className="full-width"
-            >
-              <MenuItem value="15 seconds" label="15 seconds">
-                15 seconds
-              </MenuItem>
-              <MenuItem value="30 seconds" label="30 seconds">
-                30 seconds
-              </MenuItem>
-            </TextInputContainer>
+              isTime={true}
+            />
+          </Box>
+          <Box className="form-field">
+            <TextInputContainer
+              name="end_time"
+              label="End Time"
+              required
+              formikProps={formikProps}
+              className="full-width"
+              isTime={true}
+            />
           </Box>
 
           <Box className="modal-actions" sx={{ display: "flex", gap: 1 }}>
@@ -143,7 +111,7 @@ const AddFormatView = ({
                 "&:hover": { backgroundColor: "#1565c0" },
               }}
             >
-              Save
+              Update
             </Button>
           </Box>
         </div>
@@ -152,4 +120,4 @@ const AddFormatView = ({
   );
 };
 
-export default AddFormatView;
+export default EditTimeSlotView;

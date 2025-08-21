@@ -12,6 +12,7 @@ const TextInputContainer = ({
   rows,
   maxRows,
   multiline,
+  isTime,
   ...props
 }) => {
   return (
@@ -26,6 +27,7 @@ const TextInputContainer = ({
       rows={rows}
       maxRows={maxRows}
       multiline={multiline}
+      isTime={isTime}
       {...props}
     />
   );
