@@ -179,66 +179,64 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (11 Aug - 14 Aug) Report of Dhyan
+**Subject**: Weekly (18 Aug - 22 Aug) Report of Dhyan
 
 
 Project: Media Planner,
 
-Git Commit ID: 8e1dc45ae025b9ae351497b25022aaaf17c12288
-Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/8e1dc45ae025b9ae351497b25022aaaf17c12288
+Git Commit ID: 
+Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/
 
 Description:
 
-1. Project Setup
-  - Created a new React project using Vite for faster builds and development.
-  - Implemented basic routing for page navigation.
-  - Set up a Redux store for state management.
-  - Configured Axios for API requests.
-  - Cloned project repository and completed local setup.
-  - Implemented persist in Redux store.
+1. Common Components
+  - Created Common Modal Component
+  - Created Text Input Component (with added Time Field support)
+  - Created Form Title Component
+  - Created Footer Button Component
+  - Created Status Chip Component
 
-2. Layout Module
+2. User Management Module
+  - Added "Add User" button to trigger Common Modal
+  - Implemented Form Handling (Formik)
+  - Implemented Form Validation (Yup)
 
-  - Created Sidebar, Header, and layoutHOC folders/components.
-  - Styled and structured them to match the provided Figma design.
-  - Applied style corrections (spacing, colors, typography) as per Figma.
-  - Corrected sidebar display logic.
-  - Matched sidebar layout and data display with Figma design.
-  - Implemented routing for sidebar menu items and ensured main content updates accordingly.
+3. Client Management Module
+  - Implemented API Integration for client-related data
+  - Designed UI as per Figma design
+  - Added Table to display client list
+  - Implemented i18n support for Client Management
+  - Implemented Delete Client functionality with SweetAlert confirmation
+  - Implemented Edit Client functionality
 
-3. Sidebar Module
+4. Master Modules
+  - Format Master Module ✅
+    - CRUD Operations with static data
+    - Validation (Formik + Yup)
+    - Implemented UI screens
 
-  - Made style changes in Company Logo for normal and collapsed menu.
-  - Used React-icons library for icons.
-  - Added Nested menu functionality.
+  - Language Master Module ✅
+    - CRUD Operations with static data
+    - Validation (Formik + Yup)
+    - Implemented UI screens
 
-4. Header Module
+  - Position Master Module ✅
+    - CRUD Operations with static data
+    - Validation (Formik + Yup)
+    - Implemented UI screens
 
-  - Added and styled header content exactly as per Figma design.
-  - Updated design of language and profile drawer buttons and created the drawer.
-  - Implemented language switcher functionality (top-right side) using i18n.
+  - Size Master Module ✅
+    - CRUD Operations with static data
+    - Validation (Formik + Yup)
+    - Implemented UI screens
+    - API Integration (Completed)
 
-5. Authentication Module
+  - Time Slot Master Module ✅
+    - CRUD Operations with static data
+    - Validation (Formik + Yup)
+    - Implemented UI screens
+    - API Integration (Completed)
 
-  - Register Page: Applied language switcher changes.
-  - Login Page:
-    - Used Formik for form handling.
-    - Used Yup for validation.
-    - Integrated API for login.
-  - Verify OTP Page:
-    - Language changes in progress.
-    - Identified “Submit OTP” unwanted reload issue with Rahul Sir.
-
-6. Multi-language (i18n) Integration
-
-  - Researched i18n package for adding multi-language support.
-
-  - Implemented language switcher functionality in:
-    - Header module
-    - Sidebar module
-    - Register page
-    - Login page
-    - Verify OTP (In Progress)
 
 ## Leave Request
 
