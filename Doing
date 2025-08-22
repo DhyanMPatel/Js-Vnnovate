@@ -1,47 +1,27 @@
 ## Work Doing:
 
-
-Date: 21 Aug, 2025
-Day: Thursday,
+Date: 22 Aug, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-1. Work on CRUD of Time Slot Master, Size Master and Placement / Position Master modules.
+1. Make changes in API request parameter based on API.
+2. Work on API Integration on with testing:
+	- Time slot master module
+	- Size master module
 
 ## Work done:
 
 EOD,
-Date: 21 Aug, 2025
-Day: Thursday,
+Date: 22 Aug, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Position Master Module
 
-  - Implement CRUD Operation with Static Data
-  - Implement Validation (Formik + Yup)
-  - Implement UI Screens
-
-2. Size Master Module
-
-  - Implement CRUD Operation with Static Data
-  - Implement Validation (Formik + Yup)
-  - Implement UI Screens
-
-3. Time Slot Master Module
-
-  - Implement CRUD Operation with Static Data
-  - Implement Validation (Formik + Yup)
-  - Implement UI Screens
-
-4. Modified Text Input Common Component
-  - Added Time Field support for time-related inputs
-
-5. Time Slot Master Module (API Integration)
-  - API Integration – In Progress
 
 
 
@@ -210,33 +190,34 @@ Description:
   - Implemented Edit Client functionality
 
 4. Master Modules
-  - Format Master Module ✅
+  - Format Master Module 
     - CRUD Operations with static data
     - Validation (Formik + Yup)
     - Implemented UI screens
 
-  - Language Master Module ✅
+  - Language Master Module
     - CRUD Operations with static data
     - Validation (Formik + Yup)
     - Implemented UI screens
 
-  - Position Master Module ✅
+  - Position Master Module
     - CRUD Operations with static data
     - Validation (Formik + Yup)
     - Implemented UI screens
 
-  - Size Master Module ✅
+  - Size Master Module
     - CRUD Operations with static data
     - Validation (Formik + Yup)
     - Implemented UI screens
-    - API Integration (Completed)
 
-  - Time Slot Master Module ✅
+  - Time Slot Master Module
     - CRUD Operations with static data
     - Validation (Formik + Yup)
     - Implemented UI screens
-    - API Integration (Completed)
 
+5. API Integration with testing
+  - Time Slot Master Module
+  - Size Master Module
 
 ## Leave Request
 
