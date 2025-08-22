@@ -14,9 +14,9 @@ const AddTimeSlotContainer = ({ isModalOpen, toggleModal }) => {
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
-      const id = dummyTimeSlots.length + 1;
+      // const id = dummyTimeSlots.length + 1;
 
-      await dispatch(createTimeSlot({ id, ...values }));
+      await dispatch(createTimeSlot(values)).unwrap();
       resetForm();
       toggleModal();
     } catch (error) {

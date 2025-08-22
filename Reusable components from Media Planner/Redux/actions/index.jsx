@@ -309,20 +309,24 @@ export const createTimeSlotAPI = async (timeSlotData) => {
   // return { data: timeSlotData };
 };
 export const getTimeSlotsAPI = async (params) => {
-  // const response = await axiosInstance.get("/timebands", {
-  //   params,
-  // });
-  return {data: dummyTimeSlots};
+  const response = await axiosInstance.get("/timebands", {
+    params,
+  });
+  return response;
+  // return {data: dummyTimeSlots};
 };
 export const getTimeSlotByIdAPI = async (id) => {
-  // const response = await axiosInstance.get(`/timebands/${id}`);
-  return {data: dummyTimeSlots.find((timeSlot) => timeSlot.id === id)};
+  const response = await axiosInstance.get(`/timebands/${id}`);
+  return response;
+  // return {data: dummyTimeSlots.find((timeSlot) => timeSlot.id === id)};
 };
-export const updateTimeSlotAPI = async (id, sizeData) => {
-  // const response = await axiosInstance.put(`/timebands/${id}`, sizeData);
-  return {data: {id, ...sizeData }};
+export const updateTimeSlotAPI = async (id, timeSlotData) => {
+  const response = await axiosInstance.put(`/timebands/${id}`, timeSlotData);
+  return response;
+  // return {data: {id, ...timeSlotData }};
 };
 export const deleteTimeSlotAPI = async (id) => {
-  // const response = await axiosInstance.delete(`/timebands/${id}`);
-  return {data: dummyTimeSlots.find((timeSlot) => timeSlot.id == id)};
+  const response = await axiosInstance.delete(`/timebands/${id}`);
+  return response;
+  // return {data: dummyTimeSlots.find((timeSlot) => timeSlot.id == id)};
 };

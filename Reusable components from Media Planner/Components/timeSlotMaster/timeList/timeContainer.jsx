@@ -37,7 +37,7 @@ const TimeContainer = () => {
   };
 
   useEffect(() => {
-    getTimeSlots({ pageIndex: currentPage - 1, pageSize });
+    getTimeSlots({ page: currentPage, perPage: pageSize, search: search });
   }, [dispatch]);
 
   const handleAdd = () => {
@@ -69,7 +69,7 @@ const TimeContainer = () => {
           const response = await dispatch(deleteTimeSlot(id)).unwrap();
           if (response) {
             // Refresh the list after successful deletion
-            getTimeSlots({ pageIndex: currentPage - 1, pageSize });
+            getTimeSlots({ page: currentPage, perPage: pageSize, search });
           }
         } catch (error) {
           console.error("Error deleting Time Slot:", error);

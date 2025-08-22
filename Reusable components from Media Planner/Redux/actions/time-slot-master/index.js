@@ -32,9 +32,9 @@ export const createTimeSlot = createAsyncThunk(
 // Get time slots
 export const getTimeSlots = createAsyncThunk(
   "timeSlot/getAll",
-  async (timeSlotData, { rejectWithValue }) => {
+  async ({ page = 1, perPage = 10, search = "", sortField = "", sortOrder = "" }, { rejectWithValue }) => {
     try {
-      const response = await getTimeSlotsAPI(timeSlotData);
+      const response = await getTimeSlotsAPI({ page, perPage, search, sortField, sortOrder });
       return response;
     } catch (error) {
       toast.error(
@@ -62,7 +62,7 @@ export const getTimeSlotById = createAsyncThunk(
 // Update Time Slot
 export const updateTimeSlot = createAsyncThunk(
   "timeSlot/update",
-  async ({ id, ...timeSlotData }, { rejectWithValue }) => {
+  async ({ id, timeSlotData }, { rejectWithValue }) => {
     try {
       const response = await updateTimeSlotAPI(id, timeSlotData);
       if (response?.status) {

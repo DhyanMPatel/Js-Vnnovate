@@ -20,7 +20,7 @@ const EditTimeSlotContainer = ({
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
-      await dispatch(updateTimeSlot({ id: selectedTimeSlot.id, ...values }));
+      await dispatch(updateTimeSlot({ id: selectedTimeSlot.id, timeSlotData: values }));
       resetForm();
       toggleModal();
     } catch (error) {

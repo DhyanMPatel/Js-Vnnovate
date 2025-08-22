@@ -12,7 +12,7 @@ const initialState = {
   loading: false,
   error: null,
   success: false,
-  timeSlots: dummyTimeSlots || [],
+  timeSlots: [],
   timeSlotDetails: null,
   totalItems: 0,
   totalPages: 1,
@@ -52,7 +52,7 @@ const timeSlotMasterSlice = createSlice({
         state.success = true;
         state.timeSlots = payload?.data;
         state.totalPages = payload?.totalPages || 1;
-        state.totalItems = payload?.totalPositions || 0;
+        state.totalItems = payload?.totalTimeSlots || 0;
         state.currentPage = payload?.currentPage || 1;
         state.pageSize = payload?.perPage || 10;
       })
