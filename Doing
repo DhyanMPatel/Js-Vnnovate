@@ -1,28 +1,34 @@
 ## Work Doing:
 
-Date: 22 Aug, 2025
-Day: Friday,
+Date: 25 Aug, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-1. Make changes in API request parameter based on API.
-2. Work on API Integration on with testing:
-	- Time slot master module
-	- Size master module
+1. Continue API Integration in Remaining Modules like Size, Language module, etc.
 
 ## Work done:
 
 EOD,
-Date: 22 Aug, 2025
-Day: Friday,
+Date: 25 Aug, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-
-
+1. Size Master Module - Done
+  - Integrated APIs successfully.
+2. Time Slot Module - Done
+  - Worked on resolving time-related issues.
+  - Updated API logic to pass start time and end time with timezone.
+3. Language Master Module - Done
+  - Changed file names for consistency.
+  - API Integration is in progress.
+4. Production Issues - Done
+  - Verified and fixed file name related issues.
+  - Investigating i18n package issue (not working in build mode).
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
