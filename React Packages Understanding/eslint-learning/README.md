@@ -24,6 +24,8 @@ npm init @eslint/config@latest.
 
 
 # Configuration of EsLint?
+- Learn about configuration of EsLint.
 
+[Configuration of EsLint](./esLint_core_concept.md)
 
 
