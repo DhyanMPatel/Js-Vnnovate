@@ -1,35 +1,40 @@
 ## Work Doing:
 
-Date: 25 Aug, 2025
-Day: Monday,
+Date: 27 Aug, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-1. Continue API Integration in Remaining Modules like Size, Language module, etc.
+1. Continue work on update API integration in Media Cost master module.
 
 ## Work done:
 
 EOD,
-Date: 25 Aug, 2025
-Day: Monday,
+Date: 27 Aug, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Size Master Module - Done
-  - Integrated APIs successfully.
-2. Time Slot Module - Done
-  - Worked on resolving time-related issues.
-  - Updated API logic to pass start time and end time with timezone.
-3. Language Master Module - Done
-  - Changed file names for consistency.
-  - API Integration is in progress.
-4. Production Issues - Done
-  - Verified and fixed file name related issues.
-  - Investigating i18n package issue (not working in build mode).
+1. Media Cost Master Module
+  - Completed Update API integration with full testing.
 
+2. StatusChip Common Component Usage
+  - Integrated in the following modules:
+    - Media Cost Master
+    - Publisher Master
+    - Vendor Management
+    - Duration Management
+    - Material Master
+    - Material Type Master
+    - Location Master
+
+3. Code Optimization & Organization
+  - Format Master module
+	- Language Master module
+	- Position Master module
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
