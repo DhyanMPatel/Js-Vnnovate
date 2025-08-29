@@ -1,37 +1,42 @@
 ## Work Doing:
 
-Date: 28 Aug, 2025
-Day: Thursday,
+Date: 29 Aug, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-1. Work on some code and design Improvement based on review.
+1. Check all Text across the application uses the same font-family.
+2. Remove unwanted code and consoles.
 
 ## Work done:
 
 EOD,
-Date: 28 Aug, 2025
-Day: Thursday,
+Date: 29 Aug, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. System Updates
-  - Installed and downloaded all Windows updates.
-2. Code & Design Improvements (based on review)
-  - Changed Status Chip design.
-  - Sign In: Used Common TextInput module for fields, integrated MUI components.
-  - Sign Up: Used Common TextInput module for fields, integrated MUI components.
-3. Resend OTP Functionality
-  - Implemented on frontend (API integration pending).
-4. Common Data Table Module Enhancements
-  - Added Title and Add Item button.
-  - Changed design of Per Page number dropdown button.
-  - Implemented updated Data Table module across all usages.
-5. Font Family Consistency
-  - Ensured all text across the application uses the same font-family. - In Progress
+1. User Management
+  - Disabled display of User Management module on menu item click.
+
+2. Text Format Consistency Check
+  - Verified same font/text format across:
+    - Landing Page (Heading, Main Content, Footer).
+    - All Protected Modules (including sub-modules).
+    - Layout Module.
+    - All Common Modules.
+    - Only the module worked on by another developer (29 Aug 2025) is pending.
+
+3. Loader Implementation
+  - Added loaders to Sign In, Sign Up, and OTP Verify pages.
+
+4. Duration Master – Partial Work
+  - Relocated Duration Module into Media Type module as a sub-module. - Done
+  - Recreate Add Duration and Edit Duration modules to display in common module (instead of separate route). - In Progress
+  - Rename and update route for Duration Management → Duration Master (UI side). - In Progress
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
@@ -167,65 +172,78 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (18 Aug - 22 Aug) Report of Dhyan
+**Subject**: Weekly (25 Aug - 29 Aug) Report of Dhyan
 
 
 Project: Media Planner,
 
-Git Commit ID: 
-Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/
+Git Commit ID: 6a358055b8c11930b81a340aaccb9ff0407c6dd4
+Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/6a358055b8c11930b81a340aaccb9ff0407c6dd4
 
 Description:
 
-1. Common Components
-  - Created Common Modal Component
-  - Created Text Input Component (with added Time Field support)
-  - Created Form Title Component
-  - Created Footer Button Component
-  - Created Status Chip Component
+1. Size Master Module
+  - Integrated APIs successfully.
 
-2. User Management Module
-  - Added "Add User" button to trigger Common Modal
-  - Implemented Form Handling (Formik)
-  - Implemented Form Validation (Yup)
+2. Time Slot Module
+  - Resolved time-related issues.
+  - Updated API logic to pass start time and end time with time zone.
 
-3. Client Management Module
-  - Implemented API Integration for client-related data
-  - Designed UI as per Figma design
-  - Added Table to display client list
-  - Implemented i18n support for Client Management
-  - Implemented Delete Client functionality with SweetAlert confirmation
-  - Implemented Edit Client functionality
+3. Language Master Module
+  - Changed file names for consistency.
+  - API integration completed.
+  - CRUD functionality implemented.
+  - Code optimization & organization done.
 
-4. Master Modules
-  - Format Master Module 
-    - CRUD Operations with static data
-    - Validation (Formik + Yup)
-    - Implemented UI screens
+4. Position Master Module
+  - CRUD functionality implemented.
+  - Code optimization & organization done.
 
-  - Language Master Module
-    - CRUD Operations with static data
-    - Validation (Formik + Yup)
-    - Implemented UI screens
+5. Format Master Module
+  - CRUD functionality implemented.
+  - Code optimization & organization done.
 
-  - Position Master Module
-    - CRUD Operations with static data
-    - Validation (Formik + Yup)
-    - Implemented UI screens
+6. Media Cost Master Module
+  - Completed Update API integration with full testing.
+  - Integrated StatusChip Common Component.
 
-  - Size Master Module
-    - CRUD Operations with static data
-    - Validation (Formik + Yup)
-    - Implemented UI screens
+7. Publisher Master Module, Vendor Management Module, Duration Management Module, Material Master Module, Material Type Master Module, Location Master Module
+  - Integrated StatusChip Common Component.
 
-  - Time Slot Master Module
-    - CRUD Operations with static data
-    - Validation (Formik + Yup)
-    - Implemented UI screens
+8. User Management
+  - Disabled display of User Management module on menu item click.
 
-5. API Integration with testing
-  - Time Slot Master Module
-  - Size Master Module
+9. Authentication (Sign In / Sign Up / OTP)
+  - Changed Status Chip design (review feedback).
+  - Used Common TextInput module for fields (Sign In & Sign Up).
+  - Integrated MUI components.
+  - Implemented Resend OTP functionality (frontend).
+  - Added loaders to Sign In, Sign Up, and OTP Verify pages.
+
+10. Common Data Table Module
+  - Added Title and Add Item button.
+  - Updated design of Per Page dropdown button.
+  - Implemented updated Data Table across all usages.
+
+11. Font Family Consistency
+  - Verified and ensured same font-family across:
+    - Landing Page (Heading, Main Content, Footer).
+    - All Protected Modules & Sub-modules.
+    - Layout Module.
+    - All Common Modules.
+  - Only one module (worked on by another dev on 29 Aug 2025) is pending verification.
+
+12. Production Issues
+  - Verified and fixed file name issues.
+  - Investigated i18n package issue (not working in build mode).
+
+13. System Updates
+  - Installed and downloaded all Windows updates.
+
+14. Duration Master Module
+  - Relocated Duration Module into Media Type Module as a sub-module. - Done
+  - Recreated Add Duration and Edit Duration modules to display in common module instead of separate route - In Progress
+  - Renamed & updated route: Duration Management → Duration Master (UI side) - In Progress
 
 ## Leave Request
 
