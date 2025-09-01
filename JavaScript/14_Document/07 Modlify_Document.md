@@ -359,3 +359,11 @@ let sortedRows = Array.from(table.tBodies[0].rows).sort((rowA, rowB) =>
 
 table.tBodies[0].append(...sortedRows);
 ```
+
+## Go back to Attributes & Properties
+
+- [Attributes & Properties](./06%20Attributes%20and%20Properties.md)
+
+## Now Learn about Styles & Classes
+
+- [Style & Classes](./08%20Style_Classes.md)

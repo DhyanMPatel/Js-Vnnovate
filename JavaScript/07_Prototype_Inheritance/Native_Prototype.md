@@ -87,3 +87,7 @@
 ### Home work
 
 - Why Borrowing Properties example is not work in browser, means not give proper output?
+
+## Go back to Prototype Inheritance
+
+- [ProtoType Inheritance](./intro.md)

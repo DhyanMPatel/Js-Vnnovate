@@ -140,3 +140,11 @@ for (let link of a) {
   link.style.color = "orange";
 }
 ```
+
+## Go back to Node Properties
+
+- [Node Properties](./05%20Node_Properties.md)
+
+## Now Learn Modifying the Document
+
+- [Modifying the Document](./07%20Modlify_Document.md)

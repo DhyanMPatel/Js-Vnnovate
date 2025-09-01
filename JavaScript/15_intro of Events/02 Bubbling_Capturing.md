@@ -85,3 +85,11 @@
   elem.addEventListener("click", (e) => alert(1)); // guaranteed to trigger first
   elem.addEventListener("click", (e) => alert(2));
   ```
+
+## Go back to Introduction to Events
+
+- [Intro of browser Events](./01%20intro.md)
+
+## Now Learn about Event Delegation
+
+- [Event Delegation](./03%20Event_deligation.md)

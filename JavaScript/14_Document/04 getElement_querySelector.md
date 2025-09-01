@@ -223,3 +223,12 @@ form.querySelector("input");
 let inputs = form.querySelectorAll("input"); // find all inputs
 inputs[inputs.length - 1]; // take the last one
 ```
+
+
+## Go back to Walking With DOM
+
+- [Walking with DOM](./03%20Walking%20with%20DOM.md)
+
+## Now Learn about Node Properties
+
+- [Node Properties](./05%20Node_Properties.md)

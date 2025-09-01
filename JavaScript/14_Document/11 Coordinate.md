@@ -54,3 +54,11 @@ function getCoords(elem) {
   };
 }
 ```
+
+## Go back to Window Size & Scrolling
+
+- [Window Size & Scrolling](./10%20Window_size_%20scrolling.md)
+
+## Now Learn Introduction to Events
+
+- [Intro of browser Events](../15_intro%20of%20Events/01%20intro.md)

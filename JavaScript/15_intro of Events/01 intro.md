@@ -166,3 +166,11 @@ document.addEventListner("DOMContentLoaded", function () {
     elem.addEventListener('click', obj);
   </script>
   ```
+
+## Go back to Coordinates in Documents
+
+- [Coordinates](../14_Document/11%20Coordinate.md)
+
+## Now Learn about Event Propagation
+
+- [Bubbling & Capturing](./02%20Bubbling_Capturing.md)

@@ -47,3 +47,24 @@
 ## Object.fromEntries
 
 - Use to get data from Array to Object
+
+
+## Basic Object Topics
+
+- [Object](./Object.js)
+- [Object Reference & Copy](./Reference&Copy.js)
+- [Garbage Collection](./garbageCollection.md)
+- [Object Methods, ](./thisObject.js) ("This")
+- [Object Methods, ](./object_is().js) ("is()")
+- [Constructor, Operator](./constructorOperatorNew.js) ("New")
+- [Optional Chaining, ](./optionalChaining.js) ("?.")
+- [Symbol Type in Object](./SymbolWithObj.js)
+- [Object to Primitive Conversion](./ObjToPrimitive.js)
+
+# Go back to Code Quality
+
+[Code Quality](../02_Code_Quality/Debugging.md)
+
+# Now Deep dive in Data Types
+
+[Data Types](../04_Data_Types/intro.md)

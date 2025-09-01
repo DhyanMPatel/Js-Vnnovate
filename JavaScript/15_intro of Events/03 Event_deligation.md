@@ -86,3 +86,11 @@
   });
 </script>
 ```
+
+## Go back to Event Propagation
+
+- [Event Propagation](./02%20Bubbling_Capturing.md)
+
+## Now Learn about Browser Default Actions
+
+- [Browser Default Actions](./04%20Browser%20Default%20Action.md)

@@ -82,3 +82,11 @@ for (let i = 0; i < table.rows.length; i++) {
   row.cells[i].style.backgroundColor = "red";
 }
 ```
+
+## Go back to DOM Tree
+
+- [DOM Tree](./02%20DOM%20Tree.md)
+
+## Now Learn about Searching using getElement & querySelector
+
+- [Searching using getElement & querySelector](./04%20getElement_querySelector.md)

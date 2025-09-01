@@ -35,19 +35,19 @@
 
 ## Types of function
 
-    1. Arrow Function
-    2. IIFE (Immediate invocked function expression)
-    3. Callback function
-    4. Named Function
-    5. Anonymous Function
-    6. Nested Function
-    7. Pure Function
+1. [Arrow Function](./ArrowFunction.js)
+2. [IIFE (Immediate invocked function expression)](./IIFE.js)
+3. [Callback function](./callBack.js)
+4. [Named Function](./Function.js) (Normal function)
+5. [Anonymous Function](./Anonymous.js)
+6. [Nested Function](./NestedFunction.js)
+7. [Pure Function](./PureFunc.js)
 
 ## Key Characteristics
 
-    1. Parameters, Arguments
-    2. Return Values
-    3. Default parameter
+  1. Parameters, Arguments
+  2. Return Values
+  3. Default parameter
 
 ## Advantages
 
@@ -59,3 +59,11 @@
 ## Note
 
 - Arrow function has no it's `this`, but ragular function has their own `this` context.
+
+## Go Back to 
+
+[JS Fundamentals](../intro.md), [Loops](../Loops/intro.md)
+
+## Now get deep knowledge in Code Quality
+
+[Code Quality](../../02_Code_Quality/Debugging.md)

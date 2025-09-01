@@ -15,6 +15,8 @@
 - Modern JS suggest that we should use [Object.getPrototypeOf()] & [Object.setPrototypeOf()] instead that get/set the prototype
 - By the specification, `__proto__` must only be supported by browsers. In fact though, all environments including server-side support `__proto__`, so we’re quite safe using it.
 
+- Deep dive in [ProtoTypal Inheritance](./Prototypal_inheritance.js).
+
 # Limitation
 
 - Reference can't go circular, give error then `__proto__` assign in circle
@@ -141,3 +143,18 @@
   alert(rabbit.isSleeping); // true
   alert(animal.isSleeping); // undefined (no such property in the prototype)
   ```
+
+## Prototype Inheritance Topics
+
+- [ProtoTypal Inheritance](./Prototypal_inheritance.js)
+- [F.Prototype](./F_prototype.js)
+- [Native Prototypes](./Native_Prototype.md)
+- [Prototype Methods](./Methods_of_prototype.js) (Obj without __proto__)
+
+# Ga back to Object Properties Configuration
+
+- [Object Properties Configuration](../06_Object_Properties_Configuration/intro.md)
+
+# Now Learn about Classes
+
+- [Classes](../08_Classes.js/intro.md)

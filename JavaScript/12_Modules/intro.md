@@ -8,7 +8,7 @@
   1. Export
   2. Import
 
-- Export file - to access outside medule
+- Export file - to access outside module
 
 ```js
 export function sayHii(user) {
@@ -27,8 +27,8 @@ sayHii("John"); // Return - Hello John
 - In Browser, we make variable at window-level
 - Module code evaluated only first time when imported
 - `import.meta` contain information about current module
-- `deffered modules` run after the HTML load
-- `ragular modules` run before HTML load
+- `deferred modules` run after the HTML load
+- `regular modules` run before HTML load
 - `async modules` run when ready, means independent from other script of HTML document
 
 # External scripts
@@ -39,3 +39,12 @@ sayHii("John"); // Return - Hello John
 ## Notes
 
 - top-level variables and functions from a module are not seen in other scripts. means both script can not share any data with each other untill they are connected with each other using `import` keyword
+
+
+# Go Back to Promises, Async/Await & Generator
+
+- [Promises, Async/Await & Generator](../10_Promises_Async_Await/intro.md)
+
+# Now Learn about Browser Document
+
+- [Browser Environment & specs](../14_Document/01%20Browser_Environment.md)

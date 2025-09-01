@@ -54,8 +54,6 @@
   new User().sayHi(); // Return - Hello
   ```
 
-##
-
 ## Making bound methods with class fields
 
   ```js
@@ -133,3 +131,21 @@ class Button{
 - In JavaScript, there are two types of object fields (properties and methods):
   1. public - accessible from anywhere
   2. private - accessible from inside the class
+
+## Now Deep dive in All Class Topics
+
+- [Class Basic Syntax](./Basic_concept.js)
+- [Class INheritance](./Class_inheritance.js)
+- [Static Methods & Properties](./Static_properties_methods.js)
+- [Private & Protected Methods & Properties](./private_protected.js)
+- [Extending Built-in classes](./extend_buildIn.js)
+- [Class Checking: "instanceof"](./Class_checking_instanceOf.js)
+- [mixins](./Mixin.js)
+
+## Go back to ProtoType Inheritance
+
+- [ProtoType Inheritance](../07_Prototype_Inheritance/intro.md)
+
+## Now learn Error Handing
+
+- [Error Handing](../09_Error_handling/intro.md)
