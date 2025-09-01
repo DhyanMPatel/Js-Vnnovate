@@ -1,42 +1,51 @@
 ## Work Doing:
 
-Date: 29 Aug, 2025
-Day: Friday,
+Date: 1 Sep, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-1. Check all Text across the application uses the same font-family.
-2. Remove unwanted code and consoles.
+!. Continue Work on Duration Master module
+  - Recreate Add Duration and Edit Duration modules to display in common module (instead of separate route).
+  - Rename and update route for Duration Management → Duration Master (UI side).
+  - Add Sweet alert when user click on delete button for once more conformation.
+  - Solve issue related to Status during Add Item Functionality.
 
 ## Work done:
 
 EOD,
-Date: 29 Aug, 2025
-Day: Friday,
+Date: 1 Sep, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. User Management
-  - Disabled display of User Management module on menu item click.
+1. Duration Master Module
+  - Recreated Add Duration and Edit Duration modules to display inside the common module (instead of separate routes).
+  - Renamed and updated route: Duration Management → Duration Master (UI side).
+  - Added Sweet Alert confirmation on delete action.
+  - Fixed issue related to Status field during Add Item functionality.
+  - Corrected API structure for Duration Master module to match app standard.
+  - Coordinated with Devanshi and corrected API response changes.
 
-2. Text Format Consistency Check
-  - Verified same font/text format across:
-    - Landing Page (Heading, Main Content, Footer).
-    - All Protected Modules (including sub-modules).
-    - Layout Module.
-    - All Common Modules.
-    - Only the module worked on by another developer (29 Aug 2025) is pending.
+2. Layout → Header Module
+  - Displayed User Name and User Role on Profile menu button.
 
-3. Loader Implementation
-  - Added loaders to Sign In, Sign Up, and OTP Verify pages.
+3. Vendor Component Enhancements
+  - Redesigned Add Vendor and Edit Vendor components using SCSS.
+  - Integrated Common InputField Component in both Add & Edit Vendor modules.
+  - Updated API structure as per requirements.
+  - Added Back button to Add Vendor and Edit Vendor modules.
+  - Improved validation handling.
 
-4. Duration Master – Partial Work
-  - Relocated Duration Module into Media Type module as a sub-module. - Done
-  - Recreate Add Duration and Edit Duration modules to display in common module (instead of separate route). - In Progress
-  - Rename and update route for Duration Management → Duration Master (UI side). - In Progress
+4. Review Changes (Based on Rahul Sir’s Feedback)
+  - Implemented required UI and code changes.
+
+5. Text Consistency Enhancements
+  - Applied consistent font-family in Error Boundary module.
+  - Updated view & style files across modules for uniform typography.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
