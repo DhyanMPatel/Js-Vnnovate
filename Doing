@@ -1,51 +1,39 @@
 ## Work Doing:
 
-Date: 1 Sep, 2025
-Day: Monday,
+Date: 2 Sep, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-!. Continue Work on Duration Master module
-  - Recreate Add Duration and Edit Duration modules to display in common module (instead of separate route).
-  - Rename and update route for Duration Management → Duration Master (UI side).
-  - Add Sweet alert when user click on delete button for once more conformation.
-  - Solve issue related to Status during Add Item Functionality.
+1. Work on Common Modal Popup improvement:
+  - Make changes in Modal to work like Sweet Alert. 
+  - Use Common Modal Popup instead of Sweet Alert to take confirmation.
+2. Work on Routing issue which is in sidebar.
 
 ## Work done:
 
 EOD,
-Date: 1 Sep, 2025
-Day: Monday,
+Date: 2 Sep, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Duration Master Module
-  - Recreated Add Duration and Edit Duration modules to display inside the common module (instead of separate routes).
-  - Renamed and updated route: Duration Management → Duration Master (UI side).
-  - Added Sweet Alert confirmation on delete action.
-  - Fixed issue related to Status field during Add Item functionality.
-  - Corrected API structure for Duration Master module to match app standard.
-  - Coordinated with Devanshi and corrected API response changes.
-
-2. Layout → Header Module
-  - Displayed User Name and User Role on Profile menu button.
-
-3. Vendor Component Enhancements
-  - Redesigned Add Vendor and Edit Vendor components using SCSS.
-  - Integrated Common InputField Component in both Add & Edit Vendor modules.
-  - Updated API structure as per requirements.
-  - Added Back button to Add Vendor and Edit Vendor modules.
-  - Improved validation handling.
-
-4. Review Changes (Based on Rahul Sir’s Feedback)
-  - Implemented required UI and code changes.
-
-5. Text Consistency Enhancements
-  - Applied consistent font-family in Error Boundary module.
-  - Updated view & style files across modules for uniform typography.
+1. Live Issues
+  - Checked and fixed issue during Login.
+  - Verified and fixed text consistency issue in Live.
+2. Error Boundary Improvements
+  - Displayed Error Boundary Module for default and unauthorized routes.
+3. Common Modal Popup Enhancement
+  - Improved Modal to function like Sweet Alert.
+  - Replaced Sweet Alert with Common Modal Popup for confirmation.
+4. Implemented Common Modal Popup as Alert in:
+  - Format Master
+  - Duration Master
+  - Language Master
+  - Position Master
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.

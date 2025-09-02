@@ -12,9 +12,7 @@ import {
 import SigninContainer from "../components/auth/signin/signInContainer";
 import SignUpContainer from "../components/auth/signup/signUpContainer";
 import VerifyOtp from "../components/auth/verifyOtp/verifyOtpContainer";
-import AddDurationContainer from "../components/durationsManagement/addDuration/AddDurationContainer";
 import DurationsListContainer from "../components/durationsManagement/durationsList/durationsListContainer";
-import EditDurationContainer from "../components/durationsManagement/editDuration/EditDurationContainer";
 import ListLocationMasterContainer from "../components/LocationMaster/listLocationMaster/listLocationMasterContainer";
 import ListMediaCostMasterContainer from "../components/mediaCostMaster/listMediaCostMaster/listMediaCostMasterContainer";
 import MediaTypeMasterContainer from "../components/mediaTypeMaster/listMediaTypeMaster/mediaTypeMasterContainer";
@@ -48,42 +46,38 @@ const publisherMaster = "/publisher-master";
 const mediaCostMaster = "/media-cost-master";
 const locationMaster = "/location-master";
 const durationsManagement = "/durations-management";
-const addDuration = "/durations-management/add";
-const editDuration = "/durations-management/:id/edit";
 
 const FormatMaster = "/format-master";
-const LangMaster = '/lang-master';
-const positionMaster = '/position-master';
-const sizeMaster = '/size-master';
-const timeSlot = '/time-slot-master';
+const LangMaster = "/lang-master";
+const positionMaster = "/position-master";
+const sizeMaster = "/size-master";
+const timeSlot = "/time-slot-master";
 
 export {
   add,
   addClient,
-  addDuration,
   campaignManagement,
   clientManagement,
   dashboard,
   dataTableExample,
   durationsManagement,
-  editDuration,
   financeSage,
+  FormatMaster,
   home,
+  LangMaster,
   logout,
   mediaTypeMaster,
+  positionMaster,
   reportsAnalytics,
   settings,
   signIn,
   signUp,
+  sizeMaster,
+  timeSlot,
   updateClient,
   userManagement,
   vendorManagement,
   verifyOtp,
-  FormatMaster,
-  LangMaster,
-  positionMaster,
-  sizeMaster,
-  timeSlot,
 };
 
 const allRoutes = [
@@ -192,16 +186,6 @@ const allRoutes = [
         element: <DurationsListContainer />,
         name: "Durations Management",
         icon: "fa-regular fa-clock",
-      },
-      {
-        id: "add-duration",
-        path: addDuration,
-        element: <AddDurationContainer />,
-      },
-      {
-        id: "edit-duration",
-        path: editDuration,
-        element: <EditDurationContainer />,
       },
       {
         id: "format-master",
