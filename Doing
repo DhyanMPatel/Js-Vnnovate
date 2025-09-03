@@ -1,21 +1,34 @@
 ## Work Doing:
 
-Date: 2 Sep, 2025
-Day: Tuesday,
+Date: 3 Sep, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-1. Work on Common Modal Popup improvement:
-  - Make changes in Modal to work like Sweet Alert. 
-  - Use Common Modal Popup instead of Sweet Alert to take confirmation.
-2. Work on Routing issue which is in sidebar.
+1. Finance & Sage Module
+  - Started module implementation and setup.
+  - Created 3 sub-modules:
+    - PO & Invoice Sync
+    - Payment Status
+    - Billing Summary Report
+  - Designed API structure for the above modules.
+  - Implemented Fetch All Items API for each module.
+
+2. Error Boundary Enhancements - In Progress
+  - Working on displaying dynamic error boundary pages for API responses:
+    - 401 – Unauthorized
+    - 403 – Forbidden
+    - 404 – Not Found
+
+3. Review Changes (Rahul Sir’s Feedback)
+  - Applied required changes based on review.
 
 ## Work done:
 
 EOD,
-Date: 2 Sep, 2025
-Day: Tuesday,
+Date: 3 Sep, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
