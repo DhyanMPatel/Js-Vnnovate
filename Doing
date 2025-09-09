@@ -1,38 +1,35 @@
 ## Work Doing:
 
-Date: 8 Sep, 2025
-Day: Monday,
+Date: 9 Sep, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 Project: Dealer Data,
 
-1. API Integration and Testing in Accessories module after Repo setup.
-2. Start working on Report module with new theme.
+1. Test Accessories and Report List module.
+2. Work on Vehicle Report module
   
 ## Work done:
 
 EOD,
-Date: 8 Sep, 2025
-Day: Monday,
+Date: 9 Sep, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Project Setup
-  - Cloned Dealer Data project and successfully set up on local PC.
-2. Accessories Module
-  - Implemented UI with new theme
-  - Integrated API and verified data flow
-  - Implemented and tested search functionality
-3. Reports Module
-  - Implemented UI with new theme
-  - Added and tested Filter functionality
-  - Implemented Export functionality
-  - Added Reset button to clear all applied filters
-4. Common Pagination Module
-  - Fixed pagination issue to correctly display total pages and current page
-  - Enhanced navigation with page number selection and Next/Previous buttons
+1. Vehicle Reports Module
+  - Added Table to display vehicle data.
+  - Implemented Search functionality.
+  - Design Exterior and Interior modals – (In Progress).
+  - Added dropdowns for:
+    - Reserved
+    - Common Status
+    - Color
+    - Module Name
+  - Added View Vehicle link.
+  - Implemented Reset button to clear dropdown selections.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
