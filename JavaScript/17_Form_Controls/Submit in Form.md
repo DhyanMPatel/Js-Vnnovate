@@ -41,3 +41,11 @@ document.body.append(form);
 
 form.submit();
 ```
+
+## Go back to Events : change, input, cut, copy, paste
+
+- [Events : change, input, cut, copy, paste](./Events.md)
+
+## Now Learn about DOM load, beforeUnload & Unload
+
+- [DOM load, beforeUnload & Unload](../18_Document%20&%20Resource%20Load/DOM%20load%20&%20unload.md)

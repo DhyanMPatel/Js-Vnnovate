@@ -66,3 +66,12 @@
   - `readAsArrayBuffer(blob)` – to ArrayBuffer,
   - `readAsText(blob, [encoding])` – to string (an alternative to TextDecoder),
   - `readAsDataURL(blob)` – to base64 data url.
+
+
+## Go back to Blob
+
+- [Blob](./Blob.md)
+
+## Now Learn about Cookies one type of Storing Data in Browser
+
+- [Cookies](../21_Storing_Data_in_Browser/Cookie.md)

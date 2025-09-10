@@ -31,3 +31,11 @@
 
   let encodingInto = encoder.encodeInto(str, uint8Array);
   ```
+
+## Go back to ArrayBuffer
+
+- [ArrayBuffer](./01%20ArrayBuffer.md)
+
+## Now Learn about Blob
+
+- [Blob](./Blob.md)

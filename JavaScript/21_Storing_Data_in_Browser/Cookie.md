@@ -115,3 +115,12 @@ alert(document.cookie); // ...; my%20name=John%20Smith
   - there are 2 values of samesite:
     - `strict` - prevent user access from another site (Strict Protection)
     - `lax` - Allow cookie for safe GET Requests.
+
+
+## Go back to File & FileReader
+
+- [File & FileReader](../20_BinaryData_files/File_FileReader.md)
+
+## Now Learn about another type of data storing in browser is
+
+- [LocalStorage & SessionStorage](./LocalStorage_SessionStorage.md)

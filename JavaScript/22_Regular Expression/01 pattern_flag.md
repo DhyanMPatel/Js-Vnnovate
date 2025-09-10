@@ -70,3 +70,11 @@
 
     alert( regexp.test(str) ); // true
     ```
+
+## Go back to IndexedDB
+
+- [IndexedDB](../21_Storing_Data_in_Browser/IndexedDB.md)
+
+## Now Learn about Character Classes
+
+- [Character Classes](./02%20Char_classes.md)

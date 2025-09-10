@@ -108,3 +108,11 @@
   loadScript("/article/script-async-defer/long.js"); // 1)
   loadScript("/article/script-async-defer/small.js"); // 2)
   ```
+
+## Go back to DOM load, beforeUnload & Unload
+
+- [DOM load, beforeUnload & Unload](./DOM%20load%20&%20unload.md)
+
+## Now Learn about Resource loading: onload & onerror
+
+- [Resource loading: onload & onerror](./Resource%20loading.md)

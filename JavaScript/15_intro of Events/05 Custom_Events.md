@@ -128,3 +128,11 @@ alert(event.clientX); // 100
   });
 </script>
 ```
+
+## Go back to Browser Default Actions
+
+- [Browser Default Actions](./04%20Browser%20Default%20Action.md)
+
+## Now Learn about Mouse Events from UI Events topic
+
+- [Mouse Events](../16_UI_Events/01%20Mouse_Events.md)

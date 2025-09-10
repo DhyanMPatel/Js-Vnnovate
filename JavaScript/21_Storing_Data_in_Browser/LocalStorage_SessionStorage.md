@@ -100,3 +100,11 @@ console.log(storedUser.name); // Output: "Dhyan"
   - `newValue` - the new value (null if the key is removed).
   - `url` - the url of the document where the update happened.
   - `StorageArea` - either `localStorage` or `sessionStorage`
+
+## Go back to Cookies
+
+- [Cookies](./Cookie.md)
+
+## Now Learn about Last one data storing method is
+
+- [IndexedDB](./IndexedDB.md)
