@@ -12,3 +12,12 @@
 - [Limitation]
   - There we not privent only `Horizontal` & `Vertical` drag only.
   - Also, mobile device support for such events is very weak.
+
+
+## Go back to Moving Mouse
+
+- [Moving Mouse](./02%20Moving_mouse.md)
+
+## Now Learn about another Event which is Pointer Event
+
+- [Pointer Event](./04%20Pointer%20Event.md)

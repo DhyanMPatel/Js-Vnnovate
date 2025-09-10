@@ -49,3 +49,11 @@
 
 - `document.getSelection()` to get the selected text.
 - `event.clipboardData.getData(...)` contain plain text of copied thing.
+
+## Go back to Focusing (focus) and Blurring (blur)
+
+- [Focusing (focus) and Blurring (blur)](./Focusing.md)
+
+## Now Learn about Forms : Events and submit method
+
+- [Forms : Events and submit method](./Submit%20in%20Form.md)

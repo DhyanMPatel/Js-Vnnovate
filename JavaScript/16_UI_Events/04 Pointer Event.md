@@ -36,3 +36,12 @@
   - `elem.setPointerCapture(pointerId)` - binds events with the given pointerId to elem
   - `gotpointercapture` fires when an element uses `setPointerCapture` to enable capturing.
   - `lostpointercapture` fires when the capture is released: either explicitly with `releasePointerCapture` call, or automatically on `pointerup`/`pointercancel`.
+
+
+## Go back to Drag and Drag
+
+- [Drag and Drag](./03%20Drag_n_Drag.md)
+
+## Now Learn about another Event which is Keyboard Event
+
+- [Keyboard Event](./05%20KeyBoard%20Event.md)

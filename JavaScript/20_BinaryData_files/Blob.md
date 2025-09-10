@@ -137,3 +137,12 @@
 
 - when read/write to blob of more then `2 GB`, the use of `ArrayBuffer` become more Memory intensive for us. so we use `Stream`.
 - `blob.stream()` return `ReadableStream`
+
+
+## Go back to TextDecoder & TextEncoder
+
+- [TextDecoder & TextEncoder](./TextDecoder_TextEncoder.md)
+
+## Now Learn about File & FileReader
+
+- [File & FileReader](./File_FileReader.md)

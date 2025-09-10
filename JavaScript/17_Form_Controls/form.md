@@ -122,3 +122,12 @@ option = new Option(text, value, defaultSelected, selected);
   - `option.selected`
   - `option.index`
   - `option.text`
+
+
+## Go back to Scrolling in UI Events
+
+- [Scrolling](../16_UI_Events/06%20Scrolling.md)
+
+## Now Learn about Focusing (focus) and Blurring (blur)
+
+- [Focusing (focus) and Blurring (blur)](./Focusing.md)

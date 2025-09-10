@@ -225,4 +225,14 @@
     }
   ```
 
--
+### For more Practical Knowledge check bellow link
+- [indexedDB](./indexedDB.js)
+
+
+## Go back to LocalStorage & SessionStorage
+
+- [LocalStorage & SessionStorage](./LocalStorage_SessionStorage.md)
+
+## Now Learn about Pattern Flag in Regular Expression
+
+- [Pattern Flag](../22_Regular%20Expression/01%20pattern_flag.md)

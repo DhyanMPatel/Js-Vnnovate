@@ -97,3 +97,11 @@
 
 <a href="https://w3.org" onclick="return handler()">w3.org</a>
 ```
+
+## Go back to Event Delegation
+
+- [Event Delegation](./03%20Event_deligation.md)
+
+## Now Learn about Custom Events
+
+- [Custom Events](./05%20Custom_Events.md)

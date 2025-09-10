@@ -22,3 +22,12 @@ console.log("function f()".match(new RegExp("f\\(\\)", "i"))); // Return - f()
 - `\` Required to escap
 
 - all special characters are allowed without escaping, except when they mean something for square brackets.
+
+
+## Go back to Word Boundary
+
+- [Word Boundary](./05%20Word%20Boundary.md)
+
+## Now Learn about Sets & Ranges [...]
+
+- [Sets & Ranges](./07%20Set_Range.md)

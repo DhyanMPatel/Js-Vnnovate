@@ -73,3 +73,12 @@ alert("1 - 5".match(/\d - \d/)); // 1 - 5, now it works
 // or we can use \s class:
 alert("1 - 5".match(/\d\s-\s\d/)); // 1 - 5, also works
 ```
+
+
+## Go back to Pattern Flag
+
+- [Pattern Flag](./01%20pattern_flag.md)
+
+## Now Learn about Unicode: flag "u" and class \p{...}
+
+- [Unicode: flag "u" and class \p{...}](./03%20Unicodeu_classp.md)

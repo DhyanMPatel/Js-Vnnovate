@@ -147,3 +147,12 @@ if (document.readyState == "loading") {
   - [4] img onload
   - [4] readyState:complete
   - [4] window onload
+
+
+## Go back to Submit in Form
+
+- [Submit in Form](../17_Form_Controls/Submit%20in%20Form.md)
+
+## Now Learn about Script async & defer
+
+- [Script async & defer](./Script%20async%20&%20defer.md)

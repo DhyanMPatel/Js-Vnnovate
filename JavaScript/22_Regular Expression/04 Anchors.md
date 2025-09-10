@@ -28,3 +28,12 @@ console.log(str.match(/^\d/gm));
   - Searching at line start ^
   - Searching at line end $
   - Searching for \n
+
+
+## Go back to Unicode: flag "u" and class \p{...}
+
+- [Unicode: flag "u" and class \p{...}](./03%20Unicodeu_classp.md)
+
+## Now Learn about Word Boundary
+
+- [Word Boundary](./05%20Word%20Boundary.md)
