@@ -1,56 +1,73 @@
 ## Work Doing:
 
-Date: 9 Sep, 2025
-Day: Tuesday,
+Date: 10 Sep, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 Project: Dealer Data,
 
-1. Test Accessories and Report List module.
-2. Work on Vehicle Report module
-  
+1. Fixe issue where the Global Search module did not reset properly after clicking the reset button.
+2. Improve styling for the Exterior and Interior image modals.
+
 ## Work done:
 
 EOD,
-Date: 9 Sep, 2025
-Day: Tuesday,
+Date: 10 Sep, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Vehicle Reports Module
-  - Added Table to display vehicle data.
-  - Implemented Search functionality.
-  - Design Exterior and Interior modals – (In Progress).
-  - Added dropdowns for:
-    - Reserved
-    - Common Status
-    - Color
-    - Module Name
-  - Added View Vehicle link.
-  - Implemented Reset button to clear dropdown selections.
+1. Global Search Module – Fixed issue where the search did not reset properly after clicking the reset button.
+
+2. Exterior & Interior Modals – Improved styling for better UI consistency.
+
+3. Vehicle Report Module Improvements
+  - Removed unwanted code.
+  - Refactored code using container-view format.
+  - Optimized code for better performance.
+  - Added loader for API calls.
+
+4. Accessories Module Improvements
+  - Removed unwanted code.
+  - Refactored code using container-view format.
+  - Optimized code for better performance.
+  - Added loader for API calls.
+
+5. UI Enhancements – Updated styles for dropdown buttons and date range selector.
+
+6. Reports Module Improvements 
+  - Removed unwanted code.
+  - Refactored code using container-view format.
+  - Optimized code for better performance.
+  - Added loader for API calls.
+  
+7. Testing – Successfully tested all modules (Vehicle Report, Accessories, and Reports) including API integrations.
+
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
 3. Then check Monday's task that i had done like pagination, category filter in Inventory items API. also make changes regarding updates.
 
-1. Yesterday, i make Enhancement in Bulk upload functionality based on feedback like Implemented drag-and-drop file upload functionality, UI improvements and Tested whole work flow.
-2. Then worked on Inventory Item Deletion functionality where when user click on delete button it ask again for confirmation and then it will delete that Item.
-3. At last worked on Inventory Item Editing functionality where when user click on edit button it will open modal and in that modal user can see all the details of that item and then i integrate 2 API integration for Edit Item 1st is for fetching item by id and 2nd is for updating item by id.
+4. Yesterday, i make Enhancement in Bulk upload functionality based on feedback like Implemented drag-and-drop file upload functionality, UI improvements and Tested whole work flow.
+5. Then worked on Inventory Item Deletion functionality where when user click on delete button it ask again for confirmation and then it will delete that Item.
+6. At last worked on Inventory Item Editing functionality where when user click on edit button it will open modal and in that modal user can see all the details of that item and then i integrate 2 API integration for Edit Item 1st is for fetching item by id and 2nd is for updating item by id.
 
-1. Today i work on Royal Crucible project where i find theme based on that project requirement. 
+7. Today i work on Royal Crucible project where i find theme based on that project requirement.
 
-2. Yesterday i work on Setup and Configuration of Theme. for that i waited for the selection of theme. during waiting i added completed task in June and July into the planner and revise some topics of Node and Express js. like, 
-  - Node Modules, 
-  - Error handling, 
-Then in Express js revise intro and its core features like
-  - How it can improve Server side code performance?
-and then at last know How it can handle client request and response?
+8. Yesterday i work on Setup and Configuration of Theme. for that i waited for the selection of theme. during waiting i added completed task in June and July into the planner and revise some topics of Node and Express js. like,
+
+- Node Modules,
+- Error handling,
+  Then in Express js revise intro and its core features like
+- How it can improve Server side code performance?
+  and then at last know How it can handle client request and response?
 
 ## ReadMe.md file for initial project setup
 
 Prerequisites
+
 - Ensure you have the following installed:
   - Node.js (v16 or higher)
   - npm (v7 or higher)
@@ -167,7 +184,6 @@ Cc: Mansi ma'am
 
 **Subject**: Weekly (1 Sep - 5 Sep) Report of Dhyan
 
-
 Project: Media Planner,
 
 Git Commit ID: f7f6b21156c5cd93e375830782a88d7633e6929e
@@ -176,89 +192,103 @@ Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend
 Description:
 
 1. Duration Master Module
-  - Recreated Add Duration and Edit Duration modules inside the common module (instead of separate routes).
-  - Renamed and updated route: Duration Management → Duration Master (UI side).
-  - Added Sweet Alert confirmation on delete action.
-  - Fixed Status field issue during Add Item functionality.
-  - Corrected API structure to match app standard.
-  - Coordinated with Devanshi and corrected API response changes.
-  - Replaced Sweet Alert with Common Modal Popup for confirmations.
+
+- Recreated Add Duration and Edit Duration modules inside the common module (instead of separate routes).
+- Renamed and updated route: Duration Management → Duration Master (UI side).
+- Added Sweet Alert confirmation on delete action.
+- Fixed Status field issue during Add Item functionality.
+- Corrected API structure to match app standard.
+- Coordinated with Devanshi and corrected API response changes.
+- Replaced Sweet Alert with Common Modal Popup for confirmations.
 
 2. Vendor Management Module
-  - Redesigned Add Vendor and Edit Vendor components using SCSS.
-  - Integrated Common InputField Component in both Add & Edit Vendor.
-  - Updated API structure as per requirements.
-  - Added Back button to Add & Edit Vendor.
-  - Improved validation handling.
+
+- Redesigned Add Vendor and Edit Vendor components using SCSS.
+- Integrated Common InputField Component in both Add & Edit Vendor.
+- Updated API structure as per requirements.
+- Added Back button to Add & Edit Vendor.
+- Improved validation handling.
 
 3. Layout → Header Module
-  - Displayed User Name and User Role on Profile menu button.
+
+- Displayed User Name and User Role on Profile menu button.
 
 4. Finance & Sage Module
-  - Created 3 sub-modules:
-    - PO & Invoice Sync
-    - Payment Status
-    - Billing Summary Report
-  - Designed API structure for all three modules.
-  - Implemented Fetch All Items API in each module.
-  - Commented out API calls temporarily for all 3 sub-modules.
+
+- Created 3 sub-modules:
+  - PO & Invoice Sync
+  - Payment Status
+  - Billing Summary Report
+- Designed API structure for all three modules.
+- Implemented Fetch All Items API in each module.
+- Commented out API calls temporarily for all 3 sub-modules.
 
 5. Error Boundary Module
-  - Displayed Error Boundary Module for default and unauthorized routes.
-  - Working on dynamic error boundary pages for API responses:
-    - 401 – Unauthorized
-    - 403 – Forbidden
-    - 404 – Not Found
-  - Applied text consistency updates in Error Boundary (consistent font-family).
+
+- Displayed Error Boundary Module for default and unauthorized routes.
+- Working on dynamic error boundary pages for API responses:
+  - 401 – Unauthorized
+  - 403 – Forbidden
+  - 404 – Not Found
+- Applied text consistency updates in Error Boundary (consistent font-family).
 
 6. Common Components
-  - Common Modal Popup Enhancements:
-    - Improved Modal to work like Sweet Alert.
-    - Used Common Modal Popup instead of Sweet Alert across modules.
-    - Implemented Common Modal Popup as Alert in:
-      - Format Master
-      - Duration Master
-      - Language Master
-      - Position Master
+
+- Common Modal Popup Enhancements:
+  - Improved Modal to work like Sweet Alert.
+  - Used Common Modal Popup instead of Sweet Alert across modules.
+  - Implemented Common Modal Popup as Alert in:
+    - Format Master
+    - Duration Master
+    - Language Master
+    - Position Master
 
 7. Media Cost Master Module
-  - Fixed issues with searching and perPage dropdown not working properly.
-  - Applied StatusChip (common component) usage.
+
+- Fixed issues with searching and perPage dropdown not working properly.
+- Applied StatusChip (common component) usage.
 
 8. Client Management Module
-  - Added default Toast values for notifications.
+
+- Added default Toast values for notifications.
 
 9. Alert Images
-  - Updated routes and handled changes in image imports.
+
+- Updated routes and handled changes in image imports.
 
 10. Reports & Analytics Module
-  - Commented out module from routes and sidebar.
+
+- Commented out module from routes and sidebar.
 
 11. Code & Project Improvements
-  - Removed all dummy data from utils.
-  - Removed deprecated MUI properties wherever used.
-  - Applied review changes from Rahul Sir.
-  - Performed text consistency fixes across modules (views, styles, typography).
+
+- Removed all dummy data from utils.
+- Removed deprecated MUI properties wherever used.
+- Applied review changes from Rahul Sir.
+- Performed text consistency fixes across modules (views, styles, typography).
 
 12. Live Issue Fixes
-  - Checked and resolved login issue on live.
-  - Verified and fixed text consistency issue in production.
+
+- Checked and resolved login issue on live.
+- Verified and fixed text consistency issue in production.
 
 13. Project Reporting
-  - Created report of all worked modules in the Media Planner project.
 
+- Created report of all worked modules in the Media Planner project.
 
 Project: Dealer Data,
 
 1. Code Review
-  - Ongoing review of existing codebase to align with best practices and standards.
+
+- Ongoing review of existing codebase to align with best practices and standards.
 
 2. Accessories Module
-  - Folder Structure: Created and organized following MVC architecture.
-  - State Management: Set up Redux structure for predictable state handling.
-  - UI/UX Implementation:
-    - Added functionality to open modal on Accessories List button click.
-    - Displayed dummy data inside the modal and Accessories module.
+
+- Folder Structure: Created and organized following MVC architecture.
+- State Management: Set up Redux structure for predictable state handling.
+- UI/UX Implementation:
+  - Added functionality to open modal on Accessories List button click.
+  - Displayed dummy data inside the modal and Accessories module.
 
 ## Leave Request
 
@@ -314,10 +344,6 @@ Project : Table booking web
 commit : Commit for added
 PR :
 
-
-
-
-
 1. Sidebar (Left Panel)
 
 - Position: Fixed to the left edge of the viewport.
@@ -347,80 +373,86 @@ PR :
   - Four metric cards (Total Users, Total Orders, Total Sales, Total Pending).
   - Sales chart section.
 
-
 ## Work in Media Planner Report
 
 1. Landing Page
-  - Implemented UI enhancements.
+
+- Implemented UI enhancements.
 
 2. Authentication Flow
-  - Signup Screen – UI Enhancements.
-  - Signin Screen – UI Enhancements + API Integration Enhancements.
-  - Verify OTP Screen – UI Enhancements + API Integration + Testing.
+
+- Signup Screen – UI Enhancements.
+- Signin Screen – UI Enhancements + API Integration Enhancements.
+- Verify OTP Screen – UI Enhancements + API Integration + Testing.
 
 3. Layout Page
-  - Header – Designed and implemented (responsive).
-  - Sidebar – Designed and implemented (responsive).
+
+- Header – Designed and implemented (responsive).
+- Sidebar – Designed and implemented (responsive).
 
 4. Routing & Common Components
-  - Setup Routing for navigation.
-  - Common Modal Popup – Works as simple popup & alert.
-  - Common InputField – Supports text, menu, number, time field, text area, etc.
-  - Error Boundary – UI improvements.
-  - DataTable – UI improvements.
-  - Common Form Buttons – Created reusable form action buttons.
-  - Common Status Chip – Created for displaying status.
+
+- Setup Routing for navigation.
+- Common Modal Popup – Works as simple popup & alert.
+- Common InputField – Supports text, menu, number, time field, text area, etc.
+- Error Boundary – UI improvements.
+- DataTable – UI improvements.
+- Common Form Buttons – Created reusable form action buttons.
+- Common Status Chip – Created for displaying status.
 
 5. Vendor Management Module
-  - UI Enhancements.
+
+- UI Enhancements.
 
 6. Client Management Module
-  - CRUD flow implemented.
-  - Redux API structure added.
-  - UI screens completed.
+
+- CRUD flow implemented.
+- Redux API structure added.
+- UI screens completed.
 
 7. Finance & Sage Modules
-  7.1 PO & Invoice Sync
-    - UI screens completed.
-    - Redux API structure added.
-    - CRUD flow – In Progress.
-  7.2 Payment Status
-    - UI screens completed.
-    - Redux API structure added.
-    - CRUD flow – In Progress.
-  7.3 Billing Summary Report
-    - UI screens completed.
-    - Redux API structure added.
-    - CRUD flow – In Progress.
+   7.1 PO & Invoice Sync
+
+   - UI screens completed.
+   - Redux API structure added.
+   - CRUD flow – In Progress.
+     7.2 Payment Status
+   - UI screens completed.
+   - Redux API structure added.
+   - CRUD flow – In Progress.
+     7.3 Billing Summary Report
+   - UI screens completed.
+   - Redux API structure added.
+   - CRUD flow – In Progress.
 
 8. Master Modules
-  8.1 Media Type Master
-    - UI Enhancements.
-  8.2 Publisher Master
-    - UI Enhancements.
-  8.3 Media Cost Master
-    - CRUD flow implemented.
-    - Redux API structure added.
-    - UI screens completed.
-  8.4 Format Master
-    - CRUD flow implemented.
-    - Redux API structure added.
-    - UI screens completed.
-  8.5 Language Master
-    - CRUD flow implemented.
-    - Redux API structure added.
-    - UI screens completed.
-  8.6 Size Master
-    - CRUD flow implemented.
-    - Redux API structure added.
-    - UI screens completed.
-  8.7 Position Master
-    - CRUD flow implemented.
-    - Redux API structure added.
-    - UI screens completed.
-  8.8 Time Slot Master
-    - CRUD flow implemented.
-    - Redux API structure added.
-    - UI screens completed.
-  8.9 Duration Master
-    - UI Enhancements completed.
+   8.1 Media Type Master
+   - UI Enhancements.
+     8.2 Publisher Master
+   - UI Enhancements.
+     8.3 Media Cost Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.4 Format Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.5 Language Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.6 Size Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.7 Position Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.8 Time Slot Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.9 Duration Master
+   - UI Enhancements completed.
