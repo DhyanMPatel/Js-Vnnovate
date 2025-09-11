@@ -1,49 +1,34 @@
 ## Work Doing:
 
-Date: 10 Sep, 2025
-Day: Wednesday,
+Date: 11 Sep, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
 Project: Dealer Data,
 
-1. Fixe issue where the Global Search module did not reset properly after clicking the reset button.
-2. Improve styling for the Exterior and Interior image modals.
+1. Vehicle Report Module Improvement
+  - Make changes in code based on Review
 
 ## Work done:
 
 EOD,
-Date: 10 Sep, 2025
-Day: Wednesday,
+Date: 11 Sep, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Global Search Module – Fixed issue where the search did not reset properly after clicking the reset button.
+1. Vehicle Report Module Enhancements
+  - Moved Exterior and Interior image modals into separate files within the Vehicle Report module.
+  - Made UI improvements for a better user experience based on feedback from Rahul sir.
 
-2. Exterior & Interior Modals – Improved styling for better UI consistency.
+2. Global Search
+  - Verified that the Global Search functionality is working properly.
 
-3. Vehicle Report Module Improvements
-  - Removed unwanted code.
-  - Refactored code using container-view format.
-  - Optimized code for better performance.
-  - Added loader for API calls.
-
-4. Accessories Module Improvements
-  - Removed unwanted code.
-  - Refactored code using container-view format.
-  - Optimized code for better performance.
-  - Added loader for API calls.
-
-5. UI Enhancements – Updated styles for dropdown buttons and date range selector.
-
-6. Reports Module Improvements 
-  - Removed unwanted code.
-  - Refactored code using container-view format.
-  - Optimized code for better performance.
-  - Added loader for API calls.
-  
-7. Testing – Successfully tested all modules (Vehicle Report, Accessories, and Reports) including API integrations.
+3. Issue Tracking
+  - Created a list of issues encountered during testing that require changes on the backend side.
+  - Made changes as per API requirement.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
