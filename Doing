@@ -1,34 +1,42 @@
 ## Work Doing:
 
-Date: 11 Sep, 2025
-Day: Thursday,
+Date: 12 Sep, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 Project: Dealer Data,
 
-1. Vehicle Report Module Improvement
-  - Make changes in code based on Review
+1. Test all modules in the live environment.
+2. Optimize code wherever required.
+3. Verify font consistency and ensure loader integration on buttons across the entire project.
 
 ## Work done:
 
 EOD,
-Date: 11 Sep, 2025
-Day: Thursday,
+Date: 12 Sep, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Vehicle Report Module Enhancements
-  - Moved Exterior and Interior image modals into separate files within the Vehicle Report module.
-  - Made UI improvements for a better user experience based on feedback from Rahul sir.
-
-2. Global Search
-  - Verified that the Global Search functionality is working properly.
-
-3. Issue Tracking
-  - Created a list of issues encountered during testing that require changes on the backend side.
-  - Made changes as per API requirement.
+1. Font Family
+  - Updated font family to LandRoverMedium custom fonts.
+2. Dashboard
+  - Added loaders on table load, search, filter, page change, and per-page change.
+  - Added loader in Record Quality section.
+3. Exception Email
+  - Added loaders and applied theme-based design changes in:
+    - Add Modal
+    - Edit Modal
+    - Delete Modal
+  - Added loaders on table load, search, page change, and per-page change.
+4. Accessories Module
+  - Applied UI improvements in table.
+5. Report List Module
+  - Applied UI enhancements in table.
+6. Global Enhancement
+  - Added initial page loader to all sidebar menu items, including Login and Forgot Password modules.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
@@ -167,113 +175,81 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (1 Sep - 5 Sep) Report of Dhyan
-
-Project: Media Planner,
-
-Git Commit ID: f7f6b21156c5cd93e375830782a88d7633e6929e
-Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/f7f6b21156c5cd93e375830782a88d7633e6929e
-
-Description:
-
-1. Duration Master Module
-
-- Recreated Add Duration and Edit Duration modules inside the common module (instead of separate routes).
-- Renamed and updated route: Duration Management → Duration Master (UI side).
-- Added Sweet Alert confirmation on delete action.
-- Fixed Status field issue during Add Item functionality.
-- Corrected API structure to match app standard.
-- Coordinated with Devanshi and corrected API response changes.
-- Replaced Sweet Alert with Common Modal Popup for confirmations.
-
-2. Vendor Management Module
-
-- Redesigned Add Vendor and Edit Vendor components using SCSS.
-- Integrated Common InputField Component in both Add & Edit Vendor.
-- Updated API structure as per requirements.
-- Added Back button to Add & Edit Vendor.
-- Improved validation handling.
-
-3. Layout → Header Module
-
-- Displayed User Name and User Role on Profile menu button.
-
-4. Finance & Sage Module
-
-- Created 3 sub-modules:
-  - PO & Invoice Sync
-  - Payment Status
-  - Billing Summary Report
-- Designed API structure for all three modules.
-- Implemented Fetch All Items API in each module.
-- Commented out API calls temporarily for all 3 sub-modules.
-
-5. Error Boundary Module
-
-- Displayed Error Boundary Module for default and unauthorized routes.
-- Working on dynamic error boundary pages for API responses:
-  - 401 – Unauthorized
-  - 403 – Forbidden
-  - 404 – Not Found
-- Applied text consistency updates in Error Boundary (consistent font-family).
-
-6. Common Components
-
-- Common Modal Popup Enhancements:
-  - Improved Modal to work like Sweet Alert.
-  - Used Common Modal Popup instead of Sweet Alert across modules.
-  - Implemented Common Modal Popup as Alert in:
-    - Format Master
-    - Duration Master
-    - Language Master
-    - Position Master
-
-7. Media Cost Master Module
-
-- Fixed issues with searching and perPage dropdown not working properly.
-- Applied StatusChip (common component) usage.
-
-8. Client Management Module
-
-- Added default Toast values for notifications.
-
-9. Alert Images
-
-- Updated routes and handled changes in image imports.
-
-10. Reports & Analytics Module
-
-- Commented out module from routes and sidebar.
-
-11. Code & Project Improvements
-
-- Removed all dummy data from utils.
-- Removed deprecated MUI properties wherever used.
-- Applied review changes from Rahul Sir.
-- Performed text consistency fixes across modules (views, styles, typography).
-
-12. Live Issue Fixes
-
-- Checked and resolved login issue on live.
-- Verified and fixed text consistency issue in production.
-
-13. Project Reporting
-
-- Created report of all worked modules in the Media Planner project.
+**Subject**: Weekly (8 Sep - 12 Sep) Report of Dhyan
 
 Project: Dealer Data,
 
-1. Code Review
+Git Commit ID: c99b3ff4d448925ed0b18c6d6b7f9b4441dfaffb
+Git Commit Link: https://gitlab.com/vasik.m.vnnovate/dealer-data-v.2.0/-/commits/c99b3ff4d448925ed0b18c6d6b7f9b4441dfaffb
 
-- Ongoing review of existing codebase to align with best practices and standards.
+Description:
 
-2. Accessories Module
-
-- Folder Structure: Created and organized following MVC architecture.
-- State Management: Set up Redux structure for predictable state handling.
-- UI/UX Implementation:
-  - Added functionality to open modal on Accessories List button click.
-  - Displayed dummy data inside the modal and Accessories module.
+1. Project Setup
+  - Cloned Dealer Data project and successfully set up on local PC.
+2. Dashboard
+  - Added loaders on table load, search, filter, page change, and per-page change.
+  - Added loader in Record Quality section.
+3. Accessories Module
+  - Implemented UI with new theme.
+  - Integrated API and verified data flow.
+  - Implemented and tested Search functionality.
+  - Applied UI improvements in table.
+  - Removed unwanted code.
+  - Refactored using container-view format.
+  - Optimized code for better performance.
+  - Added loaders for API calls.
+4. Reports Module (Report List)
+  - Implemented UI with new theme.
+  - Added and tested Filter functionality.
+  - Implemented Export functionality.
+  - Added Reset button to clear all filters.
+  - Applied UI enhancements in table.
+  - Removed unwanted code.
+  - Refactored using container-view format.
+  - Optimized code for better performance.
+  - Added loaders for API calls.
+5. Vehicle Reports Module
+  - Added Table to display vehicle data.
+  - Implemented Search functionality.
+  - Designed Exterior and Interior modals (in progress → later separated into files).
+  - Added dropdowns for:
+    - Reserved
+    - Common Status
+    - Color
+    - Module Name
+  - Added View Vehicle link.
+  - Implemented Reset button for dropdowns.
+  - Removed unwanted code.
+  - Refactored using container-view format.
+  - Optimized code for performance.
+  - Added loaders for API calls.
+  - Moved Exterior & Interior modals into separate files.
+  - Applied UI improvements with feedback from Rahul sir.
+6. Global Search Module
+  - Fixed issue where reset button did not properly reset the search.
+  - Verified and tested functionality (working properly).
+7. Exception Email Module
+  - Added loaders and applied theme-based UI design changes in:
+    - Add Modal
+    - Edit Modal
+    - Delete Modal
+  - Added loaders on table load, search, page change, and per-page change.
+8. Common Pagination Module
+  - Fixed issue to correctly display total pages and current page.
+  - Improved navigation with page numbers + Next/Previous buttons.
+9. Global Enhancements
+  - Updated font family to LandRoverMedium custom fonts.
+  - Added initial page loaders for:
+    - Dashboard
+    - User Management
+    - Accessories Module
+    - Report List Module
+    - Exception Email
+    - All sidebar menu items (including Login and Forgot Password).
+10. Testing & Issue Tracking
+  - Successfully tested Vehicle Report, Accessories, and Reports modules including API integrations.
+  - Created a list of backend issues during testing and shared for fixes.
+  - Made required API-related adjustments.
 
 ## Leave Request
 
