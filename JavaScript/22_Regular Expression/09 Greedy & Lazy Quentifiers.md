@@ -47,3 +47,15 @@ let str = '<> <a href="/"> <input type="radio" checked> <b>';
 
 alert(str.match(regexp)); // '<a href="/">', '<input type="radio" checked>', '<b>'
 ```
+
+## Look Greedy & Lazy Quantifiers Exercise
+
+- [Practical Exercise](./09%20Greedy%20&%20Lazy%20Quentifiers.js)
+
+## Go back to Quantifiers
+
+- [Quantifiers +, *, ? and {n}](./08%20Quentifiers.md)
+
+## Now Learn about Capturing groups
+
+- [Capturing groups](./10%20capturing_group.md)

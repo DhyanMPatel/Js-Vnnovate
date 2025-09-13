@@ -23,8 +23,7 @@ console.log("function f()".match(new RegExp("f\\(\\)", "i"))); // Return - f()
 
 - all special characters are allowed without escaping, except when they mean something for square brackets.
 
-
-## Go back to Word Boundary
+## Go back to Word 
 
 - [Word Boundary](./05%20Word%20Boundary.md)
 

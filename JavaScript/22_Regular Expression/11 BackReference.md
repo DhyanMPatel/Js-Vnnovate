@@ -24,3 +24,20 @@ alert(str.match(regex)); // Return - "She's the one!"
 ```
 
 - find `Quate` match untile that repeate `(.*?)` pattern.
+
+
+## Go back to Capturing groups
+
+- [Capturing groups](./10%20capturing_group.md)
+
+## Now Learn about Alternation (OR) | and Come back to this file
+
+- [Alternation (OR) |](./12%20Alternation.js)
+
+## Now Learn about Lookahead and lookbehind and Come back to this file
+
+- [Lookahead and lookbehind](./13%20lookahead_lookbehind.js)
+
+## Now Learn about Sticky flag "y", searching at position
+
+- [Sticky flag "y", searching at position](./14%20Stricky_flag_Y.md)

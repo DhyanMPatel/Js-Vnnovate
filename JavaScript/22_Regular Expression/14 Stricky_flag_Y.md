@@ -53,3 +53,12 @@
   regexp.lastIndex = 4;
   alert(regexp.exec(str)); // varName (word at position 4)
   ```
+
+## Go back to Back Reference
+
+- [Backreferences in pattern: \N and \k<name>](./11%20BackReference.md)
+
+## Now learn about Methods of RegExp and String
+
+- [Methods of RegExp and String](./15%20Methods%20of%20RegExp.js)
+
