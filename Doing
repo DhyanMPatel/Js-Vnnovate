@@ -1,43 +1,46 @@
 ## Work Doing:
 
-Date: 12 Sep, 2025
-Day: Friday,
+Date: 15 Sep, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 Project: Dealer Data,
 
-1. Test all modules in the live environment.
-2. Optimize code wherever required.
-3. Verify font consistency and ensure loader integration on buttons across the entire project.
+1. Loader Testing
+  - Verify all loaders work correctly on:
+    - Initial page load
+    - Add operation
+    - Update operation
+    - Delete operation
+
+2. Code Optimization
+  - Review and refactor code where necessary for better readability, maintainability, and performance.
 
 ## Work done:
 
 EOD,
-Date: 12 Sep, 2025
-Day: Friday,
+Date: 15 Sep, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Font Family
-  - Updated font family to LandRoverMedium custom fonts.
-2. Dashboard
-  - Added loaders on table load, search, filter, page change, and per-page change.
-  - Added loader in Record Quality section.
-3. Exception Email
-  - Added loaders and applied theme-based design changes in:
-    - Add Modal
-    - Edit Modal
-    - Delete Modal
-  - Added loaders on table load, search, page change, and per-page change.
-4. Accessories Module
-  - Applied UI improvements in table.
-5. Report List Module
-  - Applied UI enhancements in table.
-6. Global Enhancement
-  - Added initial page loader to all sidebar menu items, including Login and Forgot Password modules.
-
+1. Loader Testing
+  - Verified loaders on:
+    - Initial page load
+    - Add operation
+    - Update operation
+    - Delete operation
+    - Logout
+2. System Maintenance
+  - Upgraded RAM.
+  - Cleaned unwanted files from C drive.
+3. Code Improvement
+  - Export CSV action in Report List module moved to AX file.
+  - Implemented loader on Logout and displayed toast message on logout.
+4. Bug Fixes
+  - Identified and resolved issue where Toast was displaying twice.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
