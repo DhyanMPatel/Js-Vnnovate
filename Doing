@@ -1,62 +1,37 @@
 ## Work Doing:
 
-Date: 16 Sep, 2025
-Day: Tuesday,
+Date: 17 Sep, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 Project: Dealer Data,
 
-1. Live Environment Testing
-  - Test code in the live environment.
-  - Identify and resolve any issues encountered.
-
-2. Tasks Requiring Changes
-  - Report List Module
-    - Fixed search box height issue – Done
-    - Updated date display – Done
-  - Date Picker → Updated color to match theme – Done
-  - Reports Module
-    - Fixed pagination issue – Done
-    - Updated logic for search & date selector-based filtering – Done
-
-3. Dashboard Module Improvements
-  - Moved API calls to AX file for:
-    - Conversions
-    - DataFieldQuality
-    - RecordQuality
-    - Sales Funnel
-  - Provide all data via Redux Store.
+1. Dashboard Module
+  - Apply required logic changes and improvements.
+2. Report List Module
+  - Implement necessary API-related changes.
 
 ## Work done:
 
 EOD,
-Date: 16 Sep, 2025
-Day: Tuesday,
+Date: 17 Sep, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Dealer Data,
 
-1. Live Environment Testing
-  - Test code in the live environment.
-  - Identify and resolve any issues encountered.
-
-2. Tasks Requiring Changes
-  - Report List Module
-    - Fixed search box height issue – Done
-    - Updated date display – Done
-  - Date Picker → Updated color to match theme – Done
-  - Reports Module
-    - Fixed pagination issue – Done
-    - Updated logic for search & date selector-based filtering – Done
-
-3. Dashboard Module Improvements
-  - Moved API calls to AX file for:
-    - Conversions
-    - DataFieldQuality
-    - RecordQuality
-    - Sales Funnel
-  - Provide all data via Redux Store.
+1. Exception Email Module
+  - Added loader to the button in Add Modal.
+2. Reports Module
+  - Added loader to the Export CSV button.
+  - Removed unwanted APIs.
+  - Verified Search and Date Filter functionality.
+  - Ensured Export CSV works correctly with applied filters.
+3. Dashboard / Sales Funnel
+  - Resolved live issue in Sales Funnel with support from Bhutik bhai and Rahul sir.
+4. Global UI Fix
+  - Increased z-index of page loader above modal.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
