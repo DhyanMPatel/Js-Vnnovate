@@ -1,27 +1,28 @@
 ## Work Doing:
 
-Date: 18 Sep, 2025
-Day: Thursday,
+Date: 19 Sep, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 Project: Dealer Data Backend,
 
-1. Learn Node folder structure and initial packages and many more from session.
+1. Understand old backend project and code review.
 
 ## Work done:
 
 EOD,
-Date: 18 Sep, 2025
-Day: Thursday,
+Date: 19 Sep, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Dealer Data,
 
-1. Learned about Node.js folder structure, initial packages, and other related concepts from the session.
-2. Made changes in the Sales Funnel module related to re-ordering data.
-3. Tested the changes in Live environment.
-4. Imported Udaan data into MySQL.
+1. New Dealer Data Project (Learning)
+  - Explored full workflow of register and login to understand distributed structure.
+  - Reviewed dashboard API workflow with BigQuery.
+  - Explored and understood usage of different packages used in the project.
+
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
@@ -159,81 +160,78 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (8 Sep - 12 Sep) Report of Dhyan
+**Subject**: Weekly (15 Sep - 19 Sep) Report of Dhyan
 
-Project: Dealer Data,
+Project: Dealer Data - Frontend,
 
-Git Commit ID: c99b3ff4d448925ed0b18c6d6b7f9b4441dfaffb
-Git Commit Link: https://gitlab.com/vasik.m.vnnovate/dealer-data-v.2.0/-/commits/c99b3ff4d448925ed0b18c6d6b7f9b4441dfaffb
+Git Commit ID: 5122701ac15bf0709aad0ccab9745883ee884750
+Git Commit Link: https://gitlab.com/vasik.m.vnnovate/dealer-data-v.2.0/-/commits/5122701ac15bf0709aad0ccab9745883ee884750
 
 Description:
 
-1. Project Setup
-  - Cloned Dealer Data project and successfully set up on local PC.
-2. Dashboard
-  - Added loaders on table load, search, filter, page change, and per-page change.
-  - Added loader in Record Quality section.
-3. Accessories Module
-  - Implemented UI with new theme.
-  - Integrated API and verified data flow.
-  - Implemented and tested Search functionality.
-  - Applied UI improvements in table.
-  - Removed unwanted code.
-  - Refactored using container-view format.
-  - Optimized code for better performance.
-  - Added loaders for API calls.
-4. Reports Module (Report List)
-  - Implemented UI with new theme.
-  - Added and tested Filter functionality.
-  - Implemented Export functionality.
-  - Added Reset button to clear all filters.
-  - Applied UI enhancements in table.
-  - Removed unwanted code.
-  - Refactored using container-view format.
-  - Optimized code for better performance.
-  - Added loaders for API calls.
-5. Vehicle Reports Module
-  - Added Table to display vehicle data.
-  - Implemented Search functionality.
-  - Designed Exterior and Interior modals (in progress → later separated into files).
-  - Added dropdowns for:
-    - Reserved
-    - Common Status
-    - Color
-    - Module Name
-  - Added View Vehicle link.
-  - Implemented Reset button for dropdowns.
-  - Removed unwanted code.
-  - Refactored using container-view format.
-  - Optimized code for performance.
-  - Added loaders for API calls.
-  - Moved Exterior & Interior modals into separate files.
-  - Applied UI improvements with feedback from Rahul sir.
-6. Global Search Module
-  - Fixed issue where reset button did not properly reset the search.
-  - Verified and tested functionality (working properly).
-7. Exception Email Module
-  - Added loaders and applied theme-based UI design changes in:
-    - Add Modal
-    - Edit Modal
-    - Delete Modal
-  - Added loaders on table load, search, page change, and per-page change.
-8. Common Pagination Module
-  - Fixed issue to correctly display total pages and current page.
-  - Improved navigation with page numbers + Next/Previous buttons.
-9. Global Enhancements
-  - Updated font family to LandRoverMedium custom fonts.
-  - Added initial page loaders for:
-    - Dashboard
-    - User Management
-    - Accessories Module
-    - Report List Module
-    - Exception Email
-    - All sidebar menu items (including Login and Forgot Password).
-10. Testing & Issue Tracking
-  - Successfully tested Vehicle Report, Accessories, and Reports modules including API integrations.
-  - Created a list of backend issues during testing and shared for fixes.
-  - Made required API-related adjustments.
+1. Loader Testing
+  - Verified loaders on:
+    - Initial page load
+    - Add operation
+    - Update operation
+    - Delete operation
+    - Logout
+
+2. Reports Module
+  - Export CSV action moved to AX file.
+  - Added loader to Export CSV button.
+  - Removed unwanted APIs.
+  - Verified Search and Date Filter functionality.
+  - Ensured Export CSV works correctly with applied filters.
+  - Fixed pagination issue.
+  - Updated logic for search & date selector-based filtering.
+
+3. Exception Email Module
+  - Added loader to the button in Add Modal.
+
+4. Dashboard Module
+  - Moved API calls to AX file for:
+    - Conversions
+    - DataFieldQuality
+    - RecordQuality
+    - Sales Funnel
+  - Provided all data via Redux Store.
+  - Resolved live issue in Sales Funnel with support from Bhautik bhai and Rahul sir.
+
+5. Report List Module
+  - Fixed search box height issue.
+  - Updated date display.
+
+6. Global UI / UX Fixes
+  - Increased z-index of page loader above modal.
+  - Updated Date Picker color to match theme.
+  - Implemented loader on Logout with toast message.
+  - Identified and resolved issue where Toast was displaying twice.
+
+7. Live Environment Testing
+  - Tested code in the live environment.
+  - Identified and resolved issues encountered.
+
+Project: Other,
+
+1. System Maintenance
+  - Upgraded RAM.
+  - Cleaned unwanted files from C drive.
+
+Project: Dealer Data - Backend,
+
+1. New Dealer Data Project (Learning)
+  - Understood the folder structure.
+  - Explored full workflow of register and login to understand distributed structure.
+  - Reviewed dashboard API workflow with BigQuery.
+  - Explored and understood usage of different packages used in the project.
+
+  
+
+1. Learned about Node.js folder structure, initial packages, and other related concepts from the session.
+2. Made changes in the Sales Funnel module related to re-ordering data.
+3. Tested the changes in Live environment.
+4. Imported Udaan data into local System.
 
 ## Leave Request
 
