@@ -1,22 +1,26 @@
 ## Work Doing:
 
-Date: 19 Sep, 2025
-Day: Friday,
+Date: 22 Sep, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 Project: Dealer Data Backend,
 
-1. Understand old backend project and code review.
+1. Setup Project in my local PC.
+2. Solve issue during login in postman with help of Bhautik bhai and Devanshi.
+3. Ask for vista_catalogues table content from Ashish bhai and import vista_catalogues table data in my local db. - In Progress
+4. Implement whole work flow of Accessories module APIs.
+5. Need to add vista_catalogues table data in response - In Progress
 
 ## Work done:
 
 EOD,
-Date: 19 Sep, 2025
-Day: Friday,
+Date: 22 Sep, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
-Project: Dealer Data,
+Project: Dealer Data Backend,
 
 1. New Dealer Data Project (Learning)
   - Explored full workflow of register and login to understand distributed structure.
