@@ -1,37 +1,34 @@
 ## Work Doing:
 
-Date: 23 Sep, 2025
-Day: Tuesday,
+Date: 24 Sep, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
-Project: Dealer Data Backend,
+Project: Dealer Data Frontend,
 
-1. Accessories Module
-  - Resolved errors in vista_catalogues table.
-  - Test Api and note changes needs in frontend for better understanding.
+1. Testing and solve issues in Dealer Data Frontend.
 
 ## Work done:
 
 EOD,
-Date: 23 Sep, 2025
-Day: Tuesday,
+Date: 24 Sep, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
-Project: Dealer Data Backend,
+Project: Dealer Data Frontend,
 
-1. Dashboard Module
-  - Removed "Total" item label in Sales Funnel.
-2. Reports Module
-  - Updated column data UI to match the old UI.
+1. Profile Module
+  - Fixed issue in Change Password functionality.
+  - Updated button UI in Change Password modal.
+  - Updated button UI in Edit Profile modal.
+  - Updated button UI across Profile module for theme consistency.
+  - Updated input field UI for disabled fields in Edit Profile modal.
 
-3. Common Table Module
-  - Implemented manual sorting when a column header is clicked (reordering data locally in the component).
-
-4. Menu / UI Fixes
-  - Fixed menu icons in Tablet view (removed duplicate icon on the left side).
-  - Updated UI for Vehicle Report, Accessories, and Reports modules in Dark Mode.
-  - Modified filter UI in Vehicle Report module with Rahul sir.
+2. Vehicle Reports Module
+  - Implemented single API to handle both search and filtered data.
+  - Removed unnecessary API calls.
+  - Collaborated with Bhautik bhai to resolve API-related issues.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
