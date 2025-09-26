@@ -1,34 +1,32 @@
 ## Work Doing:
 
-Date: 24 Sep, 2025
-Day: Wednesday,
+Date: 26 Sep, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
-Project: Dealer Data Frontend,
+Project: Dealer Data Frontend
 
-1. Testing and solve issues in Dealer Data Frontend.
+
 
 ## Work done:
 
 EOD,
-Date: 24 Sep, 2025
-Day: Wednesday,
+Date: 26 Sep, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Dealer Data Frontend,
 
-1. Profile Module
-  - Fixed issue in Change Password functionality.
-  - Updated button UI in Change Password modal.
-  - Updated button UI in Edit Profile modal.
-  - Updated button UI across Profile module for theme consistency.
-  - Updated input field UI for disabled fields in Edit Profile modal.
-
-2. Vehicle Reports Module
-  - Implemented single API to handle both search and filtered data.
-  - Removed unnecessary API calls.
-  - Collaborated with Bhautik bhai to resolve API-related issues.
+1. Testing & Debugging
+  - Performed thorough testing and debugging in both Light and Dark modes.
+  - Identified required changes and implemented them in collaboration with the team.
+2. Reports Module
+  - Capitalized Retailer Name for better readability and consistency.
+3. UI Enhancements
+  - Updated button styles across modules for improved consistency.
+  - Applied text UI changes in Login, Reset Password, Forgot Password, and Verify OTP modules (Dark Mode).
+  - Collaboration & Improvements
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
@@ -167,78 +165,77 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (15 Sep - 19 Sep) Report of Dhyan
+**Subject**: Weekly (22 Sep - 26 Sep) Report of Dhyan
 
 Project: Dealer Data - Frontend,
 
-Git Commit ID: 5122701ac15bf0709aad0ccab9745883ee884750
-Git Commit Link: https://gitlab.com/vasik.m.vnnovate/dealer-data-v.2.0/-/commits/5122701ac15bf0709aad0ccab9745883ee884750
+Git Commit ID: 42efd759ebbee5d69e25f3cafda8b676a41a5214
+Git Commit Link: https://gitlab.com/vasik.m.vnnovate/dealer-data-v.2.0/-/commits/42efd759ebbee5d69e25f3cafda8b676a41a5214
 
 Description:
 
-1. Loader Testing
-  - Verified loaders on:
-    - Initial page load
-    - Add operation
-    - Update operation
-    - Delete operation
-    - Logout
+1. Project Setup & Database
+  - Set up project in local PC.
+  - Solved login issue in Postman with help from Bhautik bhai and Devanshi.
+  - Requested vista_catalogues table content from Ashish bhai and imported into local DB.
 
-2. Reports Module
-  - Export CSV action moved to AX file.
-  - Added loader to Export CSV button.
-  - Removed unwanted APIs.
-  - Verified Search and Date Filter functionality.
-  - Ensured Export CSV works correctly with applied filters.
-  - Fixed pagination issue.
-  - Updated logic for search & date selector-based filtering.
+2. Accessories Module
+  - Implemented full workflow of Accessories module APIs.
+  - Added vista_catalogues table data into response (In Progress).
+  - Updated UI in Dark Mode.
 
-3. Exception Email Module
-  - Added loader to the button in Add Modal.
+3. Reports Module
+  - Updated column data UI to match old UI.
+  - Fixed pagination & filter UI issues.
+  - Capitalized Retailer Name for consistency.
+  - Verified Search & Date filter functionality.
+  - Ensured CSV Export works with applied filters.
+  - Updated UI in Dark Mode.
 
-4. Dashboard Module
-  - Moved API calls to AX file for:
-    - Conversions
-    - DataFieldQuality
-    - RecordQuality
-    - Sales Funnel
-  - Provided all data via Redux Store.
-  - Resolved live issue in Sales Funnel with support from Bhautik bhai and Rahul sir.
+4. Vehicle Reports Module
+  - Added Table, Search, and Dropdowns (Reserved, Common Status, Color, Module Name).
+  - Added View Vehicle link.
+  - Implemented Reset button for dropdowns.
+  - Moved Exterior & Interior image modals to separate files.
+  - Improved styling of modals and filter UI (with Rahul sir).
+  - Implemented single API to handle both search and filter data.
+  - Removed extra/unnecessary API calls.
+  - Collaborated with Bhautik bhai to resolve API-related issues.
+  - Updated UI in Dark Mode.
 
-5. Report List Module
-  - Fixed search box height issue.
-  - Updated date display.
+5. Dashboard Module
+  - Removed "Total" item label from Sales Funnel.
+  - Modified Dashboard logic for APIs: moved API calls to AX file for Conversions, DataFieldQuality, RecordQuality, and Sales Funnel.
+  - Provided all data from Redux Store.
+  - Resolved Sales Funnel issue in live (with Bhautik bhai & Rahul sir).
 
-6. Global UI / UX Fixes
-  - Increased z-index of page loader above modal.
-  - Updated Date Picker color to match theme.
-  - Implemented loader on Logout with toast message.
-  - Identified and resolved issue where Toast was displaying twice.
+6. Profile Module
+  - Fixed Change Password functionality issue.
+  - Updated button UI in Change Password modal.
+  - Updated button UI in Edit Profile modal.
+  - Updated button UI across Profile module for theme consistency.
+  - Updated input field UI for disabled fields in Edit Profile modal.
 
-7. Live Environment Testing
-  - Tested code in the live environment.
-  - Identified and resolved issues encountered.
+7. Common Modules / Components
+  - Common Form Buttons Component
+    - Created reusable component for form buttons.
+    - Integrated across all popup modals.
+    - Tested thoroughly to ensure proper functionality.
+  - Common Table Module
+    - Implemented manual sorting on column headers (local reordering).
+    - Added dynamic sortBy display on hover.
+  - Menu / UI Fixes
+    - Fixed duplicate menu icons in Tablet view.
+    - Updated UI consistency across Vehicle Report, Accessories, and Reports in Dark Mode.
 
-Project: Other,
+8. Testing & Debugging
+  - Performed thorough testing in Light and Dark modes.
+  - Verified loaders and button functionality across modules.
+  - Identified issues and implemented fixes in collaboration with the team.
 
-1. System Maintenance
-  - Upgraded RAM.
-  - Cleaned unwanted files from C drive.
-
-Project: Dealer Data - Backend,
-
-1. New Dealer Data Project (Learning)
-  - Understood the folder structure.
-  - Explored full workflow of register and login to understand distributed structure.
-  - Reviewed dashboard API workflow with BigQuery.
-  - Explored and understood usage of different packages used in the project.
-
-  
-
-1. Learned about Node.js folder structure, initial packages, and other related concepts from the session.
-2. Made changes in the Sales Funnel module related to re-ordering data.
-3. Tested the changes in Live environment.
-4. Imported Udaan data into local System.
+9. Team Collaboration
+  - Created Google Sheet with the team to track module status (Completed, Pending, Remaining).
+  - Discussed potential feature improvements for better efficiency and usability.
 
 ## Leave Request
 
