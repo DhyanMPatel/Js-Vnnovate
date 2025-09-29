@@ -1,32 +1,33 @@
 ## Work Doing:
 
-Date: 26 Sep, 2025
-Day: Friday,
+Date: 29 Sep, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
-Project: Dealer Data Frontend
+Project: Media Planner
 
-
+1. Create Project milestone documentation with Disha.
 
 ## Work done:
 
 EOD,
-Date: 26 Sep, 2025
-Day: Friday,
+Date: 29 Sep, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
-Project: Dealer Data Frontend,
+Project: Media Planner,
 
-1. Testing & Debugging
-  - Performed thorough testing and debugging in both Light and Dark modes.
-  - Identified required changes and implemented them in collaboration with the team.
-2. Reports Module
-  - Capitalized Retailer Name for better readability and consistency.
-3. UI Enhancements
-  - Updated button styles across modules for improved consistency.
-  - Applied text UI changes in Login, Reset Password, Forgot Password, and Verify OTP modules (Dark Mode).
-  - Collaboration & Improvements
+1. Project Management
+  - Created an Estimation Sheet in collaboration with Disha.
+2. Media Planner Backend
+  - Code Understanding & Exploration
+    - Studied the use of Multer for handling form data (e.g., image uploads).
+    - Analyzed the use of Nodemailer for sending emails.
+    - Explored the use of Twilio for sending SMS and making phone calls.
+    - Explored the use of Crypto for generating secure tokens.
+    - Studied the use of Bcrypt for securely verifying passwords.
+    - Understanding the Authentication workflow and other route workflows.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
