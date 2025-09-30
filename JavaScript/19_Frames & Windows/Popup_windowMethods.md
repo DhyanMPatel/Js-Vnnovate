@@ -121,3 +121,12 @@ newWindow.onload = function () {
 ## focus/blue
 
 - `newWindow.focus()` to insure that user is now on popup window.
+
+
+## Go back to Resource loading: onload & onerror
+
+- [Resource loading: onload & onerror](../18_Document%20&%20Resource%20Load/Resource%20loading.md)
+
+## Now Learn about Cross window Communication
+
+- [Cross window Communication](./Cross_window%20Comunication.md)

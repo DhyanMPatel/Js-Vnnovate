@@ -28,6 +28,8 @@
   5. Object.isSealed(obj)
   6. Object.isFrozen(obj)
 
+- Now understand [Property Flag & Descriptors](./PropertyFlags_descriptor.js)
+
 # Getter & Setter
 
 - Accessor Properties are represent by `getter` & `setter` methods
@@ -36,3 +38,14 @@
   2. set
   3. enumerable
   4. configurable
+
+- Now deep dive in [Getter & Setter](./Getter_Setter.js)
+
+
+# Go Back to Advance with Function
+
+- [Advance working with Function](../05_Advance_with_Func/intro.md)
+
+# Now Understand Prototype & Inheritance
+
+- [ProtoType & Inheritance](../07_Prototype_Inheritance/intro.md)

@@ -109,3 +109,12 @@ input.onblur = function () {
   form.addEventListener("focusout", () => form.classList.remove("focused"));
 </script>
 ```
+
+
+## Go back to Form Properties and methods
+
+- [Form Properties and methods](./form.md)
+
+## Now Learn about Events : change, input, cut, copy, paste
+
+- [Events : change, input, cut, copy, paste](./Events.md)

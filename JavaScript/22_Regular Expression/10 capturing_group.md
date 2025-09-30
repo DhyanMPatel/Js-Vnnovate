@@ -128,3 +128,15 @@ let result = str.match(regexp);
 console.log(result[0]); // Return - Gogogo John
 console.log(result[1]); // Return - John
 ```
+
+## Look Capturing Group Exercise
+
+- [Practical Exercise](./10%20capturing%20group.js)
+
+## Go back to Greedy and lazy quantifiers
+
+- [Greedy and lazy quantifiers](./09%20Greedy%20&%20Lazy%20Quentifiers.md)
+
+## Now Learn about Back Reference
+
+- [Backreferences in pattern: \N and \k<name>](11%20BackReference.md)

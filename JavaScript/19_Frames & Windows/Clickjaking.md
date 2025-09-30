@@ -88,3 +88,11 @@
   ```
 
 - Then such cookie wouldn’t be sent when Facebook is open in iframe from another site. So the attack would fail.
+
+## Go back to Cross window Communication
+
+- [Cross window Communication](./Cross_window%20Comunication.md)
+
+## Now Learn about Array Buffer, Binary arrays  in Binary Data & files topic
+
+- [Array Buffer, Binary arrays](../20_BinaryData_files/01%20ArrayBuffer.md)

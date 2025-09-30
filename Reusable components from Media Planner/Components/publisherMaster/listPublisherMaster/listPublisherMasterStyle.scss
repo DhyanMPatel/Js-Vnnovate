@@ -1,0 +1,48 @@
+.publisher-list {
+  margin-bottom: 16px;
+}
+
+.publisher-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.publisher-list-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.publisher-list-add-btn {
+  background-color: #1976d2;
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 6px 16px;
+  border-radius: 4px;
+}
+
+.publisher-list-add-btn:hover {
+  background-color: #1565c0;
+}
+
+.publisher-list-table {
+  width: 100%;
+}
+
+.publisher-list-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.publisher-list-chip-active {
+  background-color: #00b69b;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.publisher-list-chip-inactive {
+  background-color: #ff0000;
+  color: #fff;
+  text-transform: capitalize;
+}

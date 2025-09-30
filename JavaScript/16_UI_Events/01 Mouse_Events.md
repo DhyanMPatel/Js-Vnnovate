@@ -45,3 +45,11 @@
     you can get everything from the page source though.
   </div>
   ```
+
+## Go back to Custom Events of intro of Events topic
+
+- [Custom Events](../15_intro%20of%20Events/05%20Custom_Events.md)
+
+## Now Learn about Moving Mouse
+
+- [Moving Mouse](./02%20Moving_mouse.md)

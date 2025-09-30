@@ -55,3 +55,11 @@ console.log(buffer.byteLength); // Return 16
   - `buffer` - ArrayButter
   - `byteOffset` - starting byte position of the view (bydefault 0)
   - `byteLength` - byte length of view (by default till the end of `buffer`).
+
+## Go back to Clickjacking in Frames & Windows topic
+
+- [Clickjacking](../19_Frames%20&%20Windows/Clickjaking.md)
+
+## Now Learn about TextDecoder & TextEncoder
+
+- [TextDecoder & TextEncoder](./TextDecoder_TextEncoder.md)

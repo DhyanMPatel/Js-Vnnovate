@@ -75,3 +75,11 @@ setInterval(() => {
   });
 }, 2000);
 ```
+
+## Go back to Modifying the Document
+
+- [Modifying the Document](./07%20Modlify_Document.md)
+
+## Now Learn about Element Size and Scrolling
+
+- [Element Size & Scrolling](./09%20Element_size_scrolling.md)

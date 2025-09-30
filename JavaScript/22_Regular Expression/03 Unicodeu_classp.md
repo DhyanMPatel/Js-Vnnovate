@@ -41,3 +41,12 @@
   let str = `Prices: $2, €1, ¥9`;
   console.log(str.match(regexp)); // $2,€1,¥9
   ```
+
+
+## Go back to Character Classes
+
+- [Character Classes](./02%20Char_classes.md)
+
+## Now Learn about Anchors: string start ^ and end $ 
+
+- [Anchors: string start ^ and end $](./04%20Anchors.md)

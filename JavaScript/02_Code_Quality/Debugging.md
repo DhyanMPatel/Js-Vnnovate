@@ -37,3 +37,12 @@
     5. `Step out`: continue the execution till the end of the current function, hotkey `Shift+F11`
     6. enable/disable all breakpoints.
     7. enable/disable automatic pause in case of an error.
+
+
+## Go Back to 
+
+[JS Fundamentals](../../01_JS_Fundamentals/intro.md)
+
+## Now get deep knowledge in Object Basics
+
+[Object Basics](../03_Object_basics/intro.md)

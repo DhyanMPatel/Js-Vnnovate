@@ -23,3 +23,11 @@
 
 - When user press any key for a long time then it start `auto-repeat`.
 - For events triggered by `auto-repeat`, the event object has `event.repeat` property set to true.
+
+## Go back to Pointer Event
+
+- [Pointer Event](./04%20Pointer%20Event.md)
+
+## Now Learn about another Event which is Scrolling
+
+- [Scrolling](./06%20Scrolling.md)

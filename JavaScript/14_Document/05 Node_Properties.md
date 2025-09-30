@@ -172,3 +172,12 @@ for (let li of document.querySelectorAll("li")) {
   alert(title + ": " + count);
 }
 ```
+
+
+## Go back to getElement & querySelector
+
+- [Searching using getElement & querySelector](./04%20getElement_querySelector.md)
+
+## Now Learn about Attributes & Properties
+
+- [Attributes & Properties](./06%20Attributes%20and%20Properties.md)

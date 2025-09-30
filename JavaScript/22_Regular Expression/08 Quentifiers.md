@@ -42,3 +42,11 @@ alert("<h1>Hi!</h1>".match(/<[a-z][a-z0-9]*>/gi)); // <h1>
   console.log(str.match(/\#[0-9a-f]{6}/i));
   console.log(str.match(/\#\p{Hex_Digit}{6}/iu));
   ```
+
+## Go back to Word Sets & Ranges [...]
+
+- [Sets & Ranges](./07%20Set_Range.md)
+
+## Now Learn about Greedy and lazy quantifiers
+
+- [Greedy and lazy quantifiers](./09%20Greedy%20&%20Lazy%20Quentifiers.md)

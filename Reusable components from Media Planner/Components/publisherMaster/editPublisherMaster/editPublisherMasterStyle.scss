@@ -1,0 +1,53 @@
+.publisher-form {
+  margin-bottom: 16px;
+}
+
+.publisher-form-name {
+  margin-bottom: 16px;
+}
+
+.publisher-form-description {
+  margin-bottom: 16px;
+}
+
+.publisher-form-mediaType {
+  margin-bottom: 16px;
+}
+
+.publisher-form-status {
+  margin-bottom: 16px;
+}
+
+.publisher-form-logo {
+  margin-bottom: 16px;
+}
+
+.publisher-form-char-count {
+  font-size: 0.75rem;
+  color: #888;
+  display: block;
+  text-align: right;
+}
+
+.publisher-form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.publisher-form-cancel-btn {
+  flex: 1;
+  color: #666;
+  border-color: #ccc;
+  border-radius: 4px;
+}
+
+.publisher-form-submit-btn {
+  flex: 1;
+  background-color: #1976d2;
+  border-radius: 4px;
+}
+
+.publisher-form-submit-btn:hover {
+  background-color: #1565c0;
+}

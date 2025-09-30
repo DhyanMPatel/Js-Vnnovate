@@ -1,66 +1,55 @@
 ## Work Doing:
 
-
-Date: 5 Aug, 2025
+Date: 30 Sep, 2025
 Day: Tuesday,
 
 Today, I am working on below list of task:
-Project: Royal Crucible, 
+Project: Media Planner
 
-1. Continue working on making the Contact Us page fully responsive across all devices (mobile, tablet, desktop).
-2. Gallery Module
-  - Create the structure and layout for the Gallery module.
-  - Start working on its design and functionality as per the project requirements.
-  - Filter out images in different filter.
-  - Display list of Images in Modal When user click on any type of Image like UI/UX, Development, photography, marketing, etc type. - In Progress.
-
-
-5. Add logic in buttons to handle clients speak view scrolling.
+1. Start working in Role based login.
 
 ## Work done:
 
 EOD,
-Date: 5 Aug, 2025
+Date: 30 Sep, 2025
 Day: Tuesday,
 
 Today, I am worked on below list of task:
 
-Project: Royal Crucible,
-1. Improvement in Contact Us Page
-  - Continued refining responsiveness across all screen sizes (mobile, tablet, desktop).
-  - Ensured consistent spacing, alignment, and visibility across devices.
-  - Display toast message when user submit the form.
+Project: Media Planner,
 
-2. Gallery Module
-  - Created structure and layout for the Gallery section.
-  - Applied Framer Motion for smooth entry animations.
-  - Implemented filtering logic to categorize images (e.g., UI/UX, Development, Photography, Marketing).
-  - Displaying filtered image sets in a modal view. - In Progress.
+1. Role-Based Login Enhancements - Done
+  - Assigned roles to users during login. (Backend)
+  - Fixed Profile API response issue related to roles. (Backend)
+  - Wrapped all routes using lazy loading for better performance.
+  - Displayed role-based menu items in the sidebar.
+  - Updated login response: when a user is not found in DB, show “User Not Found” instead of “Invalid Credentials”.
+  - Implemented Unauthorized Page for restricted access attempts using ErrorBoundary module.
+  - Tested all changes in local.
 
-3. Gallery Modal Module
-  - Researched the lightGallery package to handle image modals and previews.
-  - Began development of a reusable common modal component for gallery display. - In Progress.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
 3. Then check Monday's task that i had done like pagination, category filter in Inventory items API. also make changes regarding updates.
 
-1. Yesterday, i make Enhancement in Bulk upload functionality based on feedback like Implemented drag-and-drop file upload functionality, UI improvements and Tested whole work flow.
-2. Then worked on Inventory Item Deletion functionality where when user click on delete button it ask again for confirmation and then it will delete that Item.
-3. At last worked on Inventory Item Editing functionality where when user click on edit button it will open modal and in that modal user can see all the details of that item and then i integrate 2 API integration for Edit Item 1st is for fetching item by id and 2nd is for updating item by id.
+4. Yesterday, i make Enhancement in Bulk upload functionality based on feedback like Implemented drag-and-drop file upload functionality, UI improvements and Tested whole work flow.
+5. Then worked on Inventory Item Deletion functionality where when user click on delete button it ask again for confirmation and then it will delete that Item.
+6. At last worked on Inventory Item Editing functionality where when user click on edit button it will open modal and in that modal user can see all the details of that item and then i integrate 2 API integration for Edit Item 1st is for fetching item by id and 2nd is for updating item by id.
 
-1. Today i work on Royal Crucible project where i find theme based on that project requirement. 
+7. Today i work on Royal Crucible project where i find theme based on that project requirement.
 
-2. Yesterday i work on Setup and Configuration of Theme. for that i waited for the selection of theme. during waiting i added completed task in June and July into the planner and revise some topics of Node and Express js. like, 
-  - Node Modules, 
-  - Error handling, 
-Then in Express js revise intro and its core features like
-  - How it can improve Server side code performance?
-and then at last know How it can handle client request and response?
+8. Yesterday i work on Setup and Configuration of Theme. for that i waited for the selection of theme. during waiting i added completed task in June and July into the planner and revise some topics of Node and Express js. like,
+
+- Node Modules,
+- Error handling,
+  Then in Express js revise intro and its core features like
+- How it can improve Server side code performance?
+  and then at last know How it can handle client request and response?
 
 ## ReadMe.md file for initial project setup
 
 Prerequisites
+
 - Ensure you have the following installed:
   - Node.js (v16 or higher)
   - npm (v7 or higher)
@@ -175,82 +164,95 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (28 July - 1 Aug) Report of Dhyan
+**Subject**: Weekly (22 Sep - 26 Sep) Report of Dhyan
 
+Project: Dealer Data - Frontend,
 
-Project: Smart Bill Book,
-
-Git Commit ID: fb7946350948018e25a5524ebedab56a6dc97eb5
-Git Commit Link: https://gitlab.com/vnnovatesolutions/billsmart-invoice-mgmt-system/-/commit/fb7946350948018e25a5524ebedab56a6dc97eb5
+Git Commit ID: 42efd759ebbee5d69e25f3cafda8b676a41a5214
+Git Commit Link: https://gitlab.com/vasik.m.vnnovate/dealer-data-v.2.0/-/commits/42efd759ebbee5d69e25f3cafda8b676a41a5214
 
 Description:
 
-1. Theme Selection
-  - Searched both paid and free themes.
-  - Explored GitHub repositories for free templates and tested them locally.
-  - Searched for a React-based template suitable for the project.
+1. Project Setup & Database
+  - Set up project in local PC.
+  - Solved login issue in Postman with help from Bhautik bhai and Devanshi.
+  - Requested vista_catalogues table content from Ashish bhai and imported into local DB.
 
-2. Project Installation & Setup
-  - Cloned the selected theme.
-  - Configured the theme in the local development environment.
-  - Reviewed and understood the Initial Setup zip provided by Rahul Sir.
-  - Set up the Redux store for state management.
-  - Configured React Router for page navigation.
+2. Accessories Module
+  - Implemented full workflow of Accessories module APIs.
+  - Added vista_catalogues table data into response (In Progress).
+  - Updated UI in Dark Mode.
 
-3. Header Module
-  - Developed layout for laptop and large devices. 
-  - Implemented dropdown for mobile and tablet view.
+3. Reports Module
+  - Updated column data UI to match old UI.
+  - Fixed pagination & filter UI issues.
+  - Capitalized Retailer Name for consistency.
+  - Verified Search & Date filter functionality.
+  - Ensured CSV Export works with applied filters.
+  - Updated UI in Dark Mode.
 
-4. Mobile Drawer
-  - Created drawer for mobile and tablet devices.
-  - Applied styling and made it responsive.
+4. Vehicle Reports Module
+  - Added Table, Search, and Dropdowns (Reserved, Common Status, Color, Module Name).
+  - Added View Vehicle link.
+  - Implemented Reset button for dropdowns.
+  - Moved Exterior & Interior image modals to separate files.
+  - Improved styling of modals and filter UI (with Rahul sir).
+  - Implemented single API to handle both search and filter data.
+  - Removed extra/unnecessary API calls.
+  - Collaborated with Bhautik bhai to resolve API-related issues.
+  - Updated UI in Dark Mode.
 
-5. Footer Module
-  - Developed responsive footer layout for all devices. 
+5. Dashboard Module
+  - Removed "Total" item label from Sales Funnel.
+  - Modified Dashboard logic for APIs: moved API calls to AX file for Conversions, DataFieldQuality, RecordQuality, and Sales Funnel.
+  - Provided all data from Redux Store.
+  - Resolved Sales Funnel issue in live (with Bhautik bhai & Rahul sir).
 
-6. Landing Page Setup
-  - Created a new Landing page to serve as the Home page.
+6. Profile Module
+  - Fixed Change Password functionality issue.
+  - Updated button UI in Change Password modal.
+  - Updated button UI in Edit Profile modal.
+  - Updated button UI across Profile module for theme consistency.
+  - Updated input field UI for disabled fields in Edit Profile modal.
 
-7. Hero Section
-  - Developed the Hero section in the Landing page.
-  - Styled and made it responsive for all devices.
+7. Common Modules / Components
+  - Common Form Buttons Component
+    - Created reusable component for form buttons.
+    - Integrated across all popup modals.
+    - Tested thoroughly to ensure proper functionality.
+  - Common Table Module
+    - Implemented manual sorting on column headers (local reordering).
+    - Added dynamic sortBy display on hover.
+  - Menu / UI Fixes
+    - Fixed duplicate menu icons in Tablet view.
+    - Updated UI consistency across Vehicle Report, Accessories, and Reports in Dark Mode.
 
-8. About Us Section
-  - Designed and developed the About Us section.
-  - Made it responsive for all devices.
-  - Used Swiper for testimonial auto-scroll.
+8. Testing & Debugging
+  - Performed thorough testing in Light and Dark modes.
+  - Verified loaders and button functionality across modules.
+  - Identified issues and implemented fixes in collaboration with the team.
 
-9. Initial Motion with Framer Motion
-  - Researched initial motion effects for smooth transitions and entrance animations.
-  - Implemented Framer Motion animations in:
-    - Hero section
-    - About Us section
-    - Mobile Drawer
-
-10. Learning Progress
-  - Node.js
-    - Revised Node Modules.
-    - Reviewed synchronous and asynchronous error handling patterns.
-
-  - Express.js
-    - Completed Express.js introduction and explored core features.
-    - Set up a basic Express app.
-    - Started Client Request & Response handling.
+9. Team Collaboration
+  - Created Google Sheet with the team to track module status (Completed, Pending, Remaining).
+  - Discussed potential feature improvements for better efficiency and usability.
 
 ## Leave Request
 
-to: Bhautik
+to: Rahul
 Cc: mansi ma'am, vasik sir and rupendra sir
 
-Subject: Leave Request for 23-Apr-2025
+Subject: Leave Request for 6-Oct-2025
 
-Dear Mansi Ma'am,
+Dear Rahul sir,
 
-I am writing to request leave on the 23rd of April, 2025, due to College Project Review. I will ensure that all pending tasks are managed during my absence.
+I would like to request leave on 6th October to attend a family program at my sister’s home. It is a special occasion for us, as my sister has become a mother, and after 6–7 months we are organizing a program called Loni, which will be held on that day.
 
-I kindly seek your approval for the same.
+I kindly request your approval for this leave.
 
-Thank you
+Thank you for your understanding.
+
+Best regards,
+Dhyan
 
 ## Laptop Lag request
 
@@ -290,3 +292,116 @@ Date : 29-May-2025
 Project : Table booking web
 commit : Commit for added
 PR :
+
+1. Sidebar (Left Panel)
+
+- Position: Fixed to the left edge of the viewport.
+- Height: 100% of the viewport height.
+- Width: ~16–18% of total viewport width.
+- Content:
+  - Brand name/logo at the top.
+  - Vertical list of navigation menu items (Dashboard, User Management, Campaign Management, Finance & Sage, Reports & Analytics).
+  - At the bottom: "Settings" and "Logout" buttons.
+
+2. Header (Top Navigation Bar)
+
+- Position: Fixed to the top, right of the sidebar.
+- Height: ~8–10% of viewport height.
+- Width: Remaining space after sidebar (~82–84% of viewport width).
+- Content:
+  - Left side: menu (hamburger) icon, search bar.
+  - Right side: notification icon, language dropdown, user profile avatar with name and role.
+
+3. Main Content Area
+
+- Position: Below the header, right of the sidebar.
+- Height: Remaining viewport height after header.
+- Width: Same as header (~82–84% of viewport width).
+- Content:
+  - Page title (e.g., "Global Admin Dashboard").
+  - Four metric cards (Total Users, Total Orders, Total Sales, Total Pending).
+  - Sales chart section.
+
+## Work in Media Planner Report
+
+1. Landing Page
+
+- Implemented UI enhancements.
+
+2. Authentication Flow
+
+- Signup Screen – UI Enhancements.
+- Signin Screen – UI Enhancements + API Integration Enhancements.
+- Verify OTP Screen – UI Enhancements + API Integration + Testing.
+
+3. Layout Page
+
+- Header – Designed and implemented (responsive).
+- Sidebar – Designed and implemented (responsive).
+
+4. Routing & Common Components
+
+- Setup Routing for navigation.
+- Common Modal Popup – Works as simple popup & alert.
+- Common InputField – Supports text, menu, number, time field, text area, etc.
+- Error Boundary – UI improvements.
+- DataTable – UI improvements.
+- Common Form Buttons – Created reusable form action buttons.
+- Common Status Chip – Created for displaying status.
+
+5. Vendor Management Module
+
+- UI Enhancements.
+
+6. Client Management Module
+
+- CRUD flow implemented.
+- Redux API structure added.
+- UI screens completed.
+
+7. Finance & Sage Modules
+   7.1 PO & Invoice Sync
+
+   - UI screens completed.
+   - Redux API structure added.
+   - CRUD flow – In Progress.
+     7.2 Payment Status
+   - UI screens completed.
+   - Redux API structure added.
+   - CRUD flow – In Progress.
+     7.3 Billing Summary Report
+   - UI screens completed.
+   - Redux API structure added.
+   - CRUD flow – In Progress.
+
+8. Master Modules
+   8.1 Media Type Master
+   - UI Enhancements.
+     8.2 Publisher Master
+   - UI Enhancements.
+     8.3 Media Cost Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.4 Format Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.5 Language Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.6 Size Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.7 Position Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.8 Time Slot Master
+   - CRUD flow implemented.
+   - Redux API structure added.
+   - UI screens completed.
+     8.9 Duration Master
+   - UI Enhancements completed.

@@ -32,3 +32,11 @@
 - Represent additional object provided by the browser for working with everything except the document
 - `navigator` Object provide background information like `navigator.plateform` provide current OS (linux/window/mac).
 - `location` Object allow us to read the current URL and can redirect the browser to a new one.
+
+## Go back to Modules & their types
+
+- [Modules and their types](../12_Modules/intro.md)
+
+## Now Learn about DOM Tree
+
+- [DOM Tree](./02%20DOM%20Tree.md)

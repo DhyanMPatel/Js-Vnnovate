@@ -84,3 +84,11 @@ console.log(scrollwidth); // 15
   ball.style.left = Math.round(field.clientWidth / 2) + "px";
   ball.style.top = Math.round(field.clientheight / 2) + "px";
   ```
+
+## Go back to Styles & Classes
+
+- [Style & Classes](./08%20Style_Classes.md)
+
+## Now Learn about Window Size & Scrolling
+
+- [Window Size & Scrolling](./10%20Window_size_%20scrolling.md)

@@ -31,3 +31,13 @@
 - When the pointer enters an element – `mouseenter` triggers. exect location not metter.
 - When the pointer leave an element - `mouseleave` triggers.
 - we can't Event Delegation with `mouseenter`/`mouseleave`.
+
+
+
+## Go back to Mouse Events
+
+- [Mouse Events](./01%20Mouse_Events.md)
+
+## Now Learn about Drag and Drag
+
+- [Drag and Drag](./03%20Drag_n_Drag.md)
