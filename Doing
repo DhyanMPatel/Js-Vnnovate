@@ -1,33 +1,31 @@
 ## Work Doing:
 
-Date: 29 Sep, 2025
-Day: Monday,
+Date: 30 Sep, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. Create Project milestone documentation with Disha.
+1. Start working in Role based login.
 
 ## Work done:
 
 EOD,
-Date: 29 Sep, 2025
-Day: Monday,
+Date: 30 Sep, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Project Management
-  - Created an Estimation Sheet in collaboration with Disha.
-2. Media Planner Backend
-  - Code Understanding & Exploration
-    - Studied the use of Multer for handling form data (e.g., image uploads).
-    - Analyzed the use of Nodemailer for sending emails.
-    - Explored the use of Twilio for sending SMS and making phone calls.
-    - Explored the use of Crypto for generating secure tokens.
-    - Studied the use of Bcrypt for securely verifying passwords.
-    - Understanding the Authentication workflow and other route workflows.
+1. Role-Based Login Enhancements - Done
+  - Assigned roles to users during login. (Backend)
+  - Fixed Profile API response issue related to roles. (Backend)
+  - Wrapped all routes using lazy loading for better performance.
+  - Displayed role-based menu items in the sidebar.
+  - Updated login response: when a user is not found in DB, show “User Not Found” instead of “Invalid Credentials”.
+  - Implemented Unauthorized Page for restricted access attempts using ErrorBoundary module.
+  - Tested all changes in local.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
