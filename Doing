@@ -1,32 +1,31 @@
 ## Work Doing:
 
-Date: 26 Sep, 2025
-Day: Friday,
+Date: 30 Sep, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
-Project: Dealer Data Frontend
+Project: Media Planner
 
-
+1. Start working in Role based login.
 
 ## Work done:
 
 EOD,
-Date: 26 Sep, 2025
-Day: Friday,
+Date: 30 Sep, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
-Project: Dealer Data Frontend,
+Project: Media Planner,
 
-1. Testing & Debugging
-  - Performed thorough testing and debugging in both Light and Dark modes.
-  - Identified required changes and implemented them in collaboration with the team.
-2. Reports Module
-  - Capitalized Retailer Name for better readability and consistency.
-3. UI Enhancements
-  - Updated button styles across modules for improved consistency.
-  - Applied text UI changes in Login, Reset Password, Forgot Password, and Verify OTP modules (Dark Mode).
-  - Collaboration & Improvements
+1. Role-Based Login Enhancements - Done
+  - Assigned roles to users during login. (Backend)
+  - Fixed Profile API response issue related to roles. (Backend)
+  - Wrapped all routes using lazy loading for better performance.
+  - Displayed role-based menu items in the sidebar.
+  - Updated login response: when a user is not found in DB, show “User Not Found” instead of “Invalid Credentials”.
+  - Implemented Unauthorized Page for restricted access attempts using ErrorBoundary module.
+  - Tested all changes in local.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
