@@ -1,30 +1,37 @@
 ## Work Doing:
 
-Date: 1 Oct, 2025
-Day: Wednesday,
+Date: 3 Oct, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. Start working in Role based login.
+1. Vender Module Improvement
+  - Implement Dynamic Sub-media field with actual data.
+  - Connect with Bhautik bhai to get required APIs.
 
 ## Work done:
 
 EOD,
-Date: 1 Oct, 2025
-Day: Wednesday,
+Date: 3 Oct, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Publisher Master Module
-  - Renamed Publisher Module to Channel Module.
+1. Vendor Module
+  - Updated Media Type dropdown API call and created the corresponding endpoint.
+  - Created Sub-media and Remarks dropdown GET APIs and endpoints.
+  - Fetched and displayed dropdown values.
+  - Set UnitType constant to "Per Second".
+  - Created endpoint for Channel API.
+  - Created endpoint for Time-slot API.
+  - Sub-media related data pass during Create Vender api call.
 
-2. Vendor Module
-  - Added Media Type dropdown.
-  - Implemented Dynamic Sub-media field with sample data (In Progress).
-  - Understood the updated flow of Vendor Management module based on the latest changes (Backend).
+2. Custom Select Module
+  - Created a Custom Select component with Add functionality inside the dropdown.
+  - On Add button click, it opens a modal with one field. (In Progress)
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
@@ -163,77 +170,56 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (22 Sep - 26 Sep) Report of Dhyan
+**Subject**: Weekly (29 Sep - 3 Oct) Report of Dhyan
 
-Project: Dealer Data - Frontend,
+Project: Media Planner,
 
-Git Commit ID: 42efd759ebbee5d69e25f3cafda8b676a41a5214
-Git Commit Link: https://gitlab.com/vasik.m.vnnovate/dealer-data-v.2.0/-/commits/42efd759ebbee5d69e25f3cafda8b676a41a5214
+Git Commit ID: 40457f3ba0ec55774be5770f4840132a5f7e2b6e
+Git Commit Link: https://gitlab.com/vasik.m.vnnovate/dealer-data-v.2.0/-/commits/40457f3ba0ec55774be5770f4840132a5f7e2b6e
 
 Description:
 
-1. Project Setup & Database
-  - Set up project in local PC.
-  - Solved login issue in Postman with help from Bhautik bhai and Devanshi.
-  - Requested vista_catalogues table content from Ashish bhai and imported into local DB.
+1. Project Management
+  - Created an Estimation Sheet in collaboration with Disha.
 
-2. Accessories Module
-  - Implemented full workflow of Accessories module APIs.
-  - Added vista_catalogues table data into response (In Progress).
-  - Updated UI in Dark Mode.
+2. Media Planner Backend
+  - Project Setup
+    - Set up backend environment and explored project structure.
+  - Code Understanding & Exploration
+    - Studied Multer for handling form data (e.g., image uploads).
+    - Analyzed Nodemailer for sending emails.
+    - Explored Twilio for sending SMS and making phone calls.
+    - Explored Crypto for generating secure tokens.
+    - Studied Bcrypt for securely verifying passwords.
+    - Understood the Authentication workflow and other route workflows.
 
-3. Reports Module
-  - Updated column data UI to match old UI.
-  - Fixed pagination & filter UI issues.
-  - Capitalized Retailer Name for consistency.
-  - Verified Search & Date filter functionality.
-  - Ensured CSV Export works with applied filters.
-  - Updated UI in Dark Mode.
+3. Role-Based Login Enhancements
+  - Assigned roles to users during login. (Backend)
+  - Fixed Profile API response issue related to roles. (Backend)
+  - Wrapped all routes using lazy loading for better performance.
+  - Displayed role-based menu items in the sidebar.
+  - Updated login response: when a user is not found in DB, show “User Not Found” instead of “Invalid Credentials”.
+  - Implemented Unauthorized Page for restricted access attempts (Error Boundary module).
+  - Tested all changes in local.
 
-4. Vehicle Reports Module
-  - Added Table, Search, and Dropdowns (Reserved, Common Status, Color, Module Name).
-  - Added View Vehicle link.
-  - Implemented Reset button for dropdowns.
-  - Moved Exterior & Interior image modals to separate files.
-  - Improved styling of modals and filter UI (with Rahul sir).
-  - Implemented single API to handle both search and filter data.
-  - Removed extra/unnecessary API calls.
-  - Collaborated with Bhautik bhai to resolve API-related issues.
-  - Updated UI in Dark Mode.
+4. Publisher Master Module
+  - Renamed Publisher Module to Channel Module.
 
-5. Dashboard Module
-  - Removed "Total" item label from Sales Funnel.
-  - Modified Dashboard logic for APIs: moved API calls to AX file for Conversions, DataFieldQuality, RecordQuality, and Sales Funnel.
-  - Provided all data from Redux Store.
-  - Resolved Sales Funnel issue in live (with Bhautik bhai & Rahul sir).
+5. Vendor Module
+  - Added Media Type dropdown.
+  - Implemented Dynamic Sub-media field with sample data. (In Progress)
+  - Understood the updated flow of Vendor Management module based on the latest changes (Backend).
+  - Updated Media Type dropdown API call and created the corresponding endpoint.
+  - Created Sub-media and Remarks dropdown GET APIs and endpoints.
+  - Fetched and displayed dropdown values.
+  - Set UnitType constant to “Per Second”.
+  - Created endpoint for Channel API.
+  - Created endpoint for Time-slot API.
+  - Sub-media data handling (In Progress).
 
-6. Profile Module
-  - Fixed Change Password functionality issue.
-  - Updated button UI in Change Password modal.
-  - Updated button UI in Edit Profile modal.
-  - Updated button UI across Profile module for theme consistency.
-  - Updated input field UI for disabled fields in Edit Profile modal.
-
-7. Common Modules / Components
-  - Common Form Buttons Component
-    - Created reusable component for form buttons.
-    - Integrated across all popup modals.
-    - Tested thoroughly to ensure proper functionality.
-  - Common Table Module
-    - Implemented manual sorting on column headers (local reordering).
-    - Added dynamic sortBy display on hover.
-  - Menu / UI Fixes
-    - Fixed duplicate menu icons in Tablet view.
-    - Updated UI consistency across Vehicle Report, Accessories, and Reports in Dark Mode.
-
-8. Testing & Debugging
-  - Performed thorough testing in Light and Dark modes.
-  - Verified loaders and button functionality across modules.
-  - Identified issues and implemented fixes in collaboration with the team.
-
-9. Team Collaboration
-  - Created Google Sheet with the team to track module status (Completed, Pending, Remaining).
-  - Discussed potential feature improvements for better efficiency and usability.
+6. Custom Select Module
+  - Created a Custom Select component with Add functionality inside the dropdown.
+  - On Add button click, it opens a modal with one field. (In Progress)
 
 ## Leave Request
 
