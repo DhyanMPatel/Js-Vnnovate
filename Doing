@@ -1,37 +1,48 @@
 ## Work Doing:
 
-Date: 3 Oct, 2025
-Day: Friday,
+Date: 7 Oct, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. Vender Module Improvement
-  - Implement Dynamic Sub-media field with actual data.
-  - Connect with Bhautik bhai to get required APIs.
+1. Work in Changes related to Authentication Modules based on Client requirement.
 
 ## Work done:
 
 EOD,
-Date: 3 Oct, 2025
-Day: Friday,
+Date: 7 Oct, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Vendor Module
-  - Updated Media Type dropdown API call and created the corresponding endpoint.
-  - Created Sub-media and Remarks dropdown GET APIs and endpoints.
-  - Fetched and displayed dropdown values.
-  - Set UnitType constant to "Per Second".
-  - Created endpoint for Channel API.
-  - Created endpoint for Time-slot API.
-  - Sub-media related data pass during Create Vender api call.
-
-2. Custom Select Module
-  - Created a Custom Select component with Add functionality inside the dropdown.
-  - On Add button click, it opens a modal with one field. (In Progress)
+1. Auth Related Modules
+  1.1. Reset Password Module
+    - Made changes related to steps for active and completed states.
+  1.2. Sign In Module
+    - Commented out “Email or Phone” tab.
+    - Updated Login icon to match Figma design.
+    - Made UI adjustments according to Figma.
+  1.3. Register Module
+    - Commented out “Email or Phone” tab.
+    - Updated Register icon as per Figma.
+    - Replaced Full Name field with First Name and Last Name fields.
+    - Informed Bhautik Bhai to update backend accordingly.
+2. UI / Header Module
+  2.1. Header Module
+    - Updated UI to display First Name + Last Name in Profile button.
+  2.2 Profile Module
+    - Displayed First Name and Last Name instead of Full Name.
+    - On Update: showed separate First Name and Last Name fields.
+    - Added validation for First and Last Name fields.
+    - Shared necessary backend changes for Edit Profile API with Bhautik Bhai.
+  2.3. User Management Module
+    - Created Redux structure and integrated API endpoints.
+    - Collaborated with Bhautik Bhai for backend coordination. - In Progress
+    - Need to pass totalUsers, totalPages, and currentPage in Get User List API.
+    - Added Add User and Edit User modules. - In Progress
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
