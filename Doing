@@ -1,49 +1,34 @@
 ## Work Doing:
 
-Date: 7 Oct, 2025
-Day: Tuesday,
+Date: 8 Oct, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. Work in Changes related to Authentication Modules based on Client requirement.
+1. Working in User Management CRUD
 
 ## Work done:
 
 EOD,
-Date: 7 Oct, 2025
-Day: Tuesday,
+Date: 8 Oct, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Auth Related Modules
-  1.1. Reset Password Module
-    - Made changes related to steps for active and completed states.
-  1.2. Sign In Module
-    - Commented out “Email or Phone” tab.
-    - Updated Login icon to match Figma design.
-    - Made UI adjustments according to Figma.
-  1.3. Register Module
-    - Commented out “Email or Phone” tab.
-    - Updated Register icon as per Figma.
-    - Replaced Full Name field with First Name and Last Name fields.
-    - Informed Bhautik Bhai to update backend accordingly.
-2. UI / Header Module
-  2.1. Header Module
-    - Updated UI to display First Name + Last Name in Profile button.
-  2.2 Profile Module
-    - Displayed First Name and Last Name instead of Full Name.
-    - On Update: showed separate First Name and Last Name fields.
-    - Added validation for First and Last Name fields.
-    - Shared necessary backend changes for Edit Profile API with Bhautik Bhai.
-  2.3. User Management Module
-    - Created Redux structure and integrated API endpoints.
-    - Collaborated with Bhautik Bhai for backend coordination. - In Progress
-    - Need to pass totalUsers, totalPages, and currentPage in Get User List API.
-    - Added Add User and Edit User modules. - In Progress
-
+1. User Management Module
+  - Displayed Country, State, City, and Role dropdown values using API calls and pass their value during Add and Update User operations.
+  - Successfully completed Create User API integration.
+  - Successfully completed Update User API integration.
+  - Added Confirm Modal before deleting a user.
+  - Displayed Change Status modal for user status updates.
+  - Designed Add and Update User modules to be responsive across multiple devices.
+  - Created a list of required backend changes based on frontend needs and provided it to Bhautik Bhai.
+2. Change Status Modal
+  - Created Redux structure for managing user status updates.
+  - Successfully completed Update Status of User functionality.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
