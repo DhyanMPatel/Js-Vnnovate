@@ -1,34 +1,48 @@
 ## Work Doing:
 
-Date: 8 Oct, 2025
-Day: Wednesday,
+Date: 9 Oct, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. Working in User Management CRUD
+1. Working in Submodule of Location
 
 ## Work done:
 
 EOD,
-Date: 8 Oct, 2025
-Day: Wednesday,
+Date: 9 Oct, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. User Management Module
-  - Displayed Country, State, City, and Role dropdown values using API calls and pass their value during Add and Update User operations.
-  - Successfully completed Create User API integration.
-  - Successfully completed Update User API integration.
-  - Added Confirm Modal before deleting a user.
-  - Displayed Change Status modal for user status updates.
-  - Designed Add and Update User modules to be responsive across multiple devices.
-  - Created a list of required backend changes based on frontend needs and provided it to Bhautik Bhai.
-2. Change Status Modal
-  - Created Redux structure for managing user status updates.
-  - Successfully completed Update Status of User functionality.
+1. Country Module - Done
+  - Passed parameters in GET API call.
+  - Updated UI of action buttons for better consistency.
+  - Implemented functional action buttons (Edit, Delete, etc.).
+  - Optimized code logic for cleaner and more efficient handling.
+  - Added a confirmation modal on Delete action.
+2. State Module - Done
+  - Connected GET API endpoint and passed necessary parameters.
+  - On Add, fetched the Country list API to populate dropdown.
+  - Updated UI of action buttons for consistency.
+  - Integrated Create State API endpoint.
+  - Integrated Update State API endpoint.
+  - Integrated Delete State API endpoint.
+  - Updated internal logic to support API-based data.
+  - Added a confirmation modal on Delete action.
+3. City Module - Partial Completed
+  - Properly designed the City module layout.
+  - Updated UI of action buttons for consistency.
+  - Created Redux structure for state management.
+  - Integrated GET API with parameters.
+  - On Add, fetched Country list API.
+  - On Add, fetched State list API based on selected Country.
+  - Added a confirmation modal on Delete action.
+  - In Progress: Fixed error related to name field in Common Table Module after adding a City.
+  - In Progress: On Edit, fetch Country, State, and City values dynamically.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
