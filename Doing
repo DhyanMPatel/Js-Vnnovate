@@ -1,48 +1,31 @@
 ## Work Doing:
 
-Date: 9 Oct, 2025
-Day: Thursday,
+Date: 10 Oct, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. Working in Submodule of Location
+1. Work in Edit City functionality in City module.
+2. Work on Area module.
+3. Start Working in Edit Vender function in Vender module.
 
 ## Work done:
 
 EOD,
-Date: 9 Oct, 2025
-Day: Thursday,
+Date: 10 Oct, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Country Module - Done
-  - Passed parameters in GET API call.
-  - Updated UI of action buttons for better consistency.
-  - Implemented functional action buttons (Edit, Delete, etc.).
-  - Optimized code logic for cleaner and more efficient handling.
-  - Added a confirmation modal on Delete action.
-2. State Module - Done
-  - Connected GET API endpoint and passed necessary parameters.
-  - On Add, fetched the Country list API to populate dropdown.
-  - Updated UI of action buttons for consistency.
-  - Integrated Create State API endpoint.
-  - Integrated Update State API endpoint.
-  - Integrated Delete State API endpoint.
-  - Updated internal logic to support API-based data.
-  - Added a confirmation modal on Delete action.
-3. City Module - Partial Completed
-  - Properly designed the City module layout.
-  - Updated UI of action buttons for consistency.
-  - Created Redux structure for state management.
-  - Integrated GET API with parameters.
-  - On Add, fetched Country list API.
-  - On Add, fetched State list API based on selected Country.
-  - Added a confirmation modal on Delete action.
-  - In Progress: Fixed error related to name field in Common Table Module after adding a City.
-  - In Progress: On Edit, fetch Country, State, and City values dynamically.
+1. Some change in Country, State and City module in Edit functionality
+2. Vender Module 
+	- Update Vender with dynamic
+	- Display confirm module on Sub-media delete button.
+	- Solve Issue of Dynamic Sub-media module in Edit operation.
+	- Collaborate with Bhautik bhai to make changes related to api.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
@@ -180,56 +163,84 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (29 Sep - 3 Oct) Report of Dhyan
+**Subject**: Weekly (6 Oct - 10 Oct) Report of Dhyan
 
 Project: Media Planner,
 
-Git Commit ID: 40457f3ba0ec55774be5770f4840132a5f7e2b6e
-Git Commit Link: https://gitlab.com/vasik.m.vnnovate/dealer-data-v.2.0/-/commits/40457f3ba0ec55774be5770f4840132a5f7e2b6e
+Git Commit ID: e0055fb789dcc1915a8656067ac329ffbf616fec
+Git Commit Link: https://gitlab.com/vasik.m.vnnovate/dealer-data-v.2.0/-/commits/e0055fb789dcc1915a8656067ac329ffbf616fec
 
 Description:
 
-1. Project Management
-  - Created an Estimation Sheet in collaboration with Disha.
+1. Auth Related Modules
+  1.1 Reset Password Module
+    - Implemented changes related to active and completed steps to enhance user clarity.
+  1.2 Sign In Module
+    - Commented out the “Email or Phone” tab for simplified login flow.
+    - Updated the Login icon to match the latest Figma design.
+    - Made UI adjustments for better alignment with Figma.
+  1.3 Register Module
+    - Commented out the “Email or Phone” tab.
+    - Updated the Register icon based on Figma.
+    - Replaced Full Name with separate First Name and Last Name fields.
+    - Coordinated with Bhautik Bhai to update the backend accordingly.
 
-2. Media Planner Backend
-  - Project Setup
-    - Set up backend environment and explored project structure.
-  - Code Understanding & Exploration
-    - Studied Multer for handling form data (e.g., image uploads).
-    - Analyzed Nodemailer for sending emails.
-    - Explored Twilio for sending SMS and making phone calls.
-    - Explored Crypto for generating secure tokens.
-    - Studied Bcrypt for securely verifying passwords.
-    - Understood the Authentication workflow and other route workflows.
+2. UI / Header & Profile Modules
+  2.1 Header Module
+    - Updated UI to display First Name + Last Name in the Profile button.
+  2.2 Profile Module
+    - Displayed First Name and Last Name instead of Full Name.
+    - Updated Edit Profile form to include separate fields for First and Last Name.
+    - Added validation for both fields.
+    - Communicated required backend API changes for Edit Profile to Bhautik Bhai.
 
-3. Role-Based Login Enhancements
-  - Assigned roles to users during login. (Backend)
-  - Fixed Profile API response issue related to roles. (Backend)
-  - Wrapped all routes using lazy loading for better performance.
-  - Displayed role-based menu items in the sidebar.
-  - Updated login response: when a user is not found in DB, show “User Not Found” instead of “Invalid Credentials”.
-  - Implemented Unauthorized Page for restricted access attempts (Error Boundary module).
-  - Tested all changes in local.
+3. User Management Module
+  3.1 Core User Management
+    - Created Redux structure and integrated API endpoints.
+    - Implemented Get, Add, Update, and Delete user functionalities.
+    - Displayed Country, State, City, and Role dropdown values using APIs and passed them in Add/Update operations.
+    - Added confirmation modal before deleting users.
+    - Added Change Status modal for user status updates.
+    - Designed responsive UI for Add and Update User modules across devices.
+    - Created and shared a list of required backend updates with Bhautik Bhai.
+    - Collaborated with Bhautik Bhai for backend API coordination and testing.
 
-4. Publisher Master Module
-  - Renamed Publisher Module to Channel Module.
+3.2 Change Status Modal
+    - Created Redux structure for managing user status updates.
+    - Successfully implemented status update functionality for users.
+    - Coordinated with Bhautik Bhai to finalize related backend API changes.
+
+4. Country-State-City Master Modules
+  4.1 Country Module
+    - Passed parameters in GET API for dynamic data retrieval.
+    - Updated UI of action buttons for uniform design.
+    - Implemented functional Edit and Delete actions.
+    - Optimized code logic for performance and readability.
+    - Added confirmation modal on delete actions.
+
+4.2 State Module
+    - Connected GET API endpoint with parameters.
+    - On Add, fetched Country list API for dropdown.
+    - Integrated Create, Update, and Delete State APIs.
+    - Updated UI for action buttons.
+    - Improved internal logic to handle API-based data.
+    - Added confirmation modal for Delete actions.
+
+4.3 City Module
+    - Properly designed City module layout.
+    - Updated UI of action buttons.
+    - Created Redux structure for City state management.
+    - Integrated GET, Add, Update, and Delete APIs with parameter support.
+    - Fetched Country list and State list (based on Country) dynamically.
+    - Added confirmation modal on Delete.
+    - Fixed name field issue in Common Table module after adding City.
+    - On Edit, fetched Country, State, and City dynamically.
 
 5. Vendor Module
-  - Added Media Type dropdown.
-  - Implemented Dynamic Sub-media field with sample data. (In Progress)
-  - Understood the updated flow of Vendor Management module based on the latest changes (Backend).
-  - Updated Media Type dropdown API call and created the corresponding endpoint.
-  - Created Sub-media and Remarks dropdown GET APIs and endpoints.
-  - Fetched and displayed dropdown values.
-  - Set UnitType constant to “Per Second”.
-  - Created endpoint for Channel API.
-  - Created endpoint for Time-slot API.
-  - Sub-media data handling (In Progress).
-
-6. Custom Select Module
-  - Created a Custom Select component with Add functionality inside the dropdown.
-  - On Add button click, it opens a modal with one field. (In Progress)
+    - Implemented dynamic Vendor update functionality.
+    - Added confirmation modal for Sub-media delete action.
+    - Fixed Dynamic Sub-media issue during Edit operation.
+    - Collaborated with Bhautik Bhai to make and test required API changes.
 
 ## Leave Request
 
