@@ -1,39 +1,38 @@
 ## Work Doing:
 
-Date: 13 Oct, 2025
-Day: Monday,
+Date: 14 Oct, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. Test Edit Vender functionality in Vender Module.
+1. Testing
+  - Test Vendor Module with recent updates.
+  - Test Client Module with recent changes.
+  - Test Country, State, and City Modules to verify recent modifications.
+2. Common Status Modal
+  - Create a common reusable Status Modal popup to use across multiple modules.
 
 ## Work done:
 
 EOD,
-Date: 13 Oct, 2025
-Day: Monday,
+Date: 14 Oct, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Vendor Module
-  - Tested all recent changes in Edit Vendor functionality.
-  - Replaced SweetAlert with a custom Confirm Modal in the Delete Vendor functionality for consistent UI.
-  - Implemented Status Update functionality:
-    - Added a new action to change vendor status.
-    - Created the API endpoint for handling status updates.
-    - Tested the complete status change workflow to ensure it functions smoothly.
-    
-2. Client Module
-  - Added Change Status functionality with API integration.
-  - Replaced SweetAlert with Confirm Modal for Delete Client confirmation.
-  - Optimized code for better readability and maintainability.
-
-3. Live Testing
-  - Tested on Live environment to ensure proper deployment behavior.
-  - Resolved issue where “Manage Media Plan” page was not opening when users tried to redirect.
+1. Common Status Modal
+  - Converted the Status Modal into a common reusable component for use across multiple modules.
+  - Assisted Disha in integrating the Common Status Modal into the MediaPlan module.
+2. Landing Page
+  - Updated navigation logic to hide the “Sign In” menu item when the user is already on the Sign In page.
+3. Testing
+  - Performed comprehensive testing of all recent updates in the live environment.
+  - Identified and resolved an issue where, after approving a user, attempting to reject them displayed the error "User is already Active".
+4. Others
+  - Visited the Post Office with Vipul bhai for a parcel-related task.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
