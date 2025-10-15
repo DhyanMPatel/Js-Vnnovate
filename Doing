@@ -1,38 +1,44 @@
 ## Work Doing:
 
-Date: 14 Oct, 2025
-Day: Tuesday,
+Date: 15 Oct, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. Testing
-  - Test Vendor Module with recent updates.
-  - Test Client Module with recent changes.
-  - Test Country, State, and City Modules to verify recent modifications.
-2. Common Status Modal
-  - Create a common reusable Status Modal popup to use across multiple modules.
+1. User Module Improvement
+  - open Add and Edit popup modal instead of redirect
+
+2. Client Module Improvement
+  - open Add and Edit popup modal instead of redirect
 
 ## Work done:
 
 EOD,
-Date: 14 Oct, 2025
-Day: Tuesday,
+Date: 15 Oct, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Common Status Modal
-  - Converted the Status Modal into a common reusable component for use across multiple modules.
-  - Assisted Disha in integrating the Common Status Modal into the MediaPlan module.
-2. Landing Page
-  - Updated navigation logic to hide the “Sign In” menu item when the user is already on the Sign In page.
-3. Testing
-  - Performed comprehensive testing of all recent updates in the live environment.
-  - Identified and resolved an issue where, after approving a user, attempting to reject them displayed the error "User is already Active".
-4. Others
-  - Visited the Post Office with Vipul bhai for a parcel-related task.
+1. Client Management Module
+  - Implemented popup modals for Add and Edit operations instead of page redirection.
+  - Updated input field design in Add and Edit modals based on discussion with Rahul sir.
+  - Removed unused and commented code for better readability and maintainability.
+  - Cleared Redux state objects when the component unmounts to prevent stale data issues.
+
+2. User Management Module
+  - Replaced page redirection with popup modals for Add and Edit operations.
+  - Cleaned redundant and commented code to optimize the codebase.
+  - Cleared Redux state objects when the component unmounts to prevent stale data issues.
+
+3. Permission Module
+  - Use Custom modal popup in Delete Operation.
+
+Project: Dealer Data,
+
+1. Worked on the 404 Page to enhance navigation and handle redirection logic effectively.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
