@@ -1,44 +1,34 @@
 ## Work Doing:
 
-Date: 15 Oct, 2025
-Day: Wednesday,
+Date: 16 Oct, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. User Module Improvement
-  - open Add and Edit popup modal instead of redirect
-
-2. Client Module Improvement
-  - open Add and Edit popup modal instead of redirect
+1. Permission module 
+  - Implement Searching, sorting and Pagination in manage Permission module.
 
 ## Work done:
 
 EOD,
-Date: 15 Oct, 2025
-Day: Wednesday,
+Date: 16 Oct, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Client Management Module
-  - Implemented popup modals for Add and Edit operations instead of page redirection.
-  - Updated input field design in Add and Edit modals based on discussion with Rahul sir.
-  - Removed unused and commented code for better readability and maintainability.
-  - Cleared Redux state objects when the component unmounts to prevent stale data issues.
+1. Module Permission Module
+  - Integrated Common Table component to manage data with Role-based tabs.
+  - Enhanced Tab change logic to display message — “Before changing tab, please assign permissions.”
+  - Added confirmation modal on “Assign Permission” button — “Are you sure you want to update permissions?”
+  - Displayed data dynamically based on the active tab.
+  - Updated API payload structure for fetching module permissions.
+  - Pagination digit display issue — In Progress.
 
-2. User Management Module
-  - Replaced page redirection with popup modals for Add and Edit operations.
-  - Cleaned redundant and commented code to optimize the codebase.
-  - Cleared Redux state objects when the component unmounts to prevent stale data issues.
-
-3. Permission Module
-  - Use Custom modal popup in Delete Operation.
-
-Project: Dealer Data,
-
-1. Worked on the 404 Page to enhance navigation and handle redirection logic effectively.
+2. Permission List Module
+  - Added Pagination support for efficient data handling.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
