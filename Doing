@@ -1,43 +1,35 @@
 ## Work Doing:
 
-Date: 27 Oct, 2025
-Day: Monday,
+Date: 28 Oct, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. Make changes based on Review in PR.
+1. Testing
+  - Check Register operation
+  - Check Sub Media Master operations
 
 ## Work done:
 
 EOD,
-Date: 27 Oct, 2025
-Day: Monday,
+Date: 28 Oct, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
-Project: Media Planner Frontend,
+Project: Media Planner,
 
-1. Register Module
-  - Added new fields — Gender, Country, State, and City during user registration.
-2. Sub Media Master Module
-  - Renamed the Format Master module to Sub Media Master module. (In Progress)
+1. Resend OTP Functionality
+  - Fixed the issue where the email parameter was not being passed to the Resend OTP API when users clicked on “Resend OTP.”
 
-Project: Media Planner Backend,
+2. Permission Module
+  - Added all modules to the Permission List with names consistent with the sidebar menu items.
+  - Implemented logic to display Add, Edit, View, Delete, and Manage State operations based on role permissions. (In Progress)
 
-1. Login Module
-  - Removed Token requirement from Country, City, and State APIs.
-  - Added four new fields (Gender, Country, City, State) during user registration.
-  - Verified that a newly registered user gets the default role as “User”.
-  - Updated status code for unapproved user login attempts from 403 → 423 (Locked/Inactive account).
-  - Added a custom message for rejected users — “Your account is rejected by admin.” (with status 423).
-2. User Management Module
-  - Fixed the issue where default Role object was missing in the Get Users API.
-3. Get States by Country ID API
-  - Updated the API payload structure in both frontend and backend for consistency.
-4. Format Module (Sub Media Master)
-  - Updated the API to return total sub-media count, current page, and total items.
-
+3. Testing
+  - Performed end-to-end testing of the user registration flow including the Resend OTP functionality in both Local and Live environments.
+  - Verified and tested all recent changes for stability and correctness.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
