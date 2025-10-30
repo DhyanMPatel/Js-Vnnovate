@@ -1,34 +1,39 @@
 ## Work Doing:
 
-Date: 29 Oct, 2025
-Day: Wednesday,
+Date: 30 Oct, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. Continue work on Permission based Operations in multiple Modules.
+1. Contact Field
+  - Add country code support in the contact field.
+  - Review and update all modules where the contact field is used to ensure consistent country code implementation.
+
+2. Vendor Management
+  - Apply requested changes in the Vendor Management module based on recent reviews and new requirements.
 
 ## Work done:
 
 EOD,
-Date: 29 Oct, 2025
-Day: Wednesday,
+Date: 30 Oct, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Role-Based Operation Implementation
-  - Completed implementation of permission-based operations across all modules.
-  - Action buttons (View, Create, Update, Delete, Manage Status) are now hidden if the user’s role lacks the required permission.
+1. Contact Field
+  - Added country code support in the contact field. 
+  - Reviewed and updated all modules where the contact field is used to ensure consistent country code implementation. 
 
-2. Workflow Verification
-  - Verified complete flow of Registration, Login, Forgot Password, Verify OTP, and Resend OTP functionalities after applying permission changes.
-
-3. Testing
-  - Fixed issue where navigating to the Profile route incorrectly highlighted the “Role Management” menu item.
-  - Thoroughly tested permission-based operations (View, Create, Update, Delete, Manage Status) in all modules on both Live and Local environments.
-  - Verified that all modules and menu visibility are correctly reflected based on permissions for Admin, Manager, and User roles.
+2. Vendor Management
+  - Applied requested changes based on recent reviews and new requirements. 
+  - Solved validation issues in dropdown fields within the Dynamic Field. 
+  - Added Dynamic Module for News Paper Media Type. 
+  - Created endpoint for fetchAllSize by Media Type ID API and implemented it. 
+  - Created endpoint for fetchAllDuration by Media Type ID API and implemented it. 
+  - Created endpoint for fetchAllMaterial by Media Type ID API and implemented it. 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
