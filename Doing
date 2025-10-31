@@ -1,39 +1,48 @@
 ## Work Doing:
 
-Date: 30 Oct, 2025
-Day: Thursday,
+Date: 31 Oct, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
-1. Contact Field
-  - Add country code support in the contact field.
-  - Review and update all modules where the contact field is used to ensure consistent country code implementation.
+1. Vendor Management
+  - Create Dynamic Content for OOH (Out of Home) media type.
+  - Continue implementation work for Digital Media Type in Vendor Management.
 
-2. Vendor Management
-  - Apply requested changes in the Vendor Management module based on recent reviews and new requirements.
+2. Collaboration
+  - Collaborate with Bhautik bhai to review and implement any required backend changes.
 
 ## Work done:
 
 EOD,
-Date: 30 Oct, 2025
-Day: Thursday,
+Date: 31 Oct, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Contact Field
-  - Added country code support in the contact field. 
-  - Reviewed and updated all modules where the contact field is used to ensure consistent country code implementation. 
+1. Vendor Management
+  - Completed Dynamic Content for Digital Media Type.
+  - Created Dynamic Content for OOH (Out of Home) Media Type. 
+  - Updated Edit Vendor module design to match the Add Vendor module and removed unnecessary fields. 
+  - Tested CRUD operations for Vendor Management. - In Progress
 
-2. Vendor Management
-  - Applied requested changes based on recent reviews and new requirements. 
-  - Solved validation issues in dropdown fields within the Dynamic Field. 
-  - Added Dynamic Module for News Paper Media Type. 
-  - Created endpoint for fetchAllSize by Media Type ID API and implemented it. 
-  - Created endpoint for fetchAllDuration by Media Type ID API and implemented it. 
-  - Created endpoint for fetchAllMaterial by Media Type ID API and implemented it. 
+2. Collaboration
+  - Collaborated with Bhautik bhai to review and implement necessary backend updates.
+3. Position Master Module
+  - Changed Name field type from Select to Text. 
+  - Created and integrated dropdownPositionList API for News and Digital media types.
+
+4. Size Master Module
+  - Changed Name field type from Select to Text.
+
+5. User Management Module
+  - Ensured Gender field’s first character is capitalized.
+
+6. UI/UX
+  - Fixed highlighting issue where navigating to the Profile route now correctly highlights the “Role Management” menu item.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
@@ -171,59 +180,82 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (20 Oct - 24 Oct) Report of Dhyan
+**Subject**: Weekly (27 Oct - 31 Oct) Report of Dhyan
 
 Project: Media Planner,
 
-Git Commit ID: ad955c767eb7cf32b0e26a72730c2afb79e1ca66
-Git Commit Link: http://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/ad955c767eb7cf32b0e26a72730c2afb79e1ca66
+Git Commit ID: 58e8cfe7f0671d73ba0dd506fc855a7545327a41
+Git Commit Link: http://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/58e8cfe7f0671d73ba0dd506fc855a7545327a41
 
 Description:
 
-1. Code Optimization
-  1.1. User Management Module
-    - Adjusted styling in Add and Edit modules for better responsiveness across multiple devices.
-    - Tested Add and Edit functionalities and implemented fixes in the Country menu item selection process.
-    - Verified proper Redux state cleanup on component unmount.
-  1.2. Vendor Management Module
-    - Consolidated multiple local states into a single state for simplified logic.
-    - Ensured Redux state cleanup during component unmount.
-  1.3. Client Management Module
-    - Verified Redux cleanup on unmount.
-    - Conducted complete functionality testing to confirm stability and performance.
+1. User / Authentication Module
+    - Added new registration fields: Gender, Country, State, and City.
+    - Implemented default role “User” assignment on registration.
+    - Fixed Resend OTP issue — email now passes correctly to API.
+    - Verified entire user flow: Registration, Login, Forgot Password, Verify OTP, and Resend OTP.
+    - Updated login behavior:
+        - Unapproved users now receive status 423 (Locked/Inactive).
+        - Rejected users get status 423 with message “Your account is rejected by admin.”
+    - Added country code support to contact fields across all modules.
+    - Ensured Gender field always starts with a capital letter.
 
-2. Testing
-  - Conducted detailed testing of all modules with recent updates.
-  - Verified UI consistency, API integration, and data flow across modules.
-  - Prepared a testing report summarizing identified issues and validated functionalities.
+2. Permission & Role Management Module
+    - Added all modules to the Permission List (matching sidebar names).
+    - Implemented role-based operations for Add, Edit, View, Delete, and Manage Status actions.
+    - Action buttons now display based on role permissions.
+    - Verified correct module access for Admin, Manager, and User roles.
+    - Fixed sidebar issue — navigating to Profile route now correctly highlights Role Management.
 
-3. System Update
-  - Upgraded Windows 11 to the 25H2 version successfully.
+3. Vendor Management Module
+    - Applied latest review changes and implemented new requirements.
+    - Fixed dropdown validation issues in Dynamic Fields.
+    - Added Dynamic Content for:
+        - News Paper Media Type ✅
+        - Digital Media Type ✅
+        - OOH (Out of Home) Media Type ✅
+    - Updated Edit Vendor design to match Add Vendor and removed unnecessary fields.
+    - Integrated and tested APIs:
+        - fetchAllSizeByMediaTypeId
+        - fetchAllDurationByMediaTypeId
+        - fetchAllMaterialByMediaTypeId
+    - Performed CRUD operation testing for Vendor module (in progress).
 
-4. Update User Module
-  - Implemented default field values and validated them for Add/Edit forms.
-  - Ensured all validations trigger properly on user interaction.
+4. User Management Module
+    - Fixed missing default Role object in Get Users API.
+    - Verified Redux cleanup on component unmount.
+    - Validated Gender field capitalization.
 
-5. Size Master Module
-  - Integrated Common Modal popup for delete functionality for consistent UI.
-  - Optimized logic and ensured smooth synchronization between operations.
+5. Sub Media Master (Previously Format Master)
+    - Renamed Format Master to Sub Media Master.
+    - Updated API to include total sub-media count, current page, and total items in response.
 
-6. Time Slot Master Module
-  - Added Common Modal popup for delete operations.
-  - Refactored and optimized code for better synchronization of all functionalities.
+6. Size Master Module
+    - Changed Name field input type from Select → Text.
+    - Integrated Common Modal Popup for delete confirmation.
+    - Optimized internal logic for smooth sync between features.
 
-7. Material Master Module
-  - Added default select field values in Add and Edit components.
-  - Verified that default values display correctly in all workflows.
+7. Time Slot Master Module
+    - Integrated Common Modal Popup for delete confirmation.
+    - Refactored internal logic for better functionality synchronization.
 
-Project: Dealer Data,
+8. Material Master Module
+    - Added default values for select fields in Add and Edit components.
+    - Verified that correct default selections appear during Add/Edit operations.
 
-Git Commit Id: f58c508f6ea3a99b05545de703f6f3bba1cbe829
-Git Commit Link: https://gitlab.com/vasik.m.vnnovate/dealer-data-v.2.0/-/commits/f58c508f6ea3a99b05545de703f6f3bba1cbe829
+9. Position Master Module
+    - Changed Name field from Select → Text.
+    - Created and implemented dropdownPositionList API for News and Digital media types.
 
-1. Dealer Data Portal
-  - Pulled the latest updates from the Staging branch into the local branch.
-  - Collaborated with the team to resolve the Reset Password issue successfully.
+10. UI/UX & General Enhancements
+    - Fixed menu highlighting issue in sidebar navigation.
+    - Optimized responsive design in User Management Add/Edit modules for multiple devices.
+    - Replaced multiple local states with a single consolidated state in Vendor Management for cleaner logic.
+    - Ensured Redux cleanup on component unmount in all modules.
+
+11. Collaboration
+    - Worked with Bhautik bhai to review and implement required backend changes.
+    - Synced frontend API payloads with backend for Get States by Country ID and other media-type-based APIs.
 
 ## Leave Request
 
