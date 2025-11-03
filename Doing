@@ -1,48 +1,37 @@
 ## Work Doing:
 
-Date: 31 Oct, 2025
-Day: Friday,
+Date: 3 Nov, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 Project: Media Planner
 
 1. Vendor Management
-  - Create Dynamic Content for OOH (Out of Home) media type.
-  - Continue implementation work for Digital Media Type in Vendor Management.
-
-2. Collaboration
-  - Collaborate with Bhautik bhai to review and implement any required backend changes.
+  - Use Slug instead of name to compare media type for dynamic fields.
+  - Make changes based on PR Review.
 
 ## Work done:
 
 EOD,
-Date: 31 Oct, 2025
-Day: Friday,
+Date: 3 Nov, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Vendor Management
-  - Completed Dynamic Content for Digital Media Type.
-  - Created Dynamic Content for OOH (Out of Home) Media Type. 
-  - Updated Edit Vendor module design to match the Add Vendor module and removed unnecessary fields. 
-  - Tested CRUD operations for Vendor Management. - In Progress
+1. Vendor Management Module
+  - Compared slug instead of name for Media Type.
+  - Coordinated with Bhautik bhai to update the API response accordingly.
 
-2. Collaboration
-  - Collaborated with Bhautik bhai to review and implement necessary backend updates.
-3. Position Master Module
-  - Changed Name field type from Select to Text. 
-  - Created and integrated dropdownPositionList API for News and Digital media types.
+2. Code Optimization
+  - Performed code optimization based on recent review feedback.
+  - Cleaned and refactored redundant logic for better performance and readability.
 
-4. Size Master Module
-  - Changed Name field type from Select to Text.
-
-5. User Management Module
-  - Ensured Gender field’s first character is capitalized.
-
-6. UI/UX
-  - Fixed highlighting issue where navigating to the Profile route now correctly highlights the “Role Management” menu item.
+3. CRUD Testing (with Status Code Condition)
+  - Tested all CRUD operations where statusCode-based conditions were implemented:
+    - City, Client Management, Country, Duration, Language, Material, Position, Size, State, Sub-Media, Time Slot, User Management, Vendor
+  - All modules successfully passed the statusCode validation and CRUD operation checks.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
