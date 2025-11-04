@@ -1,37 +1,49 @@
 ## Work Doing:
 
-Date: 3 Nov, 2025
-Day: Monday,
+Date: 4 Nov, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
-Project: Media Planner
+Project: kizuna Cunsulting website
 
-1. Vendor Management
-  - Use Slug instead of name to compare media type for dynamic fields.
-  - Make changes based on PR Review.
+- Working in kizuna Cunsulting website code understanding and implementing Required tasks.
 
 ## Work done:
 
 EOD,
-Date: 3 Nov, 2025
+Date: 4 Nov, 2025
 Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Vendor Management Module
-  - Compared slug instead of name for Media Type.
-  - Coordinated with Bhautik bhai to update the API response accordingly.
+1. Common Modal
+  - Enhanced Common Modal to support displaying non-form data.
+  - Applied updated UI design for better consistency and readability.
 
-2. Code Optimization
-  - Performed code optimization based on recent review feedback.
-  - Cleaned and refactored redundant logic for better performance and readability.
+2. Authentication & User Flow
+  2.1. Signup Page
+    - Made page responsive.
+    - Added Show Password button.
 
-3. CRUD Testing (with Status Code Condition)
-  - Tested all CRUD operations where statusCode-based conditions were implemented:
-    - City, Client Management, Country, Duration, Language, Material, Position, Size, State, Sub-Media, Time Slot, User Management, Vendor
-  - All modules successfully passed the statusCode validation and CRUD operation checks.
+  2.2. Verify OTP Page
+    - Made page responsive.
+    - Displayed Verify OTP directly on the landing page same as another auth pages.
+
+  2.3. Signin Page
+    - Implemented design improvements for better UI/UX.
+
+  2.4. Reset Password Module
+    - Applied new design changes.
+
+3. Location Dropdown Handling
+  - Added validation to display messages:
+    - “Please first select country” in State dropdown.
+    - “Please first select state” in City dropdown.
+
+4. Manage Media Plan Module
+  - display Media Plan Detail Modal Popup using the Common Modal component.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
