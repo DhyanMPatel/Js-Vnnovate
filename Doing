@@ -1,28 +1,37 @@
 ## Work Doing:
 
-Date: 5 Nov, 2025
-Day: Wednesday,
+Date: 6 Nov, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
-Project: Media Planner,
+Project: Kisuna Cunsulting Website,
 
-1 Vendor module improvement
-  - Display whole details of perticular vendor in modal popup.
+1. Understand Project Structure
+  - Review folder organization, architecture, and component structure to get full project understanding.
+2. Database Migration
+  - Migrate the project database to the local system and configure environment variables for connection.
+3. Case Study Module
+  - Begin working on the Case Study module.
 
 ## Work done:
 
 EOD,
-Date: 5 Nov, 2025
-Day: Wednesday,
+Date: 6 Nov, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
-Project: Media Planner,
+Project: Kisuna Cunsulting Website,
 
-1. Vendor Management Module
-  1.1. Display Vendor Details Modal
-    - Designed and implemented a responsive modal popup with proper layout for multi-device support. 
-    - Configured modal to display different Vendor Rates tables dynamically based on the Media Type.
+1. Services Page (Client & Admin)
+  - Implement translation functionality for multilingual support.
+  - Tested in Admin and Client side both.
+2. Setting Module
+  - Add translation management for multilingual support in Side bar.
+3. Common Modal Popup
+  - Extend and improve functionality for dynamic content handling and translation compatibility. - In Progress
+
+
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
