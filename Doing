@@ -1,35 +1,44 @@
 ## Work Doing:
 
-Date: 6 Nov, 2025
-Day: Thursday,
+Date: 7 Nov, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 Project: Kisuna Cunsulting Website,
 
-1. Understand Project Structure
-  - Review folder organization, architecture, and component structure to get full project understanding.
-2. Database Migration
-  - Migrate the project database to the local system and configure environment variables for connection.
-3. Case Study Module
-  - Begin working on the Case Study module.
+1. Common Modal Popup
+  - Continue work on Common Modal popup for User Confirmation.
 
 ## Work done:
 
 EOD,
-Date: 6 Nov, 2025
-Day: Thursday,
+Date: 7 Nov, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Kisuna Cunsulting Website,
 
-1. Services Page (Client & Admin)
-  - Implement translation functionality for multilingual support.
-  - Tested in Admin and Client side both.
-2. Setting Module
-  - Add translation management for multilingual support in Side bar.
-3. Common Modal Popup
-  - Extend and improve functionality for dynamic content handling and translation compatibility. - In Progress
+1. Common Modal Popup
+  - Implemented a custom modal popup for user confirmation (replaced window.confirm).
+  - Modules Implemented:
+    - Blog Post (Delete) – Done & Checked
+    - Services (Delete) – Done & Checked
+    - Case Study (Delete) – Done & Checked
+    - Home Content (Delete) – Done & Checked
+    - About Us (Delete) – Done & Checked
+
+2. Home Page
+  - Implemented Language Translation functionality for multilingual support. - Done & Checked
+
+3. Case Studies Module
+  - Identified and resolved issues related to Create and Update Case Study operations with Team. - Done
+
+4. Blog Post Setting Form
+  - Implemented form validation with multi-language support for Blog Post settings. - Done
+
+5. About Us Page
+  - Implemented Language Translation functionality for multilingual support in Admin Pannel. - Done & Checked
 
 
 
@@ -169,82 +178,88 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (27 Oct - 31 Oct) Report of Dhyan
+**Subject**: Weekly (3 Oct - 7 Oct) Report of Dhyan
 
 Project: Media Planner,
 
-Git Commit ID: 58e8cfe7f0671d73ba0dd506fc855a7545327a41
-Git Commit Link: http://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/58e8cfe7f0671d73ba0dd506fc855a7545327a41
+Git Commit ID: 93b58ea263c86b0978b4de9eead621a661aab76f
+Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/93b58ea263c86b0978b4de9eead621a661aab76f
 
 Description:
 
-1. User / Authentication Module
-    - Added new registration fields: Gender, Country, State, and City.
-    - Implemented default role “User” assignment on registration.
-    - Fixed Resend OTP issue — email now passes correctly to API.
-    - Verified entire user flow: Registration, Login, Forgot Password, Verify OTP, and Resend OTP.
-    - Updated login behavior:
-        - Unapproved users now receive status 423 (Locked/Inactive).
-        - Rejected users get status 423 with message “Your account is rejected by admin.”
-    - Added country code support to contact fields across all modules.
-    - Ensured Gender field always starts with a capital letter.
+1. Vendor Management Module
+  - Compared slug instead of name for Media Type.
+  - Coordinated with Bhautik bhai to update the API response accordingly.
+2. Code Optimization
+  - Performed code optimization based on recent review feedback.
+  - Cleaned and refactored redundant logic for better performance and readability.
+3. CRUD Testing (with Status Code Condition)
+  - Tested all CRUD operations where statusCode-based conditions were implemented:
+    - City, Client Management, Country, Duration, Language, Material, Position, Size, State, Sub-Media, Time Slot, User Management, Vendor
+  - All modules successfully passed the statusCode validation and CRUD operation checks.
 
-2. Permission & Role Management Module
-    - Added all modules to the Permission List (matching sidebar names).
-    - Implemented role-based operations for Add, Edit, View, Delete, and Manage Status actions.
-    - Action buttons now display based on role permissions.
-    - Verified correct module access for Admin, Manager, and User roles.
-    - Fixed sidebar issue — navigating to Profile route now correctly highlights Role Management.
+1. Common Modal
+  - Enhanced Common Modal to support displaying non-form data.
+  - Applied updated UI design for better consistency and readability.
+2. Authentication & User Flow
+  2.1. Signup Page
+    - Made page responsive.
+    - Added Show Password button.
+  2.2. Verify OTP Page
+    - Made page responsive.
+    - Displayed Verify OTP directly on the landing page same as another auth pages.
+  2.3. Signin Page
+    - Implemented design improvements for better UI/UX.
+  2.4. Reset Password Module
+    - Applied new design changes.
+3. Location Dropdown Handling
+  - Added validation to display messages:
+    - “Please first select country” in State dropdown.
+    - “Please first select country and state” in City dropdown.
+4. Manage Media Plan Module
+  - display Media Plan Detail Modal Popup using the Common Modal component.
 
-3. Vendor Management Module
-    - Applied latest review changes and implemented new requirements.
-    - Fixed dropdown validation issues in Dynamic Fields.
-    - Added Dynamic Content for:
-        - News Paper Media Type ✅
-        - Digital Media Type ✅
-        - OOH (Out of Home) Media Type ✅
-    - Updated Edit Vendor design to match Add Vendor and removed unnecessary fields.
-    - Integrated and tested APIs:
-        - fetchAllSizeByMediaTypeId
-        - fetchAllDurationByMediaTypeId
-        - fetchAllMaterialByMediaTypeId
-    - Performed CRUD operation testing for Vendor module (in progress).
+1. Vendor Management Module
+  1.1. Display Vendor Details Modal
+    - Designed and implemented a responsive modal popup with proper layout for multi-device support. 
+    - Configured modal to display different Vendor Rates tables dynamically based on the Media Type.
 
-4. User Management Module
-    - Fixed missing default Role object in Get Users API.
-    - Verified Redux cleanup on component unmount.
-    - Validated Gender field capitalization.
 
-5. Sub Media Master (Previously Format Master)
-    - Renamed Format Master to Sub Media Master.
-    - Updated API to include total sub-media count, current page, and total items in response.
+Project: Kizuna Cunsulting Website,
 
-6. Size Master Module
-    - Changed Name field input type from Select → Text.
-    - Integrated Common Modal Popup for delete confirmation.
-    - Optimized internal logic for smooth sync between features.
+Git Commit ID: a06801205fb86a5b4d1515508f6985781795b2fb
+Git Commit Link: https://gitlab.com/vnnovatesolutions/kizuna-cunsulting-website/-/commit/a06801205fb86a5b4d1515508f6985781795b2fb
 
-7. Time Slot Master Module
-    - Integrated Common Modal Popup for delete confirmation.
-    - Refactored internal logic for better functionality synchronization.
+1. Services Page (Client & Admin)
+  - Implement translation functionality for multilingual support.
+  - Tested in Admin and Client side both.
+2. Setting Module
+  - Add translation management for multilingual support in Side bar.
+3. Common Modal Popup
+  - Extend and improve functionality for dynamic content handling and translation compatibility. - In Progress
 
-8. Material Master Module
-    - Added default values for select fields in Add and Edit components.
-    - Verified that correct default selections appear during Add/Edit operations.
 
-9. Position Master Module
-    - Changed Name field from Select → Text.
-    - Created and implemented dropdownPositionList API for News and Digital media types.
+1. Common Modal Popup
+  - Implemented a custom modal popup for user confirmation (replaced window.confirm).
+  - Modules Implemented:
+    - Blog Post (Delete) – Done & Checked
+    - Services (Delete) – Done & Checked
+    - Case Study (Delete) – Done & Checked
+    - Home Content (Delete) – Done & Checked
+    - About Us (Delete) – Done & Checked
+ 
+2. Home Page
+  - Implemented Language Translation functionality for multilingual support. - Done & Checked
+ 
+3. Case Studies Module
+  - Identified and resolved issues related to Create and Update Case Study operations with Team. - Done
+ 
+4. Blog Post Setting Form
+  - Implemented form validation with multi-language support for Blog Post settings. - Done
+ 
+5. About Us Page
+  - Implemented Language Translation functionality for multilingual support in Admin Pannel. - Done & Checked
 
-10. UI/UX & General Enhancements
-    - Fixed menu highlighting issue in sidebar navigation.
-    - Optimized responsive design in User Management Add/Edit modules for multiple devices.
-    - Replaced multiple local states with a single consolidated state in Vendor Management for cleaner logic.
-    - Ensured Redux cleanup on component unmount in all modules.
-
-11. Collaboration
-    - Worked with Bhautik bhai to review and implement required backend changes.
-    - Synced frontend API payloads with backend for Get States by Country ID and other media-type-based APIs.
 
 ## Leave Request
 
