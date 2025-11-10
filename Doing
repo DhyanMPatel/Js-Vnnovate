@@ -1,44 +1,37 @@
 ## Work Doing:
 
-Date: 7 Nov, 2025
-Day: Friday,
+Date: 10 Nov, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
-Project: Kisuna Cunsulting Website,
+Project: Media Planner,
 
-1. Common Modal Popup
-  - Continue work on Common Modal popup for User Confirmation.
+1. Start working in Vendor management module.
 
 ## Work done:
 
 EOD,
-Date: 7 Nov, 2025
-Day: Friday,
+Date: 10 Nov, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
-Project: Kisuna Cunsulting Website,
+Project: Media Planner,
 
-1. Common Modal Popup
-  - Implemented a custom modal popup for user confirmation (replaced window.confirm).
-  - Modules Implemented:
-    - Blog Post (Delete) – Done & Checked
-    - Services (Delete) – Done & Checked
-    - Case Study (Delete) – Done & Checked
-    - Home Content (Delete) – Done & Checked
-    - About Us (Delete) – Done & Checked
+1. Vendor Role
+  - Display only Purchase Order module for Vendor role.
+  - Added a new Vendor tab in the Module Permission section.
+  - Created an endpoint “Get Purchase Orders by Vendor ID” API and integrated it into the Purchase Order module.
+  - Coordinated with Bhautik bhai to update API response for Vendor-specific data.
 
-2. Home Page
-  - Implemented Language Translation functionality for multilingual support. - Done & Checked
+2. Vendor Management Module (In Progress)
+  - Working on proper code structuring and design improvements in dynamic sub-modules.
 
-3. Case Studies Module
-  - Identified and resolved issues related to Create and Update Case Study operations with Team. - Done
+3. Permission Module
+  - Added complete module list and enabled assigning permissions based on user roles.
 
-4. Blog Post Setting Form
-  - Implemented form validation with multi-language support for Blog Post settings. - Done
-
-5. About Us Page
-  - Implemented Language Translation functionality for multilingual support in Admin Pannel. - Done & Checked
+4. Logout Functionality
+  - Implemented logic to clear entire profile Redux state upon logout for data integrity and security.
 
 
 
