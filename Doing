@@ -1,37 +1,39 @@
 ## Work Doing:
 
-Date: 10 Nov, 2025
-Day: Monday,
+Date: 11 Nov, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-1. Start working in Vendor management module.
+1. Vendor management
+	- Proper code structuring and Design Changes in Dynamic sub modules.
+2. Check Side bar issue of scrolling.
 
 ## Work done:
 
 EOD,
-Date: 10 Nov, 2025
-Day: Monday,
+Date: 11 Nov, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Vendor Role
-  - Display only Purchase Order module for Vendor role.
-  - Added a new Vendor tab in the Module Permission section.
-  - Created an endpoint “Get Purchase Orders by Vendor ID” API and integrated it into the Purchase Order module.
-  - Coordinated with Bhautik bhai to update API response for Vendor-specific data.
+1. Vendor Management Module
+  - Added validation to ensure at least one vendor rate is required during Vendor creation and Vendor Update.
+  - Performed code restructuring and design improvements across all dynamic sub-modules.
+  - Integrated Common Popup Modal for Add and Edit operations in all media types.
+  - Resolved update operation issue related to Television Media → Sub Media.
+  - Displayed unitType and add Duration in Television and verified across other media types.
+  - Cleaned codebase by removing unnecessary console.logs and debuggers.
 
-2. Vendor Management Module (In Progress)
-  - Working on proper code structuring and design improvements in dynamic sub-modules.
+2. FormBtnsContainer Component
+  - Added onSubmit prop where used and verified all implementations.
 
-3. Permission Module
-  - Added complete module list and enabled assigning permissions based on user roles.
-
-4. Logout Functionality
-  - Implemented logic to clear entire profile Redux state upon logout for data integrity and security.
+3. Upload Compliance Module (In Progress)
+  - Understand the complete workflow of the Upload Compliance process with the team.
+  - Currently working on CRUD operations for Upload Compliance.
 
 
 
