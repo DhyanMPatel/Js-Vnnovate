@@ -1,39 +1,30 @@
 ## Work Doing:
 
-Date: 11 Nov, 2025
-Day: Tuesday,
+Date: 12 Nov, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-1. Vendor management
-	- Proper code structuring and Design Changes in Dynamic sub modules.
-2. Check Side bar issue of scrolling.
+1. Upload Compliance Module
+  - Understand the complete workflow of the Upload Compliance process with the team.
+  - Currently working on CRUD operations for Upload Compliance.
 
 ## Work done:
 
 EOD,
-Date: 11 Nov, 2025
-Day: Tuesday,
+Date: 12 Nov, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
-1. Vendor Management Module
-  - Added validation to ensure at least one vendor rate is required during Vendor creation and Vendor Update.
-  - Performed code restructuring and design improvements across all dynamic sub-modules.
-  - Integrated Common Popup Modal for Add and Edit operations in all media types.
-  - Resolved update operation issue related to Television Media → Sub Media.
-  - Displayed unitType and add Duration in Television and verified across other media types.
-  - Cleaned codebase by removing unnecessary console.logs and debuggers.
-
-2. FormBtnsContainer Component
-  - Added onSubmit prop where used and verified all implementations.
-
-3. Upload Compliance Module (In Progress)
-  - Understand the complete workflow of the Upload Compliance process with the team.
-  - Currently working on CRUD operations for Upload Compliance.
+1. Upload Compliance Module
+  - Understood the complete workflow of the Upload Compliance process with the team.
+  - Implemented CRUD operations for Upload Compliance.
+  - Enabled Admin to update the status of uploaded compliance items.
+  - Collaborated with Bhautik bhai to update the related API endpoints and response structures.
 
 
 
