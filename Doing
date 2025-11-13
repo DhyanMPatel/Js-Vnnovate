@@ -1,31 +1,41 @@
 ## Work Doing:
 
-Date: 12 Nov, 2025
-Day: Wednesday,
+Date: 13 Nov, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
 Project: Media Planner,
 
-1. Upload Compliance Module
-  - Understand the complete workflow of the Upload Compliance process with the team.
-  - Currently working on CRUD operations for Upload Compliance.
+1. Profile Module
+  - Improvement in Code related to Vendor role Company Name. - Done
+
+Project: Sales CRM,
+
+1. Clone and understand project.
+
 
 ## Work done:
 
 EOD,
-Date: 12 Nov, 2025
-Day: Wednesday,
+Date: 13 Nov, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
 
 1. Upload Compliance Module
-  - Understood the complete workflow of the Upload Compliance process with the team.
-  - Implemented CRUD operations for Upload Compliance.
-  - Enabled Admin to update the status of uploaded compliance items.
-  - Collaborated with Bhautik bhai to update the related API endpoints and response structures.
+  - Performed testing of all CRUD operations and workflows to ensure proper functionality and stability.
+2. Profile Module (Vendor Role)
+  - Applied and verified necessary changes related to the Vendor role for Company name of Vendor.
+  - Add field of Company Name only for Vendor role and update too.
 
+Project: Sales CRM,
+1. Clone Project and install necessary dependencies like postgresql, pgAdmin, etc.
+2. Bug Tracking
+  - Created a comprehensive list of bugs identified in the Projects, Tasks, and Import modules.
+3. Project Module
+  - Started working on bug fixing and issue resolution within the Project module. - In Progress
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
