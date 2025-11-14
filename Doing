@@ -1,41 +1,37 @@
 ## Work Doing:
 
-Date: 13 Nov, 2025
-Day: Thursday,
+Date: 14 Nov, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
-Project: Media Planner,
-
-1. Profile Module
-  - Improvement in Code related to Vendor role Company Name. - Done
-
 Project: Sales CRM,
 
-1. Clone and understand project.
+1. Project Understanding
+  - Continue reviewing and understanding the codebase and workflows.
+2. Bug Fixing
+  - Continue fixing identified bugs and improving module stability.
 
 
 ## Work done:
 
 EOD,
-Date: 13 Nov, 2025
-Day: Thursday,
+Date: 14 Nov, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
-Project: Media Planner,
-
-1. Upload Compliance Module
-  - Performed testing of all CRUD operations and workflows to ensure proper functionality and stability.
-2. Profile Module (Vendor Role)
-  - Applied and verified necessary changes related to the Vendor role for Company name of Vendor.
-  - Add field of Company Name only for Vendor role and update too.
-
 Project: Sales CRM,
-1. Clone Project and install necessary dependencies like postgresql, pgAdmin, etc.
-2. Bug Tracking
-  - Created a comprehensive list of bugs identified in the Projects, Tasks, and Import modules.
-3. Project Module
-  - Started working on bug fixing and issue resolution within the Project module. - In Progress
+
+1. Project Module
+  - Updated Edit Change Request functionality inside the Project Details popup and integrated required APIs.
+  - Edited Project Update functionality and continued API integration. (In Progress)
+  - Fixed: Name field validation message not showing on Project Details page.
+  - Fixed: Create New Project form overflow issue — form now scrolls properly.
+2. Task Module
+  - Fixed: Close (×) button alignment issue in Schedule Task modal.
+  - Fixed: Assigned to… field showing User ID instead of Username — now shows actual user name.
+  - Fixed: Added confirmation popup before checkbox final confirmation.
+  - Fixed: When Description and Task Title are too long, they now correctly show overflow hidden in Schedule Task popup.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
@@ -174,88 +170,77 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (3 Oct - 7 Oct) Report of Dhyan
+**Subject**: Weekly (10 Oct - 14 Oct) Report of Dhyan
 
 Project: Media Planner,
 
-Git Commit ID: 93b58ea263c86b0978b4de9eead621a661aab76f
-Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/93b58ea263c86b0978b4de9eead621a661aab76f
+Git Commit ID: 9b3606ae88cef82f3e6b5e125d933503e7932d03
+Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/9b3606ae88cef82f3e6b5e125d933503e7932d03
 
 Description:
 
-1. Vendor Management Module
-  - Compared slug instead of name for Media Type.
-  - Coordinated with Bhautik bhai to update the API response accordingly.
-2. Code Optimization
-  - Performed code optimization based on recent review feedback.
-  - Cleaned and refactored redundant logic for better performance and readability.
-3. CRUD Testing (with Status Code Condition)
-  - Tested all CRUD operations where statusCode-based conditions were implemented:
-    - City, Client Management, Country, Duration, Language, Material, Position, Size, State, Sub-Media, Time Slot, User Management, Vendor
-  - All modules successfully passed the statusCode validation and CRUD operation checks.
+1. Vendor Role
+  - Displayed only Purchase Order module for Vendor role.
+  - Added a new Vendor tab in Module Permission settings.
+  - Created and integrated “Get Purchase Orders by Vendor ID” API.
+  - Coordinated with Bhautik bhai to update API response structure for Vendor-specific data.
+  - Updated Profile module to show Company Name field only for Vendor role and handled updates accordingly.
+2. Vendor Management Module
+  - Added validation: Minimum one vendor rate required for Create & Update operations.
+  - Restructured code and improved design for all dynamic sub-modules.
+  - Integrated Common Popup Modal for Add/Edit operations across all media types.
+  - Resolved Television Media → Sub Media update issue.
+  - Displayed unitType and Duration for Television media; verified consistency across other media types.
+  - Cleaned code: removed redundant console.logs, debuggers, and unused code.
+  - Additional UI/UX refinements and structural improvements in dynamic sub-modules.
 
-1. Common Modal
-  - Enhanced Common Modal to support displaying non-form data.
-  - Applied updated UI design for better consistency and readability.
-2. Authentication & User Flow
-  2.1. Signup Page
-    - Made page responsive.
-    - Added Show Password button.
-  2.2. Verify OTP Page
-    - Made page responsive.
-    - Displayed Verify OTP directly on the landing page same as another auth pages.
-  2.3. Signin Page
-    - Implemented design improvements for better UI/UX.
-  2.4. Reset Password Module
-    - Applied new design changes.
-3. Location Dropdown Handling
-  - Added validation to display messages:
-    - “Please first select country” in State dropdown.
-    - “Please first select country and state” in City dropdown.
-4. Manage Media Plan Module
-  - display Media Plan Detail Modal Popup using the Common Modal component.
+3. Permission Module
+  - Added the complete module list for assigning permissions based on roles.
+  - Configured role-based permissions for all modules including Vendor role.
 
-1. Vendor Management Module
-  1.1. Display Vendor Details Modal
-    - Designed and implemented a responsive modal popup with proper layout for multi-device support. 
-    - Configured modal to display different Vendor Rates tables dynamically based on the Media Type.
+4. Logout Functionality
+  - Implemented logic to clear entire profile Redux state on logout for improved security and data cleanup.
 
+5. FormBtnsContainer Component
+  - Added and verified onSubmit prop usage in all relevant forms.
 
-Project: Kizuna Cunsulting Website,
+6. Upload Compliance Module
+  - Understood full workflow with the team.
+  - Implemented CRUD operations for Upload Compliance.
+  - Enabled Admin status update functionality.
+  - Coordinated with Bhautik bhai to update API endpoints and response formats.
+  - Fully tested CRUD operations and backend integrations.
+  - Ongoing stabilisation and workflow testing (if mentioned additionally).
 
-Git Commit ID: a06801205fb86a5b4d1515508f6985781795b2fb
-Git Commit Link: https://gitlab.com/vnnovatesolutions/kizuna-cunsulting-website/-/commit/a06801205fb86a5b4d1515508f6985781795b2fb
+Project: Sales CRM,
 
-1. Services Page (Client & Admin)
-  - Implement translation functionality for multilingual support.
-  - Tested in Admin and Client side both.
-2. Setting Module
-  - Add translation management for multilingual support in Side bar.
-3. Common Modal Popup
-  - Extend and improve functionality for dynamic content handling and translation compatibility. - In Progress
+Git Commit ID: 50b55f4ebfc482f239de0c9580f38a1e9ac0f667
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/50b55f4ebfc482f239de0c9580f38a1e9ac0f667
 
+Description:
 
-1. Common Modal Popup
-  - Implemented a custom modal popup for user confirmation (replaced window.confirm).
-  - Modules Implemented:
-    - Blog Post (Delete) – Done & Checked
-    - Services (Delete) – Done & Checked
-    - Case Study (Delete) – Done & Checked
-    - Home Content (Delete) – Done & Checked
-    - About Us (Delete) – Done & Checked
- 
-2. Home Page
-  - Implemented Language Translation functionality for multilingual support. - Done & Checked
- 
-3. Case Studies Module
-  - Identified and resolved issues related to Create and Update Case Study operations with Team. - Done
- 
-4. Blog Post Setting Form
-  - Implemented form validation with multi-language support for Blog Post settings. - Done
- 
-5. About Us Page
-  - Implemented Language Translation functionality for multilingual support in Admin Pannel. - Done & Checked
+1. Environment Setup
+  - Cloned the project and installed required tools: PostgreSQL, pgAdmin, and dependencies.
+2. Bug Tracking
+  - Prepared a detailed bug list covering:
+    - Projects Module
+    - Tasks Module
+    - Import Module
 
+3. Project Module
+  - Completed
+    - Updated Edit Change Request functionality in Project Details popup.
+    - Integrated required APIs.
+    - Fixed Name field validation message not showing.
+    - Fixed Create New Project form overflow issue (scroll now works properly).
+  - In Progress
+    - Working on Project Edit functionality and its API integration.
+
+4. Task Module
+  - Fixed Close (×) button alignment in Schedule Task modal.
+  - Fixed issue where Assigned To field displayed User ID instead of Username.
+  - Added confirmation popup before checkbox final submission.
+  - Fixed overflow issues for long Description & Task Title in Schedule popup.
 
 ## Leave Request
 
