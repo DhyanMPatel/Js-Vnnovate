@@ -1,37 +1,43 @@
 ## Work Doing:
 
-Date: 14 Nov, 2025
-Day: Friday,
+Date: 17 Nov, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 Project: Sales CRM,
 
-1. Project Understanding
-  - Continue reviewing and understanding the codebase and workflows.
-2. Bug Fixing
-  - Continue fixing identified bugs and improving module stability.
+1. Bug Fixing
+  - Continue identifying and resolving remaining bugs across modules.
+2. Implement Remaining Operations
+  - Complete all pending functionalities and ensure smooth workflow across modules.
 
 
 ## Work done:
 
 EOD,
-Date: 14 Nov, 2025
-Day: Friday,
+Date: 17 Nov, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
 
 1. Project Module
-  - Updated Edit Change Request functionality inside the Project Details popup and integrated required APIs.
-  - Edited Project Update functionality and continued API integration. (In Progress)
-  - Fixed: Name field validation message not showing on Project Details page.
-  - Fixed: Create New Project form overflow issue — form now scrolls properly.
+  - Implemented Update Project functionality. – Done
+  - Implemented Delete Project functionality. – Done
+
 2. Task Module
-  - Fixed: Close (×) button alignment issue in Schedule Task modal.
-  - Fixed: Assigned to… field showing User ID instead of Username — now shows actual user name.
-  - Fixed: Added confirmation popup before checkbox final confirmation.
-  - Fixed: When Description and Task Title are too long, they now correctly show overflow hidden in Schedule Task popup.
+  - Implemented Update Task functionality with condition:
+    - Tasks can be updated only until they are completed.
+    - After completion, tasks cannot be updated but can be deleted. – Done
+
+3. Client Module
+  - Added Delete Client functionality. – Done
+
+4. Testing
+  - Tested full CRUD functionality in the Task Module. – Done
+  - Tested full CRUD functionality in the Projects Module. – Done
+  - Verified and tested all recent changes across modules. – Done
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
