@@ -1,38 +1,33 @@
 ## Work Doing:
 
-Date: 19 Nov, 2025
-Day: Wednesday,
+Date: 20 Nov, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
 Project: Sales CRM,
 
-1. Full System Testing 
-  - Test the entire workflow end-to-end.
-  - Identify and note any bugs or improvements needed.
+1. Working on New Improvement points in Projects module related to document upload field mandatory.
+
 
 ## Work done:
 
 EOD,
-Date: 19 Nov, 2025
-Day: Wednesday,
+Date: 20 Nov, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
-
-Project: Media Planner,
-1. Identified issues related to fetching data from the backend.
-2. Coordinated with Bhautik bhai to resolve the issue.
-
 Project: Sales CRM,
-1. Dialog Modal
-  - Applied design changes based on review — Done
 
+1. Leads Module
+  - Updated UI: Changed “Add” text beside filter icon to “Filter”.
+  - Implemented role-based visibility:
+    - BDM & BDE can see only their assigned leads.
+    - Admin & Sales Head can see all leads.
+  - Fixed issue where phone number was not displaying in the Edit Leads modal.
 2. Projects Module
-  - Added new field: “Upload Scope of Work Document”
-  - Implemented multiple file upload functionality — Done
-
-Project: Kizuna Consultancy,
-1. Contact Submission
-  - Added language translation functionality — Done
+  - Made Scope of Work document upload mandatory in both Add and Edit Project forms.
+3. Tasks Module
+  - Added role-based assignment dropdown for Add Task and Edit Task modals, same logic used in Leads module.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
