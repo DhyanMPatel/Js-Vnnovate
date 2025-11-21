@@ -1,33 +1,40 @@
 ## Work Doing:
 
-Date: 20 Nov, 2025
-Day: Thursday,
+Date: 21 Nov, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 Project: Sales CRM,
 
-1. Working on New Improvement points in Projects module related to document upload field mandatory.
+1. Work on New Improvement point in Lead and Project modules.
 
 
 ## Work done:
 
 EOD,
-Date: 20 Nov, 2025
-Day: Thursday,
+Date: 21 Nov, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 Project: Sales CRM,
 
-1. Leads Module
-  - Updated UI: Changed “Add” text beside filter icon to “Filter”.
-  - Implemented role-based visibility:
-    - BDM & BDE can see only their assigned leads.
-    - Admin & Sales Head can see all leads.
-  - Fixed issue where phone number was not displaying in the Edit Leads modal.
-2. Projects Module
-  - Made Scope of Work document upload mandatory in both Add and Edit Project forms.
-3. Tasks Module
-  - Added role-based assignment dropdown for Add Task and Edit Task modals, same logic used in Leads module.
+1. Lead Module
+  - Added "Assigned To" user list in Lead Filter.
+  - While creating a lead, if a document already exists, user can now upload a new optional document.
+  - Added "Import Lead" button.
+  - Displaying user name instead of user ID in Lead Details page.
+  - Fixed issue where documents were not visible in Lead Details after updating a user who previously had no documents.
+  - Showing toast message instead of console log when BDM tries to update BDE’s lead.
+  - Implemented separate multer logic for Add & Edit Lead document uploads.
+
+2. Contacts Module
+  - Matched Lead & Contact Us filters with the same hide/show options.
+
+3. Project Module
+  - Total Value now displays the Base Value.
+  - Balance Amount now shows the Total Revenue.
+  - Added CR total count next to CR column OR displayed total CR value in a new column.
+  - Implemented separate multer logic for Add & Edit Project document uploads.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
@@ -166,7 +173,18 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (10 Oct - 14 Oct) Report of Dhyan
+**Subject**: Weekly (17 Oct - 21 Oct) Report of Dhyan
+
+Project: Kizuna Consulting,
+
+Git Commit ID : e8d191ec07a4d5dd5debc7d033b3b813fda523d9
+Git Commit Link : https://gitlab.com/vnnovatesolutions/kizuna-cunsulting-website/-/commit/e8d191ec07a4d5dd5debc7d033b3b813fda523d9
+
+Description:
+
+1. Contact Submission
+- Added language translation functionality
+
 
 Project: Media Planner,
 
@@ -175,68 +193,75 @@ Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend
 
 Description:
 
-1. Vendor Role
-  - Displayed only Purchase Order module for Vendor role.
-  - Added a new Vendor tab in Module Permission settings.
-  - Created and integrated “Get Purchase Orders by Vendor ID” API.
-  - Coordinated with Bhautik bhai to update API response structure for Vendor-specific data.
-  - Updated Profile module to show Company Name field only for Vendor role and handled updates accordingly.
-2. Vendor Management Module
-  - Added validation: Minimum one vendor rate required for Create & Update operations.
-  - Restructured code and improved design for all dynamic sub-modules.
-  - Integrated Common Popup Modal for Add/Edit operations across all media types.
-  - Resolved Television Media → Sub Media update issue.
-  - Displayed unitType and Duration for Television media; verified consistency across other media types.
-  - Cleaned code: removed redundant console.logs, debuggers, and unused code.
-  - Additional UI/UX refinements and structural improvements in dynamic sub-modules.
-
-3. Permission Module
-  - Added the complete module list for assigning permissions based on roles.
-  - Configured role-based permissions for all modules including Vendor role.
-
-4. Logout Functionality
-  - Implemented logic to clear entire profile Redux state on logout for improved security and data cleanup.
-
-5. FormBtnsContainer Component
-  - Added and verified onSubmit prop usage in all relevant forms.
-
-6. Upload Compliance Module
-  - Understood full workflow with the team.
-  - Implemented CRUD operations for Upload Compliance.
-  - Enabled Admin status update functionality.
-  - Coordinated with Bhautik bhai to update API endpoints and response formats.
-  - Fully tested CRUD operations and backend integrations.
-  - Ongoing stabilisation and workflow testing (if mentioned additionally).
+1. Sidebar Scrolling
+- Fixed issue where the sidebar in the layout was not scrolling. – Done
+- Resolved dropdown accessibility issue when the sidebar is collapsed (child menu items were not accessible). – Done
+2. Reset Password Flow
+- Updated Reset Password flow:
+- When the user enters their email, they are now redirected to the Login page instead of opening the Reset Password form. Because should reset password from email link. – Done
+3. Module-Wise Testing & Fixes
+- Performed full testing across all modules. – Done
+- Made necessary UI/UX and logic adjustments based on testing results.
+- Coordinated with Bhautik bhai to implement required backend-side changes. – Done
+1. Identified issues related to fetching data from the backend.
+2. Coordinated with Bhautik bhai to resolve the issue.
 
 Project: Sales CRM,
 
-Git Commit ID: 50b55f4ebfc482f239de0c9580f38a1e9ac0f667
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/50b55f4ebfc482f239de0c9580f38a1e9ac0f667
+Git Commit ID: ff3825235a70f79cc42f30c4f79872f17ae4b868
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/ff3825235a70f79cc42f30c4f79872f17ae4b868
 
 Description:
 
-1. Environment Setup
-  - Cloned the project and installed required tools: PostgreSQL, pgAdmin, and dependencies.
-2. Bug Tracking
-  - Prepared a detailed bug list covering:
-    - Projects Module
-    - Tasks Module
-    - Import Module
+1. Project Module
+- Implemented Update Project functionality.
+- Implemented Delete Project functionality.
+2. Task Module
+- Implemented Update Task functionality with condition:
+- Tasks can be updated only until they are completed.
+- After completion, tasks cannot be updated but can be deleted.
+3. Client Module
+- Added Delete Client functionality.
+4. Testing
+- Tested full CRUD functionality in the Task Module.
+- Tested full CRUD functionality in the Projects Module.
+- Verified and tested all recent changes across modules.
+
+1. Dialog Modal
+- Applied design changes based on review
+2. Projects Module
+- Added new field: “Upload Scope of Work Document”
+- Implemented multiple file upload functionality
+
+1. Leads Module
+- Updated UI: Changed “Add” text beside filter icon to “Filter”.
+- Implemented role-based visibility:
+- BDM & BDE can see only their assigned leads.
+- Admin & Sales Head can see all leads.
+- Fixed issue where phone number was not displaying in the Edit Leads modal.
+2. Projects Module
+- Made Scope of Work document upload mandatory in both Add and Edit Project forms.
+3. Tasks Module
+- Added role-based assignment dropdown for Add Task and Edit Task modals, same logic used in Leads module.
+
+1. Lead Module
+  - Added "Assigned To" user list in Lead Filter.
+  - While creating a lead, if a document already exists, user can now upload a new optional document.
+  - Added "Import Lead" button.
+  - Displaying user name instead of user ID in Lead Details page.
+  - Fixed issue where documents were not visible in Lead Details after updating a user who previously had no documents.
+  - Showing toast message instead of console log when BDM tries to update BDE’s lead.
+  - Implemented separate multer logic for Add & Edit Lead document uploads.
+
+2. Contacts Module
+  - Matched Lead & Contact Us filters with the same hide/show options.
 
 3. Project Module
-  - Completed
-    - Updated Edit Change Request functionality in Project Details popup.
-    - Integrated required APIs.
-    - Fixed Name field validation message not showing.
-    - Fixed Create New Project form overflow issue (scroll now works properly).
-  - In Progress
-    - Working on Project Edit functionality and its API integration.
+  - Total Value now displays the Base Value.
+  - Balance Amount now shows the Total Revenue.
+  - Added CR total count next to CR column OR displayed total CR value in a new column.
+  - Implemented separate multer logic for Add & Edit Project document uploads.
 
-4. Task Module
-  - Fixed Close (×) button alignment in Schedule Task modal.
-  - Fixed issue where Assigned To field displayed User ID instead of Username.
-  - Added confirmation popup before checkbox final submission.
-  - Fixed overflow issues for long Description & Task Title in Schedule popup.
 
 ## Leave Request
 
