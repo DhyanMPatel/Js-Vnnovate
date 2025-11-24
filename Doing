@@ -1,40 +1,54 @@
 ## Work Doing:
 
-Date: 21 Nov, 2025
-Day: Friday,
+Date: 24 Nov, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 Project: Sales CRM,
 
-1. Work on New Improvement point in Lead and Project modules.
+1. Testing
+  - Test recent changes in Leads, contacts and Projects module
 
 
 ## Work done:
 
 EOD,
-Date: 21 Nov, 2025
-Day: Friday,
+Date: 24 Nov, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 Project: Sales CRM,
 
-1. Lead Module
-  - Added "Assigned To" user list in Lead Filter.
-  - While creating a lead, if a document already exists, user can now upload a new optional document.
-  - Added "Import Lead" button.
-  - Displaying user name instead of user ID in Lead Details page.
-  - Fixed issue where documents were not visible in Lead Details after updating a user who previously had no documents.
-  - Showing toast message instead of console log when BDM tries to update BDE’s lead.
-  - Implemented separate multer logic for Add & Edit Lead document uploads.
+1. Leads Module
+  - Fixed issue where removing all documents did not remove them from backend during update.
+  - Resolved validation issue during lead update with document upload.
+  - Applied trim() on search input before sending value.
+  - Updated Import Leads icon.
+  - Sidebar now correctly highlights Leads menu item even when user is on Lead Details page.
+  - Added trim + no-only-spaces validation for all Lead fields.
+  - Added Ascending/Descending sorting for all fields.
+  - Log Activity
+    - Added trim + no-only-spaces validation.
 
 2. Contacts Module
-  - Matched Lead & Contact Us filters with the same hide/show options.
+  - Added Asc/Desc sorting for all fields.
 
-3. Project Module
-  - Total Value now displays the Base Value.
-  - Balance Amount now shows the Total Revenue.
-  - Added CR total count next to CR column OR displayed total CR value in a new column.
-  - Implemented separate multer logic for Add & Edit Project document uploads.
+3. Projects Module
+  - Added Asc/Desc sorting for all fields.
+
+4. Import Module
+  - Added default value for sourceDescription.
+
+5. Document Upload Module
+  - Added confirmation modal when user tries to remove any document.
+
+6. Design Changes (Multi-Device Support)
+  - Leads Module
+    - In tablet view, replaced buttons with a dropdown menu for:
+      - Import
+      - Export
+      - Add
+    - Added animation for filter bar open/close.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
