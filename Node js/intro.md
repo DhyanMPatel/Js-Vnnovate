@@ -15,6 +15,11 @@ Bellow are Task that Server only can do not browser
 2. `Authentication` : Can Authenticate User.
 3. `Input Validation` : User enter Correct Inputs (email, password, etc).
 4. `Business Logic` : That user should not see, that take too much time to run in browser.
+    - Like: 
+        - Authentication & Authorization (User Login/logout, Role based access, JWT token validation, Session management, Permission checking, etc)
+        - Data Management Operations (CRUD operations with business constraints, Search & filtering logic, Sorting & pagination, Data Relationships & integrity, etc)
+        - Business Rules & Calculations (Pricing Calculation of discounts & taxes, Inventory management, Financial Calculations of interest & commissions & fees)
+        - Integration Logic (Third-party API integrations, Caches management strategies, File upload/download processing)
 
 ## Why Node.js?
 
