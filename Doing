@@ -1,54 +1,44 @@
 ## Work Doing:
 
-Date: 24 Nov, 2025
-Day: Monday,
+Date: 25 Nov, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 Project: Sales CRM,
 
 1. Testing
-  - Test recent changes in Leads, contacts and Projects module
+  - Tested all recent changes in:
+    - Leads Module
+    - Contacts Module
+    - Projects Module
+    - Design-related updates across modules
+  - Performed complete testing with all user roles to ensure proper permission handling and module behavior.
+
+Project: Cashbook Web,
+
+1. Setup and understood work flow of project.
 
 
 ## Work done:
 
 EOD,
-Date: 24 Nov, 2025
-Day: Monday,
+Date: 25 Nov, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 Project: Sales CRM,
 
-1. Leads Module
-  - Fixed issue where removing all documents did not remove them from backend during update.
-  - Resolved validation issue during lead update with document upload.
-  - Applied trim() on search input before sending value.
-  - Updated Import Leads icon.
-  - Sidebar now correctly highlights Leads menu item even when user is on Lead Details page.
-  - Added trim + no-only-spaces validation for all Lead fields.
-  - Added Ascending/Descending sorting for all fields.
-  - Log Activity
-    - Added trim + no-only-spaces validation.
+1. Testing
+  - Tested all recent changes in:
+    - Leads Module
+    - Contacts Module
+    - Projects Module
+    - Design-related updates across modules
+  - Performed complete testing with all user roles to ensure proper permission handling and module behavior.
 
-2. Contacts Module
-  - Added Asc/Desc sorting for all fields.
+Project: Cashbook Web,
 
-3. Projects Module
-  - Added Asc/Desc sorting for all fields.
-
-4. Import Module
-  - Added default value for sourceDescription.
-
-5. Document Upload Module
-  - Added confirmation modal when user tries to remove any document.
-
-6. Design Changes (Multi-Device Support)
-  - Leads Module
-    - In tablet view, replaced buttons with a dropdown menu for:
-      - Import
-      - Export
-      - Add
-    - Added animation for filter bar open/close.
+1. Setup and understood work flow of project.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
