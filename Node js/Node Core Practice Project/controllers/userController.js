@@ -19,7 +19,7 @@ async function handleUsers(req, res) {
     return res.end(JSON.stringify(users));
   }
 
-  // POST /users
+  // POST /users Or /create-user
   if (method === "POST") {
     let body = "";
 
