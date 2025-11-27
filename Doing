@@ -1,27 +1,42 @@
 ## Work Doing:
 
-Date: 26 Nov, 2025
-Day: Wednesday,
+Date: 27 Nov, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
 
-Project: Media Planner
-1. Review and understand the new improvement points provided in the documentation.
+Project: Media Planner,
+1. Create Estimation list based on new Improvement points.
 
-Project: Cashbook Web
-1. Coordinate with Vasik sir regarding the required changes and gather clarification.
+Project: Learning,
+1. Create React + Redux Documentation.
+
 
 ## Work done:
 
 EOD,
-Date: 26 Nov, 2025
-Day: Wednesday,
+Date: 27 Nov, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
-Project: Media Planner,
+Project: Learning
+1. React + Redux Documentation
+  - Creating core concepts and official documentation.
 
-1. Read the "Planit Revamp Notes" file and review all related documentation for better understanding.
+Status: In Progress
 
+Project: Media Planner
+1. Brand Management Module
+  - Implemented full CRUD operations for Brand Management.
+  - Completed API integration for all Brand-related actions.
+  - Connect with Bhautik bhai to make changes in api response.
+
+2. Sidebar
+  - Added Brand Management as a new menu item in the sidebar.
+
+Project: Other,
+
+1. Help Ashish bhai related to Node Project
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
