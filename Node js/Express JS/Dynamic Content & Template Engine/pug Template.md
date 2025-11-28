@@ -158,7 +158,7 @@ body
 - Pug provides a short way to define `classes`, `IDs`, and `attributes`:
   - `Classes` : Define classes using a dot (`.`) followed by the class name.
   - `IDs` : Define IDs using a hash (`#`) followed by the ID name.
-  - `Attributes` : Define attributes using square brackets (`[]`).
+  - `Attributes` : Define attributes using square brackets (`()`).
 
 ```pug
 div.container#main-content

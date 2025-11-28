@@ -95,7 +95,7 @@
 
 - This is a whole summery of Learning Basic Express js
 
-[Basic Express Wrap up](./Basics/Basic%20Express%20wrap%20up.png)
+![Basic Express Wrap up](./Basic%20Express%20wrap%20up.png)
 
 ## Note :
 

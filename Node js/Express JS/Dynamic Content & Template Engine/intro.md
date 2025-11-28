@@ -28,4 +28,4 @@
 
 - Next Topic: Know More about Pug Template Engine
 
-![Pug Template Engine](./pug%20Template.md)
+[Pug Template Engine](./pug%20Template.md)
