@@ -26,13 +26,13 @@ Project: Learning
 Status: In Progress
 
 Project: Media Planner
-1. Brand Management Module
-  - Implemented full CRUD operations for Brand Management.
-  - Completed API integration for all Brand-related actions.
-  - Connect with Bhautik bhai to make changes in api response.
-
-2. Sidebar
-  - Added Brand Management as a new menu item in the sidebar.
+1. User Module
+  - Added User-based Permissions during Add User functionality.
+  - Displayed and updated permissions in the Edit User page.
+  - Coordinated with Bhautik bhai for required backend changes in Get, Add, and Update APIs.
+2. Permission Module
+  - Updated logic to display sidebar routes based on user-level permissions instead of role-based permissions.
+  - Added logic to render side-menu items dynamically per-user permissions.
 
 Project: Other,
 
@@ -174,95 +174,83 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Mansi ma'am
 
-**Subject**: Weekly (17 Oct - 21 Oct) Report of Dhyan
-
-Project: Kizuna Consulting,
-
-Git Commit ID : e8d191ec07a4d5dd5debc7d033b3b813fda523d9
-Git Commit Link : https://gitlab.com/vnnovatesolutions/kizuna-cunsulting-website/-/commit/e8d191ec07a4d5dd5debc7d033b3b813fda523d9
-
-Description:
-
-1. Contact Submission
-- Added language translation functionality
-
+**Subject**: Weekly (24 Oct - 28 Oct) Report of Dhyan
 
 Project: Media Planner,
 
-Git Commit ID: 9b3606ae88cef82f3e6b5e125d933503e7932d03
-Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/9b3606ae88cef82f3e6b5e125d933503e7932d03
+Git Commit ID: fc6b01b6693cc55857460144c47b4b626fd4708f
+Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/fc6b01b6693cc55857460144c47b4b626fd4708f
 
 Description:
 
-1. Sidebar Scrolling
-- Fixed issue where the sidebar in the layout was not scrolling. – Done
-- Resolved dropdown accessibility issue when the sidebar is collapsed (child menu items were not accessible). – Done
-2. Reset Password Flow
-- Updated Reset Password flow:
-- When the user enters their email, they are now redirected to the Login page instead of opening the Reset Password form. Because should reset password from email link. – Done
-3. Module-Wise Testing & Fixes
-- Performed full testing across all modules. – Done
-- Made necessary UI/UX and logic adjustments based on testing results.
-- Coordinated with Bhautik bhai to implement required backend-side changes. – Done
-1. Identified issues related to fetching data from the backend.
-2. Coordinated with Bhautik bhai to resolve the issue.
+1. Documentation & Understanding
+  - Read the "Planit Revamp Notes" file.
+  - Reviewed all related documentation for deeper understanding of the upcoming improvements.
+
+2. Brand Management Module
+  - Implemented full CRUD operations for Brand Management.
+  - Completed API integration for all Brand-related actions.
+  - Coordinated with Bhautik bhai to update and refine API responses for the module.
+
+3. Sidebar
+  - Added Brand Management as a new menu item in the sidebar.
+
+4. User Module
+  - Added User-based Permissions logic during Add User functionality.
+  - Displayed and updated permissions in the Edit User page.
+  - Coordinated with Bhautik bhai for necessary backend changes for Get, Add, and Update User APIs.
+
+5. Permission Module
+  - Updated logic to display sidebar routes based on user-specific permissions instead of role-based permissions.
+  - Sidebar menu items now render dynamically according to individual user permissions.
 
 Project: Sales CRM,
 
-Git Commit ID: ff3825235a70f79cc42f30c4f79872f17ae4b868
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/ff3825235a70f79cc42f30c4f79872f17ae4b868
+Git Commit ID: 5655be74968a6abd302b08e94202da78a8445516
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/5655be74968a6abd302b08e94202da78a8445516
 
 Description:
 
-1. Project Module
-- Implemented Update Project functionality.
-- Implemented Delete Project functionality.
-2. Task Module
-- Implemented Update Task functionality with condition:
-- Tasks can be updated only until they are completed.
-- After completion, tasks cannot be updated but can be deleted.
-3. Client Module
-- Added Delete Client functionality.
-4. Testing
-- Tested full CRUD functionality in the Task Module.
-- Tested full CRUD functionality in the Projects Module.
-- Verified and tested all recent changes across modules.
-
-1. Dialog Modal
-- Applied design changes based on review
-2. Projects Module
-- Added new field: “Upload Scope of Work Document”
-- Implemented multiple file upload functionality
-
 1. Leads Module
-- Updated UI: Changed “Add” text beside filter icon to “Filter”.
-- Implemented role-based visibility:
-- BDM & BDE can see only their assigned leads.
-- Admin & Sales Head can see all leads.
-- Fixed issue where phone number was not displaying in the Edit Leads modal.
-2. Projects Module
-- Made Scope of Work document upload mandatory in both Add and Edit Project forms.
-3. Tasks Module
-- Added role-based assignment dropdown for Add Task and Edit Task modals, same logic used in Leads module.
+  - Fixed issue where removing all documents did not delete them from the backend during lead update.
+  - Resolved validation issue on document upload during lead update.
+  - Applied trim() on search input before sending request.
+  - Updated Import Leads icon.
+  - Sidebar now correctly highlights the Leads menu item even when viewing the Lead Details page.
+  - Added trim + "no-only-spaces" validation for all Lead fields.
+  - Implemented Asc/Desc sorting for all fields.
 
-1. Lead Module
-  - Added "Assigned To" user list in Lead Filter.
-  - While creating a lead, if a document already exists, user can now upload a new optional document.
-  - Added "Import Lead" button.
-  - Displaying user name instead of user ID in Lead Details page.
-  - Fixed issue where documents were not visible in Lead Details after updating a user who previously had no documents.
-  - Showing toast message instead of console log when BDM tries to update BDE’s lead.
-  - Implemented separate multer logic for Add & Edit Lead document uploads.
+Log Activity
+  - Added trim and "no-only-spaces" validation.
 
 2. Contacts Module
-  - Matched Lead & Contact Us filters with the same hide/show options.
+  - Added Asc/Desc sorting for all fields.
 
-3. Project Module
-  - Total Value now displays the Base Value.
-  - Balance Amount now shows the Total Revenue.
-  - Added CR total count next to CR column OR displayed total CR value in a new column.
-  - Implemented separate multer logic for Add & Edit Project document uploads.
+3. Projects Module
+  - Added Asc/Desc sorting for all fields.
 
+4. Import Module
+  - Added default value for sourceDescription.
+
+5. Document Upload Module
+  - Added a confirmation modal when user attempts to remove any document.
+
+6. Responsive Design Improvements (Multi-Device Support)
+Leads Module
+  - In tablet view, replaced individual buttons with a dropdown menu for:
+    - Import
+    - Export
+    - Add
+  - Added smooth animation for filter bar open/close.
+
+7. Testing
+  - Tested all recent updates in:
+    - Leads Module
+    - Contacts Module
+    - Projects Module
+    - Document Upload
+    - UI/Design changes across modules
+  - Performed full testing for all user roles to ensure correct permission logic and consistent module behavior.
 
 ## Leave Request
 
