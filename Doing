@@ -11,21 +11,43 @@ Project: Media Planner
 ## Work done:
 
 EOD,
-Date: 30 Sep, 2025
-Day: Tuesday,
+Date: 1 Des, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Media Planner,
+1. User Module
+  - Added "Check All Modules" checkbox for easier permission selection.
+  - Improved UI of the Permission Step in Add/Edit User flow.
 
-1. Role-Based Login Enhancements - Done
-  - Assigned roles to users during login. (Backend)
-  - Fixed Profile API response issue related to roles. (Backend)
-  - Wrapped all routes using lazy loading for better performance.
-  - Displayed role-based menu items in the sidebar.
-  - Updated login response: when a user is not found in DB, show “User Not Found” instead of “Invalid Credentials”.
-  - Implemented Unauthorized Page for restricted access attempts using ErrorBoundary module.
-  - Tested all changes in local.
+2. Testing Scenarios
+  - Performed full permission-based testing across all user roles to verify:
+    - Sidebar visibility
+    - Module access
+    - Action-level permission behavior
+
+3. Placement Route Issue
+  - Resolved Placement route navigation issue.
+
+4. Time-Slot Naming Update
+  - Updated "Time-slot" → "Placement"
+    - Applied changes in Add, Edit & Delete modals.
+
+Project: Learning,
+
+1. Node Basices
+2. Node Core Modules
+	- Built-in modules (HTTP, fs, path, event)
+	- Third-party modules
+	- Global Variables/objects
+3. Node Modules
+	- ES6
+	- CommonJS
+4. Error Handling
+	-  4 Types (try-catch, callback fns, promises, async-await)
+5. Event loop
+	- Understanding the workflow of the Node.js Event Loop — In Progress
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
