@@ -1,42 +1,43 @@
 ## Work Doing:
 
-Date: 27 Nov, 2025
-Day: Thursday,
+Date: 2 Des, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 
-Project: Media Planner,
-1. Create Estimation list based on new Improvement points.
-
 Project: Learning,
-1. Create React + Redux Documentation.
+1. Revise previous learning topics.
+2. Continue to learn node next topics.
 
 
 ## Work done:
 
 EOD,
-Date: 27 Nov, 2025
-Day: Thursday,
+Date: 2 Des, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
+Project: Sales CRM
+1. Sidebar Improvements
+  - Moved Profile section from bottom to top for better accessibility.
+  - Updated icons for all sidebar menu items.
+  - Reworked Sidebar UI (open/collapsed) to match the latest Figma design.
+  - Coordinated with Rahul sir and updated the position of the sidebar toggle button.
+
+2. Breadcrumb
+  - Implemented Breadcrumb navigation throughout the application.
+
 Project: Learning
-1. React + Redux Documentation
-  - Creating core concepts and official documentation.
+1. Event Loop
+  - Completed understanding of the Node.js Event Loop workflow and its execution phases.
 
-Status: In Progress
+2. Express.js
+  - Started learning Express.js basics — In Progress
+    - Routing
+    - Middleware
+    - Basic server setup
 
-Project: Media Planner
-1. User Module
-  - Added User-based Permissions during Add User functionality.
-  - Displayed and updated permissions in the Edit User page.
-  - Coordinated with Bhautik bhai for required backend changes in Get, Add, and Update APIs.
-2. Permission Module
-  - Updated logic to display sidebar routes based on user-level permissions instead of role-based permissions.
-  - Added logic to render side-menu items dynamically per-user permissions.
 
-Project: Other,
-
-1. Help Ashish bhai related to Node Project
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
