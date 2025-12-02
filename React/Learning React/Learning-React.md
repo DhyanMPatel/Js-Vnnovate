@@ -2,7 +2,7 @@
 
 ## What is React?
 
-- Reactjs is a `component-based` javascript library that create dynamic and interactive user interface. It create the `single-page application` with focus on perfomance and maintainability.
+- Reactjs is a `component-based` javascript library that create dynamic and interactive UI (user interface). It create the `single-page application` with focus on perfomance and maintainability.
 
 ## How it work?
 
