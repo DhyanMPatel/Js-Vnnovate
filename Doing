@@ -1,42 +1,46 @@
 ## Work Doing:
 
-Date: 2 Des, 2025
-Day: Tuesday,
+Date: 3 Des, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 
+Project: Sales CRM,
+1. Test new changes in live.
+2. Try to make Login page more attractive.
+ 
 Project: Learning,
-1. Revise previous learning topics.
-2. Continue to learn node next topics.
+1. Revise previous topics.
+2. Continue to learning Express js.
+
 
 
 ## Work done:
 
 EOD,
-Date: 2 Des, 2025
-Day: Tuesday,
+Date: 3 Des, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
-Project: Sales CRM
-1. Sidebar Improvements
-  - Moved Profile section from bottom to top for better accessibility.
-  - Updated icons for all sidebar menu items.
-  - Reworked Sidebar UI (open/collapsed) to match the latest Figma design.
-  - Coordinated with Rahul sir and updated the position of the sidebar toggle button.
 
-2. Breadcrumb
-  - Implemented Breadcrumb navigation throughout the application.
+Project: Sales CRM,
+1. Login Page
+  - Attempted to implement the new Login Page design based on the updated style guide.
+2. Sidebar Module
+  - Continued working on design improvements for the Sidebar.
+  - Focused on UI alignment, spacing, and consistency based on the latest design direction.
 
-Project: Learning
-1. Event Loop
-  - Completed understanding of the Node.js Event Loop workflow and its execution phases.
+Project: Other,
 
-2. Express.js
-  - Started learning Express.js basics — In Progress
+1. Provide Compliance module related images to Krunal bhai in Media Planner.
+
+Project: Learning,
+1. Express.js
+  - Completed the basics of Express.js, including:
     - Routing
-    - Middleware
+    - Middleware (built-in & custom)
     - Basic server setup
-
+    - Template Engines (learned PUG and how it integrates with Express)
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
