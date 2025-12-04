@@ -1,14 +1,16 @@
 ## Work Doing:
 
-Date: 3 Des, 2025
-Day: Wednesday,
+Date: 4 Des, 2025
+Day: Thursday,
 
 Today, I am working on below list of task:
 
 Project: Sales CRM,
-1. Test new changes in live.
-2. Try to make Login page more attractive.
- 
+1. Test recently done Changes related to Design.
+
+Project: Media Planner,
+1. Test recently done task.
+
 Project: Learning,
 1. Revise previous topics.
 2. Continue to learning Express js.
@@ -18,29 +20,18 @@ Project: Learning,
 ## Work done:
 
 EOD,
-Date: 3 Des, 2025
-Day: Wednesday,
+Date: 4 Des, 2025
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
-1. Login Page
-  - Attempted to implement the new Login Page design based on the updated style guide.
-2. Sidebar Module
-  - Continued working on design improvements for the Sidebar.
-  - Focused on UI alignment, spacing, and consistency based on the latest design direction.
+1. Test recently done Changes related to Design.
 
-Project: Other,
-
-1. Provide Compliance module related images to Krunal bhai in Media Planner.
-
-Project: Learning,
-1. Express.js
-  - Completed the basics of Express.js, including:
-    - Routing
-    - Middleware (built-in & custom)
-    - Basic server setup
-    - Template Engines (learned PUG and how it integrates with Express)
+Project: Media Plan,
+1. Media Plan
+	- Solve Placement related issue on Add Media plan module
+	- Solve Issue of Getting data in Edit Media plan. - In Progress
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
