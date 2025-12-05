@@ -1,38 +1,30 @@
 ## Work Doing:
 
-Date: 4 Des, 2025
-Day: Thursday,
+Date: 5 Des, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 
-Project: Sales CRM,
-1. Test recently done Changes related to Design.
-
 Project: Media Planner,
-1. Test recently done task.
-
-Project: Learning,
-1. Revise previous topics.
-2. Continue to learning Express js.
-
+1 Media Plan
+	- Get Proper Data in Price Details during Edit Media plan.
+	- Solve issue of update when try to update Media plan.
 
 
 ## Work done:
 
 EOD,
-Date: 4 Des, 2025
-Day: Thursday,
+Date: 5 Des, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
-Project: Sales CRM,
-1. Test recently done Changes related to Design.
+1 Media Plan - In Progress
+	- Get Proper Data in Price Details during Edit Media plan.
+	- Solve issue of update when try to update Media plan.
 
-Project: Media Plan,
-1. Media Plan
-	- Solve Placement related issue on Add Media plan module
-	- Solve Issue of Getting data in Edit Media plan. - In Progress
-
+1. BEC
+	- testing modules role wise.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
@@ -168,85 +160,49 @@ Project: Dealer Data,
 ## Email
 
 to: Vasik sir, Rupendra sir
-Cc: Mansi ma'am
+Cc: Roshani ma'am
 
-**Subject**: Weekly (24 Oct - 28 Oct) Report of Dhyan
+**Subject**: Weekly (1 Des - 5 Des) Report of Dhyan
 
 Project: Media Planner,
 
-Git Commit ID: fc6b01b6693cc55857460144c47b4b626fd4708f
-Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/fc6b01b6693cc55857460144c47b4b626fd4708f
+Git Commit ID: 3653fda296650dee81c132c046b35445067ab2d9
+Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/3653fda296650dee81c132c046b35445067ab2d9
 
 Description:
 
-1. Documentation & Understanding
-  - Read the "Planit Revamp Notes" file.
-  - Reviewed all related documentation for deeper understanding of the upcoming improvements.
-
-2. Brand Management Module
-  - Implemented full CRUD operations for Brand Management.
-  - Completed API integration for all Brand-related actions.
-  - Coordinated with Bhautik bhai to update and refine API responses for the module.
-
-3. Sidebar
-  - Added Brand Management as a new menu item in the sidebar.
-
-4. User Module
-  - Added User-based Permissions logic during Add User functionality.
-  - Displayed and updated permissions in the Edit User page.
-  - Coordinated with Bhautik bhai for necessary backend changes for Get, Add, and Update User APIs.
-
-5. Permission Module
-  - Updated logic to display sidebar routes based on user-specific permissions instead of role-based permissions.
-  - Sidebar menu items now render dynamically according to individual user permissions.
+1. User Module
+- Added "Check All Modules" checkbox for easier permission selection.
+- Improved UI of the Permission Step in Add/Edit User flow.
+2. Testing Scenarios
+- Performed full permission-based testing across all user roles to verify:
+- Sidebar visibility
+- Module access
+- Action-level permission behavior
+3. Placement Route Issue
+- Resolved Placement route navigation issue.
+4. Time-Slot Naming Update
+- Updated "Time-slot" → "Placement"
+- Applied changes in Add, Edit & Delete modals.
+5. Media Plan
+- Solve Placement related issue on Add Media plan module
+- Solve Issue of Getting data in Edit Media plan. - In Progress
 
 Project: Sales CRM,
 
-Git Commit ID: 5655be74968a6abd302b08e94202da78a8445516
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/5655be74968a6abd302b08e94202da78a8445516
+Git Commit ID: af61a01b5d4825f61510f434a4fdeb2c7f06cb93
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/af61a01b5d4825f61510f434a4fdeb2c7f06cb93
 
 Description:
 
-1. Leads Module
-  - Fixed issue where removing all documents did not delete them from the backend during lead update.
-  - Resolved validation issue on document upload during lead update.
-  - Applied trim() on search input before sending request.
-  - Updated Import Leads icon.
-  - Sidebar now correctly highlights the Leads menu item even when viewing the Lead Details page.
-  - Added trim + "no-only-spaces" validation for all Lead fields.
-  - Implemented Asc/Desc sorting for all fields.
+1. Sidebar Improvements
+- Moved Profile section from bottom to top for better accessibility.
+- Updated icons for all sidebar menu items.
+- Reworked Sidebar UI (open/collapsed) to match the latest Figma design.
+- Coordinated with Rahul sir and updated the position of the sidebar toggle button.
+2. Breadcrumb
+- Implemented Breadcrumb navigation throughout the application.
 
-Log Activity
-  - Added trim and "no-only-spaces" validation.
-
-2. Contacts Module
-  - Added Asc/Desc sorting for all fields.
-
-3. Projects Module
-  - Added Asc/Desc sorting for all fields.
-
-4. Import Module
-  - Added default value for sourceDescription.
-
-5. Document Upload Module
-  - Added a confirmation modal when user attempts to remove any document.
-
-6. Responsive Design Improvements (Multi-Device Support)
-Leads Module
-  - In tablet view, replaced individual buttons with a dropdown menu for:
-    - Import
-    - Export
-    - Add
-  - Added smooth animation for filter bar open/close.
-
-7. Testing
-  - Tested all recent updates in:
-    - Leads Module
-    - Contacts Module
-    - Projects Module
-    - Document Upload
-    - UI/Design changes across modules
-  - Performed full testing for all user roles to ensure correct permission logic and consistent module behavior.
 
 ## Leave Request
 
