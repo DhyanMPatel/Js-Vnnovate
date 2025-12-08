@@ -1,30 +1,88 @@
 ## Work Doing:
 
-Date: 5 Des, 2025
-Day: Friday,
+Date: 8 Des, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 
-Project: Media Planner,
-1 Media Plan
-	- Get Proper Data in Price Details during Edit Media plan.
-	- Solve issue of update when try to update Media plan.
-
+Project: Sales CRM,
+1. Solve Issues related to recent Feedbacks.
 
 ## Work done:
 
 EOD,
-Date: 5 Des, 2025
-Day: Friday,
+Date: 8 Des, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
-1 Media Plan - In Progress
-	- Get Proper Data in Price Details during Edit Media plan.
-	- Solve issue of update when try to update Media plan.
+Project: Sales CRM,
 
-1. BEC
-	- testing modules role wise.
+1. Global
+  - Set default theme to Dark Mode
+  - Fixed Login Unauthorized Issue on your PC by using NODE_ENV
+
+2. Lead Module
+  - Real-time Sync Feature: New leads should appear to Admin & other roles without page reload – In Progress
+  - Issue where page refreshed after creating a lead
+  - BDM Permissions Fixed:
+    - BDM can see team leads
+    - But cannot open detail page or edit them
+  - Duplicate email validation added to prevent creating multiple leads with same email
+
+3. Contact Module
+  - After creating a new contact (via new lead), the contact list should update automatically without refresh – In Progress
+
+4. Task Module
+  - Task list now filters properly by:
+    - Today
+    - This Week
+    - This Month
+    - View tabs
+    - Status tabs
+  - Added Lead selection field in Add/Edit task
+  - Display Linked Lead and added a direct link to Lead Details in task list
+
+5. Follow-ups Module
+  - Follow-ups now categorized correctly into:
+    - Overdue
+    - Today
+    - Upcoming
+    - View tabs
+  - Added Linked Lead + Direct link to lead details from follow-up list
+
+6. Dashboard
+  - Display multiple colors for different lead stages
+  - Added link in Leads widget → opens Lead Details directly
+  - Added link in Tasks widget → opens Task list
+  - Restriction added: BDM cannot access team lead details
+
+7. Users Module
+  - After creating a new user, update user list automatically without reload – In Progress  
+
+1. Set Default Theme to Dark. - Done
+2. Solve Login issue where i got unauthorize issue When try to login in my PC. (Use NODE_ENV variable) - Done
+2. Lead
+  - Add Feature like Without reload new added leads admin and other roll can see. - In progress
+  - Solve issue of refresh page when user create lead. - Done
+  - BDM can see their teams lead but not open details page and can't edit lead too. - Done
+  - There add validation So user can't create duplicate data with same email. - Done
+3. Contact
+  - When user create New lead display contact in contact list without refresh page. - In Progress
+4. Task
+  - Display task based on their tabs like Today, This Week, This Month, tabs of View, tabs of status, etc. - Done
+	- Add new field of Lead during add/edit operations. - Done
+  - Display Linked Lead and Add link of lead details page from task list. - Done
+5. Follow ups
+  - Display Follow ups on their tabs like Overdue, Today, upcoming & tabs of view. - done
+	- Display Linked Lead and Add link of lead details page from follow-up list. - Done
+6. Dashboard
+  - Display multiple colors of different stages. - done
+  - Add Link in Leads to redirect directly to leads details page. - Done
+  - Add Link in Task to redirect to task list. - done
+  - Add restriction to BDM when they try access team's lead details page. - Done
+7. Users
+	- Display users list with newly created user (after user creation) with out reload. - In Progress
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
