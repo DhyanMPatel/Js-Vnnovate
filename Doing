@@ -1,64 +1,31 @@
 ## Work Doing:
 
-Date: 8 Des, 2025
-Day: Monday,
+Date: 9 Des, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 
 Project: Sales CRM,
-1. Solve Issues related to recent Feedbacks.
+1. Edit Profile
+  - Implement Edit Profile functionality.
+
+2. Feedback List
+  - Resolve remaining issues from the feedback list.
 
 ## Work done:
 
 EOD,
-Date: 8 Des, 2025
-Day: Monday,
+Date: 9 Des, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
 
-1. Global
-  - Set default theme to Dark Mode
-  - Fixed Login Unauthorized Issue on your PC by using NODE_ENV
-
-2. Lead Module
-  - Real-time Sync Feature: New leads should appear to Admin & other roles without page reload – In Progress
-  - Issue where page refreshed after creating a lead
-  - BDM Permissions Fixed:
-    - BDM can see team leads
-    - But cannot open detail page or edit them
-  - Duplicate email validation added to prevent creating multiple leads with same email
-
-3. Contact Module
-  - After creating a new contact (via new lead), the contact list should update automatically without refresh – In Progress
-
-4. Task Module
-  - Task list now filters properly by:
-    - Today
-    - This Week
-    - This Month
-    - View tabs
-    - Status tabs
-  - Added Lead selection field in Add/Edit task
-  - Display Linked Lead and added a direct link to Lead Details in task list
-
-5. Follow-ups Module
-  - Follow-ups now categorized correctly into:
-    - Overdue
-    - Today
-    - Upcoming
-    - View tabs
-  - Added Linked Lead + Direct link to lead details from follow-up list
-
-6. Dashboard
-  - Display multiple colors for different lead stages
-  - Added link in Leads widget → opens Lead Details directly
-  - Added link in Tasks widget → opens Task list
-  - Restriction added: BDM cannot access team lead details
-
-7. Users Module
-  - After creating a new user, update user list automatically without reload – In Progress  
+1. Edit profile
+	- Implement Edit Profile functionality where user can update their name and email. - Done
+	- Implement upload profile image functionality. - In Progress
+2. Use of WebSocket in Project. - In Progress
 
 1. Set Default Theme to Dark. - Done
 2. Solve Login issue where i got unauthorize issue When try to login in my PC. (Use NODE_ENV variable) - Done
