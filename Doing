@@ -1,55 +1,42 @@
 ## Work Doing:
 
-Date: 9 Des, 2025
-Day: Tuesday,
+Date: 10 Des, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 
 Project: Sales CRM,
-1. Edit Profile
-  - Implement Edit Profile functionality.
-
-2. Feedback List
-  - Resolve remaining issues from the feedback list.
+1. Continue working on WebSocket integration to provide real-time updates across the application.
 
 ## Work done:
 
 EOD,
-Date: 9 Des, 2025
-Day: Tuesday,
+Date: 10 Des, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
 
-1. Edit profile
-	- Implement Edit Profile functionality where user can update their name and email. - Done
-	- Implement upload profile image functionality. - In Progress
-2. Use of WebSocket in Project. - In Progress
+1. WebSocket Implementation
+  - Implemented real-time WebSocket functionality for Lead CRUD operations.
+  - Lead Create, Update, and Delete actions now reflect instantly without page reload.
+2. Global Changes
+  - Ensured same profile image is displayed consistently:
+    - On the Profile button.
+    - In the User List module.
+    - In Profile page.
+3. Contact Module
+  - Fixed issue where newly created Leads were not appearing in the Contact module.
+  - Implemented logic to auto-update Contact details when contact methods are changed from the Lead module.
+4. Profile Module
+  - Resolved profile image-related issues.
+  - Enabled users to:
+    - Update Profile Image
+    - Edit Name
+    - Edit Email
+5. test all above changes in Live.
 
-1. Set Default Theme to Dark. - Done
-2. Solve Login issue where i got unauthorize issue When try to login in my PC. (Use NODE_ENV variable) - Done
-2. Lead
-  - Add Feature like Without reload new added leads admin and other roll can see. - In progress
-  - Solve issue of refresh page when user create lead. - Done
-  - BDM can see their teams lead but not open details page and can't edit lead too. - Done
-  - There add validation So user can't create duplicate data with same email. - Done
-3. Contact
-  - When user create New lead display contact in contact list without refresh page. - In Progress
-4. Task
-  - Display task based on their tabs like Today, This Week, This Month, tabs of View, tabs of status, etc. - Done
-	- Add new field of Lead during add/edit operations. - Done
-  - Display Linked Lead and Add link of lead details page from task list. - Done
-5. Follow ups
-  - Display Follow ups on their tabs like Overdue, Today, upcoming & tabs of view. - done
-	- Display Linked Lead and Add link of lead details page from follow-up list. - Done
-6. Dashboard
-  - Display multiple colors of different stages. - done
-  - Add Link in Leads to redirect directly to leads details page. - Done
-  - Add Link in Task to redirect to task list. - done
-  - Add restriction to BDM when they try access team's lead details page. - Done
-7. Users
-	- Display users list with newly created user (after user creation) with out reload. - In Progress
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
