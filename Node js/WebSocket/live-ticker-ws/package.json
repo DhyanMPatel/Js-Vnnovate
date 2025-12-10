@@ -1,0 +1,12 @@
+{
+  "name": "live-ticker-ws",
+  "version": "1.0.0",
+  "description": "Live ticker WebSocket demo using ws",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  }
+}
