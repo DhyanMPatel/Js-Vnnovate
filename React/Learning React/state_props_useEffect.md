@@ -6,20 +6,26 @@
 
 - Example
 
-  ```js
+  ```jsx
   import React from "react";
   import { useState } from "react";
 
+  // Simple Child with props
   function SimpleChild(props) {
     return <div>Hello, {props.name}</div>;
   }
+
+  // Child with Destructing props
   function DestructuringChild({ name }) {
     return <div>Hello, {name}</div>;
   }
+
+  // Child with Default props
   function DefaultChild({ name = "Default" }) {
     return <div>Hello, {name}</div>;
   }
 
+  // Simple Child with props
   class ClassChild extends React.Component {
     render() {
       return <div>Hello, {this.props.name}</div>;
@@ -32,6 +38,7 @@
     );
   }
 
+  // Parent Component
   function Parent(props) {
     const [message, setMessage] = useState("Waiting...");
     return (
