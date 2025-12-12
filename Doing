@@ -1,37 +1,45 @@
 ## Work Doing:
 
-Date: 11 Des, 2025
-Day: Thursday,
+Date: 12 Des, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 
 Project: Sales CRM,
-1. Test WebSocket integration in Live.
+1. Bug Testing & Fixing
+  - Re-test all previously listed bugs across modules.
 
 ## Work done:
 
 EOD,
-Date: 11 Des, 2025
-Day: Thursday,
+Date: 12 Des, 2025
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
 
-1. WebSocket Integration
-  - Tested WebSocket integration in the Live environment and applied required fixes.
-  - Resolved WebSocket-related issues in coordination with the team.
-  - Performed complete testing of all recent updates.
+1. Leads Module
+  - Implemented highlighting of search-matched words.
+  - Added pagination functionality for better data handling.
+  - Fixed issue where updating Lead to Won status was not reflecting in Client list.
+  - Dashboard lead graph now shows whole numbers, not decimals.
 
-2. Task Module
-  - Replaced the calendar icon with Due Date text in the Task list.
-  - Moved "All Tasks" tab to the first position for better accessibility.
-  - Add/Edit Task Popup: 
-    - Updated Date & Time Picker UI according to the active theme.
+2. Follow-ups Module
+  - Added new tab for All Follow-ups.
+  - Updated display to show Assigned Person Name instead of ID.
+  - Fixed issue where marking follow-up as completed happened without confirmation.
+  - Resolved time difference issue in Follow-up creation.
 
-3. Leads Module
-  - Updated Phone Country Code dropdown UI to adapt to theme styling.
-  - Updated Date Picker UI based on the active theme.
+3. Task Module
+  - Fixed task time not updating properly (incorrect saved time issue).
+  - Reviewed and resolved Task date issue.
+
+4. Dashboard
+  - Lead status chart now shows integer values only (1, 2, 3…) instead of decimal values.
+
+5. Global
+  - Reviewed all issues from the list, resolved pending ones, and marked both completed successfully.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
