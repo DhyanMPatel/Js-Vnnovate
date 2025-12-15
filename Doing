@@ -1,46 +1,56 @@
 ## Work Doing:
 
-Date: 12 Des, 2025
-Day: Friday,
+Date: 15 Des, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 
 Project: Sales CRM,
-1. Bug Testing & Fixing
-  - Re-test all previously listed bugs across modules.
+1. Work on New Improvement feedback.
 
 ## Work done:
 
 EOD,
-Date: 12 Des, 2025
-Day: Friday,
+Date: 15 Des, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
 
 1. Leads Module
-  - Implemented highlighting of search-matched words.
-  - Added pagination functionality for better data handling.
-  - Fixed issue where updating Lead to Won status was not reflecting in Client list.
-  - Dashboard lead graph now shows whole numbers, not decimals.
+  - Implemented Drag & Drop functionality in Kanban view.
+  - Displayed Service Type chips with the same color coding as used in the List view.
+  - Handled and displayed proper error messages in Kanban view mode.
+  - Enforced permission-based UI:
+    - Delete operation is hidden if the user does not have delete access.
+  - Implemented search keyword highlighting in Kanban view mode.
 
-2. Follow-ups Module
-  - Added new tab for All Follow-ups.
-  - Updated display to show Assigned Person Name instead of ID.
-  - Fixed issue where marking follow-up as completed happened without confirmation.
-  - Resolved time difference issue in Follow-up creation.
+2. Task Module
+  - Disabled previous dates in the Due Date field during:
+    - Schedule Task
+    - Edit Task
+  - Improved date format for better user experience and readability.
 
-3. Task Module
-  - Fixed task time not updating properly (incorrect saved time issue).
-  - Reviewed and resolved Task date issue.
+3. Follow-up Module
+  - Disabled previous dates in Due Date selection during Follow-up scheduling.
+  - Improved date format for better UX consistency.
+  - Updated Follow-up list UI:
+    - Displayed “Due Date:” text instead of showing only a calendar icon.
 
-4. Dashboard
-  - Lead status chart now shows integer values only (1, 2, 3…) instead of decimal values.
+4. Import Module
+  - Implemented row-wise error display for CSV imports when validation fails.
+  - Automatically reset all error states when the user changes the uploaded file.
+  - Added required field validation before processing CSV upload.
+  - Enhanced Sample CSV Download:
+    - Included dropdown values dynamically based on user role permissions in Leads.
+    - Helps users add accurate data while importing.
 
-5. Global
-  - Reviewed all issues from the list, resolved pending ones, and marked both completed successfully.
-
+5. Testing
+  - Testing of all above changes:
+    - Local server – Completed
+    - QA server – In Progress
+    - Live server – In Progress
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
