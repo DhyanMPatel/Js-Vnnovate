@@ -188,7 +188,97 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Roshani ma'am
 
-**Subject**: Weekly (1 Des - 5 Des) Report of Dhyan
+**Subject**: Weekly (8 Des - 12 Des) Report of Dhyan
+
+Project: Sales CRM,
+
+Git Commit ID: daa886242b93660e8818b41128f15891b5ab58da
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/daa886242b93660e8818b41128f15891b5ab58da
+
+
+1. Global
+  - Set default theme to Dark Mode.
+  - Fixed Unauthorized login issue by using NODE_ENV.
+  - Ensured consistent profile image display across:
+    - Profile button
+    - User list
+    - Profile page
+  - Reviewed full issue list, fixed pending issues, and completed all marked tasks.
+
+2. WebSocket Integration (Real-time Updates)
+  - Implemented real-time Lead CRUD sync using WebSockets.
+  - Lead Create / Update / Delete now reflects instantly across all roles.
+  - WebSocket tested in Live environment, issues identified and fixed.
+  - Implemented real-time update logic for Contacts and Users (partial depending on module status).
+  - Collaborated with team to resolve server-side WebSocket issues.
+
+3. Leads Module
+  - Added real-time lead sync (via WebSocket).
+  - Prevented page refresh after creating a lead.
+  - Added duplicate email validation.
+  - BDM Permission Rules:
+    - Can view team leads
+    - Cannot open Details page
+    - Cannot Edit leads
+  - Auto-highlight matching keywords in Search.
+  - Implemented Pagination.
+  - Updated UI (country code dropdown, date picker) based on theme.
+  - When a lead is updated to Won, it now correctly reflects in Client list.
+  - Dashboard values now show whole numbers (no decimals).
+
+4. Contacts Module
+  - Added real-time update flow:
+    - New Leads → Contacts list updates automatically.
+  - Fixed issue where contact method changes in Leads were not reflected in Contacts.
+  - Sorting, filtering, and update logic all tested.
+
+5. Task Module
+  - Task list now displays tasks correctly under:
+    - Today
+    - This Week
+    - This Month
+    - View tabs
+    - Status tabs
+  - Added Lead field in Add/Edit task modal.
+  - Displayed Linked Lead + redirect link in Task list.
+  - Fixed task time mismatch issue.
+  - Updated Date & Time Picker UI (theme-based).
+  - Moved "All Tasks" tab to the first position.
+  - On list view, replaced calendar icon with Due Date text.
+
+6. Follow-ups Module
+  - Categorization implemented:
+    - Overdue
+    - Today
+    - Upcoming
+    - All Follow-ups (new tab)
+  - Added Linked Lead + direct redirect link.
+  - Fixed completion action:
+    - Now requires confirmation before marking as Completed.
+  - Fixed time difference issue in follow-up entries.
+  - Displayed Assigned Person Name instead of ID.
+
+7. Dashboard
+  - Lead stages represented with multiple colors.
+  - Added clickable links:
+    - Leads → Lead Details
+    - Tasks → Task list
+  - BDM is restricted from accessing team lead details.
+  - Lead status chart fixed to show integer values.
+
+8. Users Module
+  - New users now appear in list without page reload.
+  - Added:
+    - Edit Profile: Name, Email update
+    - Profile Image update
+  - Permission-based UI now fully implemented.
+
+9. Profile Module
+  - User can now edit:
+    - Name
+    - Email
+    - Profile Image
+  - Fixed all profile-image-related issues.
 
 Project: Media Planner,
 
@@ -213,11 +303,6 @@ Description:
 5. Media Plan
 - Solve Placement related issue on Add Media plan module
 - Solve Issue of Getting data in Edit Media plan. - In Progress
-
-Project: Sales CRM,
-
-Git Commit ID: af61a01b5d4825f61510f434a4fdeb2c7f06cb93
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/af61a01b5d4825f61510f434a4fdeb2c7f06cb93
 
 Description:
 
