@@ -1,47 +1,39 @@
 ## Work Doing:
 
-Date: 16 Des, 2025
-Day: Tuesday,
+Date: 17 Des, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 
-Project: Sales CRM,
-1. Test all changes in both server based on 11 Des 2025 Feedback sheet.
+Project: Learning,
+1. Continue Node js and Express js learning with Bhautik bhai.
 
 ## Work done:
 
 EOD,
-Date: 16 Des, 2025
-Day: Tuesday,
+Date: 17 Des, 2025
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
-Project: Sales CRM,
+Project: Sales CRM
+1. Error Handling Improvements
+  - Displayed proper error messages across modules.
+  - Added a default fallback error message to handle unexpected failures gracefully.
 
-1. Leads Module
-  - Increased top padding for Stage section in Kanban view.
-  - Trimmed highlighted search values in both List and Kanban views.
-  - Verified Bulk Lead Upload also creates related Contacts correctly.
-  - Improved CSV handling:
-    - Removed unwanted spaces between Options and Data.
-    - Improved formatting around options for better user experience.
+2. Error Boundary Module
+  - Implemented Error Boundary to catch and handle runtime UI errors.
+  - Enhanced Error Boundary UI with:
+    - Animations and visual effects using the Framer Motion package.
+    - Improved user experience during application crash or unexpected errors.
 
-2. Authentication (Login)
-  - Added Eye icon for password visibility.
-  - Implemented password trimming before submission.
+Project: Learning Node,
 
-3. UI / UX Improvements
-  - Implemented custom scrolling for better user experience across modules.
 
-4. Testing & Coordination
-  - Reviewed and understood bug list to Bhautik bhai to ensure accurate and complete testing.
-  - Tested recent changes on both servers to ensure stability and correctness.
-
-Project : Other,
-
-1. Conducted an interview with one candidate.
-2. Tested email message functionality with Krunal bhai.
-
+1. Learned and understood the proper folder structure of a Node.js project, including:
+  - Separation of concerns (routes, controllers, services, middleware)
+  - Scalable and maintainable project organization
+2. Database connection with MongoDB. - In Progress
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
