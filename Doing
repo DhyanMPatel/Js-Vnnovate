@@ -1,34 +1,48 @@
 ## Work Doing:
 
-Date: 19 Des, 2025
-Day: Friday,
+Date: 22 Des, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 
 Project: Sales CRM,
-1. Test Recent changes in server.
-
-Project: Learning,
-1. Revise previous learning topics like DB connection, use of JWT Token.
-2. Create Common Response Handler & Error Handler.
+1. Continue work on Lead module related to new Changes.
 
 ## Work done:
 
 EOD,
-Date: 19 Des, 2025
-Day: Friday,
+Date: 22 Des, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
-Project: Sales CRM
-1. Lead Module Enhancements
-  - Added Designation field just before the Company Name. — Done
-  - Added Tech Stack field with multi-select functionality after Service Type. — Done
-  - Implemented conditional field logic:
-    - When Lead Stage is “Won / Project Awarded”, display Project Name field. — Done
-  - Auto-create Client and Project when a Lead is created with “Won / Project Awarded” stage. — In Progress
-2. Testing
-  - Tested all recent changes on the Live environment. — Done
+Project: Sales CRM,
+Leads Module – Enhancements & Workflow Updates
+  1. Lead CRUD & Data Handling
+    - Fetched newly added fields correctly during Edit Lead operation.
+    - Ensured Client and Project data update correctly when updating a Lead.
+    - Verified stage-related behavior during:
+      - Create Lead operation
+      - Edit Lead operation
+  
+  2. Stage-Based Business Logic (Won / Project Awarded)
+    - Popup Handling
+      - Kanban View:
+        - When dragging a Lead to Won, show Project Name popup.
+      - Lead Details View:
+        - When changing stage to Won, show Project Name popup.
+    - Stage Reversion Restrictions
+      - Prevent changing stage from Won → Other unless Client & Project are removed:
+        - Details View — Toast message shown
+        - Kanban View — Toast message shown
+        - Edit Lead Form — Toast message shown
+  
+  3. Client Conversion Logic Cleanup
+    - Commented out “Convert to Client” option in:
+      - Lead Details View
+    - Removed “Convert to Client” option from:
+      - Lead List View
+      - Lead Kanban View
 
 Project: Learning Node,
 
