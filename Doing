@@ -1,60 +1,54 @@
 ## Work Doing:
 
-Date: 22 Des, 2025
-Day: Monday,
+Date: 23 Des, 2025
+Day: Tuesday,
 
 Today, I am working on below list of task:
 
 Project: Sales CRM,
-1. Continue work on Lead module related to new Changes.
+1. Test changes in Lead Module related to auto create client & project on won stage.
 
 ## Work done:
 
 EOD,
-Date: 22 Des, 2025
-Day: Monday,
+Date: 23 Des, 2025
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
-Leads Module – Enhancements & Workflow Updates
-  1. Lead CRUD & Data Handling
-    - Fetched newly added fields correctly during Edit Lead operation.
-    - Ensured Client and Project data update correctly when updating a Lead.
-    - Verified stage-related behavior during:
-      - Create Lead operation
-      - Edit Lead operation
-  
-  2. Stage-Based Business Logic (Won / Project Awarded)
-    - Popup Handling
-      - Kanban View:
-        - When dragging a Lead to Won, show Project Name popup.
-      - Lead Details View:
-        - When changing stage to Won, show Project Name popup.
-    - Stage Reversion Restrictions
-      - Prevent changing stage from Won → Other unless Client & Project are removed:
-        - Details View — Toast message shown
-        - Kanban View — Toast message shown
-        - Edit Lead Form — Toast message shown
-  
-  3. Client Conversion Logic Cleanup
-    - Commented out “Convert to Client” option in:
-      - Lead Details View
-    - Removed “Convert to Client” option from:
-      - Lead List View
-      - Lead Kanban View
+1. New Fields Added
+  - Added Country Name field in Lead form and data model. — Done
+  - Added Website URL field in Lead form and data model. — Done
+  - Displayed both Country Name and Website URL on the Lead Details page. — Done
+
+2. Activity Log Enhancements
+  - Logged activity during Lead Creation with the initially selected Stage. — Done
+  - Logged activity when Stage is changed from Lead Details page. — Done
+  - Logged activity when Stage is changed from Kanban view. — Done
+  - Highlighted Reason values in Activity Logs for better visibility and UX. — Done
+
+3. Stage-Based Conditional Fields (Lost Stage)
+  3.1. Reason Field Handling
+    - Display Reason field when Lead Stage is changed to Lost, similar to Project Name behavior for “Won / Project Awarded” stage. — Done
+
+  3.2. Implemented In
+    - Lead Details page — Done
+    - Create Lead flow — Done
+    - Update Lead flow — Done
+    - Kanban view (Drag & Drop stage change) — Done
+
+4. UX & Business Logic Improvements
+  - Ensured consistent conditional rendering of Reason and Project Name fields based on stage.
+  - Maintained proper validation and logging across all stage transitions.
+
+5. Testing
+  - Test changes in Lead Module related to auto create client & project on won stage in QA server. — In Progress
 
 Project: Learning Node,
 
-1. Revision
-  - Revised core concepts:
-    - Database connection
-    - JWT token usage
-2. Implementation Practice
-  - Created and implemented:
-    - Common Response Handler
-    - Centralized Error Handler
-    - Integrated both into a dummy Node project — Done
+1. Learned about MongoDB Atlas
+	- create account in atlas and try to use that in my Node Practice project. - In Progress
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
@@ -337,15 +331,17 @@ Description:
 ## Leave Request
 
 to: Rahul
-Cc: mansi ma'am, vasik sir, Ashish sir
+Cc: Roshani ma'am, Vanshita ma'am, Vasik sir, Ashish sir,
 
-Subject: Leave Request for 6-Oct-2025
+Subject: Leave Request for 30-Des-2025 & 31-Des-2025
 
 Dear Rahul sir,
 
-I would like to request leave on 6th October to attend a family program at my sister’s home. It is a special occasion for us, as my sister has become a mother, and after 6–7 months we are organizing a program called Loni, which will be held on that day.
+I would like to request leave on 30th and 31st December, as I need to travel to Unjha. During this time, I have to attend Ujani, and additionally, there are some government-related formalities where my presence is required.
 
-I kindly request your approval for this leave.
+I will ensure that my responsibilities are managed in advance and that there is no impact on work.
+
+Kindly grant approval for the same.
 
 Thank you for your understanding.
 
