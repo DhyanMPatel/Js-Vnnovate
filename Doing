@@ -1,54 +1,42 @@
 ## Work Doing:
 
-Date: 23 Des, 2025
-Day: Tuesday,
+Date: 24 Des, 2025
+Day: Wednesday,
 
 Today, I am working on below list of task:
 
 Project: Sales CRM,
-1. Test changes in Lead Module related to auto create client & project on won stage.
+1. Make Improvements in Bulk upload functionality for Lead Module.
+  - Add new fields in Lead table.
 
 ## Work done:
 
 EOD,
-Date: 23 Des, 2025
+Date: 24 Des, 2025
 Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
-1. New Fields Added
-  - Added Country Name field in Lead form and data model. — Done
-  - Added Website URL field in Lead form and data model. — Done
-  - Displayed both Country Name and Website URL on the Lead Details page. — Done
+1. Lead Module
+  - Lead URL
+    - Made Lead URL field mandatory during Lead creation and update.
+  - Writable Dropdown Fields
+    - Updated the following dropdowns to be writable / searchable, similar to the Tech Stack selector:
+      - Designation, Source, Service Type
+  - Requirement Field
+    - Renamed Description to Requirement.
+    - Marked Requirement field as mandatory.
+  - Contact Creation Logic
+    - Implemented conditional logic to create Contacts only when Lead Stage is “In-Conversation”.
 
-2. Activity Log Enhancements
-  - Logged activity during Lead Creation with the initially selected Stage. — Done
-  - Logged activity when Stage is changed from Lead Details page. — Done
-  - Logged activity when Stage is changed from Kanban view. — Done
-  - Highlighted Reason values in Activity Logs for better visibility and UX. — Done
+2. Lead Details Module
+  - Dynamic Stage Dropdown
+    - Converted Stage dropdown to load values dynamically from backend.
 
-3. Stage-Based Conditional Fields (Lost Stage)
-  3.1. Reason Field Handling
-    - Display Reason field when Lead Stage is changed to Lost, similar to Project Name behavior for “Won / Project Awarded” stage. — Done
-
-  3.2. Implemented In
-    - Lead Details page — Done
-    - Create Lead flow — Done
-    - Update Lead flow — Done
-    - Kanban view (Drag & Drop stage change) — Done
-
-4. UX & Business Logic Improvements
-  - Ensured consistent conditional rendering of Reason and Project Name fields based on stage.
-  - Maintained proper validation and logging across all stage transitions.
-
-5. Testing
-  - Test changes in Lead Module related to auto create client & project on won stage in QA server. — In Progress
-
-Project: Learning Node,
-
-1. Learned about MongoDB Atlas
-	- create account in atlas and try to use that in my Node Practice project. - In Progress
+3. Dashboard
+  - Dynamic Bar Chart
+    - Updated BarChart to render dynamically based on Stage values instead of static data.
 
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
@@ -517,4 +505,5 @@ Also, there was limited time and several ongoing changes, which might have led t
 Thank you for your understanding and support.
 
 Best regards,
+Dhyan
 Dhyan
