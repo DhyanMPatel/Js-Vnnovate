@@ -1,13 +1,15 @@
 ## Work Doing:
 
-Date: 24 Des, 2025
-Day: Wednesday,
+Date: 26 Des, 2025
+Day: Friday,
 
 Today, I am working on below list of task:
 
 Project: Sales CRM,
-1. Make Improvements in Bulk upload functionality for Lead Module.
-  - Add new fields in Lead table.
+1. Lead module
+  - Test recent changes.
+2. Import module
+  - Implement all recent improvements in Import module related to Leads.
 
 ## Work done:
 
@@ -19,25 +21,22 @@ Today, I am worked on below list of task:
 
 Project: Sales CRM,
 1. Lead Module
-  - Lead URL
-    - Made Lead URL field mandatory during Lead creation and update.
-  - Writable Dropdown Fields
-    - Updated the following dropdowns to be writable / searchable, similar to the Tech Stack selector:
-      - Designation, Source, Service Type
-  - Requirement Field
-    - Renamed Description to Requirement.
-    - Marked Requirement field as mandatory.
-  - Contact Creation Logic
-    - Implemented conditional logic to create Contacts only when Lead Stage is “In-Conversation”.
+  - Updated auto-create Contact logic to handle correct field updates during Lead stage changes. — Done
+  - Enhanced Source handling:
+    - When Source = Other, display Source Name along with Source Description correctly. — Done
+  - Fixed data issues where Source Name and Source Description were being saved or displayed incorrectly. — Done
 
-2. Lead Details Module
-  - Dynamic Stage Dropdown
-    - Converted Stage dropdown to load values dynamically from backend.
+2. Contacts Module
+  - Ensured Contact data stays in sync with Lead updates, including:
+    - Proper update of Country value when modified from the Lead module. — Done
 
-3. Dashboard
-  - Dynamic Bar Chart
-    - Updated BarChart to render dynamically based on Stage values instead of static data.
+3. Bulk Upload Functionality — In Progress
+  - Working on enhancements to support newly added Lead fields.
+  - Adding field-level validations to match Lead module validations
 
+Project: Other,
+
+1. Try to understand and create project with using Supabase in backend.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
 2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
@@ -175,110 +174,101 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Roshani ma'am
 
-**Subject**: Weekly (15 Des - 19 Des) Report of Dhyan
+**Subject**: Weekly (22 Des - 26 Des) Report of Dhyan
 
 Project: Sales CRM,
 
-Git Commit ID: c5fd83062365876f307dfbe8f3cec6936feeb54c
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/c5fd83062365876f307dfbe8f3cec6936feeb54c
+Git Commit ID: 25ecbc64c6af02ab6f7cf7d065c10b52b5821be7
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/25ecbc64c6af02ab6f7cf7d065c10b52b5821be7
 
+
+Project : Sales CRM,
 
 1. Leads Module
-  - Implemented Drag & Drop functionality in Kanban view.
-  - Displayed Service Type chips with consistent color coding (List ↔ Kanban).
-  - Implemented search keyword highlighting in both List and Kanban views.
-  - Added permission-based UI controls:
-    - Hide Delete option if user lacks delete permission.
-  - Improved Kanban UI:
-    - Increased top padding for Stage section.
-    - Displayed proper error messages with default fallback handling.
-  - Bulk Lead Import enhancements:
-    - Verified Contacts are auto-created during bulk Lead upload.
-    - Removed unwanted spacing between CSV options and values.
-    - Improved option formatting for better UX.
-  - Field enhancements:
-    - Added Designation field before Company Name.
-    - Added Tech Stack multi-select field after Service Type.
-    - Conditional Project Name field when Lead stage is “Won / Project Awarded”.
-  - Business logic:
-    - Auto-create Client & Project when Lead stage is Won / Project Awarded — In Progress
-  - UX Improvements:
-    - Implemented soft scrolling in Add/Edit Lead forms.
-    - Made Email and Last Name optional in Add/Edit Lead forms.
+  1.1 Lead CRUD & Data Handling
+    - Fetched all newly added Lead fields correctly during Edit Lead.
+    - Ensured Client and Project data updates correctly when a Lead is updated.
+    - Verified stage-related behavior during:
+      - Lead Creation
+      - Lead Edit
+    - Made Lead URL mandatory during Create & Update.
+    - Renamed Description → Requirement and marked it as mandatory.
 
-2. Task Module
-  - Disabled selection of past dates in Due Date field for:
-    - Schedule Task
-    - Edit Task
-  - Improved date format for better readability.
-  - UI updates:
-    - Displayed Due Date text instead of calendar icon where applicable.
+  1.2 Stage-Based Business Logic
+    - Won / Project Awarded Stage
+      - Popup Handling
+        - Kanban View: Show Project Name popup when dragging Lead to Won.
+        - Lead Details View: Show Project Name popup when stage changes to Won.
+      - Stage Reversion Restriction
+        - Prevent stage change from Won → Other unless Client & Project are removed.
+        - Toast messages shown in:
+          -  Lead Details View
+          -  Kanban View
+          -  Edit Lead Form
+      - Lost Stage
+        -  Display Reason field when stage is changed to Lost.
+        -  Implemented across:
+          -  Lead Details page
+          -  Create Lead flow
+          -  Update Lead flow
+          -  Kanban (Drag & Drop)
 
-3. Follow-up Module
-  - Disabled past dates in Follow-up scheduling.
-  - Improved date format for consistency.
-  - UI enhancement:
-    - Displayed “Due Date:” label instead of calendar icon only.
+  1.3 Client Conversion Logic Cleanup
+    -  Commented out “Convert to Client” option from:
+      -  Lead Details View
+    -  Removed “Convert to Client” option from:
+      -  Lead List View
+      -  Kanban View
 
-4. Import Module
-  - Implemented row-wise error display for CSV validation failures.
-  - Reset all error states when file is changed.
-  - Added required-field validation before CSV processing.
-  - Enhanced Sample CSV Download:
-    - Included dropdown values dynamically based on user role permissions.
-  - Updated validation:
-    - Made Email and Last Name optional during import.
+  1.4 New Fields Added
+    -  Added Country Name field in Lead form and data model.
+    -  Added Website URL field in Lead form and data model.
+    -  Displayed both fields on the Lead Details page.
 
-5. Contacts Module
-  - Implemented soft scrolling in Edit Contact form.
-  - Added default fallback values when column data is missing to prevent UI issues.
+  1.5 Activity Log Enhancements
+    -  Logged activity during:
+      -  Lead creation (with initial stage)
+      -  Stage change from Lead Details page
+      -  Stage change from Kanban view
+    -  Highlighted Reason values in Activity Logs for better UX.
 
-6. Projects Module
-  - Implemented soft scrolling in Edit Project form for long forms.
+  1.6 UX & Validation Improvements
+    -  Converted dropdowns to writable/searchable (like Tech Stack):
+      -  Designation
+      -  Source
+      -  Service Type
+    -  Ensured consistent conditional rendering of:
+      -  Project Name (Won stage)
+      -  Reason (Lost stage)
+    -  Maintained validation consistency across all stage transitions.
 
-7. Authentication (Login)
-  - Added eye icon for password visibility.
-  - Trimmed password input before submission.
+  1.7 Contact Creation Logic
+    -  Implemented conditional logic:
+      -  Contacts are created only when Lead Stage = “In-Conversation”.
+    -  Updated auto-create Contact logic to correctly update fields during stage changes.
 
-8. UI / UX & Global Improvements
-  - Implemented custom scrolling across modules.
-  - Added default error messages for unexpected failures.
-  - Implemented Error Boundary:
-    - Handles runtime UI crashes gracefully.
-  - Enhanced with Framer Motion animations and effects.
+2. Lead Details Module
+  - Converted Stage dropdown to dynamic values fetched from backend.
+  - Linked dropdown behavior with backend-provided createdPipelineStages.
 
-9. Testing & Coordination
-  - Testing status:
-    - Local Server - Completed
-    - QA Server - Completed
-    - Live Server - Completed
-  - Reviewed and aligned bug list with Bhautik bhai for accurate validation.
-  - Tested recent changes on available environments.
-  - Conducted candidate interview.
-  - Tested email messaging flow with Krunal bhai.
+3. Dashboard
+  - Updated Bar Chart to render dynamically based on actual Stage values instead of static data.
 
+4. Contacts Module
+  - Ensured Contact data stays synchronized with Lead updates.
+  - Country value updates correctly when modified from Lead module.
 
-Project: Learning – Node.js
-1. Conceptual Learning
-  - Understood proper Node.js folder structure:
-    - Routes, Controllers, Services, Middleware
-    - Scalable and maintainable architecture
-  - Revised:
-    - Database connection concepts
-    - JWT authentication flow
+5. Bulk Upload Functionality — In Progress
+  - Enhancing Bulk Upload to support new Lead fields.
+  - Adding validations to match Lead module:
+    - Mandatory fields
+    - Trim / no-only-space validation
+    - Stage-based logic consistency
 
-2. Hands-on Implementation
-  - MongoDB Integration:
-    - Implemented MongoDB connection with Node.js.
-    - Understood environment-based configuration and connection handling.
-  - Authentication:
-    - Implemented JWT token generation and verification.
-    - Secured routes using middleware.
-  - Backend Architecture:
-    - Implemented Common Response Handler.
-    - Implemented Centralized Error Handler.
-    - Integrated both into a dummy Node.js project — Completed
-  - Common Response Handler (Advanced) — Completed
+6. Testing
+  - Testing Lead Module changes related to:
+    - Auto-create Client & Project on Won stage
+  - QA Server testing — In Progress
 
 
 Project: Media Planner,
