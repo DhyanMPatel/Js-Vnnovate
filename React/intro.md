@@ -1,7 +1,7 @@
 # React
 
 - React is `Component-based` JavaScript Library.
-- React make `Single-page App`.
+- React can make Dynamic & Interactive `Single-page App`.
 - Developed by Facebook in 2011 and release as open-source in 2013.
 
 ## Topics to Learn
