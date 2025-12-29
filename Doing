@@ -1,38 +1,71 @@
 ## Work Doing:
 
-Date: 26 Des, 2025
-Day: Friday,
+Date: 29 Des, 2025
+Day: Monday,
 
 Today, I am working on below list of task:
 
 Project: Sales CRM,
-1. Lead module
-  - Test recent changes.
-2. Import module
+
+1. Import module
   - Implement all recent improvements in Import module related to Leads.
 
 ## Work done:
 
 EOD,
-Date: 24 Des, 2025
-Day: Tuesday,
+Date: 29 Des, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
-1. Lead Module
-  - Updated auto-create Contact logic to handle correct field updates during Lead stage changes. — Done
-  - Enhanced Source handling:
-    - When Source = Other, display Source Name along with Source Description correctly. — Done
-  - Fixed data issues where Source Name and Source Description were being saved or displayed incorrectly. — Done
+1. Bulk Upload Validation & Logic Updates
+  1.1 Data Format & Field Handling
+    - Resolved Date format issues during bulk upload.
+    - Added support for Country field.
+    - Added support and validation for Website URL field.
+    - Renamed Description → Requirement and enforced mandatory validation.
+  1.2 Dropdowns & Selectors
+    - Designation: 
+      - Provided designation list for reference.
+      - Allowed free-text values (not restricted to predefined list).
+    - Tech Stack (Multi-select):
+      - Supports values both from list and custom entries.
+    - Service Type:
+      - Added strict validation — value must be from predefined list.
+    - Priority:
+      - Added validation — value must be from allowed priority list only.
+  1.3 Stage-Based Business Rules
+    - Won Stage:
+      - Project Name is mandatory.
+      - Reason is passed as empty.
+    - Lost Stage:
+      - Reason is mandatory.
+      - Project Name is passed as empty.
+    - In-Conversation Stage:
+      - Contacts are created only when stage is In-Conversation.
+  1.4 Field-Level Validations
+    - Email field is not mandatory.
+    - Lead Value validation:
+      - Must be 0 or a positive number.
+    - Lead URL validation:
+      - Mandatory field.
+      - Must be a valid URL format (same rules as Website URL).
+  1.5 Activity Log
+    - Implemented activity logging per row during bulk upload.
+    - Activity is logged based on the Stage value of each uploaded Lead.
 
-2. Contacts Module
-  - Ensured Contact data stays in sync with Lead updates, including:
-    - Proper update of Country value when modified from the Lead module. — Done
+2. Landing Page
+  - Fixed and enhanced Recent Activity display:
+    - Activity values are now shown correctly and ordered as recent activity.
 
-3. Bulk Upload Functionality — In Progress
-  - Working on enhancements to support newly added Lead fields.
-  - Adding field-level validations to match Lead module validations
+Project: Vnnovate Next,
+
+1. Landing Page & Navigation
+  1.1 AI Tab in Navbar
+    - Added a dedicated AI tab in the landing page navigation bar. — Done
+  1.2 Navigation Dropdown UX
+    - Improved navbar behavior to keep the dropdown menu open on hover over the dropdown button.
 
 Project: Other,
 
