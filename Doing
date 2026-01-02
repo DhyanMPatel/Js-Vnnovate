@@ -1,62 +1,45 @@
 ## Work Doing:
 
-Date: 1 Jan, 2026
-Day: Thursday,
+Date: 2 Jan, 2026
+Day: Friday,
 
 Today, I am working on below list of task:
 
 Project: BEC,
 
-1. Create new branch from upgrade_version branch.
-2. run in my local pc & understand project.
+1. Perform responsiveness testing across all modules in the upgraded version.
 
 ## Work done:
 
 EOD,
-Date: 1 Jan, 2026
-Day: Thursday,
+Date: 2 Jan, 2026
+Day: Friday,
 
 Today, I am worked on below list of task:
 
+Project: Sales CRM,
+
+1. Theme
+  - Changed default theme to Light. — Done
+2. Leads Module
+  2.1 Leads Table Enhancements
+    - Moved Value column just before Assigned To column. — Done
+    - Added Action column to navigate to Lead Details page. — Done
+    - Added Items Per Page selector for pagination control. — Done
+  2.2 Filters
+    - Replaced My Leads quick filter with Row Data-based filter. — Done
+    - Removed Unassigned filter. — Done
+    - Added Recently Changed Leads filter:
+      - Options: Today, Yesterday, Custom Date Range
+      - Placement: Just after Stage filter. — In Progress
+  2.3 Leads List UI
+    - Added Country dropdown with writable/searchable functionality using package. — Done
+
 Project: BEC,
 
-1. Events Module – Flow Understanding
-  - Explore the end-to-end flow of the Events module.
-  - Understand:
-    - Event creation lifecycle
-    - Event visibility and access rules
-    - Role-based behavior (Admin vs Guest)
-
-2. Guest Registration via Event Link
-  - Register a user through the public event link.
-  - Trace and understand all related routes:
-    - Event link access
-    - Guest registration form
-  - Analyze the complete guest participation journey, including:
-    - Registration
-    - Check-in
-    - Feedback
-    - Rate
-
-3. Events Module – Feature Exploration
-  - Review and understand:
-    - Export Events functionality
-    - Event Media page (uploads, previews, permissions)
-    - Task Notes page
-    - Reminder Notes page
-
-4. Booking Modules – Page-Level Review
-  - Explore and understand the following booking flows: - In Progress
-    - Fleet Bookings
-    - Instructor Bookings
-    - Room Bookings
-
-5. Codebase Setup
-  - Clone the project from the branch:
-    - bk-staging-old-node
-  - Run the project locally and verify:
-    - Environment configuration
-    - Database connectivity
+1. Testing & QA
+  - Tested modules thoroughly.
+  - Identified bugs and shared findings with Rahul Sir for fixes. — Done
 
 Project: Vnnovate Next,
 
@@ -206,101 +189,114 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Roshani ma'am
 
-**Subject**: Weekly (22 Des - 26 Des) Report of Dhyan
+**Subject**: Weekly (29 Dec - 2 Jan) Report of Dhyan
 
 Project: Sales CRM,
 
-Git Commit ID: 25ecbc64c6af02ab6f7cf7d065c10b52b5821be7
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/25ecbc64c6af02ab6f7cf7d065c10b52b5821be7
+Git Commit ID: 34205d0f47316b5117e86339291c9503737b3ac3
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/34205d0f47316b5117e86339291c9503737b3ac3
 
 
-Project : Sales CRM,
+1. Bulk Upload Validation & Logic Updates
+1.1 Data Format & Field Handling
+- Resolved Date format issues during bulk upload.
+- Added support for Country field.
+- Added support and validation for Website URL field.
+- Renamed Description → Requirement and enforced mandatory validation.
+1.2 Dropdowns & Selectors
+- Designation:
+- Provided designation list for reference.
+- Allowed free-text values (not restricted to predefined list).
+- Tech Stack (Multi-select):
+- Supports values both from list and custom entries.
+- Service Type:
+- Added strict validation — value must be from predefined list.
+- Priority:
+- Added validation — value must be from allowed priority list only.
+1.3 Stage-Based Business Rules
+- Won Stage:
+- Project Name is mandatory.
+- Reason is passed as empty.
+- Lost Stage:
+- Reason is mandatory.
+- Project Name is passed as empty.
+- In-Conversation Stage:
+- Contacts are created only when stage is In-Conversation.
+1.4 Field-Level Validations
+- Email field is not mandatory.
+- Lead Value validation:
+- Must be 0 or a positive number.
+- Lead URL validation:
+- Mandatory field.
+- Must be a valid URL format (same rules as Website URL).
+1.5 Activity Log
+- Implemented activity logging per row during bulk upload.
+- Activity is logged based on the Stage value of each uploaded Lead.
+2. Landing Page
+- Fixed and enhanced Recent Activity display:
+- Activity values are now shown correctly and ordered as recent activity.
 
-1. Leads Module
-  1.1 Lead CRUD & Data Handling
-    - Fetched all newly added Lead fields correctly during Edit Lead.
-    - Ensured Client and Project data updates correctly when a Lead is updated.
-    - Verified stage-related behavior during:
-      - Lead Creation
-      - Lead Edit
-    - Made Lead URL mandatory during Create & Update.
-    - Renamed Description → Requirement and marked it as mandatory.
+1. Theme
+  - Changed default theme to Light. — Done
+2. Leads Module
+  2.1 Leads Table Enhancements
+    - Moved Value column just before Assigned To column. — Done
+    - Added Action column to navigate to Lead Details page. — Done
+    - Added Items Per Page selector for pagination control. — Done
+  2.2 Filters
+    - Replaced My Leads quick filter with Row Data-based filter. — Done
+    - Removed Unassigned filter. — Done
+    - Added Recently Changed Leads filter:
+      - Options: Today, Yesterday, Custom Date Range
+      - Placement: Just after Stage filter. — In Progress
+  2.3 Leads List UI
+    - Added Country dropdown with writable/searchable functionality using package. — Done
 
-  1.2 Stage-Based Business Logic
-    - Won / Project Awarded Stage
-      - Popup Handling
-        - Kanban View: Show Project Name popup when dragging Lead to Won.
-        - Lead Details View: Show Project Name popup when stage changes to Won.
-      - Stage Reversion Restriction
-        - Prevent stage change from Won → Other unless Client & Project are removed.
-        - Toast messages shown in:
-          -  Lead Details View
-          -  Kanban View
-          -  Edit Lead Form
-      - Lost Stage
-        -  Display Reason field when stage is changed to Lost.
-        -  Implemented across:
-          -  Lead Details page
-          -  Create Lead flow
-          -  Update Lead flow
-          -  Kanban (Drag & Drop)
+Project: BEC,
 
-  1.3 Client Conversion Logic Cleanup
-    -  Commented out “Convert to Client” option from:
-      -  Lead Details View
-    -  Removed “Convert to Client” option from:
-      -  Lead List View
-      -  Kanban View
+Description:
 
-  1.4 New Fields Added
-    -  Added Country Name field in Lead form and data model.
-    -  Added Website URL field in Lead form and data model.
-    -  Displayed both fields on the Lead Details page.
+1. Events Module – Flow Understanding
+  - Explore the end-to-end flow of the Events module.
+  - Understand:
+    - Event creation lifecycle
+    - Event visibility and access rules
+    - Role-based behavior (Admin vs Guest)
 
-  1.5 Activity Log Enhancements
-    -  Logged activity during:
-      -  Lead creation (with initial stage)
-      -  Stage change from Lead Details page
-      -  Stage change from Kanban view
-    -  Highlighted Reason values in Activity Logs for better UX.
+2. Guest Registration via Event Link
+  - Register a user through the public event link.
+  - Trace and understand all related routes:
+    - Event link access
+    - Guest registration form
+  - Analyze the complete guest participation journey, including:
+    - Registration
+    - Check-in
+    - Feedback
+    - Rate
 
-  1.6 UX & Validation Improvements
-    -  Converted dropdowns to writable/searchable (like Tech Stack):
-      -  Designation
-      -  Source
-      -  Service Type
-    -  Ensured consistent conditional rendering of:
-      -  Project Name (Won stage)
-      -  Reason (Lost stage)
-    -  Maintained validation consistency across all stage transitions.
+3. Events Module – Feature Exploration
+  - Review and understand:
+    - Export Events functionality
+    - Event Media page (uploads, previews, permissions)
+    - Task Notes page
+    - Reminder Notes page
 
-  1.7 Contact Creation Logic
-    -  Implemented conditional logic:
-      -  Contacts are created only when Lead Stage = “In-Conversation”.
-    -  Updated auto-create Contact logic to correctly update fields during stage changes.
+4. Booking Modules – Page-Level Review
+  - Explore and understand the following booking flows: - In Progress
+    - Fleet Bookings
+    - Instructor Bookings
+    - Room Bookings
 
-2. Lead Details Module
-  - Converted Stage dropdown to dynamic values fetched from backend.
-  - Linked dropdown behavior with backend-provided createdPipelineStages.
+5. Codebase Setup
+  - Clone the project from the branch:
+    - bk-staging-old-node
+  - Run the project locally and verify:
+    - Environment configuration
+    - Database connectivity
 
-3. Dashboard
-  - Updated Bar Chart to render dynamically based on actual Stage values instead of static data.
-
-4. Contacts Module
-  - Ensured Contact data stays synchronized with Lead updates.
-  - Country value updates correctly when modified from Lead module.
-
-5. Bulk Upload Functionality — In Progress
-  - Enhancing Bulk Upload to support new Lead fields.
-  - Adding validations to match Lead module:
-    - Mandatory fields
-    - Trim / no-only-space validation
-    - Stage-based logic consistency
-
-6. Testing
-  - Testing Lead Module changes related to:
-    - Auto-create Client & Project on Won stage
-  - QA Server testing — In Progress
+6. Testing & QA
+  - Tested modules thoroughly.
+  - Identified bugs and shared findings with Rahul Sir for fixes.
 
 
 Project: Media Planner,
