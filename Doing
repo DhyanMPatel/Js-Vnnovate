@@ -1,45 +1,70 @@
 ## Work Doing:
 
-Date: 2 Jan, 2026
-Day: Friday,
+Date: 5 Jan, 2026
+Day: Monday,
 
 Today, I am working on below list of task:
 
-Project: BEC,
+Project: Sales CRM,
 
-1. Perform responsiveness testing across all modules in the upgraded version.
+1. Make changes for leads filter options.
+  - Add Recently Changed Leads filter.
+2. Make changes during create leads related to Proposal stage value.
 
 ## Work done:
 
 EOD,
-Date: 2 Jan, 2026
-Day: Friday,
+Date: 5 Jan, 2026
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
 
-1. Theme
-  - Changed default theme to Light. — Done
-2. Leads Module
-  2.1 Leads Table Enhancements
-    - Moved Value column just before Assigned To column. — Done
-    - Added Action column to navigate to Lead Details page. — Done
-    - Added Items Per Page selector for pagination control. — Done
-  2.2 Filters
-    - Replaced My Leads quick filter with Row Data-based filter. — Done
-    - Removed Unassigned filter. — Done
-    - Added Recently Changed Leads filter:
-      - Options: Today, Yesterday, Custom Date Range
-      - Placement: Just after Stage filter. — In Progress
-  2.3 Leads List UI
-    - Added Country dropdown with writable/searchable functionality using package. — Done
+1. Leads Module
+
+  1.1 Leads Filters
+    - Fixed Reset Filters synchronization issue between Leads list & Filter component.
+    - Implemented Recent Activity filter with Date Range selection.
+    - Date selection in Recent activity filter disable for future date selection.
+
+  1.2 Leads List & UI Improvements
+    - Added Eye icon in Kanban view & Leads List to quickly navigate to Lead Details page.
+    
+  1.3 Lead Form – Business Logic & Validations
+    - Added Country dropdown with writable/searchable functionality using package.
+    - Stage-Based Conditional Fields
+      - Proposal Stage
+        - Display Expected Close Date only when stage = Proposal and further stages.
+        - Made Expected Close Date mandatory:
+          - During Create Lead
+          - In Details View
+          - In Kanban View
+    - Expected Close Date Rules
+      - Disabled past date selection for:
+        - Expected Close Date field in Lead form
+  
+  1.4 Lead Creation & Update Validations
+    - Enforced rule: At least one of Email or Phone Number is required.
+    - Added mandatory validation for all required fields (from backend side):
+      - During Create Lead
+      - During Update Lead
+
+  1.5 Lead Uniqueness Rules
+    - Implemented Lead uniqueness validation based on combination of:
+      - First Name
+      - Last Name
+      - Email
+      - Phone Number
+    - Applied uniqueness checks:
+      - During Create Lead
+      - During Update Lead
 
 Project: BEC,
 
 1. Testing & QA
   - Tested modules thoroughly.
-  - Identified bugs and shared findings with Rahul Sir for fixes. — Done
+  - Identified bugs and shared findings with Rahul Sir for fixes.
 
 Project: Vnnovate Next,
 
