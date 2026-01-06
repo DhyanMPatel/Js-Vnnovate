@@ -1,64 +1,51 @@
 ## Work Doing:
 
-Date: 5 Jan, 2026
-Day: Monday,
+Date: 6 Jan, 2026
+Day: Tuesday,
 
 Today, I am working on below list of task:
 
 Project: Sales CRM,
 
-1. Make changes for leads filter options.
-  - Add Recently Changed Leads filter.
-2. Make changes during create leads related to Proposal stage value.
+1. Work on Leads Bulk Upload functionality.
+2. Testing new changes in Leads Module.
 
 ## Work done:
 
 EOD,
-Date: 5 Jan, 2026
-Day: Monday,
+Date: 6 Jan, 2026
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
 
-1. Leads Module
-
-  1.1 Leads Filters
-    - Fixed Reset Filters synchronization issue between Leads list & Filter component.
-    - Implemented Recent Activity filter with Date Range selection.
-    - Date selection in Recent activity filter disable for future date selection.
-
-  1.2 Leads List & UI Improvements
-    - Added Eye icon in Kanban view & Leads List to quickly navigate to Lead Details page.
-    
-  1.3 Lead Form – Business Logic & Validations
-    - Added Country dropdown with writable/searchable functionality using package.
-    - Stage-Based Conditional Fields
-      - Proposal Stage
-        - Display Expected Close Date only when stage = Proposal and further stages.
-        - Made Expected Close Date mandatory:
-          - During Create Lead
-          - In Details View
-          - In Kanban View
-    - Expected Close Date Rules
-      - Disabled past date selection for:
-        - Expected Close Date field in Lead form
+1. Tested all previous Lead module changes related to filters and UI improvements on:
+  - Local environment
+  - QA environment
   
-  1.4 Lead Creation & Update Validations
-    - Enforced rule: At least one of Email or Phone Number is required.
-    - Added mandatory validation for all required fields (from backend side):
-      - During Create Lead
-      - During Update Lead
+2. Leads – Bulk Upload
+  - Implemented uniqueness validation:
+    - New Lead is created only if the combination of First Name, Last Name, Email, and Phone Number is unique
+  - Enforced Proposal stage business rule:
+    - When Stage = Proposal, Expected Close Date is mandatory during Bulk Upload
 
-  1.5 Lead Uniqueness Rules
-    - Implemented Lead uniqueness validation based on combination of:
-      - First Name
-      - Last Name
-      - Email
-      - Phone Number
-    - Applied uniqueness checks:
-      - During Create Lead
-      - During Update Lead
+3. Leads Module
+  - Last Activity Column
+    - Reviewed logic-based sorting for Last Activity
+    - Fixed sorting inconsistencies to ensure correct chronological order
+  - Expected Close Date (UX Improvement)
+    - Enhanced Expected Close Date field in popup modal for better usability and clarity
+  - Assigned To Column
+    - Identified and resolved sorting issue
+    - Sorting now works correctly based on assigned user
+
+4. Lead Form – UI Enhancements
+  - Source = Other
+    - Added animation for:
+      - Source Name
+      - Source Description
+    - Improves visual clarity and user experience when “Other” source is selected
 
 Project: BEC,
 
