@@ -1,65 +1,44 @@
 ## Work Doing:
 
-Date: 6 Jan, 2026
-Day: Tuesday,
+Date: 7 Jan, 2026
+Day: Wednesday,
 
 Today, I am working on below list of task:
 
-Project: Sales CRM,
+Project: Vnnovate site,
 
-1. Work on Leads Bulk Upload functionality.
-2. Testing new changes in Leads Module.
+1. Work on Vnnovate site project.
 
 ## Work done:
 
 EOD,
-Date: 6 Jan, 2026
-Day: Tuesday,
+Date: 7 Jan, 2026
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
 
-1. Tested all previous Lead module changes related to filters and UI improvements on:
-  - Local environment
-  - QA environment
-  
-2. Leads – Bulk Upload
-  - Implemented uniqueness validation:
-    - New Lead is created only if the combination of First Name, Last Name, Email, and Phone Number is unique
-  - Enforced Proposal stage business rule:
-    - When Stage = Proposal, Expected Close Date is mandatory during Bulk Upload
+1. Hero Section
+  - Working on enhancing the design and visual appeal of the Hero section on the landing page.
+2. AI Navigation Update
+  - Updated navigation behavior:
+    - When the user clicks “Click to view more” in the AI dropdown, they are now redirected to the AI page instead of the Services page.
+3. AI Page
+  - Created a dedicated AI page.
+  - Add content of AI submodules. - In Progress
 
-3. Leads Module
-  - Last Activity Column
-    - Reviewed logic-based sorting for Last Activity
-    - Fixed sorting inconsistencies to ensure correct chronological order
-  - Expected Close Date (UX Improvement)
-    - Enhanced Expected Close Date field in popup modal for better usability and clarity
-  - Assigned To Column
-    - Identified and resolved sorting issue
-    - Sorting now works correctly based on assigned user
+Project: Vnnovate Next,
 
-4. Lead Form – UI Enhancements
-  - Source = Other
-    - Added animation for:
-      - Source Name
-      - Source Description
-    - Improves visual clarity and user experience when “Other” source is selected
+1.Lead Form
+  - Updated and improved phone number field validation to handle input accuracy and edge cases.
+
 
 Project: BEC,
 
 1. Testing & QA
   - Tested modules thoroughly.
   - Identified bugs and shared findings with Rahul Sir for fixes.
-
-Project: Vnnovate Next,
-
-1. Landing Page & Navigation
-  1.1 AI Tab in Navbar
-    - Added a dedicated AI tab in the landing page navigation bar. — Done
-  1.2 Navigation Dropdown UX
-    - Improved navbar behavior to keep the dropdown menu open on hover over the dropdown button.
 
 Project: Other,
 
