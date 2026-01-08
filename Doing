@@ -1,21 +1,41 @@
 ## Work Doing:
 
-Date: 7 Jan, 2026
-Day: Wednesday,
+Date: 8 Jan, 2026
+Day: Thursday,
 
 Today, I am working on below list of task:
 
 Project: Vnnovate site,
 
-1. Work on Vnnovate site project.
+1. AI Page Enhancements
+  - Component Structure
+    - Re-ordered AI page components to match the sequence of the AI sub-modules shown in the navigation dropdown for better consistency and user flow.
+  - Content Updates
+    - Added and refined content for each AI sub-module section to align with its purpose and functionality.
 
+    
 ## Work done:
 
 EOD,
-Date: 7 Jan, 2026
-Day: Wednesday,
+Date: 8 Jan, 2026
+Day: Thursday,
 
 Today, I am worked on below list of task:
+
+Project: Vnnovate Next,
+
+1. AI Page Enhancements
+  1.1. Component Structure
+    - Re-ordered AI page components to match the sequence of AI sub-modules displayed in the navigation dropdown, ensuring better consistency and user flow.
+    - Added additional tech stack details relevant to each AI sub-module.
+    - Updated the “Explore More” button styling to adapt correctly to the active theme.
+    - Added hover animations on images to enhance visual feedback and overall user experience.
+    - Also tested responsiveness of the page.
+
+  1.2. Content Updates
+    - Added and refined content for each AI sub-module to better reflect its purpose, capabilities, and functionality.
+
+
 
 Project: Sales CRM,
 
@@ -28,10 +48,6 @@ Project: Sales CRM,
   - Created a dedicated AI page.
   - Add content of AI submodules. - In Progress
 
-Project: Vnnovate Next,
-
-1.Lead Form
-  - Updated and improved phone number field validation to handle input accuracy and edge cases.
 
 
 Project: BEC,

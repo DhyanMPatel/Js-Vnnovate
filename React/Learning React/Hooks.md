@@ -224,6 +224,8 @@ function ExpensiveComponent({ data, onItemClick }) {
   );
 }
 ```
+  - **UseCallback** prevent to rerender functions on every render
+  - **UseMemo** prevent to rerender values on every render
 
 **useCallback vs useMemo:**
 
