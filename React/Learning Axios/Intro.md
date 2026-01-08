@@ -52,47 +52,51 @@
 
 - There are request configs like,
 
-        1. url
-        2. method
-        3. baseURL
-        4. allowAbsoluteUrls
-        5. transformRequest
-        6. transformResponse
-        7. headers
-        8. params
-        9. paramsSerializer
-        10. data
-        11. timeout
-        12. withCredentials
-        13. adapter
-        14. auth
-        15. responseType
-        16. responseEncoding
-        17. xsrfCookieName
-        18. xsrfHeaderName
-        19. onUploadProgress
-        20. onDownloadProgress
-        21. maxContentLength
-        22. maxBodyLength
-        23. validateStatus
-        24. maxRedirects
-        25. socketPath
-        26. httpAgent,httpsAgent
-        27. proxy
-        28. signal
-        29. cancelToken
-        30. decompress
+  ```js
+  1. url
+  2. method
+  3. baseURL
+  4. allowAbsoluteUrls
+  5. transformRequest
+  6. transformResponse
+  7. headers
+  8. params
+  9. paramsSerializer
+  10. data
+  11. timeout
+  12. withCredentials
+  13. adapter
+  14. auth
+  15. responseType
+  16. responseEncoding
+  17. xsrfCookieName
+  18. xsrfHeaderName
+  19. onUploadProgress
+  20. onDownloadProgress
+  21. maxContentLength
+  22. maxBodyLength
+  23. validateStatus
+  24. maxRedirects
+  25. socketPath
+  26. httpAgent,httpsAgent
+  27. proxy
+  28. signal
+  29. cancelToken
+  30. decompress
+  ```
 
-## Responce Schema
+## Response Schema
 
 - The response for a request contains the following information.
 
-        1. data
-        2. status
-        3. statusText
-        4. headers
-        5. config
-        6. request
+  ```js
+  1. data
+  2. status
+  3. statusText
+  4. headers
+  5. config
+  6. request
+  ```
 
 - When using then, you will receive the response as follows:
 
