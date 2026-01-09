@@ -1,39 +1,32 @@
 ## Work Doing:
 
-Date: 8 Jan, 2026
-Day: Thursday,
+Date: 9 Jan, 2026
+Day: Friday,
 
 Today, I am working on below list of task:
 
-Project: Vnnovate site,
+Project: Whatsapp Web portal,
 
-1. AI Page Enhancements
-  - Component Structure
-    - Re-ordered AI page components to match the sequence of the AI sub-modules shown in the navigation dropdown for better consistency and user flow.
-  - Content Updates
-    - Added and refined content for each AI sub-module section to align with its purpose and functionality.
+1. Project setup and try to run project in my local pc.
+2. Start to understanding project structure and code.
 
-    
 ## Work done:
 
 EOD,
-Date: 8 Jan, 2026
-Day: Thursday,
+Date: 9 Jan, 2026
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Vnnovate Next,
 
-1. AI Page Enhancements
-  1.1. Component Structure
-    - Re-ordered AI page components to match the sequence of AI sub-modules displayed in the navigation dropdown, ensuring better consistency and user flow.
-    - Added additional tech stack details relevant to each AI sub-module.
-    - Updated the “Explore More” button styling to adapt correctly to the active theme.
-    - Added hover animations on images to enhance visual feedback and overall user experience.
-    - Also tested responsiveness of the page.
+1. Sitemap & Routing
+  - Created a Google Sheet to track current sitemap routes and their implementation status.
+2. Home Page Improvements
+  - Try to redesigned the Blog section on the Home page to improve layout, readability, and visual appeal.
 
-  1.2. Content Updates
-    - Added and refined content for each AI sub-module to better reflect its purpose, capabilities, and functionality.
+3. Sitemap Routes – Hero Section
+  - Redesigned the Hero section for sitemap routes to deliver a clearer structure and improved user experience.
 
 
 
@@ -196,68 +189,109 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Roshani ma'am
 
-**Subject**: Weekly (29 Dec - 2 Jan) Report of Dhyan
+**Subject**: Weekly (5 Dec - 9 Jan) Report of Dhyan
 
 Project: Sales CRM,
 
-Git Commit ID: 34205d0f47316b5117e86339291c9503737b3ac3
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/34205d0f47316b5117e86339291c9503737b3ac3
+Git Commit ID: c67ecd7d51c98c2a38cafec51d931b30b92a4823
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/c67ecd7d51c98c2a38cafec51d931b30b92a4823
+
+1. Leads Module
+ 
+  1.1 Leads Filters
+    - Fixed Reset Filters synchronization issue between Leads list & Filter component.
+    - Implemented Recent Activity filter with Date Range selection.
+    - Date selection in Recent activity filter disable for future date selection.
+ 
+  1.2 Leads List & UI Improvements
+    - Added Eye icon in Kanban view & Leads List to quickly navigate to Lead Details page.
+   
+  1.3 Lead Form – Business Logic & Validations
+    - Added Country dropdown with writable/searchable functionality using package.
+    - Stage-Based Conditional Fields
+      - Proposal Stage
+        - Display Expected Close Date only when stage = Proposal and further stages.
+        - Made Expected Close Date mandatory:
+          - During Create Lead
+          - In Details View
+          - In Kanban View
+    - Expected Close Date Rules
+      - Disabled past date selection for:
+        - Expected Close Date field in Lead form
+ 
+  1.4 Lead Creation & Update Validations
+    - Enforced rule: At least one of Email or Phone Number is required.
+    - Added mandatory validation for all required fields (from backend side):
+      - During Create Lead
+      - During Update Lead
+ 
+  1.5 Lead Uniqueness Rules
+    - Implemented Lead uniqueness validation based on combination of:
+      - First Name
+      - Last Name
+      - Email
+      - Phone Number
+    - Applied uniqueness checks:
+      - During Create Lead
+      - During Update Lead
+
+2. Tested all previous Lead module changes related to filters and UI improvements on:
+  - Local environment
+  - QA environment
+  
+3. Leads – Bulk Upload
+  - Implemented uniqueness validation:
+    - New Lead is created only if the combination of First Name, Last Name, Email, and Phone Number is unique
+  - Enforced Proposal stage business rule:
+    - When Stage = Proposal, Expected Close Date is mandatory during Bulk Upload
+
+4. Leads Module
+  - Last Activity Column
+    - Reviewed logic-based sorting for Last Activity
+    - Fixed sorting inconsistencies to ensure correct chronological order
+  - Expected Close Date (UX Improvement)
+    - Enhanced Expected Close Date field in popup modal for better usability and clarity
+  - Assigned To Column
+    - Identified and resolved sorting issue
+    - Sorting now works correctly based on assigned user
+
+5. Lead Form – UI Enhancements
+  - Source = Other
+    - Added animation for:
+      - Source Name
+      - Source Description
+    - Improves visual clarity and user experience when “Other” source is selected
+
+6. Lead Form
+  - Updated and improved phone number field validation to handle input accuracy and edge cases.
 
 
-1. Bulk Upload Validation & Logic Updates
-1.1 Data Format & Field Handling
-- Resolved Date format issues during bulk upload.
-- Added support for Country field.
-- Added support and validation for Website URL field.
-- Renamed Description → Requirement and enforced mandatory validation.
-1.2 Dropdowns & Selectors
-- Designation:
-- Provided designation list for reference.
-- Allowed free-text values (not restricted to predefined list).
-- Tech Stack (Multi-select):
-- Supports values both from list and custom entries.
-- Service Type:
-- Added strict validation — value must be from predefined list.
-- Priority:
-- Added validation — value must be from allowed priority list only.
-1.3 Stage-Based Business Rules
-- Won Stage:
-- Project Name is mandatory.
-- Reason is passed as empty.
-- Lost Stage:
-- Reason is mandatory.
-- Project Name is passed as empty.
-- In-Conversation Stage:
-- Contacts are created only when stage is In-Conversation.
-1.4 Field-Level Validations
-- Email field is not mandatory.
-- Lead Value validation:
-- Must be 0 or a positive number.
-- Lead URL validation:
-- Mandatory field.
-- Must be a valid URL format (same rules as Website URL).
-1.5 Activity Log
-- Implemented activity logging per row during bulk upload.
-- Activity is logged based on the Stage value of each uploaded Lead.
-2. Landing Page
-- Fixed and enhanced Recent Activity display:
-- Activity values are now shown correctly and ordered as recent activity.
+Project: Vnnovate Next,
 
-1. Theme
-  - Changed default theme to Light. — Done
-2. Leads Module
-  2.1 Leads Table Enhancements
-    - Moved Value column just before Assigned To column. — Done
-    - Added Action column to navigate to Lead Details page. — Done
-    - Added Items Per Page selector for pagination control. — Done
-  2.2 Filters
-    - Replaced My Leads quick filter with Row Data-based filter. — Done
-    - Removed Unassigned filter. — Done
-    - Added Recently Changed Leads filter:
-      - Options: Today, Yesterday, Custom Date Range
-      - Placement: Just after Stage filter. — In Progress
-  2.3 Leads List UI
-    - Added Country dropdown with writable/searchable functionality using package. — Done
+Git Commit ID: 2e5e37d64c577f0ddafb5c16a781b7b48324646c
+Git Commit Link: https://gitlab.com/devarshi_vnnovate/vnnovate-next/-/commit/2e5e37d64c577f0ddafb5c16a781b7b48324646c
+
+Description:
+
+1. Hero Section
+  - Working on enhancing the design and visual appeal of the Hero section on the landing page.
+2. AI Navigation Update
+  - Updated navigation behavior:
+    - When the user clicks “Click to view more” in the AI dropdown, they are now redirected to the AI page instead of the Services page.
+3. AI Page
+  - Created a dedicated AI page.
+  - Add content of AI submodules. - In Progress
+
+4. AI Page Enhancements
+  4.1. Component Structure
+    - Re-ordered AI page components to match the sequence of AI sub-modules displayed in the navigation dropdown, ensuring better consistency and user flow.
+    - Added additional tech stack details relevant to each AI sub-module.
+    - Updated the “Explore More” button styling to adapt correctly to the active theme.
+    - Added hover animations on images to enhance visual feedback and overall user experience.
+    - Also tested responsiveness of the page.
+ 
+  4.2. Content Updates
+    - Added and refined content for each AI sub-module to better reflect its purpose, capabilities, and functionality.
 
 Project: BEC,
 
