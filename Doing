@@ -1,43 +1,38 @@
 ## Work Doing:
 
-Date: 12 Jan, 2026
-Day: Monday,
+Date: 13 Jan, 2026
+Day: Tuesday,
 
 Today, I am working on below list of task:
 
 Project: Vnnovate Next,
 
-1. Work on Sitemap hero section design changes.
+1. Continue Working on HeroSection image generation for all Sitemap routes.
 
 ## Work done:
 
 EOD,
-Date: 12 Jan, 2026
-Day: Monday,
+Date: 13 Jan, 2026
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Vnnovate Next,
 
-1. Routes Where Images Have Been Updated
-	- IOS App Development, Android App Development, Flutter App Development
-	- Angular Development, ReactJS Development, VueJS Development, Flutter Web Development
-	- NodeJS Development, Laravel Development, Golang Development, PHP Development
-	- Magento Development, Shopify Development, WooCommerce Development, NopCommerce Development
-	- WordPress Development, Drupal Development, Joomla Development, DotNet Development
-	- MongoDB Development, ExpressJS Development, JavaScript Development, MySQL Development, Django Development 
-	- ASP.NET Development, Azure Development, SQL Server Development, .NET Core Development
-	- AWS Development, DevOps Solutions, Docker Solutions
-	- UI/UX Design, Software Development, Software Testing, Digital Marketing
-	- Data Science, Blockchain, Artificial Intelligence, Machine Learning
+1. Hero Section Improvements
+  - Generate a custom background image for the Hero section of sitemap routes.
+  - Redesign the Hero section layout to improve visual hierarchy, clarity, and overall user experience.
 
-2. Routes Where Image Updates Are Pending
-	- React Native App Development, Cross-platform Mobile App Development, Wearable App Development, Mobile App UI/UX Designing, Mobile Game Development,
-	- Kubernetes Solutions
-	- All routes related to Hire Developer
+2. Sitemap Page Completion
+  - Identify and create all missing pages listed in the sitemap.
+  - Ensure each newly created page:
+    - Follows a consistent layout pattern similar to the iOS Development page.
+    - Maintains design uniformity across all service and technology pages.
 
-3. Completed Work
-	- Hero section design changes have been completed across all modules.
+3. Content Accuracy & Relevance
+  - Update content on all sitemap pages to ensure:
+    - Page content accurately matches the page title and service offering.
+    - Relevant services, technologies, and tech stacks are clearly described.
 
 
 
