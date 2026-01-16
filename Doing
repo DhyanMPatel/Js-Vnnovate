@@ -1,40 +1,35 @@
 ## Work Doing:
 
-Date: 13 Jan, 2026
-Day: Tuesday,
+Date: 16 Jan, 2026
+Day: Friday,
 
 Today, I am working on below list of task:
 
 Project: Vnnovate Next,
 
-1. Continue Working on HeroSection image generation for all Sitemap routes.
+1. Work on creating new AI blogs in the blog post section.
 
 ## Work done:
 
 EOD,
-Date: 13 Jan, 2026
-Day: Tuesday,
+Date: 16 Jan, 2026
+Day: Friday,
 
 Today, I am worked on below list of task:
 
 Project: Vnnovate Next,
 
-1. Hero Section Improvements
-  - Generate a custom background image for the Hero section of sitemap routes.
-  - Redesign the Hero section layout to improve visual hierarchy, clarity, and overall user experience.
+1. Blog Content & Routing
+  - Added content for 3 new blogs based on their respective titles.
+  - Added 3 new blogs to the Blogs route.
 
-2. Sitemap Page Completion
-  - Identify and create all missing pages listed in the sitemap.
-  - Ensure each newly created page:
-    - Follows a consistent layout pattern similar to the iOS Development page.
-    - Maintains design uniformity across all service and technology pages.
+2. Blog Detail Page UI/UX
+  - Designed the Blog Detail page using modern and trending UI/UX standards.
+  - Ensured the Blog Detail page is fully responsive across all screen sizes and devices.
 
-3. Content Accuracy & Relevance
-  - Update content on all sitemap pages to ensure:
-    - Page content accurately matches the page title and service offering.
-    - Relevant services, technologies, and tech stacks are clearly described.
-
-
+3. Coordination & Deployment
+  - Pushed blog-related changes to the Home page from Disha’s laptop.
+  - Discussed for Home page Blog section changes with Disha.
 
 Project: Sales CRM,
 
@@ -195,109 +190,49 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Roshani ma'am
 
-**Subject**: Weekly (5 Dec - 9 Jan) Report of Dhyan
-
-Project: Sales CRM,
-
-Git Commit ID: c67ecd7d51c98c2a38cafec51d931b30b92a4823
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/c67ecd7d51c98c2a38cafec51d931b30b92a4823
-
-1. Leads Module
- 
-  1.1 Leads Filters
-    - Fixed Reset Filters synchronization issue between Leads list & Filter component.
-    - Implemented Recent Activity filter with Date Range selection.
-    - Date selection in Recent activity filter disable for future date selection.
- 
-  1.2 Leads List & UI Improvements
-    - Added Eye icon in Kanban view & Leads List to quickly navigate to Lead Details page.
-   
-  1.3 Lead Form – Business Logic & Validations
-    - Added Country dropdown with writable/searchable functionality using package.
-    - Stage-Based Conditional Fields
-      - Proposal Stage
-        - Display Expected Close Date only when stage = Proposal and further stages.
-        - Made Expected Close Date mandatory:
-          - During Create Lead
-          - In Details View
-          - In Kanban View
-    - Expected Close Date Rules
-      - Disabled past date selection for:
-        - Expected Close Date field in Lead form
- 
-  1.4 Lead Creation & Update Validations
-    - Enforced rule: At least one of Email or Phone Number is required.
-    - Added mandatory validation for all required fields (from backend side):
-      - During Create Lead
-      - During Update Lead
- 
-  1.5 Lead Uniqueness Rules
-    - Implemented Lead uniqueness validation based on combination of:
-      - First Name
-      - Last Name
-      - Email
-      - Phone Number
-    - Applied uniqueness checks:
-      - During Create Lead
-      - During Update Lead
-
-2. Tested all previous Lead module changes related to filters and UI improvements on:
-  - Local environment
-  - QA environment
-  
-3. Leads – Bulk Upload
-  - Implemented uniqueness validation:
-    - New Lead is created only if the combination of First Name, Last Name, Email, and Phone Number is unique
-  - Enforced Proposal stage business rule:
-    - When Stage = Proposal, Expected Close Date is mandatory during Bulk Upload
-
-4. Leads Module
-  - Last Activity Column
-    - Reviewed logic-based sorting for Last Activity
-    - Fixed sorting inconsistencies to ensure correct chronological order
-  - Expected Close Date (UX Improvement)
-    - Enhanced Expected Close Date field in popup modal for better usability and clarity
-  - Assigned To Column
-    - Identified and resolved sorting issue
-    - Sorting now works correctly based on assigned user
-
-5. Lead Form – UI Enhancements
-  - Source = Other
-    - Added animation for:
-      - Source Name
-      - Source Description
-    - Improves visual clarity and user experience when “Other” source is selected
-
-6. Lead Form
-  - Updated and improved phone number field validation to handle input accuracy and edge cases.
-
+**Subject**: Weekly (12 Dec - 16 Jan) Report of Dhyan
 
 Project: Vnnovate Next,
 
-Git Commit ID: 2e5e37d64c577f0ddafb5c16a781b7b48324646c
-Git Commit Link: https://gitlab.com/devarshi_vnnovate/vnnovate-next/-/commit/2e5e37d64c577f0ddafb5c16a781b7b48324646c
+Git Commit ID: a1f646681cb406517f5f0dfa9c057b3f910c00b1
+Git Commit Link: https://gitlab.com/devarshi_vnnovate/vnnovate-next/-/commit/a1f646681cb406517f5f0dfa9c057b3f910c00b1
 
 Description:
 
-1. Hero Section
-  - Working on enhancing the design and visual appeal of the Hero section on the landing page.
-2. AI Navigation Update
-  - Updated navigation behavior:
-    - When the user clicks “Click to view more” in the AI dropdown, they are now redirected to the AI page instead of the Services page.
-3. AI Page
-  - Created a dedicated AI page.
-  - Add content of AI submodules. - In Progress
+1. Sitemap & their routes
+  1.1 Planning & Tracking
+    - Created a Google Sheet to track all sitemap routes, including:
+      - Page status
+      - Content availability
+      - Design completion
+  1.2 UI/UX Enhancements
+    - Redesigning all sitemap routes to improve overall UI/UX consistency and visual appeal.
+    - Redesigned Hero Sections to make them more engaging and user-attractive.
+  1.3 Assets & Copyright Safety
+    - Generated Hero Section background images using AI to avoid any copyright issues.
+  1.4 Route Creation & Content
+    - Created remaining missing routes as per sitemap.
+    - Added relevant content to each route.
+    - Ensured a consistent layout pattern across all pages.
 
-4. AI Page Enhancements
-  4.1. Component Structure
-    - Re-ordered AI page components to match the sequence of AI sub-modules displayed in the navigation dropdown, ensuring better consistency and user flow.
-    - Added additional tech stack details relevant to each AI sub-module.
-    - Updated the “Explore More” button styling to adapt correctly to the active theme.
-    - Added hover animations on images to enhance visual feedback and overall user experience.
-    - Also tested responsiveness of the page.
- 
-  4.2. Content Updates
-    - Added and refined content for each AI sub-module to better reflect its purpose, capabilities, and functionality.
+2. Blogs Module
+  - Added content for 3 new blogs based on their respective titles.
+  - Added 3 new blog entries to the Blogs route.
+
+3. Blog Detail Page (UI/UX)
+  - Designed the Blog Detail page using modern and trending UI/UX standards.
+  - Ensured the Blog Detail page is fully responsive across all screen sizes and devices.
+
+4. Coordination & Deployment
+  - Pushed blog-related changes to the Home page from Disha’s laptop.
+  - Discussed for Home page Blog section changes with Disha.
+  
+Project: Sales CRM,
+
+Git Commit ID: a1f646681cb406517f5f0dfa9c057b3f910c00b1
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/a1f646681cb406517f5f0dfa9c057b3f910c00b1
+
+
 
 Project: BEC,
 
