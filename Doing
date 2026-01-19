@@ -1,35 +1,41 @@
 ## Work Doing:
 
-Date: 16 Jan, 2026
-Day: Friday,
+Date: 19 Jan, 2026
+Day: Monday,
 
 Today, I am working on below list of task:
 
 Project: Vnnovate Next,
 
-1. Work on creating new AI blogs in the blog post section.
+1. Blog Detail Page
+  - Try to add Hero section in Blog Detail Page.
 
 ## Work done:
 
 EOD,
-Date: 16 Jan, 2026
-Day: Friday,
+Date: 19 Jan, 2026
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Vnnovate Next,
 
-1. Blog Content & Routing
-  - Added content for 3 new blogs based on their respective titles.
-  - Added 3 new blogs to the Blogs route.
+1. AI Services Dropdown
+  - Technical Expertise Enhancements
+    - Implemented a dynamic marquee that displays Technical Expertise specific to each AI service.
+    - Ensured the marquee content updates dynamically based on the selected AI service, providing contextual relevance.
+  - Content & UX Improvements
+    - Improved the “With Technical Expertise” section by:
+      - Aligning the content more closely with each AI service offering.
+      - Making the section clearer, more structured, and easier to understand for users.
 
 2. Blog Detail Page UI/UX
-  - Designed the Blog Detail page using modern and trending UI/UX standards.
-  - Ensured the Blog Detail page is fully responsive across all screen sizes and devices.
+  - Created a Hero Section for all Blog Details pages to maintain visual consistency.
+  - Compared content with the Live server and added missing content for the “Install LAMP Stack” blog page.
+  - Modified and redesigned the layout of the “Install LAMP Stack” page to better align with its technical content and improve readability.
+3. Testing
+  - Tested changes in Live.
 
-3. Coordination & Deployment
-  - Pushed blog-related changes to the Home page from Disha’s laptop.
-  - Discussed for Home page Blog section changes with Disha.
 
 Project: Sales CRM,
 
