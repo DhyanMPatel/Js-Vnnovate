@@ -1,40 +1,61 @@
 ## Work Doing:
 
-Date: 19 Jan, 2026
-Day: Monday,
+Date: 20 Jan, 2026
+Day: Tuesday,
 
 Today, I am working on below list of task:
 
 Project: Vnnovate Next,
 
-1. Blog Detail Page
-  - Try to add Hero section in Blog Detail Page.
+1. Check pages which use image and not getting it.
+2. Check Header dropdown open and close functionality & improve it.
 
 ## Work done:
 
 EOD,
-Date: 19 Jan, 2026
-Day: Monday,
+Date: 20 Jan, 2026
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
 Project: Vnnovate Next,
 
-1. AI Services Dropdown
-  - Technical Expertise Enhancements
-    - Implemented a dynamic marquee that displays Technical Expertise specific to each AI service.
-    - Ensured the marquee content updates dynamically based on the selected AI service, providing contextual relevance.
-  - Content & UX Improvements
-    - Improved the “With Technical Expertise” section by:
-      - Aligning the content more closely with each AI service offering.
-      - Making the section clearer, more structured, and easier to understand for users.
+1. Header Dropdown
+  - Implemented dynamic Sub-Header for both dropdown menus. — Done
+  - Improved dropdown open/close behavior for a smoother user experience. — Done
+  - Adjusted dropdown width to align with the header width. — Done (handled by others)
+  - Fixed an issue in mobile view where the “View More” option did not close the dropdown. — Done
 
-2. Blog Detail Page UI/UX
-  - Created a Hero Section for all Blog Details pages to maintain visual consistency.
-  - Compared content with the Live server and added missing content for the “Install LAMP Stack” blog page.
-  - Modified and redesigned the layout of the “Install LAMP Stack” page to better align with its technical content and improve readability.
-3. Testing
-  - Tested changes in Live.
+2. Marquee Enhancements
+  - Updated marquee to display only AI services (instead of tech stack) on the All AI Services page. — Done
+  - Created a dedicated marquee and configured it to display only service names on the All Services page. — Done
+
+3. “Industries We Serve”
+  - Reduced the scroll speed of the marquee for improved readability and user experience. — Done
+
+4. Image Fixes Across Pages
+  - AI Services pages — Updated missing images. — Done
+  - General Services pages — Updated missing images. — Done
+  - Sitemap routes — Updated missing images. — Done
+  - Blogs page — Verified and ensured all images load correctly. — Done
+  - Portfolio pages — Updated missing images. — Done
+  - Solutions pages — Verified image availability. — Done
+
+5. Home Page
+  - Fixed the Next.js framework icon issue in the “Our Technology Suite” section. — Done
+
+6. About Us Page
+  - Updated the route for the “Start Project” button. — Done
+
+7. Case Study
+  - Fixed full-image height issue for Case Study pages in mobile view. — Done
+
+8. General Fixes & Maintenance
+  - Resolved merge conflicts and saved all changes successfully. — Done
+  - Fixed header issues on General Services pages. — Done
+
+9. In Progress
+  - Updating mobile header layout for 1024px screen width to improve responsiveness and layout consistency. — In Progress
 
 
 Project: Sales CRM,
