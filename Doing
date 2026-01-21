@@ -1,74 +1,39 @@
 ## Work Doing:
 
-Date: 20 Jan, 2026
-Day: Tuesday,
+Date: 21 Jan, 2026
+Day: Wednesday,
 
 Today, I am working on below list of task:
 
 Project: Vnnovate Next,
 
-1. Check pages which use image and not getting it.
-2. Check Header dropdown open and close functionality & improve it.
+1. Updating mobile header layout for 1024px screen width to improve responsiveness and layout consistency.
 
 ## Work done:
 
 EOD,
-Date: 20 Jan, 2026
-Day: Tuesday,
+Date: 21 Jan, 2026
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
 Project: Vnnovate Next,
 
-1. Header Dropdown
-  - Implemented dynamic Sub-Header for both dropdown menus. — Done
-  - Improved dropdown open/close behavior for a smoother user experience. — Done
-  - Adjusted dropdown width to align with the header width. — Done (handled by others)
-  - Fixed an issue in mobile view where the “View More” option did not close the dropdown. — Done
-
-2. Marquee Enhancements
-  - Updated marquee to display only AI services (instead of tech stack) on the All AI Services page. — Done
-  - Created a dedicated marquee and configured it to display only service names on the All Services page. — Done
-
-3. “Industries We Serve”
-  - Reduced the scroll speed of the marquee for improved readability and user experience. — Done
-
-4. Image Fixes Across Pages
-  - AI Services pages — Updated missing images. — Done
-  - General Services pages — Updated missing images. — Done
-  - Sitemap routes — Updated missing images. — Done
-  - Blogs page — Verified and ensured all images load correctly. — Done
-  - Portfolio pages — Updated missing images. — Done
-  - Solutions pages — Verified image availability. — Done
-
-5. Home Page
-  - Fixed the Next.js framework icon issue in the “Our Technology Suite” section. — Done
-
-6. About Us Page
-  - Updated the route for the “Start Project” button. — Done
-
-7. Case Study
-  - Fixed full-image height issue for Case Study pages in mobile view. — Done
-
-8. General Fixes & Maintenance
-  - Resolved merge conflicts and saved all changes successfully. — Done
-  - Fixed header issues on General Services pages. — Done
-
-9. In Progress
-  - Updating mobile header layout for 1024px screen width to improve responsiveness and layout consistency. — In Progress
-
+1. AI Services Page
+  - Shopify and PyTest image rendering issues resolved.
+2. Header & Quote Form
+  - Resolved “Request a Quote” form issue in the header.
+  - Fixed mobile responsiveness issues for the Quote form.
+3. Header Responsiveness
+  - Updated mobile header layout for 1024px screen width to improve responsiveness and layout consistency.
+4. Testing
+  - Verify image rendering on all pages and resolve any display or loading issues.
+  - Check and ensure full responsiveness across all tested devices and breakpoints.
 
 Project: Sales CRM,
 
-1. Hero Section
-  - Working on enhancing the design and visual appeal of the Hero section on the landing page.
-2. AI Navigation Update
-  - Updated navigation behavior:
-    - When the user clicks “Click to view more” in the AI dropdown, they are now redirected to the AI page instead of the Services page.
-3. AI Page
-  - Created a dedicated AI page.
-  - Add content of AI submodules. - In Progress
-
+1. Dashboard
+  - Calendar date selection functionality update. - In Progress
 
 
 Project: BEC,
