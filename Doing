@@ -1,30 +1,43 @@
 ## Work Doing:
 
-Date: 22 Jan, 2026
-Day: Thursday,
+Date: 23 Jan, 2026
+Day: Friday,
 
 Today, I am working on below list of task:
 
+Project: Vnnovate Next,
+
+1. Static Data Separation
+  - Separate Static data from the Constants file.
+  - Move the data to a dedicated static data file for better structure and maintainability.
+
 Project: Sales CRM,
 
-1. Dashboard
-  - Calender date selection functionality update using another package.
+1. Task Completion Notes
+  - Create a Pull Request (PR) for the Task Completion Notes feature.
+  - Test the implementation in Local and QA environments.
 
 ## Work done:
 
 EOD,
-Date: 22 Jan, 2026
-Day: Thursday,
+Date: 23 Jan, 2026
+Day: Friday,
 
 Today, I am worked on below list of task:
 
-Project: Vnnovate Next,
-1. Page Optimization
-  - Optimized Hire Dedicated Developer, All Pages, Industry Details, Privacy Policy, and Sitemap pages. — Done
-  - Designed and implemented Privacy Policy page with full responsiveness. — In Progress
-
 Project: Sales CRM,
-1. Added Task Completion Notes field and displayed the entry in the Activity Log on the Lead Details page. - Done
+1. Create PR for task complation note. - Done
+2. Test in local & QA Server. - Done
+
+Project: Vnnovate Next,
+
+1. Static Data Saperation. - Done
+2. Privacy Policy redesign & Corraction.
+  - Design, add content. - Done
+  - Mobile/tablet quick access link redirection related issue. - In Progress
+3. Display Cookie on home page.- Done
+4. add link of blogs, privacy policy at footer. - Done
+
 
 
 
@@ -174,53 +187,103 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Roshani ma'am
 
-**Subject**: Weekly (12 Dec - 16 Jan) Report of Dhyan
+**Subject**: Weekly (19 Dec - 23 Jan) Report of Dhyan
 
 Project: Vnnovate Next,
 
-Git Commit ID: a1f646681cb406517f5f0dfa9c057b3f910c00b1
-Git Commit Link: https://gitlab.com/devarshi_vnnovate/vnnovate-next/-/commit/a1f646681cb406517f5f0dfa9c057b3f910c00b1
+Git Commit ID: e31fb6e7593bbda137a26fe2bf9af432d8e37c1f
+Git Commit Link: https://gitlab.com/devarshi_vnnovate/vnnovate-next/-/commit/e31fb6e7593bbda137a26fe2bf9af432d8e37c1f
 
 Description:
 
-1. Sitemap & their routes
-  1.1 Planning & Tracking
-    - Created a Google Sheet to track all sitemap routes, including:
-      - Page status
-      - Content availability
-      - Design completion
-  1.2 UI/UX Enhancements
-    - Redesigning all sitemap routes to improve overall UI/UX consistency and visual appeal.
-    - Redesigned Hero Sections to make them more engaging and user-attractive.
-  1.3 Assets & Copyright Safety
-    - Generated Hero Section background images using AI to avoid any copyright issues.
-  1.4 Route Creation & Content
-    - Created remaining missing routes as per sitemap.
-    - Added relevant content to each route.
-    - Ensured a consistent layout pattern across all pages.
+1. AI Services Dropdown
+  - Technical Expertise Enhancements
+    - Implemented a dynamic marquee that displays Technical Expertise specific to each AI service.
+    - Ensured the marquee content updates dynamically based on the selected AI service, providing contextual relevance.
+  - Content & UX Improvements
+    - Improved the “With Technical Expertise” section by:
+      - Aligning the content more closely with each AI service offering.
+      - Making the section clearer, more structured, and easier to understand for users.
+ 
+2. Blog Detail Page UI/UX
+  - Created a Hero Section for all Blog Details pages to maintain visual consistency.
+  - Compared content with the Live server and added missing content for the “Install LAMP Stack” blog page.
+  - Modified and redesigned the layout of the “Install LAMP Stack” page to better align with its technical content and improve readability.
+ 
+3. Testing
+  - Tested changes in Live.
 
-2. Blogs Module
-  - Added content for 3 new blogs based on their respective titles.
-  - Added 3 new blog entries to the Blogs route.
+4. Header Dropdown
+  - Implemented dynamic Sub-Header for both dropdown menus.
+  - Improved dropdown open/close behavior for a smoother user experience.
+  - Fixed an issue in mobile view where the “View More” option did not close the dropdown.
+ 
+5. Marquee Enhancements
+  - Updated marquee to display only AI services (instead of tech stack) on the All AI Services page.
+  - Created a dedicated marquee and configured it to display only service names on the All Services page.
+ 
+6. “Industries We Serve”
+  - Reduced the scroll speed of the marquee for improved readability and user experience.
+ 
+7. Image Fixes Across Pages
+  - AI Services pages — Updated missing images.
+  - General Services pages — Updated missing images.
+  - Sitemap routes — Updated missing images.
+  - Blogs page — Verified and ensured all images load correctly.
+  - Portfolio pages — Updated missing images.
+  - Solutions pages — Verified image availability.
+ 
+8. Home Page
+  - Fixed the Next.js framework icon issue in the “Our Technology Suite” section.
+ 
+9. About Us Page
+  - Updated the route for the “Start Project” button.
+ 
+10. Case Study
+  - Fixed full-image height issue for Case Study pages in mobile view.
+ 
+11. General Fixes & Maintenance
+  - Resolved merge conflicts and saved all changes successfully.
+  - Fixed header issues on General Services pages.
+ 
+12. In Progress
+  - Updating mobile header layout for 1024px screen width to improve responsiveness and layout consistency.
 
-3. Blog Detail Page (UI/UX)
-  - Designed the Blog Detail page using modern and trending UI/UX standards.
-  - Ensured the Blog Detail page is fully responsive across all screen sizes and devices.
-
-4. Coordination & Deployment
-  - Pushed blog-related changes to the Home page from Disha’s laptop.
-  - Discussed for Home page Blog section changes with Disha.
+13. AI Services Page
+  - Shopify and PyTest image rendering issues resolved.
+14. Header & Quote Form
+  - Resolved “Request a Quote” form issue in the header.
+  - Fixed mobile responsiveness issues for the Quote form.
+15. Header Responsiveness
+  - Updated mobile header layout for 1024px screen width to improve responsiveness and layout consistency.
+16. Testing
+  - Verify image rendering on all pages and resolve any display or loading issues.
+  - Check and ensure full responsiveness across all tested devices and breakpoints.
+17. Page Optimization
+  - Optimized Hire Dedicated Developer, All Pages, Industry Details, Privacy Policy, and Sitemap pages.
+  - Designed and implemented Privacy Policy page with full responsiveness.
+18. Static Data Saperation.
+19. Privacy Policy redesign & Corraction.
+  - Design, add content.
+  - Mobile/tablet quick access link redirection related issue. - In Progress
+20. Display Cookie on home page
+21. add link of blogs, privacy policy at footer.
   
 Project: Sales CRM,
 
-Git Commit ID: a1f646681cb406517f5f0dfa9c057b3f910c00b1
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/a1f646681cb406517f5f0dfa9c057b3f910c00b1
+Git Commit ID: a81ef793af67722269f5a50f4fab230d8c58cbb6
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/a81ef793af67722269f5a50f4fab230d8c58cbb6
 
+Description:
 
+1. Dashboard
+  - Calendar date selection functionality update.
+2. Added Task Completion Notes field and displayed the entry in the Activity Log on the Lead Details page.
+3. Create PR for task complation note.
+4. Test in local & QA Server.
 
 Project: BEC,
 
-Description:
 
 1. Events Module – Flow Understanding
   - Explore the end-to-end flow of the Events module.
