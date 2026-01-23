@@ -1,39 +1,31 @@
 ## Work Doing:
 
-Date: 21 Jan, 2026
-Day: Wednesday,
+Date: 22 Jan, 2026
+Day: Thursday,
 
 Today, I am working on below list of task:
-
-Project: Vnnovate Next,
-
-1. Updating mobile header layout for 1024px screen width to improve responsiveness and layout consistency.
-
-## Work done:
-
-EOD,
-Date: 21 Jan, 2026
-Day: Wednesday,
-
-Today, I am worked on below list of task:
-
-Project: Vnnovate Next,
-
-1. AI Services Page
-  - Shopify and PyTest image rendering issues resolved.
-2. Header & Quote Form
-  - Resolved “Request a Quote” form issue in the header.
-  - Fixed mobile responsiveness issues for the Quote form.
-3. Header Responsiveness
-  - Updated mobile header layout for 1024px screen width to improve responsiveness and layout consistency.
-4. Testing
-  - Verify image rendering on all pages and resolve any display or loading issues.
-  - Check and ensure full responsiveness across all tested devices and breakpoints.
 
 Project: Sales CRM,
 
 1. Dashboard
-  - Calendar date selection functionality update. - In Progress
+  - Calender date selection functionality update using another package.
+
+## Work done:
+
+EOD,
+Date: 22 Jan, 2026
+Day: Thursday,
+
+Today, I am worked on below list of task:
+
+Project: Vnnovate Next,
+1. Page Optimization
+  - Optimized Hire Dedicated Developer, All Pages, Industry Details, Privacy Policy, and Sitemap pages. — Done
+  - Designed and implemented Privacy Policy page with full responsiveness. — In Progress
+
+Project: Sales CRM,
+1. Added Task Completion Notes field and displayed the entry in the Activity Log on the Lead Details page. - Done
+
 
 
 Project: BEC,
