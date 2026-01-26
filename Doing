@@ -11,11 +11,19 @@ Project: Vnnovate Next,
   - Separate Static data from the Constants file.
   - Move the data to a dedicated static data file for better structure and maintainability.
 
+2. Privacy Policy Page
+  - Redesigned the Privacy Policy page and added accurate content.
+  - Identified and working on mobile/tablet quick access link redirection issue. — In Progress
+
+3. UI & Compliance Enhancements
+  - Implemented Cookie display on the Home page.
+  - Added Blogs and Privacy Policy links in the Footer.
+
 Project: Sales CRM,
 
 1. Task Completion Notes
   - Create a Pull Request (PR) for the Task Completion Notes feature.
-  - Test the implementation in Local and QA environments.
+  - Tested the implementation in Local and QA environments.
 
 ## Work done:
 
@@ -25,18 +33,25 @@ Day: Friday,
 
 Today, I am worked on below list of task:
 
-Project: Sales CRM,
-1. Create PR for task complation note. - Done
-2. Test in local & QA Server. - Done
-
 Project: Vnnovate Next,
 
-1. Static Data Saperation. - Done
-2. Privacy Policy redesign & Corraction.
-  - Design, add content. - Done
-  - Mobile/tablet quick access link redirection related issue. - In Progress
-3. Display Cookie on home page.- Done
-4. add link of blogs, privacy policy at footer. - Done
+1. Static Data Separation
+  - Separate Static data from the Constants file.
+  - Move the data to a dedicated static data file for better structure and maintainability.
+
+2. Privacy Policy Page
+  - Redesigned the Privacy Policy page and added accurate content.
+  - Identified and working on mobile/tablet quick access link redirection issue. — In Progress
+
+3. UI & Compliance Enhancements
+  - Implemented Cookie display on the Home page.
+  - Added Blogs and Privacy Policy links in the Footer.
+
+Project: Sales CRM,
+
+1. Task Completion Notes
+  - Create a Pull Request (PR) for the Task Completion Notes feature.
+  - Tested the implementation in Local and QA environments.
 
 
 
