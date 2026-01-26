@@ -1,23 +1,14 @@
 ## Work Doing:
 
-Date: 23 Jan, 2026
-Day: Friday,
+Date: 26 Jan, 2026
+Day: Monday,
 
 Today, I am working on below list of task:
 
 Project: Vnnovate Next,
 
-1. Static Data Separation
-  - Separate Static data from the Constants file.
-  - Move the data to a dedicated static data file for better structure and maintainability.
-
-2. Privacy Policy Page
-  - Redesigned the Privacy Policy page and added accurate content.
+1. Privacy Policy Page
   - Identified and working on mobile/tablet quick access link redirection issue. — In Progress
-
-3. UI & Compliance Enhancements
-  - Implemented Cookie display on the Home page.
-  - Added Blogs and Privacy Policy links in the Footer.
 
 Project: Sales CRM,
 
@@ -28,24 +19,24 @@ Project: Sales CRM,
 ## Work done:
 
 EOD,
-Date: 23 Jan, 2026
-Day: Friday,
+Date: 26 Jan, 2026
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Vnnovate Next,
 
-1. Static Data Separation
-  - Separate Static data from the Constants file.
-  - Move the data to a dedicated static data file for better structure and maintainability.
+1. Blog Module
+  - Added a new blog titled “How Organizations Can Successfully Integrate LLMs into Existing Systems.”
+  - Created and structured relevant content and images aligned with the topic. — Done
+  - Designed and enhanced the blog section for a better user experience. — Done
 
-2. Privacy Policy Page
-  - Redesigned the Privacy Policy page and added accurate content.
-  - Identified and working on mobile/tablet quick access link redirection issue. — In Progress
+2. Footer – Office Section
+  - Improved UI by adding appropriate padding to the Office Section for better layout and readability in 1100px–768px screen widths. — Done
 
-3. UI & Compliance Enhancements
-  - Implemented Cookie display on the Home page.
-  - Added Blogs and Privacy Policy links in the Footer.
+3. Privacy Policy Page
+  - Verified and ensured full responsiveness across all device sizes. — Done
+  - Updated color scheme to match the application’s theme color for visual consistency. — Done
 
 Project: Sales CRM,
 
