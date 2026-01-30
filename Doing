@@ -1,74 +1,91 @@
 ## Work Doing:
 
-Date: 28 Jan, 2026
-Day: Wednesday,
+Date: 30 Jan, 2026
+Day: Friday,
 
 Today, I am work on below list of task:
 
-Project: E order,
+Project: Sales CRM,
 
-1. Understand Project Figma
-  - Review overall design system, components, and layout structure.
-  - Identify reusable components and design patterns.
+1. Automation in Leads
 
-2. Gather Project Details
-
-3. Start Project Implementation
-  - Begin development following the defined process and task breakdown.
+- Add Automation in Leads based on new new improvement points.
 
 ## Work done:
 
 EOD,
-Date: 28 Jan, 2026
-Day: Wednesday,
+Date: 30 Jan, 2026
+Day: Friday,
 
 Today, I am worked on below list of task:
+
+Project: Sales CRM,
+
+1. Lead AutoComplete Functionality (2 Hours)
+  - Research and identify similar AutoComplete implementations in the existing codebase or network.
+  - Understand the functional requirements and expected behavior of the new AutoComplete feature.
+  - Prepare a complete change list
+  -Start implementing the AutoComplete feature based on:
+    - Search behavior
+    - Data matching logic
+    - Personal analysis and design approach
+
+2. Lead Creation Option Dialog (1 Hour)
+  - Design and implement a new dialog/modal with lead creation options:
+    - New Lead
+    - Existing Lead
+  - Handle option selection logic.
+  -Based on the selected option:
+    - Control which lead form flow should be displayed.
+
+3. Lead Form Enhancements (1.5 Hours)
+  - New Lead Flow
+    - Keep the implementation consistent with the existing Lead creation logic.
+    - Ensure no regression in validations and business rules. - In Progress
+  - Existing Lead Flow
+    - Display the Lead form pre-filled with existing Lead data. - In Progress
+
 
 Project: Vnnovate Next,
 
 1. Understand Project Figma (4 hours)
-  - Reviewed the overall design system, including typography, colors, spacing, and components.
-  - Analyzed layout structure across pages.
-  - Identified reusable components and common design patterns for efficient implementation.
-  - Discussed with Monika about the project.
+
+- Reviewed the overall design system, including typography, colors, spacing, and components.
+- Analyzed layout structure across pages.
+- Identified reusable components and common design patterns for efficient implementation.
+- Discussed with Monika about the project.
 
 2. Project Setup & Initial Understanding (0.5 hours)
-  - Set up the project on my local machine and run it.
+
+- Set up the project on my local machine and run it.
 
 3. Google Sheet – Pending Sections Tracking (3.5 hours)
-  - Created/updated a Google Sheet with Disha to track pending sections/pages that need to be added or completed in the project.
-    - Home Page, Store Details Page, Product Details Page, Cart Page, Order History Page, Re-Order Modal, Replace Order Modal, Merge Order Modal, Favorite Page, Favorite Items Page
 
-Project: Sales CRM,
-
-1. Task Completion Notes
-  - Create a Pull Request (PR) for the Task Completion Notes feature.
-  - Tested the implementation in Local and QA environments.
-
-
-
+- Created/updated a Google Sheet with Disha to track pending sections/pages that need to be added or completed in the project.
+  - Home Page, Store Details Page, Product Details Page, Cart Page, Order History Page, Re-Order Modal, Replace Order Modal, Merge Order Modal, Favorite Page, Favorite Items Page
 
 Project: BEC,
 
 1. Testing & QA
-  - Tested modules thoroughly.
-  - Identified bugs and shared findings with Rahul Sir for fixes.
+
+- Tested modules thoroughly.
+- Identified bugs and shared findings with Rahul Sir for fixes.
 
 Project: Other,
 
 1. Try to understand and create project with using Supabase in backend.
 
 1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
-2. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
-3. Then check Monday's task that i had done like pagination, category filter in Inventory items API. also make changes regarding updates.
+1. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
+1. Then check Monday's task that i had done like pagination, category filter in Inventory items API. also make changes regarding updates.
 
-4. Yesterday, i make Enhancement in Bulk upload functionality based on feedback like Implemented drag-and-drop file upload functionality, UI improvements and Tested whole work flow.
-5. Then worked on Inventory Item Deletion functionality where when user click on delete button it ask again for confirmation and then it will delete that Item.
-6. At last worked on Inventory Item Editing functionality where when user click on edit button it will open modal and in that modal user can see all the details of that item and then i integrate 2 API integration for Edit Item 1st is for fetching item by id and 2nd is for updating item by id.
+1. Yesterday, i make Enhancement in Bulk upload functionality based on feedback like Implemented drag-and-drop file upload functionality, UI improvements and Tested whole work flow.
+1. Then worked on Inventory Item Deletion functionality where when user click on delete button it ask again for confirmation and then it will delete that Item.
+1. At last worked on Inventory Item Editing functionality where when user click on edit button it will open modal and in that modal user can see all the details of that item and then i integrate 2 API integration for Edit Item 1st is for fetching item by id and 2nd is for updating item by id.
 
-7. Today i work on Royal Crucible project where i find theme based on that project requirement.
+1. Today i work on Royal Crucible project where i find theme based on that project requirement.
 
-8. Yesterday i work on Setup and Configuration of Theme. for that i waited for the selection of theme. during waiting i added completed task in June and July into the planner and revise some topics of Node and Express js. like,
+1. Yesterday i work on Setup and Configuration of Theme. for that i waited for the selection of theme. during waiting i added completed task in June and July into the planner and revise some topics of Node and Express js. like,
 
 - Node Modules,
 - Error handling,
@@ -82,7 +99,7 @@ Prerequisites
 
 - Ensure you have the following installed:
   - Node.js (v16 or higher)
-  - npm (v7 or higher)  
+  - npm (v7 or higher)
 
 ## My Understanding
 
@@ -92,7 +109,6 @@ Prerequisites
 3.  Understand User Management module. - Done
     - Mark leave module. - Done
 4.  Understand Setting modules. - Done
-
     - Except Email module. - In Progress
 
     - Event Types module. -
@@ -116,19 +132,16 @@ Prerequisites
     - Customer Brands module. -
 
 5.  Utilization module. - Done
-
     - Vehicle Utilization. - Done
       - There AddNode, AddedOption modules not Displayed.
     - Instructor Utilization. - Done
       - In Event List Pagination not display pages properly.
 
 6.  Fleet Utilization module. - In Progress
-
     - Page name `BEC Calendar`.
 
 7.  Indemnity forms module. -
 8.  Feedback form module. -
-
     - In Edit mode of particular question where only Mandatory option and Add question option change.
     - There no any active option to delete any question.
     - If there are any question is missing to fill although there is not mandatory still form submit and give "There is something wrong" as a response.
@@ -192,90 +205,64 @@ Project: Dealer Data,
 ## Email
 
 to: Vasik sir, Rupendra sir
-Cc: Roshani ma'am
+Cc: Roshani ma'am, Vanshita ma'am
 
-**Subject**: Weekly (19 Dec - 23 Jan) Report of Dhyan
+**Subject**: Weekly (26 Dec - 30 Jan) Report of Dhyan
 
 Project: Vnnovate Next,
 
-Git Commit ID: e31fb6e7593bbda137a26fe2bf9af432d8e37c1f
-Git Commit Link: https://gitlab.com/devarshi_vnnovate/vnnovate-next/-/commit/e31fb6e7593bbda137a26fe2bf9af432d8e37c1f
+Git Commit ID: 83606930bf972fe79669d57a333bcf1f74a95860
+Git Commit Link: https://gitlab.com/devarshi_vnnovate/vnnovate-next/-/commit/83606930bf972fe79669d57a333bcf1f74a95860
 
 Description:
 
-1. AI Services Dropdown
-  - Technical Expertise Enhancements
-    - Implemented a dynamic marquee that displays Technical Expertise specific to each AI service.
-    - Ensured the marquee content updates dynamically based on the selected AI service, providing contextual relevance.
-  - Content & UX Improvements
-    - Improved the “With Technical Expertise” section by:
-      - Aligning the content more closely with each AI service offering.
-      - Making the section clearer, more structured, and easier to understand for users.
- 
-2. Blog Detail Page UI/UX
-  - Created a Hero Section for all Blog Details pages to maintain visual consistency.
-  - Compared content with the Live server and added missing content for the “Install LAMP Stack” blog page.
-  - Modified and redesigned the layout of the “Install LAMP Stack” page to better align with its technical content and improve readability.
- 
-3. Testing
-  - Tested changes in Live.
+1. Blog Module
+     - Added a new blog titled “How Organizations Can Successfully Integrate LLMs into Existing Systems.” (0.5 hours)
+     - Created and structured relevant content and images aligned with the topic. (2 hours)
+     - Designed and enhanced the blog section for a better user experience. (2 hours)
 
-4. Header Dropdown
-  - Implemented dynamic Sub-Header for both dropdown menus.
-  - Improved dropdown open/close behavior for a smoother user experience.
-  - Fixed an issue in mobile view where the “View More” option did not close the dropdown.
- 
-5. Marquee Enhancements
-  - Updated marquee to display only AI services (instead of tech stack) on the All AI Services page.
-  - Created a dedicated marquee and configured it to display only service names on the All Services page.
- 
-6. “Industries We Serve”
-  - Reduced the scroll speed of the marquee for improved readability and user experience.
- 
-7. Image Fixes Across Pages
-  - AI Services pages — Updated missing images.
-  - General Services pages — Updated missing images.
-  - Sitemap routes — Updated missing images.
-  - Blogs page — Verified and ensured all images load correctly.
-  - Portfolio pages — Updated missing images.
-  - Solutions pages — Verified image availability.
- 
-8. Home Page
-  - Fixed the Next.js framework icon issue in the “Our Technology Suite” section.
- 
-9. About Us Page
-  - Updated the route for the “Start Project” button.
- 
-10. Case Study
-  - Fixed full-image height issue for Case Study pages in mobile view.
- 
-11. General Fixes & Maintenance
-  - Resolved merge conflicts and saved all changes successfully.
-  - Fixed header issues on General Services pages.
- 
-12. In Progress
-  - Updating mobile header layout for 1024px screen width to improve responsiveness and layout consistency.
+2. Footer – Office Section (0.5 hours)
+     - Improved UI by adding appropriate padding to the Office Section for better layout and readability in 1100px–768px screenwidths.
 
-13. AI Services Page
-  - Shopify and PyTest image rendering issues resolved.
-14. Header & Quote Form
-  - Resolved “Request a Quote” form issue in the header.
-  - Fixed mobile responsiveness issues for the Quote form.
-15. Header Responsiveness
-  - Updated mobile header layout for 1024px screen width to improve responsiveness and layout consistency.
-16. Testing
-  - Verify image rendering on all pages and resolve any display or loading issues.
-  - Check and ensure full responsiveness across all tested devices and breakpoints.
-17. Page Optimization
-  - Optimized Hire Dedicated Developer, All Pages, Industry Details, Privacy Policy, and Sitemap pages.
-  - Designed and implemented Privacy Policy page with full responsiveness.
-18. Static Data Saperation.
-19. Privacy Policy redesign & Corraction.
-  - Design, add content.
-  - Mobile/tablet quick access link redirection related issue. - In Progress
-20. Display Cookie on home page
-21. add link of blogs, privacy policy at footer.
-  
+3. Privacy Policy Page (5 hours)
+     - Verified and ensured full responsiveness across all device sizes. (1.5 hours)
+     - Updated color scheme to match the application’s theme color for visual consistency. (0.5 hours)
+
+- Try to Solve scrolling functionality improvement for tablet/mobile devices. (3 hours)
+
+4. Blog Module – LLM Integration Blog
+
+- Blog: “How Organizations Can Successfully Integrate LLMs into Existing Systems”
+  - Updated the featured image to better align with the blog content. (0.5 hours)
+  - “Key Benefits of LLM Integration for Enterprises”
+    - Modified layout and improved responsiveness across devices. (1.5 hours)
+  - “Common LLM Integration Challenges (and How to Solve Them)"
+    - Improved UI structure for clearer readability and better user experience. (1.5 hours)
+  - “KPIs to Measure LLM Integration Success”
+    - Enhanced UI layout for better visual hierarchy and user engagement. (1.5 hours)
+- Testing across all devices. (0.5 hours)
+
+Project: E-Order,
+
+Git Commit ID:
+Git Commit Link: https://gitlab.com/vnnovatesolutions/eorder-webapp/-/commit/
+
+1. Understand Project Figma (4 hours)
+
+- Reviewed the overall design system, including typography, colors, spacing, and components.
+- Analyzed layout structure across pages.
+- Identified reusable components and common design patterns for efficient implementation.
+- Discussed with Monika about the project.
+
+2. Project Setup & Initial Understanding (0.5 hours)
+
+- Set up the project on my local machine and run it.
+
+3. Google Sheet – Pending Sections Tracking (3.5 hours)
+
+- Created/updated a Google Sheet with Disha to track pending sections/pages that need to be added or completed in the project.
+  - Home Page, Store Details Page, Product Details Page, Cart Page, Order History Page, Re-Order Modal, Replace Order Modal, Merge Order Modal, Favorite Page, Favorite Items Page
+
 Project: Sales CRM,
 
 Git Commit ID: a81ef793af67722269f5a50f4fab230d8c58cbb6
@@ -283,57 +270,79 @@ Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/a81e
 
 Description:
 
-1. Dashboard
-  - Calendar date selection functionality update.
-2. Added Task Completion Notes field and displayed the entry in the Activity Log on the Lead Details page.
-3. Create PR for task complation note.
-4. Test in local & QA Server.
+1. Lead AutoComplete Functionality (2 Hours)
+  - Research and identify similar AutoComplete implementations in the existing codebase or network.
+  - Understand the functional requirements and expected behavior of the new AutoComplete feature.
+  - Prepare a complete change list
+  -Start implementing the AutoComplete feature based on:
+    - Search behavior
+    - Data matching logic
+    - Personal analysis and design approach
+
+2. Lead Creation Option Dialog (1 Hour)
+  - Design and implement a new dialog/modal with lead creation options:
+    - New Lead
+    - Existing Lead
+  - Handle option selection logic.
+  -Based on the selected option:
+    - Control which lead form flow should be displayed.
+
+3. Lead Form Enhancements (1.5 Hours)
+  - New Lead Flow
+    - Keep the implementation consistent with the existing Lead creation logic.
+    - Ensure no regression in validations and business rules. - In Progress
+  - Existing Lead Flow
+    - Display the Lead form pre-filled with existing Lead data. - In Progress
 
 Project: BEC,
 
-
 1. Events Module – Flow Understanding
-  - Explore the end-to-end flow of the Events module.
-  - Understand:
-    - Event creation lifecycle
-    - Event visibility and access rules
-    - Role-based behavior (Admin vs Guest)
+
+- Explore the end-to-end flow of the Events module.
+- Understand:
+  - Event creation lifecycle
+  - Event visibility and access rules
+  - Role-based behavior (Admin vs Guest)
 
 2. Guest Registration via Event Link
-  - Register a user through the public event link.
-  - Trace and understand all related routes:
-    - Event link access
-    - Guest registration form
-  - Analyze the complete guest participation journey, including:
-    - Registration
-    - Check-in
-    - Feedback
-    - Rate
+
+- Register a user through the public event link.
+- Trace and understand all related routes:
+  - Event link access
+  - Guest registration form
+- Analyze the complete guest participation journey, including:
+  - Registration
+  - Check-in
+  - Feedback
+  - Rate
 
 3. Events Module – Feature Exploration
-  - Review and understand:
-    - Export Events functionality
-    - Event Media page (uploads, previews, permissions)
-    - Task Notes page
-    - Reminder Notes page
+
+- Review and understand:
+  - Export Events functionality
+  - Event Media page (uploads, previews, permissions)
+  - Task Notes page
+  - Reminder Notes page
 
 4. Booking Modules – Page-Level Review
-  - Explore and understand the following booking flows: - In Progress
-    - Fleet Bookings
-    - Instructor Bookings
-    - Room Bookings
+
+- Explore and understand the following booking flows: - In Progress
+  - Fleet Bookings
+  - Instructor Bookings
+  - Room Bookings
 
 5. Codebase Setup
-  - Clone the project from the branch:
-    - bk-staging-old-node
-  - Run the project locally and verify:
-    - Environment configuration
-    - Database connectivity
+
+- Clone the project from the branch:
+  - bk-staging-old-node
+- Run the project locally and verify:
+  - Environment configuration
+  - Database connectivity
 
 6. Testing & QA
-  - Tested modules thoroughly.
-  - Identified bugs and shared findings with Rahul Sir for fixes.
 
+- Tested modules thoroughly.
+- Identified bugs and shared findings with Rahul Sir for fixes.
 
 Project: Media Planner,
 
@@ -343,32 +352,43 @@ Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend
 Description:
 
 1. User Module
+
 - Added "Check All Modules" checkbox for easier permission selection.
 - Improved UI of the Permission Step in Add/Edit User flow.
+
 2. Testing Scenarios
+
 - Performed full permission-based testing across all user roles to verify:
 - Sidebar visibility
 - Module access
 - Action-level permission behavior
+
 3. Placement Route Issue
+
 - Resolved Placement route navigation issue.
+
 4. Time-Slot Naming Update
+
 - Updated "Time-slot" → "Placement"
 - Applied changes in Add, Edit & Delete modals.
+
 5. Media Plan
+
 - Solve Placement related issue on Add Media plan module
 - Solve Issue of Getting data in Edit Media plan. - In Progress
 
 Description:
 
 1. Sidebar Improvements
+
 - Moved Profile section from bottom to top for better accessibility.
 - Updated icons for all sidebar menu items.
 - Reworked Sidebar UI (open/collapsed) to match the latest Figma design.
 - Coordinated with Rahul sir and updated the position of the sidebar toggle button.
-2. Breadcrumb
-- Implemented Breadcrumb navigation throughout the application.
 
+2. Breadcrumb
+
+- Implemented Breadcrumb navigation throughout the application.
 
 ## Leave Request
 
@@ -497,7 +517,6 @@ PR :
 
 7. Finance & Sage Modules
    7.1 PO & Invoice Sync
-
    - UI screens completed.
    - Redux API structure added.
    - CRUD flow – In Progress.
@@ -542,11 +561,10 @@ PR :
      8.9 Duration Master
    - UI Enhancements completed.
 
-
 ## Apology letter
 
 to: Rahul
-Cc: 
+Cc:
 
 Subject: Apology for the Coding Error on 12th September
 
@@ -561,3 +579,66 @@ Thank you for your understanding and support.
 Best regards,
 Dhyan
 Dhyan
+
+1. New Feature Requirement – Lead Creation Enhancement
+
+- Please implement the following feature based on the points below.
+- Initial Instructions
+  - First, review all relevant existing files to clearly understand exactly what needs to be done.
+  - The flow described below is based on my understanding. If you find a simpler or more user-friendly solution, you may propose and implement it.
+    - You are encouraged to explore existing solutions, documentation, or references (e.g., online resources, tutorials, etc.) if needed.
+
+- Feature Flow
+  - When a user clicks Create Lead, the system should prompt the user to select one of the following options:
+    - New Lead
+    - Existing Lead
+  - If the user selects “New Lead”
+    - The current lead creation flow should remain unchanged.
+  - If the user selects “Existing Lead”
+    - Display an additional search input field.
+    - Allow the user to search leads using First Name and Last Name.
+    - Show a dropdown list of matching leads, displaying:
+      - Full Name
+      - Country
+      - City
+  - When a lead is selected from the dropdown:
+    - Open the Create Lead form.
+    - Pre-fill the form with all existing lead details.
+    - Do not auto-fill the following fields:
+      - Upload Documents
+      - Requirement fields
+
+1. Dialog Modal as Stepper
+  - Please handle the dialog modal as a stepper-based flow.
+  - If the user closes the modal at any step, it should always reopen from the first step, which is the option selection modal:
+    - New Lead
+    - Existing Lead
+
+2. Console Log on Create Lead (Existing Lead Flow)
+  - When the user clicks the Create Lead button after selecting the Existing Lead option, please log the action in the console.
+
+3. Console Log Lead Details
+  - After the user clicks the Create Lead button, log the following in the console:
+    - The existing lead details
+    - The newly created/current lead details
+  - Both logs should include the full details of each lead.
+
+Backend changes
+
+1. API & Database Changes
+  - Pass a new field isExistLead (boolean) from the frontend to the backend through the API.
+  - Add a corresponding is_exist_lead column in the database to store this value.
+
+2. Validation Rules (When isExistLead = true)
+  - Apply only basic validations, such as:
+    - Required fields must not be empty.
+    - Basic data type checks (if applicable).
+  - Skip all other advanced validations.
+
+3. Duplicate Checks
+  - When isExistLead = true, do not perform uniqueness/duplicate checks for:
+    - First Name
+    - Last Name
+    - Email
+    - Phone Number
+  - These values may already exist for other leads and should be allowed.
