@@ -20,7 +20,7 @@ let user = {
 };
 let admin = user;
 user = null;
-// console.log(admin.sayHii());
+// console.log(admin.sayHii()); // Result: Hii, Vnn!
 
 
 let user1 = { name: "User1" }
@@ -28,7 +28,6 @@ let user2 = { name: "User2" }
 
 function sayHi() {
   console.log(`Hii ${this.name}!`);
-
 }
 user1.sayHi = sayHi; // required to make method of that obj
 user2.sayHi = sayHi;

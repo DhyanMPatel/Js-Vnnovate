@@ -68,3 +68,25 @@
 # Now Deep dive in Data Types
 
 [Data Types](../04_Data_Types/intro.md)
+
+# What is Lexical Scope?
+
+- `Lexical scope` is a fundamental concept in programming that determines the accessibility of variables and functions based on where they are defined in the source code.
+- Lexical Scope is Static and remains same throughout the program's execution.
+- Where other scopes like `Global`, `local`, `Nested`, `Block` scopes are dynamic means they change
+
+Example: Which of the two spaces is `myName`’s lexical scope? Is it the global scope or the `getName()` function’s local scope?
+
+```js
+// Define a variable in the global scope:
+const myName = "Oluwatobi";
+
+// Call myName variable from a function:
+function getName() {
+  return myName;
+}
+```
+
+Answer: Therefore, `myName`’s lexical scope is the global scope because we defined `myName` in the global environment.
+
+Note: `lexical scope means`**`definition space`**`— not invocation space`.
