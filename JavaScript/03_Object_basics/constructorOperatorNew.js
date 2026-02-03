@@ -34,8 +34,8 @@ let user2 = new User("Dhyan", 12);
 
 function UserNew(name){
 
-  if(!new.target) {
-    return new UserNew(name);
+  if(!new.target) { // "new.target" is a meta-property available inside functions. It tells you whether the function was called using the new keyword.
+    return new UserNew(name); // If this function was NOT called with new, then call it again, this time with new, and return that object.
   }
 
   this.name = name;

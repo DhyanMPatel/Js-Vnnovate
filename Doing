@@ -1,50 +1,94 @@
 ## Work Doing:
 
-Date: 30 Jan, 2026
-Day: Friday,
+Date: 3 Feb, 2026
+Day: Tuesday,
 
 Today, I am work on below list of task:
 
-Project: Sales CRM,
+Project: E-Order,
 
-1. Automation in Leads
-
-- Add Automation in Leads based on new new improvement points.
+1. Header & Sidebar UI Enhancements (3 H)
+  - Apply required UI changes to improve layout, spacing, and visual consistency.
+  - Ensure alignment with the overall design system and responsiveness.
+2. Breadcrumb Navigation (1 H)
+  - Implement breadcrumb navigation in the Header across all pages.
+  - Ensure breadcrumbs:
+    - Reflect the correct route hierarchy
+    - Update dynamically on route change
+    - Maintain consistency in styling and spacing
+3. Signup Page Verification (1.5 H)
+  - Review Signup page UI against the Figma design.
+  - Verify all functionalities:
+    - Form validation
+    - Input behaviors
+    - Submit flow
+  - Identify and fix any UI or functional mismatches.
+4. OTP Verification Review
+  - Coordinate with the team to understand the OTP verification flow.
+  - Cross-check OTP UI with Figma:
+    - Input design
+    - Error states
+    - Success states
+  - Validate functionality and note any gaps or required improvements.
 
 ## Work done:
 
 EOD,
-Date: 30 Jan, 2026
-Day: Friday,
+Date: 3 Feb, 2026
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
-Project: Sales CRM,
+Project: E-Order,
 
-1. Lead AutoComplete Functionality (2 Hours)
-  - Research and identify similar AutoComplete implementations in the existing codebase or network.
-  - Understand the functional requirements and expected behavior of the new AutoComplete feature.
-  - Prepare a complete change list
-  -Start implementing the AutoComplete feature based on:
-    - Search behavior
-    - Data matching logic
-    - Personal analysis and design approach
+1. Sign Up Screen (1.5 H)
+  - Implemented Material UI components for a modern and consistent interface.
+  - Verified UI with Rahul Sir.
+  - Ensured full responsiveness across mobile, tablet, and desktop devices.
+  - Implemented comprehensive form validations with Formik + Yup, including:
+    - Required field checks
+    - Regex-based validation where applicable
+  - Added placeholders for all input fields to improve usability.
+  - Implemented proper navigation:
+    - Redirect to Login page after successful account creation.
+  - Added success and failure feedback messages for account creation status.
 
-2. Lead Creation Option Dialog (1 Hour)
-  - Design and implement a new dialog/modal with lead creation options:
-    - New Lead
-    - Existing Lead
-  - Handle option selection logic.
-  -Based on the selected option:
-    - Control which lead form flow should be displayed.
+2. Forgot Password Screen (1.5 H)
+  - Created and designed the Forgot Password page with Material UI components.
+  - Ensured responsive design for all screen sizes.
+  - Implemented Formik + Yup for handling form data and validations.
+  - Added:
+    - Validation errors with regex-based rules
+    - Placeholders for all input fields
+  - Implemented complete Forgot Password flow:
+    - Display Success/failure alert when reset link is requested
+    - Display Success/failure alert after password reset
+    - Redirect user to Login page after Forgot password flow completion
 
-3. Lead Form Enhancements (1.5 Hours)
-  - New Lead Flow
-    - Keep the implementation consistent with the existing Lead creation logic.
-    - Ensure no regression in validations and business rules. - In Progress
-  - Existing Lead Flow
-    - Display the Lead form pre-filled with existing Lead data. - In Progress
+3. OTP Verification Screen (1.5 H)
+  - Implemented OTP Verification page with a 6-digit OTP input.
+  - Designed the page using Material UI components with a clean, user-friendly layout.
+  - Ensured responsiveness across all devices.
+  - Added:
+    - Placeholders for OTP field
+    - Regex-based OTP validation
+  - Integrated Formik + Yup for validation and state handling.
+  - Implemented Resend OTP functionality:
+    - Resend OTP button
+    - Success/failure alert on OTP resend
+  - Added proper flow handling:
+    - Success/failure alerts on OTP verification
+    - Redirect to Login page after successful verification
 
+4. Login Page (1.5 H)
+  - Improve the Login page UI for a modern and responsive experience.
+  - Added placeholders for all fields.
+  - Implemented validation errors using Formik + Yup.
+  - Ensured consistent UX and responsiveness across all devices.
+
+5. Testing (1 H)
+  - Tested all Authentication modules (Sign Up, Login, Forgot Password, OTP Verification) across all device types (mobile, tablet, desktop).
+  - All authentication flows are working as expected.
 
 Project: Vnnovate Next,
 
