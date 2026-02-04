@@ -1,41 +1,54 @@
 ## Work Doing:
 
-Date: 3 Feb, 2026
-Day: Tuesday,
+Date: 4 Feb, 2026
+Day: Wednesday,
 
 Today, I am work on below list of task:
 
+Project: Sales CRM,
+
+1. Activity Log & Follow-up Enhancement (4 H)
+  - Clear Implementation of Follow-up task creation flow.
+  - Added Next Follow-up Date & Time field to the Activity Log.
+  - Implemented automatic reminder task creation when a Follow-up Date & Time is provided.
+  - Ensured the auto-created task:
+    - Appears correctly in the Activity Log inside Lead details page.
+    - Is visible and manageable in the Task Module.
+  - Verified end-to-end flow:
+    - Activity → Task creation → Task listing works without manual refresh.
+  - Solving Today's Task did not display to Dashboard. - In Progress
+
+2. Testing (0.5 H)
+  - Test Activity Log & Follow-up functionality in Local and QA.
+
 Project: E-Order,
 
-1. Header & Sidebar UI Enhancements (3 H)
-  - Apply required UI changes to improve layout, spacing, and visual consistency.
-  - Ensure alignment with the overall design system and responsiveness.
-2. Breadcrumb Navigation (1 H)
-  - Implement breadcrumb navigation in the Header across all pages.
-  - Ensure breadcrumbs:
-    - Reflect the correct route hierarchy
-    - Update dynamically on route change
-    - Maintain consistency in styling and spacing
-3. Signup Page Verification (1.5 H)
-  - Review Signup page UI against the Figma design.
-  - Verify all functionalities:
-    - Form validation
-    - Input behaviors
-    - Submit flow
-  - Identify and fix any UI or functional mismatches.
-4. OTP Verification Review
-  - Coordinate with the team to understand the OTP verification flow.
-  - Cross-check OTP UI with Figma:
-    - Input design
-    - Error states
-    - Success states
-  - Validate functionality and note any gaps or required improvements.
+1. Store Details Page (0.5 H)
+  - Fixed Quantity Control and Add to Cart button issues where actions were not working correctly.
+  - Resolved issue where clicking the Favorite icon in the product list was incorrectly redirecting to the Product Details page instead of toggling favorite.
+
+2. Product Details Page (0.5 H)
+  - Implemented role-based visual behavior for the Favorite icon.
+    - Admin: Yellow color when selected
+    - Manager: Blue color when selected
+    - Default: Gray color when not selected
+  - Updated Product Title color to white for better visibility and UI consistency.
+
+3. Store Favorites Page (0.5 H)
+  - Implemented role-based visual behavior for the Favorite icon.
+    - Admin: Yellow color when selected
+    - Manager: Blue color when selected
+    - Default: Gray color when not selected
+  - Made the Page Title clickable, redirecting users directly to the corresponding Store Details page.
+
+4. Testing (1 H)
+  - Tested Store Details Page, Product Details Page,Favorites page, Store Favorites Page, Profile page and compared with Figma.
 
 ## Work done:
 
 EOD,
-Date: 3 Feb, 2026
-Day: Tuesday,
+Date: 4 Feb, 2026
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
