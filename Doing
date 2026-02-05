@@ -1,107 +1,75 @@
 ## Work Doing:
 
-Date: 4 Feb, 2026
-Day: Wednesday,
+Date: 5 Feb, 2026
+Day: Thursday,
 
 Today, I am work on below list of task:
 
 Project: Sales CRM,
 
-1. Activity Log & Follow-up Enhancement (4 H)
-  - Clear Implementation of Follow-up task creation flow.
-  - Added Next Follow-up Date & Time field to the Activity Log.
-  - Implemented automatic reminder task creation when a Follow-up Date & Time is provided.
-  - Ensured the auto-created task:
-    - Appears correctly in the Activity Log inside Lead details page.
-    - Is visible and manageable in the Task Module.
-  - Verified end-to-end flow:
-    - Activity → Task creation → Task listing works without manual refresh.
-  - Solving Today's Task did not display to Dashboard. - In Progress
-
-2. Testing (0.5 H)
-  - Test Activity Log & Follow-up functionality in Local and QA.
+1. Dashboard module (1 H)
+  - Investigate why Today’s Task list is not displaying correctly on the Dashboard.
+  - Update the task filtering logic:
+    - Change time range from 6:30 AM – 6:29 PM format
+    - To 12:00 AM – 11:59 PM format for accurate daily task visibility.
 
 Project: E-Order,
 
-1. Store Details Page (0.5 H)
-  - Fixed Quantity Control and Add to Cart button issues where actions were not working correctly.
-  - Resolved issue where clicking the Favorite icon in the product list was incorrectly redirecting to the Product Details page instead of toggling favorite.
-
-2. Product Details Page (0.5 H)
-  - Implemented role-based visual behavior for the Favorite icon.
-    - Admin: Yellow color when selected
-    - Manager: Blue color when selected
-    - Default: Gray color when not selected
-  - Updated Product Title color to white for better visibility and UI consistency.
-
-3. Store Favorites Page (0.5 H)
-  - Implemented role-based visual behavior for the Favorite icon.
-    - Admin: Yellow color when selected
-    - Manager: Blue color when selected
-    - Default: Gray color when not selected
-  - Made the Page Title clickable, redirecting users directly to the corresponding Store Details page.
-
-4. Testing (1 H)
-  - Tested Store Details Page, Product Details Page,Favorites page, Store Favorites Page, Profile page and compared with Figma.
+1. Global Translation (6 Hours)
+  - Identified and fixed pages with missing or partially applied translations.
+  - Ensured consistent translations across all modules:
+    - Removed hardcoded text
+    - Verified proper language switching behavior
+  - Added default fallback values for missing translation keys.
+  - Enhanced Language Context API to support dynamic translation values.
+  - Confirmed translation functionality in key modules:
+    - Sign In, Sign Up, OTP Verification, Forgot Password
+    - Sidebar & Navbar
+    - Dashboard
+    - Store Details
+    - Product Details & Product Edit
+    - User Management
+    - Order Hours
+2. Auth Modules
+  - Restored and added missing UI components that were unintentionally removed during translation implementation.
+  - Re-verified UI and functionality consistency after translation fixes.
 
 ## Work done:
 
 EOD,
-Date: 4 Feb, 2026
-Day: Wednesday,
+Date: 5 Feb, 2026
+Day: Thursday,
 
 Today, I am worked on below list of task:
 
+Project: Sales CRM,
+
+1. Dashboard module (1 H)
+  - Investigate why Today’s Task list is not displaying correctly on the Dashboard.
+  - Update the task filtering logic:
+    - Change time range from 6:30 AM – 6:29 PM format
+    - To 12:00 AM – 11:59 PM format for accurate daily task visibility.
+
 Project: E-Order,
 
-1. Sign Up Screen (1.5 H)
-  - Implemented Material UI components for a modern and consistent interface.
-  - Verified UI with Rahul Sir.
-  - Ensured full responsiveness across mobile, tablet, and desktop devices.
-  - Implemented comprehensive form validations with Formik + Yup, including:
-    - Required field checks
-    - Regex-based validation where applicable
-  - Added placeholders for all input fields to improve usability.
-  - Implemented proper navigation:
-    - Redirect to Login page after successful account creation.
-  - Added success and failure feedback messages for account creation status.
-
-2. Forgot Password Screen (1.5 H)
-  - Created and designed the Forgot Password page with Material UI components.
-  - Ensured responsive design for all screen sizes.
-  - Implemented Formik + Yup for handling form data and validations.
-  - Added:
-    - Validation errors with regex-based rules
-    - Placeholders for all input fields
-  - Implemented complete Forgot Password flow:
-    - Display Success/failure alert when reset link is requested
-    - Display Success/failure alert after password reset
-    - Redirect user to Login page after Forgot password flow completion
-
-3. OTP Verification Screen (1.5 H)
-  - Implemented OTP Verification page with a 6-digit OTP input.
-  - Designed the page using Material UI components with a clean, user-friendly layout.
-  - Ensured responsiveness across all devices.
-  - Added:
-    - Placeholders for OTP field
-    - Regex-based OTP validation
-  - Integrated Formik + Yup for validation and state handling.
-  - Implemented Resend OTP functionality:
-    - Resend OTP button
-    - Success/failure alert on OTP resend
-  - Added proper flow handling:
-    - Success/failure alerts on OTP verification
-    - Redirect to Login page after successful verification
-
-4. Login Page (1.5 H)
-  - Improve the Login page UI for a modern and responsive experience.
-  - Added placeholders for all fields.
-  - Implemented validation errors using Formik + Yup.
-  - Ensured consistent UX and responsiveness across all devices.
-
-5. Testing (1 H)
-  - Tested all Authentication modules (Sign Up, Login, Forgot Password, OTP Verification) across all device types (mobile, tablet, desktop).
-  - All authentication flows are working as expected.
+1. Global Translation (6 Hours)
+  - Identified and fixed pages with missing or partially applied translations.
+  - Ensured consistent translations across all modules:
+    - Removed hardcoded text
+    - Verified proper language switching behavior
+  - Added default fallback values for missing translation keys.
+  - Enhanced Language Context API to support dynamic translation values.
+  - Confirmed translation functionality in key modules:
+    - Sign In, Sign Up, OTP Verification, Forgot Password
+    - Sidebar & Navbar
+    - Dashboard
+    - Store Details
+    - Product Details & Product Edit
+    - User Management
+    - Order Hours
+2. Auth Modules
+  - Restored and added missing UI components that were unintentionally removed during translation implementation.
+  - Re-verified UI and functionality consistency after translation fixes.
 
 Project: Vnnovate Next,
 
