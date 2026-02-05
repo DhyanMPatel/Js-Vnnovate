@@ -1,0 +1,2711 @@
+openapi: 3.0.3
+info:
+  title: BookVerse Readon API
+  description: The Digital Book Experience - An innovative online book reading web app with Admin and User modules
+  version: 1.0.0
+  contact:
+    name: BookVerse Development Team
+    email: support@bookverse.com
+servers:
+  - url: http://localhost:3000/api
+    description: Development server
+  - url: https://api.bookverse.com/api
+    description: Production server
+
+tags:
+  - name: Authentication
+    description: User authentication and authorization endpoints
+  - name: Admin
+    description: Admin-specific operations
+  - name: Users
+    description: User management operations
+  - name: Books
+    description: Book catalog and management
+  - name: Orders
+    description: Order and payment processing
+  - name: Purchases
+    description: User purchased books management
+  - name: Likes
+    description: Book likes and favorites management
+  - name: Reviews
+    description: Book reviews and ratings management
+  - name: Analytics
+    description: Sales and business analytics
+  - name: Search
+    description: Advanced book search functionality
+  - name: Notifications
+    description: User notifications management
+  - name: Wishlist
+    description: User wishlist and saved books
+  - name: Cart
+    description: Shopping cart management
+  - name: Reading
+    description: Reading progress and history
+  - name: Stock
+    description: Book stock and inventory management
+  - name: Reports
+    description: System reports and exports
+
+paths:
+  # Authentication endpoints
+  /auth/register:
+    post:
+      tags:
+        - Authentication
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - email
+                - password
+              properties:
+                name:
+                  type: string
+                  example: John Doe
+                email:
+                  type: string
+                  format: email
+                  example: john@example.com
+                password:
+                  type: string
+                  minLength: 6
+                  example: password123
+                phone:
+                  type: string
+                  example: "+1234567890"
+      responses:
+        "201":
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  user:
+                    $ref: "#/components/schemas/User"
+                  token:
+                    type: string
+        "400":
+          description: Bad request
+        "409":
+          description: User already exists
+
+  /auth/login:
+    post:
+      tags:
+        - Authentication
+      summary: Login user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: john@example.com
+                password:
+                  type: string
+                  example: password123
+      responses:
+        "200":
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  user:
+                    $ref: "#/components/schemas/User"
+                  token:
+                    type: string
+        "401":
+          description: Invalid credentials
+
+  # Admin endpoints
+  /admin/dashboard:
+    get:
+      tags:
+        - Admin
+      summary: Get admin dashboard statistics
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Dashboard data retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalUsers:
+                    type: integer
+                  totalBooks:
+                    type: integer
+                  totalOrders:
+                    type: integer
+                  totalRevenue:
+                    type: number
+                  recentOrders:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Order"
+
+  /admin/users:
+    get:
+      tags:
+        - Admin
+      summary: Get all users
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+      responses:
+        "200":
+          description: Users retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  users:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/User"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+
+  /admin/users/{userId}:
+    put:
+      tags:
+        - Admin
+      summary: Update user profile
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                phone:
+                  type: string
+                isActive:
+                  type: boolean
+      responses:
+        "200":
+          description: User updated successfully
+        "404":
+          description: User not found
+
+  # Books endpoints
+  /books:
+    get:
+      tags:
+        - Books
+      summary: Get all books
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: search
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Books retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  books:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Book"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+
+    post:
+      tags:
+        - Books
+      summary: Add new book (Admin only)
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BookInput"
+      responses:
+        "201":
+          description: Book added successfully
+        "400":
+          description: Invalid input
+
+  /books/{bookId}:
+    get:
+      tags:
+        - Books
+      summary: Get book by ID
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Book retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Book"
+        "404":
+          description: Book not found
+
+    put:
+      tags:
+        - Books
+      summary: Update book (Admin only)
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BookInput"
+      responses:
+        "200":
+          description: Book updated successfully
+        "404":
+          description: Book not found
+
+    delete:
+      tags:
+        - Books
+      summary: Delete book (Admin only)
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Book deleted successfully
+        "404":
+          description: Book not found
+
+  /categories:
+    get:
+      tags:
+        - Books
+      summary: Get all book categories
+      responses:
+        "200":
+          description: Categories retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  categories:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        description:
+                          type: string
+                        bookCount:
+                          type: integer
+                        isActive:
+                          type: boolean
+
+  /categories/{categoryName}/books:
+    get:
+      tags:
+        - Books
+      summary: Get books by category
+      parameters:
+        - name: categoryName
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          schema:
+            type: string
+            enum: [newest, oldest, title, author, price_low, price_high, rating]
+            default: newest
+        - name: minPrice
+          in: query
+          schema:
+            type: number
+            minimum: 0
+        - name: maxPrice
+          in: query
+          schema:
+            type: number
+            minimum: 0
+        - name: rating
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 5
+      responses:
+        "200":
+          description: Books retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  category:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      description:
+                        type: string
+                      bookCount:
+                        type: integer
+                  books:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Book"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  filters:
+                    type: object
+                    properties:
+                      minPrice:
+                        type: number
+                      maxPrice:
+                        type: number
+                      avgRating:
+                        type: number
+        "404":
+          description: Category not found
+
+  # Analytics endpoints
+  /admin/analytics/overview:
+    get:
+      tags:
+        - Analytics
+      summary: Get sales overview analytics
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: period
+          in: query
+          schema:
+            type: string
+            enum: [today, week, month, quarter, year]
+            default: month
+      responses:
+        "200":
+          description: Analytics data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  revenue:
+                    type: object
+                    properties:
+                      total:
+                        type: number
+                      growth:
+                        type: number
+                      periodComparison:
+                        type: number
+                  orders:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                      growth:
+                        type: number
+                      averageValue:
+                        type: number
+                  topBooks:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        bookId:
+                          type: string
+                        title:
+                          type: string
+                        sales:
+                          type: integer
+                        revenue:
+                          type: number
+                  topCategories:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        category:
+                          type: string
+                        sales:
+                          type: integer
+                        revenue:
+                          type: number
+
+  /admin/analytics/sales:
+    get:
+      tags:
+        - Analytics
+      summary: Get detailed sales analytics
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: startDate
+          in: query
+          schema:
+            type: string
+            format: date
+        - name: endDate
+          in: query
+          schema:
+            type: string
+            format: date
+        - name: groupBy
+          in: query
+          schema:
+            type: string
+            enum: [day, week, month]
+            default: day
+      responses:
+        "200":
+          description: Sales analytics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  salesData:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        date:
+                          type: string
+                          format: date
+                        revenue:
+                          type: number
+                        orders:
+                          type: integer
+                        customers:
+                          type: integer
+
+  # Search endpoints
+  /search:
+    get:
+      tags:
+        - Search
+      summary: Advanced book search
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Search query
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum: [all, title, author, isbn, publisher]
+            default: all
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: minPrice
+          in: query
+          schema:
+            type: number
+            minimum: 0
+        - name: maxPrice
+          in: query
+          schema:
+            type: number
+            minimum: 0
+        - name: minRating
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 5
+        - name: language
+          in: query
+          schema:
+            type: string
+        - name: format
+          in: query
+          schema:
+            type: string
+            enum: [pdf, epub, text]
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          schema:
+            type: string
+            enum:
+              [
+                relevance,
+                newest,
+                oldest,
+                title,
+                author,
+                price_low,
+                price_high,
+                rating,
+              ]
+            default: relevance
+      responses:
+        "200":
+          description: Search results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  query:
+                    type: string
+                  totalResults:
+                    type: integer
+                  books:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Book"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  filters:
+                    type: object
+                    properties:
+                      categories:
+                        type: array
+                        items:
+                          type: string
+                      priceRange:
+                        type: object
+                        properties:
+                          min:
+                            type: number
+                          max:
+                            type: number
+
+  /search/suggestions:
+    get:
+      tags:
+        - Search
+      summary: Get search suggestions
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Partial search query
+      responses:
+        "200":
+          description: Search suggestions
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  suggestions:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        text:
+                          type: string
+                        type:
+                          type: string
+                          enum: [title, author, category]
+                        count:
+                          type: integer
+
+  # Orders endpoints
+  /orders:
+    post:
+      tags:
+        - Orders
+      summary: Create new order
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - books
+              properties:
+                books:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      bookId:
+                        type: string
+                      quantity:
+                        type: integer
+                        minimum: 1
+                shippingAddress:
+                  $ref: "#/components/schemas/Address"
+      responses:
+        "201":
+          description: Order created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Order"
+
+    get:
+      tags:
+        - Orders
+      summary: Get user orders
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+      responses:
+        "200":
+          description: Orders retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  orders:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Order"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+
+  /orders/{orderId}/payment:
+    post:
+      tags:
+        - Orders
+      summary: Initiate payment with Razorpay
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Payment initiated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  razorpayOrderId:
+                    type: string
+                  amount:
+                    type: number
+                  currency:
+                    type: string
+                  key:
+                    type: string
+
+  /orders/{orderId}/verify-payment:
+    post:
+      tags:
+        - Orders
+      summary: Verify Razorpay payment
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - razorpay_payment_id
+                - razorpay_order_id
+                - razorpay_signature
+              properties:
+                razorpay_payment_id:
+                  type: string
+                razorpay_order_id:
+                  type: string
+                razorpay_signature:
+                  type: string
+      responses:
+        "200":
+          description: Payment verified successfully
+        "400":
+          description: Invalid payment signature
+
+  # Purchased books endpoints
+  /purchased-books:
+    get:
+      tags:
+        - Purchases
+      summary: Get user's purchased books
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+      responses:
+        "200":
+          description: Purchased books retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  books:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/PurchasedBook"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+
+  /purchased-books/{purchaseId}/read:
+    get:
+      tags:
+        - Purchases
+      summary: Get book content for reading
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: purchaseId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Book content retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  content:
+                    type: string
+                  format:
+                    type: string
+                    enum: [pdf, epub, text]
+        "404":
+          description: Purchase not found
+
+  /purchased-books/{purchaseId}/download:
+    get:
+      tags:
+        - Purchases
+      summary: Download purchased book
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: purchaseId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: format
+          in: query
+          schema:
+            type: string
+            enum: [pdf, epub, text]
+            description: Preferred download format (if multiple available)
+      responses:
+        "200":
+          description: Book download link or file content
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: object
+                    properties:
+                      downloadUrl:
+                        type: string
+                        description: Direct download URL
+                      expiresAt:
+                        type: string
+                        format: date-time
+                        description: URL expiration time
+                  - type: string
+                    format: binary
+                    description: Direct file content
+        "404":
+          description: Purchase not found
+        "403":
+          description: Access denied - book not purchased
+        "410":
+          description: Download link expired
+
+  # Book Likes endpoints
+  /books/{bookId}/like:
+    post:
+      tags:
+        - Likes
+      summary: Like a book
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "201":
+          description: Book liked successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  likedBook:
+                    $ref: "#/components/schemas/LikedBook"
+        "404":
+          description: Book not found
+        "409":
+          description: Book already liked
+
+    delete:
+      tags:
+        - Likes
+      summary: Unlike a book
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Book unliked successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+        "404":
+          description: Book not found or not liked
+
+  /liked-books:
+    get:
+      tags:
+        - Likes
+      summary: Get user's liked books
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          schema:
+            type: string
+            enum: [newest, oldest, title, author]
+            default: newest
+      responses:
+        "200":
+          description: Liked books retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  likedBooks:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/LikedBook"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+
+  /books/{bookId}/likes-count:
+    get:
+      tags:
+        - Likes
+      summary: Get total likes count for a book
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Likes count retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  bookId:
+                    type: string
+                  likesCount:
+                    type: integer
+                  isLikedByUser:
+                    type: boolean
+        "404":
+          description: Book not found
+
+  # Book Reviews endpoints
+  /books/{bookId}/reviews:
+    get:
+      tags:
+        - Reviews
+      summary: Get all reviews for a book
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+        - name: sort
+          in: query
+          schema:
+            type: string
+            enum: [newest, oldest, highest, lowest]
+            default: newest
+        - name: rating
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 5
+            description: Filter by specific rating
+      responses:
+        "200":
+          description: Reviews retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reviews:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Review"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  averageRating:
+                    type: number
+                    minimum: 0
+                    maximum: 5
+                  totalReviews:
+                    type: integer
+        "404":
+          description: Book not found
+
+    post:
+      tags:
+        - Reviews
+      summary: Add a review for a book
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - rating
+                - review
+              properties:
+                rating:
+                  type: integer
+                  minimum: 1
+                  maximum: 5
+                  description: Rating from 1 to 5 stars
+                review:
+                  type: string
+                  minLength: 10
+                  maxLength: 1000
+                  description: Review text content
+                title:
+                  type: string
+                  maxLength: 100
+                  description: Optional review title
+      responses:
+        "201":
+          description: Review added successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+        "400":
+          description: Invalid input data
+        "403":
+          description: User must purchase book before reviewing
+        "404":
+          description: Book not found
+        "409":
+          description: User has already reviewed this book
+
+  /reviews/{reviewId}:
+    get:
+      tags:
+        - Reviews
+      summary: Get a specific review
+      parameters:
+        - name: reviewId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Review retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+        "404":
+          description: Review not found
+
+    put:
+      tags:
+        - Reviews
+      summary: Update a review
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: reviewId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rating:
+                  type: integer
+                  minimum: 1
+                  maximum: 5
+                review:
+                  type: string
+                  minLength: 10
+                  maxLength: 1000
+                title:
+                  type: string
+                  maxLength: 100
+      responses:
+        "200":
+          description: Review updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+        "400":
+          description: Invalid input data
+        "403":
+          description: Can only update own review
+        "404":
+          description: Review not found
+
+    delete:
+      tags:
+        - Reviews
+      summary: Delete a review
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: reviewId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Review deleted successfully
+        "403":
+          description: Can only delete own review
+        "404":
+          description: Review not found
+
+  # Notifications endpoints
+  /notifications:
+    get:
+      tags:
+        - Notifications
+      summary: Get user notifications
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum: [all, order, book, promotion, system]
+            default: all
+        - name: unread
+          in: query
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Notifications retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  notifications:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Notification"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  unreadCount:
+                    type: integer
+
+    put:
+      tags:
+        - Notifications
+      summary: Mark notifications as read
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                notificationIds:
+                  type: array
+                  items:
+                    type: string
+                markAll:
+                  type: boolean
+                  default: false
+      responses:
+        "200":
+          description: Notifications updated successfully
+
+  /notifications/{notificationId}:
+    delete:
+      tags:
+        - Notifications
+      summary: Delete notification
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: notificationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Notification deleted
+        "404":
+          description: Notification not found
+
+  # Wishlist endpoints
+  /wishlist:
+    get:
+      tags:
+        - Wishlist
+      summary: Get user's wishlist
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+      responses:
+        "200":
+          description: Wishlist retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  wishlist:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/WishlistItem"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+
+    post:
+      tags:
+        - Wishlist
+      summary: Add book to wishlist
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - bookId
+              properties:
+                bookId:
+                  type: string
+      responses:
+        "201":
+          description: Book added to wishlist
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WishlistItem"
+        "409":
+          description: Book already in wishlist
+
+  /wishlist/{bookId}:
+    delete:
+      tags:
+        - Wishlist
+      summary: Remove book from wishlist
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Book removed from wishlist
+        "404":
+          description: Book not found in wishlist
+
+  # Cart endpoints
+  /cart:
+    get:
+      tags:
+        - Cart
+      summary: Get current user's cart
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Cart retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/CartItem"
+                  summary:
+                    $ref: "#/components/schemas/CartSummary"
+
+    post:
+      tags:
+        - Cart
+      summary: Add book to cart
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CartItemInput"
+      responses:
+        "201":
+          description: Book added to cart
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CartItem"
+        "404":
+          description: Book not found
+        "409":
+          description: Book already in cart
+
+    delete:
+      tags:
+        - Cart
+      summary: Clear cart
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Cart cleared successfully
+
+  /cart/{itemId}:
+    patch:
+      tags:
+        - Cart
+      summary: Update cart item
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: itemId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CartItemUpdate"
+      responses:
+        "200":
+          description: Cart item updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CartItem"
+        "404":
+          description: Cart item not found
+
+    delete:
+      tags:
+        - Cart
+      summary: Remove cart item
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: itemId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Cart item removed
+        "404":
+          description: Cart item not found
+
+  /cart/coupon:
+    post:
+      tags:
+        - Cart
+      summary: Apply coupon to cart
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CartCoupon"
+      responses:
+        "200":
+          description: Coupon applied
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  summary:
+                    $ref: "#/components/schemas/CartSummary"
+        "404":
+          description: Coupon not found or invalid
+        "409":
+          description: Coupon already applied
+
+    delete:
+      tags:
+        - Cart
+      summary: Remove applied coupon
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Coupon removed
+
+  /cart/checkout:
+    post:
+      tags:
+        - Cart
+      summary: Checkout cart and create order
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CartCheckoutRequest"
+      responses:
+        "201":
+          description: Checkout initiated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CartCheckoutResponse"
+        "400":
+          description: Cart is empty or invalid request
+        "409":
+          description: Stock unavailable for one or more items
+
+  # Reading endpoints
+  /reading/progress:
+    get:
+      tags:
+        - Reading
+      summary: Get user's reading progress
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+      responses:
+        "200":
+          description: Reading progress retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  progress:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/ReadingProgress"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+
+    post:
+      tags:
+        - Reading
+      summary: Update reading progress
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - bookId
+                - currentPage
+              properties:
+                bookId:
+                  type: string
+                currentPage:
+                  type: integer
+                  minimum: 1
+                totalPages:
+                  type: integer
+                  minimum: 1
+                percentage:
+                  type: number
+                  minimum: 0
+                  maximum: 100
+                bookmarkPage:
+                  type: integer
+                notes:
+                  type: string
+      responses:
+        "200":
+          description: Reading progress updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReadingProgress"
+
+  /reading/history:
+    get:
+      tags:
+        - Reading
+      summary: Get reading history
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+      responses:
+        "200":
+          description: Reading history retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  history:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/ReadingHistory"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+
+  /reading/progress/{bookId}:
+    get:
+      tags:
+        - Reading
+      summary: Get reading progress for a specific book
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Reading progress retrieved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReadingProgress"
+        "404":
+          description: No reading progress found
+
+  # Stock management endpoints
+  /admin/stock:
+    get:
+      tags:
+        - Stock
+      summary: Get book stock overview
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+        - name: lowStock
+          in: query
+          schema:
+            type: boolean
+          description: Filter books with low stock
+        - name: outOfStock
+          in: query
+          schema:
+            type: boolean
+          description: Filter books that are out of stock
+      responses:
+        "200":
+          description: Stock overview retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  books:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/BookStock"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  summary:
+                    type: object
+                    properties:
+                      totalBooks:
+                        type: integer
+                      lowStockBooks:
+                        type: integer
+                      outOfStockBooks:
+                        type: integer
+
+  /admin/stock/{bookId}:
+    put:
+      tags:
+        - Stock
+      summary: Update stock for a book
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - stock
+              properties:
+                stock:
+                  type: integer
+                  minimum: 0
+                lowStockThreshold:
+                  type: integer
+                  minimum: 0
+                restockDate:
+                  type: string
+                  format: date
+                notes:
+                  type: string
+      responses:
+        "200":
+          description: Stock updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BookStock"
+        "404":
+          description: Book not found
+
+  /admin/stock/alerts:
+    get:
+      tags:
+        - Stock
+      summary: Get stock alerts
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum: [low, out, all]
+            default: all
+      responses:
+        "200":
+          description: Stock alerts retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  alerts:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/StockAlert"
+
+  # Reports endpoints
+  /admin/reports/sales:
+    get:
+      tags:
+        - Reports
+      summary: Generate sales report
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: startDate
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+        - name: endDate
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+        - name: format
+          in: query
+          schema:
+            type: string
+            enum: [json, csv, excel]
+            default: json
+        - name: groupBy
+          in: query
+          schema:
+            type: string
+            enum: [day, week, month, category]
+            default: day
+      responses:
+        "200":
+          description: Sales report generated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  report:
+                    $ref: "#/components/schemas/SalesReport"
+                  downloadUrl:
+                    type: string
+                    description: Download URL for CSV/Excel formats
+
+  /admin/reports/users:
+    get:
+      tags:
+        - Reports
+      summary: Generate user activity report
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: startDate
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+        - name: endDate
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+        - name: format
+          in: query
+          schema:
+            type: string
+            enum: [json, csv, excel]
+            default: json
+        - name: activityType
+          in: query
+          schema:
+            type: string
+            enum: [all, purchases, reviews, logins]
+            default: all
+      responses:
+        "200":
+          description: User report generated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  report:
+                    $ref: "#/components/schemas/UserReport"
+                  downloadUrl:
+                    type: string
+
+  /admin/reports/books:
+    get:
+      tags:
+        - Reports
+      summary: Generate book performance report
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: startDate
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+        - name: endDate
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+        - name: format
+          in: query
+          schema:
+            type: string
+            enum: [json, csv, excel]
+            default: json
+        - name: sortBy
+          in: query
+          schema:
+            type: string
+            enum: [sales, revenue, rating, views]
+            default: sales
+      responses:
+        "200":
+          description: Book report generated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  report:
+                    $ref: "#/components/schemas/BookReport"
+                  downloadUrl:
+                    type: string
+
+  /users/reviews:
+    get:
+      tags:
+        - Reviews
+      summary: Get current user's reviews
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+      responses:
+        "200":
+          description: User reviews retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reviews:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Review"
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+
+  # User profile endpoints
+  /users/profile:
+    get:
+      tags:
+        - Users
+      summary: Get user profile
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Profile retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+
+    put:
+      tags:
+        - Users
+      summary: Update user profile
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                phone:
+                  type: string
+                avatar:
+                  type: string
+      responses:
+        "200":
+          description: Profile updated successfully
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        avatar:
+          type: string
+        role:
+          type: string
+          enum: [user, admin]
+        isActive:
+          type: boolean
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    Book:
+      type: object
+      properties:
+        _id:
+          type: string
+        title:
+          type: string
+        author:
+          type: string
+        description:
+          type: string
+        category:
+          type: string
+        price:
+          type: number
+        stock:
+          type: integer
+        isbn:
+          type: string
+        coverImage:
+          type: string
+        fileUrl:
+          type: string
+        format:
+          type: string
+          enum: [pdf, epub, text]
+        pages:
+          type: integer
+        language:
+          type: string
+        publisher:
+          type: string
+        publishedDate:
+          type: string
+          format: date
+        rating:
+          type: number
+          minimum: 0
+          maximum: 5
+        isActive:
+          type: boolean
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    BookInput:
+      type: object
+      required:
+        - title
+        - author
+        - description
+        - category
+        - price
+        - stock
+        - isbn
+      properties:
+        title:
+          type: string
+        author:
+          type: string
+        description:
+          type: string
+        category:
+          type: string
+        price:
+          type: number
+          minimum: 0
+        stock:
+          type: integer
+          minimum: 0
+        isbn:
+          type: string
+        coverImage:
+          type: string
+        fileUrl:
+          type: string
+        format:
+          type: string
+          enum: [pdf, epub, text]
+        pages:
+          type: integer
+        language:
+          type: string
+        publisher:
+          type: string
+        publishedDate:
+          type: string
+          format: date
+
+    Order:
+      type: object
+      properties:
+        _id:
+          type: string
+        userId:
+          type: string
+        books:
+          type: array
+          items:
+            type: object
+            properties:
+              bookId:
+                type: string
+              title:
+                type: string
+              price:
+                type: number
+              quantity:
+                type: integer
+        totalAmount:
+          type: number
+        status:
+          type: string
+          enum: [pending, paid, failed, delivered]
+        paymentStatus:
+          type: string
+          enum: [pending, completed, failed]
+        shippingAddress:
+          $ref: "#/components/schemas/Address"
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    PurchasedBook:
+      type: object
+      properties:
+        _id:
+          type: string
+        userId:
+          type: string
+        bookId:
+          type: string
+        book:
+          $ref: "#/components/schemas/Book"
+        orderId:
+          type: string
+        purchaseDate:
+          type: string
+          format: date-time
+        expiryDate:
+          type: string
+          format: date-time
+        isAccessible:
+          type: boolean
+
+    Address:
+      type: object
+      required:
+        - street
+        - city
+        - state
+        - postalCode
+        - country
+      properties:
+        street:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        postalCode:
+          type: string
+        country:
+          type: string
+
+    Pagination:
+      type: object
+      properties:
+        currentPage:
+          type: integer
+        totalPages:
+          type: integer
+        totalItems:
+          type: integer
+        hasNext:
+          type: boolean
+        hasPrev:
+          type: boolean
+
+    LikedBook:
+      type: object
+      properties:
+        _id:
+          type: string
+        userId:
+          type: string
+        bookId:
+          type: string
+        book:
+          $ref: "#/components/schemas/Book"
+        likedAt:
+          type: string
+          format: date-time
+
+    Review:
+      type: object
+      properties:
+        _id:
+          type: string
+        userId:
+          type: string
+        user:
+          type: object
+          properties:
+            _id:
+              type: string
+            name:
+              type: string
+            avatar:
+              type: string
+        bookId:
+          type: string
+        book:
+          type: object
+          properties:
+            _id:
+              type: string
+            title:
+              type: string
+            author:
+              type: string
+            coverImage:
+              type: string
+        rating:
+          type: integer
+          minimum: 1
+          maximum: 5
+        review:
+          type: string
+        title:
+          type: string
+        isVerifiedPurchase:
+          type: boolean
+          description: Whether the user purchased the book
+        helpfulCount:
+          type: integer
+          default: 0
+        isEdited:
+          type: boolean
+          default: false
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    WishlistItem:
+      type: object
+      properties:
+        _id:
+          type: string
+        userId:
+          type: string
+        bookId:
+          type: string
+        book:
+          $ref: "#/components/schemas/Book"
+        addedAt:
+          type: string
+          format: date-time
+        priority:
+          type: string
+          enum: [high, medium, low]
+          default: medium
+        notes:
+          type: string
+
+    ReadingProgress:
+      type: object
+      properties:
+        _id:
+          type: string
+        userId:
+          type: string
+        bookId:
+          type: string
+        book:
+          $ref: "#/components/schemas/Book"
+        currentPage:
+          type: integer
+          minimum: 1
+        totalPages:
+          type: integer
+          minimum: 1
+        percentage:
+          type: number
+          minimum: 0
+          maximum: 100
+        bookmarkPage:
+          type: integer
+        readingTime:
+          type: integer
+          description: Total reading time in minutes
+        lastReadAt:
+          type: string
+          format: date-time
+        notes:
+          type: string
+        isCompleted:
+          type: boolean
+          default: false
+        completedAt:
+          type: string
+          format: date-time
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    ReadingHistory:
+      type: object
+      properties:
+        _id:
+          type: string
+        userId:
+          type: string
+        bookId:
+          type: string
+        book:
+          $ref: "#/components/schemas/Book"
+        startedAt:
+          type: string
+          format: date-time
+        completedAt:
+          type: string
+          format: date-time
+        totalTime:
+          type: integer
+          description: Total reading time in minutes
+        rating:
+          type: integer
+          minimum: 1
+          maximum: 5
+        notes:
+          type: string
+
+    Notification:
+      type: object
+      properties:
+        _id:
+          type: string
+        userId:
+          type: string
+        type:
+          type: string
+          enum: [order, book, promotion, system]
+        title:
+          type: string
+        message:
+          type: string
+        data:
+          type: object
+          description: Additional data related to notification
+        isRead:
+          type: boolean
+          default: false
+        priority:
+          type: string
+          enum: [high, medium, low]
+          default: medium
+        actionUrl:
+          type: string
+          description: URL to navigate when notification is clicked
+        expiresAt:
+          type: string
+          format: date-time
+        createdAt:
+          type: string
+          format: date-time
+        readAt:
+          type: string
+          format: date-time
+
+    BookStock:
+      type: object
+      properties:
+        _id:
+          type: string
+        bookId:
+          type: string
+        book:
+          $ref: "#/components/schemas/Book"
+        currentStock:
+          type: integer
+          minimum: 0
+        lowStockThreshold:
+          type: integer
+          minimum: 0
+        lastRestocked:
+          type: string
+          format: date-time
+        restockDate:
+          type: string
+          format: date
+        isLowStock:
+          type: boolean
+        isOutOfStock:
+          type: boolean
+        notes:
+          type: string
+
+    StockAlert:
+      type: object
+      properties:
+        _id:
+          type: string
+        bookId:
+          type: string
+        book:
+          $ref: "#/components/schemas/Book"
+        alertType:
+          type: string
+          enum: [low_stock, out_of_stock]
+        currentStock:
+          type: integer
+        threshold:
+          type: integer
+        message:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        isResolved:
+          type: boolean
+          default: false
+
+    SalesReport:
+      type: object
+      properties:
+        period:
+          type: object
+          properties:
+            startDate:
+              type: string
+              format: date
+            endDate:
+              type: string
+              format: date
+        summary:
+          type: object
+          properties:
+            totalRevenue:
+              type: number
+            totalOrders:
+              type: integer
+            averageOrderValue:
+              type: number
+            growth:
+              type: number
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              date:
+                type: string
+                format: date
+              revenue:
+                type: number
+              orders:
+                type: integer
+              customers:
+                type: integer
+
+    UserReport:
+      type: object
+      properties:
+        period:
+          type: object
+          properties:
+            startDate:
+              type: string
+              format: date
+            endDate:
+              type: string
+              format: date
+        summary:
+          type: object
+          properties:
+            totalUsers:
+              type: integer
+            newUsers:
+              type: integer
+            activeUsers:
+              type: integer
+            totalPurchases:
+              type: integer
+            totalReviews:
+              type: integer
+        activities:
+          type: array
+          items:
+            $ref: "#/components/schemas/UserActivity"
+
+    BookReport:
+      type: object
+      properties:
+        period:
+          type: object
+          properties:
+            startDate:
+              type: string
+              format: date
+            endDate:
+              type: string
+              format: date
+        summary:
+          type: object
+          properties:
+            totalBooks:
+              type: integer
+            totalSales:
+              type: integer
+            totalRevenue:
+              type: number
+            averageRating:
+              type: number
+        topBooks:
+          type: array
+          items:
+            type: object
+            properties:
+              bookId:
+                type: string
+              title:
+                type: string
+              sales:
+                type: integer
+              revenue:
+                type: number
+              rating:
+                type: number
+
+    UserReadingStats:
+      type: object
+      properties:
+        userId:
+          type: string
+        totalBooksRead:
+          type: integer
+        totalPagesRead:
+          type: integer
+        totalReadingTime:
+          type: integer
+          description: Total reading time in minutes
+        averageReadingSpeed:
+          type: number
+          description: Pages per hour
+        favoriteGenres:
+          type: array
+          items:
+            type: string
+        currentStreak:
+          type: integer
+          description: Current reading streak in days
+        longestStreak:
+          type: integer
+        thisMonth:
+          type: object
+          properties:
+            booksRead:
+              type: integer
+            pagesRead:
+              type: integer
+            readingTime:
+              type: integer
+
+    UserActivity:
+      type: object
+      properties:
+        _id:
+          type: string
+        userId:
+          type: string
+        activityType:
+          type: string
+          enum: [login, purchase, review, like, wishlist, reading]
+        description:
+          type: string
+        metadata:
+          type: object
+          description: Additional activity data
+        ipAddress:
+          type: string
+        userAgent:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
