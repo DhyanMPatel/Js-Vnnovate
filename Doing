@@ -1,38 +1,21 @@
 ## Work Doing:
 
-Date: 5 Feb, 2026
-Day: Thursday,
+Date: 6 Feb, 2026
+Day: Friday,
 
 Today, I am work on below list of task:
 
-Project: Sales CRM,
-
-1. Dashboard module (1 H)
-  - Investigate why Today’s Task list is not displaying correctly on the Dashboard.
-  - Update the task filtering logic:
-    - Change time range from 6:30 AM – 6:29 PM format
-    - To 12:00 AM – 11:59 PM format for accurate daily task visibility.
-
 Project: E-Order,
 
-1. Global Translation (6 Hours)
-  - Identified and fixed pages with missing or partially applied translations.
-  - Ensured consistent translations across all modules:
-    - Removed hardcoded text
-    - Verified proper language switching behavior
-  - Added default fallback values for missing translation keys.
-  - Enhanced Language Context API to support dynamic translation values.
-  - Confirmed translation functionality in key modules:
-    - Sign In, Sign Up, OTP Verification, Forgot Password
-    - Sidebar & Navbar
-    - Dashboard
-    - Store Details
-    - Product Details & Product Edit
-    - User Management
-    - Order Hours
-2. Auth Modules
-  - Restored and added missing UI components that were unintentionally removed during translation implementation.
-  - Re-verified UI and functionality consistency after translation fixes.
+1. Translation Enhancements (6 H)
+  - Translated all dummy/static data across the application.
+  - Reviewed all modules and pages to:
+    - Identify missing translations
+    - Implement translation functionality wherever it was still pending
+  - Ensured consistent usage of the translation system across the app.
+
+2. Login Flow Improvement (1 H)
+  - Removed the unnecessary Error Alert popup during the Login process to improve user experience.
 
 ## Work done:
 
@@ -52,7 +35,7 @@ Project: Sales CRM,
 
 Project: E-Order,
 
-1. Global Translation (6 Hours)
+1. Global Translation (5 Hours)
   - Identified and fixed pages with missing or partially applied translations.
   - Ensured consistent translations across all modules:
     - Removed hardcoded text
@@ -67,7 +50,7 @@ Project: E-Order,
     - Product Details & Product Edit
     - User Management
     - Order Hours
-2. Auth Modules
+2. Auth Modules (1 H)
   - Restored and added missing UI components that were unintentionally removed during translation implementation.
   - Re-verified UI and functionality consistency after translation fixes.
 
@@ -232,188 +215,217 @@ Project: Dealer Data,
 to: Vasik sir, Rupendra sir
 Cc: Roshani ma'am, Vanshita ma'am
 
-**Subject**: Weekly (26 Dec - 30 Jan) Report of Dhyan
 
 Project: Vnnovate Next,
 
 Git Commit ID: 83606930bf972fe79669d57a333bcf1f74a95860
 Git Commit Link: https://gitlab.com/devarshi_vnnovate/vnnovate-next/-/commit/83606930bf972fe79669d57a333bcf1f74a95860
 
-Description:
-
-1. Blog Module
-     - Added a new blog titled “How Organizations Can Successfully Integrate LLMs into Existing Systems.” (0.5 hours)
-     - Created and structured relevant content and images aligned with the topic. (2 hours)
-     - Designed and enhanced the blog section for a better user experience. (2 hours)
-
-2. Footer – Office Section (0.5 hours)
-     - Improved UI by adding appropriate padding to the Office Section for better layout and readability in 1100px–768px screenwidths.
-
-3. Privacy Policy Page (5 hours)
-     - Verified and ensured full responsiveness across all device sizes. (1.5 hours)
-     - Updated color scheme to match the application’s theme color for visual consistency. (0.5 hours)
-
-- Try to Solve scrolling functionality improvement for tablet/mobile devices. (3 hours)
-
-4. Blog Module – LLM Integration Blog
-
-- Blog: “How Organizations Can Successfully Integrate LLMs into Existing Systems”
-  - Updated the featured image to better align with the blog content. (0.5 hours)
-  - “Key Benefits of LLM Integration for Enterprises”
-    - Modified layout and improved responsiveness across devices. (1.5 hours)
-  - “Common LLM Integration Challenges (and How to Solve Them)"
-    - Improved UI structure for clearer readability and better user experience. (1.5 hours)
-  - “KPIs to Measure LLM Integration Success”
-    - Enhanced UI layout for better visual hierarchy and user engagement. (1.5 hours)
-- Testing across all devices. (0.5 hours)
-
-Project: E-Order,
-
-Git Commit ID:
-Git Commit Link: https://gitlab.com/vnnovatesolutions/eorder-webapp/-/commit/
-
-1. Understand Project Figma (4 hours)
-
-- Reviewed the overall design system, including typography, colors, spacing, and components.
-- Analyzed layout structure across pages.
-- Identified reusable components and common design patterns for efficient implementation.
-- Discussed with Monika about the project.
-
-2. Project Setup & Initial Understanding (0.5 hours)
-
-- Set up the project on my local machine and run it.
-
-3. Google Sheet – Pending Sections Tracking (3.5 hours)
-
-- Created/updated a Google Sheet with Disha to track pending sections/pages that need to be added or completed in the project.
-  - Home Page, Store Details Page, Product Details Page, Cart Page, Order History Page, Re-Order Modal, Replace Order Modal, Merge Order Modal, Favorite Page, Favorite Items Page
-
-Project: Sales CRM,
-
-Git Commit ID: a81ef793af67722269f5a50f4fab230d8c58cbb6
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/a81ef793af67722269f5a50f4fab230d8c58cbb6
-
-Description:
-
-1. Lead AutoComplete Functionality (2 Hours)
-  - Research and identify similar AutoComplete implementations in the existing codebase or network.
-  - Understand the functional requirements and expected behavior of the new AutoComplete feature.
-  - Prepare a complete change list
-  -Start implementing the AutoComplete feature based on:
-    - Search behavior
-    - Data matching logic
-    - Personal analysis and design approach
-
-2. Lead Creation Option Dialog (1 Hour)
-  - Design and implement a new dialog/modal with lead creation options:
-    - New Lead
-    - Existing Lead
-  - Handle option selection logic.
-  -Based on the selected option:
-    - Control which lead form flow should be displayed.
-
-3. Lead Form Enhancements (1.5 Hours)
-  - New Lead Flow
-    - Keep the implementation consistent with the existing Lead creation logic.
-    - Ensure no regression in validations and business rules. - In Progress
-  - Existing Lead Flow
-    - Display the Lead form pre-filled with existing Lead data. - In Progress
-
-Project: BEC,
-
-1. Events Module – Flow Understanding
-
-- Explore the end-to-end flow of the Events module.
-- Understand:
-  - Event creation lifecycle
-  - Event visibility and access rules
-  - Role-based behavior (Admin vs Guest)
-
-2. Guest Registration via Event Link
-
-- Register a user through the public event link.
-- Trace and understand all related routes:
-  - Event link access
-  - Guest registration form
-- Analyze the complete guest participation journey, including:
-  - Registration
-  - Check-in
-  - Feedback
-  - Rate
-
-3. Events Module – Feature Exploration
-
-- Review and understand:
-  - Export Events functionality
-  - Event Media page (uploads, previews, permissions)
-  - Task Notes page
-  - Reminder Notes page
-
-4. Booking Modules – Page-Level Review
-
-- Explore and understand the following booking flows: - In Progress
-  - Fleet Bookings
-  - Instructor Bookings
-  - Room Bookings
-
-5. Codebase Setup
-
-- Clone the project from the branch:
-  - bk-staging-old-node
-- Run the project locally and verify:
-  - Environment configuration
-  - Database connectivity
-
-6. Testing & QA
-
-- Tested modules thoroughly.
-- Identified bugs and shared findings with Rahul Sir for fixes.
-
 Project: Media Planner,
 
 Git Commit ID: 3653fda296650dee81c132c046b35445067ab2d9
 Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/3653fda296650dee81c132c046b35445067ab2d9
 
-Description:
 
-1. User Module
+**Subject**: Weekly (2 Feb - 6 Feb) Report of Dhyan
 
-- Added "Check All Modules" checkbox for easier permission selection.
-- Improved UI of the Permission Step in Add/Edit User flow.
 
-2. Testing Scenarios
+Project: E-Order,
 
-- Performed full permission-based testing across all user roles to verify:
-- Sidebar visibility
-- Module access
-- Action-level permission behavior
-
-3. Placement Route Issue
-
-- Resolved Placement route navigation issue.
-
-4. Time-Slot Naming Update
-
-- Updated "Time-slot" → "Placement"
-- Applied changes in Add, Edit & Delete modals.
-
-5. Media Plan
-
-- Solve Placement related issue on Add Media plan module
-- Solve Issue of Getting data in Edit Media plan. - In Progress
+Git Commit ID: 00e17535124aa3cccc86e65441620411c17c3406
+Git Commit Link: https://gitlab.com/vnnovatesolutions/eorder-webapp/-/commit/00e17535124aa3cccc86e65441620411c17c3406
 
 Description:
 
-1. Sidebar Improvements
+1. Implement role-based visual feedback for the Favorite icon: (0.5 H)
+  - Admin - When selected/clicked → apply Yellow color
+  - Manager - When selected/clicked → apply Blue color
+  - Default State - When no role-based selection → apply Gray color
+  - Ensure the color updates immediately on click and reflects the correct state after page refresh (if persisted).
+ 
+2. Display role-based messages when adding or removing an item from Favorites: (0.5 H)
+  - Admin
+    - Add → "Added to Super Favorites"
+    - Remove → "Removed from Super Favorites"
+  - Manager
+    - Add → "Added to Favorites"
+    - Remove → "Removed from Favorites"
+  - Message should update dynamically based on the logged-in user’s role.
+ 
+3. Signup Page (Web App) (0.75 H)
+  - Create a Signup page strictly according to the Figma design.
 
-- Moved Profile section from bottom to top for better accessibility.
-- Updated icons for all sidebar menu items.
-- Reworked Sidebar UI (open/collapsed) to match the latest Figma design.
-- Coordinated with Rahul sir and updated the position of the sidebar toggle button.
+4. Sign Up Screen (1.5 H)
+  - Implemented Material UI components for a modern and consistent interface.
+  - Verified UI with Rahul Sir.
+  - Ensured full responsiveness across mobile, tablet, and desktop devices.
+  - Implemented comprehensive form validations with Formik + Yup, including:
+    - Required field checks
+    - Regex-based validation where applicable
+  - Added placeholders for all input fields to improve usability.
+  - Implemented proper navigation:
+    - Redirect to Login page after successful account creation.
+  - Added success and failure feedback messages for account creation status.
+ 
+5. Forgot Password Screen (1.5 H)
+  - Created and designed the Forgot Password page with Material UI components.
+  - Ensured responsive design for all screen sizes.
+  - Implemented Formik + Yup for handling form data and validations.
+  - Added:
+    - Validation errors with regex-based rules
+    - Placeholders for all input fields
+  - Implemented complete Forgot Password flow:
+    - Display Success/failure alert when reset link is requested
+    - Display Success/failure alert after password reset
+    - Redirect user to Login page after Forgot password flow completion
+ 
+6. OTP Verification Screen (1.5 H)
+  - Implemented OTP Verification page with a 6-digit OTP input.
+  - Designed the page using Material UI components with a clean, user-friendly layout.
+  - Ensured responsiveness across all devices.
+  - Added:
+    - Placeholders for OTP field
+    - Regex-based OTP validation
+  - Integrated Formik + Yup for validation and state handling.
+  - Implemented Resend OTP functionality:
+    - Resend OTP button
+    - Success/failure alert on OTP resend
+  - Added proper flow handling:
+    - Success/failure alerts on OTP verification
+    - Redirect to Login page after successful verification
+ 
+7. Login Page (1.5 H)
+  - Improve the Login page UI for a modern and responsive experience.
+  - Added placeholders for all fields.
+  - Implemented validation errors using Formik + Yup.
+  - Ensured consistent UX and responsiveness across all devices.
+ 
+8. Testing (1 H)
+  - Tested all Authentication modules (Sign Up, Login, Forgot Password, OTP Verification) across all device types (mobile, tablet, desktop).
+  - All authentication flows are working as expected.
 
-2. Breadcrumb
+9. Store Details Page (0.5 H)
+  - Fixed Quantity Control and Add to Cart button issues where actions were not working correctly.
+  - Resolved issue where clicking the Favorite icon in the product list was incorrectly redirecting to the Product Details page instead of toggling favorite.
+ 
+10. Product Details Page (0.5 H)
+  - Implemented role-based visual behavior for the Favorite icon.
+    - Admin: Yellow color when selected
+    - Manager: Blue color when selected
+    - Default: Gray color when not selected
+  - Updated Product Title color to white for better visibility and UI consistency.
+ 
+11. Store Favorites Page (0.5 H)
+  - Implemented role-based visual behavior for the Favorite icon.
+    - Admin: Yellow color when selected
+    - Manager: Blue color when selected
+    - Default: Gray color when not selected
+  - Made the Page Title clickable, redirecting users directly to the corresponding Store Details page.
+ 
+12. Testing (1 H)
+  - Tested Store Details Page, Product Details Page,Favorites page, Store Favorites Page, Profile page and compared with Figma.
 
-- Implemented Breadcrumb navigation throughout the application.
+13. Global Translation (5 H)
+  - Identified and fixed pages with missing or partially applied translations.
+  - Ensured consistent translations across all modules:
+    - Removed hardcoded text
+    - Verified proper language switching behavior
+  - Added default fallback values for missing translation keys.
+  - Enhanced Language Context API to support dynamic translation values.
+  - Confirmed translation functionality in key modules:
+    - Sign In, Sign Up, OTP Verification, Forgot Password
+    - Sidebar & Navbar
+    - Dashboard
+    - Store Details
+    - Product Details & Product Edit
+    - User Management
+    - Order Hours
+
+14. Auth Modules (1 H)
+  - Restored and added missing UI components that were unintentionally removed during translation implementation.
+  - Re-verified UI and functionality consistency after translation fixes.
+
+15. Translation Enhancements (6 H)
+  - Translated all dummy/static data across the application.
+  - Reviewed all modules and pages to:
+    - Identify missing translations
+    - Implement translation functionality wherever it was still pending
+  - Ensured consistent usage of the translation system across the app.
+
+16. Login Flow Improvement (1 H)
+  - Removed the unnecessary Error Alert popup during the Login process to improve user experience.
+
+Project: Sales CRM,
+
+Git Commit ID: 87ced30fc8d066f3a3fbbaad745a0f60d73c6674
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/87ced30fc8d066f3a3fbbaad745a0f60d73c6674
+
+Description:
+
+1. Lead Create Operation (2.5 H)
+  - If the user creates a Lead from an Existing Lead:
+    - Pre-fill all available data for better user experience.
+  - Allow Lead creation even if:
+    - First Name, Last Name, Email, Phone Number are same as the source Lead.
+  - If Leads are already connected:
+    - Skip existing-lead uniqueness validation during creation.
+  - During creation of a derived Lead:
+    - Pass sourceId to maintain link between Leads.
+  - User must be able to:
+    - Edit any field of the derived Lead during creation.
+ 
+2. Lead Update Operation (1 H)
+  - If the Lead has connected Leads:
+    - Skip existing-lead uniqueness validation during update.
+  - User can:
+    - Edit any field of the derived Lead without restriction.
+ 
+3. Lead delete Operation (0.5 H)
+  - If the Lead has connected Leads:
+    - Skip existing-lead validation during delete operation.
+  - Ensure delete logic does not break Lead linkage integrity.
+ 
+4. Task Completion Note activity timeline (0.25 H)
+  - Display Task Completion Notes:
+    - On a new line in the Activity Timeline
+    - Improve readability and clarity for users.
+ 
+5. Testing Lead with different roles (1 H)
+  - Admin & Sales Head
+    - Full access:
+      - View, create, update, delete any Lead
+      - Create derived Leads from any Lead
+  - BDM
+    - Can:
+      - View their own Leads and team members’ Leads
+    - Can create derived Leads:
+      - Only from Leads assigned to them
+  - BDE
+    - Can:
+      - View only their assigned Leads
+    - Can create derived Leads:
+      - Only from Leads assigned to them
+  - Test in Local & QA server.
+
+6. Activity Log & Follow-up Enhancement (4 H)
+  - Clear Implementation of Follow-up task creation flow.
+  - Added Next Follow-up Date & Time field to the Activity Log.
+  - Implemented automatic reminder task creation when a Follow-up Date & Time is provided.
+  - Ensured the auto-created task:
+    - Appears correctly in the Activity Log inside Lead details page.
+    - Is visible and manageable in the Task Module.
+  - Verified end-to-end flow:
+    - Activity → Task creation → Task listing works without manual refresh.
+  - Solving Today's Task did not display to Dashboard. - In Progress
+ 
+7. Testing (0.5 H)
+  - Test Activity Log & Follow-up functionality in Local and QA.
+
+8. Dashboard module (1 H)
+  - Investigate why Today’s Task list is not displaying correctly on the Dashboard.
+  - Update the task filtering logic:
+    - Change time range from 6:30 AM – 6:29 PM format
+    - To 12:00 AM – 11:59 PM format for accurate daily task visibility.
 
 ## Leave Request
 
