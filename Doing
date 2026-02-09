@@ -1,58 +1,71 @@
 ## Work Doing:
 
-Date: 6 Feb, 2026
-Day: Friday,
+Date: 9 Feb, 2026
+Day: Monday,
 
 Today, I am work on below list of task:
 
 Project: E-Order,
 
-1. Translation Enhancements (6 H)
-  - Translated all dummy/static data across the application.
-  - Reviewed all modules and pages to:
-    - Identify missing translations
-    - Implement translation functionality wherever it was still pending
-  - Ensured consistent usage of the translation system across the app.
+1. Project Status & Reporting (2 H)
+  - Create a current project status report covering:
+    - Completed features, In-progress modules, Pending work, Known issues / risks
 
-2. Login Flow Improvement (1 H)
-  - Removed the unnecessary Error Alert popup during the Login process to improve user experience.
+2. Access & Coordination (1 H)
+  - Connect with Vasik Sir or Nikul Bhai to obtain:
+    - Mobile app login credentials
+
+3. Mobile App Analysis (2 H)
+  - Analyze the E-Order mobile application:
+
+Project : Sales CRM,
+
+1. Activity Log Enhancements (0.5 H)
+  - Add two new Activity Types to the Activity Log:
+    - WhatsApp Message / Call
+    - LinkedIn Message
 
 ## Work done:
 
 EOD,
-Date: 5 Feb, 2026
-Day: Thursday,
+Date: 9 Feb, 2026
+Day: Monday,
 
 Today, I am worked on below list of task:
 
 Project: Sales CRM,
 
-1. Dashboard module (1 H)
-  - Investigate why Today’s Task list is not displaying correctly on the Dashboard.
-  - Update the task filtering logic:
-    - Change time range from 6:30 AM – 6:29 PM format
-    - To 12:00 AM – 11:59 PM format for accurate daily task visibility.
+1. Dashboard Improvements (2 H)
+  1.1 New Dashboard Blocks
+    - Add two new KPI blocks on the Dashboard:
+      A. Projects Awarded
+        - Displays the count of Leads with stage = “Won / Project Awarded”
+        - Role-based data visibility:
+          - Admin & Sales Head → Count of all Won leads
+          - BDM & BDE → Count of only their assigned Won leads
+      B. Booking Amount
+        - Displays the total Lead Value of Leads included in the Projects Awarded block.
+        - Role-based data visibility:
+          - Admin & Sales Head → Sum of all Won leads
+          - BDM & BDE → Sum of only their assigned Won leads
+  1.2 UI Update
+    - Change Won stage color to Green.
+
+2. Activity Log Enhancements ( 1 Hour)
+  - Add two new Activity Types to the Activity Log:
+    - WhatsApp Message / Call
+    - LinkedIn Message
+
+3. Tested all above functionality in Local/QA Server. (0.5 H)
 
 Project: E-Order,
 
-1. Global Translation (5 Hours)
-  - Identified and fixed pages with missing or partially applied translations.
-  - Ensured consistent translations across all modules:
-    - Removed hardcoded text
-    - Verified proper language switching behavior
-  - Added default fallback values for missing translation keys.
-  - Enhanced Language Context API to support dynamic translation values.
-  - Confirmed translation functionality in key modules:
-    - Sign In, Sign Up, OTP Verification, Forgot Password
-    - Sidebar & Navbar
-    - Dashboard
-    - Store Details
-    - Product Details & Product Edit
-    - User Management
-    - Order Hours
-2. Auth Modules (1 H)
-  - Restored and added missing UI components that were unintentionally removed during translation implementation.
-  - Re-verified UI and functionality consistency after translation fixes.
+1. Global Translation (2 H)
+  - Remove Consoles.
+  - Solve translation issue related to dynamic values.
+2. Create Google Sheet for (2 H)
+  - Pending task which is either not cleared or not completed. 
+  - Mark completed task as Done.
 
 Project: Vnnovate Next,
 
