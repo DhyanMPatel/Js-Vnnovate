@@ -9,7 +9,12 @@
     "id": 1764159460111,
     "name": "Kamal Payne",
     "email": "test-qa@gmail.com",
-    "password": "12341234"
+    "password": "12341234",
+    "message": "testing file upload functionality",
+    "file": {
+      "name": "image (4).png",
+      "path": "D:\\dhyan\\LPV-13\\Work\\Code\\Dhyan\\Js-Vnnovate\\Node js\\Express JS\\Node Core Practice Project with Express\\files\\image (4).png"
+    }
   },
   {
     "id": 1764159575638,

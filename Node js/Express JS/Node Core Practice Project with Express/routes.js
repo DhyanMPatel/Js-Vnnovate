@@ -8,6 +8,7 @@ import { handleHome } from "./controllers/homeController.js";
 import { handleUsers } from "./controllers/userController.js";
 import path from "path";
 import { fileURLToPath } from "url";
+import { upload } from "./utils/fileUpload.js";
 
 // Get current directory path in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -18,11 +19,14 @@ const router = express.Router();
 // GET / - Home
 router.get("/", handleHome);
 
+router.post("/users/:id/upload", upload.single("file"), handleUsers);
+
 // GET /users - List users
 router.get("/users", handleUsers);
 
 // POST /users - Add user (JSON)
 router.post("/users", handleUsers);
+
 
 // POST /api/register - Add user (from HTML form)
 router.post("/api/register", handleUsers);

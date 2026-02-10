@@ -13,8 +13,45 @@ async function handleUsers(req, res) {
     try {
       const users = await getUsers();
       res.json(users);
+      return;
     } catch (error) {
       res.status(500).json({ message: "Error fetching users" });
+      return;
+    }
+  }
+
+  if (method === "POST" && req.params.id) {
+    try {
+      const { message } = req.body;
+      const file = req.file;
+
+      let users = await getUsers();
+
+      let UpdatedUser = users.find((user) => user.id == req.params.id);
+
+      UpdatedUser = {
+        ...UpdatedUser,
+        message: message,
+        file: {
+          name: file.originalname,
+          path: file.path,
+        },
+      };
+
+      const updatedUsers = users.map((user) => {
+        if (user.id == UpdatedUser.id) {
+          return UpdatedUser;
+        }
+        return user
+      });
+
+      await saveUsers(updatedUsers);
+
+      res.json({ message: "User Updated", data: UpdatedUser });
+      return;
+    } catch (error) {
+      res.status(400).json({ message: "Invalid data", error: error.message });
+      return;
     }
   }
 
@@ -28,8 +65,10 @@ async function handleUsers(req, res) {
       await saveUsers(users);
 
       res.status(201).json({ message: "User Added", data: newUser });
+      return;
     } catch (error) {
       res.status(400).json({ message: "Invalid data", error: error.message });
+      return;
     }
   }
 }
