@@ -1,62 +1,61 @@
 ## Work Doing:
 
-Date: 9 Feb, 2026
-Day: Monday,
+Date: 10 Feb, 2026
+Day: Tuesday,
 
 Today, I am work on below list of task:
 
-Project: E-Order,
+Project: Sales CRM,
 
-1. Project Status & Reporting (2 H)
-  - Create a current project status report covering:
-    - Completed features, In-progress modules, Pending work, Known issues / risks
+1. Test new Dashbaord blocks through adding new lead. (0.5 H)
+2. Solve issue if there any error related to that functionality. (0.5 H)
 
-2. Access & Coordination (1 H)
-  - Connect with Vasik Sir or Nikul Bhai to obtain:
-    - Mobile app login credentials
+Project : E-Order,
 
-3. Mobile App Analysis (2 H)
-  - Analyze the E-Order mobile application:
+1. 
 
-Project : Sales CRM,
-
-1. Activity Log Enhancements (0.5 H)
-  - Add two new Activity Types to the Activity Log:
-    - WhatsApp Message / Call
-    - LinkedIn Message
 
 ## Work done:
 
 EOD,
-Date: 9 Feb, 2026
-Day: Monday,
+Date: 10 Feb, 2026
+Day: Tuesday,
 
 Today, I am worked on below list of task:
 
-Project: Sales CRM,
+Project: Sales CRM (2 H)
+1. Dashboard Validation
+  - Tested newly added Dashboard blocks by creating Leads with Won / Project Awarded stage.
+  - Verified:
+    - Correct Projects Awarded count.
+    - Accurate Booking Amount calculation (sum of Lead values).
+    - Role-based visibility logic (Admin/Sales Head vs BDM/BDE).
+2. Deployment & Coordination
+  - Requested Vasik sir to deploy the latest changes to the Live server.
+  - Informed Ashish sir and Veer sir to review and validate the new Dashboard implementations after deployment.
 
-1. Dashboard Improvements (2 H)
-  1.1 New Dashboard Blocks
-    - Add two new KPI blocks on the Dashboard:
-      A. Projects Awarded
-        - Displays the count of Leads with stage = “Won / Project Awarded”
-        - Role-based data visibility:
-          - Admin & Sales Head → Count of all Won leads
-          - BDM & BDE → Count of only their assigned Won leads
-      B. Booking Amount
-        - Displays the total Lead Value of Leads included in the Projects Awarded block.
-        - Role-based data visibility:
-          - Admin & Sales Head → Sum of all Won leads
-          - BDM & BDE → Sum of only their assigned Won leads
-  1.2 UI Update
-    - Change Won stage color to Green.
+Project: Learning (Node.js)
+1. JWT (JSON Web Token) Revision (2 H)
+  - Revised:
+    - JWT format (Header, Payload, Signature)
+    - Types of tokens (Access Token, Refresh Token)
+    - Two approaches to create & verify JWT:
+      - Using secret key
+      - Using public/private key (asymmetric)
+    - Implemented JWT authentication in a simple Node.js project.
+3. Multer (2 H)
+  - Explored Multer for file handling:
+    - File upload middleware
+    - Handling single & multiple file uploads
+    - Storage configuration and validation basics.
+2. NodeMailer (1 H)
+  - Learning basics of NodeMailer:
+    - SMTP configuration
+    - Sending emails from Node.js (In Progress)
 
-2. Activity Log Enhancements ( 1 Hour)
-  - Add two new Activity Types to the Activity Log:
-    - WhatsApp Message / Call
-    - LinkedIn Message
-
-3. Tested all above functionality in Local/QA Server. (0.5 H)
+Project: Other,
+1. Support Task (0.5 H)
+  - Assisted Kunal with GitLab authentication issues and helped resolve access/login-related problems.
 
 Project: E-Order,
 
