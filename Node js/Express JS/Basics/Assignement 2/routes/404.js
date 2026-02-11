@@ -1,11 +1,10 @@
 const path = require('path');
 
 const express = require('express');
+const { NotFoundController } = require('../controller/404Controller');
 
 const router = express.Router();
 
-router.use((req,res,next) => {
-    res.status(404).sendFile(path.join(__dirname, '../', 'views', '404.html')); // '../' is required because we are now at routes folder
-})
+router.use(NotFoundController); // Using the controller function to handle 404 errors
 
 module.exports = router;

@@ -24,6 +24,9 @@
 
 - `express` : Heart of Node js application.
 - `body-parser` : Automatically parse the body in request.
+- `ejs` : Template engine.
+- `pug` : 
+- `express-handlebars` :
 
 ### DevDependencies
 

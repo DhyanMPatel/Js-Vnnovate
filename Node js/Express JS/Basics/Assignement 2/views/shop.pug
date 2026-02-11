@@ -1,0 +1,52 @@
+extends layouts/main-layout.pug
+
+
+
+block content
+    main.main
+            h1 #{pageTitle}
+            p List of all Products
+            p Shop File from Pug Template Engine
+
+            if products.length > 0
+                ul
+                    each product in products
+                        li #{product.title}
+            else
+                p No products found.
+
+block styles
+    link(rel="stylesheet", href='/css/main.css')
+
+
+
+
+//- doctype html
+//- html(lang="en")
+//-     head
+//-         meta(charset="UTF-8")
+//-         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-         title #{pageTitle}
+//-         link(rel="stylesheet", href='/css/main.css')
+//-     body 
+//-         header.header
+//-             nav
+//-                 ul.lists
+//-                     li.list-item
+//-                         a(href="/admin/products") Products
+//-                     li.list-item
+//-                         a(href="/admin/add-product") Add Product
+//-                     li.list-item
+//-                         a(href="/") Shop
+        
+//-         main.main
+//-             h1 #{pageTitle}
+//-             p List of all Products
+//-             p Shop File from Pug Template Engine
+
+//-             if products.length > 0
+//-                 ul
+//-                     each product in products
+//-                         li #{product.title}
+//-             else
+//-                 p No products found.

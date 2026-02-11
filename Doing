@@ -15,24 +15,46 @@ Project: Learning,
 ## Work done:
 
 EOD,
-Date: 27 Nov, 2025
-Day: Thursday,
+Date: 1 Des, 2025
+Day: Monday,
 
 Today, I am worked on below list of task:
 Project: Learning
 1. React + Redux Documentation
   - Creating core concepts and official documentation.
 
-Status: In Progress
-
-Project: Media Planner
+Project: Media Planner,
 1. User Module
-  - Added User-based Permissions during Add User functionality.
-  - Displayed and updated permissions in the Edit User page.
-  - Coordinated with Bhautik bhai for required backend changes in Get, Add, and Update APIs.
-2. Permission Module
-  - Updated logic to display sidebar routes based on user-level permissions instead of role-based permissions.
-  - Added logic to render side-menu items dynamically per-user permissions.
+  - Added "Check All Modules" checkbox for easier permission selection.
+  - Improved UI of the Permission Step in Add/Edit User flow.
+
+2. Testing Scenarios
+  - Performed full permission-based testing across all user roles to verify:
+    - Sidebar visibility
+    - Module access
+    - Action-level permission behavior
+
+3. Placement Route Issue
+  - Resolved Placement route navigation issue.
+
+4. Time-Slot Naming Update
+  - Updated "Time-slot" → "Placement"
+    - Applied changes in Add, Edit & Delete modals.
+
+Project: Learning,
+
+1. Node Basices
+2. Node Core Modules
+	- Built-in modules (HTTP, fs, path, event)
+	- Third-party modules
+	- Global Variables/objects
+3. Node Modules
+	- ES6
+	- CommonJS
+4. Error Handling
+	-  4 Types (try-catch, callback fns, promises, async-await)
+5. Event loop
+	- Understanding the workflow of the Node.js Event Loop — In Progress
 
 Project: Other,
 
@@ -255,7 +277,7 @@ Leads Module
 ## Leave Request
 
 to: Rahul
-Cc: mansi ma'am, vasik sir, Ashish sir
+Cc: mansi ma'am, vasik sir and rupendra sir
 
 Subject: Leave Request for 6-Oct-2025
 

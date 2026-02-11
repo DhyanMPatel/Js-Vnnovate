@@ -20,11 +20,11 @@ npm init
         - `require` : It is used to import modules.
         - `module` : It is used to get the module information.
         - `exports` : It is used to export the module.
-
     ```js
     console.log(__dirname);
     console.log(__filename);
     ```
+    - **Note** : some of them are not available in ES modules. like `__dirname`, `__filename`, `require`, `module`, `exports` not work. where some of them work like `console`, `process`, `global`, `setTimeout`, `setInterval`, `Buffer`, etc.
 
 - **Core Modules** : There are the modules which needs to import to use them.
     - Core modules are the modules which are built-in modules of Node.js.

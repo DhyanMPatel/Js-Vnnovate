@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Live Ticker WebSocket Demo</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        max-width: 600px;
+        margin: 40px auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 4px 8px;
+        text-align: left;
+      }
+      #status {
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Live Ticker WebSocket Demo</h1>
+    <div id="status">Connecting...</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <script>
+      const statusEl = document.getElementById("status");
+      const tbody = document.getElementById("tbody");
+
+      const protocol = location.protocol === "https:" ? "wss" : "ws";
+      const socketUrl = `${protocol}://${location.host}`;
+      const socket = new WebSocket(socketUrl);
+
+      socket.addEventListener("open", () => {
+        statusEl.textContent = "Connected";
+      });
+
+      socket.addEventListener("message", (event) => {
+        const msg = JSON.parse(event.data);
+        if (msg.type === "info") {
+          statusEl.textContent = msg.text;
+        }
+        if (msg.type === "ticker") {
+          statusEl.textContent = `Last update: ${new Date(
+            msg.timestamp
+          ).toLocaleTimeString()}`;
+
+          tbody.innerHTML = "";
+          Object.entries(msg.prices).forEach(([symbol, price]) => {
+            const tr = document.createElement("tr");
+            const tdSymbol = document.createElement("td");
+            const tdPrice = document.createElement("td");
+            tdSymbol.textContent = symbol;
+            tdPrice.textContent = price.toFixed(2);
+            tr.appendChild(tdSymbol);
+            tr.appendChild(tdPrice);
+            tbody.appendChild(tr);
+          });
+        }
+      });
+
+      socket.addEventListener("close", () => {
+        statusEl.textContent = "Disconnected";
+      });
+    </script>
+  </body>
+</html>

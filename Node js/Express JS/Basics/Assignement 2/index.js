@@ -6,6 +6,9 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: false})); // This will parse only simple key-value pairs
 
+app.set("view engine", "pug"); // Use Pug Template Engine when res.render() is called
+app.set("views", "views"); // Set the directory for views
+
 //
 /// Task 2
 // app.use((req,res,next) => {
@@ -71,3 +74,5 @@ app.use(errorRoutes);
 app.listen(3000, () => {
     console.log("Server is running on http://localhost:3000 port...")
 })
+
+

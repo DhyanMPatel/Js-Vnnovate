@@ -2,7 +2,7 @@
 
 - There is an work flow how Client enter to the page and send requests to the server is called web.
 
-![How Web Works](./Web%20works.png)
+    ![How Web Works](./Web%20works.png)
 
 - Now Request and Responsne transmission is done through some protocol which is `HTTP` and `HTTPS`.
 
