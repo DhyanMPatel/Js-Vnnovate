@@ -1,70 +1,55 @@
 ## Work Doing:
 
-Date: 10 Feb, 2026
-Day: Tuesday,
+Date: 11 Feb, 2026
+Day: Wednesday,
 
 Today, I am work on below list of task:
 
-Project: Sales CRM,
+Project: E-Order,
 
-1. Test new Dashbaord blocks through adding new lead. (0.5 H)
-2. Solve issue if there any error related to that functionality. (0.5 H)
-
-Project : E-Order,
-
-1. 
+1. Store Details page
+  - Display Order Status Calendar
+  - Verify Categories Section, Favorite Items Sections for implementation
 
 
 ## Work done:
 
 EOD,
-Date: 10 Feb, 2026
-Day: Tuesday,
+Date: 11 Feb, 2026
+Day: Wednesday,
 
 Today, I am worked on below list of task:
 
-Project: Sales CRM (2 H)
-1. Dashboard Validation
-  - Tested newly added Dashboard blocks by creating Leads with Won / Project Awarded stage.
-  - Verified:
-    - Correct Projects Awarded count.
-    - Accurate Booking Amount calculation (sum of Lead values).
-    - Role-based visibility logic (Admin/Sales Head vs BDM/BDE).
-2. Deployment & Coordination
-  - Requested Vasik sir to deploy the latest changes to the Live server.
-  - Informed Ashish sir and Veer sir to review and validate the new Dashboard implementations after deployment.
-
-Project: Learning (Node.js)
-1. JWT (JSON Web Token) Revision (2 H)
-  - Revised:
-    - JWT format (Header, Payload, Signature)
-    - Types of tokens (Access Token, Refresh Token)
-    - Two approaches to create & verify JWT:
-      - Using secret key
-      - Using public/private key (asymmetric)
-    - Implemented JWT authentication in a simple Node.js project.
-3. Multer (2 H)
-  - Explored Multer for file handling:
-    - File upload middleware
-    - Handling single & multiple file uploads
-    - Storage configuration and validation basics.
-2. NodeMailer (1 H)
-  - Learning basics of NodeMailer:
-    - SMTP configuration
-    - Sending emails from Node.js (In Progress)
-
-Project: Other,
-1. Support Task (0.5 H)
-  - Assisted Kunal with GitLab authentication issues and helped resolve access/login-related problems.
-
 Project: E-Order,
 
-1. Global Translation (2 H)
-  - Remove Consoles.
-  - Solve translation issue related to dynamic values.
-2. Create Google Sheet for (2 H)
-  - Pending task which is either not cleared or not completed. 
-  - Mark completed task as Done.
+1. Store Details (2 H)
+  - Added Category List tab for a particular store. – Done
+  - Displayed favorite products with a filled favorite icon based on user role. – Done
+  - Displayed category-wise products under their respective categories. – Done
+
+2. Dashboard (0.25 H)
+  - Set the default date to today on initial page load. – Done
+
+3. Auth Module (0.5 H)
+  - Added a Language Translation dropdown option. – Done
+
+4. Product Details (0.25 H)
+  - If a product is marked as favorite, it is now highlighted. – Done
+
+
+Project: Sales CRM,
+1. Next Follow-up Functionality (2.5 H)
+  - Added a new column follow_ups to track how many times a follow-up has been taken (default value: 0). – Done
+  - When a user completes a task, a new field “Next Follow-up” is available. If selected, it automatically creates a new task for the specified date. – Done
+  - The task title format is: “Follow-up Activity_Name Task - (number)”. – Done
+
+2. Role based data (2.5 H)
+  - Projects are now displayed based on role-wise access, same as Lead visibility. – Done
+  - Contacts are now displayed based on role-wise access, same as Lead visibility. – Done
+  - Clients are now displayed based on role-wise access, same as Lead visibility. – Done
+  - Test All above functionality in Local server.
+
+
 
 Project: Vnnovate Next,
 
