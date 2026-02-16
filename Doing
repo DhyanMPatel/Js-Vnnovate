@@ -1,66 +1,62 @@
 ## Work Doing:
 
-Date: 13 Feb, 2026
-Day: Friday,
+Date: 16 Feb, 2026
+Day: Monday,
 
-Today, I am work on below list of task:
+Today, I am working on the following tasks:
 
-Project: BEC,
+Project: BEC, (3 H)
 
-1. Branch Update & Code Review (0.25 H)
-  - Fetch the latest updated branch.
-2. QA Testing 
-  A. Functional Testing (2.5 H)
-    - Test all implemented features across modules.
-    - Validate complete end-to-end flows.
-  B. Role-Based Testing (2.5 H)
-    - Verify feature access and data visibility based on user roles.
-  C. Responsive & Design Testing (2.5 H)
-    - Test UI responsiveness on Desktop, Tablet, Mobile.
-    - Verify layout consistency and alignment.
+1. Sidebar UI Enhancement
+  - Redesign the Sidebar to make it more attractive and user-friendly.
+  - Maintain consistency with overall design system.
+  - Ensure full responsive behavior.
   
 ## Work done:
 
 EOD,
-Date: 13 Feb, 2026
-Day: Friday,
+Date: 16 Feb, 2026
+Day: Monday,
 
-Today, I have worked on below list of task:
+Today, I have completed the following tasks:
 
-Project: BEC,
-1. Calendar Module Enhancements (1 H)
-  - Redesigned the BEC Calendar page to improve overall UI and usability.
-  - Updated the “View Off Days” modal popup UI for better clarity and user understanding.
-  - Ensured full responsive behavior.
-
-2. Bug Identification & Resolution (3 H)
-  - Identified issues during testing.
-  - Collaborated with the team to analyze and resolve bugs.
-  - Verified fixes after implementation.
-
-3. Testing (3 H)
-  - Tested some modules in both Local and QA environments.
-  - Verified newly implemented changes in QA
-  - Performed testing across all user roles.
+Project: Other,
+1. Candidate Interview (1 H)
+  - Conduct technical interview.
+  - Evaluate based on Technical knowledge, Problem-solving approach, Communication clarity.
+  - Provide feedback.
 
 Project: Sales CRM,
 
-1. QA Testing (2 H)
-  A. Role-Based Data Validation
-    - Test role-based visibility and access control in (Lead, Contacts, Clients, Projects pages.)
-    - Verify:
-      - Admin / Sales Head → Access to all data.
-      - BDM → Access to own + team data (as per logic).
-      - BDE → Access to only assigned data.
-    - Next Follow up task during completion of any task.
-  
-  B. Next Follow-Up Task Validation
-    - Verify automatic task creation when completing any task with a Next Follow-up Date & Time.
-    - Confirm:
-      - Task appears in Activity Log.
-      - Task appears correctly in Task Module.
-      - No duplicate creation.
-      - Proper date/time handling.
+1. Tasks Page Enhancement (1 H)
+  - Modify task grouping logic:
+    - Sort Completed tasks to the end within each group.
+
+Project: BEC,
+
+1. Sidebar UI Enhancement (2 H)
+  - Redesign Sidebar for improved user experience.
+  - Ensure full responsiveness and Proper active/hover states.
+  - Test in Local Environment & QA Environment.
+
+Project: Capri,
+
+1. Backend Setup (1.5 H)
+  - Collaborate with team to set up backend project environment.
+  - Configure dependencies and environment variables.
+
+2. API Validation (1.5 H)
+  - Test and verify some working routes using Postman.
+
+3. Social Media Signup – Dummy Implementation (1 H) (In Progress)
+  - Create a dummy Node.js project for experimentation.
+  - Research on OAuth flow basics, Google / Facebook / other provider integration, Token handling & verification.
+  - Implement:
+    - Social media login/signup flow in dummy project.
+
+
+
+
 
 Project: Learning (Node JS, CSS),
 
