@@ -26,7 +26,21 @@ const Signup = () => {
         const parsedUser = JSON.parse(decodeURIComponent(userData));
         localStorage.setItem("token", token);
         setUser(parsedUser);
-        setSuccessMessage("Successfully signed up with Google!");
+        setSuccessMessage(
+          `Successfully signed up with ${
+            parsedUser.authMethod === "google"
+              ? "Google"
+              : parsedUser.authMethod === "linkedin"
+                ? "LinkedIn"
+                : parsedUser.authMethod === "instagram"
+                  ? "Instagram"
+                  : parsedUser.authMethod === "apple"
+                    ? "Apple"
+                    : parsedUser.authMethod === "facebook"
+                      ? "Facebook"
+                      : "Email"
+          }!`,
+        );
 
         // Clean URL
         window.history.replaceState(
@@ -36,14 +50,36 @@ const Signup = () => {
         );
       } catch (error) {
         console.error("Error parsing user data:", error);
-        setErrors({ general: "Error processing Google authentication" });
+        setErrors({ general: "Error processing authentication" });
       }
     }
 
     // Check for errors
     const error = urlParams.get("error");
     if (error) {
-      setErrors({ general: "Google authentication failed. Please try again." });
+      if (error === "google_auth_failed") {
+        setErrors({
+          general: "Google authentication failed. Please try again.",
+        });
+      } else if (error === "linkedin_auth_failed") {
+        setErrors({
+          general: "LinkedIn authentication failed. Please try again.",
+        });
+      } else if (error === "instagram_auth_failed") {
+        setErrors({
+          general: "Instagram authentication failed. Please try again.",
+        });
+      } else if (error === "apple_auth_failed") {
+        setErrors({
+          general: "Apple authentication failed. Please try again.",
+        });
+      } else if (error === "facebook_auth_failed") {
+        setErrors({
+          general: "Facebook authentication failed. Please try again.",
+        });
+      } else {
+        setErrors({ general: "Authentication failed. Please try again." });
+      }
       window.history.replaceState({}, document.title, window.location.pathname);
     }
   }, []);
@@ -147,6 +183,24 @@ const Signup = () => {
     window.location.href = "http://localhost:5000/api/auth/google";
   };
 
+  const handleLinkedinSignup = () => {
+    window.location.href = "http://localhost:5000/api/auth/linkedin";
+  };
+
+  const handleInstagramSignup = () => {
+    window.location.href = "http://localhost:5000/api/auth/instagram";
+  };
+
+  // Facebook Sign In handler (Commented Out - Uncomment when ready to use)
+  // const handleFacebookSignup = () => {
+  //   window.location.href = "http://localhost:5000/api/auth/facebook";
+  // };
+
+  // Apple Sign In handler (Commented Out - Uncomment when ready to use)
+  // const handleAppleSignup = () => {
+  //   window.location.href = "http://localhost:5000/api/auth/apple";
+  // };
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     setUser(null);
@@ -162,7 +216,18 @@ const Signup = () => {
           <h2>Welcome, {user.username}!</h2>
           <p>
             You have successfully signed up
-            {user.authMethod === "google" ? " with Google" : ""}.
+            {user.authMethod === "google"
+              ? " with Google"
+              : user.authMethod === "linkedin"
+                ? " with LinkedIn"
+                : user.authMethod === "instagram"
+                  ? " with Instagram"
+                  : user.authMethod === "apple"
+                    ? " with Apple"
+                    : user.authMethod === "facebook"
+                      ? " with Facebook"
+                      : ""}
+            .
           </p>
 
           {user.avatar && (
@@ -175,7 +240,17 @@ const Signup = () => {
             </p>
             <p>
               <strong>Auth Method:</strong>{" "}
-              {user.authMethod === "google" ? "Google" : "Email"}
+              {user.authMethod === "google"
+                ? "Google"
+                : user.authMethod === "linkedin"
+                  ? "LinkedIn"
+                  : user.authMethod === "instagram"
+                    ? "Instagram"
+                    : user.authMethod === "apple"
+                      ? "Apple"
+                      : user.authMethod === "facebook"
+                        ? "Facebook"
+                        : "Email"}
             </p>
           </div>
 
@@ -229,6 +304,87 @@ const Signup = () => {
             Sign up with Google
           </button>
         </div>
+
+        {/* LinkedIn Signup Button */}
+        <div className="linkedin-signup-section">
+          <button
+            onClick={handleLinkedinSignup}
+            className="linkedin-signup-button"
+            disabled={isLoading}
+          >
+            <svg className="linkedin-icon" viewBox="0 0 24 24">
+              <path
+                fill="#fff"
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+            Sign up with LinkedIn
+          </button>
+        </div>
+
+        {/* Instagram Signup Button */}
+        <div className="instagram-signup-section">
+          <button
+            onClick={handleInstagramSignup}
+            className="instagram-signup-button"
+            disabled={isLoading}
+          >
+            <svg className="instagram-icon" viewBox="0 0 24 24">
+              <path
+                fill="url(#instagram-gradient)"
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"
+              />
+              <defs>
+                <linearGradient
+                  id="instagram-gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#833AB4" />
+                  <stop offset="50%" stopColor="#E1306C" />
+                  <stop offset="100%" stopColor="#F77737" />
+                </linearGradient>
+              </defs>
+            </svg>
+            Sign up with Instagram
+          </button>
+        </div>
+
+        {/* Facebook Signup Button (Commented Out - Uncomment when ready to use) */}
+        {/* <div className="facebook-signup-section">
+          <button
+            onClick={handleFacebookSignup}
+            className="facebook-signup-button"
+            disabled={isLoading}
+          >
+            <svg className="facebook-icon" viewBox="0 0 24 24">
+              <path
+                fill="#fff"
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
+            </svg>
+            Sign up with Facebook
+          </button>
+        </div> */}
+
+        {/* Apple Sign In Button (Commented Out - Uncomment when ready to use) */}
+        {/* <div className="apple-signin-section">
+          <button
+            onClick={handleAppleSignup}
+            className="apple-signin-button"
+            disabled={isLoading}
+          >
+            <svg className="apple-icon" viewBox="0 0 24 24">
+              <path
+                fill="#000000"
+                d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 17.03 1.37 11.48 3.51 6.8c.87-1.8 2.55-2.87 4.34-2.96 1.35-.07 2.63.72 3.54.72.91 0 2.62-.89 4.41-.76.75.03 2.87.31 4.23 2.3-.11.07-2.52 1.48-2.48 4.4.03 3.84 3.05 5.12 3.08 5.13-.03.07-.48 1.65-1.58 3.27zm-2.96-15.52c.73-.89 1.23-2.13 1.09-3.36-1.06.04-2.34.7-3.1 1.59-.68.8-1.28 2.08-1.12 3.29 1.16.09 2.35-.59 3.13-1.52z"
+              />
+            </svg>
+            Sign up with Apple
+          </button>
+        </div> */}
 
         <div className="divider">
           <span>OR</span>

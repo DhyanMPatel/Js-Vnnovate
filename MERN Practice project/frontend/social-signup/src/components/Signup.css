@@ -117,7 +117,7 @@
 
 /* Google OAuth Button Styles */
 .google-signup-section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .google-signup-button {
@@ -157,6 +157,185 @@
   width: 20px;
   height: 20px;
 }
+
+/* LinkedIn OAuth Button Styles */
+.linkedin-signup-section {
+  margin-bottom: 1.5rem;
+}
+
+.linkedin-signup-button {
+  width: 100%;
+  padding: 12px 16px;
+  background: #0077b5;
+  color: white;
+  border: 2px solid #0077b5;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.linkedin-signup-button:hover:not(:disabled) {
+  background: #005885;
+  border-color: #005885;
+  box-shadow: 0 1px 3px rgba(0, 119, 181, 0.3);
+}
+
+.linkedin-signup-button:active:not(:disabled) {
+  background: #004d71;
+  transform: translateY(1px);
+}
+
+.linkedin-signup-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Instagram Signup Button Styles */
+.instagram-signup-section {
+  margin-bottom: 1.5rem;
+}
+
+.instagram-signup-button {
+  width: 100%;
+  padding: 12px 16px;
+  background: linear-gradient(45deg, #833ab4, #e1306c, #f77737);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.instagram-signup-button:hover:not(:disabled) {
+  background: linear-gradient(45deg, #7632a3, #d12a5f, #e66b26);
+  box-shadow: 0 1px 3px rgba(131, 58, 180, 0.3);
+  transform: translateY(-1px);
+}
+
+.instagram-signup-button:active:not(:disabled) {
+  background: linear-gradient(45deg, #6a2b92, #c12448, #d65a1a);
+  transform: translateY(0);
+}
+
+.instagram-signup-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.instagram-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* Facebook Signup Button Styles (Commented Out - Uncomment when ready to use) */
+/*
+.facebook-signup-section {
+  margin-bottom: 1.5rem;
+}
+
+.facebook-signup-button {
+  width: 100%;
+  padding: 12px 16px;
+  background: #1877f2;
+  color: white;
+  border: 2px solid #1877f2;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.facebook-signup-button:hover:not(:disabled) {
+  background: #166fe5;
+  border-color: #166fe5;
+  box-shadow: 0 1px 3px rgba(24, 119, 242, 0.3);
+}
+
+.facebook-signup-button:active:not(:disabled) {
+  background: #0e5bcd;
+  transform: translateY(1px);
+}
+
+.facebook-signup-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.facebook-icon {
+  width: 20px;
+  height: 20px;
+}
+*/
+
+/* Apple Sign In Button Styles (Commented Out - Uncomment when ready to use) */
+/*
+.apple-signin-section {
+  margin-bottom: 1.5rem;
+}
+
+.apple-signin-button {
+  width: 100%;
+  padding: 12px 16px;
+  background: #000000;
+  color: white;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.apple-signin-button:hover:not(:disabled) {
+  background: #333333;
+  border-color: #333333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.apple-signin-button:active:not(:disabled) {
+  background: #1a1a1a;
+  transform: translateY(1px);
+}
+
+.apple-signin-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.apple-icon {
+  width: 20px;
+  height: 20px;
+}
+*/
 
 /* Divider Styles */
 .divider {

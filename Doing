@@ -1,115 +1,54 @@
 ## Work Doing:
 
-Date: 16 Feb, 2026
-Day: Monday,
+Date: 17 Feb, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
-Project: BEC, (3 H)
+Project: Capri, (5 H)
 
-1. Sidebar UI Enhancement
-  - Redesign the Sidebar to make it more attractive and user-friendly.
-  - Maintain consistency with overall design system.
-  - Ensure full responsive behavior.
+1. Social Media Signup – Dummy Implementation
+  - Research on OAuth flow basics, Instagram / Facebook / other provider integration, Token handling & verification.
+  - Implement:
+    - Social media login/signup flow in dummy project.
+  - Social media like Google, Instagram, Facebook integration.
   
 ## Work done:
 
 EOD,
-Date: 16 Feb, 2026
-Day: Monday,
+Date: 17 Feb, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
-Project: Other,
-1. Candidate Interview (1 H)
-  - Conduct technical interview.
-  - Evaluate based on Technical knowledge, Problem-solving approach, Communication clarity.
-  - Provide feedback.
-
-Project: Sales CRM,
-
-1. Tasks Page Enhancement (1 H)
-  - Modify task grouping logic:
-    - Sort Completed tasks to the end within each group.
-
-Project: BEC,
-
-1. Sidebar UI Enhancement (2 H)
-  - Redesign Sidebar for improved user experience.
-  - Ensure full responsiveness and Proper active/hover states.
-  - Test in Local Environment & QA Environment.
-
 Project: Capri,
 
-1. Backend Setup (1.5 H)
-  - Collaborate with team to set up backend project environment.
-  - Configure dependencies and environment variables.
-
-2. API Validation (1.5 H)
-  - Test and verify some working routes using Postman.
-
-3. Social Media Signup – Dummy Implementation (1 H) (In Progress)
-  - Create a dummy Node.js project for experimentation.
-  - Research on OAuth flow basics, Google / Facebook / other provider integration, Token handling & verification.
+1. Social Media Signup – Research (3 H)
+  - Research Phase
+    - Study OAuth 2.0 flow basics
+    - Research integration requirements for Google, Instagram, Facebook, LinkedIn, Apple.
+    - Understand:
+      - App registration process
+      - Client ID & Secret usage
+      - Scopes & permissions
+2. Implementation Phase (2 H)
   - Implement:
-    - Social media login/signup flow in dummy project.
+    - Social media signup flow in dummy project.
+    - Social media like Google, Instagram, Facebook, LinkedIn, Apple integration.
+
+Project: Nurtureme
+1. Google Drive Setup for Figma Assets (3 H)
+  - Create a dedicated Google Drive structure for storing all Figma design assets.
+  - Upload:
+    - All Figma images/screens.
+    - Organized based on flow.
+  - Maintain folder hierarchy:
+    - Structure folders similar to Figma file organization.
 
 
 
 
 
-Project: Learning (Node JS, CSS),
-
-1. Explore Display properties in CSS (1.5 H)
-2. NodeMailer library (2 H)
-  - Explore NodeMailer configuration (SMTP setup).
-  - Implement email sending in a simple Node.js project:
-    - Basic send mail function
-    - Basic Error handling
-
-
-
-
-Project: Vnnovate Next,
-
-1. Understand Project Figma (4 hours)
-
-- Reviewed the overall design system, including typography, colors, spacing, and components.
-- Analyzed layout structure across pages.
-- Identified reusable components and common design patterns for efficient implementation.
-- Discussed with Monika about the project.
-
-2. Project Setup & Initial Understanding (0.5 hours)
-
-- Set up the project on my local machine and run it.
-
-3. Google Sheet – Pending Sections Tracking (3.5 hours)
-
-- Created/updated a Google Sheet with Disha to track pending sections/pages that need to be added or completed in the project.
-  - Home Page, Store Details Page, Product Details Page, Cart Page, Order History Page, Re-Order Modal, Replace Order Modal, Merge Order Modal, Favorite Page, Favorite Items Page
-
-Project: BEC,
-
-1. Testing & QA
-
-- Tested modules thoroughly.
-- Identified bugs and shared findings with Rahul Sir for fixes.
-
-Project: Other,
-
-1. Try to understand and create project with using Supabase in backend.
-
-1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
-1. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
-1. Then check Monday's task that i had done like pagination, category filter in Inventory items API. also make changes regarding updates.
-
-1. Yesterday, i make Enhancement in Bulk upload functionality based on feedback like Implemented drag-and-drop file upload functionality, UI improvements and Tested whole work flow.
-1. Then worked on Inventory Item Deletion functionality where when user click on delete button it ask again for confirmation and then it will delete that Item.
-1. At last worked on Inventory Item Editing functionality where when user click on edit button it will open modal and in that modal user can see all the details of that item and then i integrate 2 API integration for Edit Item 1st is for fetching item by id and 2nd is for updating item by id.
-
-1. Today i work on Royal Crucible project where i find theme based on that project requirement.
-
-1. Yesterday i work on Setup and Configuration of Theme. for that i waited for the selection of theme. during waiting i added completed task in June and July into the planner and revise some topics of Node and Express js. like,
 
 - Node Modules,
 - Error handling,
