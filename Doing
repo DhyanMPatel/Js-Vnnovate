@@ -1,96 +1,54 @@
 ## Work Doing:
 
-Date: 11 Feb, 2026
-Day: Wednesday,
+Date: 17 Feb, 2026
+Day: Tuesday,
 
-Today, I am work on below list of task:
+Today, I am working on the following tasks:
 
-Project: E-Order,
+Project: Capri, (5 H)
 
-1. Store Details page
-  - Display Order Status Calendar
-  - Verify Categories Section, Favorite Items Sections for implementation
-
-
+1. Social Media Signup – Dummy Implementation
+  - Research on OAuth flow basics, Instagram / Facebook / other provider integration, Token handling & verification.
+  - Implement:
+    - Social media login/signup flow in dummy project.
+  - Social media like Google, Instagram, Facebook integration.
+  
 ## Work done:
 
 EOD,
-Date: 11 Feb, 2026
-Day: Wednesday,
+Date: 17 Feb, 2026
+Day: Tuesday,
 
-Today, I am worked on below list of task:
+Today, I have completed the following tasks:
 
-Project: E-Order,
+Project: Capri,
 
-1. Store Details (2 H)
-  - Added Category List tab for a particular store. – Done
-  - Displayed favorite products with a filled favorite icon based on user role. – Done
-  - Displayed category-wise products under their respective categories. – Done
+1. Social Media Signup – Research (3 H)
+  - Research Phase
+    - Study OAuth 2.0 flow basics
+    - Research integration requirements for Google, Instagram, Facebook, LinkedIn, Apple.
+    - Understand:
+      - App registration process
+      - Client ID & Secret usage
+      - Scopes & permissions
+2. Implementation Phase (2 H)
+  - Implement:
+    - Social media signup flow in dummy project.
+    - Social media like Google, Instagram, Facebook, LinkedIn, Apple integration.
 
-2. Dashboard (0.25 H)
-  - Set the default date to today on initial page load. – Done
-
-3. Auth Module (0.5 H)
-  - Added a Language Translation dropdown option. – Done
-
-4. Product Details (0.25 H)
-  - If a product is marked as favorite, it is now highlighted. – Done
-
-
-Project: Sales CRM,
-1. Next Follow-up Functionality (2.5 H)
-  - Added a new column follow_ups to track how many times a follow-up has been taken (default value: 0). – Done
-  - When a user completes a task, a new field “Next Follow-up” is available. If selected, it automatically creates a new task for the specified date. – Done
-  - The task title format is: “Follow-up Activity_Name Task - (number)”. – Done
-
-2. Role based data (2.5 H)
-  - Projects are now displayed based on role-wise access, same as Lead visibility. – Done
-  - Contacts are now displayed based on role-wise access, same as Lead visibility. – Done
-  - Clients are now displayed based on role-wise access, same as Lead visibility. – Done
-  - Test All above functionality in Local server.
+Project: Nurtureme
+1. Google Drive Setup for Figma Assets (3 H)
+  - Create a dedicated Google Drive structure for storing all Figma design assets.
+  - Upload:
+    - All Figma images/screens.
+    - Organized based on flow.
+  - Maintain folder hierarchy:
+    - Structure folders similar to Figma file organization.
 
 
 
-Project: Vnnovate Next,
 
-1. Understand Project Figma (4 hours)
 
-- Reviewed the overall design system, including typography, colors, spacing, and components.
-- Analyzed layout structure across pages.
-- Identified reusable components and common design patterns for efficient implementation.
-- Discussed with Monika about the project.
-
-2. Project Setup & Initial Understanding (0.5 hours)
-
-- Set up the project on my local machine and run it.
-
-3. Google Sheet – Pending Sections Tracking (3.5 hours)
-
-- Created/updated a Google Sheet with Disha to track pending sections/pages that need to be added or completed in the project.
-  - Home Page, Store Details Page, Product Details Page, Cart Page, Order History Page, Re-Order Modal, Replace Order Modal, Merge Order Modal, Favorite Page, Favorite Items Page
-
-Project: BEC,
-
-1. Testing & QA
-
-- Tested modules thoroughly.
-- Identified bugs and shared findings with Rahul Sir for fixes.
-
-Project: Other,
-
-1. Try to understand and create project with using Supabase in backend.
-
-1. Yesterday, work on Smart bill book project where i Research on ag-grid-react package which can display excel like worksheet withing the react app.
-1. Then i work on Bulk upload functionality where when user click on Bulk upload menu item then modal will show and modal include functionality like download sample excel file, upload single excel file. also i implemented API integration for Bulk upload during that i face header overriding in Instructor. so solved that issue and success fully checked Bulk upload functionality with api Integration.
-1. Then check Monday's task that i had done like pagination, category filter in Inventory items API. also make changes regarding updates.
-
-1. Yesterday, i make Enhancement in Bulk upload functionality based on feedback like Implemented drag-and-drop file upload functionality, UI improvements and Tested whole work flow.
-1. Then worked on Inventory Item Deletion functionality where when user click on delete button it ask again for confirmation and then it will delete that Item.
-1. At last worked on Inventory Item Editing functionality where when user click on edit button it will open modal and in that modal user can see all the details of that item and then i integrate 2 API integration for Edit Item 1st is for fetching item by id and 2nd is for updating item by id.
-
-1. Today i work on Royal Crucible project where i find theme based on that project requirement.
-
-1. Yesterday i work on Setup and Configuration of Theme. for that i waited for the selection of theme. during waiting i added completed task in June and July into the planner and revise some topics of Node and Express js. like,
 
 - Node Modules,
 - Error handling,
@@ -224,205 +182,166 @@ Git Commit ID: 3653fda296650dee81c132c046b35445067ab2d9
 Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/3653fda296650dee81c132c046b35445067ab2d9
 
 
-**Subject**: Weekly (2 Feb - 6 Feb) Report of Dhyan
-
-
-Project: E-Order,
-
-Git Commit ID: 00e17535124aa3cccc86e65441620411c17c3406
-Git Commit Link: https://gitlab.com/vnnovatesolutions/eorder-webapp/-/commit/00e17535124aa3cccc86e65441620411c17c3406
-
-Description:
-
-1. Implement role-based visual feedback for the Favorite icon: (0.5 H)
-  - Admin - When selected/clicked → apply Yellow color
-  - Manager - When selected/clicked → apply Blue color
-  - Default State - When no role-based selection → apply Gray color
-  - Ensure the color updates immediately on click and reflects the correct state after page refresh (if persisted).
- 
-2. Display role-based messages when adding or removing an item from Favorites: (0.5 H)
-  - Admin
-    - Add → "Added to Super Favorites"
-    - Remove → "Removed from Super Favorites"
-  - Manager
-    - Add → "Added to Favorites"
-    - Remove → "Removed from Favorites"
-  - Message should update dynamically based on the logged-in user’s role.
- 
-3. Signup Page (Web App) (0.75 H)
-  - Create a Signup page strictly according to the Figma design.
-
-4. Sign Up Screen (1.5 H)
-  - Implemented Material UI components for a modern and consistent interface.
-  - Verified UI with Rahul Sir.
-  - Ensured full responsiveness across mobile, tablet, and desktop devices.
-  - Implemented comprehensive form validations with Formik + Yup, including:
-    - Required field checks
-    - Regex-based validation where applicable
-  - Added placeholders for all input fields to improve usability.
-  - Implemented proper navigation:
-    - Redirect to Login page after successful account creation.
-  - Added success and failure feedback messages for account creation status.
- 
-5. Forgot Password Screen (1.5 H)
-  - Created and designed the Forgot Password page with Material UI components.
-  - Ensured responsive design for all screen sizes.
-  - Implemented Formik + Yup for handling form data and validations.
-  - Added:
-    - Validation errors with regex-based rules
-    - Placeholders for all input fields
-  - Implemented complete Forgot Password flow:
-    - Display Success/failure alert when reset link is requested
-    - Display Success/failure alert after password reset
-    - Redirect user to Login page after Forgot password flow completion
- 
-6. OTP Verification Screen (1.5 H)
-  - Implemented OTP Verification page with a 6-digit OTP input.
-  - Designed the page using Material UI components with a clean, user-friendly layout.
-  - Ensured responsiveness across all devices.
-  - Added:
-    - Placeholders for OTP field
-    - Regex-based OTP validation
-  - Integrated Formik + Yup for validation and state handling.
-  - Implemented Resend OTP functionality:
-    - Resend OTP button
-    - Success/failure alert on OTP resend
-  - Added proper flow handling:
-    - Success/failure alerts on OTP verification
-    - Redirect to Login page after successful verification
- 
-7. Login Page (1.5 H)
-  - Improve the Login page UI for a modern and responsive experience.
-  - Added placeholders for all fields.
-  - Implemented validation errors using Formik + Yup.
-  - Ensured consistent UX and responsiveness across all devices.
- 
-8. Testing (1 H)
-  - Tested all Authentication modules (Sign Up, Login, Forgot Password, OTP Verification) across all device types (mobile, tablet, desktop).
-  - All authentication flows are working as expected.
-
-9. Store Details Page (0.5 H)
-  - Fixed Quantity Control and Add to Cart button issues where actions were not working correctly.
-  - Resolved issue where clicking the Favorite icon in the product list was incorrectly redirecting to the Product Details page instead of toggling favorite.
- 
-10. Product Details Page (0.5 H)
-  - Implemented role-based visual behavior for the Favorite icon.
-    - Admin: Yellow color when selected
-    - Manager: Blue color when selected
-    - Default: Gray color when not selected
-  - Updated Product Title color to white for better visibility and UI consistency.
- 
-11. Store Favorites Page (0.5 H)
-  - Implemented role-based visual behavior for the Favorite icon.
-    - Admin: Yellow color when selected
-    - Manager: Blue color when selected
-    - Default: Gray color when not selected
-  - Made the Page Title clickable, redirecting users directly to the corresponding Store Details page.
- 
-12. Testing (1 H)
-  - Tested Store Details Page, Product Details Page,Favorites page, Store Favorites Page, Profile page and compared with Figma.
-
-13. Global Translation (5 H)
-  - Identified and fixed pages with missing or partially applied translations.
-  - Ensured consistent translations across all modules:
-    - Removed hardcoded text
-    - Verified proper language switching behavior
-  - Added default fallback values for missing translation keys.
-  - Enhanced Language Context API to support dynamic translation values.
-  - Confirmed translation functionality in key modules:
-    - Sign In, Sign Up, OTP Verification, Forgot Password
-    - Sidebar & Navbar
-    - Dashboard
-    - Store Details
-    - Product Details & Product Edit
-    - User Management
-    - Order Hours
-
-14. Auth Modules (1 H)
-  - Restored and added missing UI components that were unintentionally removed during translation implementation.
-  - Re-verified UI and functionality consistency after translation fixes.
-
-15. Translation Enhancements (6 H)
-  - Translated all dummy/static data across the application.
-  - Reviewed all modules and pages to:
-    - Identify missing translations
-    - Implement translation functionality wherever it was still pending
-  - Ensured consistent usage of the translation system across the app.
-
-16. Login Flow Improvement (1 H)
-  - Removed the unnecessary Error Alert popup during the Login process to improve user experience.
+**Subject**: Weekly (9 Feb - 13 Feb) Report of Dhyan
 
 Project: Sales CRM,
 
-Git Commit ID: 87ced30fc8d066f3a3fbbaad745a0f60d73c6674
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/87ced30fc8d066f3a3fbbaad745a0f60d73c6674
+Git Commit ID: ff7c7d5e5caa64eab57b625f6327425f7dd1e2ca
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/ff7c7d5e5caa64eab57b625f6327425f7dd1e2ca
 
 Description:
 
-1. Lead Create Operation (2.5 H)
-  - If the user creates a Lead from an Existing Lead:
-    - Pre-fill all available data for better user experience.
-  - Allow Lead creation even if:
-    - First Name, Last Name, Email, Phone Number are same as the source Lead.
-  - If Leads are already connected:
-    - Skip existing-lead uniqueness validation during creation.
-  - During creation of a derived Lead:
-    - Pass sourceId to maintain link between Leads.
-  - User must be able to:
-    - Edit any field of the derived Lead during creation.
+1. Dashboard Improvements (2 H)
+  1.1 New Dashboard Blocks
+    - Add two new KPI blocks on the Dashboard:
+      A. Projects Awarded
+        - Displays the count of Leads with stage = “Won / Project Awarded”
+        - Role-based data visibility:
+          - Admin & Sales Head → Count of all Won leads
+          - BDM & BDE → Count of only their assigned Won leads
+      B. Booking Amount
+        - Displays the total Lead Value of Leads included in the Projects Awarded block.
+        - Role-based data visibility:
+          - Admin & Sales Head → Sum of all Won leads
+          - BDM & BDE → Sum of only their assigned Won leads
+  1.2 UI Update
+    - Change Won stage color to Green.
+    - Update UI of Dashboard blocks.
  
-2. Lead Update Operation (1 H)
-  - If the Lead has connected Leads:
-    - Skip existing-lead uniqueness validation during update.
-  - User can:
-    - Edit any field of the derived Lead without restriction.
+2. Activity Log Enhancements ( 1 Hour)
+  - Add two new Activity Types to the Activity Log:
+    - WhatsApp Message / Call
+    - LinkedIn Message
  
-3. Lead delete Operation (0.5 H)
-  - If the Lead has connected Leads:
-    - Skip existing-lead validation during delete operation.
-  - Ensure delete logic does not break Lead linkage integrity.
- 
-4. Task Completion Note activity timeline (0.25 H)
-  - Display Task Completion Notes:
-    - On a new line in the Activity Timeline
-    - Improve readability and clarity for users.
- 
-5. Testing Lead with different roles (1 H)
-  - Admin & Sales Head
-    - Full access:
-      - View, create, update, delete any Lead
-      - Create derived Leads from any Lead
-  - BDM
-    - Can:
-      - View their own Leads and team members’ Leads
-    - Can create derived Leads:
-      - Only from Leads assigned to them
-  - BDE
-    - Can:
-      - View only their assigned Leads
-    - Can create derived Leads:
-      - Only from Leads assigned to them
-  - Test in Local & QA server.
+3. Tested all above functionality in Local/QA Server. (0.5 H)
 
-6. Activity Log & Follow-up Enhancement (4 H)
-  - Clear Implementation of Follow-up task creation flow.
-  - Added Next Follow-up Date & Time field to the Activity Log.
-  - Implemented automatic reminder task creation when a Follow-up Date & Time is provided.
-  - Ensured the auto-created task:
-    - Appears correctly in the Activity Log inside Lead details page.
-    - Is visible and manageable in the Task Module.
-  - Verified end-to-end flow:
-    - Activity → Task creation → Task listing works without manual refresh.
-  - Solving Today's Task did not display to Dashboard. - In Progress
- 
-7. Testing (0.5 H)
-  - Test Activity Log & Follow-up functionality in Local and QA.
+4. Dashboard Validation
+  - Tested newly added Dashboard blocks by creating Leads with Won / Project Awarded stage.
+  - Verified:
+    - Correct Projects Awarded count.
+    - Accurate Booking Amount calculation (sum of Lead values).
+    - Role-based visibility logic (Admin/Sales Head vs BDM/BDE).
 
-8. Dashboard module (1 H)
-  - Investigate why Today’s Task list is not displaying correctly on the Dashboard.
-  - Update the task filtering logic:
-    - Change time range from 6:30 AM – 6:29 PM format
-    - To 12:00 AM – 11:59 PM format for accurate daily task visibility.
+5. Deployment & Coordination
+  - Requested Vasik sir to deploy the latest changes to the Live server.
+  - Informed Ashish sir and Veer sir to review and validate the new Dashboard implementations after deployment.
+
+6. Next Follow-up Functionality (2.5 H)
+  - Added a new column follow_ups to track how many times a follow-up has been taken (default value: 0). – Done
+  - When a user completes a task, a new field “Next Follow-up” is available. If selected, it automatically creates a new task for the specified date. – Done
+  - The task title format is: “Follow-up Activity_Name Task - (number)”. – Done
+ 
+7. Role based data (2.5 H)
+  - Projects are now displayed based on role-wise access, same as Lead visibility. – Done
+  - Contacts are now displayed based on role-wise access, same as Lead visibility. – Done
+  - Clients are now displayed based on role-wise access, same as Lead visibility. – Done
+  - Test All above functionality in Local server.
+
+8. QA Testing (2 H)
+  A. Role-Based Data Validation
+    - Test role-based visibility and access control in (Lead, Contacts, Clients, Projects pages.)
+    - Verify:
+      - Admin / Sales Head → Access to all data.
+      - BDM → Access to own + team data (as per logic).
+      - BDE → Access to only assigned data.
+    - Next Follow up task during completion of any task.
+ 
+  B. Next Follow-Up Task Validation
+    - Verify automatic task creation when completing any task with a Next Follow-up Date & Time.
+    - Confirm:
+      - Task appears in Activity Log.
+      - Task appears correctly in Task Module.
+      - No duplicate creation.
+      - Proper date/time handling.
+
+Project: E-Order,
+
+Git Commit ID: 2ad0cb6bc2c3e3c55ab9d37125dec03fa0c959a0
+Git Commit Link: https://gitlab.com/vnnovatesolutions/eorder-webapp/-/commit/2ad0cb6bc2c3e3c55ab9d37125dec03fa0c959a0
+
+Description:
+
+1. Global Translation (2 H)
+  - Remove Consoles.
+  - Solve translation issue related to dynamic values.
+2. Create Google Sheet for (2 H)
+  - Pending task which is either not cleared or not completed.
+  - Mark completed task as Done.
+
+3. Store Details (2 H)
+  - Added Category List tab for a particular store. – Done
+  - Displayed favorite products with a filled favorite icon based on user role. – Done
+  - Displayed category-wise products under their respective categories. – Done
+ 
+4. Dashboard (0.25 H)
+  - Set the default date to today on initial page load. – Done
+ 
+5. Auth Module (0.5 H)
+  - Added a Language Translation dropdown option. – Done
+ 
+6. Product Details (0.25 H)
+  - If a product is marked as favorite, it is now highlighted. – Done
+
+7. Basket Page Enhancement (1.5 H)
+  - Add navigation link from Basket page → Store Details page.
+  - When clicking on a specific Supplier name, redirect to:
+    - The corresponding Store Details page.
+  - Test in Local server.
+
+Project: BEC,
+
+Git Commit ID: bc1c84db1f32c3222174409e858342d65a1ac5b4
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/bc1c84db1f32c3222174409e858342d65a1ac5b4
+
+Description:
+
+1. Calendar Module Enhancements (1 H)
+  - Redesigned the BEC Calendar page to improve overall UI and usability.
+  - Updated the “View Off Days” modal popup UI for better clarity and user understanding.
+  - Ensured full responsive behavior.
+
+2. Bug Identification & Resolution (3 H)
+  - Identified issues during testing.
+  - Collaborated with the team to analyze and resolve bugs.
+  - Verified fixes after implementation.
+
+3. Testing (3 H)
+  - Tested some modules in both Local and QA environments.
+  - Verified newly implemented changes in QA
+  - Performed testing across all user roles.
+
+
+Project: Learning,
+
+Description:
+
+1. JWT (JSON Web Token) Revision (2 H)
+  - Revised:
+    - JWT format (Header, Payload, Signature)
+    - Types of tokens (Access Token, Refresh Token)
+    - Two approaches to create & verify JWT:
+      - Using secret key
+      - Using public/private key (asymmetric)
+    - Implemented JWT authentication in a simple Node.js project.
+2. Multer (2 H)
+  - Explored Multer for file handling:
+    - File upload middleware
+    - Handling single & multiple file uploads
+    - Storage configuration and validation basics.
+3. NodeMailer (1 H) (In Progress)
+  - Learning basics of NodeMailer:
+    - SMTP configuration
+    - Sending emails from Node.js
+
+4. Support Task (0.5 H)
+  - Assisted Kunal with GitLab authentication issues and helped resolve access/login-related problems.
+
+5. Explore Display properties in CSS (1.5 H)
+6. NodeMailer library (2 H)
+  - Explore NodeMailer configuration (SMTP setup).
+  - Implement email sending in a simple Node.js project:
+    - Basic send mail function
+    - Basic Error handling
 
 ## Leave Request
 
