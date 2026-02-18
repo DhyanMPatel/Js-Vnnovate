@@ -13,6 +13,7 @@ const InstagramStrategy = require("passport-instagram").Strategy;
 // Apple Sign In imports (commented out - uncomment when ready to use)
 // const AppleStrategy = require("passport-apple").Strategy;
 // const fs = require("fs");
+const GitHubStrategy = require("passport-github2").Strategy;
 const session = require("express-session");
 
 const app = express();
@@ -52,13 +53,19 @@ const userSchema = new mongoose.Schema({
   username: {
     type: String,
     required: function () {
-      return !this.googleId && !this.linkedinId && !this.instagramId; // Required only if not social user
+      return (
+        !this.googleId &&
+        !this.linkedinId &&
+        !this.instagramId &&
+        !this.githubId
+      ); // Required only if not social user
     },
     unique: true,
     sparse: true, // Allows multiple null values for unique field
     trim: true,
     minlength: 3,
     maxlength: 30,
+    lowercase: true,
   },
   email: {
     type: String,
@@ -70,7 +77,12 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: function () {
-      return !this.googleId && !this.linkedinId && !this.instagramId; // Required only if not social user
+      return (
+        !this.googleId &&
+        !this.linkedinId &&
+        !this.instagramId &&
+        !this.githubId
+      ); // Required only if not social user
     },
     minlength: 6,
   },
@@ -99,12 +111,25 @@ const userSchema = new mongoose.Schema({
     unique: true,
     sparse: true,
   },
+  githubId: {
+    type: String,
+    unique: true,
+    sparse: true,
+  },
   avatar: {
     type: String,
   },
   authMethod: {
     type: String,
-    enum: ["local", "google", "linkedin", "apple", "facebook", "instagram"],
+    enum: [
+      "local",
+      "google",
+      "linkedin",
+      "apple",
+      "facebook",
+      "instagram",
+      "github",
+    ],
     default: "local",
   },
   createdAt: {
@@ -190,49 +215,83 @@ passport.use(
       clientID: process.env.LINKEDIN_CLIENT_ID,
       clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
       callbackURL: "/api/auth/linkedin/callback",
+      // Try legacy scopes first
       // scope: ["r_emailaddress", "r_liteprofile"],
       scope: ["openid", "profile", "email"],
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
+        console.log("LinkedIn profile received:", profile);
+        console.log("Access token:", accessToken);
+        console.log("Profile keys:", Object.keys(profile));
+
+        // Handle case where profile might be empty or incomplete
+        if (!profile || !profile.id) {
+          console.error("Invalid LinkedIn profile received");
+          console.error("Profile data:", JSON.stringify(profile, null, 2));
+          return done(new Error("Invalid LinkedIn profile"), null);
+        }
+
         let user = await User.findOne({ linkedinId: profile.id });
 
         if (user) {
           return done(null, user);
         }
 
-        // Check if user exists with same email
-        const existingUser = await User.findOne({
-          email: profile.emails[0].value,
-        });
+        // Handle different LinkedIn profile formats
+        const email =
+          profile.emails && profile.emails[0]
+            ? profile.emails[0].value
+            : profile.emailAddress
+              ? profile.emailAddress
+              : null;
 
-        if (existingUser) {
-          // Link LinkedIn account to existing user
-          existingUser.linkedinId = profile.id;
-          existingUser.authMethod = "linkedin";
-          existingUser.avatar =
-            profile.photos?.[3]?.value || profile.photos?.[0]?.value; // LinkedIn provides multiple photo sizes
-          if (!existingUser.username) {
-            existingUser.username = profile.displayName
-              .replace(/\s+/g, "")
-              .toLowerCase();
+        const displayName =
+          profile.displayName ||
+          profile.formattedName ||
+          `${profile.firstName || ""} ${profile.lastName || ""}`.trim() ||
+          `linkedin_user_${profile.id.slice(-8)}`;
+
+        console.log("Extracted email:", email);
+        console.log("Extracted displayName:", displayName);
+
+        if (email) {
+          const existingUser = await User.findOne({ email });
+
+          if (existingUser) {
+            // Link LinkedIn account to existing user
+            existingUser.linkedinId = profile.id;
+            existingUser.authMethod = "linkedin";
+            existingUser.avatar =
+              profile.photos?.[3]?.value ||
+              profile.photos?.[0]?.value ||
+              profile.pictureUrl;
+            if (!existingUser.username) {
+              existingUser.username = displayName
+                .replace(/\s+/g, "")
+                .toLowerCase();
+            }
+            await existingUser.save();
+            return done(null, existingUser);
           }
-          await existingUser.save();
-          return done(null, existingUser);
         }
 
         // Create new user
         const newUser = new User({
           linkedinId: profile.id,
-          username: profile.displayName.replace(/\s+/g, "").toLowerCase(),
-          email: profile.emails[0].value,
-          avatar: profile.photos?.[3]?.value || profile.photos?.[0]?.value,
+          username: displayName.replace(/\s+/g, "").toLowerCase(),
+          email: email || `${profile.id}@linkedin.placeholder.com`,
+          avatar:
+            profile.photos?.[3]?.value ||
+            profile.photos?.[0]?.value ||
+            profile.pictureUrl,
           authMethod: "linkedin",
         });
 
         await newUser.save();
         return done(null, newUser);
       } catch (error) {
+        console.error("LinkedIn OAuth error:", error);
         return done(error, null);
       }
     },
@@ -286,6 +345,63 @@ passport.use(
         await newUser.save();
         return done(null, newUser);
       } catch (error) {
+        return done(error, null);
+      }
+    },
+  ),
+);
+
+// GitHub OAuth Strategy
+passport.use(
+  new GitHubStrategy(
+    {
+      clientID: process.env.GITHUB_CLIENT_ID || "fallback_github_client_id",
+      clientSecret:
+        process.env.GITHUB_CLIENT_SECRET || "fallback_github_client_secret",
+      callbackURL: "/api/auth/github/callback",
+      scope: ["user:email"],
+    },
+    async (accessToken, refreshToken, profile, done) => {
+      try {
+        console.log("GitHub profile:", profile);
+        let user = await User.findOne({ githubId: profile.id });
+
+        if (user) {
+          return done(null, user);
+        }
+
+        // Check if user exists with same email
+        const existingUser = await User.findOne({
+          email: profile.emails && profile.emails[0].value,
+        });
+
+        if (existingUser) {
+          // Link GitHub account to existing user
+          existingUser.githubId = profile.id;
+          existingUser.authMethod = "github";
+          existingUser.avatar = profile._json && profile._json.avatar_url;
+          if (!existingUser.username) {
+            existingUser.username = profile.username
+              .replace(/\s+/g, "")
+              .toLowerCase();
+          }
+          await existingUser.save();
+          return done(null, existingUser);
+        }
+
+        // Create new user
+        const newUser = new User({
+          githubId: profile.id,
+          username: profile.username.replace(/\s+/g, "").toLowerCase(),
+          email: profile.emails && profile.emails[0].value,
+          avatar: profile._json && profile._json.avatar_url,
+          authMethod: "github",
+        });
+
+        await newUser.save();
+        return done(null, newUser);
+      } catch (error) {
+        console.error("GitHub OAuth error:", error);
         return done(error, null);
       }
     },
@@ -574,6 +690,48 @@ app.get(
       );
     } catch (error) {
       console.error("Instagram auth callback error:", error);
+      res.redirect("http://localhost:5173?error=server_error");
+    }
+  },
+);
+
+// GitHub OAuth Routes
+app.get("/api/auth/github", passport.authenticate("github"));
+
+app.get(
+  "/api/auth/github/callback",
+  passport.authenticate("github", {
+    failureRedirect: "http://localhost:5173?error=github_auth_failed",
+    session: false,
+  }),
+  async (req, res) => {
+    try {
+      // Create JWT token for GitHub user
+      const token = jwt.sign(
+        {
+          userId: req.user._id,
+          username: req.user.username,
+          email: req.user.email,
+          authMethod: req.user.authMethod,
+        },
+        process.env.JWT_SECRET || "fallback_secret",
+        { expiresIn: "24h" },
+      );
+
+      // Redirect to frontend with token
+      res.redirect(
+        `http://localhost:5173?token=${token}&user=${encodeURIComponent(
+          JSON.stringify({
+            id: req.user._id,
+            username: req.user.username,
+            email: req.user.email,
+            avatar: req.user.avatar,
+            authMethod: req.user.authMethod,
+          }),
+        )}`,
+      );
+    } catch (error) {
+      console.error("GitHub auth callback error:", error);
       res.redirect("http://localhost:5173?error=server_error");
     }
   },

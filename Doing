@@ -1,49 +1,45 @@
 ## Work Doing:
 
-Date: 17 Feb, 2026
-Day: Tuesday,
+Date: 18 Feb, 2026
+Day: Wednesday,
 
 Today, I am working on the following tasks:
 
-Project: Capri, (5 H)
+Project: FDP Landshut, (5 H)
 
-1. Social Media Signup – Dummy Implementation
-  - Research on OAuth flow basics, Instagram / Facebook / other provider integration, Token handling & verification.
-  - Implement:
-    - Social media login/signup flow in dummy project.
-  - Social media like Google, Instagram, Facebook integration.
+1. Test Web application 
+  - Perform comprehensive testing of the web application to identify issues, gaps, and incomplete functionality.
+  - Check Responsive behavior (Desktop / Tablet / Mobile), UI consistency.
+  - Identify Bugs, Missing functionality, and Incomplete features.
+2. Create Google Sheet for remaining module or functionality.
+  - Prepare structured documentation of incomplete or missing areas.
   
 ## Work done:
 
 EOD,
-Date: 17 Feb, 2026
-Day: Tuesday,
+Date: 18 Feb, 2026
+Day: Wednesday,
 
 Today, I have completed the following tasks:
 
-Project: Capri,
+Project: FDP Landshut, (5 H)
 
-1. Social Media Signup – Research (3 H)
-  - Research Phase
-    - Study OAuth 2.0 flow basics
-    - Research integration requirements for Google, Instagram, Facebook, LinkedIn, Apple.
-    - Understand:
-      - App registration process
-      - Client ID & Secret usage
-      - Scopes & permissions
-2. Implementation Phase (2 H)
-  - Implement:
-    - Social media signup flow in dummy project.
-    - Social media like Google, Instagram, Facebook, LinkedIn, Apple integration.
+1. Test Web application 
+  - Perform comprehensive testing of the web application to identify issues, gaps, and incomplete functionality.
+  - Check Responsive behavior (Desktop / Tablet / Mobile), UI consistency.
+  - Identify Bugs, Missing functionality, and Incomplete features.
+2. Create Google Sheet for remaining module or functionality.
+  - Prepare structured documentation of incomplete or missing areas.
 
-Project: Nurtureme
-1. Google Drive Setup for Figma Assets (3 H)
-  - Create a dedicated Google Drive structure for storing all Figma design assets.
-  - Upload:
-    - All Figma images/screens.
-    - Organized based on flow.
-  - Maintain folder hierarchy:
-    - Structure folders similar to Figma file organization.
+Project: Dealer Data, (1 H)
+
+1. Setup Backend and install Xampp and setup that too.
+2. Check Dealer Data is available or not.
+
+Project : Capri, (1.5 H)
+
+1. Implement Signup with Github account.
+2. There linkedIn account through login not work properly, needs to solve issue. (In Progress) 
 
 
 

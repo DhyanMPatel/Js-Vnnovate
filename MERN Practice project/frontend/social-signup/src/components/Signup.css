@@ -201,6 +201,50 @@
   height: 20px;
 }
 
+/* GitHub Signup Button Styles */
+.github-signup-section {
+  margin-bottom: 1.5rem;
+}
+
+.github-signup-button {
+  width: 100%;
+  padding: 12px 16px;
+  background: #24292e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.github-signup-button:hover:not(:disabled) {
+  background: #1a1e2e;
+  box-shadow: 0 1px 3px rgba(36, 41, 46, 0.3);
+  transform: translateY(-1px);
+}
+
+.github-signup-button:active:not(:disabled) {
+  background: #0d1117;
+  transform: translateY(0);
+}
+
+.github-signup-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
 /* Instagram Signup Button Styles */
 .instagram-signup-section {
   margin-bottom: 1.5rem;
