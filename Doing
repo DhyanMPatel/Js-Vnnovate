@@ -1,46 +1,38 @@
 ## Work Doing:
 
-Date: 18 Feb, 2026
-Day: Wednesday,
+Date: 19 Feb, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
 
-Project: FDP Landshut, (5 H)
+Project: Dealer Data,
 
-1. Test Web application 
-  - Perform comprehensive testing of the web application to identify issues, gaps, and incomplete functionality.
-  - Check Responsive behavior (Desktop / Tablet / Mobile), UI consistency.
-  - Identify Bugs, Missing functionality, and Incomplete features.
-2. Create Google Sheet for remaining module or functionality.
-  - Prepare structured documentation of incomplete or missing areas.
-  
+1. Set up both the frontend and backend projects on my local machine.
+
+Project BEC,
+
+1. Testing
+  - Test all design changes and implemented functionalities.
+  - Verify responsive behavior (Desktop / Tablet / Mobile) and UI consistency.
 ## Work done:
 
 EOD,
-Date: 18 Feb, 2026
-Day: Wednesday,
+Date: 19 Feb, 2026
+Day: Thursday,
 
 Today, I have completed the following tasks:
 
-Project: FDP Landshut, (5 H)
+Project: BEC,
 
-1. Test Web application 
-  - Perform comprehensive testing of the web application to identify issues, gaps, and incomplete functionality.
-  - Check Responsive behavior (Desktop / Tablet / Mobile), UI consistency.
-  - Identify Bugs, Missing functionality, and Incomplete features.
-2. Create Google Sheet for remaining module or functionality.
-  - Prepare structured documentation of incomplete or missing areas.
+1. Testing (7 H)
+  - Test all design changes and implemented functionalities.
+  - Verify responsive behavior (Desktop / Tablet / Mobile) and UI consistency.
+  - Test modules / Pages like: profile, sidebar, Guest Register flow, Register in Event flow, Register page (Guest).
+  - Test in both light and dark theme.
+  - Create Google sheet for Bug list. 
 
-Project: Dealer Data, (1 H)
-
-1. Setup Backend and install Xampp and setup that too.
-2. Check Dealer Data is available or not.
-
-Project : Capri, (1.5 H)
-
-1. Implement Signup with Github account.
-2. There linkedIn account through login not work properly, needs to solve issue. (In Progress) 
-
+2. Dealer Data (1 H)
+  - Set up both the frontend and backend project in my local machine.
 
 
 
