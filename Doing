@@ -1,40 +1,33 @@
 ## Work Doing:
 
-Date: 19 Feb, 2026
-Day: Thursday,
+Date: 20 Feb, 2026
+Day: Friday,
 
 Today, I am working on the following tasks:
 
-Project: Dealer Data,
-
-1. Set up both the frontend and backend projects on my local machine.
-
-Project BEC,
+Project BEC, (4 H)
 
 1. Testing
-  - Test all design changes and implemented functionalities.
+  - Test remaining module's design changes and implemented functionalities.
   - Verify responsive behavior (Desktop / Tablet / Mobile) and UI consistency.
 ## Work done:
 
 EOD,
-Date: 19 Feb, 2026
-Day: Thursday,
+Date: 20 Feb, 2026
+Day: Friday,
 
 Today, I have completed the following tasks:
 
 Project: BEC,
 
-1. Testing (7 H)
-  - Test all design changes and implemented functionalities.
-  - Verify responsive behavior (Desktop / Tablet / Mobile) and UI consistency.
-  - Test modules / Pages like: profile, sidebar, Guest Register flow, Register in Event flow, Register page (Guest).
-  - Test in both light and dark theme.
-  - Create Google sheet for Bug list. 
-
-2. Dealer Data (1 H)
-  - Set up both the frontend and backend project in my local machine.
-
-
+1. Testing & Bug Fixing (8 H)
+  - Tested additional pages across the application.
+  - Identified and resolved:
+    - UI design inconsistencies
+    - Responsive layout issues (Desktop / Tablet / Mobile)
+    - Alignment and spacing problems
+    - Component overflow and breakpoints issues
+  - Ensured consistency with the overall design system.
 
 
 
@@ -169,167 +162,119 @@ Project: Media Planner,
 Git Commit ID: 3653fda296650dee81c132c046b35445067ab2d9
 Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/3653fda296650dee81c132c046b35445067ab2d9
 
-
-**Subject**: Weekly (9 Feb - 13 Feb) Report of Dhyan
-
-Project: Sales CRM,
-
-Git Commit ID: ff7c7d5e5caa64eab57b625f6327425f7dd1e2ca
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/ff7c7d5e5caa64eab57b625f6327425f7dd1e2ca
-
-Description:
-
-1. Dashboard Improvements (2 H)
-  1.1 New Dashboard Blocks
-    - Add two new KPI blocks on the Dashboard:
-      A. Projects Awarded
-        - Displays the count of Leads with stage = “Won / Project Awarded”
-        - Role-based data visibility:
-          - Admin & Sales Head → Count of all Won leads
-          - BDM & BDE → Count of only their assigned Won leads
-      B. Booking Amount
-        - Displays the total Lead Value of Leads included in the Projects Awarded block.
-        - Role-based data visibility:
-          - Admin & Sales Head → Sum of all Won leads
-          - BDM & BDE → Sum of only their assigned Won leads
-  1.2 UI Update
-    - Change Won stage color to Green.
-    - Update UI of Dashboard blocks.
- 
-2. Activity Log Enhancements ( 1 Hour)
-  - Add two new Activity Types to the Activity Log:
-    - WhatsApp Message / Call
-    - LinkedIn Message
- 
-3. Tested all above functionality in Local/QA Server. (0.5 H)
-
-4. Dashboard Validation
-  - Tested newly added Dashboard blocks by creating Leads with Won / Project Awarded stage.
-  - Verified:
-    - Correct Projects Awarded count.
-    - Accurate Booking Amount calculation (sum of Lead values).
-    - Role-based visibility logic (Admin/Sales Head vs BDM/BDE).
-
-5. Deployment & Coordination
-  - Requested Vasik sir to deploy the latest changes to the Live server.
-  - Informed Ashish sir and Veer sir to review and validate the new Dashboard implementations after deployment.
-
-6. Next Follow-up Functionality (2.5 H)
-  - Added a new column follow_ups to track how many times a follow-up has been taken (default value: 0). – Done
-  - When a user completes a task, a new field “Next Follow-up” is available. If selected, it automatically creates a new task for the specified date. – Done
-  - The task title format is: “Follow-up Activity_Name Task - (number)”. – Done
- 
-7. Role based data (2.5 H)
-  - Projects are now displayed based on role-wise access, same as Lead visibility. – Done
-  - Contacts are now displayed based on role-wise access, same as Lead visibility. – Done
-  - Clients are now displayed based on role-wise access, same as Lead visibility. – Done
-  - Test All above functionality in Local server.
-
-8. QA Testing (2 H)
-  A. Role-Based Data Validation
-    - Test role-based visibility and access control in (Lead, Contacts, Clients, Projects pages.)
-    - Verify:
-      - Admin / Sales Head → Access to all data.
-      - BDM → Access to own + team data (as per logic).
-      - BDE → Access to only assigned data.
-    - Next Follow up task during completion of any task.
- 
-  B. Next Follow-Up Task Validation
-    - Verify automatic task creation when completing any task with a Next Follow-up Date & Time.
-    - Confirm:
-      - Task appears in Activity Log.
-      - Task appears correctly in Task Module.
-      - No duplicate creation.
-      - Proper date/time handling.
-
 Project: E-Order,
 
 Git Commit ID: 2ad0cb6bc2c3e3c55ab9d37125dec03fa0c959a0
 Git Commit Link: https://gitlab.com/vnnovatesolutions/eorder-webapp/-/commit/2ad0cb6bc2c3e3c55ab9d37125dec03fa0c959a0
 
-Description:
-
-1. Global Translation (2 H)
-  - Remove Consoles.
-  - Solve translation issue related to dynamic values.
-2. Create Google Sheet for (2 H)
-  - Pending task which is either not cleared or not completed.
-  - Mark completed task as Done.
-
-3. Store Details (2 H)
-  - Added Category List tab for a particular store. – Done
-  - Displayed favorite products with a filled favorite icon based on user role. – Done
-  - Displayed category-wise products under their respective categories. – Done
- 
-4. Dashboard (0.25 H)
-  - Set the default date to today on initial page load. – Done
- 
-5. Auth Module (0.5 H)
-  - Added a Language Translation dropdown option. – Done
- 
-6. Product Details (0.25 H)
-  - If a product is marked as favorite, it is now highlighted. – Done
-
-7. Basket Page Enhancement (1.5 H)
-  - Add navigation link from Basket page → Store Details page.
-  - When clicking on a specific Supplier name, redirect to:
-    - The corresponding Store Details page.
-  - Test in Local server.
-
-Project: BEC,
-
-Git Commit ID: bc1c84db1f32c3222174409e858342d65a1ac5b4
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/bc1c84db1f32c3222174409e858342d65a1ac5b4
-
-Description:
-
-1. Calendar Module Enhancements (1 H)
-  - Redesigned the BEC Calendar page to improve overall UI and usability.
-  - Updated the “View Off Days” modal popup UI for better clarity and user understanding.
-  - Ensured full responsive behavior.
-
-2. Bug Identification & Resolution (3 H)
-  - Identified issues during testing.
-  - Collaborated with the team to analyze and resolve bugs.
-  - Verified fixes after implementation.
-
-3. Testing (3 H)
-  - Tested some modules in both Local and QA environments.
-  - Verified newly implemented changes in QA
-  - Performed testing across all user roles.
-
 
 Project: Learning,
 
+**Subject**: Weekly (16 Feb - 20 Feb) Report of Dhyan
+
+Project: Sales CRM,
+
 Description:
 
-1. JWT (JSON Web Token) Revision (2 H)
-  - Revised:
-    - JWT format (Header, Payload, Signature)
-    - Types of tokens (Access Token, Refresh Token)
-    - Two approaches to create & verify JWT:
-      - Using secret key
-      - Using public/private key (asymmetric)
-    - Implemented JWT authentication in a simple Node.js project.
-2. Multer (2 H)
-  - Explored Multer for file handling:
-    - File upload middleware
-    - Handling single & multiple file uploads
-    - Storage configuration and validation basics.
-3. NodeMailer (1 H) (In Progress)
-  - Learning basics of NodeMailer:
-    - SMTP configuration
-    - Sending emails from Node.js
+1. Tasks Page Enhancement (1 H)
+  - Modify task grouping logic:
+    - Sort Completed tasks to the end within each group.
 
-4. Support Task (0.5 H)
-  - Assisted Kunal with GitLab authentication issues and helped resolve access/login-related problems.
+Project: BEC,
 
-5. Explore Display properties in CSS (1.5 H)
-6. NodeMailer library (2 H)
-  - Explore NodeMailer configuration (SMTP setup).
-  - Implement email sending in a simple Node.js project:
-    - Basic send mail function
-    - Basic Error handling
+Git Commit ID: 1562706468a8259c2c5b8d7450a37c94eb032a5b
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/1562706468a8259c2c5b8d7450a37c94eb032a5b
+
+Description:
+
+1. Sidebar UI Enhancement (2 H)
+  - Redesign Sidebar for improved user experience.
+  - Ensure full responsiveness and Proper active/hover states.
+  - Test in Local Environment & QA Environment.
+
+2. Testing (6 H)
+  - Test all design changes and implemented functionalities.
+  - Verify responsive behavior (Desktop / Tablet / Mobile) and UI consistency.
+  - Test modules / Pages like: profile, sidebar, Guest Register flow, Register in Event flow, Register page (Guest).
+  - Test in both light and dark theme.
+  - Create Google sheet for Bug list.
+3. Testing & Bug Fixing (8 H)
+  - Tested additional pages across the application.
+  - Identified and resolved:
+    - UI design inconsistencies
+    - Responsive layout issues (Desktop / Tablet / Mobile)
+    - Alignment and spacing problems
+    - Component overflow and breakpoints issues
+  - Ensured consistency with the overall design system.
+
+
+Project: Capri,
+Description:
+
+1. Backend Setup (1.5 H)
+  - Collaborate with team to set up backend project environment.
+  - Configure dependencies and environment variables.
+
+2. API Validation (1.5 H)
+  - Test and verify some working routes using Postman.
+
+3. Social Media Signup – Dummy Implementation (1 H) (In Progress)
+  - Create a dummy Node.js project for experimentation.
+  - Research on OAuth flow basics, Google / Facebook / other provider integration, Token handling & verification.
+  - Implement:
+    - Social media login/signup flow in dummy project.
+4. Social Media Signup – Research (3 H)
+  - Research Phase
+    - Study OAuth 2.0 flow basics
+    - Research integration requirements for Google, Instagram, Facebook, LinkedIn, Apple.
+    - Understand:
+      - App registration process
+      - Client ID & Secret usage
+      - Scopes & permissions
+5. Implementation Phase (2 H)
+  - Implement:
+    - Social media signup flow in dummy project.
+    - Social media like Google, Instagram, Facebook, LinkedIn, Apple integration.
+
+6. Implement Signup with Github account.
+7. There linkedIn account through login not work properly, needs to solve issue.
+
+Project: Nurtureme,
+Description:
+1. Google Drive Setup for Figma Assets (3 H)
+  - Create a dedicated Google Drive structure for storing all Figma design assets.
+  - Upload:
+    - All Figma images/screens.
+    - Organized based on flow.
+  - Maintain folder hierarchy:
+    - Structure folders similar to Figma file organization.
+
+Project: FDP Landshut,
+Description:
+1. Test Web application
+  - Perform comprehensive testing of the web application to identify issues, gaps, and incomplete functionality.
+  - Check Responsive behavior (Desktop / Tablet / Mobile), UI consistency.
+  - Identify Bugs, Missing functionality, and Incomplete features.
+2. Create Google Sheet for remaining module or functionality.
+  - Prepare structured documentation of incomplete or missing areas.
+
+Project: Dealer Data,
+Description:
+
+1. Setup (2 H)
+  - Set up both the frontend and backend project in my local machine.
+2. Check Dealer Data project related data is available or not.
+
+
+Project: Other,
+Description:
+
+1. Candidate Interview (1 H)
+  - Conduct technical interview.
+  - Evaluate based on Technical knowledge, Problem-solving approach, Communication clarity.
+  - Provide feedback.
+
+
 
 ## Leave Request
 
