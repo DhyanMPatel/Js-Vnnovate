@@ -1,33 +1,31 @@
 ## Work Doing:
 
-Date: 20 Feb, 2026
-Day: Friday,
+Date: 24 Feb, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
-Project BEC, (4 H)
+Project BEC, (8 H)
 
-1. Testing
-  - Test remaining module's design changes and implemented functionalities.
-  - Verify responsive behavior (Desktop / Tablet / Mobile) and UI consistency.
+1. Check changes of Color related to Light & Dark Mode in Guest.
+2. Check Guest Register flow and Register in Event flow after yesterday's changes.
+
+
 ## Work done:
 
 EOD,
-Date: 20 Feb, 2026
-Day: Friday,
+Date: 24 Feb, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
 Project: BEC,
 
-1. Testing & Bug Fixing (8 H)
-  - Tested additional pages across the application.
-  - Identified and resolved:
-    - UI design inconsistencies
-    - Responsive layout issues (Desktop / Tablet / Mobile)
-    - Alignment and spacing problems
-    - Component overflow and breakpoints issues
-  - Ensured consistency with the overall design system.
+1. Check Profile page and add parent component class in separate files.
+2. Check Sidebar css file and add parent component class in separate files.
+3. Checking Event portal 2 stepper css file and add parent component class in separate files.
+4. Comment extra css style in root css file.
+5. 
 
 
 
