@@ -1,33 +1,50 @@
 ## Work Doing:
 
-Date: 20 Feb, 2026
-Day: Friday,
+Date: 24 Feb, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
-Project BEC, (4 H)
+Project BEC, (8 H)
 
-1. Testing
-  - Test remaining module's design changes and implemented functionalities.
-  - Verify responsive behavior (Desktop / Tablet / Mobile) and UI consistency.
+1. Check changes of Color related to Light & Dark Mode in Guest.
+2. Check Guest Register flow and Register in Event flow after yesterday's changes.
+
+
 ## Work done:
 
 EOD,
-Date: 20 Feb, 2026
-Day: Friday,
+Date: 24 Feb, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
 Project: BEC,
 
-1. Testing & Bug Fixing (8 H)
-  - Tested additional pages across the application.
-  - Identified and resolved:
-    - UI design inconsistencies
-    - Responsive layout issues (Desktop / Tablet / Mobile)
-    - Alignment and spacing problems
-    - Component overflow and breakpoints issues
-  - Ensured consistency with the overall design system.
+1. Profile Page Refactoring
+  - Reviewed the Profile page styles.
+  - Added a dedicated parent component class to isolate styles.
+  - Ensured no global CSS conflicts remain.
+
+2. Sidebar CSS Refactoring
+  - Audited the Sidebar CSS file.
+  - Wrapped styles under a parent component class to avoid style leakage.
+  - Organized styles into a separate modular file.
+  - Verified responsive behavior after refactoring.
+
+3. Event Portal – Stepper CSS Refactoring
+  - Reviewed Event Portal 2-Stepper styling.
+  - Added a parent container class to properly scope styles.
+  - Moved styles into a dedicated file.
+  - Checked alignment, spacing, and responsiveness post changes.
+  - Remaining for Second page in Stepper.
+
+4. Event Portal – Stepper CSS Refactoring
+  - Reviewed Event Portal 2-Stepper styling.
+  - Added a parent container class to properly scope styles.
+  - Moved styles into a dedicated file.
+  - Checked alignment, spacing, and responsiveness post changes.
+5. 
 
 
 
