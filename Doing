@@ -1,50 +1,51 @@
 ## Work Doing:
 
-Date: 24 Feb, 2026
-Day: Tuesday,
+Date: 25 Feb, 2026
+Day: Wednesday,
 
 Today, I am working on the following tasks:
 
 Project BEC, (8 H)
 
-1. Check changes of Color related to Light & Dark Mode in Guest.
-2. Check Guest Register flow and Register in Event flow after yesterday's changes.
+1. Continue CSS Refactoring (2-Stepper & 6-Stepper)
+  - Continued refactoring CSS for:
+    - 2-Stepper
+    - 6-Stepper
+  - Isolate styles properly using parent component classes.
+  - Moved styles into dedicated modular files.
+  - Removed redundant / duplicate CSS.
 
+2. Color Consistency Check in Steppers
+  - Fixed inconsistent background, border, text colors, Checkbox color, etc.
 
 ## Work done:
 
 EOD,
-Date: 24 Feb, 2026
-Day: Tuesday,
+Date: 25 Feb, 2026
+Day: Wednesday,
 
 Today, I have completed the following tasks:
 
-Project: BEC,
+Project: BEC, (8.5 H)
 
-1. Profile Page Refactoring
-  - Reviewed the Profile page styles.
-  - Added a dedicated parent component class to isolate styles.
-  - Ensured no global CSS conflicts remain.
+1. CSS Refactoring (2-Stepper & 6-Stepper)
+  - Continued refactoring CSS for:
+    - 2-Stepper
+    - 6-Stepper
+    - Freelancer Profile
+  - Isolate styles properly using parent component classes.
+  - Moved styles into dedicated modular files.
+  - Removed redundant / duplicate CSS.
 
-2. Sidebar CSS Refactoring
-  - Audited the Sidebar CSS file.
-  - Wrapped styles under a parent component class to avoid style leakage.
-  - Organized styles into a separate modular file.
-  - Verified responsive behavior after refactoring.
+2. Color Consistency Improvements
+  - Verified and corrected color inconsistencies in:
+    - Stepper components (2-Stepper & 6-Stepper)
+    - Freelancer Profile
 
-3. Event Portal – Stepper CSS Refactoring
-  - Reviewed Event Portal 2-Stepper styling.
-  - Added a parent container class to properly scope styles.
-  - Moved styles into a dedicated file.
-  - Checked alignment, spacing, and responsiveness post changes.
-  - Remaining for Second page in Stepper.
+3. Common Footer Button Style Audit
+  - Checked footer button styling across the pages.
+  - Ensured consistent UI across modules.
 
-4. Event Portal – Stepper CSS Refactoring
-  - Reviewed Event Portal 2-Stepper styling.
-  - Added a parent container class to properly scope styles.
-  - Moved styles into a dedicated file.
-  - Checked alignment, spacing, and responsiveness post changes.
-5. 
 
 
 
