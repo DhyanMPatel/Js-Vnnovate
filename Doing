@@ -21,10 +21,29 @@ Today, I have completed the following tasks:
 
 Project: BEC,
 
-1. Check Profile page and add parent component class in separate files.
-2. Check Sidebar css file and add parent component class in separate files.
-3. Checking Event portal 2 stepper css file and add parent component class in separate files.
-4. Comment extra css style in root css file.
+1. Profile Page Refactoring
+  - Reviewed the Profile page styles.
+  - Added a dedicated parent component class to isolate styles.
+  - Ensured no global CSS conflicts remain.
+
+2. Sidebar CSS Refactoring
+  - Audited the Sidebar CSS file.
+  - Wrapped styles under a parent component class to avoid style leakage.
+  - Organized styles into a separate modular file.
+  - Verified responsive behavior after refactoring.
+
+3. Event Portal – Stepper CSS Refactoring
+  - Reviewed Event Portal 2-Stepper styling.
+  - Added a parent container class to properly scope styles.
+  - Moved styles into a dedicated file.
+  - Checked alignment, spacing, and responsiveness post changes.
+  - Remaining for Second page in Stepper.
+
+4. Event Portal – Stepper CSS Refactoring
+  - Reviewed Event Portal 2-Stepper styling.
+  - Added a parent container class to properly scope styles.
+  - Moved styles into a dedicated file.
+  - Checked alignment, spacing, and responsiveness post changes.
 5. 
 
 
