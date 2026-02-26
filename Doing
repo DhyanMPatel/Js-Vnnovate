@@ -1,32 +1,35 @@
 ## Work Doing:
 
-Date: 25 Feb, 2026
-Day: Wednesday,
+Date: 26 Feb, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
 
 Project BEC, (8 H)
 
-1. Continue CSS Refactoring (2-Stepper & 6-Stepper)
-  - Continued refactoring CSS for:
-    - 2-Stepper
-    - 6-Stepper
-  - Isolate styles properly using parent component classes.
-  - Moved styles into dedicated modular files.
-  - Removed redundant / duplicate CSS.
-
-2. Color Consistency Check in Steppers
-  - Fixed inconsistent background, border, text colors, Checkbox color, etc.
+1. Check all responsiveness across all devices.
+2. Check Color consistency across all modules and correct that.
 
 ## Work done:
 
 EOD,
-Date: 25 Feb, 2026
-Day: Wednesday,
+Date: 26 Feb, 2026
+Day: Thursday,
 
 Today, I have completed the following tasks:
 
 Project: BEC, (8.5 H)
+
+1. Standardized Button Component Across Application 
+  - Replaced all default/custom button implementations with the Material UI (MUI) Button component throughout the application.
+  - Ensured consistency in styling, sizing, and behavior across all pages.
+2. Enhanced Dark Theme UI Experience
+  - Improved overall visual consistency in dark mode.
+  - Adjusted color contrasts to enhance readability and accessibility.
+  - Reviewed key UI components (forms, cards, tables, dialogs) to ensure proper dark theme rendering.
+3. Sidebar Improvements (Light & Dark Theme)
+  - Updated active menu item styling for better visibility and user feedback.
+  - Implemented consistent active state indicators in both light and dark themes.
 
 1. CSS Refactoring (2-Stepper & 6-Stepper)
   - Continued refactoring CSS for:
