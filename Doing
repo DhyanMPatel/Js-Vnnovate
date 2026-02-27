@@ -1,13 +1,40 @@
 ## Work Doing:
 
-Date: 27o Feb, 2026
+Date: 28 Feb, 2026
 Day: Friday,
 
 Today, I am working on the following tasks:
 
 Project BEC, (8 H)
 
-1. Check light Mode and Dark mode testing with respect to all roles.
+1. Theme Testing (All Roles)
+  - Performed Light Mode & Dark Mode testing.
+
+2. Dashboard Updates
+  - Event Schedule & Booking Schedule
+    - Implemented major UI improvements based on theme.
+    - Ensured consistent appearance in both Light and Dark modes.
+
+3. Header Updates
+  - Notification Popup
+    - Updated popup UI related to theme based on active theme.
+
+4. Sidebar Improvements
+  - Removed unnecessary scrollbar in Dark Mode.
+  - Fixed Reporting menu item height issue.
+  - Ensured consistent spacing and alignment.
+
+5. Add changes related in Guest role related to:
+  - Updated Minor Details form design.
+  - Adjusted styling based on theme
+
+6. Other UI Improvements
+  - Time Picker
+    - Updated color combinations for Light & Dark mode.
+  - View Modals
+    - Redesigned icons for better
+    - Ensured consistency across all modal views.
+
 
 ## Work done:
 
@@ -164,109 +191,117 @@ Git Commit Link: https://gitlab.com/vnnovatesolutions/eorder-webapp/-/commit/2ad
 
 Project: Learning,
 
-**Subject**: Weekly (16 Feb - 20 Feb) Report of Dhyan
-
 Project: Sales CRM,
 
 Description:
 
-1. Tasks Page Enhancement (1 H)
-  - Modify task grouping logic:
-    - Sort Completed tasks to the end within each group.
-
-Project: BEC,
-
-Git Commit ID: 1562706468a8259c2c5b8d7450a37c94eb032a5b
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/1562706468a8259c2c5b8d7450a37c94eb032a5b
-
-Description:
-
-1. Sidebar UI Enhancement (2 H)
-  - Redesign Sidebar for improved user experience.
-  - Ensure full responsiveness and Proper active/hover states.
-  - Test in Local Environment & QA Environment.
-
-2. Testing (6 H)
-  - Test all design changes and implemented functionalities.
-  - Verify responsive behavior (Desktop / Tablet / Mobile) and UI consistency.
-  - Test modules / Pages like: profile, sidebar, Guest Register flow, Register in Event flow, Register page (Guest).
-  - Test in both light and dark theme.
-  - Create Google sheet for Bug list.
-3. Testing & Bug Fixing (8 H)
-  - Tested additional pages across the application.
-  - Identified and resolved:
-    - UI design inconsistencies
-    - Responsive layout issues (Desktop / Tablet / Mobile)
-    - Alignment and spacing problems
-    - Component overflow and breakpoints issues
-  - Ensured consistency with the overall design system.
-
-
 Project: Capri,
-Description:
-
-1. Backend Setup (1.5 H)
-  - Collaborate with team to set up backend project environment.
-  - Configure dependencies and environment variables.
-
-2. API Validation (1.5 H)
-  - Test and verify some working routes using Postman.
-
-3. Social Media Signup – Dummy Implementation (1 H) (In Progress)
-  - Create a dummy Node.js project for experimentation.
-  - Research on OAuth flow basics, Google / Facebook / other provider integration, Token handling & verification.
-  - Implement:
-    - Social media login/signup flow in dummy project.
-4. Social Media Signup – Research (3 H)
-  - Research Phase
-    - Study OAuth 2.0 flow basics
-    - Research integration requirements for Google, Instagram, Facebook, LinkedIn, Apple.
-    - Understand:
-      - App registration process
-      - Client ID & Secret usage
-      - Scopes & permissions
-5. Implementation Phase (2 H)
-  - Implement:
-    - Social media signup flow in dummy project.
-    - Social media like Google, Instagram, Facebook, LinkedIn, Apple integration.
-
-6. Implement Signup with Github account.
-7. There linkedIn account through login not work properly, needs to solve issue.
-
-Project: Nurtureme,
-Description:
-1. Google Drive Setup for Figma Assets (3 H)
-  - Create a dedicated Google Drive structure for storing all Figma design assets.
-  - Upload:
-    - All Figma images/screens.
-    - Organized based on flow.
-  - Maintain folder hierarchy:
-    - Structure folders similar to Figma file organization.
-
-Project: FDP Landshut,
-Description:
-1. Test Web application
-  - Perform comprehensive testing of the web application to identify issues, gaps, and incomplete functionality.
-  - Check Responsive behavior (Desktop / Tablet / Mobile), UI consistency.
-  - Identify Bugs, Missing functionality, and Incomplete features.
-2. Create Google Sheet for remaining module or functionality.
-  - Prepare structured documentation of incomplete or missing areas.
 
 Project: Dealer Data,
 Description:
 
-1. Setup (2 H)
-  - Set up both the frontend and backend project in my local machine.
-2. Check Dealer Data project related data is available or not.
+**Subject**: Weekly (23 Feb - 27 Feb) Report of Dhyan
 
+Project: BEC,
 
-Project: Other,
+Git Commit ID: 98d515831ea9060fe543cca14a2d14867bf89028
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/98d515831ea9060fe543cca14a2d14867bf89028
+
 Description:
 
-1. Candidate Interview (1 H)
-  - Conduct technical interview.
-  - Evaluate based on Technical knowledge, Problem-solving approach, Communication clarity.
-  - Provide feedback.
+1. CSS Refactoring & Variable Management
+  - Created a separate CSS file to store all global CSS variables (colors, spacing, typography, etc.).
+  - Centralized design tokens for better maintainability.
+  - Commented out existing CSS variable definitions from other files too.
+ 
+2. Reviewed and fixed UI/CSS-related issues in:
+  - Profile Page
+  - Events Module
+  - Guest Registration Flow
+  - Register in Event Flow
+ 
+3. Contact Number Field Usage Audit
+  - Create a structured list of all locations where Contact Number field is used
+
+4. Profile Page Refactoring
+  - Reviewed the Profile page styles.
+  - Added a dedicated parent component class to isolate styles.
+  - Ensured no global CSS conflicts remain.
+ 
+5. Sidebar CSS Refactoring
+  - Audited the Sidebar CSS file.
+  - Wrapped styles under a parent component class to avoid style leakage.
+  - Organized styles into a separate modular file.
+  - Verified responsive behavior after refactoring.
+ 
+6. Event Portal – Stepper CSS Refactoring
+  - Reviewed Event Portal 2-Stepper styling.
+  - Added a parent container class to properly scope styles.
+  - Moved styles into a dedicated file.
+  - Checked alignment, spacing, and responsiveness post changes.
+  - Remaining for Second page in Stepper. (In Progress)
+ 
+7. Root CSS Cleanup
+  - Identified and commented out unused / extra CSS styles in the root CSS file.
+  - Reduced global style pollution.
+  - Improved maintainability and modular structure.
+
+8. CSS Refactoring (2-Stepper & 6-Stepper)
+  - Continued refactoring CSS for:
+    - 2-Stepper
+    - 6-Stepper
+    - Freelancer Profile
+  - Isolate styles properly using parent component classes.
+  - Moved styles into dedicated modular files.
+  - Removed redundant / duplicate CSS.
+ 
+9. Color Consistency Improvements
+  - Verified and corrected color inconsistencies in:
+    - Stepper components (2-Stepper & 6-Stepper)
+    - Freelancer Profile
+ 
+10. Common Footer Button Style Audit
+  - Checked footer button styling across the pages.
+  - Ensured consistent UI across modules.
+
+11. Standardized Button Component Across Application
+  - Replaced all default/custom button implementations with the Material UI (MUI) Button component throughout the application.
+  - Ensured consistency in styling, sizing, and behavior across all pages.
+12. Enhanced Dark Theme UI Experience
+  - Improved overall visual consistency in dark mode.
+  - Adjusted color contrasts to enhance readability and accessibility.
+  - Reviewed key UI components (forms, cards, tables, dialogs) to ensure proper dark theme rendering.
+13. Sidebar Improvements (Light & Dark Theme)
+  - Updated active menu item styling for better visibility and user feedback.
+  - Implemented consistent active state indicators in both light and dark themes.
+
+14. Theme Testing (All Roles)
+  - Performed Light Mode & Dark Mode testing.
+ 
+15. Dashboard Updates
+  - Event Schedule & Booking Schedule
+    - Implemented major UI improvements based on theme.
+    - Ensured consistent appearance in both Light and Dark modes.
+ 
+16. Header Updates
+  - Notification Popup
+    - Updated popup UI related to theme based on active theme.
+ 
+17. Sidebar Improvements
+  - Removed unnecessary scrollbar in Dark Mode.
+  - Fixed Reporting menu item height issue.
+  - Ensured consistent spacing and alignment.
+ 
+18. Add changes related in Guest role related to:
+  - Updated Minor Details form design.
+  - Adjusted styling based on theme
+ 
+19. Other UI Improvements
+  - Time Picker
+    - Updated color combinations for Light & Dark mode.
+  - View Modals
+    - Redesigned icons for better
+    - Ensured consistency across all modal views.
 
 
 
