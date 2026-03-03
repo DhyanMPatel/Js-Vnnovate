@@ -1,76 +1,52 @@
 ## Work Doing:
 
-Date: 2 March, 2026
-Day: Monday,
+Date: 3 March, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
 Project: BEC, (8 H)
 
-1. Sidebar Active tab logic improvement.
-  - Check current logic and improve active tab logic for better route tracking.
-2. Check changes which are remaining to complete, Create a list of remaining changes & work on that points.
+1. Event / booking Schedule
+  - Change ui of Event details part for better UX.
+
+2. Table Skeleton
+  - create TableSkeleton component.
+  - Display it in all tables with proper loading state.
+  - Test their buttons and chips for consistency.
+
+3. Centralized CSS Variable
+  - Create proper variables to handle color codes.
+
+4. Testing
+  - Test Responsive in all devices.
+  - Test in light and dark mode.
+  - Check all users sidebar pages one by one.
+  - Test all recent changes.
+  - Check all modules one by one.
 
 ## Work done:
 
 EOD,
-Date: 2 March, 2026
-Day: Monday,
+Date: 3 March, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
 Project: BEC, (8 H)
 
-1. Modals & Buttons
-  1. Upload Button – Add Notes Modal (BEC Fleet)
-    - Implemented and verified.
-    - Applied same improvements in:
-      - Vehicle Utilization page
-      - Dealer Fleet page
-  2. Download Button – Generate Check-In QR Code Modal (Event Page)
-    - Updated UI and styling.
-  3. Unassign Button – Instructor Assign Note Page
-    - Improved button UI inside table.
-  4. Register Button – Guest Role
-    - Updated design to match common button styling across application.
-  5. Rate Page Button UI
-    - Updated button styling.
-    - Verified in Light & Dark modes.
-    - Also updated related modal button UI and chips.
+1. Improved sidebar active tab logic to correctly highlight the exact selected menu item. - Done
+2. Updated empty-state background to match other guest pages. - Done
+3. Standardized eye icon across the entire project for all roles. - Done
+4. Updated theme-related switchers. - Done
+5. Added tooltip to user's name in the header. - Done
+6. Improved "Upload File" UI across the project. - Done
+7. Added dealership name along with user role in header/profile section. - Done
+8. Filtered HOB data in Dashboard for improved UI clarity. - Done
+9. Improved Chip UI based on theme across the project. - Done
+10. Testing Chip accross the project. - remaining.
 
-2. Radio Button Color Consistency
-  - Updated radio button color styling in:
-    - Feedback Form – Guest
-    - Rate Event Form – Guest
-    - Add User Modal – User Management page
-  - Ensured theme compatibility (Light & Dark mode).
 
-3. Navigation & Breadcrumbs
-  - Added Dealer Fleet breadcrumb.
-  - Verified proper hierarchy and alignment.
-
-4. Dashboard Enhancements
-  - Displayed Active Tab in:
-    - Event Schedule
-    - Booking Schedule
-  - Updated design consistent with theme (Light/Dark).
-
-5. Component Color & UI Adjustments
-  - Updated color code of:
-    - Number of List component in Resource Summary (Add New Event modal)
-    - Applied same changes in Add & Edit Event modal.
-  - Changed label color of:
-    - Instructors field
-    - Verified in both Light & Dark modes.
-  - Improved:
-    - Check-In Chip design (Light & Dark mode)
-    - Feedback Chip design (Dark mode)
-  - Standardized:
-    - Common Eye Icon across the whole application.
-  - Verified and corrected:
-    - Dealer Fleet icon size in sidebar.
-  - Styled:
-    - Compliment buttons in Rate Instructor Modal (Guest).
 
 
 - Node Modules,
