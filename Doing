@@ -1,52 +1,48 @@
 ## Work Doing:
 
-Date: 3 March, 2026
-Day: Tuesday,
+Date: 5 March, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
 
 Project: BEC, (8 H)
 
-1. Event / booking Schedule
-  - Change ui of Event details part for better UX.
-
-2. Table Skeleton
-  - create TableSkeleton component.
-  - Display it in all tables with proper loading state.
-  - Test their buttons and chips for consistency.
-
-3. Centralized CSS Variable
-  - Create proper variables to handle color codes.
-
-4. Testing
-  - Test Responsive in all devices.
-  - Test in light and dark mode.
-  - Check all users sidebar pages one by one.
-  - Test all recent changes.
-  - Check all modules one by one.
+1. For Dealer role their booking dropdown getting twice in Side bar which solved. - Done
+2. Check all tables to add remaining changes like button UI, Chip UI changes to relevant theme. - Done
+3. Add class for all action buttons in table all over the project. - Done
+4. Check all Table Buttons, Chip & Actions in bellow environment:
+	- Local - Done
+	- QA - In Progress
+5. Test Booking working flow through out Admin, Dealer and NSC User and give update to Ashish Pethani bhai.
 
 ## Work done:
 
 EOD,
-Date: 3 March, 2026
+Date: 5 March, 2026
 Day: Tuesday,
 
 Today, I have completed the following tasks:
 
 Project: BEC, (8 H)
 
-1. Improved sidebar active tab logic to correctly highlight the exact selected menu item. - Done
-2. Updated empty-state background to match other guest pages. - Done
-3. Standardized eye icon across the entire project for all roles. - Done
-4. Updated theme-related switchers. - Done
-5. Added tooltip to user's name in the header. - Done
-6. Improved "Upload File" UI across the project. - Done
-7. Added dealership name along with user role in header/profile section. - Done
-8. Filtered HOB data in Dashboard for improved UI clarity. - Done
-9. Improved Chip UI based on theme across the project. - Done
-10. Testing Chip accross the project. - remaining.
-
-
+1. Sidebar Issue Fix (Dealer Role)
+  - Resolved issue where the Booking dropdown was appearing twice in the sidebar for the Dealer role.
+  - Verified correct rendering after fix.
+2. Table UI Improvements
+  - Reviewed all tables across the application.
+  - Applied remaining Button UI and Chip UI changes to align with the respective Light/Dark theme design guidelines.
+3. Action Button Standardization
+  - Added a common class for all action buttons in tables throughout the project to maintain consistent styling and easier maintenance.
+4. Environment Testing for Table Components
+  - Verified Table Buttons, Chips, and Action components across environments:
+    - Local Environment: Completed
+    - QA Environment: In Progress
+5. Booking & Event Flow Testing
+  - Tested the Booking and Add Event workflows across multiple roles:
+    - Admin
+    - Dealer
+    - NSC User
+  - Confirmed functionality and shared updates with Ashish Pethani.
 
 
 - Node Modules,
