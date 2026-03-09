@@ -1,25 +1,14 @@
 ## Work Doing:
 
-Date: 6 March, 2026
-Day: Friday,
+Date: 9 March, 2026
+Day: Monday,
 
 Today, I am working on the following tasks:
 
 Project: BEC, (8 H)
 
-1. Booking Schedule Section
-  - Reviewed the Booking Schedule component. - Done
-  - Fixed uneven design and layout issues to ensure consistent UI alignment and better visual presentation. - Done
-  - Tested and updated a total of 6 modules in the Booking Schedule and Event Schedule sections, including responsiveness improvements. - Done
-
-2. Testing
-  - Performed testing and resolved minor UI improvement issues across modules. - Done
-
-3. BEC Fleet
-  - Updated Add Note modal to display in full-screen mode on tablet & mobile devices for better usability. - Done
-
-4. Guest Vehicle List
-  - Updated all modals to open in full-screen mode on tablet & mobile views to improve the user experience. - Done
+1. Create Google sheet for new Improvement points.
+2. Work on That points for improvement.
 
 
 
@@ -31,26 +20,38 @@ Project: BEC, (8 H)
 ## Work done:
 
 EOD,
-Date: 6 March, 2026
-Day: Friday,
+Date: 9 March, 2026
+Day: Monday,
 
 Today, I have completed the following tasks:
 
 Project: BEC, (8 H)
 
-1. Booking Schedule Section
-  - Reviewed the Booking Schedule component. - Done
-  - Fixed uneven design and layout issues to ensure consistent UI alignment and better visual presentation. - Done
-  - Tested and updated a total of 6 modules in the Booking Schedule and Event Schedule sections, including responsiveness improvements. - Done
+1. Add / Edit Guest modal
+	- Border radios none in tablet and mobile.
+	- Add & edit vehicle modal and their save button design.
 
-2. Testing
-  - Performed testing and resolved minor UI improvement issues across modules. - Done
+2. Event
+	- Confirm on show modal place at top.
 
-3. BEC Fleet
-  - Updated Add Note modal to display in full-screen mode on tablet & mobile devices for better usability. - Done
+3. Booking -> Fleet booking page
+	- add Tooltip for columns value in View modal table
 
-4. Guest Vehicle List
-  - Updated all modals to open in full-screen mode on tablet & mobile views to improve the user experience. - Done
+4. Modal view in Tablet an mobile
+	- set most of the modal full screen view for tablet and mobile devices.
+
+5. Manage Twilio Template page
+	- Design and responsive view Twilio template modal.
+
+6. NSC Super Admin role
+	- Display "Manage AI Configuration" and "Manage AI Chat Prompt" menu items in Administration.
+	- Add logic to display this 2 routes only for NSC Super Admin role.
+
+7. All Register Guest (2 stepper) and Guest in Event register (6 Stepper) flow stepper
+	- Check Tablet and mobile view and improve according to theme.
+	- Correct Checkbox accent-color for dark mode.
+	- Border radios none in tablet and mobile view.
+
 
 
 - Node Modules,
