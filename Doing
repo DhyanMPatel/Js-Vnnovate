@@ -1,14 +1,16 @@
 ## Work Doing:
 
-Date: 9 March, 2026
-Day: Monday,
+Date: 10 March, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
 Project: BEC, (8 H)
 
-1. Create Google sheet for new Improvement points.
-2. Work on That points for improvement.
+1. Create a branch from upgrade_version branch for CSS Color variable implementation.
+2. Use CSS variable for easy to maintain color codes.
+  - Check in light and dark mode
+  - Check through all roles.
 
 
 
@@ -27,30 +29,32 @@ Today, I have completed the following tasks:
 
 Project: BEC, (8 H)
 
-1. Add / Edit Guest modal
-	- Border radios none in tablet and mobile.
-	- Add & edit vehicle modal and their save button design.
+1. Add / Edit Guest Modal
+  - Removed border radius in tablet and mobile views for better UI consistency.
+  - Improved Add & Edit Vehicle modal design based on multi device support.
+  - Updated Save button styling to align with the application’s design system.
 
-2. Event
-	- Confirm on show modal place at top.
+2. Event Module
+  - Adjusted confirmation modal positioning to appear at the top of the screen for better visibility.
 
-3. Booking -> Fleet booking page
-	- add Tooltip for columns value in View modal table
+3. Booking → Fleet Booking Page
+  - Added tooltips for column values in the View modal table to improve readability for long or truncated data.
 
-4. Modal view in Tablet an mobile
-	- set most of the modal full screen view for tablet and mobile devices.
+4. Modal Responsiveness (Tablet & Mobile)
+  - Updated most modals to full-screen view on tablet and mobile devices to enhance usability and responsive behavior.
 
-5. Manage Twilio Template page
-	- Design and responsive view Twilio template modal.
+5. Manage Twilio Template Page
+  - Designed and improved Twilio Template View modal UI.
+  - Ensured responsive layout across devices.
 
-6. NSC Super Admin role
-	- Display "Manage AI Configuration" and "Manage AI Chat Prompt" menu items in Administration.
-	- Add logic to display this 2 routes only for NSC Super Admin role.
+6. NSC Super Admin Role Enhancements
+  - Added “Manage AI Configuration” and “Manage AI Chat Prompt” menu items under Administration same as Admin with super admin access.
+  - Implemented role-based logic so these routes are visible to NSC Super Admin users & Admin Super Admin user.
 
-7. All Register Guest (2 stepper) and Guest in Event register (6 Stepper) flow stepper
-	- Check Tablet and mobile view and improve according to theme.
-	- Correct Checkbox accent-color for dark mode.
-	- Border radios none in tablet and mobile view.
+7. Guest Registration Flow Improvements
+  - Reviewed and improved 2-Stepper (Register Guest) and 6-Stepper (Guest Event Registration) UI/UX for all device respected.
+  - Fixed checkbox accent color for dark mode.
+  - Removed border radius in tablet and mobile views to maintain consistent design.
 
 
 
