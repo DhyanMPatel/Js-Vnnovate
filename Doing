@@ -1,14 +1,13 @@
 ## Work Doing:
 
-Date: 10 March, 2026
-Day: Tuesday,
+Date: 11 March, 2026
+Day: Wednesday,
 
 Today, I am working on the following tasks:
 
 Project: BEC, (8 H)
 
-1. Create a branch from upgrade_version branch for CSS Color variable implementation.
-2. Use CSS variable for easy to maintain color codes.
+1. Continue work on using CSS variables for easy to maintain color codes in remaining components.
   - Check in light and dark mode
   - Check through all roles.
 
@@ -22,26 +21,22 @@ Project: BEC, (8 H)
 ## Work done:
 
 EOD,
-Date: 10 March, 2026
-Day: Tuesday,
+Date: 11 March, 2026
+Day: Wednesday,
 
 Today, I have completed the following tasks:
 
 Project: BEC, (8 H)
 
-1. Branch Setup
-  - Created a new branch from the upgrade_version branch to implement CSS color variable refactoring.
+1. Components Updated Using CSS Variables
+  - Applied color variables to the following UI components:
+    - Freelancer profile, Room Booking, Profile, Upload Event Media
+    - Instructor Schedule - In Progress
 2. CSS Color Variable Implementation
   - Introduced CSS variables to manage color codes for better maintainability and consistency across the application.
   - Verify changes in:
     - Light Mode
     - Dark Mode
-  - Testing across all user roles to ensure theme compatibility.
-3. Components Updated Using CSS Variables
-  - Applied color variables to the following UI components:
-    - Buttons, Pagination, Modals, Error Handler, Wizard Forms, Header, Sidebar
-    - Freelancer profile - In Progress
-
 
 
 - Node Modules,
