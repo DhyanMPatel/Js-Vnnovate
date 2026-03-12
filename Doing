@@ -1,7 +1,7 @@
 ## Work Doing:
 
-Date: 11 March, 2026
-Day: Wednesday,
+Date: 12 March, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
 
@@ -21,22 +21,26 @@ Project: BEC, (8 H)
 ## Work done:
 
 EOD,
-Date: 11 March, 2026
-Day: Wednesday,
+Date: 12 March, 2026
+Day: Thursday,
 
 Today, I have completed the following tasks:
 
 Project: BEC, (8 H)
 
 1. Components Updated Using CSS Variables
-  - Applied color variables to the following UI components:
-    - Freelancer profile, Room Booking, Profile, Upload Event Media
-    - Instructor Schedule - In Progress
+  - Applied color variables to the following UI components:
+    - Instructor Fleet Booking, Instructor (Scheduling, Assign Notes, Attendance Register), Guests (CRUD), Guest Role pages ( Check In, Feedback, Rate, Event Media & Voucher)
+    - Guest Role pages ( Register )- In Progress.
+
 2. CSS Color Variable Implementation
-  - Introduced CSS variables to manage color codes for better maintainability and consistency across the application.
-  - Verify changes in:
-    - Light Mode
-    - Dark Mode
+  - Introduced CSS variables to manage color codes for better maintainability and consistency across the application.
+  - Verify changes in:
+    - Light Mode
+    - Dark Mode
+
+3. Correct UI of view Guest modal for Dark mode Similar to other View modals.
+
 
 
 - Node Modules,
