@@ -1,7 +1,7 @@
 ## Work Doing:
 
-Date: 12 March, 2026
-Day: Thursday,
+Date: 13 March, 2026
+Day: Friday,
 
 Today, I am working on the following tasks:
 
@@ -21,8 +21,8 @@ Project: BEC, (8 H)
 ## Work done:
 
 EOD,
-Date: 12 March, 2026
-Day: Thursday,
+Date: 13 March, 2026
+Day: Friday,
 
 Today, I have completed the following tasks:
 
@@ -30,8 +30,7 @@ Project: BEC, (8 H)
 
 1. Components Updated Using CSS Variables
   - Applied color variables to the following UI components:
-    - Instructor Fleet Booking, Instructor (Scheduling, Assign Notes, Attendance Register), Guests (CRUD), Guest Role pages ( Check In, Feedback, Rate, Event Media & Voucher)
-    - Guest Role pages ( Register )- In Progress.
+    - WizardForm, PDFView, Fields (Common comp), Charts, Image Nodes, Guest Role (Register page with both stepper forms), 
 
 2. CSS Color Variable Implementation
   - Introduced CSS variables to manage color codes for better maintainability and consistency across the application.
@@ -39,7 +38,7 @@ Project: BEC, (8 H)
     - Light Mode
     - Dark Mode
 
-3. Correct UI of view Guest modal for Dark mode Similar to other View modals.
+3. Test in QA server - In Progress
 
 
 
@@ -191,115 +190,70 @@ Project: Capri,
 Project: Dealer Data,
 Description:
 
-**Subject**: Weekly (2 March - 6 March) Report of Dhyan
+**Subject**: Weekly (9 March - 13 March) Report of Dhyan
 
 Project: BEC,
 
-Git Commit ID: 879c92be8e937bed6779b21635f99df85a817513
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/879c92be8e937bed6779b21635f99df85a817513
+Git Commit ID: f7b68fad8235e92245c2778be7180141c885a200
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/f7b68fad8235e92245c2778be7180141c885a200
 
 Description:
 
-1. Modals & Buttons
-  1. Upload Button – Add Notes Modal (BEC Fleet)
-    - Implemented and verified.
-    - Applied same improvements in:
-      - Vehicle Utilization page
-      - Dealer Fleet page
-  2. Download Button – Generate Check-In QR Code Modal (Event Page)
-    - Updated UI and styling.
-  3. Unassign Button – Instructor Assign Note Page
-    - Improved button UI inside table.
-  4. Register Button – Guest Role
-    - Updated design to match common button styling across application.
-  5. Rate Page Button UI
-    - Updated button styling.
-    - Verified in Light & Dark modes.
-    - Also updated related modal button UI and chips.
+1. Add / Edit Guest Modal
+  - Removed border radius in tablet and mobile views for better UI consistency.
+  - Improved Add & Edit Vehicle modal design based on multi device support.
+  - Updated Save button styling to align with the application’s design system.
  
-2. Radio Button Color Consistency
-  - Updated radio button color styling in:
-    - Feedback Form – Guest
-    - Rate Event Form – Guest
-    - Add User Modal – User Management page
-  - Ensured theme compatibility (Light & Dark mode).
+2. Event Module
+  - Adjusted confirmation modal positioning to appear at the top of the screen for better visibility.
  
-3. Navigation & Breadcrumbs
-  - Added Dealer Fleet breadcrumb.
-  - Verified proper hierarchy and alignment.
+3. Booking → Fleet Booking Page
+  - Added tooltips for column values in the View modal table to improve readability for long or truncated data.
  
-4. Dashboard Enhancements
-  - Displayed Active Tab in:
-    - Event Schedule
-    - Booking Schedule
-  - Updated design consistent with theme (Light/Dark).
+4. Modal Responsiveness (Tablet & Mobile)
+  - Updated most modals to full-screen view on tablet and mobile devices to enhance usability and responsive behavior.
  
-5. Component Color & UI Adjustments
-  - Updated color code of:
-    - Number of List component in Resource Summary (Add New Event modal)
-    - Applied same changes in Add & Edit Event modal.
-  - Changed label color of:
-    - Instructors field
-    - Verified in both Light & Dark modes.
-  - Improved:
-    - Check-In Chip design (Light & Dark mode)
-    - Feedback Chip design (Dark mode)
-  - Standardized:
-    - Common Eye Icon across the whole application.
-  - Verified and corrected:
-    - Dealer Fleet icon size in sidebar.
-  - Styled:
-    - Compliment buttons in Rate Instructor Modal (Guest).
+5. Manage Twilio Template Page
+  - Designed and improved Twilio Template View modal UI.
+  - Ensured responsive layout across devices.
+ 
+6. NSC Super Admin Role Enhancements
+  - Added “Manage AI Configuration” and “Manage AI Chat Prompt” menu items under Administration same as Admin with super admin access.
+  - Implemented role-based logic so these routes are visible to NSC Super Admin users & Admin Super Admin user.
+ 
+7. Guest Registration Flow Improvements
+  - Reviewed and improved 2-Stepper (Register Guest) and 6-Stepper (Guest Event Registration) UI/UX for all device respected.
+  - Fixed checkbox accent color for dark mode.
+  - Removed border radius in tablet and mobile views to maintain consistent design.
 
-6. Improved sidebar active tab logic to correctly highlight the exact selected menu item. - Done
-7. Updated empty-state background to match other guest pages. - Done
-8. Standardized eye icon across the entire project for all roles. - Done
-9. Updated theme-related switchers. - Done
-10. Added tooltip to user's name in the header. - Done
-11. Improved "Upload File" UI across the project. - Done
-12. Added dealership name along with user role in header/profile section. - Done
-13. Filtered HOB data in Dashboard for improved UI clarity. - Done
-14. Improved Chip UI based on theme across the project. - Done
-15. Testing Chip accross the project. - remaining.
+8. Branch Setup
+  - Created a new branch from the upgrade_version branch to implement CSS color variable refactoring.
 
-16. Sidebar Issue Fix (Dealer Role)
-  - Resolved issue where the Booking dropdown was appearing twice in the sidebar for the Dealer role.
-  - Verified correct rendering after fix.
-17. Table UI Improvements
-  - Reviewed all tables across the application.
-  - Applied remaining Button UI and Chip UI changes to align with the respective Light/Dark theme design guidelines.
-18. Action Button Standardization
-  - Added a common class for all action buttons in tables throughout the project to maintain consistent styling and easier maintenance.
-19. Environment Testing for Table Components
-  - Verified Table Buttons, Chips, and Action components across environments:
-    - Local Environment: Completed
-    - QA Environment: In Progress
-20. Booking & Event Flow Testing
-  - Tested the Booking and Add Event workflows across multiple roles:
-    - Admin
-    - Dealer
-    - NSC User
-  - Confirmed functionality and shared updates with Ashish Pethani.
+9. CSS Color Variable Implementation
+  - Introduced CSS variables to manage color codes for better maintainability and consistency across the application.
+  - Verify changes in:
+    - Light Mode
+    - Dark Mode
+  - Testing across all user roles to ensure theme compatibility.
 
-21. Booking Schedule Section
-  - Reviewed the Booking Schedule component. - Done
-  - Fixed uneven design and layout issues to ensure consistent UI alignment and better visual presentation. - Done
-  - Tested and updated a total of 6 modules in the Booking Schedule and Event Schedule sections, including responsiveness improvements. - Done
+10. Components Updated Using CSS Variables
+  - Applied color variables to the following UI components:
+    - Buttons, Pagination, Modals, Error Handler, Wizard Forms, Header, Sidebar
+    - Freelancer profile, Room Booking, Profile, Upload Event Media
+    - Instructor Fleet Booking, Instructor (Scheduling, Assign Notes, Attendance Register), Guests (CRUD), Guest Role pages ( Check In, Feedback, Rate, Event Media & Voucher)
+    - WizardForm, PDFView, Fields (Common comp), Charts, Image Nodes, Guest Role (Register page with both stepper forms), 
 
-22. Testing
-  - Performed testing and resolved minor UI improvement issues across modules. - Done
-
-23. BEC Fleet
-  - Updated Add Note modal to display in full-screen mode on tablet & mobile devices for better usability. - Done
-
-24. Guest Vehicle List
-  - Updated all modals to open in full-screen mode on tablet & mobile views to improve the user experience. - Done
+11. Cigar Live Streaming testing (0.5 h)
 
 Next Week plan:
 
 1. BEC Project
-  - Test and Check all module for same consistency in UI/UX and functionality.
-  - Separate color codes for better maintainability.
+  - Test all modules
+
+2. Dealer Data
+  - Big Query
+
+3. Learning
 
 ## Leave Request
 
