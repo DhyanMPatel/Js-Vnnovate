@@ -1,16 +1,14 @@
 ## Work Doing:
 
-Date: 13 March, 2026
-Day: Friday,
+Date: 16 March, 2026
+Day: Monday,
 
 Today, I am working on the following tasks:
 
 Project: BEC, (8 H)
 
-1. Continue work on using CSS variables for easy to maintain color codes in remaining components.
+1. Check 2 & 6 Stepper of guest register in Event forms
   - Check in light and dark mode
-  - Check through all roles.
-
 
 
 2. QA Server Testing
@@ -21,22 +19,21 @@ Project: BEC, (8 H)
 ## Work done:
 
 EOD,
-Date: 13 March, 2026
-Day: Friday,
+Date: 16 March, 2026
+Day: Monday,
 
 Today, I have completed the following tasks:
 
 Project: BEC, (8 H)
 
-1. Components Updated Using CSS Variables
-  - Applied color variables to the following UI components:
-    - WizardForm, PDFView, Fields (Common comp), Charts, Image Nodes, Guest Role (Register page with both stepper forms), 
+1. Checked whole flow of Stepper 
+	- 2 & 6 stepper
+2. Solve Field color at focus and error with focus. - Done
+3. check modals and update their width and design properly. - Done
+4. Check in QA for field border and correct field border color in light and dark mode.
+5. Correct Contact and Date picker field inconsistency. - Done
+6. Create a list for changes and provide to Disha. - Done
 
-2. CSS Color Variable Implementation
-  - Introduced CSS variables to manage color codes for better maintainability and consistency across the application.
-  - Verify changes in:
-    - Light Mode
-    - Dark Mode
 
 3. Test in QA server - In Progress
 
