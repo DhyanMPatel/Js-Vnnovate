@@ -1,14 +1,15 @@
 ## Work Doing:
 
-Date: 16 March, 2026
-Day: Monday,
+Date: 17 March, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
 Project: BEC, (8 H)
 
-1. Check 2 & 6 Stepper of guest register in Event forms
-  - Check in light and dark mode
+1. Test all recent changes in local and QA server.
+2. Push yesterday changes after test them in Local server.
+
 
 
 2. QA Server Testing
@@ -19,20 +20,38 @@ Project: BEC, (8 H)
 ## Work done:
 
 EOD,
-Date: 16 March, 2026
-Day: Monday,
+Date: 17 March, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
 Project: BEC, (8 H)
 
-1. Checked whole flow of Stepper 
-	- 2 & 6 stepper
-2. Solve Field color at focus and error with focus. - Done
-3. check modals and update their width and design properly. - Done
-4. Check in QA for field border and correct field border color in light and dark mode.
-5. Correct Contact and Date picker field inconsistency. - Done
-6. Create a list for changes and provide to Disha. - Done
+1. Environment Testing
+  - Performed testing on both:
+    - Local Server
+    - QA Server
+  - Verified functionality and UI consistency across environments.
+2. Input Field Border Validation
+  - Reviewed and verified border color behavior for input fields on:
+    - Focus state
+    - Hover state
+    - Error state
+3. UI Consistency for Form Fields
+  - Implemented consistent focus, hover, and error border styles for:
+    - Select dropdowns
+    - Datepicker components
+  - Aligned behavior with existing text and textarea fields.
+4. Hover State Optimization
+  - Removed unnecessary border color change on hover for input fields to reduce visual noise and maintain clean UI.
+5. Placeholder Enhancements
+  - Added default placeholders across all input fields, including:
+    - Text fields
+    - Textareas
+    - Datepickers
+    - Other form inputs
+  - Improved overall user guidance and UX clarity.
+
 
 
 3. Test in QA server - In Progress
