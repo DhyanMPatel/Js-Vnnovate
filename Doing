@@ -1,15 +1,13 @@
 ## Work Doing:
 
-Date: 17 March, 2026
-Day: Tuesday,
+Date: 18 March, 2026
+Day: Wednesday,
 
 Today, I am working on the following tasks:
 
-Project: BEC, (8 H)
+Project: Dealer Data, (8 H)
 
-1. Test all recent changes in local and QA server.
-2. Push yesterday changes after test them in Local server.
-
+1. Check and Understand Big Query and code implementation in Dealer Data backend and frontend and their relevant files.
 
 
 2. QA Server Testing
@@ -20,37 +18,33 @@ Project: BEC, (8 H)
 ## Work done:
 
 EOD,
-Date: 17 March, 2026
-Day: Tuesday,
+Date: 18 March, 2026
+Day: Wednesday,
 
 Today, I have completed the following tasks:
 
 Project: BEC, (8 H)
 
-1. Environment Testing
-  - Performed testing on both:
-    - Local Server
-    - QA Server
-  - Verified functionality and UI consistency across environments.
-2. Input Field Border Validation
-  - Reviewed and verified border color behavior for input fields on:
-    - Focus state
-    - Hover state
-    - Error state
-3. UI Consistency for Form Fields
-  - Implemented consistent focus, hover, and error border styles for:
-    - Select dropdowns
-    - Datepicker components
-  - Aligned behavior with existing text and textarea fields.
-4. Hover State Optimization
-  - Removed unnecessary border color change on hover for input fields to reduce visual noise and maintain clean UI.
-5. Placeholder Enhancements
-  - Added default placeholders across all input fields, including:
-    - Text fields
-    - Textareas
-    - Datepickers
-    - Other form inputs
-  - Improved overall user guidance and UX clarity.
+1. Sidebar Improvements
+  - Implemented Sidebar Collapse functionality for better space utilization.
+  - Ensured all role-based routes are correctly accessible in both expanded and collapsed states.
+  - Implemented floating card behavior for nested menu items:
+    - Displays all child routes when sidebar is collapsed.
+  - Maintained UI consistency across:
+    - Collapsed sidebar
+    - Floating menu cards
+  - Verified consistent behavior in:
+    - Light Mode
+    - Dark Mode
+  - Ensured responsive stability:
+    - No layout breakage on laptop and mobile views
+
+2️. Layout Enhancements
+  - Improved main content layout based on:
+    - Sidebar collapsed state
+    - Sidebar expanded state
+  - Adjusted card widths dynamically to align with sidebar behavior.
+  - Ensured proper spacing, alignment, and responsiveness across screen sizes.
 
 
 
