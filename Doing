@@ -1,7 +1,7 @@
 ## Work Doing:
 
-Date: 18 March, 2026
-Day: Wednesday,
+Date: 19 March, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
 
@@ -18,33 +18,23 @@ Project: Dealer Data, (8 H)
 ## Work done:
 
 EOD,
-Date: 18 March, 2026
-Day: Wednesday,
+Date: 19 March, 2026
+Day: Thursday,
 
 Today, I have completed the following tasks:
 
-Project: BEC, (8 H)
+Project: BEC, (6.5 H)
 
-1. Sidebar Improvements
-  - Implemented Sidebar Collapse functionality for better space utilization.
-  - Ensured all role-based routes are correctly accessible in both expanded and collapsed states.
-  - Implemented floating card behavior for nested menu items:
-    - Displays all child routes when sidebar is collapsed.
-  - Maintained UI consistency across:
-    - Collapsed sidebar
-    - Floating menu cards
-  - Verified consistent behavior in:
-    - Light Mode
-    - Dark Mode
-  - Ensured responsive stability:
-    - No layout breakage on laptop and mobile views
+1. Sidebar Collapse functionality
+	- Collapse and Expand functionality implement with MUI library instead of install extra packages or library.
+	- Verified consistent behavior in light mode & dark mode.
+	- Ensured Responsive behavior for all devices.
+	- Checked for all roles to ensure they got all authorized routes.
 
-2️. Layout Enhancements
-  - Improved main content layout based on:
-    - Sidebar collapsed state
-    - Sidebar expanded state
-  - Adjusted card widths dynamically to align with sidebar behavior.
-  - Ensured proper spacing, alignment, and responsiveness across screen sizes.
+Project: Dealer Data, (1.5 H)
+
+1. Dealer Date Big Query implementation understanding - In Progress
+
 
 
 
