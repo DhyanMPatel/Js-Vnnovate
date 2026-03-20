@@ -1,13 +1,13 @@
 ## Work Doing:
 
-Date: 19 March, 2026
-Day: Thursday,
+Date: 20 March, 2026
+Day: Friday,
 
 Today, I am working on the following tasks:
 
 Project: Dealer Data, (8 H)
 
-1. Check and Understand Big Query and code implementation in Dealer Data backend and frontend and their relevant files.
+1. Continue understanding Big Query and code implementation in Dealer Data backend and frontend and their relevant files.
 
 
 2. QA Server Testing
@@ -18,23 +18,24 @@ Project: Dealer Data, (8 H)
 ## Work done:
 
 EOD,
-Date: 19 March, 2026
-Day: Thursday,
+Date: 20 March, 2026
+Day: Friday,
 
 Today, I have completed the following tasks:
 
-Project: BEC, (6.5 H)
-
-1. Sidebar Collapse functionality
-	- Collapse and Expand functionality implement with MUI library instead of install extra packages or library.
-	- Verified consistent behavior in light mode & dark mode.
-	- Ensured Responsive behavior for all devices.
-	- Checked for all roles to ensure they got all authorized routes.
-
 Project: Dealer Data, (1.5 H)
 
-1. Dealer Date Big Query implementation understanding - In Progress
+1. WAMP Setup
+  - Completed WAMP setup on local machine with Disha.
+  - Verified installation and basic configuration.
 
+2. Project Setup & Database Connection
+  - Connected project to local database.
+  - Configured environment
+  - Successfully ran the project on local machine.
+  
+3. Dealer Data – BigQuery (Learning)
+  - Gained basic understanding of Google BigQuery.
 
 
 
@@ -194,66 +195,118 @@ Description:
 
 Project: BEC,
 
-Git Commit ID: f7b68fad8235e92245c2778be7180141c885a200
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/f7b68fad8235e92245c2778be7180141c885a200
+Git Commit ID: 09e8389c5ed51450f7ce38f9c4752bd003f3b1c4
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/09e8389c5ed51450f7ce38f9c4752bd003f3b1c4
 
 Description:
 
-1. Add / Edit Guest Modal
-  - Removed border radius in tablet and mobile views for better UI consistency.
-  - Improved Add & Edit Vehicle modal design based on multi device support.
-  - Updated Save button styling to align with the application’s design system.
- 
-2. Event Module
-  - Adjusted confirmation modal positioning to appear at the top of the screen for better visibility.
- 
-3. Booking → Fleet Booking Page
-  - Added tooltips for column values in the View modal table to improve readability for long or truncated data.
- 
-4. Modal Responsiveness (Tablet & Mobile)
-  - Updated most modals to full-screen view on tablet and mobile devices to enhance usability and responsive behavior.
- 
-5. Manage Twilio Template Page
-  - Designed and improved Twilio Template View modal UI.
-  - Ensured responsive layout across devices.
- 
-6. NSC Super Admin Role Enhancements
-  - Added “Manage AI Configuration” and “Manage AI Chat Prompt” menu items under Administration same as Admin with super admin access.
-  - Implemented role-based logic so these routes are visible to NSC Super Admin users & Admin Super Admin user.
- 
-7. Guest Registration Flow Improvements
-  - Reviewed and improved 2-Stepper (Register Guest) and 6-Stepper (Guest Event Registration) UI/UX for all device respected.
-  - Fixed checkbox accent color for dark mode.
-  - Removed border radius in tablet and mobile views to maintain consistent design.
+1. Stepper Flow Verification
+  - Reviewed complete flow for:
+    - 2-Stepper
+    - 6-Stepper
+  - Ensured proper navigation, state handling, and UI consistency.
 
-8. Branch Setup
-  - Created a new branch from the upgrade_version branch to implement CSS color variable refactoring.
+2. Field Border Behavior Fix
+  - Resolved issues related to field border color on focus and error with focus.
 
-9. CSS Color Variable Implementation
-  - Introduced CSS variables to manage color codes for better maintainability and consistency across the application.
-  - Verify changes in:
+3. Modal UI Improvements
+  - Reviewed all modals and updated:
+    - Width
+    - Layout
+    - Overall design consistency
+
+4. QA Validation – Field Borders
+  - Verified field border colors on QA environment.
+  - Ensured correct behavior in:
     - Light Mode
     - Dark Mode
-  - Testing across all user roles to ensure theme compatibility.
 
-10. Components Updated Using CSS Variables
-  - Applied color variables to the following UI components:
-    - Buttons, Pagination, Modals, Error Handler, Wizard Forms, Header, Sidebar
-    - Freelancer profile, Room Booking, Profile, Upload Event Media
-    - Instructor Fleet Booking, Instructor (Scheduling, Assign Notes, Attendance Register), Guests (CRUD), Guest Role pages ( Check In, Feedback, Rate, Event Media & Voucher)
-    - WizardForm, PDFView, Fields (Common comp), Charts, Image Nodes, Guest Role (Register page with both stepper forms), 
+5. Field Consistency Fixes
+  - Resolved inconsistencies in:
+    - Contact field
+    - Datepicker field
 
-11. Cigar Live Streaming testing (0.5 h)
+6. Create Documentation
+  - Compiled a detailed list of required changes.
+  - Shared with Disha for further alignment.
+
+7. Environment Testing
+  - Performed testing on both:
+    - Local Server
+    - QA Server
+  - Verified functionality and UI consistency across environments.
+
+8. Input Field Border Validation
+  - Reviewed and verified border color behavior for input fields on:
+    - Focus state
+    - Hover state
+    - Error state
+
+9. UI Consistency for Form Fields
+  - Implemented consistent focus, hover, and error border styles for:
+    - Select dropdowns
+    - Datepicker components
+  - Aligned behavior with existing text and textarea fields.
+
+10. Hover State Optimization
+  - Removed unnecessary border color change on hover for input fields to reduce visual noise and maintain clean UI.
+
+11. Placeholder Enhancements
+  - Added default placeholders across all input fields, including:
+    - Text fields
+    - Textareas
+    - Datepickers
+    - Other form inputs
+  - Improved overall user guidance and UX clarity.
+
+12. Sidebar Improvements (6 H)
+  - Implemented Sidebar Collapse functionality for better space utilization.
+  - Implement Sidebar Collapse and expand feature using MUI and Radix UI Library.
+  - Ensured all role-based routes are correctly accessible in both expanded and collapsed states.
+  - Implemented floating card behavior for nested menu items:
+    - Displays all child routes when sidebar is collapsed.
+  - Maintained UI consistency across:
+    - Collapsed sidebar
+    - Floating menu cards
+  - Verified consistent behavior in:
+    - Light Mode
+    - Dark Mode
+  - Ensured responsive stability:
+    - No layout breakage on laptop and mobile views
+ 
+13. Layout Enhancements (2 H)
+  - Improved main content layout based on:
+    - Sidebar collapsed state
+    - Sidebar expanded state
+  - Adjusted card widths dynamically to align with sidebar behavior.
+  - Ensured proper spacing, alignment, and responsiveness across screen sizes.
+
+
+Project: Dealer Data,
+
+Description:
+
+1. WAMP Setup
+  - Completed WAMP setup on local machine with Disha.
+  - Verified installation and basic configuration.
+
+2. Project Setup & Database Connection
+  - Connected project to local database.
+  - Configured environment
+  - Successfully ran the project on local machine.
+3. Dealer Data – BigQuery (Learning)
+  - Gained basic understanding of Google BigQuery.
+
 
 Next Week plan:
 
-1. BEC Project
-  - Test all modules
+1. Dealer Data
+  - Work on New Improvement points
 
-2. Dealer Data
-  - Big Query
+2. Meadia Planner
+  - Work on New Improvement points
 
-3. Learning
+
 
 ## Leave Request
 
