@@ -1,53 +1,35 @@
 ## Work Doing:
 
-Date: 20 March, 2026
-Day: Friday,
+Date: 23 March, 2026
+Day: Monday,
 
 Today, I am working on the following tasks:
 
 Project: Dealer Data, (8 H)
-
-1. Continue understanding Big Query and code implementation in Dealer Data backend and frontend and their relevant files.
-
-
-2. QA Server Testing
-  - Test all modules and functionalities based on the QA server.
-  - Verify that recent changes are working as expected.
-  - Identify and report any functional, UI, or responsiveness issues.
+ 
+1. Continue Understanding Frontend and Backend portions of Dealer Data.
 
 ## Work done:
 
 EOD,
-Date: 20 March, 2026
-Day: Friday,
+Date: 23 March, 2026
+Day: Monday,
 
 Today, I have completed the following tasks:
 
-Project: Dealer Data, (1.5 H)
+Project : Dealer Data, (8 H)
 
-1. WAMP Setup
-  - Completed WAMP setup on local machine with Disha.
-  - Verified installation and basic configuration.
-
-2. Project Setup & Database Connection
-  - Connected project to local database.
-  - Configured environment
-  - Successfully ran the project on local machine.
-  
-3. Dealer Data – BigQuery (Learning)
-  - Gained basic understanding of Google BigQuery.
+1. APIs Related to 2FA & Authentication
+  - Check implementation and their usage.
+  - Check APIs Related to 2FA & Authentication.
+2. BigQuery – Implementation Research
+  - How pricing works
+  - Some basic SQL Queries in BigQuery
+  - How data is inserted into BigQuery
+  - How to connect BigQuery with Node.js
 
 
 
-3. Test in QA server - In Progress
-
-
-
-- Node Modules,
-- Error handling,
-  Then in Express js revise intro and its core features like
-- How it can improve Server side code performance?
-  and then at last know How it can handle client request and response?
 
 ## ReadMe.md file for initial project setup
 
@@ -191,7 +173,7 @@ Project: Capri,
 Project: Dealer Data,
 Description:
 
-**Subject**: Weekly (9 March - 13 March) Report of Dhyan
+**Subject**: Weekly (16 March - 20 March) Report of Dhyan
 
 Project: BEC,
 
