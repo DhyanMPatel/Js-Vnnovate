@@ -1,7 +1,7 @@
 ## Work Doing:
 
-Date: 23 March, 2026
-Day: Monday,
+Date: 24 March, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
@@ -12,22 +12,32 @@ Project: Dealer Data, (8 H)
 ## Work done:
 
 EOD,
-Date: 23 March, 2026
-Day: Monday,
+Date: 24 March, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
 Project : Dealer Data, (8 H)
 
-1. APIs Related to 2FA & Authentication
-  - Check implementation and their usage.
-  - Check APIs Related to 2FA & Authentication.
-2. BigQuery – Implementation Research
-  - How pricing works
-  - Some basic SQL Queries in BigQuery
-  - How data is inserted into BigQuery
-  - How to connect BigQuery with Node.js
+1. Route Analysis
+  - Reviewed and analyzed Frontend and Backend routes.
+  - Understood API flow, routing structure, and module connectivity between frontend and backend.
+2. NodeMailer Implementation
+  - Explored and understood implementation of Nodemailer
 
+Project : Shoe Vista,
+
+1. Local Project Setup
+  - Set up the project on local machine.
+  - Installed dependencies and configured environment variables.
+2. Frontend–Backend Connection Issue
+  - Identified and resolved connection issue between frontend and backend.
+  - Verified API communication working correctly after fix.
+3. About Us Navigation
+  - Added "About Us" navigation link in the navbar.
+  - Implemented routing to navigate to the About Us page.
+4. Best Seller Section in Home page
+  - Implemented Best Seller list UI similar to Top Brand Book list component for UI consistency.
 
 
 
