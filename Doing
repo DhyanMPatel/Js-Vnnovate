@@ -1,43 +1,34 @@
 ## Work Doing:
 
-Date: 24 March, 2026
-Day: Tuesday,
+Date: 25 March, 2026
+Day: Wednesday,
 
 Today, I am working on the following tasks:
 
-Project: Dealer Data, (8 H)
- 
-1. Continue Understanding Frontend and Backend portions of Dealer Data.
+Project: Nurtureme, (8 H)
+
+1. start Working on Nurtureme project.
+2. Take guidance from Devanshi.
 
 ## Work done:
 
 EOD,
-Date: 24 March, 2026
-Day: Tuesday,
+Date: 25 March, 2026
+Day: Wednesday,
 
 Today, I have completed the following tasks:
 
-Project : Dealer Data, (8 H)
+Project : Nurtureme, (8 H)
 
-1. Route Analysis
-  - Reviewed and analyzed Frontend and Backend routes.
-  - Understood API flow, routing structure, and module connectivity between frontend and backend.
-2. NodeMailer Implementation
-  - Explored and understood implementation of Nodemailer
-
-Project : Shoe Vista,
-
-1. Local Project Setup
-  - Set up the project on local machine.
-  - Installed dependencies and configured environment variables.
-2. Frontend–Backend Connection Issue
-  - Identified and resolved connection issue between frontend and backend.
-  - Verified API communication working correctly after fix.
-3. About Us Navigation
-  - Added "About Us" navigation link in the navbar.
-  - Implemented routing to navigate to the About Us page.
-4. Best Seller Section in Home page
-  - Implemented Best Seller list UI similar to Top Brand Book list component for UI consistency.
+1. Project Setup
+  - Installed PHP 8.4 version and configured it for the project environment.
+  - Installed Composer compatible with PHP 8.4 for dependency management.
+  - Set up MongoDB with PHP and configured the required PHP MongoDB extension.
+  - Configured Composer configuration file and verified dependencies installation and autoload setup.
+2. Calendar Dashboard Integration
+  - Understood complete task flow and requirements from Kunal and implemented changes accordingly.
+  - Implemented UI improvements according to the Figma design of Calender in Dashboard.
+  - Added blur effect on date tasks for better visual indication and UI clarity.
 
 
 
