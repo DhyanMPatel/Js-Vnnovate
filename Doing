@@ -1,34 +1,29 @@
 ## Work Doing:
 
-Date: 25 March, 2026
-Day: Wednesday,
+Date: 26 March, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
 
-Project: Nurtureme, (8 H)
+Project: Auction App, (8 H)
 
-1. start Working on Nurtureme project.
-2. Take guidance from Devanshi.
+1. Start working on Auction app.
+2. Improve data handling using Redux instead of session or local storage.
 
 ## Work done:
 
 EOD,
-Date: 25 March, 2026
-Day: Wednesday,
+Date: 26 March, 2026
+Day: Thursday,
 
 Today, I have completed the following tasks:
 
-Project : Nurtureme, (8 H)
+Project: Auction App (8 H)
 
-1. Project Setup
-  - Installed PHP 8.4 version and configured it for the project environment.
-  - Installed Composer compatible with PHP 8.4 for dependency management.
-  - Set up MongoDB with PHP and configured the required PHP MongoDB extension.
-  - Configured Composer configuration file and verified dependencies installation and autoload setup.
-2. Calendar Dashboard Integration
-  - Understood complete task flow and requirements from Kunal and implemented changes accordingly.
-  - Implemented UI improvements according to the Figma design of Calender in Dashboard.
-  - Added blur effect on date tasks for better visual indication and UI clarity.
+- Implementing Auction CRUD improvement using Redux toolkit instead of local Storage and Session Storage.
+- Create Auction feature now work with Redux toolkit.
+- Tested api calles using Debugger and Consoles.
+- Get Auction list with updated list - Pending.
 
 
 
