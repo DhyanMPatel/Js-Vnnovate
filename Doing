@@ -1,30 +1,54 @@
 ## Work Doing:
 
-Date: 26 March, 2026
-Day: Thursday,
+Date: 27 March, 2026
+Day: Friday,
 
 Today, I am working on the following tasks:
 
-Project: Auction App, (8 H)
+Project: Dealer Data, (5 H)
+ 
+1. Check Apis related to Customer data, Customer Vehicle Data.
+ 
+Project: BEC, (3 H)
+ 
+1. Investigate network error issue in Add Guest functionality in Event.
+2. Perform testing on:
+  - Local Server
+  - QA Server
+3. Verify:
+  - API request triggering correctly
+  - Response handling and error scenarios
+4. Identify possible causes (if any):
+  - API failure / timeout
+  - Incorrect request data
 
-1. Start working on Auction app.
-2. Improve data handling using Redux instead of session or local storage.
 
 ## Work done:
 
 EOD,
-Date: 26 March, 2026
-Day: Thursday,
+Date: 27 March, 2026
+Day: Friday,
 
 Today, I have completed the following tasks:
 
-Project: Auction App (8 H)
+Project: Dealer Data, (8 H)
 
-- Implementing Auction CRUD improvement using Redux toolkit instead of local Storage and Session Storage.
-- Create Auction feature now work with Redux toolkit.
-- Tested api calles using Debugger and Consoles.
-- Get Auction list with updated list - Pending.
+1. Reviewed and verified all frontend and backend routes in the Dealer Data project to ensure proper routing and endpoint connectivity.
+2. Analyzed and checked the Node Mailer functionality implemented in the Dealer Data project.
+3. Implemented Email sending functionality using Node Mailer in a dummy project for testing and learning purposes.
+4. Verified and tested the implemented email feature in the dummy project to ensure proper email delivery and configuration.
 
+
+
+
+
+Tasks:
+- Fixed guest event register bug
+- Implemented Add Guest API integration
+- Tested in QA
+- Fixed dark mode UI issue in dashboard
+- Responsive testing
+- Discussion with backend team for report API
 
 
 ## ReadMe.md file for initial project setup
@@ -157,7 +181,6 @@ Project: E-Order,
 Git Commit ID: 2ad0cb6bc2c3e3c55ab9d37125dec03fa0c959a0
 Git Commit Link: https://gitlab.com/vnnovatesolutions/eorder-webapp/-/commit/2ad0cb6bc2c3e3c55ab9d37125dec03fa0c959a0
 
-
 Project: Learning,
 
 Project: Sales CRM,
@@ -169,8 +192,6 @@ Project: Capri,
 Project: Dealer Data,
 Description:
 
-**Subject**: Weekly (16 March - 20 March) Report of Dhyan
-
 Project: BEC,
 
 Git Commit ID: 09e8389c5ed51450f7ce38f9c4752bd003f3b1c4
@@ -178,102 +199,69 @@ Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/09e8
 
 Description:
 
-1. Stepper Flow Verification
-  - Reviewed complete flow for:
-    - 2-Stepper
-    - 6-Stepper
-  - Ensured proper navigation, state handling, and UI consistency.
-
-2. Field Border Behavior Fix
-  - Resolved issues related to field border color on focus and error with focus.
-
-3. Modal UI Improvements
-  - Reviewed all modals and updated:
-    - Width
-    - Layout
-    - Overall design consistency
-
-4. QA Validation – Field Borders
-  - Verified field border colors on QA environment.
-  - Ensured correct behavior in:
-    - Light Mode
-    - Dark Mode
-
-5. Field Consistency Fixes
-  - Resolved inconsistencies in:
-    - Contact field
-    - Datepicker field
-
-6. Create Documentation
-  - Compiled a detailed list of required changes.
-  - Shared with Disha for further alignment.
-
-7. Environment Testing
-  - Performed testing on both:
-    - Local Server
-    - QA Server
-  - Verified functionality and UI consistency across environments.
-
-8. Input Field Border Validation
-  - Reviewed and verified border color behavior for input fields on:
-    - Focus state
-    - Hover state
-    - Error state
-
-9. UI Consistency for Form Fields
-  - Implemented consistent focus, hover, and error border styles for:
-    - Select dropdowns
-    - Datepicker components
-  - Aligned behavior with existing text and textarea fields.
-
-10. Hover State Optimization
-  - Removed unnecessary border color change on hover for input fields to reduce visual noise and maintain clean UI.
-
-11. Placeholder Enhancements
-  - Added default placeholders across all input fields, including:
-    - Text fields
-    - Textareas
-    - Datepickers
-    - Other form inputs
-  - Improved overall user guidance and UX clarity.
-
-12. Sidebar Improvements (6 H)
-  - Implemented Sidebar Collapse functionality for better space utilization.
-  - Implement Sidebar Collapse and expand feature using MUI and Radix UI Library.
-  - Ensured all role-based routes are correctly accessible in both expanded and collapsed states.
-  - Implemented floating card behavior for nested menu items:
-    - Displays all child routes when sidebar is collapsed.
-  - Maintained UI consistency across:
-    - Collapsed sidebar
-    - Floating menu cards
-  - Verified consistent behavior in:
-    - Light Mode
-    - Dark Mode
-  - Ensured responsive stability:
-    - No layout breakage on laptop and mobile views
- 
-13. Layout Enhancements (2 H)
-  - Improved main content layout based on:
-    - Sidebar collapsed state
-    - Sidebar expanded state
-  - Adjusted card widths dynamically to align with sidebar behavior.
-  - Ensured proper spacing, alignment, and responsiveness across screen sizes.
-
+**Subject**: Weekly (23 March - 27 March) Report of Dhyan
 
 Project: Dealer Data,
 
 Description:
+1. APIs Related to 2FA & Authentication
+  - Check implementation and their usage.
+  - Check APIs Related to 2FA & Authentication.
+2. BigQuery – Implementation Research
+  - How pricing works
+  - Some basic SQL Queries in BigQuery
+  - How data is inserted into BigQuery
+  - How to connect BigQuery with Node.js
+3. Route Analysis
+  - Reviewed and analyzed Frontend and Backend routes.
+  - Understood API flow, routing structure, and module connectivity between frontend and backend.
+4. NodeMailer Implementation
+  - Explored and understood implementation of Nodemailer
+5. Reviewed and verified all frontend and backend routes in the Dealer Data project to ensure proper routing and endpoint connectivity.
+6. Analyzed and checked the Node Mailer functionality implemented in the Dealer Data project.
+7. Implemented Email sending functionality using Node Mailer in a dummy project for testing and learning purposes.
+8. Verified and tested the implemented email feature in the dummy project to ensure proper email delivery and configuration.
 
-1. WAMP Setup
-  - Completed WAMP setup on local machine with Disha.
-  - Verified installation and basic configuration.
 
-2. Project Setup & Database Connection
-  - Connected project to local database.
-  - Configured environment
-  - Successfully ran the project on local machine.
-3. Dealer Data – BigQuery (Learning)
-  - Gained basic understanding of Google BigQuery.
+Project : Shoe Vista,
+
+Description:
+1. Local Project Setup
+  - Set up the project on local machine.
+  - Installed dependencies and configured environment variables.
+2. Frontend–Backend Connection Issue
+  - Identified and resolved connection issue between frontend and backend.
+  - Verified API communication working correctly after fix.
+3. About Us Navigation
+  - Added "About Us" navigation link in the navbar.
+  - Implemented routing to navigate to the About Us page.
+4. Best Seller Section in Home page
+  - Implemented Best Seller list UI similar to Top Brand Book list component for UI consistency.
+
+
+Project : Nurtureme,
+
+Description:
+1. Project Setup
+  - Installed PHP 8.4 version and configured it for the project environment.
+  - Installed Composer compatible with PHP 8.4 for dependency management.
+  - Set up MongoDB with PHP and configured the required PHP MongoDB extension.
+  - Configured Composer configuration file and verified dependencies installation and autoload setup.
+2. Calendar Dashboard Integration
+  - Understood complete task flow and requirements from Kunal and implemented changes accordingly.
+  - Implemented UI improvements according to the Figma design of Calender in Dashboard.
+  - Added blur effect on date tasks for better visual indication and UI clarity.
+
+
+Project : Auction App,
+
+Description:
+1. Refactored Auction CRUD functionality to use Redux Toolkit instead of Local Storage and Session Storage.
+2. Updated Create Auction feature to work with Redux Toolkit state management.
+3. API Testing & Debugging
+  - Verified request/response flow and Redux state updates.
+4. Auction List
+  - Working on Get Auction List with updated data.
 
 
 Next Week plan:
