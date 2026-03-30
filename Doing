@@ -1,42 +1,62 @@
 ## Work Doing:
 
-Date: 27 March, 2026
-Day: Friday,
+Date: 30 March, 2026
+Day: Monday,
 
 Today, I am working on the following tasks:
 
 Project: Dealer Data, (5 H)
  
-1. Check Apis related to Customer data, Customer Vehicle Data.
+1. Check all flow of the project.
  
+Project: Dealer Data, (3 H)
+1. Big Query
+	- Explored Big Query queries to improve query performance, optimization, and professional query structuring.
+	- Reviewing existing queries to identify optimization opportunities such as indexing, query structure, and execution efficiency. - In Progress
+
+Project: Livin App, (3 H)
+1. Livin App
+	- Received Livin App project and performed initial project setup.
+	- Installed frontend and backend dependencies and configured the project in the local environment.
+	- Resolved dependency and runtime errors during project setup.
+	- Successfully ran both frontend and backend locally.
+	- Reviewed and analyzed the complete list of APIs used in the project for understanding system architecture.
+
 Project: BEC, (3 H)
- 
-1. Investigate network error issue in Add Guest functionality in Event.
-2. Perform testing on:
-  - Local Server
-  - QA Server
-3. Verify:
-  - API request triggering correctly
-  - Response handling and error scenarios
-4. Identify possible causes (if any):
-  - API failure / timeout
-  - Incorrect request data
+1. BEC
+	- Improved Dashboard UI in the Sales Performance section.
+	- Pushed Sidebar Collapse & Expand functionality using MUI library.
+	- Tested Dashboard Page responsiveness across multiple devices.
+	- Improving Skeleton Loader UI design for better user experience. - In Progress
 
 
 ## Work done:
 
 EOD,
-Date: 27 March, 2026
-Day: Friday,
+Date: 30 March, 2026
+Day: Monday,
 
 Today, I have completed the following tasks:
 
-Project: Dealer Data, (8 H)
+Project: Dealer Data, (3 H)
+1. Big Query
+	- Explored Big Query queries to improve query performance, optimization, and professional query structuring.
+	- Reviewing existing queries to identify optimization opportunities such as indexing, query structure, and execution efficiency. - In Progress
 
-1. Reviewed and verified all frontend and backend routes in the Dealer Data project to ensure proper routing and endpoint connectivity.
-2. Analyzed and checked the Node Mailer functionality implemented in the Dealer Data project.
-3. Implemented Email sending functionality using Node Mailer in a dummy project for testing and learning purposes.
-4. Verified and tested the implemented email feature in the dummy project to ensure proper email delivery and configuration.
+Project: Livin App, (2 H)
+1. Livin App
+	- Received Livin App project and performed initial project setup.
+	- Installed frontend and backend dependencies and configured the project in the local environment.
+	- Resolved dependency and runtime errors during project setup.
+	- Successfully ran both frontend and backend locally.
+	- Reviewed and analyzed the complete list of APIs used in the project for understanding system architecture.
+
+Project: BEC, (3 H)
+1. BEC
+	- Improved Dashboard UI in the Sales Performance section.
+	- Pushed Sidebar Collapse & Expand functionality using MUI library.
+	- Tested Dashboard Page responsiveness across multiple devices.
+	- Improving Skeleton Loader UI design for better user experience. - In Progress
 
 
 
