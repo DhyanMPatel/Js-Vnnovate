@@ -1,63 +1,36 @@
 ## Work Doing:
 
-Date: 30 March, 2026
-Day: Monday,
+Date: 31 March, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
-Project: Dealer Data, (5 H)
- 
-1. Check all flow of the project.
- 
-Project: Dealer Data, (3 H)
-1. Big Query
-	- Explored Big Query queries to improve query performance, optimization, and professional query structuring.
-	- Reviewing existing queries to identify optimization opportunities such as indexing, query structure, and execution efficiency. - In Progress
-
-Project: Livin App, (3 H)
-1. Livin App
-	- Received Livin App project and performed initial project setup.
-	- Installed frontend and backend dependencies and configured the project in the local environment.
-	- Resolved dependency and runtime errors during project setup.
-	- Successfully ran both frontend and backend locally.
-	- Reviewed and analyzed the complete list of APIs used in the project for understanding system architecture.
-
 Project: BEC, (3 H)
-1. BEC
-	- Improved Dashboard UI in the Sales Performance section.
-	- Pushed Sidebar Collapse & Expand functionality using MUI library.
-	- Tested Dashboard Page responsiveness across multiple devices.
-	- Improving Skeleton Loader UI design for better user experience. - In Progress
+1. Continue improving Skeleton Loader UI design for better user experience.
+2. After Backend Customer funnel api update display their relative data.
+
+Project: Dealer Data, (3 H) 
+1. Continue reviewing existing queries to identify optimization opportunities such as indexing, query structure, and execution efficiency.
+ 
 
 
 ## Work done:
 
 EOD,
-Date: 30 March, 2026
-Day: Monday,
+Date: 31 March, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
-Project: Dealer Data, (3 H)
-1. Big Query
-	- Explored Big Query queries to improve query performance, optimization, and professional query structuring.
-	- Reviewing existing queries to identify optimization opportunities such as indexing, query structure, and execution efficiency. - In Progress
-
-Project: Livin App, (2 H)
-1. Livin App
-	- Received Livin App project and performed initial project setup.
-	- Installed frontend and backend dependencies and configured the project in the local environment.
-	- Resolved dependency and runtime errors during project setup.
-	- Successfully ran both frontend and backend locally.
-	- Reviewed and analyzed the complete list of APIs used in the project for understanding system architecture.
-
-Project: BEC, (3 H)
-1. BEC
-	- Improved Dashboard UI in the Sales Performance section.
-	- Pushed Sidebar Collapse & Expand functionality using MUI library.
-	- Tested Dashboard Page responsiveness across multiple devices.
-	- Improving Skeleton Loader UI design for better user experience. - In Progress
-
+Project: BEC, (8 H)
+1. Global Search Module
+   - Updated Global Search functionality to prevent page reload when the user presses the Enter key during search.
+2. Dashboard Module
+   - Corrected Skeleton Loader UI based on the updated design of the Sales Performance section in the Dashboard.
+   - Updated Sales Performance section data mapping based on API response.
+   - Implemented display of Post Event Sales data in the Dashboard.
+3. BEC Fleet Module
+   - Made UI and functionality changes in the Added Options modal related to Image handling in the BEC Fleet module.
 
 
 
