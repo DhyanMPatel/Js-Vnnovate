@@ -1,36 +1,37 @@
 ## Work Doing:
 
-Date: 31 March, 2026
-Day: Tuesday,
+Date: 1 April, 2026
+Day: Wednesday,
 
 Today, I am working on the following tasks:
 
 Project: BEC, (3 H)
-1. Continue improving Skeleton Loader UI design for better user experience.
-2. After Backend Customer funnel api update display their relative data.
+1. Update UI of Customer funnel section in dashboard based on Client feedback.
 
 Project: Dealer Data, (3 H) 
-1. Continue reviewing existing queries to identify optimization opportunities such as indexing, query structure, and execution efficiency.
- 
+1. Properly understand Sequelize ORM for database operations.
 
 
 ## Work done:
 
 EOD,
-Date: 31 March, 2026
-Day: Tuesday,
+Date: 1 April, 2026
+Day: Wednesday,
 
 Today, I have completed the following tasks:
 
-Project: BEC, (8 H)
-1. Global Search Module
-   - Updated Global Search functionality to prevent page reload when the user presses the Enter key during search.
-2. Dashboard Module
-   - Corrected Skeleton Loader UI based on the updated design of the Sales Performance section in the Dashboard.
-   - Updated Sales Performance section data mapping based on API response.
-   - Implemented display of Post Event Sales data in the Dashboard.
-3. BEC Fleet Module
-   - Made UI and functionality changes in the Added Options modal related to Image handling in the BEC Fleet module.
+Project: BEC, (4 H)
+1. Dashboard
+  - Updated UI of the Customer Funnel section in the dashboard for an alternative design option.
+  - Updated Skeleton Loader view to match the new UI design of the Customer Funnel section for better loading state consistency.
+  - Waiting for client response/approval on UI changes.
+
+Project : Dealer Data, (4 H)
+1. Sequelize ORM Learning & Query Methods
+  - Learned and understood basic methods and usage of Sequelize ORM.
+  - Checked basic query methods including Insert, Select, Select with Attributes, and Select with Where clause.
+  - Explored Sequelize Finder methods such as findOne, findByPk, findAll, and other query helper methods.
+
 
 
 
