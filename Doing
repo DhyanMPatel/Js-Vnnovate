@@ -1,12 +1,13 @@
 ## Work Doing:
 
-Date: 1 April, 2026
-Day: Wednesday,
+Date: 2 April, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
 
-Project: BEC, (3 H)
-1. Update UI of Customer funnel section in dashboard based on Client feedback.
+Project : BEC, (2 H)
+
+1. create a build and test with new changes.
 
 Project: Dealer Data, (3 H) 
 1. Properly understand Sequelize ORM for database operations.
@@ -15,23 +16,23 @@ Project: Dealer Data, (3 H)
 ## Work done:
 
 EOD,
-Date: 1 April, 2026
-Day: Wednesday,
+Date: 2 April, 2026
+Day: Thursday,
 
 Today, I have completed the following tasks:
 
-Project: BEC, (4 H)
-1. Dashboard
-  - Updated UI of the Customer Funnel section in the dashboard for an alternative design option.
-  - Updated Skeleton Loader view to match the new UI design of the Customer Funnel section for better loading state consistency.
-  - Waiting for client response/approval on UI changes.
+Project : BEC,
+1. Generated production build in local environment.
+2. Tested the production build with newly implemented changes to ensure build stability and functionality.
+3. Verified that all recent UI and functionality changes are working correctly in the build version.
 
-Project : Dealer Data, (4 H)
-1. Sequelize ORM Learning & Query Methods
-  - Learned and understood basic methods and usage of Sequelize ORM.
-  - Checked basic query methods including Insert, Select, Select with Attributes, and Select with Where clause.
-  - Explored Sequelize Finder methods such as findOne, findByPk, findAll, and other query helper methods.
+Project : Sales CRM,
+1. Improving Bulk Upload Lead functionality to align with Single Lead Add feature so that both follow similar logic, validation, and data structure. - In Progress
+2. Added new fields in Activity Log to identify communication type (Incoming / Outgoing) to track how the client was contacted.
 
+Project : Dealer Data,
+1. Revised previously learned Sequelize ORM basic query methods including Insert, Select, Select with Attributes, and Where clause.
+2. Reviewed Finder methods such as findOne, findByPk, findAll, and query filtering techniques.
 
 
 
