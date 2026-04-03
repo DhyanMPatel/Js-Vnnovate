@@ -1,40 +1,32 @@
 ## Work Doing:
 
-Date: 2 April, 2026
-Day: Thursday,
+Date: 3 April, 2026
+Day: Friday,
 
 Today, I am working on the following tasks:
 
-Project : BEC, (2 H)
+Project : Sales CRM, (5 H)
 
-1. create a build and test with new changes.
-
-Project: Dealer Data, (3 H) 
-1. Properly understand Sequelize ORM for database operations.
-
+1. Continue improving Bulk Upload Lead functionality to align with Single Lead Add feature so that both follow similar logic, validation, and data structure.
 
 ## Work done:
 
 EOD,
-Date: 2 April, 2026
-Day: Thursday,
+Date: 3 April, 2026
+Day: Friday,
 
 Today, I have completed the following tasks:
 
-Project : BEC,
-1. Generated production build in local environment.
-2. Tested the production build with newly implemented changes to ensure build stability and functionality.
-3. Verified that all recent UI and functionality changes are working correctly in the build version.
-
-Project : Sales CRM,
-1. Improving Bulk Upload Lead functionality to align with Single Lead Add feature so that both follow similar logic, validation, and data structure. - In Progress
-2. Added new fields in Activity Log to identify communication type (Incoming / Outgoing) to track how the client was contacted.
-
-Project : Dealer Data,
-1. Revised previously learned Sequelize ORM basic query methods including Insert, Select, Select with Attributes, and Where clause.
-2. Reviewed Finder methods such as findOne, findByPk, findAll, and query filtering techniques.
-
-
+Project : Sales CRM, (8 H)
+1. Bulk Upload Lead functionality improvements
+  - Improved Bulk Upload Lead functionality by reviewing and aligning validation logic with Single Lead Create feature.
+  - Added remaining validations in bulk upload to ensure consistency across lead creation methods.
+  - Verified Bulk Upload changes and logic with team (Veer Sir) before finalizing implementation.
+2. Tested Bulk Upload functionality on QA server and coordinated for deployment updates.
+3. Pushed code changes including:
+  - Bulk Upload improvements
+  - Task list sorting logic enhancement
+  - Activity Log contact direction (Incoming / Outgoing) logic
 
 
 Tasks:
@@ -177,86 +169,92 @@ Git Commit ID: 2ad0cb6bc2c3e3c55ab9d37125dec03fa0c959a0
 Git Commit Link: https://gitlab.com/vnnovatesolutions/eorder-webapp/-/commit/2ad0cb6bc2c3e3c55ab9d37125dec03fa0c959a0
 
 Project: Learning,
+Project: Sales CRM,
+Project: Capri,
+Project: Dealer Data,
+Project: BEC,
+Project : Nurtureme,
+Project : Auction App,
+
+
+
+**Subject**: Weekly (30 March - 3 April) Report of Dhyan
 
 Project: Sales CRM,
 
+Git Commit ID: 0e6e918e65d4864b41b9078c0b10ac37cc6d8620
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/0e6e918e65d4864b41b9078c0b10ac37cc6d8620
+
 Description:
 
-Project: Capri,
+1. Added new fields in Activity Log to identify communication type (Incoming / Outgoing) to track how the client was contacted.
+2. Bulk Upload Lead functionality improvements
+  - Improved Bulk Upload Lead functionality by reviewing and aligning validation logic with Single Lead Create feature.
+  - Added remaining validations in bulk upload to ensure consistency across lead creation methods.
+  - Verified Bulk Upload changes and logic with team (Veer Sir) before finalizing implementation.
+3. Tested Bulk Upload functionality on QA server and coordinated for deployment updates.
+4. Pushed code changes including:
+  - Bulk Upload improvements
+  - Task list sorting logic enhancement
+  - Activity Log contact direction (Incoming / Outgoing) logic
 
-Project: Dealer Data,
-Description:
 
 Project: BEC,
 
-Git Commit ID: 09e8389c5ed51450f7ce38f9c4752bd003f3b1c4
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/09e8389c5ed51450f7ce38f9c4752bd003f3b1c4
+Git Commit ID: 72e0cb010c8d0f3f6884fb383f7feaa53138031c
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/72e0cb010c8d0f3f6884fb383f7feaa53138031c
 
 Description:
 
-**Subject**: Weekly (23 March - 27 March) Report of Dhyan
+1. BEC improvement
+  - Improved Dashboard UI in the Sales Performance section.
+  - Pushed Sidebar Collapse & Expand functionality using MUI library.
+  - Tested Dashboard Page responsiveness across multiple devices.
+  - Improving Skeleton Loader UI design for better user experience.
+2. Global Search Module
+   - Updated Global Search functionality to prevent page reload when the user presses the Enter key during search.
+3. Dashboard Module
+   - Corrected Skeleton Loader UI based on the updated design of the Sales Performance section in the Dashboard.
+   - Updated Sales Performance section data mapping based on API response.
+   - Implemented display of Post Event Sales data in the Dashboard.
+4. BEC Fleet Module
+   - Made UI and functionality changes in the Added Options modal related to Image handling in the BEC Fleet module.
+5. Dashboard
+  - Updated UI of the Customer Funnel section in the dashboard for an alternative design option.
+  - Updated Skeleton Loader view to match the new UI design of the Customer Funnel section for better loading state consistency.
+  - Waiting for client response/approval on UI changes.
+
 
 Project: Dealer Data,
 
-Description:
-1. APIs Related to 2FA & Authentication
-  - Check implementation and their usage.
-  - Check APIs Related to 2FA & Authentication.
-2. BigQuery – Implementation Research
-  - How pricing works
-  - Some basic SQL Queries in BigQuery
-  - How data is inserted into BigQuery
-  - How to connect BigQuery with Node.js
-3. Route Analysis
-  - Reviewed and analyzed Frontend and Backend routes.
-  - Understood API flow, routing structure, and module connectivity between frontend and backend.
-4. NodeMailer Implementation
-  - Explored and understood implementation of Nodemailer
-5. Reviewed and verified all frontend and backend routes in the Dealer Data project to ensure proper routing and endpoint connectivity.
-6. Analyzed and checked the Node Mailer functionality implemented in the Dealer Data project.
-7. Implemented Email sending functionality using Node Mailer in a dummy project for testing and learning purposes.
-8. Verified and tested the implemented email feature in the dummy project to ensure proper email delivery and configuration.
-
-
-Project : Shoe Vista,
+Git Commit ID: 26043245867d2031d606e38ce7de6f972e02e441
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-rdb-backend/-/commit/26043245867d2031d606e38ce7de6f972e02e441
 
 Description:
-1. Local Project Setup
-  - Set up the project on local machine.
-  - Installed dependencies and configured environment variables.
-2. Frontend–Backend Connection Issue
-  - Identified and resolved connection issue between frontend and backend.
-  - Verified API communication working correctly after fix.
-3. About Us Navigation
-  - Added "About Us" navigation link in the navbar.
-  - Implemented routing to navigate to the About Us page.
-4. Best Seller Section in Home page
-  - Implemented Best Seller list UI similar to Top Brand Book list component for UI consistency.
+
+1. Big Query
+  - Explored Big Query queries to improve query performance, optimization, and professional query structuring.
+  - Reviewing existing queries to identify optimization opportunities such as indexing, query structure, and execution efficiency.
+2. Sequelize ORM Learning & Query Methods
+  - Learned and understood basic methods and usage of Sequelize ORM.
+  - Checked basic query methods including Insert, Select, Select with Attributes, and Select with Where clause.
+  - Explored Sequelize Finder methods such as findOne, findByPk, findAll, and other query helper methods.
+3. Generated production build in local environment.
+4. Tested the production build with newly implemented changes to ensure build stability and functionality.
+5. Verified that all recent UI and functionality changes are working correctly in the build version.
+6. Revised previously learned Sequelize ORM basic query methods including Insert, Select, Select with Attributes, and Where clause.
+7. Reviewed Finder methods such as findOne, findByPk, findAll, and query filtering techniques.
 
 
-Project : Nurtureme,
-
-Description:
-1. Project Setup
-  - Installed PHP 8.4 version and configured it for the project environment.
-  - Installed Composer compatible with PHP 8.4 for dependency management.
-  - Set up MongoDB with PHP and configured the required PHP MongoDB extension.
-  - Configured Composer configuration file and verified dependencies installation and autoload setup.
-2. Calendar Dashboard Integration
-  - Understood complete task flow and requirements from Kunal and implemented changes accordingly.
-  - Implemented UI improvements according to the Figma design of Calender in Dashboard.
-  - Added blur effect on date tasks for better visual indication and UI clarity.
-
-
-Project : Auction App,
+Project: Livin App,
 
 Description:
-1. Refactored Auction CRUD functionality to use Redux Toolkit instead of Local Storage and Session Storage.
-2. Updated Create Auction feature to work with Redux Toolkit state management.
-3. API Testing & Debugging
-  - Verified request/response flow and Redux state updates.
-4. Auction List
-  - Working on Get Auction List with updated data.
+1. Livin App
+  - Received Livin App project and performed initial project setup.
+  - Installed frontend and backend dependencies and configured the project in the local environment.
+  - Resolved dependency and runtime errors during project setup.
+  - Successfully ran both frontend and backend locally.
+  - Reviewed and analyzed the complete list of APIs used in the project for understanding system architecture.
 
 
 Next Week plan:
