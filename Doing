@@ -1,33 +1,49 @@
 ## Work Doing:
 
-Date: 3 April, 2026
-Day: Friday,
+Date: 6 April, 2026
+Day: Monday,
 
 Today, I am working on the following tasks:
 
-Project : Sales CRM, (5 H)
+Project : BEC, (4 H)
 
-1. Continue improving Bulk Upload Lead functionality to align with Single Lead Add feature so that both follow similar logic, validation, and data structure.
+1. Responsive Testing (QA)
+  - Perform responsive testing across multiple devices using the QA server.
+  - Validate UI consistency and layout behavior on Mobile, Tablet, and Laptop screen sizes.
+  - Identify and document any UI/UX issues related to responsiveness.
+
+
+Project : Sales CRM, (3 H)
+
+1. Feature Verification & Improvements
+  - Verify recently implemented functionality changes with team members (Kunal Bhai & Veer Sir).
+  - Gather feedback and identify any required improvements or corrections.
+  - Apply necessary updates based on discussion and feedback.
 
 ## Work done:
 
 EOD,
-Date: 3 April, 2026
-Day: Friday,
+Date: 4 April, 2026
+Day: Monday,
 
 Today, I have completed the following tasks:
 
-Project : Sales CRM, (8 H)
-1. Bulk Upload Lead functionality improvements
-  - Improved Bulk Upload Lead functionality by reviewing and aligning validation logic with Single Lead Create feature.
-  - Added remaining validations in bulk upload to ensure consistency across lead creation methods.
-  - Verified Bulk Upload changes and logic with team (Veer Sir) before finalizing implementation.
-2. Tested Bulk Upload functionality on QA server and coordinated for deployment updates.
-3. Pushed code changes including:
-  - Bulk Upload improvements
-  - Task list sorting logic enhancement
-  - Activity Log contact direction (Incoming / Outgoing) logic
+Project : Sales CRM, (4 H)
+1. Feature Verification & Improvements
+  - Verified recently implemented functionality changes with team members (Kunal Bhai & Veer Sir).
+  - Gathered feedback Applied necessary updates based on discussion and feedback. 
+  - Display completed tasks to end of all tasks.
 
+1. Solving issue on build 
+  - Fixing build issues and ensuring proper deployment. - In Progress
+
+Project : BEC, (4 H)
+
+1. Responsive Testing (QA)
+  - Perform responsive testing across multiple devices using the QA server.
+  - Validate UI consistency and layout behavior on Mobile, Tablet, and Laptop screen sizes.
+  - Identify and document any UI/UX issues related to responsiveness.
+  - Proper License date select options.
 
 Tasks:
 - Fixed guest event register bug
