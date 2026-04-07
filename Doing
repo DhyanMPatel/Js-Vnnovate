@@ -1,49 +1,51 @@
 ## Work Doing:
 
-Date: 6 April, 2026
-Day: Monday,
+Date: 7 April, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
 Project : BEC, (4 H)
 
 1. Responsive Testing (QA)
-  - Perform responsive testing across multiple devices using the QA server.
-  - Validate UI consistency and layout behavior on Mobile, Tablet, and Laptop screen sizes.
-  - Identify and document any UI/UX issues related to responsiveness.
+  - Continue testing from Guest routes and Guest management routes in all devices using the QA Server.
 
 
 Project : Sales CRM, (3 H)
 
-1. Feature Verification & Improvements
-  - Verify recently implemented functionality changes with team members (Kunal Bhai & Veer Sir).
-  - Gather feedback and identify any required improvements or corrections.
-  - Apply necessary updates based on discussion and feedback.
+1. Build Issue
+  - Fix Build issue on my local machine and run successfully.
 
 ## Work done:
 
 EOD,
-Date: 4 April, 2026
-Day: Monday,
+Date: 7 April, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
-Project : Sales CRM, (4 H)
-1. Feature Verification & Improvements
-  - Verified recently implemented functionality changes with team members (Kunal Bhai & Veer Sir).
-  - Gathered feedback Applied necessary updates based on discussion and feedback. 
-  - Display completed tasks to end of all tasks.
+Project : Sales CRM,
+1. Features Verification & Improvements (2 H)
+  - Display completed tasks with their completed time and date.
+  - Sort completed tasks according to completion date.
 
-1. Solving issue on build 
-  - Fixing build issues and ensuring proper deployment. - In Progress
+2. Testing in QA (1.5 H)
+  - Test in Local environment for above changes with multiple roles.
+  - Test in QA for above changes with multiple roles. - In Progress
 
-Project : BEC, (4 H)
+3. Solving issue on build (1 H)
+  - Fixed build issues and ensured proper deployment
 
-1. Responsive Testing (QA)
+Project : BEC,
+
+1. Responsive Testing (QA) (2 H)
   - Perform responsive testing across multiple devices using the QA server.
-  - Validate UI consistency and layout behavior on Mobile, Tablet, and Laptop screen sizes.
-  - Identify and document any UI/UX issues related to responsiveness.
-  - Proper License date select options.
+  - Validate UI consistency and layout behavior on Laptop, Tablet & Mobile screen sizes.
+  - Identify and solve UI/UX issues related to responsiveness.
+
+2. Update UI based on testing (2 H)
+  - Improve Button UI for mobile view in Stepper from guest routes.
+  - check in Guest register stepper, register via Link steppers.
 
 Tasks:
 - Fixed guest event register bug
