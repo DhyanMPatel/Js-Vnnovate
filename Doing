@@ -1,51 +1,62 @@
 ## Work Doing:
 
-Date: 7 April, 2026
-Day: Tuesday,
+Date: 8 April, 2026
+Day: Wednesday,
 
 Today, I am working on the following tasks:
 
 Project : BEC, (4 H)
 
 1. Responsive Testing (QA)
-  - Continue testing from Guest routes and Guest management routes in all devices using the QA Server.
+  - Test Event Management modules and Instructor modules in all devices using the QA Server.
+  - Make necessary UI adjustments for better responsiveness.
 
+Project : Sales CRM, (1 H)
 
-Project : Sales CRM, (3 H)
-
-1. Build Issue
-  - Fix Build issue on my local machine and run successfully.
+1. Test in QA
+  - Test in QA for Completed Task changes with multiple roles.
 
 ## Work done:
 
 EOD,
-Date: 7 April, 2026
-Day: Tuesday,
+Date: 8 April, 2026
+Day: Wednesday,
 
 Today, I have completed the following tasks:
 
 Project : Sales CRM,
-1. Features Verification & Improvements (2 H)
-  - Display completed tasks with their completed time and date.
-  - Sort completed tasks according to completion date.
 
-2. Testing in QA (1.5 H)
-  - Test in Local environment for above changes with multiple roles.
-  - Test in QA for above changes with multiple roles. - In Progress
+1. Global time-zone set (1.5 H)
+	- Researched how timezone handling works across frontend (JS) and backend (Node/DB).
+	- Identified current timezone dependency (local system vs server vs DB).
+	- Finalized approach for global timezone implementation.
 
-3. Solving issue on build (1 H)
-  - Fixed build issues and ensured proper deployment
+2. Implement Global time-zone (2 H)
+	- Updated backend to store all timestamps in UTC format.
+	- Updated frontend to convert UTC time into local/user timezone (if needed).
+	- Refactored existing date handling logic to remove local timezone dependency.
+
+3. QA/Live Testing (1 H)
+	- Tested timezone implementation on QA server
+	- Coordinated with team for deployment to Live environment.
+  - Collected feedback from Veer sir.
+
 
 Project : BEC,
 
 1. Responsive Testing (QA) (2 H)
-  - Perform responsive testing across multiple devices using the QA server.
-  - Validate UI consistency and layout behavior on Laptop, Tablet & Mobile screen sizes.
-  - Identify and solve UI/UX issues related to responsiveness.
+  - Performed responsive testing on QA server across Laptop, Tablet, and Mobile devices.
+  - Validated UI layout, alignment, and spacing in Instructor Management and Event Management pages.
 
-2. Update UI based on testing (2 H)
-  - Improve Button UI for mobile view in Stepper from guest routes.
-  - check in Guest register stepper, register via Link steppers.
+Project : Media Planner,
+
+1. Create a Video (1.5 H)
+	- Created a video with Kunal bhai to demonstrate basic navigation controls in Figma.
+	- Explained key actions like zoom, frame navigation, and layer interaction.
+	- Uploaded the video to Google Drive and added captions for better client understanding.
+	- Shared the video with the team for client communication.
+
+
 
 Tasks:
 - Fixed guest event register bug
