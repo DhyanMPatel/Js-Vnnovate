@@ -1,15 +1,17 @@
 ## Work Doing:
 
-Date: 9 April, 2026
-Day: Thursday,
+Date: 10 April, 2026
+Day: Friday,
 
 Today, I am working on the following tasks:
 
 Project : BEC, (4 H)
 
-1. Responsive Testing (QA)
-  - Continue test from Task notes module, Bookings & Reports pages.
-  - Make necessary UI adjustments for better responsiveness across all devices.
+1. Test in QA server
+  - Check yesterday's changes in QA server
+  - Test Download Functionality
+
+2. Recheck all pages in whole project with laptop, tablet & mobile.
 
 Project : Sales CRM, (1 H)
 
@@ -18,8 +20,8 @@ Project : Sales CRM, (1 H)
 ## Work done:
 
 EOD,
-Date: 9 April, 2026
-Day: Thursday,
+Date: 10 April, 2026
+Day: Friday,
 
 Today, I have completed the following tasks:
 
@@ -31,27 +33,24 @@ Project : BEC,
   - Focused testing on Bookings and Reports pages for responsiveness consistency.
   - Identified UI issues and documented them for fixes.
 
-2. Local Testing for Recent Changes (2 H)
-  - Tested recently implemented features on local environment.
-  - Verified UI behavior across Laptop, Tablet, and Mobile screen sizes.
-  - Cross-checked functionality and responsiveness for recent updates.
+2. QA & Live Deploy (2 H)
+  - Deployed latest code changes to QA and Live environments with team.
+  - Deployed latest code changes with proper build verification with Rahul sir.
+  - Ensured code sync and successful deployment across environments. 
 
-3. Update Functionality based on testing (1.5 H)
-	- Verified "Download CSV" API integration from frontend side in Reports and Guest management pages.
-  - Ensured proper API triggering and file download functionality.
-  - Coordinated with backend (Ashish) to validate API response and data correctness.
+3. Testing After Changes (Local, QA & Live) (1.5 H)
+	- Tested all recent changes across Local, QA, and Live environments.
+  - Verified functionality across multiple user roles.
+  - Ensured consistency in behavior across environments.
 
-4. Mobile UI Improvement (2 H)
-  - Updated "Add" buttons across the application for better mobile usability.
-  - Improved button size, spacing, and touch accessibility.
-  - Refactored Pagination component to support small screen devices.
-  - Ensured consistency in UI behavior across all mobile views.
+4. UI Update (1 H)
+  - Updated UI for Event Information section in Dashboard.
+  - Improved Import CSV upload button UI for better visibility and usability.
+  - Ensured UI consistency with overall design system.
 
-5. Report Modal UI Enhancement (0.5 H)
-  - Updated Report modal UI to display in full-screen mode for Tablet and Mobile devices.
-  - Verified modal responsiveness across different screen sizes.
-
-
+5. Functionality Improvement (1 H)
+  - Refactored Sidebar dropdown open/close logic for better control and predictability.
+  - Fixed issues related to multiple dropdowns opening simultaneously.
 
 
 
@@ -190,6 +189,16 @@ Project: Media Planner,
 Git Commit ID: 3653fda296650dee81c132c046b35445067ab2d9
 Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/3653fda296650dee81c132c046b35445067ab2d9
 
+Project: Media Planner,
+
+Git Commit ID: 3653fda296650dee81c132c046b35445067ab2d9
+Git Commit Link: https://gitlab.com/vnnovatesolutions/media-planner-web-frontend/-/commit/3653fda296650dee81c132c046b35445067ab2d9
+
+Project: Dealer Data,
+
+Git Commit ID: 26043245867d2031d606e38ce7de6f972e02e441
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-rdb-backend/-/commit/26043245867d2031d606e38ce7de6f972e02e441
+
 Project: E-Order,
 
 Git Commit ID: 2ad0cb6bc2c3e3c55ab9d37125dec03fa0c959a0
@@ -205,83 +214,133 @@ Project : Auction App,
 
 
 
-**Subject**: Weekly (30 March - 3 April) Report of Dhyan
+**Subject**: Weekly (6 April - 10 April) Report of Dhyan
 
 Project: Sales CRM,
 
-Git Commit ID: 0e6e918e65d4864b41b9078c0b10ac37cc6d8620
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/0e6e918e65d4864b41b9078c0b10ac37cc6d8620
+Git Commit ID: 25ef333641e41b9558da16b9bfbaebcf61c7a223
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/25ef333641e41b9558da16b9bfbaebcf61c7a223
 
 Description:
 
-1. Added new fields in Activity Log to identify communication type (Incoming / Outgoing) to track how the client was contacted.
-2. Bulk Upload Lead functionality improvements
-  - Improved Bulk Upload Lead functionality by reviewing and aligning validation logic with Single Lead Create feature.
-  - Added remaining validations in bulk upload to ensure consistency across lead creation methods.
-  - Verified Bulk Upload changes and logic with team (Veer Sir) before finalizing implementation.
-3. Tested Bulk Upload functionality on QA server and coordinated for deployment updates.
-4. Pushed code changes including:
-  - Bulk Upload improvements
-  - Task list sorting logic enhancement
-  - Activity Log contact direction (Incoming / Outgoing) logic
+1. Feature Verification & Improvements
+  - Verified recently implemented functionality changes with team members (Kunal Bhai & Veer Sir).
+  - Gathered feedback Applied necessary updates based on discussion and feedback.
+  - Display completed tasks to end of all tasks.
+ 
+2. Features Verification & Improvements (2 H)
+  - Display completed tasks with their completed time and date.
+  - Sort completed tasks according to completion date.
+ 
+3. Testing in QA (1.5 H)
+  - Test in Local environment for above changes with multiple roles.
+  - Test in QA for above changes with multiple roles. - In Progress
+ 
+4. Solving issue on build (1 H)
+  - Fixed build issues and ensured proper deployment.
+
+5. Global time-zone set (1.5 H)
+  - Researched how timezone handling works across frontend (JS) and backend (Node/DB).
+  - Identified current timezone dependency (local system vs server vs DB).
+  - Finalized approach for global timezone implementation.
+ 
+6. Implement Global time-zone (2 H)
+  - Updated backend to store all timestamps in UTC format.
+  - Updated frontend to convert UTC time into local/user timezone (if needed).
+  - Refactored existing date handling logic to remove local timezone dependency.
+ 
+7. QA/Live Testing (1 H)
+  - Tested timezone implementation on QA server
+  - Coordinated with team for deployment to Live environment.
+  - Collected feedback from Veer sir.
 
 
 Project: BEC,
 
-Git Commit ID: 72e0cb010c8d0f3f6884fb383f7feaa53138031c
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/72e0cb010c8d0f3f6884fb383f7feaa53138031c
+Git Commit ID: 107b4dcd644b34ff4ca6c1072c86ead064f76a92
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/107b4dcd644b34ff4ca6c1072c86ead064f76a92
 
 Description:
 
-1. BEC improvement
-  - Improved Dashboard UI in the Sales Performance section.
-  - Pushed Sidebar Collapse & Expand functionality using MUI library.
-  - Tested Dashboard Page responsiveness across multiple devices.
-  - Improving Skeleton Loader UI design for better user experience.
-2. Global Search Module
-   - Updated Global Search functionality to prevent page reload when the user presses the Enter key during search.
-3. Dashboard Module
-   - Corrected Skeleton Loader UI based on the updated design of the Sales Performance section in the Dashboard.
-   - Updated Sales Performance section data mapping based on API response.
-   - Implemented display of Post Event Sales data in the Dashboard.
-4. BEC Fleet Module
-   - Made UI and functionality changes in the Added Options modal related to Image handling in the BEC Fleet module.
-5. Dashboard
-  - Updated UI of the Customer Funnel section in the dashboard for an alternative design option.
-  - Updated Skeleton Loader view to match the new UI design of the Customer Funnel section for better loading state consistency.
-  - Waiting for client response/approval on UI changes.
+1. Responsive Testing (QA)
+  - Perform responsive testing across multiple devices using the QA server.
+  - Validate UI consistency and layout behavior on Mobile, Tablet, and Laptop screen sizes.
+  - Identify and document any UI/UX issues related to responsiveness.
+  - Proper UI of License date select options for disable options and previous & next month date option.
+
+2. Responsive Testing (QA) (2 H)
+  - Perform responsive testing across multiple devices using the QA server.
+  - Validate UI consistency and layout behavior on Laptop, Tablet & Mobile screen sizes.
+  - Identify and solve UI/UX issues related to responsiveness.
+ 
+3. Update UI based on testing (2 H)
+  - Improve Button UI for mobile view in Stepper from guest routes.
+  - check in Guest register stepper, register via Link steppers.
+
+4. Responsive Testing (QA) (2 H)
+  - Performed responsive testing on QA server across Laptop, Tablet, and Mobile devices.
+  - Validated UI layout, alignment, and spacing in Instructor Management and Event Management pages.
+
+5. Responsive Testing in Bookings and Reports pages (QA) (2 H)
+  - Performed responsive testing on QA server across Laptop, Tablet, and Mobile devices.
+  - Validated UI layout, spacing, alignment, and overflow issues.
+  - Focused testing on Bookings and Reports pages for responsiveness consistency.
+  - Identified UI issues and documented them for fixes.
+ 
+6. Testing for Recent Changes (2 H)
+  - Tested recently implemented features on local & QA environment.
+  - Verified UI behavior across Laptop, Tablet, and Mobile screen sizes.
+  - Cross-checked functionality and responsiveness for recent updates.
+ 
+7. Update Functionality based on testing (1.5 H)
+  - Verified "Download CSV" API integration from frontend side in Reports and Guest management pages.
+  - Ensured proper API triggering and file download functionality.
+  - Coordinated with backend (Ashish) to validate API response and data correctness.
+ 
+8. Mobile UI Improvement (2 H)
+  - Updated "Add" buttons across the application for better mobile usability.
+  - Improved button size, spacing, and touch accessibility.
+  - Refactored Pagination component to support small screen devices.
+  - Ensured consistency in UI behavior across all mobile views.
+ 
+9. Report Modal UI Enhancement (0.5 H)
+  - Updated Report modal UI to display in full-screen mode for Tablet and Mobile devices.
+  - Verified modal responsiveness across different screen sizes.
+
+10. Responsive Testing in Bookings and Reports pages (QA) (2 H)
+  - Performed responsive testing on QA server across Laptop, Tablet, and Mobile devices.
+  - Validated UI layout, spacing, alignment, and overflow issues.
+  - Focused testing on Bookings and Reports pages for responsiveness consistency.
+  - Identified UI issues and documented them for fixes.
+
+11. QA & Live Deploy (2 H)
+  - Deployed latest code changes to QA and Live environments with team.
+  - Deployed latest code changes with proper build verification with Rahul sir.
+  - Ensured code sync and successful deployment across environments. 
+
+12. Testing After Changes (Local, QA & Live) (1.5 H)
+	- Tested all recent changes across Local, QA, and Live environments.
+  - Verified functionality across multiple user roles.
+  - Ensured consistency in behavior across environments.
+
+13. UI Update (1 H)
+  - Updated UI for Event Information section in Dashboard.
+  - Improved Import CSV upload button UI for better visibility and usability.
+  - Ensured UI consistency with overall design system.
+
+14. Functionality Improvement (1 H)
+  - Refactored Sidebar dropdown open/close logic for better control and predictability.
+  - Fixed issues related to multiple dropdowns opening simultaneously.
 
 
-Project: Dealer Data,
-
-Git Commit ID: 26043245867d2031d606e38ce7de6f972e02e441
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-rdb-backend/-/commit/26043245867d2031d606e38ce7de6f972e02e441
+Project: Media Planner,
 
 Description:
-
-1. Big Query
-  - Explored Big Query queries to improve query performance, optimization, and professional query structuring.
-  - Reviewing existing queries to identify optimization opportunities such as indexing, query structure, and execution efficiency.
-2. Sequelize ORM Learning & Query Methods
-  - Learned and understood basic methods and usage of Sequelize ORM.
-  - Checked basic query methods including Insert, Select, Select with Attributes, and Select with Where clause.
-  - Explored Sequelize Finder methods such as findOne, findByPk, findAll, and other query helper methods.
-3. Generated production build in local environment.
-4. Tested the production build with newly implemented changes to ensure build stability and functionality.
-5. Verified that all recent UI and functionality changes are working correctly in the build version.
-6. Revised previously learned Sequelize ORM basic query methods including Insert, Select, Select with Attributes, and Where clause.
-7. Reviewed Finder methods such as findOne, findByPk, findAll, and query filtering techniques.
-
-
-Project: Livin App,
-
-Description:
-1. Livin App
-  - Received Livin App project and performed initial project setup.
-  - Installed frontend and backend dependencies and configured the project in the local environment.
-  - Resolved dependency and runtime errors during project setup.
-  - Successfully ran both frontend and backend locally.
-  - Reviewed and analyzed the complete list of APIs used in the project for understanding system architecture.
+1. Create a Video (1.5 H)
+  - Created a video with Kunal bhai to demonstrate basic navigation controls in Figma.
+  - Explained key actions like zoom, frame navigation, and layer interaction.
+  - Uploaded the video to Google Drive and added captions for better client understanding.
+  - Shared the video with the team for client communication.
 
 
 Next Week plan:
@@ -289,7 +348,7 @@ Next Week plan:
 1. Dealer Data
   - Work on New Improvement points
 
-2. Meadia Planner
+2. Media Planner
   - Work on New Improvement points
 
 
