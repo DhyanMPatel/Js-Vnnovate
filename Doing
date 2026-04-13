@@ -1,58 +1,53 @@
 ## Work Doing:
 
-Date: 10 April, 2026
-Day: Friday,
+Date: 13 April, 2026
+Day: Monday,
 
 Today, I am working on the following tasks:
 
 Project : BEC, (4 H)
 
-1. Test in QA server
-  - Check yesterday's changes in QA server
-  - Test Download Functionality
-
-2. Recheck all pages in whole project with laptop, tablet & mobile.
-
-Project : Sales CRM, (1 H)
-
+1. QA Testing
+  - Test all changes in QA server
+  - Solve and fix any issues if found
 
 
 ## Work done:
 
 EOD,
-Date: 10 April, 2026
-Day: Friday,
+Date: 13 April, 2026
+Day: Monday,
 
 Today, I have completed the following tasks:
 
 Project : BEC,
 
-1. Responsive Testing in Bookings and Reports pages (QA) (2 H)
-  - Performed responsive testing on QA server across Laptop, Tablet, and Mobile devices.
-  - Validated UI layout, spacing, alignment, and overflow issues.
-  - Focused testing on Bookings and Reports pages for responsiveness consistency.
-  - Identified UI issues and documented them for fixes.
+1. Testing Last Changes (QA) (2 H)
+  - Reviewed and tested last Friday’s deployed changes on QA environment.
+  - Verified functionality across impacted modules.
+  - Checked for any unexpected behavior.
 
-2. QA & Live Deploy (2 H)
-  - Deployed latest code changes to QA and Live environments with team.
-  - Deployed latest code changes with proper build verification with Rahul sir.
-  - Ensured code sync and successful deployment across environments. 
+2. TextArea UI Standardization (2 H)
+  - Reviewed all TextArea input fields across the application.
+  - Updated placeholder positioning and input value alignment to match other form fields.
+  - Ensured consistency in styling, spacing, and behavior.
+  - Verified all changes in Local environment.
 
-3. Testing After Changes (Local, QA & Live) (1.5 H)
-	- Tested all recent changes across Local, QA, and Live environments.
-  - Verified functionality across multiple user roles.
-  - Ensured consistency in behavior across environments.
+3. Data Support for Backend (1 H)
+	- Provided Retailer-related data required for backend usage.
+  - Compiled Vehicle-related data for system validation/testing.
+  - Shared structured data with backend team (Ashish) for further implementation or testing.
 
-4. UI Update (1 H)
-  - Updated UI for Event Information section in Dashboard.
-  - Improved Import CSV upload button UI for better visibility and usability.
-  - Ensured UI consistency with overall design system.
+Project : Learning,
 
-5. Functionality Improvement (1 H)
-  - Refactored Sidebar dropdown open/close logic for better control and predictability.
-  - Fixed issues related to multiple dropdowns opening simultaneously.
+1. JavaScript Problem Solving (2 H)
+  - Solved JavaScript logic-based problems to strengthen problem-solving skills.
+  - Analyzed different approaches for each problem.
+  - Optimized solutions for better time and space complexity.
 
-
+2. Pattern review (1 H)
+  - Reviewed common JavaScript patterns and reusable logic.
+  - Understand that pattern through practical examples.
 
 
 Tasks:
