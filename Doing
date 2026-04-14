@@ -1,53 +1,57 @@
 ## Work Doing:
 
-Date: 13 April, 2026
-Day: Monday,
+Date: 14 April, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
 Project : BEC, (4 H)
 
-1. QA Testing
-  - Test all changes in QA server
-  - Solve and fix any issues if found
+1. Multiple device Testing
+  - Test through Tablet & mobile devices.
+  - Check for any UI/UX issues.
+  - Also check TextArea field alignment from other devices.
 
 
 ## Work done:
 
 EOD,
-Date: 13 April, 2026
-Day: Monday,
+Date: 14 April, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
 Project : BEC,
 
-1. Testing Last Changes (QA) (2 H)
-  - Reviewed and tested last Friday’s deployed changes on QA environment.
-  - Verified functionality across impacted modules.
-  - Checked for any unexpected behavior.
+1. Check-In Camera Functionality Improvement (2 H)
+  - Analyzed existing camera access implementation in Check-In flow.
+  - Added “Switch Camera” button to support multiple camera devices.
+  - Implemented logic to toggle between front and back cameras.
+  - Tested camera switching functionality across supported devices.
 
-2. TextArea UI Standardization (2 H)
-  - Reviewed all TextArea input fields across the application.
-  - Updated placeholder positioning and input value alignment to match other form fields.
-  - Ensured consistency in styling, spacing, and behavior.
-  - Verified all changes in Local environment.
+2. Passport Field Validation Improvement (2 H)
+  - Reviewed existing passport field validation logic.
+  - Updated validation to allow all valid inputs except empty or whitespace-only values.
+  - Removed unnecessary length restrictions for flexibility.
+  - Ensured proper validation handling on form submission.
 
-3. Data Support for Backend (1 H)
-	- Provided Retailer-related data required for backend usage.
-  - Compiled Vehicle-related data for system validation/testing.
-  - Shared structured data with backend team (Ashish) for further implementation or testing.
+3. Voucher Pagination Issue Analysis (1 H)
+	- Reviewed Add/Edit Voucher flow within Add/Edit Guest module.
+  - Analyzed pagination behavior and identified inconsistencies.
+  - Documented complete flow and highlighted issue scenarios.
+  - Shared findings and explanation with backend team (Ashish bhai) for resolution.
 
-Project : Learning,
+4. QA Testing After New Changes (1.5 H)
+  - Tested “Switch Camera” functionality in Check-In flow on Local and QA.
+  - Verified updated passport validation during Guest Registration.
 
-1. JavaScript Problem Solving (2 H)
-  - Solved JavaScript logic-based problems to strengthen problem-solving skills.
-  - Analyzed different approaches for each problem.
-  - Optimized solutions for better time and space complexity.
+5. Regression Testing (Previous Changes) (1 H)
+  - Tested previously implemented features from Friday.
+  - Verified functionality across Tablet and Mobile devices.
+  - Ensured UI responsiveness and feature stability.
 
-2. Pattern review (1 H)
-  - Reviewed common JavaScript patterns and reusable logic.
-  - Understand that pattern through practical examples.
+
+
 
 
 Tasks:
@@ -346,6 +350,28 @@ Next Week plan:
 2. Media Planner
   - Work on New Improvement points
 
+
+## Work from Home Request
+
+To: Roshani, Vanshita
+CC: Rahul
+
+Subject : Request for Half-Day Work from Home
+
+Respected Roshani and Vanshita,
+
+I hope you are doing well.
+
+Due to the AC being non-functional and the office environment becoming uncomfortable because of the heat, I would like to request permission to work from home for the second half of the day.
+
+I will remain available online and ensure that all my tasks are completed without any delay.
+
+Please let me know if this is okay.
+
+Thank you.
+
+Best regards,
+[Your Name]
 
 
 ## Leave Request
