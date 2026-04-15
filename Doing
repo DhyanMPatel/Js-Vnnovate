@@ -1,54 +1,48 @@
 ## Work Doing:
 
-Date: 14 April, 2026
-Day: Tuesday,
+Date: 15 April, 2026
+Day: Wednesday,
 
 Today, I am working on the following tasks:
 
 Project : BEC, (4 H)
 
-1. Multiple device Testing
-  - Test through Tablet & mobile devices.
-  - Check for any UI/UX issues.
-  - Also check TextArea field alignment from other devices.
+1. Test updated changes in QA environment in Tablet & mobile devices.
+  - Also Check functionality and UI/UX for Guest register flow through all 3 devices. 
 
 
 ## Work done:
 
 EOD,
-Date: 14 April, 2026
-Day: Tuesday,
+Date: 15 April, 2026
+Day: Wednesday,
 
 Today, I have completed the following tasks:
 
 Project : BEC,
 
-1. Check-In Camera Functionality Improvement (2 H)
-  - Analyzed existing camera access implementation in Check-In flow.
-  - Added “Switch Camera” button to support multiple camera devices.
-  - Implemented logic to toggle between front and back cameras.
-  - Tested camera switching functionality across supported devices.
+1. Dashboard – Sales of Event Section Improvement (2 H)
+	- Implemented grid-based layout for Sales of Event section.
+  - Ensured proper alignment, spacing, and responsiveness in grid design.
+  - Testing UI across Laptop, Tablet, and Mobile devices. - In Progress
+  - Design Changes for Skeleton Loader UI to match new grid structure. - In Progress
 
-2. Passport Field Validation Improvement (2 H)
-  - Reviewed existing passport field validation logic.
-  - Updated validation to allow all valid inputs except empty or whitespace-only values.
-  - Removed unnecessary length restrictions for flexibility.
-  - Ensured proper validation handling on form submission.
+2. BEC Fleet – Infinite Scroll Pagination (2 H)
+	- Analyzed current pagination implementation in Fleet module.
+  - Implemented scroll-based (infinite) pagination logic.
+  - Triggered API calls on scroll end to load additional data.
+  - Handled loading states and data append without UI break.
 
-3. Voucher Pagination Issue Analysis (1 H)
-	- Reviewed Add/Edit Voucher flow within Add/Edit Guest module.
-  - Analyzed pagination behavior and identified inconsistencies.
-  - Documented complete flow and highlighted issue scenarios.
-  - Shared findings and explanation with backend team (Ashish bhai) for resolution.
+3. Logistics Type CRUD (Administration) (2 H)
+  - Implemented full CRUD operations for Logistics Type in Administration module.
+  - Integrated API for Create, Read, Update, and Delete actions.
+  - Ensured form validation and proper data handling.
+  - Verified functionality through local testing.
 
-4. QA Testing After New Changes (1.5 H)
-  - Tested “Switch Camera” functionality in Check-In flow on Local and QA.
-  - Verified updated passport validation during Guest Registration.
+4. Instructor Location Permission Handling (2 H)
+	- Implemented location permission check during Instructor login.
+  - Captured and provided required location data (Latitude, Longitude).
 
-5. Regression Testing (Previous Changes) (1 H)
-  - Tested previously implemented features from Friday.
-  - Verified functionality across Tablet and Mobile devices.
-  - Ensured UI responsiveness and feature stability.
 
 
 
