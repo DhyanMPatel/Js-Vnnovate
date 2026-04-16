@@ -1,48 +1,59 @@
 ## Work Doing:
 
-Date: 15 April, 2026
-Day: Wednesday,
+Date: 16 April, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
 
 Project : BEC, (4 H)
 
-1. Test updated changes in QA environment in Tablet & mobile devices.
-  - Also Check functionality and UI/UX for Guest register flow through all 3 devices. 
+1.  Instructor location on map
+  - Implement map view for instructor location.
+  - Display all instructors on map with their current location.
 
+2. Dashboard - Sales of Event section skeleton
+  - improve design of skeleton loader for Sales of Event section.
+  - Verify through multiple device testing.
 
 ## Work done:
 
 EOD,
-Date: 15 April, 2026
-Day: Wednesday,
+Date: 16 April, 2026
+Day: Thursday,
 
 Today, I have completed the following tasks:
 
 Project : BEC,
 
-1. Dashboard – Sales of Event Section Improvement (2 H)
-	- Implemented grid-based layout for Sales of Event section.
-  - Ensured proper alignment, spacing, and responsiveness in grid design.
-  - Testing UI across Laptop, Tablet, and Mobile devices. - In Progress
-  - Design Changes for Skeleton Loader UI to match new grid structure. - In Progress
+1. Dashboard – Sales Information Skeleton Improvement (1.5 H)
+	- Reviewed existing skeleton loader for Sales Information section.
+  - Updated skeleton UI to align with latest design structure.
+  - Ensured consistency in spacing, layout, and visual hierarchy.
+  - Verified updated skeleton in local environment.
 
-2. BEC Fleet – Infinite Scroll Pagination (2 H)
-	- Analyzed current pagination implementation in Fleet module.
-  - Implemented scroll-based (infinite) pagination logic.
-  - Triggered API calls on scroll end to load additional data.
-  - Handled loading states and data append without UI break.
+2. API Information Support to Backend (1.5 H)
+  - Identified required API fields and data structure for frontend-backend integration.
+  - Compiled and shared necessary API-related information with backend team.
+  - Clarified data requirements to avoid integration issues.
+  - Coordinated with backend for smooth implementation.
 
-3. Logistics Type CRUD (Administration) (2 H)
-  - Implemented full CRUD operations for Logistics Type in Administration module.
-  - Integrated API for Create, Read, Update, and Delete actions.
-  - Ensured form validation and proper data handling.
-  - Verified functionality through local testing.
+3. BEC Fleet Map Page Analysis (1.5 H)
+	- Analyzed existing implementation of Fleet Map page.
+  - Reviewed how location data is currently handled and displayed.
+  - Identified gaps in current implementation related to fleet creation.
+  - Concluded that location data needs to be passed during fleet creation flow.
 
-4. Instructor Location Permission Handling (2 H)
-	- Implemented location permission check during Instructor login.
-  - Captured and provided required location data (Latitude, Longitude).
-
+4. Map Integration Research (2 H)
+  - Researched methods to integrate map functionality in React.
+  - Explored solutions for location search and draggable marker selection.
+  - Evaluated libraries for implementation feasibility.
+  - Identified @react-google-maps/api and react-places-autocomplete as suitable options.
+  
+5. iPad Local Testing Research (2 H)
+	- Researched ways to run local development server on Apple devices (iPad).
+  - Explored network-based access using local IP instead of localhost.
+  - Identified required configurations for cross-device testing without deployment.
+  - Verified approach feasibility for real-device testing.
 
 
 
