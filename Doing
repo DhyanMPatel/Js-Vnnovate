@@ -1,60 +1,55 @@
 ## Work Doing:
 
-Date: 16 April, 2026
-Day: Thursday,
+Date: 17 April, 2026
+Day: Friday,
 
 Today, I am working on the following tasks:
 
 Project : BEC, (4 H)
 
-1.  Instructor location on map
-  - Implement map view for instructor location.
-  - Display all instructors on map with their current location.
-
-2. Dashboard - Sales of Event section skeleton
-  - improve design of skeleton loader for Sales of Event section.
-  - Verify through multiple device testing.
+1. Made changes on BEC fleet creation object structure to provide location related data.
+2. Implement map integration on fleet creation so that user can select location on map.
+3. Improve UI of BEC fleet map page.
 
 ## Work done:
 
 EOD,
-Date: 16 April, 2026
-Day: Thursday,
+Date: 17 April, 2026
+Day: Friday,
 
 Today, I have completed the following tasks:
 
 Project : BEC,
 
-1. Dashboard – Sales Information Skeleton Improvement (1.5 H)
-	- Reviewed existing skeleton loader for Sales Information section.
-  - Updated skeleton UI to align with latest design structure.
-  - Ensured consistency in spacing, layout, and visual hierarchy.
-  - Verified updated skeleton in local environment.
+1. Fleet Creation – Location Data Integration (1.5 H)
+	- Updated fleet creation object structure to include location-related fields.
+  - Added properties for latitude, longitude, and related location metadata.
+  - Coordinated with backend team to align data structure and API expectations.
+  - Verified payload structure and integration flow.
 
-2. API Information Support to Backend (1.5 H)
-  - Identified required API fields and data structure for frontend-backend integration.
-  - Compiled and shared necessary API-related information with backend team.
-  - Clarified data requirements to avoid integration issues.
-  - Coordinated with backend for smooth implementation.
+2. Fleet Update – Location Data Handling (1 H)
+  - Modified fleet update object to support location data updates.
+  - Fetched existing fleet location data for edit flow.
+  - Enabled users to update fleet location coordinates.
 
-3. BEC Fleet Map Page Analysis (1.5 H)
-	- Analyzed existing implementation of Fleet Map page.
-  - Reviewed how location data is currently handled and displayed.
-  - Identified gaps in current implementation related to fleet creation.
-  - Concluded that location data needs to be passed during fleet creation flow.
+3. User Creation – Map Integration (2 H)
+	- Integrated map functionality in user creation flow.
+  - Enabled users to select location using select field for location.
+  - Captured latitude and longitude from selected location.
+  - Ensured proper binding of map data with form submission.
 
-4. Map Integration Research (2 H)
-  - Researched methods to integrate map functionality in React.
-  - Explored solutions for location search and draggable marker selection.
-  - Evaluated libraries for implementation feasibility.
-  - Identified @react-google-maps/api and react-places-autocomplete as suitable options.
+4. User List – Role-Based Map Access (2 H)
+  - Implemented role-based condition for map visibility in user list.
+  - Restricted map view and related actions only for Instructor role.
+  - Ensured proper UI handling based on user type.
+  - Verified behavior across role scenarios.
+
+5. User Update – Map Integration (2 H)
+	- Integrated map functionality in user update flow.
+  - Pre-filled existing location data.
+  - Allowed users to modify location via entering new location.
+  - Ensured updated coordinates are correctly submitted to backend.
   
-5. iPad Local Testing Research (2 H)
-	- Researched ways to run local development server on Apple devices (iPad).
-  - Explored network-based access using local IP instead of localhost.
-  - Identified required configurations for cross-device testing without deployment.
-  - Verified approach feasibility for real-device testing.
-
 
 
 

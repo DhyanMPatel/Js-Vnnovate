@@ -1,0 +1,78 @@
+/**
+ * LocationPicker Component Styles
+ */
+
+.location-picker {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.location-picker-input {
+  width: 100%;
+}
+
+.location-picker-input input {
+  /* Ensure autocomplete dropdown appears correctly */
+  position: relative;
+}
+
+.location-picker-button {
+  text-transform: none;
+  font-weight: 500;
+}
+
+/* Google Places Autocomplete Dropdown Styling */
+.pac-container {
+  z-index: 9999 !important;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-top: 4px;
+  font-family: inherit;
+}
+
+.pac-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.pac-item:hover {
+  background-color: #f5f5f5;
+}
+
+.pac-item-selected {
+  background-color: #e3f2fd;
+}
+
+.pac-icon {
+  margin-right: 8px;
+}
+
+.pac-matched {
+  font-weight: 500;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .pac-container {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .pac-item:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .pac-item {
+    transition: none;
+  }
+}
