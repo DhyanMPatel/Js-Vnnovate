@@ -211,144 +211,168 @@ Project: BEC,
 Project : Nurtureme,
 Project : Auction App,
 
-
-
-**Subject**: Weekly (6 April - 10 April) Report of Dhyan
-
 Project: Sales CRM,
 
 Git Commit ID: 25ef333641e41b9558da16b9bfbaebcf61c7a223
 Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/25ef333641e41b9558da16b9bfbaebcf61c7a223
 
-Description:
 
-1. Feature Verification & Improvements
-  - Verified recently implemented functionality changes with team members (Kunal Bhai & Veer Sir).
-  - Gathered feedback Applied necessary updates based on discussion and feedback.
-  - Display completed tasks to end of all tasks.
- 
-2. Features Verification & Improvements (2 H)
-  - Display completed tasks with their completed time and date.
-  - Sort completed tasks according to completion date.
- 
-3. Testing in QA (1.5 H)
-  - Test in Local environment for above changes with multiple roles.
-  - Test in QA for above changes with multiple roles. - In Progress
- 
-4. Solving issue on build (1 H)
-  - Fixed build issues and ensured proper deployment.
-
-5. Global time-zone set (1.5 H)
-  - Researched how timezone handling works across frontend (JS) and backend (Node/DB).
-  - Identified current timezone dependency (local system vs server vs DB).
-  - Finalized approach for global timezone implementation.
- 
-6. Implement Global time-zone (2 H)
-  - Updated backend to store all timestamps in UTC format.
-  - Updated frontend to convert UTC time into local/user timezone (if needed).
-  - Refactored existing date handling logic to remove local timezone dependency.
- 
-7. QA/Live Testing (1 H)
-  - Tested timezone implementation on QA server
-  - Coordinated with team for deployment to Live environment.
-  - Collected feedback from Veer sir.
+**Subject**: Weekly (13 April - 18 April) Report of Dhyan
 
 
 Project: BEC,
 
-Git Commit ID: 107b4dcd644b34ff4ca6c1072c86ead064f76a92
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/107b4dcd644b34ff4ca6c1072c86ead064f76a92
+Git Commit ID: 15b19462c5f2c3bd692694f4fe2a6d926fb4d730
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/15b19462c5f2c3bd692694f4fe2a6d926fb4d730
 
-Description:
+Description :
 
-1. Responsive Testing (QA)
-  - Perform responsive testing across multiple devices using the QA server.
-  - Validate UI consistency and layout behavior on Mobile, Tablet, and Laptop screen sizes.
-  - Identify and document any UI/UX issues related to responsiveness.
-  - Proper UI of License date select options for disable options and previous & next month date option.
-
-2. Responsive Testing (QA) (2 H)
-  - Perform responsive testing across multiple devices using the QA server.
-  - Validate UI consistency and layout behavior on Laptop, Tablet & Mobile screen sizes.
-  - Identify and solve UI/UX issues related to responsiveness.
+1. Testing Last Changes (QA) (2 H)
+  - Reviewed and tested last Friday’s deployed changes on QA environment.
+  - Verified functionality across impacted modules.
+  - Checked for any unexpected behavior.
  
-3. Update UI based on testing (2 H)
-  - Improve Button UI for mobile view in Stepper from guest routes.
-  - check in Guest register stepper, register via Link steppers.
-
-4. Responsive Testing (QA) (2 H)
-  - Performed responsive testing on QA server across Laptop, Tablet, and Mobile devices.
-  - Validated UI layout, alignment, and spacing in Instructor Management and Event Management pages.
-
-5. Responsive Testing in Bookings and Reports pages (QA) (2 H)
-  - Performed responsive testing on QA server across Laptop, Tablet, and Mobile devices.
-  - Validated UI layout, spacing, alignment, and overflow issues.
-  - Focused testing on Bookings and Reports pages for responsiveness consistency.
-  - Identified UI issues and documented them for fixes.
+2. TextArea UI Standardization (2 H)
+  - Reviewed all TextArea input fields across the application.
+  - Updated placeholder positioning and input value alignment to match other form fields.
+  - Ensured consistency in styling, spacing, and behavior.
+  - Verified all changes in Local environment.
  
-6. Testing for Recent Changes (2 H)
-  - Tested recently implemented features on local & QA environment.
-  - Verified UI behavior across Laptop, Tablet, and Mobile screen sizes.
-  - Cross-checked functionality and responsiveness for recent updates.
+3. Data Support for Backend (1 H)
+  - Provided Retailer-related data required for backend usage.
+  - Compiled Vehicle-related data for system validation/testing.
+  - Shared structured data with backend team (Ashish) for further implementation or testing.
  
-7. Update Functionality based on testing (1.5 H)
-  - Verified "Download CSV" API integration from frontend side in Reports and Guest management pages.
-  - Ensured proper API triggering and file download functionality.
-  - Coordinated with backend (Ashish) to validate API response and data correctness.
+4. Check-In Camera Functionality Improvement (2 H)
+  - Analyzed existing camera access implementation in Check-In flow.
+  - Added “Switch Camera” button to support multiple camera devices.
+  - Implemented logic to toggle between front and back cameras.
+  - Tested camera switching functionality across supported devices.
  
-8. Mobile UI Improvement (2 H)
-  - Updated "Add" buttons across the application for better mobile usability.
-  - Improved button size, spacing, and touch accessibility.
-  - Refactored Pagination component to support small screen devices.
-  - Ensured consistency in UI behavior across all mobile views.
+5. Passport Field Validation Improvement (2 H)
+  - Reviewed existing passport field validation logic.
+  - Updated validation to allow all valid inputs except empty or whitespace-only values.
+  - Removed unnecessary length restrictions for flexibility.
+  - Ensured proper validation handling on form submission.
  
-9. Report Modal UI Enhancement (0.5 H)
-  - Updated Report modal UI to display in full-screen mode for Tablet and Mobile devices.
-  - Verified modal responsiveness across different screen sizes.
+6. Voucher Pagination Issue Analysis (1.5 H)
+  - Reviewed Add/Edit Voucher flow within Add/Edit Guest module.
+  - Analyzed pagination behavior and identified inconsistencies.
+  - Documented complete flow and highlighted issue scenarios.
+  - Shared findings and explanation with backend team (Ashish bhai) for resolution.
+ 
+7. QA Testing After New Changes (1.5 H)
+  - Tested “Switch Camera” functionality in Check-In flow on Local and QA.
+  - Verified updated passport validation during Guest Registration.
+ 
+8. Regression Testing (Previous Changes) (1 H)
+  - Tested previously implemented features from Friday.
+  - Verified functionality across Tablet and Mobile devices.
+  - Ensured UI responsiveness and feature stability.
 
-10. Responsive Testing in Bookings and Reports pages (QA) (2 H)
-  - Performed responsive testing on QA server across Laptop, Tablet, and Mobile devices.
-  - Validated UI layout, spacing, alignment, and overflow issues.
-  - Focused testing on Bookings and Reports pages for responsiveness consistency.
-  - Identified UI issues and documented them for fixes.
+9. Dashboard – Sales of Event Section Improvement (1 H)
+  - Implemented grid-based layout for Sales of Event section.
+  - Ensured proper alignment, spacing, and responsiveness in grid design.
+  - Testing UI across Laptop, Tablet, and Mobile devices. - In Progress
+  - Design Changes for Skeleton Loader UI to match new grid structure. - In Progress
+ 
+10. Client new requirement (1.5 H)
+  - Understood new client requirements from Rahul Sir.
+  - Discussed with team to clarify use-cases related to BEC Fleet location tracking.
+ 
+11. BEC Fleet – Infinite Scroll Pagination (1.5 H)
+  - Analyzed current pagination implementation in Fleet module.
+  - Implemented scroll-based (infinite) pagination logic.
+  - Triggered API calls on scroll end to load additional data.
+  - Handled loading states and data append without UI break.
+ 
+12. Logistics Type CRUD (Administration) (2 H)
+  - Implemented full CRUD operations for Logistics Type in Administration module.
+  - Integrated API for Create, Read, Update, and Delete actions.
+  - Ensured form validation and proper data handling.
+  - Verified functionality through local testing.
+ 
+13. Instructor Location Permission Handling (2 H)
+  - Implemented location permission check during Instructor login.
+  - Captured and provided required location data (Latitude, Longitude).
 
-11. QA & Live Deploy (2 H)
-  - Deployed latest code changes to QA and Live environments with team.
-  - Deployed latest code changes with proper build verification with Rahul sir.
-  - Ensured code sync and successful deployment across environments. 
+14. Dashboard – Sales Information Skeleton Improvement (1.5 H)
+  - Reviewed existing skeleton loader for Sales Information section.
+  - Updated skeleton UI to align with latest design structure.
+  - Ensured consistency in spacing, layout, and visual hierarchy.
+  - Verified updated skeleton in local environment.
+ 
+15. API Information Support to Backend (1.5 H)
+  - Identified required API fields and data structure for frontend-backend integration.
+  - Compiled and shared necessary API-related information with backend team.
+  - Clarified data requirements to avoid integration issues.
+  - Coordinated with backend for smooth implementation.
+ 
+16. BEC Fleet Map Page Analysis (1.5 H)
+  - Analyzed existing implementation of Fleet Map page.
+  - Reviewed how location data is currently handled and displayed.
+  - Identified gaps in current implementation related to fleet creation.
+  - Concluded that location data needs to be passed during fleet creation flow.
+ 
+17. Map Integration Research (2 H)
+  - Researched methods to integrate map functionality in React.
+  - Explored solutions for location search and draggable marker selection.
+  - Evaluated libraries for implementation feasibility.
+  - Identified @react-google-maps/api and react-places-autocomplete as suitable options.
+ 
+18. iPad Local Testing Research (2 H)
+  - Researched ways to run local development server on Apple devices (iPad).
+  - Explored network-based access using local IP instead of localhost.
+  - Identified required configurations for cross-device testing without deployment.
+  - Verified approach feasibility for real-device testing.
 
-12. Testing After Changes (Local, QA & Live) (1.5 H)
-	- Tested all recent changes across Local, QA, and Live environments.
-  - Verified functionality across multiple user roles.
-  - Ensured consistency in behavior across environments.
+19. Fleet Creation – Location Data Integration (1.5 H)
+  - Updated fleet creation object structure to include location-related fields.
+  - Added properties for latitude, longitude, and related location metadata.
+  - Coordinated with backend team to align data structure and API expectations.
+  - Verified payload structure and integration flow.
+ 
+20. Fleet Update – Location Data Handling (1 H)
+  - Modified fleet update object to support location data updates.
+  - Fetched existing fleet location data for edit flow.
+  - Enabled users to update fleet location coordinates.
+ 
+21. User Creation – Map Integration (2 H)
+  - Integrated map functionality in user creation flow.
+  - Enabled users to select location using select field for location.
+  - Captured latitude and longitude from selected location.
+  - Ensured proper binding of map data with form submission.
+ 
+22. User List – Role-Based Map Access (2 H)
+  - Implemented role-based condition for map visibility in user list.
+  - Restricted map view and related actions only for Instructor role.
+  - Ensured proper UI handling based on user type.
+  - Verified behavior across role scenarios.
+ 
+23. User Update – Map Integration (2 H)
+  - Integrated map functionality in user update flow.
+  - Pre-filled existing location data.
+  - Allowed users to modify location via entering new location.
+  - Ensured updated coordinates are correctly submitted to backend.
 
-13. UI Update (1 H)
-  - Updated UI for Event Information section in Dashboard.
-  - Improved Import CSV upload button UI for better visibility and usability.
-  - Ensured UI consistency with overall design system.
 
-14. Functionality Improvement (1 H)
-  - Refactored Sidebar dropdown open/close logic for better control and predictability.
-  - Fixed issues related to multiple dropdowns opening simultaneously.
+Project : Learning,
+ 
+1. JavaScript Problem Solving (2 H)
+  - Solved JavaScript logic-based problems to strengthen problem-solving skills.
+  - Analyzed different approaches for each problem.
+  - Optimized solutions for better time and space complexity.
+ 
+2. Pattern review (1 H)
+  - Reviewed common JavaScript patterns and reusable logic.
+  - Understand that pattern through practical examples.
 
-
-Project: Media Planner,
-
-Description:
-1. Create a Video (1.5 H)
-  - Created a video with Kunal bhai to demonstrate basic navigation controls in Figma.
-  - Explained key actions like zoom, frame navigation, and layer interaction.
-  - Uploaded the video to Google Drive and added captions for better client understanding.
-  - Shared the video with the team for client communication.
 
 
 Next Week plan:
 
-1. Dealer Data
-  - Work on New Improvement points
-
-2. Media Planner
-  - Work on New Improvement points
+1. BEC
+  - BEC Fleet & Instructor Location functionality in Logistic planner.
 
 
 ## Work from Home Request
