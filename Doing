@@ -1,53 +1,43 @@
 ## Work Doing:
 
-Date: 20 April, 2026
-Day: Monday,
+Date: 21 April, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
 Project : BEC, (8 H)
 
-1. Work on Logistic Planner page to display all planner and with their relative datails with map view.
-
-## Work done:
-
-EOD,
-Date: 20 April, 2026
-Day: Monday,
-
-Today, I have completed the following tasks:
-
-Project : BEC,
-
-1. Map View Logic Fix for Specific Item. - (1.5 H)
-  - Analyzed existing map rendering logic for Fleet and User modules.
-  - Fixed logic to correctly focus on selected/particular item location.
-  - Ensured correct marker rendering for selected item.
-
-2. Logistics Planner Page – List View - (2 H)
-  - Created Logistics Planner page structure.
-  - Integrated API to fetch logistics plan list.
-  - Displayed list with required fields and basic UI layout.
-  - Provide required changes to backend team (Ashish bhai).
-
-3. Logistics Module – Create Modal (2 H)
-  - Designed and implemented Create modal for Logistics module.
-  - Added input fields with basic validation.
-  - Connected API to create logistics plan.
-
-4. Map Cluster Implementation - (1.5 H)
-  - Implemented clustering for multiple items sharing same/similar location.
-  - Grouped markers to improve map readability and performance.
-  - Handling cluster expansion behavior on zoom or interaction. - In Progress
-
-5. Selected Item Map Focus (In Progress) - (1 H)
-  - Started implementing logic to isolate selected item on map.
+1. Selected Item Map Focus
   - Ensure only selected item marker is displayed when selected.
   - Integrating item detail display with map interaction.
   - Working on syncing selection state with map rendering.
 
-6. Zoom in & Zoom out issue - In Progress
-7. 
+2. Verify proper Vehicle and Instructor location related changes implemented in BEC Fleet & User management pages.
+
+## Work done:
+
+EOD,
+Date: 21 April, 2026
+Day: Tuesday,
+
+Today, I have completed the following tasks:
+
+Project : BEC, (8 H)
+
+1. Individual item select correction in map. - Done
+2. Display only single location when any list item selected. - Done
+3. Display cluster for nearest located marks. - Done
+4. Cluster display list of item of that location. - Done
+5. If user click on any item from cluster list then that item will highlight in map and sidebar too. - Done
+6. Correct style hierarchy for consistency. - Done
+7. Correct Text over flow through showing tooltip. - Done
+8. Light & dark Theme based map view page for BEC fleet and User Management pages. - Done
+9. Vehicle status chip similar to theme. - Done
+10. During login pass location related data if user allow, if not then pass empty value like bellow - Done
+  - current_address = "", current_latitude = "", current_longitude = "".
+11. Correct Vehicle list on view for light mode in Logistic. - Done
+12. Implementing Re-enable location access functionality to get Location from user. - In Progress
+13. Use Debouch for search on map view page. - In progress
 
 
 
