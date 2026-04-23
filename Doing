@@ -1,55 +1,34 @@
 ## Work Doing:
 
-Date: 22 April, 2026
-Day: Wednesday,
+Date: 23 April, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
 
-Project : BEC, (8 H)
+Project : BEC, (4 H)
 
-1. Re-enable Location Access Flow
-  - Detect scenario when user denies browser location permission.
-  - Display modal on Location Picker field indicating location access is required.
-
-2. Debounce Search on Map View
-  - Analyze current search input behavior on map view page.
-  - Implement debounce logic to delay API calls while typing.
-  - Optimize search performance by reducing unnecessary requests.
-
-3. Testing All recent Changes (Local & QA)
-  - Test re-enable location access flow in Local and QA environments.
-  - Validate debounce search functionality on map view page.
-  - Check map view on different screen sizes for BEC fleet and User Management pages.
-  - Verify UI Consistency across different screen sizes and themes.
-
+1. Test Logistic planner page with dark mode and light mode too.
+2. Updates to Disha based on test.
+3. Test in Laptop & tablet.
 
 ## Work done:
 
 EOD,
-Date: 22 April, 2026
-Day: Wednesday,
+Date: 23 April, 2026
+Day: Thursday,
 
 Today, I have completed the following tasks:
 
 Project : BEC, (8 H)
 
-1. Implementing Re-enable location access functionality to get Location from user.
-  - Detect scenario when user denies browser location permission.
-  - Display modal on Location Picker field indicating location access is required.
-  - Display steps to enable re-enable location access.
-2. Use Debouch for search on map view page.
-  - Analyze current search input behavior on map view page.
-  - Implement debounce logic to delay API calls while typing.
-  - Optimize search performance by reducing unnecessary requests.
-3. Test changes related to map in BEC fleet & User Management pages through Local & QA environments.
-  - Test Location picker functionality for re-enable location access steps on laptop and tablet view.
-  - Test map view on laptop and tablet view.
-  - Verify map functionality and UI consistency.
-  - Test in both light and dark modes.
-  - Report & update any issues found during testing.
-4. Update UI changes
-  - Show place label on map for fleet and user management pages.
-  - Resource summery UI improvement.
+1. Check logistic planner view modal and correct UI for multidevices including laptop, tablet and mobile.
+2. Test in QA for recent changes including above related to BEC fleet & User management pages.
+3. Understand new changes of client.
+	- Discuss with team to implement that.
+4. Start work according to that with dummy data
+	- create new url for that.
+	- Create list page and show list with dummy data.
+	- Working in Update page.
 
 
 
