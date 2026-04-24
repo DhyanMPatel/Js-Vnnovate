@@ -1,35 +1,52 @@
 ## Work Doing:
 
-Date: 23 April, 2026
-Day: Thursday,
+Date: 24 April, 2026
+Day: Friday,
 
 Today, I am working on the following tasks:
 
-Project : BEC, (4 H)
+Project : BEC, (8 H)
 
-1. Test Logistic planner page with dark mode and light mode too.
-2. Updates to Disha based on test.
-3. Test in Laptop & tablet.
+1. Continue work on Edit Logistic planner Page.
+2. Connect with Ashish bhai for apis.
 
 ## Work done:
 
 EOD,
-Date: 23 April, 2026
-Day: Thursday,
+Date: 24 April, 2026
+Day: Friday,
 
 Today, I have completed the following tasks:
 
-Project : BEC, (8 H)
+Project : BEC, (6.5 H)
 
-1. Check logistic planner view modal and correct UI for multidevices including laptop, tablet and mobile.
-2. Test in QA for recent changes including above related to BEC fleet & User management pages.
-3. Understand new changes of client.
-	- Discuss with team to implement that.
-4. Start work according to that with dummy data
-	- create new url for that.
-	- Create list page and show list with dummy data.
-	- Working in Update page.
+1. Logistics Planner – Navigation & Breadcrumb (0.5 H)
+  - Implemented breadcrumb navigation for Add and Edit pages.
+  - Ensured correct routing hierarchy and dynamic path handling.
+2. Logistics Planner – Edit Page UI & Enhancements (2 H)
+  - Developed Edit page UI aligned with Add page structure before client call.
+  - Implemented compact design for “Add Instructor” and “Add Vehicle” buttons.
+  - Added tooltip support for better usability in compact view.
+  - Integrated dropdowns for Logistics Type, Utilization Type, Instructor, and Vehicle.
+  - Ensured consistency in form layout and behavior.
+3. Logistics Planner – View Page Initialization (2 H)
+  - Designed View page for logistics planner with dummy data.
+  - Created base UI structure including:
+    - Logistics information section
+    - Resource route overview section
+    - Instructor and vehicle list
+  - Added modal structure for displaying available dates.
+4. Logistics Planner – API Integration (Redux Slice) (2 H)
+  - Added remaining API endpoints in logistics Redux slice.
+  - Corrected API calls from JSX components.
+  - Ensured proper action dispatch and data flow.
+  - Verified API integration in local environment.
 
+Project : Sales CRM, (1.5 H)
+
+1. Requirement Understanding & Documentation (1.5 H)
+  - Created structured points based on understanding for clarity.
+  - Prepared notes for discussion with team.
 
 
 Tasks:
