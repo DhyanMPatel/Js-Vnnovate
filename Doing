@@ -1,46 +1,37 @@
 ## Work Doing:
 
-Date: 24 April, 2026
-Day: Friday,
+Date: 27 April, 2026
+Day: Monday,
 
 Today, I am working on the following tasks:
 
-Project : BEC, (8 H)
+Project : Sales CRM, (8 H)
 
-1. Continue work on Edit Logistic planner Page.
-2. Connect with Ashish bhai for apis.
+1. Daily Tracking Functionality – Initialization
+  - Define basic flow (create, update, view tracking data).
+  - Plan initial structure for frontend (pages/components) and backend (APIs/data model).
+2. Feature Research & Benchmarking
+  - Explore similar Daily Tracking features in existing applications/tools.
+  - Analyze how tracking data is structured and displayed.
 
 ## Work done:
 
 EOD,
-Date: 24 April, 2026
-Day: Friday,
+Date: 27 April, 2026
+Day: Monday,
 
 Today, I have completed the following tasks:
 
 Project : BEC, (6.5 H)
 
-1. Logistics Planner – Navigation & Breadcrumb (0.5 H)
-  - Implemented breadcrumb navigation for Add and Edit pages.
-  - Ensured correct routing hierarchy and dynamic path handling.
-2. Logistics Planner – Edit Page UI & Enhancements (2 H)
-  - Developed Edit page UI aligned with Add page structure before client call.
-  - Implemented compact design for “Add Instructor” and “Add Vehicle” buttons.
-  - Added tooltip support for better usability in compact view.
-  - Integrated dropdowns for Logistics Type, Utilization Type, Instructor, and Vehicle.
-  - Ensured consistency in form layout and behavior.
-3. Logistics Planner – View Page Initialization (2 H)
-  - Designed View page for logistics planner with dummy data.
-  - Created base UI structure including:
-    - Logistics information section
-    - Resource route overview section
-    - Instructor and vehicle list
-  - Added modal structure for displaying available dates.
-4. Logistics Planner – API Integration (Redux Slice) (2 H)
-  - Added remaining API endpoints in logistics Redux slice.
-  - Corrected API calls from JSX components.
-  - Ensured proper action dispatch and data flow.
-  - Verified API integration in local environment.
+1. Design Instructor/Vehicle Schedule Field label correction in Logistics planner. - Done
+2. Remove old logistic planner folder and their relative files. Also check any issue through create build. - Done
+3. Provide list of API's to Ashish bhai which gives error. - Done
+4. Correct logic of Instructor/Vehicle Schedule on add/edit with team. - Done
+5. Design Edit Logistic planner page similar to Add page. - Done
+6. Add fields for Edit page similar to Add page for consistency. - Done
+7. Instructor/Vehicle Scheduling common component redux related updated with team. - Done
+
 
 Project : Sales CRM, (1.5 H)
 
