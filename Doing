@@ -1,11 +1,15 @@
 ## Work Doing:
 
-Date: 27 April, 2026
-Day: Monday,
+Date: 28 April, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
-Project : Sales CRM, (8 H)
+Project : BEC, (4 H)
+
+1. Test Yesterday changes in Edit Logistic planner flow.
+
+Project : Sales CRM, (4 H)
 
 1. Daily Tracking Functionality – Initialization
   - Define basic flow (create, update, view tracking data).
@@ -17,27 +21,41 @@ Project : Sales CRM, (8 H)
 ## Work done:
 
 EOD,
-Date: 27 April, 2026
-Day: Monday,
+Date: 28 April, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
-Project : BEC, (6.5 H)
+Project : BEC, (9 H)
 
-1. Design Instructor/Vehicle Schedule Field label correction in Logistics planner. - Done
-2. Remove old logistic planner folder and their relative files. Also check any issue through create build. - Done
-3. Provide list of API's to Ashish bhai which gives error. - Done
-4. Correct logic of Instructor/Vehicle Schedule on add/edit with team. - Done
-5. Design Edit Logistic planner page similar to Add page. - Done
-6. Add fields for Edit page similar to Add page for consistency. - Done
-7. Instructor/Vehicle Scheduling common component redux related updated with team. - Done
+1. Logistics Planner – Location Logic Fix (Add/Edit) (1 H)
+  - Reviewed default location logic in Add/Edit planner flow.
+  - Coordinated with backend to correct location data handling.
+  - Ensured correct mapping of location values from API response.
+  - Verified location behavior during create and update operations.
 
+2. Logistics Planner – View Page Enhancements (2 H)
+  - Enhanced View page UI based on updated data structure.
+  - Updated layout and sections to reflect latest values.
+  - Improved readability and structure of logistics information display.
+  - Ensured consistency with Add/Edit flows.
 
-Project : Sales CRM, (1.5 H)
+3. Instructor & Vehicle Dates View Design (2 H)
+  - Designed dedicated UI for displaying Instructor and Vehicle available dates.
+  - Structured modal/page layout for better clarity.
+  - Added Map view for location visualization.
 
-1. Requirement Understanding & Documentation (1.5 H)
-  - Created structured points based on understanding for clarity.
-  - Prepared notes for discussion with team.
+4. Route Map Integration (2 H)
+  - Integrated route map for selected Instructor and Vehicle.
+  - Displayed route path based on location data.
+  - Ensured correct rendering of markers and paths.
+  - Verified map behavior within View page.
+
+5. Testing – Add, Edit & View Pages (1 H)
+  - Tested Add, Edit, and View planner pages.
+  - Verified responsiveness across Laptop, Tablet, and Mobile devices.
+  - Checked UI consistency and functional correctness.
+
 
 
 Tasks:
