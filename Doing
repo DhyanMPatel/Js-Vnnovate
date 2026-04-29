@@ -1,15 +1,15 @@
 ## Work Doing:
 
-Date: 28 April, 2026
-Day: Tuesday,
+Date: 29 April, 2026
+Day: Wednesday,
 
 Today, I am working on the following tasks:
 
-Project : BEC, (4 H)
+Project : BEC, (5 H)
+1. Test All Logistic planner related changes in QA with multiple devices.
+2. Try to fix twice reload issue on Dashboard.
 
-1. Test Yesterday changes in Edit Logistic planner flow.
-
-Project : Sales CRM, (4 H)
+Project : Sales CRM, (3 H)
 
 1. Daily Tracking Functionality – Initialization
   - Define basic flow (create, update, view tracking data).
@@ -20,41 +20,37 @@ Project : Sales CRM, (4 H)
 
 ## Work done:
 
-EOD,
-Date: 28 April, 2026
-Day: Tuesday,
+EOD
+Date: 29 April, 2026
+Day: Wednesday,
 
 Today, I have completed the following tasks:
 
-Project : BEC, (9 H)
+Project : BEC, (7 H)
 
-1. Logistics Planner – Location Logic Fix (Add/Edit) (1 H)
-  - Reviewed default location logic in Add/Edit planner flow.
-  - Coordinated with backend to correct location data handling.
-  - Ensured correct mapping of location values from API response.
-  - Verified location behavior during create and update operations.
+1. Bug/UI fixes
+	- Pagination focus color mismatch corrected. - Done
+	- Month dropdown in Date picker of schedule modal in Add/Edit planner solved - Done
+	- Dashboard map section parent class added. - Done
+	- selected item close button in map view page correct focus UI. - Done
+	- correct view of delete planer modal for tablet & mobile devices. - Done
 
-2. Logistics Planner – View Page Enhancements (2 H)
-  - Enhanced View page UI based on updated data structure.
-  - Updated layout and sections to reflect latest values.
-  - Improved readability and structure of logistics information display.
-  - Ensured consistency with Add/Edit flows.
+2. Schedule modals
+	- Filter list which instructors/vehicles are not selected during add/edit planner. - Done
+	- add selected item in list for edit schedule. - Done
+	- Call booked Dates on Edit schedule for Instructor and Vehicle. - Done
 
-3. Instructor & Vehicle Dates View Design (2 H)
-  - Designed dedicated UI for displaying Instructor and Vehicle available dates.
-  - Structured modal/page layout for better clarity.
-  - Added Map view for location visualization.
+3. Dashboard Twice reload
+	- Solve issue of twice reload on dashboard. - Done
+	- Solve issue of twice API called on dashboard. - Done
 
-4. Route Map Integration (2 H)
-  - Integrated route map for selected Instructor and Vehicle.
-  - Displayed route path based on location data.
-  - Ensured correct rendering of markers and paths.
-  - Verified map behavior within View page.
+4. Edit Logistic planner
+	- Show Skeleton instead of loader. - Done
+	- Verify that it should be responsive. - Done
 
-5. Testing – Add, Edit & View Pages (1 H)
-  - Tested Add, Edit, and View planner pages.
-  - Verified responsiveness across Laptop, Tablet, and Mobile devices.
-  - Checked UI consistency and functional correctness.
+Project : PMS,
+
+1. Test Client Full Access role modules.
 
 
 
