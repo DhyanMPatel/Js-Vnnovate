@@ -1,13 +1,15 @@
 ## Work Doing:
 
-Date: 29 April, 2026
-Day: Wednesday,
+Date: 30 April, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
 
-Project : BEC, (5 H)
-1. Test All Logistic planner related changes in QA with multiple devices.
-2. Try to fix twice reload issue on Dashboard.
+Project : PMS, (8 H)
+
+1. Test all modules of Client with read only role.
+2. Add list of bugs found during testing.
+3. Verify with Veer sir about the bugs and get confirmation.
 
 Project : Sales CRM, (3 H)
 
@@ -21,44 +23,22 @@ Project : Sales CRM, (3 H)
 ## Work done:
 
 EOD
-Date: 29 April, 2026
-Day: Wednesday,
+Date: 30 April, 2026
+Day: Thursday,
 
 Today, I have completed the following tasks:
 
-Project : BEC, (7 H)
- 
-1. UI Fixes & Responsiveness Improvements (2 H)
-	- Fixed pagination focus color mismatch for UI consistency.
-	- Resolved month dropdown issue in Date Picker within schedule modal.
-	- Added parent class for Dashboard map section to stabilize layout.
-	- Corrected focus UI for selected item close button in map view.
-	- Fixed Delete Planner modal responsiveness for Tablet and Mobile devices.
- 
-2. Schedule Modal Enhancements (2 H)
-	- Filtered Instructor/Vehicle list to exclude already selected items during Add/Edit planner.
-	- Added logic to include previously selected items in Edit schedule flow.
-	- Integrated API to fetch and display booked dates for Edit Instructor and Edit Vehicle.
-Ensured proper data handling and UI updates in schedule modals.
- 
-3. Dashboard Performance Fix (1 H)
-	- Identified issue causing dashboard to reload twice.
-	- Fixed duplicate API calls triggered on dashboard load.
-	- Optimized component lifecycle or state handling to prevent redundant execution.
-	- Verified performance improvement after fix.
- 
-4. Edit Logistics Planner – UX Improvement (2 H)
-	- Replaced loader with Skeleton UI for better user experience.
-	- Ensured Skeleton design aligns with actual content layout.
-	- Verified responsiveness across devices.
- 
-Project : PMS,
- 
-1. Role-Based Module Testing (2 H)
-	- Tested all modules under Client Full Access role.
-	- Verified access permissions and visibility across features.
-	- Checked functional behavior for role-specific actions.
-	- Identified and documented any discrepancies.
+Project : BEC,
+
+1. Logistic planer (1.5 H)
+	- Make event field optional during add/edit.
+	- Handle Event column when event not added during add/edit.
+	- Tested above changes of add, edit, list logistic page in Local machine.
+
+Project : PMS, (6.5 H)
+1. Check Client and developer side bugs and continue to testing on this role.
+2. Add list of bugs in google sheet and provide to Vasik sir and Veer sir.
+
 
 
 
