@@ -1,17 +1,18 @@
 ## Work Doing:
 
-Date: 30 April, 2026
-Day: Thursday,
+Date: 1 May, 2026
+Day: Friday,
 
 Today, I am working on the following tasks:
 
-Project : PMS, (8 H)
+Project : BEC,
+1. Design Feedback form for Guest role and verify it properly working.
 
-1. Test all modules of Client with read only role.
-2. Add list of bugs found during testing.
-3. Verify with Veer sir about the bugs and get confirmation.
+Project : PMS,
+1. Continue to check Client and developer side bugs and continue to testing on this role.
+2. Add list of bugs in google sheet and inform to Vasik sir and Veer sir.
 
-Project : Sales CRM, (3 H)
+Project : Sales CRM,
 
 1. Daily Tracking Functionality – Initialization
   - Define basic flow (create, update, view tracking data).
@@ -23,21 +24,27 @@ Project : Sales CRM, (3 H)
 ## Work done:
 
 EOD
-Date: 30 April, 2026
-Day: Thursday,
+Date: 1 May, 2026
+Day: Friday,
 
 Today, I have completed the following tasks:
 
-Project : BEC,
+Project : BEC, (5.5 H)
 
-1. Logistic planer (1.5 H)
-	- Make event field optional during add/edit.
-	- Handle Event column when event not added during add/edit.
-	- Tested above changes of add, edit, list logistic page in Local machine.
+1. Feedback form in Guest role (2 H)
+	- Design As client approved.
+	- Tested Feedback form UI in Local and QA.
+2. Stepper buttons (1.5 H)
+	- Bug fix of stepper Buttons related to press and hold behavior.
+	- Test in Local and QA
+3. Test Registration process for Customer. (2 H)
 
-Project : PMS, (6.5 H)
-1. Check Client and developer side bugs and continue to testing on this role.
-2. Add list of bugs in google sheet and provide to Vasik sir and Veer sir.
+
+Project : PMS, (3 H)
+
+1. Check client and developer role in PMS project with Dhruv.
+2. Add list of bugs in Google sheet.
+
 
 
 
