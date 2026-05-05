@@ -1,16 +1,14 @@
 ## Work Doing:
 
-Date: 1 May, 2026
-Day: Friday,
+Date: 5 May, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
 Project : BEC,
-1. Design Feedback form for Guest role and verify it properly working.
+1. Check schedule modal date format and disabled dates issue and verify with Rahul sir.
+2. Test all changes of yesterday in QA environment.
 
-Project : PMS,
-1. Continue to check Client and developer side bugs and continue to testing on this role.
-2. Add list of bugs in google sheet and inform to Vasik sir and Veer sir.
 
 Project : Sales CRM,
 
@@ -24,33 +22,32 @@ Project : Sales CRM,
 ## Work done:
 
 EOD
-Date: 4 May, 2026
-Day: monday,
+Date: 5 May, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
 Project : BEC, (9 H)
 
-1. Guest Registration Flow – Issue Resolution (2 H)
-  - Collaborated with team to analyze Guest registration flow.
-  - Identified and fixed issues affecting stepper-based flow.
-  - Performed root cause analysis for identified issues.
-  - Validated functionality against expected behavior.
-2. Local Testing & Validation (1.5 H)
-  - Tested updated changes in local environment.
-  - Verified registration flow and related modules.
-3. Rate Instructor Modal – UI Design (1.5 H)
-  - Designed Rate Instructor modal for Guest role rating page.
-  - Ensured UI consistency with existing feedback design.
-4. Stepper Flow – Auto Redirect Fix (2 H)
-  - Identified auto redirect issue in 6-step registration flow.
-  - Fixed navigation logic causing unexpected redirects.
-  - Tested complete flow after fix.
-  - Verify with Ashish bhai.
-5. Schedule Modal – UX Improvements (2 H)
-  - Improved date format for better readability and consistency.
-  - Implemented disabled dates filtering to prevent invalid selections.
-  - Verified updated behavior in scheduling flows with Ashish bhai.
+1. Feedback Form – UI Implementation (2 H)
+  - Designed Feedback Form as per client requirements.
+  - Structured form fields and interactions for usability.
+  - Verified UI behavior in local environment.
+  - Create different branch for this feature and push code in "improve_designing" branch.
+2. Stepper – Drive Mode Integration (2 H)
+  - Added drive mode–related logic and UI updates in stepper flow.
+  - Ensured correct behavior based on selected drive mode.
+  - Integrated changes with existing stepper navigation logic.
+  - Maintained consistency across steps.
+  - Create different branch for this feature and push code in "event_drive_mode" branch.
+3. Stepper Testing – Drive Mode (2 H)
+  - Tested passenger and driver mode flows in stepper.
+  - Verified correct UI updates and navigation based on mode selection.
+4. Schedule Modal – Date Format Consistency (2 H)
+  - Updated schedule modal date format to match event start date format.
+  - Ensured consistency across Add/Edit event and scheduling flows.
+  - Improved readability and uniformity of date display.
+  - Verified changes in local environment.
 
 
 Project : PMS, (3 H)
