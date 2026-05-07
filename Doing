@@ -1,14 +1,22 @@
 ## Work Doing:
 
-Date: 6 May, 2026
-Day: Wednesday,
+Date: 7 May, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
 
 Project : BEC,
-1. Understand new client requirements related to guest register in Event flow.
-2. Clarify with Ashish bhai about the flow of guest register in event and how it is different from existing flow.
-3. Analyze the existing guest register flow in event and identify the changes needed to accommodate new requirements
+1. Feedback Form for Client
+  - Open feedback form as a full page for clients.
+  - Follow black & white color theme as per legacy design in CLI.
+  - Display each question in separate cards for better readability.
+2. Feedback Form for Admin
+  - Keep feedback form in a modal popup for administrators.
+  - Display each question in separate cards for better readability.
+3. Logistic Planner
+  - Instructor and Vehicle can select only within the selected date range (start date → end date).
+4. Test yesterday's Logistic planner UI and functionality related changes in QA.
+5. Test Drive type related changes in stepper flow in QA.
 
 Project : Sales CRM,
 
@@ -22,33 +30,88 @@ Project : Sales CRM,
 ## Work done:
 
 EOD
-Date: 5 May, 2026
-Day: Tuesday,
+Date: 6 May, 2026
+Day: Wednesday,
 
 Today, I have completed the following tasks:
 
 Project : BEC, (9 H)
 
-1. Feedback Form – UI Implementation (2 H)
-  - Designed Feedback Form as per client requirements.
-  - Structured form fields and interactions for usability.
-  - Verified UI behavior in local environment.
-  - Create different branch for this feature and push code in "improve_designing" branch.
-2. Stepper – Drive Mode Integration (2 H)
-  - Added drive mode–related logic and UI updates in stepper flow.
-  - Ensured correct behavior based on selected drive mode.
-  - Integrated changes with existing stepper navigation logic.
-  - Maintained consistency across steps.
-  - Create different branch for this feature and push code in "event_drive_mode" branch.
-3. Stepper Testing – Drive Mode (2 H)
-  - Tested passenger and driver mode flows in stepper.
-  - Verified correct UI updates and navigation based on mode selection.
-4. Schedule Modal – Date Format Consistency (2 H)
-  - Updated schedule modal date format to match event start date format.
-  - Ensured consistency across Add/Edit event and scheduling flows.
-  - Improved readability and uniformity of date display.
-  - Verified changes in local environment.
+1. Logistics Planner – UI & Field Enhancements (2 H)
+  - Updated Logistics Planner View page according to client feedback.
+  - Added simplified Event Name column in Planner List page.
+  - Added Start Date and End Date fields in Add/Edit Planner pages.
+  - Renamed “Dropoff Location” field to “Event Location”.
+  - Corrected Instructor and Vehicle dropdown list behavior.
 
+2. Logistics Planner – Testing & Validation (1 H)
+  - Tested Logistics Planner changes in Local and QA environments.
+  - Verified Add, Edit, List, and View page functionality.
+  - Ensured updated fields and UI changes work correctly across flows.
+
+3. Guest Registration Flow – Issue Testing & Resolution (1.5 H)
+  - Tested Guest Registration flow in QA environment.
+  - Identified issues related to Drive Type selection and Logistics Planner integration.
+  - Coordinated with backend team to resolve identified issues.
+  - Worked with team on registration flow updates based on Drive Type behavior.
+
+4. Client Requirement Discussion & Planning (1.5 H)
+  - Attended client call to understand new requirements.
+  - Discussed implementation approach with team members.
+  - Planned required updates for Logistics Planner and Feedback Form modules.
+  - Clarified workflow and feature expectations.
+
+5. Feedback Form – Requirement Understanding (1 H)
+  - Understood Feedback Form requirements for both Client and Admin views.
+  - Analyzed expected flow and data handling requirements.
+  - Prepared implementation understanding for upcoming development.
+
+6. Passenger type event registration flow (1 H)
+  - Correct Personal info section 
+
+
+
+Project : BEC,
+
+1. Logistics Planner – Scheduling & Date Range Enhancements (2 H)
+  - Implemented Instructor and Vehicle date selection within Planner Start Date and End Date range.
+  - Updated scheduling validation logic for Add/Edit Planner flow.
+  - Ensured date selection consistency with planner duration.
+  - Verified schedule dropdown behavior and related validations.
+
+2. Logistics Planner – Testing & Validation (1 H)
+  - Tested Logistics Planner improvements in Local environment.
+  - Verified:
+    - Planner List page improvements
+    - View page updates
+    - Add/Edit Planner flow
+    - Schedule dropdown behavior
+    - Start/End date handling
+    - Date range selection functionality
+  - Ensured overall flow stability and responsiveness.
+
+3. Map View & Share Functionality Improvements (1.5 H)
+  - Corrected Passkey copy functionality in “Share Via Link” modal.
+  - Updated whole project map view to use Default Map View instead of Satellite View.
+  - Verified map rendering consistency after changes.
+
+4. Dynamic Form Module Initialization (2 H)
+  - Created Dynamic Form list page structure.
+  - Added Redux setup and state integration for Dynamic Form module.
+  - Configured route/navigation for new page.
+  - Prepared base structure for further API integration.
+
+5. Guest Registration & Check-in Flow Fixes (1.5 H)
+  - Worked with Rahul Sir and analyze Check-in functionality issues.
+  - Identified and fixed issues affecting Guest registration flow.
+  - Tested updated functionality in Local environment.
+  - Ensured stable registration and check-in behavior after fixes.
+  - Vehicle interest section value handling issue fixed for passenger flow.
+  
+6. Event View Modal – Default Data Handling (1 H)
+  - Added default Brand and Model Name display in View Event modal.
+  - Ensured fallback values display correctly when data is unavailable.
+  - Verified UI consistency in event details view.
 
 Project : PMS, (3 H)
 
@@ -694,3 +757,47 @@ Call Summary
   2.2 Administration View
     - Open feedback form in a modal popup.
     - Display each question in separate cards.
+
+
+
+
+git clone https URL from project repository (to clone the project repository to your local machine)
+npm -v (to check npm version and ensure correct version from package file)
+npm install (to install dependencies)
+npm run dev (to start the development server)
+
+git clone https_URL_from_project_repository 
+npm -v 
+npm install 
+npm run dev
+
+
+
+
+
+git clone <repository-url> 
+(to clone the project repository to your local machine)
+
+cd <project-folder-name>
+(to move into the project directory)
+
+node -v
+(to check installed Node.js version)
+
+npm -v
+(to check npm version and ensure correct version compatibility)
+
+npm install
+(to install all project dependencies)
+
+Create .env file in root directory
+(to configure environment variables required for the project)
+
+npm run dev
+(to start the development server)
+
+npm run build
+(to generate production build)
+
+npm run preview
+(to preview production build locally)
