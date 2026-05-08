@@ -1,22 +1,15 @@
 ## Work Doing:
 
-Date: 7 May, 2026
-Day: Thursday,
+Date: 8 May, 2026
+Day: Friday,
 
 Today, I am working on the following tasks:
 
 Project : BEC,
-1. Feedback Form for Client
-  - Open feedback form as a full page for clients.
-  - Follow black & white color theme as per legacy design in CLI.
-  - Display each question in separate cards for better readability.
-2. Feedback Form for Admin
-  - Keep feedback form in a modal popup for administrators.
-  - Display each question in separate cards for better readability.
-3. Logistic Planner
-  - Instructor and Vehicle can select only within the selected date range (start date → end date).
-4. Test yesterday's Logistic planner UI and functionality related changes in QA.
-5. Test Drive type related changes in stepper flow in QA.
+
+1. Work on Drive type based indemnity form dropdown list during event registration
+2. Coordinate with Ashish bhai for indemnity form dropdown list api. 
+
 
 Project : Sales CRM,
 
@@ -30,44 +23,56 @@ Project : Sales CRM,
 ## Work done:
 
 EOD
-Date: 6 May, 2026
-Day: Wednesday,
+Date: 8 May, 2026
+Day: Friday,
 
 Today, I have completed the following tasks:
 
 Project : BEC, (9 H)
 
-1. Logistics Planner – UI & Field Enhancements (2 H)
-  - Updated Logistics Planner View page according to client feedback.
-  - Added simplified Event Name column in Planner List page.
-  - Added Start Date and End Date fields in Add/Edit Planner pages.
-  - Renamed “Dropoff Location” field to “Event Location”.
-  - Corrected Instructor and Vehicle dropdown list behavior.
+1. Dynamic Form – Functionality Verification (1.5 H)
+  - Tested Dynamic Form module to verify end-to-end functionality.
+  - Checked form rendering, field behavior, and data handling.
+  - Validated integration with existing workflow.
+  - Identified and addressed any functional inconsistencies.
 
-2. Logistics Planner – Testing & Validation (1 H)
-  - Tested Logistics Planner changes in Local and QA environments.
-  - Verified Add, Edit, List, and View page functionality.
-  - Ensured updated fields and UI changes work correctly across flows.
+2. Event Page – Indemnity Form Logic Improvements (2 H)
+  - Modified indemnity form logic to support both Dynamic Form and PDF form handling.
+  - Corrected indemnity form field behavior during drive type toggle.
+  - Ensured proper switching between related form states.
+  - Verified data consistency across event flows.
 
-3. Guest Registration Flow – Issue Testing & Resolution (1.5 H)
-  - Tested Guest Registration flow in QA environment.
-  - Identified issues related to Drive Type selection and Logistics Planner integration.
-  - Coordinated with backend team to resolve identified issues.
-  - Worked with team on registration flow updates based on Drive Type behavior.
+3. Logistics Planner – Responsive Schedule Section (1.5 H)
+  - Improved design of schedule section for Tablet and Mobile devices.
+  - Fixed layout, spacing, and alignment issues.
+  - Ensured usability and readability on smaller screens.
+  - Verified responsive behavior across devices.
 
-4. Client Requirement Discussion & Planning (1.5 H)
-  - Attended client call to understand new requirements.
-  - Discussed implementation approach with team members.
-  - Planned required updates for Logistics Planner and Feedback Form modules.
-  - Clarified workflow and feature expectations.
+4. Dashboard – Vehicle Utilization & Schedule Pagination (2 H)
+  - Applied required changes to Vehicle Utilization list.
+  - Improved schedule pagination logic for proper data navigation.
+  - Fixed pagination-related issues affecting list behavior.
+  - Verified updated functionality and UI consistency.
 
-5. Feedback Form – Requirement Understanding (1 H)
-  - Understood Feedback Form requirements for both Client and Admin views.
-  - Analyzed expected flow and data handling requirements.
-  - Prepared implementation understanding for upcoming development.
+5. Stepper – Indemnity Section Integration (2 H)
+  - Added Indemnity section in Step 3 of registration stepper.
+  - Corrected indemnity PDF handling on final step for both Passenger and Driver flows.
+  - Ensured proper display and document generation.
+  - Tested full stepper flow after integration.
 
-6. Passenger type event registration flow (1 H)
-  - Correct Personal info section 
+
+1. Check Dynamic Form functionality properly working or not.
+2. Event page
+	- Modify logic in Indemnity form related to Dynamic form and PDF form.
+	- Correct indemnity form field during toggle drive type.
+3. Logistic planner
+	- Improve design of schedule section for tablet and mobile devices.
+4. Dashboard page
+	- Vehicle Utilization list related changes
+	- Schedules pagination related logic improve to work it properly.
+5. Stepper
+	- Add Indemnity section for 3 stepper.
+	- Correct last page indemnity pdf for passenger and driver.
 
 
 
