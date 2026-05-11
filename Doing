@@ -1,15 +1,18 @@
 ## Work Doing:
 
-Date: 8 May, 2026
-Day: Friday,
+Date: 11 May, 2026
+Day: Monday,
 
 Today, I am working on the following tasks:
 
 Project : BEC,
 
-1. Work on Drive type based indemnity form dropdown list during event registration
-2. Coordinate with Ashish bhai for indemnity form dropdown list api. 
-
+1. Feedback form for Guests
+  - Open page instead of modal for Guest role.
+2. Check All changes in QA Server.
+  - related to Logistic planner
+  - Event
+  - Guest registration flow
 
 Project : Sales CRM,
 
@@ -23,42 +26,41 @@ Project : Sales CRM,
 ## Work done:
 
 EOD
-Date: 8 May, 2026
-Day: Friday,
+Date: 11 May, 2026
+Day: Monday,
 
 Today, I have completed the following tasks:
 
-Project : BEC, (9 H)
+Project : BEC, (8 H)
 
-1. Dynamic Form – Functionality Verification (1.5 H)
-  - Tested Dynamic Form module to verify end-to-end functionality.
-  - Checked form rendering, field behavior, and data handling.
-  - Validated integration with existing workflow.
-  - Identified and addressed any functional inconsistencies.
+1. Guest Registration Testing (2 h)
+  - Tested Guest Registration flow for:
+    - New Guest registration
+    - Existing Registered Guest flow
+    - Driver Event registration
+    - Passenger Event registration
+2. Event Flow Testing (1 h)
+  - Tested Event Create and Update flows with multiple Drive Types.
+  - Verified conditional flow behavior and related validations.
+  - Identified and validated issues during testing.
+3. Refactoring (2 h)
+  - Refactored NSC Admin Reports menu dropdown structure.
+  - Resolved Dealer role sidebar-related issues.
+  - Improved Added Minors section UI in stepper for better consistency and usability.
+4. Flow Improvements (1 h)
+  - Corrected flow logic to directly login registered guests for Passenger Events instead of showing remaining steps
+5. Feedback Form – Page-Based UI Conversion (1.5 h)
+  - Converted Guest Feedback Form from modal-based UI to dedicated page view.
+  - Updated layout and navigation handling accordingly.
+  - Ensured proper responsiveness and form usability.
+  - Verified integration with existing feedback flow.
+6. Rate Instructor – UI Consistency Improvement (0.5 h)
+  - Redesigned Instructor Rating fields to align with Feedback Form UI.
+  - Updated layout, spacing, and input styling for consistency.
+  - Ensured uniform user experience across rating and feedback sections.
+  - Verified updated design behavior across devices.
 
-2. Event Page – Indemnity Form Logic Improvements (2 H)
-  - Modified indemnity form logic to support both Dynamic Form and PDF form handling.
-  - Corrected indemnity form field behavior during drive type toggle.
-  - Ensured proper switching between related form states.
-  - Verified data consistency across event flows.
 
-3. Logistics Planner – Responsive Schedule Section (1.5 H)
-  - Improved design of schedule section for Tablet and Mobile devices.
-  - Fixed layout, spacing, and alignment issues.
-  - Ensured usability and readability on smaller screens.
-  - Verified responsive behavior across devices.
-
-4. Dashboard – Vehicle Utilization & Schedule Pagination (2 H)
-  - Applied required changes to Vehicle Utilization list.
-  - Improved schedule pagination logic for proper data navigation.
-  - Fixed pagination-related issues affecting list behavior.
-  - Verified updated functionality and UI consistency.
-
-5. Stepper – Indemnity Section Integration (2 H)
-  - Added Indemnity section in Step 3 of registration stepper.
-  - Corrected indemnity PDF handling on final step for both Passenger and Driver flows.
-  - Ensured proper display and document generation.
-  - Tested full stepper flow after integration.
 
 
 1. Check Dynamic Form functionality properly working or not.
@@ -806,3 +808,44 @@ npm run build
 
 npm run preview
 (to preview production build locally)
+
+
+
+
+
+
+
+1. Event Invite Flow – Passenger Stepper Redirection
+  - Implemented conditional redirection logic from Event List page.
+  - Redirected users to 3-step registration flow for Passenger-type events.
+  - Ensured proper route handling through “Invite Via Link” action.
+  - Verified navigation behavior for different event types.
+
+2. Dynamic Form – CRUD & API Integration
+  - Implemented CRUD operations for Dynamic Form module.
+  - Integrated APIs for Create, Read, Update, and Delete functionality.
+  - Updated frontend integration according to latest API structure.
+  - Verified form data handling and state updates across flows.
+
+3. Dynamic Form – Update Flow Improvements
+  - Improved Dynamic Form update functionality based on updated content structure.
+  - Corrected form field mapping and update behavior.
+  - Ensured proper rendering of updated dynamic fields.
+  - Verified edit/update flow consistency.
+
+4. Indemnity Form & PDF Corrections
+  - Corrected indemnity form behavior during Guest registration flow.
+  - Fixed signature and personal details handling in Indemnity PDF.
+  - Ensured accurate data rendering for Passenger and Driver flows.
+  - Verified PDF generation and display after fixes.
+
+5. PDF Form Page – Add Functionality
+  - Fixed functionality issues on PDF Form Add page.
+  - Corrected form submission and related workflow behavior.
+  - Ensured proper integration with existing PDF handling flow.
+  - Verified functionality after updates.
+
+6. Client Requirement Discussion
+  - Attended client call to understand updated requirements.
+  - Discussed implementation approach and related changes with team.
+  - Clarified workflow expectations and upcoming tasks.
