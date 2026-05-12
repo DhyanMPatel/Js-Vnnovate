@@ -1,18 +1,15 @@
 ## Work Doing:
 
-Date: 11 May, 2026
-Day: Monday,
+Date: 12 May, 2026
+Day: Tuesday,
 
 Today, I am working on the following tasks:
 
 Project : BEC,
 
-1. Feedback form for Guests
-  - Open page instead of modal for Guest role.
-2. Check All changes in QA Server.
-  - related to Logistic planner
-  - Event
-  - Guest registration flow
+1. Check guest Registration through QR code flow.
+2. Update flow of Guest Registration through QR code.
+3. Solve issue and test in local environment.
 
 Project : Sales CRM,
 
@@ -26,40 +23,41 @@ Project : Sales CRM,
 ## Work done:
 
 EOD
-Date: 11 May, 2026
-Day: Monday,
+Date: 12 May, 2026
+Day: Tuesday,
 
 Today, I have completed the following tasks:
 
 Project : BEC, (8 H)
 
-1. Guest Registration Testing (2 h)
-  - Tested Guest Registration flow for:
-    - New Guest registration
-    - Existing Registered Guest flow
-    - Driver Event registration
-    - Passenger Event registration
-2. Event Flow Testing (1 h)
-  - Tested Event Create and Update flows with multiple Drive Types.
-  - Verified conditional flow behavior and related validations.
-  - Identified and validated issues during testing.
-3. Refactoring (2 h)
-  - Refactored NSC Admin Reports menu dropdown structure.
-  - Resolved Dealer role sidebar-related issues.
-  - Improved Added Minors section UI in stepper for better consistency and usability.
-4. Flow Improvements (1 h)
-  - Corrected flow logic to directly login registered guests for Passenger Events instead of showing remaining steps
-5. Feedback Form – Page-Based UI Conversion (1.5 h)
-  - Converted Guest Feedback Form from modal-based UI to dedicated page view.
-  - Updated layout and navigation handling accordingly.
-  - Ensured proper responsiveness and form usability.
-  - Verified integration with existing feedback flow.
-6. Rate Instructor – UI Consistency Improvement (0.5 h)
-  - Redesigned Instructor Rating fields to align with Feedback Form UI.
-  - Updated layout, spacing, and input styling for consistency.
-  - Ensured uniform user experience across rating and feedback sections.
-  - Verified updated design behavior across devices.
+1. Invite Flow Regression Testing (1.5 H)
+  - Verified recent changes related to Invite Via QR Code flow.
+  - Ensured Invite Via Link functionality was not affected by updates.
+  - Tested flow consistency and navigation behavior after changes.
 
+2. Event List – Filter Implementation (2 H)
+  - Implemented filter functionality for improved event searching and filtering.
+  - Added responsive filter UI support for Tablet and Mobile devices too.
+  - Coordinated with backend team for API-related filter updates.
+
+3. Event List – Filter Optimization & Testing (2 H)
+  - Tested filter behavior in Local and QA environments.
+  - Added persistent filter/search state to prevent value reset on page reload.
+  - Implemented Reset Filter functionality to clear applied filters and search input.
+
+4. Guest Check-in Flow Testing (2 H)
+  - Tested complete Check-in flow for:
+    - Passenger Events
+    - Driver Events
+  - Verified Guest role behavior through:
+    - Invite Via Link
+    - Invite Via QR Code
+  - Ensured proper navigation, registration, and check-in handling.
+  - Identified and validated flow-related issues.
+
+5. DOB Field Validation Improvement (0.5 H)
+  - correct minimum and maximum date validation for DOB field.
+  - Ensured proper date restriction handling in date picker.
 
 
 
@@ -452,20 +450,17 @@ Next Week plan:
 
 ## Work from Home Request
 
-To: Roshani, Vanshita
-CC: Ashish sir
+To: Vasik
+CC: Rahul
+BCC: Ashish sir
 
-Subject : Request for Replacement Keyboard
+Subject : Update on Invite Functionality Testing
 
-Respected Vanshita and Roshani,
+Hello Vasik sir,
 
-I hope you are doing well.
+On Friday, we tested the **Invite via Link** functionality, and it is working properly for both **Passenger** and **Driver** type events.
 
-I would like to request a replacement keyboard for my system. I am currently facing some issues with the existing keyboard, such as keys being hard to press and some keys getting stuck or continuously pressing occasionally.
-
-These issues are affecting my work efficiency and causing delays during development tasks. Therefore, I would appreciate it if I could be provided with a new keyboard that is more comfortable.
-
-Please let me know if any additional information is required.
+We missed testing the **Invite via QR Code** functionality during that session. However, there is currently no guest registration blocker, as the Invite via Link functionality is functioning correctly for both event types.
 
 Thank you.
 
