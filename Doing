@@ -1,15 +1,13 @@
 ## Work Doing:
 
-Date: 12 May, 2026
-Day: Tuesday,
+Date: 13 May, 2026
+Day: Wednesday,
 
 Today, I am working on the following tasks:
 
 Project : BEC,
 
-1. Check guest Registration through QR code flow.
-2. Update flow of Guest Registration through QR code.
-3. Solve issue and test in local environment.
+1. Varify PDF Signature location related changes during stepper flow for both passenger and driver flow.
 
 Project : Sales CRM,
 
@@ -23,41 +21,36 @@ Project : Sales CRM,
 ## Work done:
 
 EOD
-Date: 12 May, 2026
-Day: Tuesday,
+Date: 13 May, 2026
+Day: Wednesday,
 
 Today, I have completed the following tasks:
 
-Project : BEC, (8 H)
+Project : BEC
+1. Guest Registration stepper flow (1.5 H)
+	- Check Field border on error for dark and light mode.
+	- Correct Communication section checkbox.
+	- Correct Date picker Year selection section UI correction.
 
-1. Invite Flow Regression Testing (1.5 H)
-  - Verified recent changes related to Invite Via QR Code flow.
-  - Ensured Invite Via Link functionality was not affected by updates.
-  - Tested flow consistency and navigation behavior after changes.
+2. Signature location during Passenger event registration (0.5 H)
+	- Invite via Link
+	- guest role
 
-2. Event List – Filter Implementation (2 H)
-  - Implemented filter functionality for improved event searching and filtering.
-  - Added responsive filter UI support for Tablet and Mobile devices too.
-  - Coordinated with backend team for API-related filter updates.
+3. Guest role (1 H)
+	- Add Correct Field UI related to border color on error - Done
+	- Correct Date picker Year selection section UI correction. - Done
 
-3. Event List – Filter Optimization & Testing (2 H)
-  - Tested filter behavior in Local and QA environments.
-  - Added persistent filter/search state to prevent value reset on page reload.
-  - Implemented Reset Filter functionality to clear applied filters and search input.
+Project : Sales CRM,
 
-4. Guest Check-in Flow Testing (2 H)
-  - Tested complete Check-in flow for:
-    - Passenger Events
-    - Driver Events
-  - Verified Guest role behavior through:
-    - Invite Via Link
-    - Invite Via QR Code
-  - Ensured proper navigation, registration, and check-in handling.
-  - Identified and validated flow-related issues.
-
-5. DOB Field Validation Improvement (0.5 H)
-  - correct minimum and maximum date validation for DOB field.
-  - Ensured proper date restriction handling in date picker.
+1. Create Activity type in Setting page. (1 H)
+	- Implement CRUD for activity type
+	- Add new Table in DB.
+2. Provide list of questions and explain to Ashish sir for my doubts. (2 H)
+	- Understand their requirement.
+	- explain future implementation flow for better clarification.
+3. Daily tracking future implementation - In Progress (2 H)
+	- Start working on List view to display all Activities properly according to dates.
+	- Working on Add and Edit Entry functionality.
 
 
 
