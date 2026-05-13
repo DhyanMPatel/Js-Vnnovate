@@ -26,7 +26,39 @@ Day: Wednesday,
 
 Today, I have completed the following tasks:
 
-Project : BEC
+Project : BEC,
+
+1. Guest Registration Stepper – UI & Validation Fixes (1.5 H)
+  - Corrected field border error UI for both Dark and Light themes.
+  - Fixed Communication section checkbox behavior and alignment.
+  - Improved Date Picker Year Selection UI for better usability and consistency.
+  - Verified updated UI behavior in Guest Registration stepper flow.
+
+2. Guest Role – UI Corrections (1.5 H)
+  - Corrected field border error styling in Guest Role forms.
+  - Fixed Date Picker Year Selection section UI issues.
+  - Ensured consistent UI behavior across themes and forms.
+
+Project : PMS,
+
+1. Settings Module – Activity Type CRUD (1 H)
+  - Implement of Activity Type management in Settings module.
+  - Created CRUD flow structure for Activity Type.
+  - Added new database table for storing activity type data.
+  - Prepared frontend and backend integration flow.
+
+2. Requirement Discussion & Clarification (2 H)
+  - Prepared and discussed questions related to implementation doubts.
+  - Coordinated with Ashish Sir for technical clarification.
+  - Documented discussion points for development alignment.
+
+3. Daily Tracking Feature – Initial Development (2 H)
+  - Started implementation of Daily Tracking feature.
+  - Worked on List View structure to display activities date-wise.
+  - Began Add/Edit Entry functionality implementation.
+  - Planned activity management flow for upcoming integration.
+
+
 1. Guest Registration stepper flow (1.5 H)
 	- Check Field border on error for dark and light mode.
 	- Correct Communication section checkbox.
