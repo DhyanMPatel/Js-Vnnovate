@@ -1,62 +1,37 @@
 ## Work Doing:
 
-Date: 13 May, 2026
-Day: Wednesday,
+Date: 14 May, 2026
+Day: Thursday,
 
 Today, I am working on the following tasks:
+
+Project : Sales CRM,
+
+1. Daily Tracking Functionality
+  - Continue working on List view to display all Activities properly according to dates.
+  - Continue working on Add and Edit Entry functionality.
+  - Plan activity management flow for upcoming integration.
 
 Project : BEC,
 
 1. Varify PDF Signature location related changes during stepper flow for both passenger and driver flow.
 
-Project : Sales CRM,
-
-1. Daily Tracking Functionality – Initialization
-  - Define basic flow (create, update, view tracking data).
-  - Plan initial structure for frontend (pages/components) and backend (APIs/data model).
-2. Feature Research & Benchmarking
-  - Explore similar Daily Tracking features in existing applications/tools.
-  - Analyze how tracking data is structured and displayed.
-
 ## Work done:
 
 EOD
-Date: 13 May, 2026
-Day: Wednesday,
+Date: 14 May, 2026
+Day: Thursday,
 
 Today, I have completed the following tasks:
 
-Project : BEC,
-
-1. Guest Registration Stepper – UI & Validation Fixes (1.5 H)
-  - Corrected field border error UI for both Dark and Light themes.
-  - Fixed Communication section checkbox behavior and alignment.
-  - Improved Date Picker Year Selection UI for better usability and consistency.
-  - Verified updated UI behavior in Guest Registration stepper flow.
-
-2. Guest Role – UI Corrections (1.5 H)
-  - Corrected field border error styling in Guest Role forms.
-  - Fixed Date Picker Year Selection section UI issues.
-  - Ensured consistent UI behavior across themes and forms.
-
 Project : PMS,
 
-1. Settings Module – Activity Type CRUD (1 H)
-  - Implement of Activity Type management in Settings module.
-  - Created CRUD flow structure for Activity Type.
-  - Added new database table for storing activity type data.
-  - Prepared frontend and backend integration flow.
+1. Daily Activity
+	- Complete CRUD.
+	- Design Daily Activity list, Add, edit and Delete view.
+	- Provide update to Ashish sir and get feedback from them.
+	- According to that feedback change design of list view.
 
-2. Requirement Discussion & Clarification (2 H)
-  - Prepared and discussed questions related to implementation doubts.
-  - Coordinated with Ashish Sir for technical clarification.
-  - Documented discussion points for development alignment.
-
-3. Daily Tracking Feature – Initial Development (2 H)
-  - Started implementation of Daily Tracking feature.
-  - Worked on List View structure to display activities date-wise.
-  - Began Add/Edit Entry functionality implementation.
-  - Planned activity management flow for upcoming integration.
 
 
 1. Guest Registration stepper flow (1.5 H)
