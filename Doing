@@ -35,34 +35,32 @@ Day: Thursday,
 Today, I have completed the following tasks:
  
 Project : PMS, (8 H)
- 
-1. Daily Activity – CRUD Implementation (2 H)
-  - Implemented complete CRUD functionality for Daily Activity module.
-  - Added Create, Read, Update, and Delete operations.
-  - Integrated frontend flow with backend APIs.
-  - Ensured proper data handling and validation across operations.
- 
-2. Daily Activity – List View Design (2 H)
-  - Designed Daily Activity List View for better activity tracking.
-  - Structured activity display with proper alignment and readability.
-  - Improved UI consistency and responsive behavior.
-  - Organized activity data for easier user interaction.
- 
-3. Daily Activity – Add/Edit/Delete UI Flow (2 H)
-  - Designed Add, Edit, and Delete interaction flow for Daily Activity module.
-  - Ensured form consistency and proper modal/page behavior.
-  - Verified smooth user experience across activity management actions.
- 
-4. Requirement Review & Feedback Discussion (1 H)
-  - Shared Daily Activity updates with Ashish Sir.
-  - Discussed UI/UX improvements and implementation feedback.
-  - Understood suggested changes for better workflow handling.
-  - Planned required refinements based on discussion.
- 
-5. Daily Activity – List View Refinement (1 H)
-  - Updated Daily Activity List View according to feedback.
-  - Improved layout and information hierarchy.
- 
+
+1. Activity Type – Personal Logic Refactor - (2 H) 
+  - Refactored Activity Type CRUD logic from global/general structure to personal user-based structure.
+  - Updated data handling and filtering according to logged-in user.
+  - Ensured proper separation of personal activity types.
+  - Verified CRUD operations after logic changes.
+
+2. Daily Activity – Flow Correction Based on Updated List View - (2 H)
+  - Corrected Add, Update, and Delete flow according to redesigned Daily Activity List View.
+  - Updated UI behavior and state handling after list structure changes.
+  - Ensured activity updates reflect properly in list view.
+  - Verified CRUD flow consistency through testing.
+
+3. Daily Activity – Empty State Handling - (1 H)
+  - Added informative message for users who have not created Activity Types.
+  - Ensured proper conditional rendering based on activity type availability.
+  - Verified message visibility and flow behavior.
+
+4. Admin User Activity Management - (2 H)
+  - Added User Dropdown functionality for Admin role.
+  - Enabled Admin to view other users’ daily activities.
+  - Implemented Add, Edit, and Delete operations for Admin on user activities.
+
+5. Admin User Activity Management – Role-Based Access Control - (1 H)
+  - Verified role-based functionality and permissions.
+  - Tested CRUD operations across different user selections.
 
 
 
@@ -316,168 +314,169 @@ Project: BEC,
 Project : Nurtureme,
 Project : Auction App,
 
-Project: Sales CRM,
 
-Git Commit ID: 25ef333641e41b9558da16b9bfbaebcf61c7a223
-Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/25ef333641e41b9558da16b9bfbaebcf61c7a223
-
-
-**Subject**: Weekly (13 April - 18 April) Report of Dhyan
+**Subject**: Weekly (11 May - 15 May) Report of Dhyan
 
 
 Project: BEC,
 
-Git Commit ID: 15b19462c5f2c3bd692694f4fe2a6d926fb4d730
-Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/15b19462c5f2c3bd692694f4fe2a6d926fb4d730
+Git Commit ID: 6bfaf37836fbaed0646ad8c26aba9cebad2aeda7
+Git Commit Link: https://gitlab.com/vnnovatesolutions/jlr-becza-v2/-/commit/6bfaf37836fbaed0646ad8c26aba9cebad2aeda7
 
 Description :
 
-1. Testing Last Changes (QA) (2 H)
-  - Reviewed and tested last Friday’s deployed changes on QA environment.
-  - Verified functionality across impacted modules.
-  - Checked for any unexpected behavior.
- 
-2. TextArea UI Standardization (2 H)
-  - Reviewed all TextArea input fields across the application.
-  - Updated placeholder positioning and input value alignment to match other form fields.
-  - Ensured consistency in styling, spacing, and behavior.
-  - Verified all changes in Local environment.
- 
-3. Data Support for Backend (1 H)
-  - Provided Retailer-related data required for backend usage.
-  - Compiled Vehicle-related data for system validation/testing.
-  - Shared structured data with backend team (Ashish) for further implementation or testing.
- 
-4. Check-In Camera Functionality Improvement (2 H)
-  - Analyzed existing camera access implementation in Check-In flow.
-  - Added “Switch Camera” button to support multiple camera devices.
-  - Implemented logic to toggle between front and back cameras.
-  - Tested camera switching functionality across supported devices.
- 
-5. Passport Field Validation Improvement (2 H)
-  - Reviewed existing passport field validation logic.
-  - Updated validation to allow all valid inputs except empty or whitespace-only values.
-  - Removed unnecessary length restrictions for flexibility.
-  - Ensured proper validation handling on form submission.
- 
-6. Voucher Pagination Issue Analysis (1.5 H)
-  - Reviewed Add/Edit Voucher flow within Add/Edit Guest module.
-  - Analyzed pagination behavior and identified inconsistencies.
-  - Documented complete flow and highlighted issue scenarios.
-  - Shared findings and explanation with backend team (Ashish bhai) for resolution.
- 
-7. QA Testing After New Changes (1.5 H)
-  - Tested “Switch Camera” functionality in Check-In flow on Local and QA.
-  - Verified updated passport validation during Guest Registration.
- 
-8. Regression Testing (Previous Changes) (1 H)
-  - Tested previously implemented features from Friday.
-  - Verified functionality across Tablet and Mobile devices.
-  - Ensured UI responsiveness and feature stability.
+1. Guest Registration Testing (2 h)
+  - Tested Guest Registration flow for:
+    - New Guest registration
+    - Existing Registered Guest flow
+    - Driver Event registration
+    - Passenger Event registration
+2. Event Flow Testing (1 h)
+  - Tested Event Create and Update flows with multiple Drive Types.
+  - Verified conditional flow behavior and related validations.
+  - Identified and validated issues during testing.
+3. Refactoring (2 h)
+  - Refactored NSC Admin Reports menu dropdown structure.
+  - Resolved Dealer role sidebar-related issues.
+  - Improved Added Minors section UI in stepper for better consistency and usability.
+4. Flow Improvements (1 h)
+  - Corrected flow logic to directly login registered guests for Passenger Events instead of showing remaining steps
+5. Feedback Form – Page-Based UI Conversion (1.5 h)
+  - Converted Guest Feedback Form from modal-based UI to dedicated page view.
+  - Updated layout and navigation handling accordingly.
+  - Ensured proper responsiveness and form usability.
+  - Verified integration with existing feedback flow.
+6. Rate Instructor – UI Consistency Improvement (0.5 h)
+  - Redesigned Instructor Rating fields to align with Feedback Form UI.
+  - Updated layout, spacing, and input styling for consistency.
+  - Ensured uniform user experience across rating and feedback sections.
+  - Verified updated design behavior across devices.
 
-9. Dashboard – Sales of Event Section Improvement (1 H)
-  - Implemented grid-based layout for Sales of Event section.
-  - Ensured proper alignment, spacing, and responsiveness in grid design.
-  - Testing UI across Laptop, Tablet, and Mobile devices. - In Progress
-  - Design Changes for Skeleton Loader UI to match new grid structure. - In Progress
+7. Invite Flow Regression Testing (1.5 H)
+  - Verified recent changes related to Invite Via QR Code flow.
+  - Ensured Invite Via Link functionality was not affected by updates.
+  - Tested flow consistency and navigation behavior after changes.
  
-10. Client new requirement (1.5 H)
-  - Understood new client requirements from Rahul Sir.
-  - Discussed with team to clarify use-cases related to BEC Fleet location tracking.
+8. Event List – Filter Implementation (2 H)
+  - Implemented filter functionality for improved event searching and filtering.
+  - Added responsive filter UI support for Tablet and Mobile devices too.
+  - Coordinated with backend team for API-related filter updates.
  
-11. BEC Fleet – Infinite Scroll Pagination (1.5 H)
-  - Analyzed current pagination implementation in Fleet module.
-  - Implemented scroll-based (infinite) pagination logic.
-  - Triggered API calls on scroll end to load additional data.
-  - Handled loading states and data append without UI break.
+9. Event List – Filter Optimization & Testing (2 H)
+  - Tested filter behavior in Local and QA environments.
+  - Added persistent filter/search state to prevent value reset on page reload.
+  - Implemented Reset Filter functionality to clear applied filters and search input.
  
-12. Logistics Type CRUD (Administration) (2 H)
-  - Implemented full CRUD operations for Logistics Type in Administration module.
-  - Integrated API for Create, Read, Update, and Delete actions.
-  - Ensured form validation and proper data handling.
-  - Verified functionality through local testing.
+10. Guest Check-in Flow Testing (2 H)
+  - Tested complete Check-in flow for:
+    - Passenger Events
+    - Driver Events
+  - Verified Guest role behavior through:
+    - Invite Via Link
+    - Invite Via QR Code
+  - Ensured proper navigation, registration, and check-in handling.
+  - Identified and validated flow-related issues.
  
-13. Instructor Location Permission Handling (2 H)
-  - Implemented location permission check during Instructor login.
-  - Captured and provided required location data (Latitude, Longitude).
+11. DOB Field Validation Improvement (0.5 H)
+  - correct minimum and maximum date validation for DOB field.
+  - Ensured proper date restriction handling in date picker.
 
-14. Dashboard – Sales Information Skeleton Improvement (1.5 H)
-  - Reviewed existing skeleton loader for Sales Information section.
-  - Updated skeleton UI to align with latest design structure.
-  - Ensured consistency in spacing, layout, and visual hierarchy.
-  - Verified updated skeleton in local environment.
+12. Guest Registration Stepper – UI & Validation Fixes (1.5 H)
+  - Corrected field border error UI for both Dark and Light themes.
+  - Fixed Communication section checkbox behavior and alignment.
+  - Improved Date Picker Year Selection UI for better usability and consistency.
+  - Verified updated UI behavior in Guest Registration stepper flow.
  
-15. API Information Support to Backend (1.5 H)
-  - Identified required API fields and data structure for frontend-backend integration.
-  - Compiled and shared necessary API-related information with backend team.
-  - Clarified data requirements to avoid integration issues.
-  - Coordinated with backend for smooth implementation.
- 
-16. BEC Fleet Map Page Analysis (1.5 H)
-  - Analyzed existing implementation of Fleet Map page.
-  - Reviewed how location data is currently handled and displayed.
-  - Identified gaps in current implementation related to fleet creation.
-  - Concluded that location data needs to be passed during fleet creation flow.
- 
-17. Map Integration Research (2 H)
-  - Researched methods to integrate map functionality in React.
-  - Explored solutions for location search and draggable marker selection.
-  - Evaluated libraries for implementation feasibility.
-  - Identified @react-google-maps/api and react-places-autocomplete as suitable options.
- 
-18. iPad Local Testing Research (2 H)
-  - Researched ways to run local development server on Apple devices (iPad).
-  - Explored network-based access using local IP instead of localhost.
-  - Identified required configurations for cross-device testing without deployment.
-  - Verified approach feasibility for real-device testing.
-
-19. Fleet Creation – Location Data Integration (1.5 H)
-  - Updated fleet creation object structure to include location-related fields.
-  - Added properties for latitude, longitude, and related location metadata.
-  - Coordinated with backend team to align data structure and API expectations.
-  - Verified payload structure and integration flow.
- 
-20. Fleet Update – Location Data Handling (1 H)
-  - Modified fleet update object to support location data updates.
-  - Fetched existing fleet location data for edit flow.
-  - Enabled users to update fleet location coordinates.
- 
-21. User Creation – Map Integration (2 H)
-  - Integrated map functionality in user creation flow.
-  - Enabled users to select location using select field for location.
-  - Captured latitude and longitude from selected location.
-  - Ensured proper binding of map data with form submission.
- 
-22. User List – Role-Based Map Access (2 H)
-  - Implemented role-based condition for map visibility in user list.
-  - Restricted map view and related actions only for Instructor role.
-  - Ensured proper UI handling based on user type.
-  - Verified behavior across role scenarios.
- 
-23. User Update – Map Integration (2 H)
-  - Integrated map functionality in user update flow.
-  - Pre-filled existing location data.
-  - Allowed users to modify location via entering new location.
-  - Ensured updated coordinates are correctly submitted to backend.
+13. Guest Role – UI Corrections (1.5 H)
+  - Corrected field border error styling in Guest Role forms.
+  - Fixed Date Picker Year Selection section UI issues.
+  - Ensured consistent UI behavior across themes and forms.
 
 
-Project : Learning,
+Project: Sales CRM,
+
+Git Commit ID: 639b82756ed91b262df797d7a3d027b2506934a7
+Git Commit Link: https://gitlab.com/vnnovatesolutions/salescrm-vnv/-/commit/639b82756ed91b262df797d7a3d027b2506934a7
+
+Description :
+
+1. Settings Module – Activity Type CRUD (1 H)
+  - Implement of Activity Type management in Settings module.
+  - Created CRUD flow structure for Activity Type.
+  - Added new database table for storing activity type data.
+  - Prepared frontend and backend integration flow.
  
-1. JavaScript Problem Solving (2 H)
-  - Solved JavaScript logic-based problems to strengthen problem-solving skills.
-  - Analyzed different approaches for each problem.
-  - Optimized solutions for better time and space complexity.
+2. Requirement Discussion & Clarification (2 H)
+  - Prepared and discussed questions related to implementation doubts.
+  - Coordinated with Ashish Sir for technical clarification.
+  - Documented discussion points for development alignment.
  
-2. Pattern review (1 H)
-  - Reviewed common JavaScript patterns and reusable logic.
-  - Understand that pattern through practical examples.
+3. Daily Tracking Feature – Initial Development (2 H)
+  - Started implementation of Daily Tracking feature.
+  - Worked on List View structure to display activities date-wise.
+  - Began Add/Edit Entry functionality implementation.
+  - Planned activity management flow for upcoming integration.
+
+4. Daily Activity – CRUD Implementation (2 H)
+  - Implemented complete CRUD functionality for Daily Activity module.
+  - Added Create, Read, Update, and Delete operations.
+  - Integrated frontend flow with backend APIs.
+  - Ensured proper data handling and validation across operations.
+ 
+5. Daily Activity – List View Design (2 H)
+  - Designed Daily Activity List View for better activity tracking.
+  - Structured activity display with proper alignment and readability.
+  - Improved UI consistency and responsive behavior.
+  - Organized activity data for easier user interaction.
+ 
+6. Daily Activity – Add/Edit/Delete UI Flow (2 H)
+  - Designed Add, Edit, and Delete interaction flow for Daily Activity module.
+  - Ensured form consistency and proper modal/page behavior.
+  - Verified smooth user experience across activity management actions.
+ 
+7. Requirement Review & Feedback Discussion (1 H)
+  - Shared Daily Activity updates with Ashish Sir.
+  - Discussed UI/UX improvements and implementation feedback.
+  - Understood suggested changes for better workflow handling.
+  - Planned required refinements based on discussion.
+ 
+8. Daily Activity – List View Refinement (1 H)
+  - Updated Daily Activity List View according to feedback.
+  - Improved layout and information hierarchy.
+
+9. Activity Type – Personal Logic Refactor - (2 H) 
+  - Refactored Activity Type CRUD logic from global/general structure to personal user-based structure.
+  - Updated data handling and filtering according to logged-in user.
+  - Ensured proper separation of personal activity types.
+  - Verified CRUD operations after logic changes.
+
+10. Daily Activity – Flow Correction Based on Updated List View - (2 H)
+  - Corrected Add, Update, and Delete flow according to redesigned Daily Activity List View.
+  - Updated UI behavior and state handling after list structure changes.
+  - Ensured activity updates reflect properly in list view.
+  - Verified CRUD flow consistency through testing.
+
+11. Daily Activity – Empty State Handling - (1 H)
+  - Added informative message for users who have not created Activity Types.
+  - Ensured proper conditional rendering based on activity type availability.
+  - Verified message visibility and flow behavior.
+
+12. Admin User Activity Management - (2 H)
+  - Added User Dropdown functionality for Admin role.
+  - Enabled Admin to view other users’ daily activities.
+  - Implemented Add, Edit, and Delete operations for Admin on user activities.
+
+13. Admin User Activity Management – Role-Based Access Control - (1 H)
+  - Verified role-based functionality and permissions.
+  - Tested CRUD operations across different user selections.
 
 
 
 Next Week plan:
 
-1. BEC
-  - BEC Fleet & Instructor Location functionality in Logistic planner.
+1. Sales CRM
+  - Improvement in Daily Activity according to new feedback.
+
 
 
 ## Work from Home Request
