@@ -1,16 +1,18 @@
 ## Work Doing:
 
-Date: 14 May, 2026
-Day: Thursday,
+Date: 15 May, 2026
+Day: Friday,
 
 Today, I am working on the following tasks:
 
 Project : Sales CRM,
 
-1. Daily Tracking Functionality
-  - Continue working on List view to display all Activities properly according to dates.
-  - Continue working on Add and Edit Entry functionality.
-  - Plan activity management flow for upcoming integration.
+1. Daily Activity – List View Refinement
+  - Continue working on refining the Daily Activity List View based on feedback.
+  - Improve layout and information hierarchy for better readability.
+2. Daily Activity analysis in Dashboard
+  - Analyze how to display Daily Activity information in the Dashboard.
+  - Plan the design and integration approach for showing activity data effectively.
 
 Project : BEC,
 
@@ -26,11 +28,41 @@ Today, I have completed the following tasks:
 
 Project : PMS,
 
-1. Daily Activity
-	- Complete CRUD.
-	- Design Daily Activity list, Add, edit and Delete view.
-	- Provide update to Ashish sir and get feedback from them.
-	- According to that feedback change design of list view.
+EOD
+Date: 14 May, 2026
+Day: Thursday,
+ 
+Today, I have completed the following tasks:
+ 
+Project : PMS, (8 H)
+ 
+1. Daily Activity – CRUD Implementation (2 H)
+  - Implemented complete CRUD functionality for Daily Activity module.
+  - Added Create, Read, Update, and Delete operations.
+  - Integrated frontend flow with backend APIs.
+  - Ensured proper data handling and validation across operations.
+ 
+2. Daily Activity – List View Design (2 H)
+  - Designed Daily Activity List View for better activity tracking.
+  - Structured activity display with proper alignment and readability.
+  - Improved UI consistency and responsive behavior.
+  - Organized activity data for easier user interaction.
+ 
+3. Daily Activity – Add/Edit/Delete UI Flow (2 H)
+  - Designed Add, Edit, and Delete interaction flow for Daily Activity module.
+  - Ensured form consistency and proper modal/page behavior.
+  - Verified smooth user experience across activity management actions.
+ 
+4. Requirement Review & Feedback Discussion (1 H)
+  - Shared Daily Activity updates with Ashish Sir.
+  - Discussed UI/UX improvements and implementation feedback.
+  - Understood suggested changes for better workflow handling.
+  - Planned required refinements based on discussion.
+ 
+5. Daily Activity – List View Refinement (1 H)
+  - Updated Daily Activity List View according to feedback.
+  - Improved layout and information hierarchy.
+ 
 
 
 
